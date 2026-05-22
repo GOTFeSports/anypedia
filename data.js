@@ -7,7 +7,7 @@
 const tournaments = [
   {
     id: "Bedlam-Waiting-For-Summer-Cup",
-    title: "BEDLAM: WAITING FOR SUMMER CUP",
+    title: "Bedlam Waiting For Summer Cup",
     limit: "До 35.000 MMR на команду",
     start: "2026-05-30",
     end: "2026-05-30",
