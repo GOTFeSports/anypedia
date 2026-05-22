@@ -5,6 +5,37 @@
 // =============================================
 
 const tournaments = [
+  {
+    id: "Bedlam-Waiting-For-Summer-Cup",
+    title: "BEDLAM: WAITING FOR SUMMER CUP",
+    limit: "До 35.000 MMR на команду",
+    start: "2026-05-30",
+    end: "2026-05-30",
+    startTime: "13:00",
+    prize: "10.000₽",
+    location: "СНГ",
+    teams: 16,
+    winner: "TBD",
+    format: "Single Elimination",
+    organizer: "Bedlam Tournaments",
+    
+    teamsList: [],
+    
+    casters: [
+        { name: "TBD", link: "" }
+    ],
+    
+    bracketEmbed: "",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiGMBcO8fjZQiACg9LhMgLI9qCKc-nM53xWSF-3Y090eSQ2A/viewform",
+    telegramLink: "https://t.me/bedlamtournaments",
+    
+    description: "BEDLAM: WAITING FOR SUMMER CUP — онлайн-турнир 5×5, Single Elimination. Призовой фонд 10.000₽ (1 место — 6700₽, 2 место — 3300₽). Вход 500₽ с команды. Лимит 35.000 MMR на команду. Минимум 16 команд. Дата: 30 мая 2026.",
+    
+    prizePool: [
+        { place: 1, amount: "6.700₽", team: "TBD" },
+        { place: 2, amount: "3.300₽", team: "TBD" }
+    ]
+},
     {
     id: "AnyLvL-GOTF-Special-1",
     title: "AnyLvL x GOTF eSports: Special 1",
