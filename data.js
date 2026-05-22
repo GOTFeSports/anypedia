@@ -6,6 +6,48 @@
 
 const tournaments = [
   {
+    id: "Armagedon-Championship-S8",
+    title: "Armagedon Championship S8",
+    limit: "До 30.000 MMR на команду",
+    start: "2026-05-15",
+    end: "2026-05-19",
+    startTime: "17:00",
+    prize: "10.000₽",
+    location: "СНГ",
+    teams: 12,
+    winner: "VHS Team",
+    format: "Single Elimination",
+    organizer: "Armagedon Championship",
+    
+    teamsList: [
+        { name: "headache", logo: "dota2.png", roster: [ { nick: "KaSu", pos: 1 }, { nick: "dr Dolittle", pos: 2 }, { nick: "dr Dolittle", pos: 3 }, { nick: "никчемная жизнь", pos: 4 }, { nick: "Kinnex", pos: 5 } ] },
+        { name: "CreepWave", logo: "dota2.png", roster: [ { nick: "Discovery", pos: 1 }, { nick: "SUPERHATEMEWORLD", pos: 2 }, { nick: "f31.6", pos: 3 }, { nick: "ПРИВЕТ АККБАЕРЫ", pos: 4 }, { nick: "supernxva", pos: 5 } ] },
+        { name: "sigma aura", logo: "dota2.png", roster: [ { nick: "e^iπ + 1 = 0", pos: 1 }, { nick: "squalor", pos: 2 }, { nick: "4poker", pos: 3 }, { nick: "all eyes on me", pos: 4 }, { nick: "Na1Turs", pos: 5 } ] },
+        { name: "SPERMA_PAVLA", logo: "dota2.png", roster: [ { nick: "Z-терминатор РКН модели 2.0", pos: 1 }, { nick: "Rezeks", pos: 2 }, { nick: "женева 147", pos: 3 }, { nick: "Shavo", pos: 4 }, { nick: "Starking", pos: 5 } ] },
+        { name: "Freaky", logo: "dota2.png", roster: [ { nick: "Gero", pos: 1 }, { nick: "auten", pos: 2 }, { nick: "BAV", pos: 3 }, { nick: "wotergate", pos: 4 }, { nick: "tatsumi", pos: 5 } ] },
+        { name: "Hellsing", logo: "dota2.png", roster: [ { nick: "Krosimus闇", pos: 1 }, { nick: "обмен лайками", pos: 2 }, { nick: "*_ЧёТк1Й_*", pos: 3 }, { nick: "REEF", pos: 4 }, { nick: "Невадский", pos: 5 } ] },
+        { name: "dota enjoyers", logo: "dota2.png", roster: [ { nick: "bespredel. kz", pos: 1 }, { nick: "FERET-", pos: 2 }, { nick: "ПамперсМесси", pos: 3 }, { nick: "гений умный 0 ошибок", pos: 4 }, { nick: "рейвстак поволжьe", pos: 5 } ] },
+        { name: "Боги доты", logo: "dota2.png", roster: [ { nick: "Labmeister", pos: 1 }, { nick: "Достоевский", pos: 2 }, { nick: "All mute", pos: 3 }, { nick: "Fallen", pos: 4 }, { nick: "П0лковник Сабвуфер", pos: 5 } ] },
+        { name: "BK REJECTS", logo: "dota2.png", roster: [ { nick: "skilldiffmyself", pos: 1 }, { nick: "что", pos: 2 }, { nick: "миледи", pos: 3 }, { nick: "AI3L4", pos: 4 }, { nick: "Denson2", pos: 5 } ] },
+        { name: "VHS Team", logo: "dota2.png", roster: [ { nick: "Саша Белый Prime", pos: 1 }, { nick: "MIA", pos: 2 }, { nick: "RAIKIRI-", pos: 3 }, { nick: "Cøldeyes", pos: 4 }, { nick: "Discipline_", pos: 5 } ] }
+    ],
+    
+    casters: [
+        { name: "armagedonchamp", link: "https://www.twitch.tv/armagedonchamp" }
+    ],
+    
+    bracketEmbed: "https://postimg.cc/XGS2JCYt",
+    registrationLink: "https://t.me/MetamindArmagedonbot",
+    telegramLink: "https://t.me/armagedonchampionship",
+    
+    description: "ARMAGEDON CHAMPIONSHIP S8 — онлайн-турнир по Dota 2. Формат Single Elimination (BO3). Лимит 30.000 MMR на команду. Призовой фонд 10.000₽ (1 место — 7000₽, 2 место — 3000₽). Старт: 15 мая 2026.",
+    
+    prizePool: [
+        { place: 1, amount: "7.000₽", team: "VHS Team" },
+        { place: 2, amount: "3.000₽", team: "sigma aura" }
+    ]
+},
+  {
     id: "Bedlam-Waiting-For-Summer-Cup",
     title: "Bedlam Waiting For Summer Cup",
     limit: "До 35.000 MMR на команду",
