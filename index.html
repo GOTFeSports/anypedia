@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Anypedia | Dota 2 Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   CSS VARIABLES — поддержка тёмной и светлой темы
+   ============================================================ */
+:root {
+  --bg:        #0f0f10;
+  --bg2:       #151516;
+  --bg3:       #1c1c1e;
+  --border:    #252528;
+  --text:      #eaeaea;
+  --text-muted:#888;
+  --accent:    #6bb6ff;
+  --accent2:   #3d8fe0;
+  --live:      #ff6b6b;
+  --upcoming:  #6bb6ff;
+  --finished:  #5dff9c;
+  --radius:    12px;
+  --shadow:    0 4px 24px rgba(0,0,0,.45);
+  --transition:color .25s, background-color .25s, border-color .25s;
+}
+
+[data-theme="light"] {
+  --bg:        #f4f4f6;
+  --bg2:       #ffffff;
+  --bg3:       #e8e8ec;
+  --border:    #d0d0d8;
+  --text:      #111114;
+  --text-muted:#666;
+  --accent:    #1a6fcc;
+  --accent2:   #1452a0;
+  --live:      #c53030;
+  --upcoming:  #1a6fcc;
+  --finished:  #147a3d;
+  --shadow:    0 4px 24px rgba(0,0,0,.12);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }
+
+/* ============================================================
+   SITE HEADER (sticky)
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .5px;
+  transition: color .2s;
+}
+.logo:hover { color: var(--accent); }
+
+.logo-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: .3px;
+  margin-top: 1px;
+}
+
+.header-search {
+  width: 280px;
+  padding: 9px 14px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, var(--transition);
+}
+.header-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(107,182,255,.15);
+}
+.header-search::placeholder { color: var(--text-muted); }
+
+/* ============================================================
+   BANNER — под шапкой, внутри контейнера
+   ============================================================ */
+.banner-wrap {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.banner-link {
+  display: block;
+  color: inherit;
+  border-radius: var(--radius);
+}
+
+.banner-link:focus-visible {
+  outline: 3px solid rgba(107,182,255,.45);
+  outline-offset: 3px;
+}
+
+#mainBanner {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+  background: var(--bg3);  /* заглушка, пока нет картинки */
+  /* Замените src у <img id="mainBanner"> чтобы сменить баннер */
+}
+
+/* Баннер-плейсхолдер (показывается если src пустой / сломан) */
+.banner-placeholder {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #1a2840 0%, #0f1f35 40%, #162033 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+  border: 1px solid var(--border);
+}
+
+[data-theme="light"] .banner-placeholder {
+  background: linear-gradient(135deg, #ffffff 0%, #eef5ff 52%, #e7f8f0 100%);
+  color: #155fa8;
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 28px auto 32px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+.section-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+.table-wrap {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg2);
+  table-layout: fixed;
+  transition: var(--transition);
+}
+
+/* Ширины колонок — подобраны чтобы всё влезало без скролла */
+table th:nth-child(1) { width: 14%; }  /* Ограничение */
+table th:nth-child(2) { width: 20%; }  /* Турнир */
+table th:nth-child(3) { width: 17%; }  /* Дата */
+table th:nth-child(4) { width: 9%;  }  /* Приз */
+table th:nth-child(5) { width: 7%;  }  /* Регион */
+table th:nth-child(6) { width: 6%;  }  /* Команд */
+table th:nth-child(7) { width: 10%; }  /* Статус */
+table th:nth-child(8) { width: 12%; }  /* Победитель */
+table th:nth-child(9) { width: 5%;  }  /* Поделиться */
+
+th, td {
+  padding: 11px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: normal;
+  word-break: break-word;
+  transition: var(--transition);
+}
+
+th {
+  background: var(--bg3);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tbody tr {
+  cursor: pointer;
+  transition: background .15s;
+}
+tbody tr:hover { background: var(--bg3); }
+
+/* Status tags */
+.tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.live-tag     { background: rgba(255,107,107,.15); color: var(--live); }
+.upcoming-tag { background: rgba(107,182,255,.15); color: var(--upcoming); }
+.finished-tag { background: rgba(93,255,156,.10); color: var(--finished); }
+
+[data-theme="light"] .live-tag     { background: rgba(197,48,48,.12); }
+[data-theme="light"] .upcoming-tag { background: rgba(26,111,204,.12); }
+[data-theme="light"] .finished-tag { background: rgba(20,122,61,.13); }
+
+.limit-cell { color: var(--text-muted); font-size: 12px; }
+.prize-cell { font-weight: 600; }
+.winner-cell { font-size: 12px; }
+
+/* share icon button */
+.share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: color .2s, background .2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.share-btn:hover { color: var(--accent); background: rgba(107,182,255,.1); }
+
+td:last-child,
+th:last-child {
+  text-align: center;
+  padding-right: 16px;
+}
+
+/* Empty row */
+.empty-row td {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 22px;
+  white-space: normal;
+}
+
+/* ============================================================
+   FLOATING BUTTONS (theme + back-to-top)
+   ============================================================ */
+.fab {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  box-shadow: var(--shadow);
+  transition: transform .2s, background .2s, opacity .3s, var(--transition);
+}
+.fab:hover { transform: scale(1.1); }
+.fab svg { width: 18px; height: 18px; pointer-events: none; }
+
+#themeBtn  { bottom: 24px; left:  24px; }
+#toTopBtn  { bottom: 24px; right: 24px; opacity: 0; pointer-events: none; }
+#toTopBtn.visible { opacity: 1; pointer-events: auto; }
+
+/* ============================================================
+   TOAST NOTIFICATION
+   ============================================================ */
+#toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity .25s, transform .25s;
+  pointer-events: none;
+  z-index: 300;
+  white-space: nowrap;
+}
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .header-inner { flex-wrap: wrap; }
+  .header-search { width: 100%; }
+  .banner-wrap { padding: 0 12px; }
+  .container { padding: 0 12px; margin-top: 18px; gap: 24px; }
+  .section-label { font-size: 12px; letter-spacing: 1.4px; }
+  #mainBanner, .banner-placeholder { height: 100px; }
+  .table-wrap { overflow: visible; border: none; background: transparent; }
+  table, thead, tbody, tr, td { display: block; width: 100%; }
+  table { background: transparent; table-layout: auto; }
+  thead { display: none; }
+  tbody { display: grid; gap: 10px; }
+  tbody tr {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 12px;
+    box-shadow: var(--shadow);
+  }
+  tbody tr:hover { background: var(--bg2); }
+  td {
+    border-bottom: none;
+    padding: 6px 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  td::before {
+    content: attr(data-label);
+    flex: 0 0 88px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  td:nth-child(2) {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  td:nth-child(2)::before { display: none; }
+  td:last-child {
+    justify-content: flex-end;
+    padding-top: 8px;
+    padding-right: 0;
+  }
+  td:last-child::before { display: none; }
+  .share-btn {
+    width: 38px;
+    height: 38px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+  }
+  .site-footer { padding: 28px 12px 24px; }
+  .footer-inner { gap: 24px; }
+  .footer-bottom { align-items: flex-start; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+  padding: 36px 20px 28px;
+  transition: var(--transition);
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-brand .logo-foot {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: .5px;
+}
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.6;
+  max-width: 260px;
+}
+.footer-socials-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: color .2s;
+}
+.footer-socials a:hover { color: var(--accent); }
+.footer-socials a svg { flex-shrink: 0; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 22px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+</style>
+
+<script src="data.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="logo">Anypedia</div>
+      <div class="logo-sub">Dota 2 · Турниры СНГ</div>
+    </div>
+    <input id="search" class="header-search" type="text" placeholder="Поиск турниров…" autocomplete="off" />
+  </div>
+</header>
+
+<!-- ============================================================
+     BANNER
+     Замените src="..." чтобы сменить баннер.
+     Оставьте src="" или удалите атрибут — появится плейсхолдер.
+     ============================================================ -->
+<div class="banner-wrap">
+  <a class="banner-link" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener" aria-label="Открыть Telegram-сообщество Anylvl">
+    <img id="mainBanner" src="" alt="Anypedia Banner"
+         onerror="this.style.display='none'; document.getElementById('bannerPlaceholder').style.display='flex';"
+         onload="if(!this.src||this.naturalWidth===0){this.style.display='none';document.getElementById('bannerPlaceholder').style.display='flex';}">
+    <div class="banner-placeholder" id="bannerPlaceholder" style="display:none">
+      ⚔️ &nbsp; ANYPEDIA — DOTA 2 TOURNAMENTS
+    </div>
+  </a>
+</div>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main class="container">
+
+  <!-- Будущие -->
+  <section>
+    <div class="section-label">📅 Будущие турниры</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Ограничение</th>
+          <th>Турнир</th>
+          <th>Дата</th>
+          <th>Приз</th>
+          <th>Регион</th>
+          <th>№</th>
+          <th>Статус</th>
+          <th>Победитель</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="upcoming"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Текущие -->
+  <section>
+    <div class="section-label">🔴 Текущие турниры</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Ограничение</th>
+          <th>Турнир</th>
+          <th>Дата</th>
+          <th>Приз</th>
+          <th>Регион</th>
+          <th>Кол-во</th>
+          <th>Статус</th>
+          <th>Победитель</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="live"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Прошедшие -->
+  <section>
+    <div class="section-label">✅ Прошедшие турниры</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Ограничение</th>
+          <th>Турнир</th>
+          <th>Дата</th>
+          <th>Приз</th>
+          <th>Регион</th>
+          <th>Кол-во</th>
+          <th>Статус</th>
+          <th>Победитель</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="finished"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-foot">Anypedia</div>
+      <p>Платформа для поиска и отслеживания турниров по Dota 2 в СНГ. Следите за расписанием, ростерами и результатами.</p>
+    </div>
+    <div>
+      <div class="footer-socials-label">Наши соцсети</div>
+      <div class="footer-socials">
+        <a href="https://t.me/anylvlcommunity" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
+          Telegram
+        </a>
+
+        <a href="https://discord.gg/3N4Jg6Jpak" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963a.074.074 0 0 0-.041-.104 13.2 13.2 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/></svg>
+          Discord
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Anypedia. Все права защищены.</span>
+    <span>Dota 2 — торговая марка Valve Corporation.</span>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING BUTTONS
+     ============================================================ -->
+<!-- Тема: солнце/луна -->
+<button class="fab" id="themeBtn" title="Переключить тему" aria-label="Тема">
+  <!-- иконка меняется JS-ом -->
+  <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1"  x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+  </svg>
+</button>
+
+<!-- Наверх -->
+<button class="fab" id="toTopBtn" title="Наверх" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<!-- Toast -->
+<div id="toast">✓ Ссылка скопирована</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---------- CLEAN INDEX URL ---------- */
+if (location.pathname.endsWith('/index.html')) {
+  history.replaceState(null, '', `${location.pathname.slice(0, -'index.html'.length)}${location.search}${location.hash}`);
+}
+
+/* ---------- THEME ---------- */
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+
+const MOON_SVG = `<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>`;
+const SUN_SVG  = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  themeIcon.innerHTML = theme === 'dark' ? MOON_SVG : SUN_SVG;
+  localStorage.setItem('ap-theme', theme);
+}
+
+// Загрузить сохранённую тему
+applyTheme(localStorage.getItem('ap-theme') || 'dark');
+
+themeBtn.addEventListener('click', () => {
+  applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+/* ---------- BACK TO TOP ---------- */
+const toTopBtn = document.getElementById('toTopBtn');
+window.addEventListener('scroll', () => {
+  toTopBtn.classList.toggle('visible', window.scrollY > 300);
+});
+toTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ---------- TOAST ---------- */
+const toastEl = document.getElementById('toast');
+let toastTimer;
+function showToast(msg) {
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
+}
+
+/* ---------- SHARE ---------- */
+function shareUrl(url, title, e) {
+  e.stopPropagation();
+  if (navigator.share) {
+    navigator.share({ title, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => showToast('✓ Ссылка скопирована'));
+  }
+}
+
+/* ---------- DATA HELPERS ---------- */
+function toLocalDate(s) {
+  const [y, m, d] = s.split('-').map(Number);
+  return new Date(y, m - 1, d);
+}
+
+function formatDate(s) {
+  const [y, m, d] = s.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('ru-RU', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  });
+}
+
+const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+
+function getStatus(t) {
+  const s = toLocalDate(t.start), e = toLocalDate(t.end);
+  if (today < s) return 'upcoming';
+  if (today > e) return 'finished';
+  return 'live';
+}
+
+/* ---------- BANNER VISIBILITY ---------- */
+// Показываем баннер только если src задан
+const bannerImg = document.getElementById('mainBanner');
+const bannerPlaceholder = document.getElementById('bannerPlaceholder');
+if (!bannerImg.src || bannerImg.src === window.location.href) {
+  bannerImg.style.display = 'none';
+  bannerPlaceholder.style.display = 'flex';
+}
+
+/* ---------- RENDER ---------- */
+const upcoming = [], live = [], finished = [];
+tournaments.forEach(t => {
+  const st = getStatus(t);
+  if (st === 'upcoming') upcoming.push(t);
+  else if (st === 'live')  live.push(t);
+  else                     finished.push(t);
+});
+
+// Будущие: ближайшие сверху (по возрастанию даты старта)
+upcoming.sort((a, b) => toLocalDate(a.start) - toLocalDate(b.start));
+// Текущие: ближайшие к завершению сверху
+live.sort((a, b) => toLocalDate(a.end) - toLocalDate(b.end));
+// Прошедшие: самые свежие сверху (по убыванию даты старта)
+finished.sort((a, b) => toLocalDate(b.start) - toLocalDate(a.start));
+
+const statusLabel = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' };
+const statusClass = { upcoming: 'upcoming-tag', live: 'live-tag', finished: 'finished-tag' };
+
+function getSiteBasePath() {
+  const path = location.pathname;
+  if (path.endsWith('/index.html')) return path.slice(0, -'index.html'.length);
+  if (path.endsWith('/')) return path;
+  return path.slice(0, path.lastIndexOf('/') + 1);
+}
+
+function tournamentLink(id) {
+  return `${getSiteBasePath()}tournament.html?id=${encodeURIComponent(id)}`;
+}
+
+function tournamentPrettyPath(id) {
+  return `${getSiteBasePath()}${encodeURIComponent(id)}`;
+}
+
+function tournamentShareUrl(id) {
+  return `${location.origin}${tournamentPrettyPath(id)}`;
+}
+
+function buildRow(t) {
+  const st = getStatus(t);
+  const dateText = t.start === t.end
+    ? formatDate(t.start)
+    : `${formatDate(t.start)} — ${formatDate(t.end)}`;
+  const pageUrl = tournamentShareUrl(t.id);
+  const link    = tournamentLink(t.id);
+
+  return `
+    <tr onclick="location.href='${link}'">
+      <td class="limit-cell" data-label="Лимит">${t.limit || '—'}</td>
+      <td data-label="Турнир"><a href="${link}" onclick="event.stopPropagation()" style="font-weight:600">${t.title}</a></td>
+      <td data-label="Дата">${dateText}</td>
+      <td class="prize-cell" data-label="Приз">${t.prize || '—'}</td>
+      <td data-label="Регион">${t.location || '—'}</td>
+      <td data-label="Команд">${t.teams ?? '—'}</td>
+      <td data-label="Статус"><span class="tag ${statusClass[st]}">${statusLabel[st]}</span></td>
+      <td class="winner-cell" data-label="Победитель">${t.winner || '—'}</td>
+      <td data-label="Поделиться">
+        <button class="share-btn" title="Поделиться"
+          onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g,"\\'")}',event)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51"  x2="8.59"  y2="10.49"/>
+          </svg>
+        </button>
+      </td>
+    </tr>`;
+}
+
+function emptyRow() {
+  return `<tr class="empty-row"><td colspan="9">Нет результатов</td></tr>`;
+}
+
+function renderAll() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const filter = list => list.filter(t => t.title.toLowerCase().includes(q));
+  const up = filter(upcoming), li = filter(live), fin = filter(finished);
+  document.getElementById('upcoming').innerHTML = up.length  ? up.map(buildRow).join('')  : emptyRow();
+  document.getElementById('live').innerHTML     = li.length  ? li.map(buildRow).join('')  : emptyRow();
+  document.getElementById('finished').innerHTML = fin.length ? fin.map(buildRow).join('') : emptyRow();
+}
+
+document.getElementById('search').addEventListener('input', renderAll);
+renderAll();
+</script>
+</body>
+</html>
