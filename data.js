@@ -17,7 +17,7 @@ const tournaments = [
   {
     id: "Bedlam-Swamp-Wars",
     title: "Bedlam Swamp Wars",
-    limit: "до 7.500 MRR на игрока",
+    limit: "до 7.500 MMR на игрока",
     start: "2026-03-29",
     end: "2026-03-29",
     startTime: "18:00",
