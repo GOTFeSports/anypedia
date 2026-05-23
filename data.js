@@ -15,6 +15,305 @@
 
 const tournaments = [
   {
+    "id": "bedlam-battles-season-1",
+    "title": "Bedlam Battles Season 1",
+    "limit": "До Божество 5",
+    "start": "2025-08-23",
+    "end": "2025-08-31",
+    "startTime": "Обговаривается капитанами",
+    "prize": "6000₽",
+    "location": "СНГ",
+    "teams": 12,
+    "winner": "Team eblan's",
+    "format": "Групповой этап (2 группы по 6) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/18569-bedlam-battles-season-1",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/BEDLAMBATTLESSEASON1"
+    },
+    "teamsList": [
+        {"name": "Хлопни-Топни", "logo": "dota2.png", "roster": [{"nick": "Ebatov52", "pos": 1}, {"nick": "Chico_loo", "pos": 2}, {"nick": "frishzzz", "pos": 3}, {"nick": "ksuuvie0", "pos": 4}, {"nick": "biglewaff", "pos": 5}]},
+        {"name": "Team eblan's", "logo": "dota2.png", "roster": [{"nick": "lagan322", "pos": 1}, {"nick": "homixidehomixidehomixide00", "pos": 2}, {"nick": "zxcviperr342", "pos": 3}, {"nick": "depress3dkid", "pos": 4}, {"nick": "I717na", "pos": 5}]},
+        {"name": "Team Vortex", "logo": "dota2.png", "roster": [{"nick": "bombasterqq", "pos": 1}, {"nick": "Foxs3n", "pos": 2}, {"nick": "infant_mortality", "pos": 3}, {"nick": "dania70711", "pos": 4}, {"nick": "Silen_dude", "pos": 5}]},
+        {"name": "Team Zei", "logo": "dota2.png", "roster": [{"nick": "klimcxc", "pos": 1}, {"nick": "neverforgetaboutme", "pos": 2}, {"nick": "exsidez", "pos": 3}, {"nick": "w0rds4", "pos": 4}, {"nick": "trnikitaa", "pos": 5}]},
+        {"name": "Козел Vanguard", "logo": "dota2.png", "roster": [{"nick": "milkyyyyy25", "pos": 1}, {"nick": "m1qqla006", "pos": 2}, {"nick": "Dendivparizhe", "pos": 3}, {"nick": "eawesr", "pos": 4}, {"nick": "KokiMudi", "pos": 5}]},
+        {"name": "brbr patapim", "logo": "dota2.png", "roster": [{"nick": "Hatershello", "pos": 1}, {"nick": "EgorPipa", "pos": 2}, {"nick": "MunashiKibo", "pos": 3}, {"nick": "sh1nor1", "pos": 4}, {"nick": "retarded_as_fuck", "pos": 5}]},
+        {"name": "Divider Team", "logo": "dota2.png", "roster": [{"nick": "jokhyi", "pos": 1}, {"nick": "vladesolator", "pos": 2}, {"nick": "mxdgname", "pos": 3}, {"nick": "Zbxocbr", "pos": 4}, {"nick": "Jeeeeest", "pos": 5}]},
+        {"name": "EAVT teamm", "logo": "dota2.png", "roster": [{"nick": "master_arith", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "spiscloth_PT", "pos": 3}, {"nick": "DurckA79", "pos": 4}, {"nick": "real_boler", "pos": 5}]},
+        {"name": "Storm Swift", "logo": "dota2.png", "roster": [{"nick": "sadpasha123", "pos": 1}, {"nick": "stormxddd", "pos": 2}, {"nick": "Daniil_frog", "pos": 3}, {"nick": "constantinios7", "pos": 4}, {"nick": "sheremetov17", "pos": 5}]},
+        {"name": "WW Team", "logo": "dota2.png", "roster": [{"nick": "KliMsas", "pos": 1}, {"nick": "pujikcto02", "pos": 2}, {"nick": "dtr221", "pos": 3}, {"nick": "Peredoznkk", "pos": 4}, {"nick": "Iswasez", "pos": 5}]},
+        {"name": "Fallen angels", "logo": "dota2.png", "roster": [{"nick": "Sosal_huy_2008", "pos": 1}, {"nick": "Vi_lek", "pos": 2}, {"nick": "vl5pcm", "pos": 3}, {"nick": "nnweerxx", "pos": 4}, {"nick": "", "pos": 5}]},
+        {"name": "Грозовые Волки", "logo": "dota2.png", "roster": [{"nick": "chukchsa", "pos": 1}, {"nick": "try_nul_vas", "pos": 2}, {"nick": "aquastill", "pos": 3}, {"nick": "CePabloe", "pos": 4}, {"nick": "Uwexi1", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/BEDLAMBATTLESSEASON1/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Battles Season 1. Групповой этап + Double Elimination. Призовой фонд 6.000₽. Бесплатное участие.",
+    "prizePool": [
+        {"place": 1, "amount": "3000₽", "team": "Team eblan's"},
+        {"place": 2, "amount": "1800₽", "team": "Storm Swift"},
+        {"place": 3, "amount": "1200₽", "team": "Team Zei"}
+    ]
+},
+{
+    "id": "bedlam-battles-season-2",
+    "title": "Bedlam Battles Season 2",
+    "limit": "До Божество 5",
+    "start": "2025-09-27",
+    "end": "2025-10-05",
+    "startTime": "Обговаривается капитанами",
+    "prize": "7000₽",
+    "location": "СНГ",
+    "teams": 14,
+    "winner": "AnyRage",
+    "format": "Групповой этап (2 группы по 7) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/18739-bedlam-battles-season-2",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/BEDLAMBATTLESSEASON2"
+    },
+    "teamsList": [
+        {"name": "Team eblan's", "logo": "dota2.png", "roster": [{"nick": "lagan322", "pos": 1}, {"nick": "fedor22367", "pos": 2}, {"nick": "RostikMuh", "pos": 3}, {"nick": "depress3dkid", "pos": 4}, {"nick": "I717na", "pos": 5}]},
+        {"name": "AnyRage", "logo": "dota2.png", "roster": [{"nick": "sadpasha123", "pos": 1}, {"nick": "Miha153867", "pos": 2}, {"nick": "paradox_pog", "pos": 3}, {"nick": "sheremetov17", "pos": 4}, {"nick": "nevercr7", "pos": 5}]},
+        {"name": "Team Zei", "logo": "dota2.png", "roster": [{"nick": "klimcxc", "pos": 1}, {"nick": "neverforgetaboutme", "pos": 2}, {"nick": "exsidez", "pos": 3}, {"nick": "isd4nya", "pos": 4}, {"nick": "dAV1Hci", "pos": 5}]},
+        {"name": "PIVZAVOD", "logo": "dota2.png", "roster": [{"nick": "Yudyri", "pos": 1}, {"nick": "maryy_dayy", "pos": 2}, {"nick": "takurroo", "pos": 3}, {"nick": "xrch1dmlvlnc", "pos": 4}, {"nick": "arrrf09", "pos": 5}]},
+        {"name": "swe1k1k1kteam42", "logo": "dota2.png", "roster": [{"nick": "daxakpotich", "pos": 1}, {"nick": "skibidisensei", "pos": 2}, {"nick": "", "pos": 3}, {"nick": "AYAYAYAKATYA", "pos": 4}, {"nick": "", "pos": 5}]},
+        {"name": "TireService", "logo": "dota2.png", "roster": [{"nick": "lsunshie", "pos": 1}, {"nick": "wiiksikqq", "pos": 2}, {"nick": "sepiftx", "pos": 3}, {"nick": "UKGRUT1K", "pos": 4}, {"nick": "Minnik05", "pos": 5}]},
+        {"name": "TEAM SPIRT", "logo": "dota2.png", "roster": [{"nick": "lerc0re", "pos": 1}, {"nick": "Kpackawl", "pos": 2}, {"nick": "u_s_e_I_e_s_s", "pos": 3}, {"nick": "schwarz_pussy", "pos": 4}, {"nick": "Cee3ka", "pos": 5}]},
+        {"name": "Harakiri Team", "logo": "dota2.png", "roster": [{"nick": "dyrachyo_001", "pos": 1}, {"nick": "Zwonipol", "pos": 2}, {"nick": "collpacse", "pos": 3}, {"nick": "yatorogod3457", "pos": 4}, {"nick": "tertuz", "pos": 5}]},
+        {"name": "Nightmares", "logo": "dota2.png", "roster": [{"nick": "seven17teen1717", "pos": 1}, {"nick": "Vlad9s", "pos": 2}, {"nick": "zavarich", "pos": 3}, {"nick": "dAV1Hci", "pos": 4}, {"nick": "Cris_Thompson", "pos": 5}]},
+        {"name": "Mopsyarki Team", "logo": "dota2.png", "roster": [{"nick": "ntysko", "pos": 1}, {"nick": "avicexdd666", "pos": 2}, {"nick": "pr0pavshiy1", "pos": 3}, {"nick": "Pikodor", "pos": 4}, {"nick": "Stan4ikere", "pos": 5}]},
+        {"name": "Dark Horse", "logo": "dota2.png", "roster": [{"nick": "whattheffuckkk", "pos": 1}, {"nick": "floppyyy31", "pos": 2}, {"nick": "raJlogHi", "pos": 3}, {"nick": "LyMiXD", "pos": 4}, {"nick": "Keks552", "pos": 5}]},
+        {"name": "rabbids invasion", "logo": "dota2.png", "roster": [{"nick": "fckwrld765", "pos": 1}, {"nick": "holyrotten", "pos": 2}, {"nick": "mindfvckxd", "pos": 3}, {"nick": "skiter0", "pos": 4}, {"nick": "justbanished", "pos": 5}]},
+        {"name": "Хлопни-Топни", "logo": "dota2.png", "roster": [{"nick": "Ebatov52", "pos": 1}, {"nick": "Glebi52", "pos": 2}, {"nick": "Chico_loo", "pos": 3}, {"nick": "ksuuvie0", "pos": 4}, {"nick": "SCorPion_LSPD", "pos": 5}]},
+        {"name": "EAVT", "logo": "dota2.png", "roster": [{"nick": "master_arith", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "spiscloth_PT", "pos": 3}, {"nick": "DurckA79", "pos": 4}, {"nick": "real_boler", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/BEDLAMBATTLESSEASON2/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Battles Season 2. Групповой этап + Double Elimination. Призовой фонд 7.000₽. Бесплатное участие.",
+    "prizePool": [
+        {"place": 1, "amount": "3500₽", "team": "AnyRage"},
+        {"place": 2, "amount": "2100₽", "team": "Dark Horse"},
+        {"place": 3, "amount": "1400₽", "team": "TEAM SPIRT"}
+    ]
+},
+{
+    "id": "bedlam-christmas-cup",
+    "title": "Bedlam Christmas Cup",
+    "limit": "До 7000 MMR",
+    "start": "2025-12-06",
+    "end": "2025-12-14",
+    "startTime": "Обговаривается капитанами",
+    "prize": "20000₽",
+    "location": "СНГ",
+    "teams": 20,
+    "winner": "СТЕПАН PRIME",
+    "format": "Групповой этап (4 группы по 5) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19005-bedlam-christmas-cup",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "https://docs.google.com/document/d/14gt69ju30M_RBacddfdtkvjbNVelFiIjfBoVyDhBUDc/edit?tab=t.0",
+        "bracket": "https://challonge.com/ru/BBedlamChristmasCup"
+    },
+    "teamsList": [
+        {"name": "Pereflexiki", "logo": "dota2.png", "roster": [{"nick": "cherryblosssomm", "pos": 1}, {"nick": "xxxshpana", "pos": 2}, {"nick": "azgen007", "pos": 3}, {"nick": "tail5", "pos": 4}, {"nick": "Forgeo_10", "pos": 5}]},
+        {"name": "NoLittleCancer", "logo": "dota2.png", "roster": [{"nick": "neriel01", "pos": 1}, {"nick": "Leo07Mego", "pos": 2}, {"nick": "Sir_Damind", "pos": 3}, {"nick": "e_cherentsov", "pos": 4}, {"nick": "Qissan", "pos": 5}]},
+        {"name": "Team Zei", "logo": "dota2.png", "roster": [{"nick": "klimcxc", "pos": 1}, {"nick": "neverforgetaboutme", "pos": 2}, {"nick": "izukingweihz", "pos": 3}, {"nick": "zwyrt", "pos": 4}, {"nick": "exsidez", "pos": 5}]},
+        {"name": "Angetsu", "logo": "dota2.png", "roster": [{"nick": "ritsuakad", "pos": 1}, {"nick": "g4denish", "pos": 2}, {"nick": "Kiryqz", "pos": 3}, {"nick": "DamiRR999", "pos": 4}, {"nick": "kioqq", "pos": 5}]},
+        {"name": "Pavel enragovi4 funs", "logo": "dota2.png", "roster": [{"nick": "Hatershello", "pos": 1}, {"nick": "EgorKul4", "pos": 2}, {"nick": "muff01", "pos": 3}, {"nick": "MihaPlut", "pos": 4}, {"nick": "retarded_as_fuck", "pos": 5}]},
+        {"name": "EnrageTurniriDota2", "logo": "dota2.png", "roster": [{"nick": "LookAtTeenwave", "pos": 1}, {"nick": "sooqa7", "pos": 2}, {"nick": "sadpasha123", "pos": 3}, {"nick": "nevercr7", "pos": 4}, {"nick": "Mikhael16", "pos": 5}]},
+        {"name": "Sad Boys", "logo": "dota2.png", "roster": [{"nick": "lerc0re", "pos": 1}, {"nick": "alleyesonme166", "pos": 2}, {"nick": "ceogulag", "pos": 3}, {"nick": "whattheffuckkk", "pos": 4}, {"nick": "Keks552", "pos": 5}]},
+        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "Alikk313", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
+        {"name": "СТЕПАН PRIME", "logo": "dota2.png", "roster": [{"nick": "syze9", "pos": 1}, {"nick": "Manekkkkk", "pos": 2}, {"nick": "mss0280", "pos": 3}, {"nick": "rastoman4ik2", "pos": 4}, {"nick": "bbpoka", "pos": 5}]},
+        {"name": "Primal Dance", "logo": "dota2.png", "roster": [{"nick": "Utrataa", "pos": 1}, {"nick": "deox1d3R", "pos": 2}, {"nick": "w8myoverdose", "pos": 3}, {"nick": "Kirill_makhorin", "pos": 4}, {"nick": "oleg41567", "pos": 5}]},
+        {"name": "Team zei junior", "logo": "dota2.png", "roster": [{"nick": "lagan322", "pos": 1}, {"nick": "BatonSolo", "pos": 2}, {"nick": "mollypoedatel911", "pos": 3}, {"nick": "depress3dkid", "pos": 4}, {"nick": "matmyee1", "pos": 5}]},
+        {"name": "HATER ZDES'", "logo": "dota2.png", "roster": [{"nick": "sk1ble", "pos": 1}, {"nick": "Notearz", "pos": 2}, {"nick": "Brthless", "pos": 3}, {"nick": "gogaa_00", "pos": 4}, {"nick": "realhaterzdes", "pos": 5}]},
+        {"name": "KVASIK+1", "logo": "dota2.png", "roster": [{"nick": "Fragin12", "pos": 1}, {"nick": "rimit2q", "pos": 2}, {"nick": "GetsGT", "pos": 3}, {"nick": "wasterina", "pos": 4}, {"nick": "Devyanosto8oi", "pos": 5}]},
+        {"name": "ФАНАТЫ ФИШМАНА", "logo": "dota2.png", "roster": [{"nick": "killklkal", "pos": 1}, {"nick": "Miha153867", "pos": 2}, {"nick": "gjfdjhl", "pos": 3}, {"nick": "adragg", "pos": 4}, {"nick": "furces", "pos": 5}]},
+        {"name": "Muzhikotaurs TEAM", "logo": "dota2.png", "roster": [{"nick": "lilkirill0", "pos": 1}, {"nick": "your_mom", "pos": 2}, {"nick": "nacho_s01", "pos": 3}, {"nick": "DDanyachka", "pos": 4}, {"nick": "cuteAlister", "pos": 5}]},
+        {"name": "Chill Guys", "logo": "dota2.png", "roster": [{"nick": "kisliy", "pos": 1}, {"nick": "Miyamorro", "pos": 2}, {"nick": "emoabyss", "pos": 3}, {"nick": "constantinios7", "pos": 4}, {"nick": "glexix", "pos": 5}]},
+        {"name": "selskiedeti", "logo": "dota2.png", "roster": [{"nick": "lavvlyy", "pos": 1}, {"nick": "falexqq", "pos": 2}, {"nick": "egoruk47", "pos": 3}, {"nick": "stul666", "pos": 4}, {"nick": "Patter1303", "pos": 5}]},
+        {"name": "Mistake", "logo": "dota2.png", "roster": [{"nick": "rlublumacaticicki", "pos": 1}, {"nick": "wrestlingdagestan", "pos": 2}, {"nick": "18teenDepression", "pos": 3}, {"nick": "hittenmitsurugi_ryu", "pos": 4}, {"nick": "holyrotten", "pos": 5}]},
+        {"name": "Nadejda_SNG", "logo": "dota2.png", "roster": [{"nick": "ilyalivanov", "pos": 1}, {"nick": "ChikoHicks86", "pos": 2}, {"nick": "Neekeynk", "pos": 3}, {"nick": "freEZZee1337", "pos": 4}, {"nick": "troitskiyy", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/BBedlamChristmasCup/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Christmas Cup. Групповой этап + Double Elimination. Призовой фонд 20.000₽. Взнос 1000₽ с команды.",
+    "prizePool": [
+        {"place": 1, "amount": "10000₽", "team": "СТЕПАН PRIME"},
+        {"place": 2, "amount": "6000₽", "team": "Chill Guys"},
+        {"place": 3, "amount": "4000₽", "team": "Never Back Down"}
+    ]
+},
+{
+    "id": "bedlam-winter-cup-division-1",
+    "title": "Bedlam Winter Cup: Division 1",
+    "limit": "До 8500 MMR",
+    "start": "2026-02-14",
+    "end": "2026-02-22",
+    "startTime": "Обговаривается капитанами",
+    "prize": "25000₽",
+    "location": "СНГ",
+    "teams": 12,
+    "winner": "МЫ",
+    "format": "Групповой этап (2 группы по 6) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19283-bedlam-winter-cup-division-1",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "https://drive.google.com/file/d/10pqTr57ePMTpuRwJrofKRYbFImnVQ-B1/view?usp=sharing",
+        "bracket": "https://challonge.com/ru/xkyi7hz6"
+    },
+    "teamsList": [
+        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "karinegod", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "yanazavode", "pos": 3}, {"nick": "SCorPion_LSPD", "pos": 4}, {"nick": "Denzerin", "pos": 5}]},
+        {"name": "TEIKO", "logo": "dota2.png", "roster": [{"nick": "LookAtTeenwave", "pos": 1}, {"nick": "Kricsalis_mode", "pos": 2}, {"nick": "ManuuLq", "pos": 3}, {"nick": "Mikhael16", "pos": 4}, {"nick": "Ingsiontich", "pos": 5}]},
+        {"name": "Angetsu", "logo": "dota2.png", "roster": [{"nick": "paroksetii", "pos": 1}, {"nick": "g4denish", "pos": 2}, {"nick": "Kiryqz", "pos": 3}, {"nick": "consumeyou", "pos": 4}, {"nick": "Crimson_witness", "pos": 5}]},
+        {"name": "Primal Dance", "logo": "dota2.png", "roster": [{"nick": "arcotsu", "pos": 1}, {"nick": "deox1d3R", "pos": 2}, {"nick": "Edsai1", "pos": 3}, {"nick": "Kirill_makhorin", "pos": 4}, {"nick": "oleg41567", "pos": 5}]},
+        {"name": "Team Amplify", "logo": "dota2.png", "roster": [{"nick": "iFlopz", "pos": 1}, {"nick": "D0nem", "pos": 2}, {"nick": "Iseedeadpeople6267", "pos": 3}, {"nick": "Ebatov9", "pos": 4}, {"nick": "Mirco9677", "pos": 5}]},
+        {"name": "МЫ", "logo": "dota2.png", "roster": [{"nick": "epk1d", "pos": 1}, {"nick": "k1rne4", "pos": 2}, {"nick": "Bubikuss", "pos": 3}, {"nick": "beeawes0me", "pos": 4}, {"nick": "LegasY2211", "pos": 5}]},
+        {"name": "Death Domain", "logo": "dota2.png", "roster": [{"nick": "sfpodpivasom", "pos": 1}, {"nick": "m1xeven", "pos": 2}, {"nick": "uzriteiustrashites", "pos": 3}, {"nick": "KILLIZIUM", "pos": 4}, {"nick": "DmitriiHoodWink", "pos": 5}]},
+        {"name": "РАЗНОШУ ЧЕМПИОНАТ", "logo": "dota2.png", "roster": [{"nick": "bonaceraa", "pos": 1}, {"nick": "ragdayudziro", "pos": 2}, {"nick": "RodionovDR", "pos": 3}, {"nick": "niks_35", "pos": 4}, {"nick": "Perts_V", "pos": 5}]},
+        {"name": "anonymous dota players", "logo": "dota2.png", "roster": [{"nick": "Atuc7264", "pos": 1}, {"nick": "cd_mymind", "pos": 2}, {"nick": "tteido", "pos": 3}, {"nick": "asdaswqe", "pos": 4}, {"nick": "zxcnikita2809", "pos": 5}]},
+        {"name": "Excellent Era", "logo": "dota2.png", "roster": [{"nick": "chisto_krovniy", "pos": 1}, {"nick": "ThisDontLove", "pos": 2}, {"nick": "Bl1nds", "pos": 3}, {"nick": "nurglpov", "pos": 4}, {"nick": "youkuu666", "pos": 5}]},
+        {"name": "Team Lunar", "logo": "dota2.png", "roster": [{"nick": "aquagwae", "pos": 1}, {"nick": "meosmeight", "pos": 2}, {"nick": "golimpput", "pos": 3}, {"nick": "Lonikopilat", "pos": 4}, {"nick": "PROSre", "pos": 5}]},
+        {"name": "Savage Hope", "logo": "dota2.png", "roster": [{"nick": "ilyacosmos", "pos": 1}, {"nick": "fxckksociety", "pos": 2}, {"nick": "a_aavid", "pos": 3}, {"nick": "Hassttum", "pos": 4}, {"nick": "Ophelliiia", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/xkyi7hz6/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Winter Cup: Division 1. Групповой этап + Double Elimination. Призовой фонд 25.000₽. Взнос 1000₽ с команды.",
+    "prizePool": [
+        {"place": 1, "amount": "12500₽", "team": "МЫ"},
+        {"place": 2, "amount": "7500₽", "team": "anonymous dota players"},
+        {"place": 3, "amount": "5000₽", "team": "Angetsu"}
+    ]
+},
+{
+    "id": "bedlam-winter-cup-division-2",
+    "title": "Bedlam Winter Cup: Division 2",
+    "limit": "До Божество 5",
+    "start": "2026-02-28",
+    "end": "2026-03-08",
+    "startTime": "Обговаривается капитанами",
+    "prize": "20000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "sigma aura",
+    "format": "Групповой этап (4 сетки по 4) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19284-bedlam-winter-cup-division-2",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "https://drive.google.com/file/d/1SFL3oqStOUDdFYNusyBQ-J5M4OOomk16/view",
+        "bracket": "https://challonge.com/ru/BWCD2"
+    },
+    "teamsList": [
+        {"name": "VPive", "logo": "dota2.png", "roster": [{"nick": "Superbia86", "pos": 1}, {"nick": "ssstakira", "pos": 2}, {"nick": "flynet89", "pos": 3}, {"nick": "milastik31", "pos": 4}, {"nick": "Sowedy1", "pos": 5}]},
+        {"name": "Perefleksiki", "logo": "dota2.png", "roster": [{"nick": "cherryblosssomm", "pos": 1}, {"nick": "Forgeo_10", "pos": 2}, {"nick": "azgen007", "pos": 3}, {"nick": "Tolik2003", "pos": 4}, {"nick": "supersex", "pos": 5}]},
+        {"name": "UnTeiko team", "logo": "dota2.png", "roster": [{"nick": "realtripyxa", "pos": 1}, {"nick": "fearofffckinstablelife", "pos": 2}, {"nick": "stul666", "pos": 3}, {"nick": "unkwnusers", "pos": 4}, {"nick": "nadalbaebe", "pos": 5}]},
+        {"name": "ground pepper", "logo": "dota2.png", "roster": [{"nick": "quretik", "pos": 1}, {"nick": "YASHLIUHA", "pos": 2}, {"nick": "pivovartugosrun", "pos": 3}, {"nick": "IfrizerI", "pos": 4}, {"nick": "Tyhran4ik", "pos": 5}]},
+        {"name": "Хлопни-Топни", "logo": "dota2.png", "roster": [{"nick": "Ebatov9", "pos": 1}, {"nick": "Blood_flow1", "pos": 2}, {"nick": "Chico_loo", "pos": 3}, {"nick": "SCorPion_LSPD", "pos": 4}, {"nick": "matmyee1", "pos": 5}]},
+        {"name": "MMAshonki61", "logo": "dota2.png", "roster": [{"nick": "tar990", "pos": 1}, {"nick": "Serega017", "pos": 2}, {"nick": "whyyyyq", "pos": 3}, {"nick": "kardash61", "pos": 4}, {"nick": "wxders", "pos": 5}]},
+        {"name": "TEAM SPIRT 2.0", "logo": "dota2.png", "roster": [{"nick": "Kpackawl", "pos": 1}, {"nick": "g4zgforce", "pos": 2}, {"nick": "u_s_e_I_e_s_s", "pos": 3}, {"nick": "C15bullets", "pos": 4}, {"nick": "MyFavouriteGhost", "pos": 5}]},
+        {"name": "WEHOME", "logo": "dota2.png", "roster": [{"nick": "akkkvla66", "pos": 1}, {"nick": "balengyiaga", "pos": 2}, {"nick": "solxsalty", "pos": 3}, {"nick": "kzehoo", "pos": 4}, {"nick": "iaobizana", "pos": 5}]},
+        {"name": "Feed4Life", "logo": "dota2.png", "roster": [{"nick": "blinksokna", "pos": 1}, {"nick": "infernojgkhz", "pos": 2}, {"nick": "kxsunex", "pos": 3}, {"nick": "ilyxakiller09", "pos": 4}, {"nick": "Vendettaqwe", "pos": 5}]},
+        {"name": "Teikō", "logo": "dota2.png", "roster": [{"nick": "Your_soul_is_mineee", "pos": 1}, {"nick": "Moralchan1", "pos": 2}, {"nick": "ryzey1", "pos": 3}, {"nick": "fallensouljas", "pos": 4}, {"nick": "ladno1384", "pos": 5}]},
+        {"name": "sigma aura", "logo": "dota2.png", "roster": [{"nick": "lerc0re", "pos": 1}, {"nick": "whattheffuckkk", "pos": 2}, {"nick": "alleyesonme166", "pos": 3}, {"nick": "Yookich55", "pos": 4}, {"nick": "na1turs", "pos": 5}]},
+        {"name": "vichiT и 9бомжей", "logo": "dota2.png", "roster": [{"nick": "SashokMalishok123", "pos": 1}, {"nick": "bu1kkka", "pos": 2}, {"nick": "Aloha_Freeezz", "pos": 3}, {"nick": "amph_enjoyer", "pos": 4}, {"nick": "Deceiver1", "pos": 5}]},
+        {"name": "Skyway", "logo": "dota2.png", "roster": [{"nick": "loooxxxl", "pos": 1}, {"nick": "ztexxx", "pos": 2}, {"nick": "Jfirjfjdjnfdjjf", "pos": 3}, {"nick": "kael763", "pos": 4}, {"nick": "dfle0", "pos": 5}]},
+        {"name": "Barracuda Team", "logo": "dota2.png", "roster": [{"nick": "glav3s", "pos": 1}, {"nick": "pacifistooo", "pos": 2}, {"nick": "Blintlbeis", "pos": 3}, {"nick": "LLLLL33LLLLL", "pos": 4}, {"nick": "azazin671", "pos": 5}]},
+        {"name": "DF RISING 2", "logo": "dota2.png", "roster": [{"nick": "sfpodpivasom", "pos": 1}, {"nick": "m1xeven", "pos": 2}, {"nick": "protivniwreqx", "pos": 3}, {"nick": "kefa1k", "pos": 4}, {"nick": "ionhavemoney4flwrs", "pos": 5}]},
+        {"name": "EAVT LD", "logo": "dota2.png", "roster": [{"nick": "master_arith", "pos": 1}, {"nick": "BoRoDa_UwU", "pos": 2}, {"nick": "UGLLYSHAAWTY", "pos": 3}, {"nick": "DurckA79", "pos": 4}, {"nick": "real_boler", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/BWCD2/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Winter Cup: Division 2. Групповой этап + Double Elimination. Призовой фонд 20.000₽. Взнос 1000₽ с команды.",
+    "prizePool": [
+        {"place": 1, "amount": "10000₽", "team": "sigma aura"},
+        {"place": 2, "amount": "6000₽", "team": "MMAshonki61"},
+        {"place": 3, "amount": "4000₽", "team": "DF RISING 2"}
+    ]
+},
+{
+    "id": "bedlam-battles-season-3",
+    "title": "Bedlam Battles Season 3",
+    "limit": "До 7000 MMR",
+    "start": "2025-11-01",
+    "end": "2025-11-09",
+    "startTime": "Обговаривается капитанами",
+    "prize": "15000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "Never Back Down",
+    "format": "Групповой этап (4 сетки по 4) + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/18808-bedlam-battles-season-3",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/BBS_3"
+    },
+    "teamsList": [
+        {"name": "BuLxS", "logo": "dota2.png", "roster": [{"nick": "489897147", "pos": 1}, {"nick": "329595942", "pos": 2}, {"nick": "883489666", "pos": 3}, {"nick": "1030470851", "pos": 4}, {"nick": "1672427658", "pos": 5}]},
+        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "etceterrra", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
+        {"name": "DF JUNIOR", "logo": "dota2.png", "roster": [{"nick": "misterbrood", "pos": 1}, {"nick": "ssaaaooo1", "pos": 2}, {"nick": "Bot4nS", "pos": 3}, {"nick": "Imfuckingdeadinside", "pos": 4}, {"nick": "DarkManaa", "pos": 5}]},
+        {"name": "DF YOUTH", "logo": "dota2.png", "roster": [{"nick": "NamelessMonster300", "pos": 1}, {"nick": "Hurricane_ww", "pos": 2}, {"nick": "o_oshiete", "pos": 3}, {"nick": "Abdulazxc", "pos": 4}, {"nick": "Kulaagnin", "pos": 5}]},
+        {"name": "Sternritters", "logo": "dota2.png", "roster": [{"nick": "aceqlzx", "pos": 1}, {"nick": "trenxd", "pos": 2}, {"nick": "Visi1n", "pos": 3}, {"nick": "Wextr1", "pos": 4}, {"nick": "Clevanq", "pos": 5}]},
+        {"name": "Emo Fluttershy Team", "logo": "dota2.png", "roster": [{"nick": "ritsuakad", "pos": 1}, {"nick": "Kricsalis_mode", "pos": 2}, {"nick": "Kiryqz", "pos": 3}, {"nick": "Ingsiontich", "pos": 4}, {"nick": "kioqq", "pos": 5}]},
+        {"name": "Team Quantum", "logo": "dota2.png", "roster": [{"nick": "JustLuman", "pos": 1}, {"nick": "Foxs3n", "pos": 2}, {"nick": "shizssse", "pos": 3}, {"nick": "real_mangix", "pos": 4}, {"nick": "ILBBPP", "pos": 5}]},
+        {"name": "TEAM SPIRT", "logo": "dota2.png", "roster": [{"nick": "lerc0re", "pos": 1}, {"nick": "u_s_e_I_e_s_s", "pos": 2}, {"nick": "Kpackawl", "pos": 3}, {"nick": "NeFreakK", "pos": 4}, {"nick": "Cee3ka", "pos": 5}]},
+        {"name": "Team Puppies", "logo": "dota2.png", "roster": [{"nick": "aloxa69", "pos": 1}, {"nick": "tavsnehyiu", "pos": 2}, {"nick": "ne_eugenee", "pos": 3}, {"nick": "ive_lost_it", "pos": 4}, {"nick": "d1keycsoff", "pos": 5}]},
+        {"name": "Darkhorse", "logo": "dota2.png", "roster": [{"nick": "saikyoll", "pos": 1}, {"nick": "alleyesonme166", "pos": 2}, {"nick": "whattheffuckkk", "pos": 3}, {"nick": "LyMiXD", "pos": 4}, {"nick": "na1turs", "pos": 5}]},
+        {"name": "Immortal dragons", "logo": "dota2.png", "roster": [{"nick": "Drag0nay", "pos": 1}, {"nick": "mal0ywww", "pos": 2}, {"nick": "Artik_Style", "pos": 3}, {"nick": "popboon123", "pos": 4}, {"nick": "dzerku", "pos": 5}]},
+        {"name": "Team Zei", "logo": "dota2.png", "roster": [{"nick": "klimcxc", "pos": 1}, {"nick": "budayq", "pos": 2}, {"nick": "exsidez", "pos": 3}, {"nick": "zwyrt", "pos": 4}, {"nick": "dAV1Hci", "pos": 5}]},
+        {"name": "Fc AKKE", "logo": "dota2.png", "roster": [{"nick": "cherryblosssomm", "pos": 1}, {"nick": "Forgeo_10", "pos": 2}, {"nick": "xxxshpana", "pos": 3}, {"nick": "tail5", "pos": 4}, {"nick": "", "pos": 5}]},
+        {"name": "WWalya Team", "logo": "dota2.png", "roster": [{"nick": "jiglipuffy", "pos": 1}, {"nick": "Nota_Z", "pos": 2}, {"nick": "s1ckoffckingup", "pos": 3}, {"nick": "slxxpwalker", "pos": 4}, {"nick": "kipyatog", "pos": 5}]},
+        {"name": "рiбкi", "logo": "dota2.png", "roster": [{"nick": "morgenshtern1", "pos": 1}, {"nick": "mryegorych", "pos": 2}, {"nick": "X00OD", "pos": 3}, {"nick": "turmsak", "pos": 4}, {"nick": "YMER_B_MOSKWE", "pos": 5}]},
+        {"name": "Fish sticks", "logo": "dota2.png", "roster": [{"nick": "letstryanyway", "pos": 1}, {"nick": "BOOBAqq", "pos": 2}, {"nick": "pivovarx5", "pos": 3}, {"nick": "sdm_nt321", "pos": 4}, {"nick": "pogilaya", "pos": 5}]}
+    ],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "https://challonge.com/ru/BBS_3/module",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "Bedlam Battles Season 3. Групповой этап + Double Elimination. Призовой фонд 15.000₽. Взнос 500₽ с команды.",
+    "prizePool": [
+        {"place": 1, "amount": "7500₽", "team": "Never Back Down"},
+        {"place": 2, "amount": "4500₽", "team": "Fish sticks"},
+        {"place": 3, "amount": "3000₽", "team": "BuLxS"}
+    ]
+},
+  {
     id: "Bedlam-Swamp-Wars",
     title: "Bedlam Swamp Wars",
     limit: "до 7.500 MMR на игрока",
