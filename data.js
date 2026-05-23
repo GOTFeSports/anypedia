@@ -2,9 +2,107 @@
 //  Anypedia — Tournament Data
 //  Добавьте startTime в формате "HH:MM" для
 //  отображения таймера обратного отсчёта.
+//
+//  Дополнительные ссылки для правого меню турнира:
+//  links: {
+//    dotabuff: "https://...",
+//    discord:  "https://...",
+//    rules:    "https://...",
+//    bracket:  "https://..."
+//  }
+//  Пустые или отсутствующие ссылки не отображаются.
 // =============================================
 
 const tournaments = [
+  {
+    id: "Bedlam-Swamp-Wars",
+    title: "Bedlam Swamp Wars",
+    limit: "до 7.500 MRR на игрока",
+    start: "2026-03-29",
+    end: "2026-03-29",
+    startTime: "18:00",
+    prize: "10.000₽",
+    location: "СНГ",
+    teams: 8,
+    winner: "Glitz",
+    format: "Single Elimination",
+    organizer: "Bedlam Tournaments",
+    links: {
+        dotabuff: "https://ru.dotabuff.com/esports/leagues/19504-bedlam-swamp-wars",
+        discord: "https://discord.gg/eafqq7bpNe",
+        rules: "",
+        bracket: "https://challonge.com/ru/BSW123"
+    },
+    teamsList: [],
+    
+    casters: [
+        { name: "TBD", link: "" }
+    ],
+    
+    bracketEmbed: "https://challonge.com/ru/BSW123/module",
+    registrationLink: "",
+    telegramLink: "https://t.me/bedlamtournaments",
+    
+    description: "Bedlam Swamp Wars — онлайн-турнир по Dota 2. Формат Single Elimination (BO1), финал и матч за 3 место — BO1. Captains Draft. Призовой фонд 10.000₽ (1 место — 5.000₽, 2 место — 3.000₽, 3 место — 2.000₽). Взнос 500₽ с команды. Дата проведения: 29 марта 2026.",
+    
+    prizePool: [
+        { place: 1, amount: "5.000₽", team: "Glitz" },
+        { place: 2, amount: "3.000₽", team: "all my members ceo" },
+        { place: 3, amount: "2.000₽", team: "LETO jr" }
+    ]
+},
+{
+    id: "Bedlam-Spring-Cup",
+    title: "Bedlam Spring Cup",
+    limit: "До 8.500 MMR на игрока",
+    start: "2026-04-18",
+    end: "2026-04-26",
+    startTime: "18:00",
+    prize: "25.000₽",
+    location: "СНГ",
+    teams: 20,
+    winner: "Bedlam Battle Team",
+    format: "Group Stage + Double Elimination",
+    organizer: "Bedlam Tournaments",
+    links: {
+        dotabuff: "https://ru.dotabuff.com/esports/leagues/19593-bedlam-spring-cup",
+        discord: "https://discord.gg/eafqq7bpNe",
+        rules: "",
+        bracket: "https://challonge.com/ru/BSC67/module"
+    },
+    teamsList: [
+        { name: "Bedlam Battle Team", logo: "dota2.png", roster: [ { nick: "arcotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "Edsai1", pos: 3 }, { nick: "yomyKo", pos: 4 }, { nick: "Ar1urn", pos: 5 } ] },
+        { name: "Gitlz", logo: "dota2.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
+        { name: "egoisto team", logo: "dota2.png", roster: [ { nick: "xinegod", pos: 1 }, { nick: "m1nd1q", pos: 2 }, { nick: "dark_light666", pos: 3 }, { nick: "zxcnikita2809", pos: 4 }, { nick: "HSSJEY", pos: 5 } ] },
+        { name: "узбагойся", logo: "dota2.png", roster: [ { nick: "Ghostraze", pos: 1 }, { nick: "arcabuse", pos: 2 }, { nick: "xtravs", pos: 3 }, { nick: "rsln_ttr", pos: 4 }, { nick: "VfIDF", pos: 5 } ] },
+        { name: "SkyDrifters", logo: "dota2.png", roster: [ { nick: "divinememory", pos: 1 }, { nick: "hopeaddict", pos: 2 }, { nick: "gorilla1799", pos: 3 }, { nick: "alice32544", pos: 4 }, { nick: "Dima_Darwin", pos: 5 } ] },
+        { name: "газики", logo: "dota2.png", roster: [ { nick: "imnotevenahuman", pos: 1 }, { nick: "g4zgforce", pos: 2 }, { nick: "dmflnv", pos: 3 }, { nick: "Hisoka_Egorka_Be", pos: 4 }, { nick: "Vivaky", pos: 5 } ] },
+        { name: "James & Jeremy", logo: "dota2.png", roster: [ { nick: "Sigmashavel_Ilya2008", pos: 1 }, { nick: "nevxr_mxre", pos: 2 }, { nick: "keepyourideal", pos: 3 }, { nick: "ssonchh", pos: 4 }, { nick: "watashiwa201", pos: 5 } ] },
+        { name: "Podosinoviki", logo: "dota2.png", roster: [ { nick: "HansLandaaaa", pos: 1 }, { nick: "cd_mymind", pos: 2 }, { nick: "Ptshunterzxc", pos: 3 }, { nick: "ig31110n", pos: 4 }, { nick: "prokazz_a", pos: 5 } ] },
+        { name: "VATAKE13", logo: "dota2.png", roster: [ { nick: "worldchampion_74kgwrestling", pos: 1 }, { nick: "kkkkk123456777", pos: 2 }, { nick: "LooneyNM", pos: 3 }, { nick: "roflodotka", pos: 4 }, { nick: "Denisjao", pos: 5 } ] },
+        { name: "Barracuda jnr", logo: "dota2.png", roster: [ { nick: "Blintlbeis", pos: 1 }, { nick: "bluedolphingod", pos: 2 }, { nick: "lllll33lllll", pos: 3 }, { nick: "fentanyldreams", pos: 4 }, { nick: "", pos: 5 } ] },
+        { name: "Barracuda Team", logo: "dota2.png", roster: [ { nick: "l1elielie", pos: 1 }, { nick: "Abednico", pos: 2 }, { nick: "k0libpi", pos: 3 }, { nick: "blz1k", pos: 4 }, { nick: "Mirco9677", pos: 5 } ] },
+        { name: "Sharashkina kontora", logo: "dota2.png", roster: [ { nick: "Blood_flow1", pos: 1 }, { nick: "Miyamorro", pos: 2 }, { nick: "emoterracted", pos: 3 }, { nick: "SCorPion_LSPD", pos: 4 }, { nick: "Ebatov9", pos: 5 } ] },
+        { name: "LETO jr", logo: "dota2.png", roster: [ { nick: "LookAtTeenwave", pos: 1 }, { nick: "Kricsalis_mode", pos: 2 }, { nick: "sooqa7", pos: 3 }, { nick: "Mikhael16", pos: 4 }, { nick: "HSMG321", pos: 5 } ] },
+        { name: "МЫ", logo: "dota2.png", roster: [ { nick: "epk1d", pos: 1 }, { nick: "yodhwy", pos: 2 }, { nick: "Bubikuss", pos: 3 }, { nick: "Kirill_Suetin", pos: 4 }, { nick: "LegasY2211", pos: 5 } ] }
+    ],
+    
+    casters: [
+        { name: "TBD", link: "" }
+    ],
+    
+    bracketEmbed: "https://challonge.com/ru/BSC67/module",
+    registrationLink: "",
+    telegramLink: "",
+    
+    description: "Bedlam Spring Cup — крупный онлайн-турнир. Лимит до 8500 MMR. Групповой этап (4 группы по 5 команд, BO1) + Double Elimination плей-офф. Призовой фонд 25.000₽ (1 место — 12.500₽, 2 место — 7.500₽, 3 место — 5.000₽). Даты: 18–26 апреля 2026.",
+    
+    prizePool: [
+        { place: 1, amount: "12.500₽", team: "Bedlam Battle Team" },
+        { place: 2, amount: "7.500₽", team: "DF Junior" },
+        { place: 3, amount: "5.000₽", team: "EGOISTO Team" }
+    ]
+},
   {
     id: "Armagedon-Championship-S8",
     title: "Armagedon Championship S8",
@@ -18,7 +116,12 @@ const tournaments = [
     winner: "VHS Team",
     format: "Single Elimination",
     organizer: "Armagedon Championship",
-    
+    links: {
+  dotabuff: "",
+  discord: "https://discord.gg/ZwnPbEYtdf",
+  rules: "https://telegra.ph/ARMAGEDON-CHAMPIONSHIP-S8-04-23",
+  bracket: ""
+},
     teamsList: [
         { name: "headache", logo: "dota2.png", roster: [ { nick: "KaSu", pos: 1 }, { nick: "dr Dolittle", pos: 2 }, { nick: "dr Dolittle", pos: 3 }, { nick: "никчемная жизнь", pos: 4 }, { nick: "Kinnex", pos: 5 } ] },
         { name: "CreepWave", logo: "dota2.png", roster: [ { nick: "Discovery", pos: 1 }, { nick: "SUPERHATEMEWORLD", pos: 2 }, { nick: "f31.6", pos: 3 }, { nick: "ПРИВЕТ АККБАЕРЫ", pos: 4 }, { nick: "supernxva", pos: 5 } ] },
@@ -60,7 +163,12 @@ const tournaments = [
     winner: "TBD",
     format: "Single Elimination",
     organizer: "Bedlam Tournaments",
-    
+  links: {
+  dotabuff: "",
+  discord: "https://discord.gg/eafqq7bpNe",
+  rules: "https://t.me/bedlamtournaments/226?comment=412",
+  bracket: ""
+},
     teamsList: [],
     
     casters: [
@@ -91,7 +199,12 @@ const tournaments = [
     winner: "Eaters of Fear",
     format: "Group Stage + Playoffs",
     organizer: "AnyLvL Community x GOTF eSports",
-    
+    links: {
+  dotabuff: "",
+  discord: "",
+  rules: "",
+  bracket: ""
+},
     teamsList: [
         { name: "Eaters of Fear", logo: "dota2.png", roster: [ { nick: "Mangekyo", pos: 1 }, { nick: "sochnik", pos: 2 }, { nick: "5letvmesto4", pos: 3 }, { nick: "Ya бубуин", pos: 4 }, { nick: "Nikitos99610", pos: 5 } ] },
         { name: "ЧВК Литэнерджи", logo: "dota2.png", roster: [ { nick: "XKSilens", pos: 1 }, { nick: "pirozhok", pos: 2 }, { nick: "Rodidjan", pos: 3 }, { nick: "РОМАНТАЙГЕР", pos: 4 }, { nick: "Voronltf", pos: 5 } ] },
@@ -130,7 +243,12 @@ const tournaments = [
     winner: "TEIKO",
     format: "Swiss Stage + Playoffs",
     organizer: "AnyLvL Community x GOTF eSports",
-    
+    links: {
+  dotabuff: "https://www.dotabuff.com/esports/leagues/18462-anylvl-x-gotf-esports-special-2",
+  discord: "https://discord.gg/fUWA4CyGS",
+  rules: "",
+  bracket: ""
+},
     teamsList: [
         { name: "TEIKO", logo: "dota2.png", roster: [ { nick: "Rinkuxa", pos: 5 }, { nick: "sooqa", pos: 2 }, { nick: "kriptt", pos: 3 }, { nick: "Teenwave", pos: 1 }, { nick: "El Tivke", pos: 4 } ] },
         { name: "ЧВК \"ЛитЭнерджи\"", logo: "dota2.png", roster: [ { nick: "-_-VITALIK-_-2-2-8", pos: 1 }, { nick: "ананист2009", pos: 2 }, { nick: "0_0 SHERIF 0_0", pos: 3 }, { nick: "Дядя Вова", pos: 4 }, { nick: "VoronLTF", pos: 5 } ] },
@@ -161,7 +279,7 @@ const tournaments = [
   {
     id: "SkewerEsports-Season-2",
     title: "SkewerEsports Season 2",
-    limit: "До 8.500 на игрока",
+    limit: "До 8.500 MMR на игрока",
     start: "2026-05-29",
     end: "2026-05-31",
     startTime: "18:00", // МСК — время старта для таймера
@@ -171,6 +289,12 @@ const tournaments = [
     winner: "TBD",
     format: "Swiss",
     organizer: "SkewerEsports",
+    links: {
+  dotabuff: "",
+  discord: "https://discord.gg/M6QaGMkdDr",
+  rules: "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
+  bracket: ""
+},
     teamsList: [
       {
         name: "DRAGFIRE ASCENT",
@@ -200,7 +324,7 @@ const tournaments = [
   {
     id: "SkewerEsports-Season-1",
     title: "SkewerEsports Season 1",
-    limit: "До 35.000 на команду",
+    limit: "До 35.000 MMR на команду",
     start: "2026-05-07",
     end: "2026-05-08",
     startTime: "18:00",
@@ -210,6 +334,12 @@ const tournaments = [
     winner: "Podosinoviki",
     format: "Single Elimination",
     organizer: "SkewerEsports",
+    links: {
+  dotabuff: "",
+  discord: "https://discord.gg/M6QaGMkdDr",
+  rules: "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
+  bracket: ""
+},
     teamsList: [
       { name: "DRAGFIRE ASCENT",   logo: "dota2.png", roster: [ { nick: "heatolonq", pos: 1 }, { nick: "Shima~", pos: 2 }, { nick: "CollapseMini", pos: 3 }, { nick: "splitta", pos: 4 }, { nick: "LegasY221", pos: 5 } ] },
       { name: "Вятские Соколы",    logo: "dota2.png", roster: [ { nick: "Mandarin", pos: 1 }, { nick: "Shinra-bansho", pos: 2 }, { nick: "True", pos: 3 }, { nick: "аввацафца", pos: 4 }, { nick: "Ostrye lezviya", pos: 5 } ] },
@@ -243,7 +373,7 @@ const tournaments = [
   {
     id: "AnyLvL-x-GOTF-eSports-Tournament-1",
     title: "AnyLvL x GOTF eSports Tournament #1",
-    limit: "До 35.000 на команду",
+    limit: "До 35.000 MMR на команду",
     start: "2026-04-19",
     end: "2026-04-19",
     startTime: "13:00",
@@ -253,6 +383,12 @@ const tournaments = [
     winner: "EGOISTO Team",
     format: "Single Elimination",
     organizer: "AnyLvL x GOTF",
+    links: {
+  dotabuff: "",
+  discord: "",
+  rules: "",
+  bracket: ""
+},
     teamsList: [
       { name: "Pulse Team",            logo: "dota2.png", roster: [ { nick: "hiori", pos: 1 }, { nick: "redrose", pos: 2 }, { nick: "Yanegi", pos: 3 }, { nick: "drim", pos: 4 }, { nick: "Toshnota", pos: 5 } ] },
       { name: "Dark Reef",             logo: "dota2.png", roster: [ { nick: "Oketra", pos: 4 }, { nick: "DanilkaAbed", pos: 2 }, { nick: "DTI", pos: 3 }, { nick: "666х9", pos: 1 }, { nick: "S1n1ster", pos: 5 } ] },
