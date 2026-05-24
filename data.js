@@ -660,7 +660,7 @@ const tournaments = [
     description: "SkewerEsports Dota 2 — онлайн-турнир, 5×5, Swiss system (bo1, финал bo3), лимит 8500 MMR, призовой фонд 6500₽ (1 место — 4500₽, 2 место — 2000₽). Даты: 29–31 мая. Взнос 500₽ с команды, макс. 16 команд (при <14 команд турнир отменяется). Требуется регистрация, регламент, подписка на Telegram и присутствие на Discord-сервере.",
     prizePool: [
       { place: 1, amount: "6.000₽", team: "TBD" },
-      { place: "MVP", amount: "500₽", team: "TBD" }
+      { place: "1x1", amount: "500₽", team: "TBD" }
     ]
   },
 
