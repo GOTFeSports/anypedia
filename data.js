@@ -624,13 +624,13 @@ const tournaments = [
     title: "SkewerEsports Season 2",
     limit: "До 8.500 MMR на игрока",
     start: "2026-05-29",
-    end: "2026-05-31",
+    end: "2026-05-29",
     startTime: "18:00", // МСК — время старта для таймера
     prize: "6.500₽",
     location: "СНГ",
     teams: 16,
     winner: "TBD",
-    format: "Swiss",
+    format: "Single Elimination",
     organizer: "SkewerEsports",
     links: {
   dotabuff: "",
