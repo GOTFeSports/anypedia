@@ -430,8 +430,8 @@ const tournaments = [
     organizer: "Armagedon Championship",
     links: {
   dotabuff: "",
-  discord: "https://discord.gg/ZwnPbEYtdf",
-  rules: "https://telegra.ph/ARMAGEDON-CHAMPIONSHIP-S8-04-23",
+  discord: "",
+  rules: "",
   bracket: ""
 },
     teamsList: [
@@ -448,12 +448,12 @@ const tournaments = [
     ],
     
     casters: [
-        { name: "armagedonchamp", link: "https://www.twitch.tv/armagedonchamp" }
+        { name: "armagedonchamp", link: "" }
     ],
     
-    bracketEmbed: "https://postimg.cc/XGS2JCYt",
-    registrationLink: "https://t.me/MetamindArmagedonbot",
-    telegramLink: "https://t.me/armagedonchampionship",
+    bracketEmbed: "https://postimg.cc/XGS2JCYt/module",
+    registrationLink: "",
+    telegramLink: "",
     
     description: "ARMAGEDON CHAMPIONSHIP S8 — онлайн-турнир по Dota 2. Формат Single Elimination (BO3). Лимит 30.000 MMR на команду. Призовой фонд 10.000₽ (1 место — 7000₽, 2 место — 3000₽). Старт: 15 мая 2026.",
     
