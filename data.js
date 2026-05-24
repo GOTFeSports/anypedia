@@ -15,6 +15,170 @@
 
 const tournaments = [
   {
+    "id": "reflection-league-1",
+    "title": "Reflection League 1",
+    "limit": "Не указан",
+    "start": "2026-01-31",
+    "end": "2026-01-31",
+    "startTime": "18:00 МСК",
+    "prize": "6.000₽",
+    "location": "СНГ",
+    "teams": 27,
+    "winner": "Xtreme Gaming Team",
+    "format": "Single Elimination",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3Q4467mA",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/tzwr8id9"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "afganlstan", "link": "https://www.twitch.tv/afganlstan" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/tzwr8id9/module",
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeI13klfIkNtT-z0WLej69ixxzBenvS_KENKx6dpoB4tqwl7w/viewform?usp=header",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League — турнир 5x5 в режиме Captains Mode. Призовой фонд 6000₽. Турнир прошёл 31 января 2026 года в 15:00 МСК. Победитель — Xtreme Gaming Team.",
+    "prizePool": [
+        { "place": 1, "amount": "6.000₽", "team": "Xtreme Gaming Team" }
+    ]
+},
+  {
+    "id": "reflection-league-2",
+    "title": "Reflection League №2",
+    "limit": "Не указан",
+    "start": "2026-02-07",
+    "end": "2026-02-07",
+    "startTime": "15:00 МСК",
+    "prize": "5.000₽",
+    "location": "СНГ",
+    "teams": 0,
+    "winner": "Gavr, getto228, Amurik, okaycool, Abakio",
+    "format": "Immortal Draft",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/UezxY8KC",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "playersList": [
+        { "nick": "Gavr", "place": 1 },
+        { "nick": "getto228", "place": 1 },
+        { "nick": "Amurik", "place": 1 },
+        { "nick": "okaycool", "place": 1 },
+        { "nick": "Abakio", "place": 1 }
+    ],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://forms.gle/gASgCHUXQhvyFr7dA",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League №2 в формате Immortal Draft + Captain’s Mode. Индивидуальная регистрация. Игроки играют серию матчей с разными тиммейтами. Победители определяются по количеству побед. Призовой фонд 5000₽ на 5 лучших игроков.",
+    "prizePool": [
+        { "place": "1-5", "amount": "5000₽ (общий)", "team": "Gavr, getto228, Amurik, okaycool, Abakio" }
+    ]
+},
+  {
+    "id": "reflection-league-3",
+    "title": "Reflection League №3",
+    "limit": "30.000 MMR на команду",
+    "start": "2026-02-08",
+    "end": "2026-02-08",
+    "startTime": "12:00",
+    "prize": "8.000₽",
+    "location": "СНГ",
+    "teams": "13",
+    "winner": "Angetsu",
+    "format": "Single Elimination",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/CcqKhAhC",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/5l3ue3ml"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "afganlstan", "link": "https://www.twitch.tv/afganlstan" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/5l3ue3ml/module",
+    "registrationLink": "https://forms.gle/219PWqku5hcP5TGMA",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League №3 — турнир 5x5 в Captain’s Mode. Лимит 30 000 MMR на команду. Призовой фонд 8000₽. Дата проведения: 08 февраля 2026 в 12:00 МСК.",
+    "prizePool": [
+        { "place": 1, "amount": "5.000₽", "team": "Angetsu" },
+        { "place": 2, "amount": "3.000₽", "team": "RAKUZAN TEAM" }
+    ]
+},
+  {
+    "id": "reflection-league-4",
+    "title": "Reflection League №4",
+    "limit": "Без лимита MMR",
+    "start": "2026-02-21",
+    "end": "2026-02-21",
+    "startTime": "15:00",
+    "prize": "6.000₽",
+    "location": "СНГ",
+    "teams": 10,
+    "winner": "DF JUNIOR 1",
+    "format": "Single Elimination",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/68cVcgnM",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/dk6057ky"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "afganlstan", "link": "https://www.twitch.tv/afganlstan" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/dk6057ky/module",
+    "registrationLink": "https://forms.gle/X2HV1nXZi26k2Xr16",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League №4 — турнир 5x5 в режиме Captains Mode без ограничений по MMR. Взнос 500₽ с команды. Призовой фонд 6.000₽. Дата проведения: 21 февраля 2026 в 15:00.",
+    "prizePool": [
+        { "place": 1, "amount": "6.000₽", "team": "DF JUNIOR 1" }
+    ]
+},
+  {
+    "id": "reflection-league-5",
+    "title": "Reflection League №5",
+    "limit": "Не указан",
+    "start": "2026-03-22",
+    "end": "2026-03-22",
+    "startTime": "14:00",
+    "prize": "4.000₽",
+    "location": "СНГ",
+    "teams": 8,
+    "winner": "Xtreme Gaming",
+    "format": "Single Elimination",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/Uhzkt32k",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/htge2ch3"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "SoInnocent (Zakich)", "link": "https://www.twitch.tv/so1nnocent" },
+        { "name": "LCS_RU", "link": "https://www.twitch.tv/lcs_ru" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/htge2ch3/module",
+    "registrationLink": "https://forms.gle/EtW21qquJmtKXbF57",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League №5 — турнир 5x5 в режиме Captains Mode. Дата проведения: 22 марта 2026 в 14:00. Призовой фонд будет анонсирован. Победитель — Xtreme Gaming.",
+    "prizePool": [
+        { "place": 1, "amount": "4.000₽", "team": "Xtreme Gaming" },
+    ]
+},
+  {
     "id": "rampage-turik-1",
     "title": "RAMPAGE TURIK #1",
     "limit": "Без ограничений",
