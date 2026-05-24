@@ -15,6 +15,37 @@
 
 const tournaments = [
   {
+    "id": "reflection-league-6",
+    "title": "Reflection League 6",
+    "limit": "35 500 MMR на команду",
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "startTime": "Обговаривается",
+    "prize": "TBD",
+    "location": "СНГ",
+    "teams": 10,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "Reflection League",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/n2XX8cPu",
+        "rules": "https://docs.google.com/document/d/1ZSvI6YmK0SRa3pGnyr01G9_N-Jv4AYSViFMEroqg4uU/edit?usp=sharing",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://forms.gle/qJir35C6rLjPQn1bA",
+    "telegramLink": "https://t.me/reflectionleague",
+    "description": "Reflection League #6 — возвращение популярной лиги. Лимит 35 500 MMR на команду. Взнос 500₽ с команды. Дата проведения: 7 июня 2026. Призовой фонд будет объявлен в зависимости от количества участников. Минимум 10 команд для старта турнира.",
+    "prizePool": [
+        { "place": 1, "amount": "100%", "team": "" },
+    ]
+},
+  {
     "id": "bedlam-battles-season-1",
     "title": "Bedlam Battles Season 1",
     "limit": "До Божество 5",
