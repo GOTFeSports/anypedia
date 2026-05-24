@@ -15,6 +15,68 @@
 
 const tournaments = [
   {
+    "id": "rampage-turik-1",
+    "title": "RAMPAGE TURIK #1",
+    "limit": "Без ограничений",
+    "start": "2026-03-14",
+    "end": "2026-03-15",
+    "startTime": "13:00",
+    "prize": "6.500₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "doublerr",
+    "format": "Single Elimination",
+    "organizer": "RAMPAGE Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/yBGQ4ssxH",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/RAMPAGETURIK1"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/RAMPAGETURIK1/module",
+    "registrationLink": "https://t.me/visagebroken",
+    "telegramLink": "https://t.me/rampagetournaments",
+    "description": "RAMPAGE TURIK #1 — открытый турнир без ограничений по MMR. Формат Single Elimination (BO1), гранд-финал BO3. Призовой фонд 6500₽ + дополнительные призы от WHYNOT.GAME. Дата проведения: 14-15 марта 2026.",
+    "prizePool": [
+        { "place": 1, "amount": "6.500₽", "team": "doublerr" }
+    ]
+},
+  {
+    "id": "rampage-kurik-4",
+    "title": "RAMPAGE KURIK #4",
+    "limit": "До 5000 MMR",
+    "start": "2026-04-04",
+    "end": "2026-04-05",
+    "startTime": "13:00",
+    "prize": "4.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "SiniyLis",
+    "format": "Single Elimination",
+    "organizer": "RAMPAGE Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/yBGQ4ssxH",
+        "rules": "",
+        "bracket": "https://challonge.com/ru/RAMPAGEKURIK"
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "https://challonge.com/ru/RAMPAGEKURIK/module",
+    "registrationLink": "https://t.me/visagebroken",
+    "telegramLink": "https://t.me/rampagetournaments",
+    "description": "RAMPAGE KURIK #4 — турнир для игроков до 5000 MMR. Формат Single Elimination (BO1), гранд-финал BO3. Призовой фонд 4000₽. Дата проведения: 4-5 апреля 2026.",
+    "prizePool": [
+        { "place": 1, "amount": "4.000₽", "team": "SiniyLis" }
+    ]
+},
+  {
     "id": "reflection-league-6",
     "title": "Reflection League 6",
     "limit": "До 35.500 MMR на команду",
