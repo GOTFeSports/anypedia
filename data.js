@@ -451,7 +451,7 @@ const tournaments = [
         { name: "armagedonchamp", link: "" }
     ],
     
-    bracketEmbed: "https://postimg.cc/XGS2JCYt/module",
+    bracketEmbed: "https://postimg.cc/XGS2JCYt",
     registrationLink: "",
     telegramLink: "",
     
