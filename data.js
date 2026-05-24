@@ -17,7 +17,7 @@ const tournaments = [
   {
     "id": "reflection-league-6",
     "title": "Reflection League 6",
-    "limit": "35 500 MMR на команду",
+    "limit": "До 35.500 MMR на команду",
     "start": "2026-06-07",
     "end": "2026-06-07",
     "startTime": "14:00",
@@ -313,7 +313,7 @@ const tournaments = [
         "bracket": "https://challonge.com/ru/BBS_3"
     },
     "teamsList": [
-        {"name": "BuLxS", "logo": "dota2.png", "roster": [{"nick": "489897147", "pos": 1}, {"nick": "329595942", "pos": 2}, {"nick": "883489666", "pos": 3}, {"nick": "1030470851", "pos": 4}, {"nick": "1672427658", "pos": 5}]},
+        {"name": "BuLxS", "logo": "dota2.png", "roster": [{"nick": "kisliy", "pos": 1}, {"nick": "D0nem", "pos": 2}, {"nick": "Malenia", "pos": 3}, {"nick": "Scorpion", "pos": 4}, {"nick": "Ebatov", "pos": 5}]},
         {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "etceterrra", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
         {"name": "DF JUNIOR", "logo": "dota2.png", "roster": [{"nick": "misterbrood", "pos": 1}, {"nick": "ssaaaooo1", "pos": 2}, {"nick": "Bot4nS", "pos": 3}, {"nick": "Imfuckingdeadinside", "pos": 4}, {"nick": "DarkManaa", "pos": 5}]},
         {"name": "DF YOUTH", "logo": "dota2.png", "roster": [{"nick": "NamelessMonster300", "pos": 1}, {"nick": "Hurricane_ww", "pos": 2}, {"nick": "o_oshiete", "pos": 3}, {"nick": "Abdulazxc", "pos": 4}, {"nick": "Kulaagnin", "pos": 5}]},
