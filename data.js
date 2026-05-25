@@ -24,7 +24,7 @@ const tournaments = [
     "prize": "1.000₽",
     "location": "СНГ",
     "teams": 16,
-    "winner": "",
+    "winner": "TBD",
     "format": "Double Elimination",
     "organizer": "RAMPAGE Tournaments",
     "links": {
@@ -48,7 +48,7 @@ const tournaments = [
   {
     "id": "reflection-league-1",
     "title": "Reflection League 1",
-    "limit": "Не указан",
+    "limit": "Без лимита",
     "start": "2026-01-31",
     "end": "2026-01-31",
     "startTime": "18:00 МСК",
