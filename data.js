@@ -17,7 +17,7 @@ const tournaments = [
   {
     "id": "rampage-pulik-3",
     "title": "RAMPAGE PULIK #3",
-    "limit": "До 2500 MMR на игрока",
+    "limit": "До 3.000 MMR на игрока",
     "start": "2026-06-06",
     "end": "2026-06-07",
     "startTime": "16:00",
@@ -40,7 +40,7 @@ const tournaments = [
     "bracketEmbed": "",
     "registrationLink": "https://t.me/visagebroken",
     "telegramLink": "https://t.me/rampagetournaments",
-    "description": "RAMPAGE PULIK #3 — турнир для игроков до 2500 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
+    "description": "RAMPAGE PULIK #3 — турнир для игроков до 3.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
     "prizePool": [
         { "place": 1, "amount": "1.000₽", "team": "" }
     ]
