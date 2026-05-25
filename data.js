@@ -15,6 +15,37 @@
 
 const tournaments = [
   {
+    "id": "rampage-pulik-3",
+    "title": "RAMPAGE PULIK #3",
+    "limit": "До 2500 MMR на игрока",
+    "start": "2026-06-06",
+    "end": "2026-06-07",
+    "startTime": "16:00",
+    "prize": "1.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "",
+    "format": "Double Elimination",
+    "organizer": "RAMPAGE Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/yBGQ4ssxH",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://t.me/visagebroken",
+    "telegramLink": "https://t.me/rampagetournaments",
+    "description": "RAMPAGE PULIK #3 — турнир для игроков до 2500 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
+    "prizePool": [
+        { "place": 1, "amount": "1.000₽", "team": "" }
+    ]
+},
+  {
     "id": "reflection-league-1",
     "title": "Reflection League 1",
     "limit": "Не указан",
