@@ -892,7 +892,7 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/M6QaGMkdDr",
         "rules": "",
-        "bracket": "https://www.anypedia.gamer.gd/SkewerEsports-Season-2"
+        "bracket": ""
     },
     "teamsList": [
         {
