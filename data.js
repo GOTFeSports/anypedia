@@ -875,52 +875,50 @@ const tournaments = [
         { place: 2, amount: "1.000₽", team: "ЧВК \"ЛитЭнерджи\"" }
     ]
 },
-
   {
-    id: "SkewerEsports-Season-2",
-    title: "SkewerEsports Season 2",
-    limit: "До 8.500 MMR на игрока",
-    start: "2026-05-29",
-    end: "2026-05-29",
-    startTime: "18:00", // МСК — время старта для таймера
-    prize: "6.500₽",
-    location: "СНГ",
-    teams: 16,
-    winner: "TBD",
-    format: "Single Elimination",
-    organizer: "SkewerEsports",
-    links: {
-  dotabuff: "",
-  discord: "https://discord.gg/M6QaGMkdDr",
-  rules: "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
-  bracket: ""
-},
-    teamsList: [
-      {
-        name: "DRAGFIRE ASCENT",
-        logo: "dota2.png",
-        roster: [
-          { nick: "Akame",       pos: 1 },
-          { nick: "Shima~",      pos: 2 },
-          { nick: "CollapseMini",pos: 3 },
-          { nick: "splitta",     pos: 4 },
-          { nick: "LegasY221",   pos: 5 }
-        ]
-      }
+    "id": "Skewer-Esports-Season-2",
+    "title": "SkewerEsports Season 2",
+    "limit": "8500 MMR на игрока",
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "startTime": "11:00",
+    "prize": "6.500₽",
+    "location": "СНГ",
+    "teams": 0,
+    "winner": "",
+    "format": "Single Elimination (BO1 + Grand Final BO3)",
+    "organizer": "SkewerEsports",
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "",
+        "bracket": "https://www.anypedia.gamer.gd/SkewerEsports-Season-2"
+    },
+    "teamsList": [
+        {
+            "name": "DestroyItems",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Fuck this society", "pos": 1 },
+                { "nick": "Rinec1", "pos": 2 },
+                { "nick": "Squall", "pos": 3 },
+                { "nick": "14shagov", "pos": 4 },
+                { "nick": "н угопак~", "pos": 5 }
+            ]
+        }
     ],
-    casters: [
-      { name: "TBD", link: "" }
+    "casters": [
+        { "name": "TBD", "link": "" }
     ],
-    bracketEmbed: "",
-    registrationLink: "https://docs.google.com/forms/d/1AOPnhM_jFYUyFw3BUeo6k9FE_l-VBqVLXns_P8DtVpY/edit",
-    telegramLink: "https://t.me/SkewerEsports",
-    description: "SkewerEsports Dota 2 — онлайн-турнир, 5×5, Swiss system (bo1, финал bo3), лимит 8500 MMR, призовой фонд 6500₽ (1 место — 4500₽, 2 место — 2000₽). Даты: 29–31 мая. Взнос 500₽ с команды, макс. 16 команд (при <14 команд турнир отменяется). Требуется регистрация, регламент, подписка на Telegram и присутствие на Discord-сервере.",
-    prizePool: [
-      { place: 1, amount: "6.000₽", team: "TBD" },
-      { place: "1x1", amount: "500₽", team: "TBD" }
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "",
+    "description": "SkewerEsports Season 2. Single Elimination (BO1, финал BO3). Лимит 8500 MMR на игрока. Взнос 500₽ с команды. Призовой фонд 6.500₽ (6.000₽ — 1 место + 500₽ — мини-игра 1v1 между мидерами). Старт: 7 июня 2026 в 11:00.",
+    "prizePool": [
+        { "place": 1, "amount": "6.000₽", "team": "" },
+        { "place": "1v1 Mid", "amount": "500₽", "team": "" }
     ]
-  },
-
+},
   {
     id: "SkewerEsports-Season-1",
     title: "SkewerEsports Season 1",
