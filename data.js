@@ -884,7 +884,7 @@ const tournaments = [
     "startTime": "11:00",
     "prize": "6.500₽",
     "location": "СНГ",
-    "teams": 0,
+    "teams": 16,
     "winner": "TBD",
     "format": "Single Elimination",
     "organizer": "SkewerEsports",
