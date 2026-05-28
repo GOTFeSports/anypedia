@@ -885,8 +885,8 @@ const tournaments = [
     "prize": "6.500₽",
     "location": "СНГ",
     "teams": 0,
-    "winner": "",
-    "format": "Single Elimination (BO1 + Grand Final BO3)",
+    "winner": "TBD",
+    "format": "Single Elimination",
     "organizer": "SkewerEsports",
     "links": {
         "dotabuff": "",
