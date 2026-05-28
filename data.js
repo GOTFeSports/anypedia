@@ -903,7 +903,7 @@ const tournaments = [
         }
     ],
     "casters": [
-        { "name": "TBD", "link": "" }
+        { "name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee" }
     ],
     "bracketEmbed": "",
     "registrationLink": "https://docs.google.com/forms/d/1AOPnhM_jFYUyFw3BUeo6k9FE_l-VBqVLXns_P8DtVpY/edit#response=ACYDBNgetI5JxnfiwHNgNxtbtqmO0hslBtb8rb9AiRT9kiFgFgxuJYrpbzjd2yqG_6mKouk",
