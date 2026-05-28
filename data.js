@@ -890,7 +890,7 @@ const tournaments = [
     "organizer": "SkewerEsports",
     "links": {
         "dotabuff": "",
-        "discord": "",
+        "discord": "https://discord.gg/M6QaGMkdDr",
         "rules": "",
         "bracket": "https://www.anypedia.gamer.gd/SkewerEsports-Season-2"
     },
@@ -898,12 +898,7 @@ const tournaments = [
         {
             "name": "DestroyItems",
             "logo": "dota2.png",
-            "roster": [
-                { "nick": "Fuck this society", "pos": 1 },
-                { "nick": "Rinec1", "pos": 2 },
-                { "nick": "Squall", "pos": 3 },
-                { "nick": "14shagov", "pos": 4 },
-                { "nick": "н угопак~", "pos": 5 }
+            "roster": [ { "nick": "Fuck this society", "pos": 1 }, { "nick": "Rinec1", "pos": 2 }, { "nick": "Squall", "pos": 3 }, { "nick": "14shagov", "pos": 4 }, { "nick": "н угопак~", "pos": 5 }
             ]
         }
     ],
@@ -911,8 +906,8 @@ const tournaments = [
         { "name": "TBD", "link": "" }
     ],
     "bracketEmbed": "",
-    "registrationLink": "",
-    "telegramLink": "",
+    "registrationLink": "https://docs.google.com/forms/d/1AOPnhM_jFYUyFw3BUeo6k9FE_l-VBqVLXns_P8DtVpY/edit#response=ACYDBNgetI5JxnfiwHNgNxtbtqmO0hslBtb8rb9AiRT9kiFgFgxuJYrpbzjd2yqG_6mKouk",
+    "telegramLink": "https://t.me/SkewerEsports",
     "description": "SkewerEsports Season 2. Single Elimination (BO1, финал BO3). Лимит 8500 MMR на игрока. Взнос 500₽ с команды. Призовой фонд 6.500₽ (6.000₽ — 1 место + 500₽ — мини-игра 1v1 между мидерами). Старт: 7 июня 2026 в 11:00.",
     "prizePool": [
         { "place": 1, "amount": "6.000₽", "team": "" },
