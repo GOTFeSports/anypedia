@@ -878,7 +878,7 @@ const tournaments = [
   {
     "id": "SkewerEsports-Season-2",
     "title": "SkewerEsports Season 2",
-    "limit": "8500 MMR на игрока",
+    "limit": "До 8500 MMR на игрока",
     "start": "2026-06-07",
     "end": "2026-06-07",
     "startTime": "11:00",
