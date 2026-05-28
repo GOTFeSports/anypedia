@@ -898,7 +898,7 @@ const tournaments = [
         {
             "name": "DestroyItems",
             "logo": "dota2.png",
-            "roster": [ { "nick": "Fuck this society", "pos": 1 }, { "nick": "Rinec1", "pos": 2 }, { "nick": "Squall", "pos": 3 }, { "nick": "14shagov", "pos": 4 }, { "nick": "н угопак~", "pos": 5 }
+            "roster": [ { "nick": "Fuck this society", "pos": 1 }, { "nick": "Rinec1", "pos": 2 }, { "nick": "Squall", "pos": 3 }, { "nick": "14shagov", "pos": 4 }, { "nick": "н угопак~", "pos": 5 },
             ]
         }
     ],
