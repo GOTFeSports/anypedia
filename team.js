@@ -107,7 +107,7 @@ function getSiteBasePath(id) {
 }
 
 function tournamentPageLink(tournamentId) {
-  return `${getSiteBasePath(getTeamIdFromUrl())}tournament.html?id=${encodeURIComponent(tournamentId)}`;
+  return `${getSiteBasePath(getTeamIdFromUrl())}${encodeURIComponent(tournamentId)}`;
 }
 
 /* ============================================================
@@ -337,11 +337,3 @@ document.getElementById('formerPlayers').innerHTML = renderRoster(team.formerPla
 
 /* Турниры — ручной список + автоматический поиск ссылок */
 document.getElementById('teamTournaments').innerHTML = renderTournaments(buildTournamentRows(team));
-
-/* Поиск внутри страницы */
-document.getElementById('search').addEventListener('input', e => {
-  const q = e.target.value.toLowerCase().trim();
-  document.querySelectorAll('.searchable-row').forEach(row => {
-    row.classList.toggle('search-hidden', q && !row.innerText.toLowerCase().includes(q));
-  });
-});

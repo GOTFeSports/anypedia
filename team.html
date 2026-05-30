@@ -6,8 +6,8 @@
 <title>Team · Anypedia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="data.js"></script>
-<script src="teams.js"></script>
+<script src="/data.js"></script>
+<script src="/teams.js"></script>
 
 <style>
 /* ============================================================
@@ -108,6 +108,114 @@ a:hover { color: var(--accent2); }
   box-shadow: 0 0 0 3px rgba(107,182,255,.15);
 }
 .header-search::placeholder { color: var(--text-muted); }
+
+.header-search-wrap {
+  position: relative;
+  width: 320px;
+}
+.header-search-wrap .header-search {
+  width: 100%;
+  padding-left: 36px;
+}
+.search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+}
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 500;
+  overflow: hidden;
+  display: none;
+  max-height: 420px;
+  overflow-y: auto;
+}
+.search-dropdown.visible { display: block; }
+.sd-group-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 10px 14px 6px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+.sd-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: background .12s;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+}
+.sd-item:last-child { border-bottom: none; }
+.sd-item:hover, .sd-item.active { background: var(--bg3); }
+.sd-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.sd-item img.sd-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.sd-info { min-width: 0; }
+.sd-title {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sd-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+.sd-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--bg3);
+}
+.sd-empty {
+  padding: 16px 14px;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+}
 
 /* ============================================================
    LAYOUT
@@ -419,7 +527,8 @@ tr.place-bronze td:first-child {
 @media (max-width: 640px) {
   /* Header */
   .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 8px; }
-  .header-search { width: 100%; order: 3; }
+  .header-search-wrap { width: 100%; order: 3; }
+  .header-search { width: 100%; }
 
   /* Layout */
   .page-body { padding: 0 16px; margin-top: 16px; gap: 0; }
@@ -498,10 +607,16 @@ tr.place-bronze td:first-child {
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <a class="logo" id="homeLink" href="/">Anypedia</a>
+      <a class="logo" href="index.html">Anypedia</a>
       <div class="logo-sub">Dota 2 · Команды СНГ</div>
     </div>
-    <input id="search" class="header-search" placeholder="Поиск по странице…" autocomplete="off"/>
+    <div class="header-search-wrap" id="searchWrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="search" class="header-search" placeholder="Поиск турниров и команд…" autocomplete="off"/>
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
   </div>
 </header>
 
@@ -567,6 +682,7 @@ tr.place-bronze td:first-child {
   </svg>
 </button>
 
-<script src="team.js"></script>
+<script src="/site-search.js"></script>
+<script src="/team.js"></script>
 </body>
 </html>
