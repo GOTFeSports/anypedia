@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<html lang="ru">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Tournament · Anypedia</title>
+<!-- Ставим тему ДО загрузки CSS — исключает вспышку при любом направлении перехода -->
+<script>
+(function(){
+  var t = localStorage.getItem('ap-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
+})();
+</script>
 <script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
