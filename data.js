@@ -78,7 +78,7 @@ const tournaments = [
 },
   {
     "id": "reflection-league-2",
-    "title": "Reflection League №2",
+    "title": "Reflection League 2",
     "limit": "Не указан",
     "start": "2026-02-07",
     "end": "2026-02-07",
@@ -116,7 +116,7 @@ const tournaments = [
 },
   {
     "id": "reflection-league-3",
-    "title": "Reflection League №3",
+    "title": "Reflection League 3",
     "limit": "30.000 MMR на команду",
     "start": "2026-02-08",
     "end": "2026-02-08",
@@ -148,7 +148,7 @@ const tournaments = [
 },
   {
     "id": "reflection-league-4",
-    "title": "Reflection League №4",
+    "title": "Reflection League 4",
     "limit": "Без лимита MMR",
     "start": "2026-02-21",
     "end": "2026-02-21",
@@ -179,7 +179,7 @@ const tournaments = [
 },
   {
     "id": "reflection-league-5",
-    "title": "Reflection League №5",
+    "title": "Reflection League 5",
     "limit": "Не указан",
     "start": "2026-03-22",
     "end": "2026-03-22",
