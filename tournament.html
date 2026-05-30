@@ -971,7 +971,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(teamData =>
         <img src="${teamData.logo || 'dota2.png'}" alt="${teamData.name}">
         ${foundTeam 
           ? `<a href="${teamLink}" class="team-name" onclick="event.stopPropagation()">${teamData.name}</a>`
-          : `<div class="team-name" style="color:var(--text);">${teamData.name}</div>`
+          : `<div class="team-name" style="color: var(--text);">${teamData.name}</div>`
         }
       </div>
       ${(teamData.roster || []).sort((a,b) => (a.pos||0) - (b.pos||0)).map(p => `
