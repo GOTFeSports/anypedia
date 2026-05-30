@@ -902,13 +902,23 @@ function prizeTable() {
   if (!Array.isArray(t.prizePool) || !t.prizePool.length) {
     return `<div style="color:var(--text-muted);font-size:13px">Призовой фонд не указан</div>`;
   }
+  
   const medals = ['🥇','🥈','🥉','🏅'];
-  const rows = [...t.prizePool].sort((a,b) => a.place - b.place).map(p => `
-    <tr>
-      <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
-      <td>${p.team || '—'}</td>
-      <td style="font-weight:600;color:var(--text)">${p.amount}</td>
-    </tr>`).join('');
+  
+  const rows = [...t.prizePool].sort((a,b) => a.place - b.place).map(p => {
+    const foundTeam = findTeamByName(p.team);
+    const teamHtml = foundTeam 
+      ? `<a href="/team/${encodeURIComponent(foundTeam.id || foundTeam.name)}" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">${p.team || '—'}</a>`
+      : `<span style="color:var(--text);">${p.team || '—'}</span>`;
+    
+    return `
+      <tr>
+        <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
+        <td>${teamHtml}</td>
+        <td style="font-weight:600;color:var(--text)">${p.amount}</td>
+      </tr>`;
+  }).join('');
+  
   return `
     <table class="prize-table">
       <thead><tr><th>Место</th><th>Команда</th><th>Приз</th></tr></thead>
@@ -937,7 +947,6 @@ function findTeamByName(name) {
 
   return teams.find(team => {
     if (!team || !team.name) return false;
-    
     const allNames = [team.name, ...(team.aliases || [])];
     return allNames.some(n => {
       if (!n) return false;
@@ -962,13 +971,13 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(teamData =>
         <img src="${teamData.logo || 'dota2.png'}" alt="${teamData.name}">
         ${foundTeam 
           ? `<a href="${teamLink}" class="team-name" onclick="event.stopPropagation()">${teamData.name}</a>`
-          : `<div class="team-name">${teamData.name}</div>`
+          : `<div class="team-name" style="color:var(--text);">${teamData.name}</div>`
         }
       </div>
-      ${(teamData.roster || []).sort((a,b) => (a.pos || 0) - (b.pos || 0)).map(p => `
+      ${(teamData.roster || []).sort((a,b) => (a.pos||0) - (b.pos||0)).map(p => `
         <div class="roster-row">
           <span class="nick">${p.nick || ''}</span>
-          <span class="pos" title="Позиция ${p.pos || ''}">${p.pos || ''}</span>
+          <span class="pos" title="Позиция ${p.pos||''}">${p.pos||''}</span>
         </div>`).join('')}
     </div>`;
 }).join('');
