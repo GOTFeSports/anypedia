@@ -7,19 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="data.js"></script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109393123', 'ym');
+<script src="teams.js"></script>
 
-    ym(109393123, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109393123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 <style>
 /* ============================================================
    CSS VARIABLES
@@ -432,6 +421,11 @@ a:hover { color: var(--accent2); }
   color: var(--text);
   word-break: break-word;
 }
+.team-ref {
+  color: var(--accent);
+  font-weight: 600;
+}
+.team-ref:hover { color: var(--accent2); }
 .roster-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 24px;
@@ -803,6 +797,54 @@ function getSiteBasePath(id) {
   return path.endsWith(suffix) ? path.slice(0, -suffix.length + 1) : '/';
 }
 
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+}
+
+function teamKey(value) {
+  return String(value || '').normalize('NFKC').replace(/[’`]/g, "'").replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function slugifyTeam(value) {
+  return String(value || '').normalize('NFKC').trim().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
+}
+
+function getTeamsData() {
+  return typeof teams !== 'undefined' && Array.isArray(teams) ? teams : [];
+}
+
+function getTeamId(team) {
+  return team.id || slugifyTeam(team.name);
+}
+
+function teamAliases(team) {
+  const aliases = team.aliases || [];
+  if (Array.isArray(aliases)) return aliases;
+  return String(aliases)
+    .split(',')
+    .map(name => name.trim())
+    .filter(Boolean);
+}
+
+function findTeamByName(name) {
+  const key = teamKey(name);
+  if (!key || key === 'tbd' || key === '—') return null;
+  return getTeamsData().find(team =>
+    [team.name, ...teamAliases(team)].filter(Boolean).map(teamKey).includes(key));
+}
+
+function teamPageLink(team) {
+  return `${getSiteBasePath(id)}team.html?id=${encodeURIComponent(getTeamId(team))}`;
+}
+
+function renderTeamName(name) {
+  const label = escapeHtml(name || '—');
+  const team = findTeamByName(name);
+  return team ? `<a class="team-ref" href="${teamPageLink(team)}">${label}</a>` : label;
+}
+
 const id = getTournamentIdFromUrl();
 const t  = tournaments.find(x => x.id === id);
 
@@ -980,12 +1022,12 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Команд</span>  <span class="info-val">${t.teams ?? '—'}</span></div>
   <div class="info-row"><span class="info-label">Формат</span>  <span class="info-val">${t.format || '—'}</span></div>
   <div class="info-row"><span class="info-label">Лимит</span>   <span class="info-val">${t.limit || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${t.winner || 'TBD'}</span></div>
+  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${renderTeamName(t.winner || 'TBD')}</span></div>
   <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
 
   <div class="action-btns">
-    <a class="btn btn-reg"   href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>
-    <a class="btn btn-tg"    href="${t.telegramLink}"     target="_blank" rel="noopener">✈️ Telegram</a>
+    <a class="btn btn-reg"   href="${t.registrationLink}" target="_blank" rel="noopener">Регистрация</a>
+    <a class="btn btn-tg"    href="${t.telegramLink}"     target="_blank" rel="noopener">Telegram</a>
     <button class="btn btn-share" onclick="doShare()">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
@@ -1009,7 +1051,7 @@ function prizeTable() {
     .map(p => `
       <tr>
         <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
-        <td>${p.team || '—'}</td>
+        <td>${renderTeamName(p.team || '—')}</td>
         <td style="font-weight:600;color:var(--text)">${p.amount}</td>
       </tr>`).join('');
   return `
@@ -1035,7 +1077,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
   <div class="team-card">
     <div class="team-header">
       <img src="${team.logo || 'dota2.png'}" alt="${team.name}">
-      <div class="team-name">${team.name}</div>
+      <div class="team-name">${renderTeamName(team.name)}</div>
     </div>
     ${(team.roster || [])
       .sort((a,b) => a.pos - b.pos)
