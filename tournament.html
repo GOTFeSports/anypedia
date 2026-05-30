@@ -927,7 +927,7 @@ document.getElementById('descBlock').innerHTML = `
 
 /* ---------- TEAMS ---------- */
 function findTeamByName(name) {
-  if (!name || typeof teams === 'undefined') return null;
+  if (!name || typeof teams === 'undefined' || !Array.isArray(teams)) return null;
   
   const key = String(name)
     .normalize('NFKC')
@@ -936,14 +936,17 @@ function findTeamByName(name) {
     .toLowerCase();
 
   return teams.find(team => {
+    if (!team || !team.name) return false;
+    
     const allNames = [team.name, ...(team.aliases || [])];
-    return allNames.some(n => 
-      String(n)
+    return allNames.some(n => {
+      if (!n) return false;
+      return String(n)
         .normalize('NFKC')
         .replace(/\s+/g, ' ')
         .trim()
-        .toLowerCase() === key
-    );
+        .toLowerCase() === key;
+    });
   }) || null;
 }
 
@@ -959,13 +962,13 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(teamData =>
         <img src="${teamData.logo || 'dota2.png'}" alt="${teamData.name}">
         ${foundTeam 
           ? `<a href="${teamLink}" class="team-name" onclick="event.stopPropagation()">${teamData.name}</a>`
-          : `<div class="team-name" style="color: var(--text);">${teamData.name}</div>`
+          : `<div class="team-name">${teamData.name}</div>`
         }
       </div>
-      ${(teamData.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
+      ${(teamData.roster || []).sort((a,b) => (a.pos || 0) - (b.pos || 0)).map(p => `
         <div class="roster-row">
-          <span class="nick">${p.nick}</span>
-          <span class="pos" title="Позиция ${p.pos}">${p.pos}</span>
+          <span class="nick">${p.nick || ''}</span>
+          <span class="pos" title="Позиция ${p.pos || ''}">${p.pos || ''}</span>
         </div>`).join('')}
     </div>`;
 }).join('');
