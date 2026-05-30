@@ -757,7 +757,7 @@ const tournaments = [
     start: "2026-05-31",
     end: "2026-05-31",
     startTime: "13:00",
-    prize: "10.000₽",
+    prize: "15.000₽",
     location: "СНГ",
     teams: 16,
     winner: "TBD",
@@ -782,8 +782,8 @@ const tournaments = [
     description: "BEDLAM: WAITING FOR SUMMER CUP — онлайн-турнир 5×5, Single Elimination. Призовой фонд 10.000₽ (1 место — 6700₽, 2 место — 3300₽). Вход 500₽ с команды. Лимит 35.000 MMR на команду. Минимум 16 команд. Дата: 30 мая 2026.",
     
     prizePool: [
-        { place: 1, amount: "6.700₽", team: "TBD" },
-        { place: 2, amount: "3.300₽", team: "TBD" }
+        { place: 1, amount: "10.000₽", team: "TBD" },
+        { place: 2, amount: "5.000₽", team: "TBD" }
     ]
 },
     {
