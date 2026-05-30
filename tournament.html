@@ -633,6 +633,30 @@ a:hover { color: var(--accent2); }
   .logo { font-size: 20px; }
   .logo-sub { font-size: 10px; }
 }
+   /* Extra links (иконки) */
+.extra-links {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 8px;
+  flex-wrap: wrap;
+}
+.extra-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all .2s;
+}
+.extra-link:hover {
+  transform: scale(1.08);
+  border-color: var(--accent);
+}
+.extra-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>
 </head>
 <body>
@@ -872,20 +896,20 @@ const dateText = t.start === t.end
   ? formatDateLong(t.start)
   : `${formatDateLong(t.start)} — ${formatDateLong(t.end)}`;
 
-let linksHtml = '';
+let extraLinks = '';
 
 if (t.links) {
   if (t.links.dotabuff) {
-    linksHtml += `<a href="${t.links.dotabuff}" target="_blank" rel="noopener" class="btn" style="background:#f44336;color:white;margin-top:8px;">📊 Dotabuff</a>`;
+    extraLinks += `<a href="${t.links.dotabuff}" target="_blank" rel="noopener" class="extra-link" title="Dotabuff"><img src="/dotabuff.png" alt="Dotabuff"></a>`;
   }
   if (t.links.discord) {
-    linksHtml += `<a href="${t.links.discord}" target="_blank" rel="noopener" class="btn btn-tg" style="margin-top:8px;">Discord</a>`;
+    extraLinks += `<a href="${t.links.discord}" target="_blank" rel="noopener" class="extra-link" title="Discord"><img src="/discord.png" alt="Discord"></a>`;
   }
   if (t.links.rules) {
-    linksHtml += `<a href="${t.links.rules}" target="_blank" rel="noopener" class="btn" style="background:#4caf50;color:white;margin-top:8px;">📜 Rules</a>`;
+    extraLinks += `<a href="${t.links.rules}" target="_blank" rel="noopener" class="extra-link" title="Rules"><img src="/rules.png" alt="Rules"></a>`;
   }
   if (t.links.bracket) {
-    linksHtml += `<a href="${t.links.bracket}" target="_blank" rel="noopener" class="btn" style="background:#9c27b0;color:white;margin-top:8px;">🔗 Bracket</a>`;
+    extraLinks += `<a href="${t.links.bracket}" target="_blank" rel="noopener" class="extra-link" title="Bracket"><img src="/bracket.png" alt="Bracket"></a>`;
   }
 }
 
@@ -900,9 +924,9 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
   <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${t.winner || 'TBD'}</span></div>
   <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
-  
-  ${linksHtml ? `<div style="margin-top:12px;">${linksHtml}</div>` : ''}
-  
+
+  ${extraLinks ? `<div class="extra-links">${extraLinks}</div>` : ''}
+
   <div class="action-btns">
     ${t.registrationLink ? `<a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>` : ''}
     ${t.telegramLink ? `<a class="btn btn-tg" href="${t.telegramLink}" target="_blank" rel="noopener">✈️ Telegram</a>` : ''}
