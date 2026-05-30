@@ -291,8 +291,12 @@ if (!location.pathname.includes('/team/') || new URLSearchParams(window.location
 document.title = `${team.name} · Anypedia`;
 document.getElementById('pageBody').style.display = 'grid';
 
-/* basePath нужен чтобы логотип находился правильно независимо от URL */
+/* basePath нужен чтобы логотип и ссылки находились правильно независимо от URL */
 const basePath = getSiteBasePath(currentId);
+
+/* Фиксим ссылку «Anypedia» в шапке — она должна вести на корень, не на index.html */
+const homeLink = document.getElementById('homeLink');
+if (homeLink) homeLink.href = basePath || '/';
 
 /* Инфобокс */
 document.getElementById('teamInfobox').innerHTML = `
@@ -313,11 +317,11 @@ document.getElementById('teamInfobox').innerHTML = `
   </div>
   <a class="btn btn-tg ${team.telegramLink ? '' : 'is-disabled'}"
      href="${escapeHtml(team.telegramLink || '#')}" target="_blank" rel="noopener">
-    Telegram
+    ✈️ Telegram
   </a>
   <a class="btn btn-captain ${team.captainLink ? '' : 'is-disabled'}"
      href="${escapeHtml(team.captainLink || '#')}" target="_blank" rel="noopener">
-    Связаться с капитаном
+    👤 Связаться с капитаном
   </a>
 `;
 

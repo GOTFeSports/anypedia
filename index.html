@@ -824,6 +824,11 @@ bannerImg.onerror = () => {
   bannerPlaceholder.style.display = 'flex';
 };
 
+/* ---------- CLEAN URL (убираем index.html из адресной строки) ---------- */
+if (location.pathname.endsWith('/index.html')) {
+  history.replaceState(null, '', location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+}
+
 /* ---------- DATA HELPERS ---------- */
 function toLocalDate(s) {
   const [y, m, d] = s.split('-').map(Number);
@@ -849,6 +854,34 @@ function getStatus(t) {
   if (today < s) return 'upcoming';
   if (today > e) return 'finished';
   return 'live';
+}
+
+/* ---------- TEAM LOOKUP (для колонки «Победитель») ---------- */
+function normStr(v) {
+  return String(v || '').normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+function getTeamId(team) {
+  return team.id || String(team.name || '').normalize('NFKC').trim()
+    .replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '')
+    .replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
+}
+function teamAllNames(team) {
+  const aliases = team.aliases || [];
+  const list = Array.isArray(aliases) ? aliases : String(aliases).split(',').map(s => s.trim()).filter(Boolean);
+  return [team.name, ...list].filter(Boolean).map(normStr);
+}
+function findTeamByName(name) {
+  if (!name || name === '—' || name.toLowerCase() === 'tbd') return null;
+  const allTeamsList = typeof teams !== 'undefined' ? teams : [];
+  const key = normStr(name);
+  return allTeamsList.find(t => teamAllNames(t).includes(key)) || null;
+}
+function renderWinner(name) {
+  if (!name || name === '—') return '—';
+  const found = findTeamByName(name);
+  if (!found) return name;
+  const tid = getTeamId(found);
+  return `<a href="team.html?id=${tid}" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent)">${name}</a>`;
 }
 
 /* ---------- RENDER ---------- */
@@ -886,7 +919,7 @@ function buildRow(t) {
       <td>${t.location || '—'}</td>
       <td>${t.teams ?? '—'}</td>
       <td><span class="tag ${statusClass[st]}">${statusLabel[st]}</span></td>
-      <td class="winner-cell">${t.winner || '—'}</td>
+      <td class="winner-cell">${renderWinner(t.winner || '—')}</td>
       <td>
         <button class="share-btn" title="Поделиться"
           onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
@@ -919,7 +952,7 @@ function buildCard(t) {
         <span>📅 <b>${dateText}</b></span>
         <span>🌍 <b>${t.location || '—'}</b></span>
         <span>👥 <b>${t.teams ?? '—'} команд</b></span>
-        <span>🏆 <b>${t.winner || 'TBD'}</b></span>
+        <span>🏆 <b>${renderWinner(t.winner || 'TBD')}</b></span>
       </div>
       <div class="t-card-bottom">
         <div class="t-card-prize">${t.prize || '—'}</div>
