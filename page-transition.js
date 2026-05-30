@@ -1,3 +1,9 @@
+<script>
+// =============================================
+//  page-transition.js — улучшенная версия
+//  Без белого экрана при переходах
+// =============================================
+
 (function () {
   const bg = '#0f0f10';
   let armed = false;
@@ -7,7 +13,10 @@
 
     const style = document.createElement('style');
     style.textContent = `
-      html, body { background: ${bg}; }
+      html, body { 
+        background: ${bg} !important; 
+        transition: background .1s;
+      }
       #pageTransitionOverlay {
         position: fixed;
         inset: 0;
@@ -15,9 +24,11 @@
         background: ${bg};
         opacity: 0;
         pointer-events: none;
-        transition: opacity .08s ease;
+        transition: opacity .12s ease;
       }
-      body.is-page-leaving #pageTransitionOverlay { opacity: 1; }
+      body.is-page-leaving #pageTransitionOverlay { 
+        opacity: 1; 
+      }
     `;
     document.head.appendChild(style);
 
@@ -46,19 +57,23 @@
     armed = true;
     ensureOverlay();
     document.body.classList.add('is-page-leaving');
+    
+    // Увеличили задержку чуть-чуть для стабильности
     window.setTimeout(() => {
       location.href = href;
-    }, 80);
+    }, 95);
   }
 
   window.apNavigate = leaveTo;
 
+  // Инициализация
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ensureOverlay, { once: true });
   } else {
     ensureOverlay();
   }
 
+  // Перехват кликов
   document.addEventListener('click', event => {
     if (!isPlainLeftClick(event)) return;
 
@@ -72,13 +87,16 @@
     leaveTo(url.href);
   }, true);
 
+  // Перед уходом со страницы
   window.addEventListener('beforeunload', () => {
     ensureOverlay();
     document.body.classList.add('is-page-leaving');
   });
 
+  // После возвращения на страницу
   window.addEventListener('pageshow', () => {
     armed = false;
     document.body.classList.remove('is-page-leaving');
   });
 })();
+</script>
