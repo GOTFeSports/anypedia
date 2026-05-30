@@ -872,6 +872,23 @@ const dateText = t.start === t.end
   ? formatDateLong(t.start)
   : `${formatDateLong(t.start)} — ${formatDateLong(t.end)}`;
 
+let linksHtml = '';
+
+if (t.links) {
+  if (t.links.dotabuff) {
+    linksHtml += `<a href="${t.links.dotabuff}" target="_blank" rel="noopener" class="btn" style="background:#f44336;color:white;margin-top:8px;">📊 Dotabuff</a>`;
+  }
+  if (t.links.discord) {
+    linksHtml += `<a href="${t.links.discord}" target="_blank" rel="noopener" class="btn btn-tg" style="margin-top:8px;">Discord</a>`;
+  }
+  if (t.links.rules) {
+    linksHtml += `<a href="${t.links.rules}" target="_blank" rel="noopener" class="btn" style="background:#4caf50;color:white;margin-top:8px;">📜 Rules</a>`;
+  }
+  if (t.links.bracket) {
+    linksHtml += `<a href="${t.links.bracket}" target="_blank" rel="noopener" class="btn" style="background:#9c27b0;color:white;margin-top:8px;">🔗 Bracket</a>`;
+  }
+}
+
 document.getElementById('infobox').innerHTML = `
   <h2>${t.title}</h2>
   <div class="countdown-wrap">${renderCountdown()}</div>
@@ -883,9 +900,12 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
   <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${t.winner || 'TBD'}</span></div>
   <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
+  
+  ${linksHtml ? `<div style="margin-top:12px;">${linksHtml}</div>` : ''}
+  
   <div class="action-btns">
-    <a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>
-    <a class="btn btn-tg"  href="${t.telegramLink}"     target="_blank" rel="noopener">✈️ Telegram</a>
+    ${t.registrationLink ? `<a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>` : ''}
+    ${t.telegramLink ? `<a class="btn btn-tg" href="${t.telegramLink}" target="_blank" rel="noopener">✈️ Telegram</a>` : ''}
     <button class="btn btn-share" onclick="doShare()">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
@@ -896,7 +916,7 @@ document.getElementById('infobox').innerHTML = `
     </button>
   </div>
 `;
-
+   
 /* ---------- DESCRIPTION + PRIZES ---------- */
 function prizeTable() {
   if (!Array.isArray(t.prizePool) || !t.prizePool.length) {
