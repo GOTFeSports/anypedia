@@ -7,7 +7,7 @@
 
     const style = document.createElement('style');
     style.textContent = `
-      html, body { background: ${bg}; }
+      html, body { background: ${bg} !important; }
       #pageTransitionOverlay {
         position: fixed;
         inset: 0;
@@ -15,7 +15,7 @@
         background: ${bg};
         opacity: 0;
         pointer-events: none;
-        transition: opacity .08s ease;
+        transition: opacity .12s ease;
       }
       body.is-page-leaving #pageTransitionOverlay { opacity: 1; }
     `;
@@ -23,7 +23,6 @@
 
     const overlay = document.createElement('div');
     overlay.id = 'pageTransitionOverlay';
-    overlay.setAttribute('aria-hidden', 'true');
     document.body.appendChild(overlay);
   }
 
@@ -37,7 +36,6 @@
     if (anchor.hasAttribute('download')) return false;
     if (url.origin !== location.origin) return false;
     if (url.protocol !== 'http:' && url.protocol !== 'https:') return false;
-    if (url.pathname === location.pathname && url.search === location.search && url.hash) return false;
     return true;
   }
 
@@ -46,9 +44,7 @@
     armed = true;
     ensureOverlay();
     document.body.classList.add('is-page-leaving');
-    window.setTimeout(() => {
-      location.href = href;
-    }, 80);
+    setTimeout(() => { location.href = href; }, 90);
   }
 
   window.apNavigate = leaveTo;
@@ -62,7 +58,7 @@
   document.addEventListener('click', event => {
     if (!isPlainLeftClick(event)) return;
 
-    const anchor = event.target.closest && event.target.closest('a[href]');
+    const anchor = event.target.closest('a[href]');
     if (!anchor) return;
 
     const url = new URL(anchor.getAttribute('href'), location.href);
