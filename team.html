@@ -4,11 +4,11 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Team · Anypedia</title>
+<style>
+html, body { background: #0f0f10; color: #eaeaea; color-scheme: dark; }
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="/data.js"></script>
-<script src="/teams.js"></script>
-
 <style>
 /* ============================================================
    CSS VARIABLES
@@ -44,6 +44,7 @@
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--bg); }
 body {
   background: var(--bg);
   color: var(--text);
@@ -75,7 +76,7 @@ a:hover { color: var(--accent2); }
   justify-content: space-between;
   gap: 16px;
 }
-.logo-wrap { display: flex; flex-direction: column; }
+.logo-wrap { display: flex; flex-direction: column; min-width: 0; }
 .logo {
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
@@ -526,9 +527,20 @@ tr.place-bronze td:first-child {
    ============================================================ */
 @media (max-width: 640px) {
   /* Header */
-  .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 8px; }
+  .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 10px; align-items: flex-start; }
+  .logo-wrap { max-width: calc(100% - 56px); }
   .header-search-wrap { width: 100%; order: 3; }
   .header-search { width: 100%; }
+  .search-dropdown {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 96px;
+    max-height: min(420px, calc(100vh - 116px));
+  }
+  .sd-item { padding: 11px 12px; }
+  .sd-title { white-space: normal; }
+  .sd-badge { display: none; }
 
   /* Layout */
   .page-body { padding: 0 16px; margin-top: 16px; gap: 0; }
@@ -596,6 +608,7 @@ tr.place-bronze td:first-child {
 
 @media (max-width: 400px) {
   .logo { font-size: 20px; }
+  .logo-sub { font-size: 10px; }
   .page-title { font-size: 20px; }
   .team-logo { width: 48px; height: 48px; }
 }
@@ -607,7 +620,7 @@ tr.place-bronze td:first-child {
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <a class="logo" href="index.html">Anypedia</a>
+      <a class="logo" id="homeLink" href="/">Anypedia</a>
       <div class="logo-sub">Dota 2 · Команды СНГ</div>
     </div>
     <div class="header-search-wrap" id="searchWrap">
@@ -682,6 +695,8 @@ tr.place-bronze td:first-child {
   </svg>
 </button>
 
+<script src="/data.js"></script>
+<script src="/teams.js"></script>
 <script src="/site-search.js"></script>
 <script src="/team.js"></script>
 </body>
