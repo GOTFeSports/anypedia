@@ -881,8 +881,12 @@ function renderWinner(name) {
   const found = findTeamByName(name);
   if (!found) return name;
   const tid = getTeamId(found);
-  return `<a href="team.html?id=${tid}" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent)">${name}</a>`;
+  return `<a href="${siteBase}team.html?id=${tid}" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent)">${name}</a>`;
 }
+
+/* ---------- BASE PATH — вычисляем один раз, используем везде ---------- */
+// Работает корректно и при URL = "/" и при URL = "/index.html"
+const siteBase = location.origin + location.pathname.replace(/index\.html$/, '').replace(/\/[^/]*\.html$/, '/');
 
 /* ---------- RENDER ---------- */
 const upcoming = [], live = [], finished = [];
@@ -907,8 +911,8 @@ function buildRow(t) {
   const dateText = t.start === t.end
     ? formatDate(t.start)
     : `${formatDateShort(t.start)} — ${formatDate(t.end)}`;
-  const pageUrl = `${location.origin}${location.pathname.replace('index.html', '')}tournament.html?id=${t.id}`;
-  const link = `tournament.html?id=${t.id}`;
+  const pageUrl  = `${siteBase}tournament.html?id=${t.id}`;
+  const link     = `${siteBase}tournament.html?id=${t.id}`;
 
   return `
     <tr onclick="location.href='${link}'">
@@ -939,8 +943,8 @@ function buildCard(t) {
   const dateText = t.start === t.end
     ? formatDateShort(t.start)
     : `${formatDateShort(t.start)} — ${formatDateShort(t.end)}`;
-  const pageUrl = `${location.origin}${location.pathname.replace('index.html', '')}tournament.html?id=${t.id}`;
-  const link = `tournament.html?id=${t.id}`;
+  const pageUrl = `${siteBase}tournament.html?id=${t.id}`;
+  const link    = `${siteBase}tournament.html?id=${t.id}`;
 
   return `
     <div class="t-card" onclick="location.href='${link}'">
@@ -1054,7 +1058,7 @@ function renderDropdown(q) {
     matchedTournaments.forEach(t => {
       const st = getStatus(t);
       const statusBadge = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' }[st];
-      const link = `tournament.html?id=${t.id}`;
+      const link = `${siteBase}tournament.html?id=${t.id}`;
       currentItems.push(link);
       html += `
         <a class="sd-item" href="${link}">
@@ -1072,12 +1076,11 @@ function renderDropdown(q) {
     html += `<div class="sd-group-label">👥 Команды</div>`;
     matchedTeams.forEach(team => {
       const tid = getTeamId(team);
-      const link = `team.html?id=${tid}`;
+      const link = `${siteBase}team.html?id=${tid}`;
       currentItems.push(link);
-      const basePath = location.pathname.replace('index.html', '');
       html += `
         <a class="sd-item" href="${link}">
-          <img class="sd-logo" src="${basePath}${team.logo || 'dota2.png'}"
+          <img class="sd-logo" src="${siteBase}${team.logo || 'dota2.png'}"
                alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="sd-icon" style="display:none">👥</div>
           <div class="sd-info">

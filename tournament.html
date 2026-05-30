@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="data.js"></script>
-<script src="teams.js"></script>
 
 <style>
 /* ============================================================
@@ -40,10 +39,8 @@
   --accent:     #1a6fcc;
   --accent2:    #1452a0;
   --tg:         #1a88d6;
-  --live:       #c53030;
-  --upcoming:   #1a6fcc;
-  --finished:   #147a3d;
   --shadow:     0 4px 24px rgba(0,0,0,.12);
+  --finished:   #1a7a3a;
 }
 
 /* ============================================================
@@ -76,18 +73,20 @@ a:hover { color: var(--accent2); }
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
+.logo-wrap { display: flex; flex-direction: column; }
 .logo {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: .5px;
+  line-height: 1;
   transition: color .2s;
 }
 .logo:hover { color: var(--accent); }
@@ -95,10 +94,10 @@ a:hover { color: var(--accent2); }
   font-size: 11px;
   color: var(--text-muted);
   font-weight: 400;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 .header-search {
-  width: 260px;
+  width: 240px;
   padding: 9px 14px;
   border-radius: 9px;
   border: 1px solid var(--border);
@@ -120,10 +119,10 @@ a:hover { color: var(--accent2); }
    ============================================================ */
 .page-body {
   max-width: 1200px;
-  margin: 24px auto 80px;
+  margin: 24px auto 60px;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 310px;
   gap: 20px;
   align-items: start;
 }
@@ -157,7 +156,7 @@ a:hover { color: var(--accent2); }
   border-radius: var(--radius);
   padding: 18px;
   position: sticky;
-  top: 76px;
+  top: 72px;
   transition: var(--transition);
 }
 .infobox h2 {
@@ -202,8 +201,8 @@ a:hover { color: var(--accent2); }
 }
 .btn:active { transform: scale(.98); }
 .btn:hover  { opacity: .88; }
-.btn-reg    { background: var(--accent);  color: #000; }
-.btn-tg     { background: var(--tg);      color: #000; }
+.btn-reg    { background: var(--accent); color: #000; }
+.btn-tg     { background: var(--tg);    color: #000; }
 .btn-share  {
   background: var(--bg3);
   color: var(--text);
@@ -214,71 +213,11 @@ a:hover { color: var(--accent2); }
   gap: 7px;
 }
 
-.tournament-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
-  gap: 8px;
-  margin-top: 2px;
-}
-
-.tournament-link {
-  height: 42px;
-  border-radius: 9px;
-  border: 1px solid var(--border);
-  background: var(--bg3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  transition: transform .15s, border-color .2s, background .2s;
-}
-
-.tournament-link:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent);
-  background: rgba(107,182,255,.1);
-}
-
-.tournament-link img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  display: block;
-}
-
-[data-theme="dark"] .tournament-link[aria-label="Rules"] img,
-[data-theme="dark"] .tournament-link[aria-label="Bracket"] img {
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255,255,255,.18));
-  opacity: .94;
-}
-
-[data-theme="dark"] .tournament-link[aria-label="Rules"]:hover img,
-[data-theme="dark"] .tournament-link[aria-label="Bracket"]:hover img {
-  opacity: 1;
-}
-
-.tournament-link.icon-missing img {
-  display: none;
-}
-
-.tournament-link.icon-missing::after {
-  content: attr(aria-label);
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 1;
-}
-
 /* ============================================================
-   COUNTDOWN + TIME
+   COUNTDOWN
    ============================================================ */
-.countdown-wrap {
-  margin-bottom: 14px;
-}
-.start-time-label {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 8px;
-}
+.countdown-wrap { margin-bottom: 14px; }
+.start-time-label { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
 .start-time-val {
   font-family: 'Rajdhani', sans-serif;
   font-size: 17px;
@@ -286,10 +225,7 @@ a:hover { color: var(--accent2); }
   color: var(--accent);
   margin-bottom: 10px;
 }
-.countdown {
-  display: flex;
-  gap: 8px;
-}
+.countdown { display: flex; gap: 8px; }
 .cd-unit {
   flex: 1;
   background: var(--bg3);
@@ -316,18 +252,13 @@ a:hover { color: var(--accent2); }
   font-family: 'Rajdhani', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
+  padding: 10px 0;
 }
 .status-live     { color: var(--live); }
 .status-finished { color: var(--finished); }
-[data-theme="light"] .status-live { background: rgba(197,48,48,.08); }
-[data-theme="light"] .status-finished { background: rgba(20,122,61,.1); }
 
 /* ============================================================
-   TITLE ROW (with time inline)
+   TITLE
    ============================================================ */
 .title-row {
   display: flex;
@@ -347,11 +278,7 @@ a:hover { color: var(--accent2); }
 /* ============================================================
    DESCRIPTION
    ============================================================ */
-.desc-text {
-  font-size: 13px;
-  line-height: 1.65;
-  color: var(--text-muted);
-}
+.desc-text { font-size: 13px; line-height: 1.65; color: var(--text-muted); }
 .block-section-label {
   font-size: 12px;
   font-weight: 600;
@@ -380,10 +307,7 @@ a:hover { color: var(--accent2); }
   text-transform: uppercase;
   color: var(--text-muted);
 }
-.prize-table td {
-  padding: 7px 8px;
-  border-bottom: 1px solid var(--border);
-}
+.prize-table td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
 .prize-table tr:last-child td { border-bottom: none; }
 .prize-place { font-size: 16px; }
 
@@ -410,8 +334,7 @@ a:hover { color: var(--accent2); }
   margin-bottom: 8px;
 }
 .team-header img {
-  width: 20px;
-  height: 20px;
+  width: 20px; height: 20px;
   border-radius: 4px;
   object-fit: cover;
 }
@@ -420,17 +343,17 @@ a:hover { color: var(--accent2); }
   font-size: 13px;
   color: var(--text);
   word-break: break-word;
+  line-height: 1.3;
 }
-.team-ref {
-  color: var(--accent);
-  font-weight: 600;
-}
-.team-ref:hover { color: var(--accent2); }
+
+/* Строка ростера:
+   nick — слева, pos — слева тоже но после ника.
+   Используем grid с фиксированной шириной для pos. */
 .roster-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 24px;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
   align-items: center;
-  gap: 8px;
   font-size: 11px;
   padding: 3px 0;
   border-bottom: 1px solid var(--border);
@@ -438,13 +361,24 @@ a:hover { color: var(--accent2); }
 .roster-row:last-child { border-bottom: none; }
 .nick {
   color: var(--text);
-  min-width: 0;
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.pos  {
+/* pos: маленький бейдж, фиксированная ширина, выравнивается по правому краю */
+.pos {
   color: var(--text-muted);
-  text-align: center;
-  font-variant-numeric: tabular-nums;
+  font-size: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 600;
 }
 
 /* ============================================================
@@ -473,81 +407,11 @@ a:hover { color: var(--accent2); }
 .caster-item:last-child { margin-bottom: 0; }
 
 /* ============================================================
-   FOOTER
-   ============================================================ */
-.site-footer {
-  background: var(--bg2);
-  border-top: 1px solid var(--border);
-  margin-top: 20px;
-  padding: 36px 20px 28px;
-  transition: var(--transition);
-}
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-.footer-brand .logo-foot {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: .5px;
-}
-.footer-brand p {
-  color: var(--text-muted);
-  font-size: 12px;
-  margin-top: 6px;
-  line-height: 1.6;
-  max-width: 260px;
-}
-.footer-socials-label {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-.footer-socials {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.footer-socials a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-muted);
-  font-size: 13px;
-  transition: color .2s;
-}
-.footer-socials a:hover { color: var(--accent); }
-.footer-socials a svg { flex-shrink: 0; }
-.footer-bottom {
-  max-width: 1200px;
-  margin: 22px auto 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-muted);
-  font-size: 12px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-/* ============================================================
    FLOATING BUTTONS
    ============================================================ */
 .fab {
   position: fixed;
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--bg2);
@@ -588,52 +452,61 @@ a:hover { color: var(--accent2); }
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* ============================================================
-   SEARCH HIGHLIGHT
-   ============================================================ */
 .search-hidden { display: none !important; }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* Планшет */
 @media (max-width: 900px) {
-  .page-body { grid-template-columns: 1fr; }
-  .infobox { position: static; order: -1; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .header-inner {
-    flex-wrap: wrap;
-    padding: 12px;
-  }
-  .header-search { width: 100%; }
   .page-body {
-    margin: 16px auto 72px;
-    padding: 0 12px;
-    gap: 14px;
+    grid-template-columns: 1fr;
+    /* На планшете инфобокс идёт ПЕРВЫМ (порядок: инфо, затем контент) */
   }
-  .block,
-  .infobox {
-    padding: 14px;
-    border-radius: 10px;
-  }
-  .page-title { font-size: 22px; }
-  .team-grid { grid-template-columns: 1fr; }
+  /* Инфобокс переезжает наверх */
+  #infobox  { order: -1; position: static; }
+  #mainCol  { order: 1; }
+  .infobox  { position: static; }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Мобильный */
+@media (max-width: 640px) {
+  .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 8px; }
+  .header-search { width: 100%; order: 3; }
+
+  .page-body { padding: 0 16px; margin-top: 18px; gap: 0; }
+
+  .block { padding: 14px 16px; margin-bottom: 12px; }
+  .block h2 { font-size: 16px; }
+
+  .page-title { font-size: 20px; }
+
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .team-name { font-size: 12px; }
+  .nick { font-size: 10px; }
+
+  .infobox { padding: 14px; }
+  .infobox h2 { font-size: 17px; }
+
   .countdown { gap: 6px; }
   .cd-num { font-size: 22px; }
-  .btn { min-height: 42px; }
+  .cd-lbl { font-size: 9px; }
+
+  /* Кнопки действий в строку на мобилке */
+  .action-btns { flex-direction: row; flex-wrap: wrap; }
+  .btn { flex: 1; min-width: 120px; font-size: 13px; padding: 10px 8px; }
+
   .bracket-frame { height: 360px; }
-  .prize-table th,
-  .prize-table td { padding: 7px 4px; }
-  .fab {
-    width: 40px;
-    height: 40px;
-  }
+
+  .fab { width: 40px; height: 40px; }
   #themeBtn { bottom: 16px; left: 16px; }
   #toTopBtn { bottom: 16px; right: 16px; }
-  .site-footer { padding: 28px 12px 24px; }
-  .footer-inner { gap: 24px; }
-  .footer-bottom { align-items: flex-start; }
+}
+
+@media (max-width: 400px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .logo { font-size: 20px; }
 }
 </style>
 </head>
@@ -642,77 +515,38 @@ a:hover { color: var(--accent2); }
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
-    <div>
-      <a class="logo" href="index.html">Anypedia</a>
+    <div class="logo-wrap">
+      <a class="logo" href="/">Anypedia</a>
       <div class="logo-sub">Dota 2 · Турниры СНГ</div>
     </div>
     <input id="search" class="header-search" placeholder="Поиск по странице…" autocomplete="off"/>
   </div>
 </header>
 
-<!-- PAGE BODY (rendered by JS) -->
+<!-- PAGE BODY -->
 <div class="page-body" id="pageBody" style="display:none">
 
   <!-- LEFT COLUMN -->
   <div id="mainCol">
-
-    <!-- Описание + призы -->
     <div class="block" id="descBlock"></div>
-
-    <!-- Участники -->
     <div class="block">
       <h2>Участники</h2>
       <div class="team-grid" id="teams"></div>
     </div>
-
-    <!-- Сетка -->
     <div class="block">
       <h2>Сетка турнира</h2>
       <iframe class="bracket-frame" id="bracketFrame" allowfullscreen></iframe>
     </div>
-
-    <!-- Кастеры -->
     <div class="block">
       <h2>Кастеры</h2>
       <div id="casters"></div>
     </div>
-
   </div>
 
   <!-- RIGHT COLUMN — INFOBOX -->
   <aside class="infobox" id="infobox"></aside>
 
 </div>
-
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="logo-foot">Anypedia</div>
-      <p>Платформа для поиска и отслеживания турниров по Dota 2 в СНГ. Следите за расписанием, ростерами и результатами.</p>
-    </div>
-    <div>
-      <div class="footer-socials-label">Наши соцсети</div>
-      <div class="footer-socials">
-        <a href="https://t.me/anylvlcommunity" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
-          Telegram
-        </a>
-
-        <a href="https://discord.gg/3N4Jg6Jpak" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963a.074.074 0 0 0-.041-.104 13.2 13.2 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/></svg>
-          Discord
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Anypedia. Все права защищены.</span>
-    <span>Dota 2 — торговая марка Valve Corporation.</span>
-  </div>
-</footer>
 
 <!-- FLOATING BUTTONS -->
 <button class="fab" id="themeBtn" title="Тема" aria-label="Тема">
@@ -726,9 +560,6 @@ a:hover { color: var(--accent2); }
 
 <div id="toast"></div>
 
-<!-- ============================================================
-     JAVASCRIPT
-     ============================================================ -->
 <script>
 /* ---------- THEME ---------- */
 const html = document.documentElement;
@@ -774,83 +605,8 @@ function doShare() {
 }
 
 /* ---------- TOURNAMENT DATA ---------- */
-function getTournamentIdFromUrl() {
-  const paramsId = new URLSearchParams(window.location.search).get('id');
-  if (paramsId) return paramsId;
-
-  const path = location.pathname.replace(/\/+$/, '');
-  const lastSegment = decodeURIComponent(path.split('/').pop() || '');
-
-  if (!lastSegment || lastSegment === 'tournament.html' || lastSegment === 'index.html') {
-    return '';
-  }
-
-  return lastSegment;
-}
-
-function getSiteBasePath(id) {
-  const path = location.pathname;
-  if (path.endsWith('/tournament.html') || path.endsWith('/index.html')) {
-    return path.slice(0, path.lastIndexOf('/') + 1);
-  }
-  const suffix = `/${encodeURIComponent(id)}`;
-  return path.endsWith(suffix) ? path.slice(0, -suffix.length + 1) : '/';
-}
-
-function escapeHtml(value) {
-  return String(value ?? '').replace(/[&<>"']/g, ch => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[ch]));
-}
-
-function teamKey(value) {
-  return String(value || '').normalize('NFKC').replace(/[’`]/g, "'").replace(/\s+/g, ' ').trim().toLowerCase();
-}
-
-function slugifyTeam(value) {
-  return String(value || '').normalize('NFKC').trim().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
-}
-
-function getTeamsData() {
-  return typeof teams !== 'undefined' && Array.isArray(teams) ? teams : [];
-}
-
-function getTeamId(team) {
-  return team.id || slugifyTeam(team.name);
-}
-
-function teamAliases(team) {
-  const aliases = team.aliases || [];
-  if (Array.isArray(aliases)) return aliases;
-  return String(aliases)
-    .split(',')
-    .map(name => name.trim())
-    .filter(Boolean);
-}
-
-function findTeamByName(name) {
-  const key = teamKey(name);
-  if (!key || key === 'tbd' || key === '—') return null;
-  return getTeamsData().find(team =>
-    [team.name, ...teamAliases(team)].filter(Boolean).map(teamKey).includes(key));
-}
-
-function teamPageLink(team) {
-  return `${getSiteBasePath(id)}team.html?id=${encodeURIComponent(getTeamId(team))}`;
-}
-
-function renderTeamName(name) {
-  const label = escapeHtml(name || '—');
-  const team = findTeamByName(name);
-  return team ? `<a class="team-ref" href="${teamPageLink(team)}">${label}</a>` : label;
-}
-
-const id = getTournamentIdFromUrl();
+const id = new URLSearchParams(window.location.search).get('id');
 const t  = tournaments.find(x => x.id === id);
-
-if (t && new URLSearchParams(window.location.search).has('id')) {
-  history.replaceState(null, '', `${getSiteBasePath(id)}${encodeURIComponent(id)}`);
-}
 
 if (!t) {
   document.body.innerHTML = `
@@ -859,7 +615,7 @@ if (!t) {
       <div>
         <h1 style="font-size:22px;margin-bottom:10px">❌ Турнир не найден</h1>
         <p style="color:#888;margin-bottom:20px">Проверьте ссылку или вернитесь на главную</p>
-        <a href="${getSiteBasePath(id)}" style="padding:10px 18px;background:#1c1c1e;border:1px solid #2a2a2a;
+        <a href="index.html" style="padding:10px 18px;background:#1c1c1e;border:1px solid #2a2a2a;
            border-radius:10px;color:#6bb6ff;display:inline-block">← Назад</a>
       </div>
     </div>`;
@@ -893,12 +649,10 @@ function getTournamentStatus() {
 }
 
 /* ---------- COUNTDOWN ---------- */
-// Составляем UTC-момент старта в МСК (UTC+3)
 function buildMskStartDate() {
   const [y, m, d] = t.start.split('-').map(Number);
   const time = t.startTime || '12:00';
   const [hh, mm] = time.split(':').map(Number);
-  // МСК = UTC+3, поэтому UTC час = hh - 3
   return new Date(Date.UTC(y, m - 1, d, hh - 3, mm, 0));
 }
 
@@ -916,21 +670,11 @@ function pad(n) { return String(n).padStart(2, '0'); }
 
 function renderCountdown() {
   const status = getTournamentStatus();
+  if (status === 'live')     return `<div class="countdown-status status-live">🔴 Турнир идёт прямо сейчас</div>`;
+  if (status === 'finished') return `<div class="countdown-status status-finished">✅ Турнир завершён</div>`;
 
-  // Уже идёт
-  if (status === 'live') {
-    return `<div class="countdown-status status-live">🔴 Турнир идёт прямо сейчас</div>`;
-  }
-  // Завершён
-  if (status === 'finished') {
-    return `<div class="countdown-status status-finished">✅ Турнир завершён</div>`;
-  }
-
-  // Будущий — строим таймер
   const diff = mskStart - Date.now();
-  if (diff <= 0) {
-    return `<div class="countdown-status status-live">🔴 Стартует сейчас!</div>`;
-  }
+  if (diff <= 0) return `<div class="countdown-status status-live">🔴 Стартует сейчас!</div>`;
 
   const days    = Math.floor(diff / 86400000);
   const hours   = Math.floor((diff % 86400000) / 3600000);
@@ -948,32 +692,23 @@ function renderCountdown() {
     </div>`;
 }
 
-// Тикает каждую секунду
 function tickCountdown() {
-  const status = getTournamentStatus();
-  if (status !== 'upcoming') return; // таймер больше не нужен
-
+  if (getTournamentStatus() !== 'upcoming') return;
   const diff = mskStart - Date.now();
   if (diff <= 0) {
-    document.getElementById('cdWrap').outerHTML = `<div class="countdown-status status-live">🔴 Стартует сейчас!</div>`;
+    const wrap = document.getElementById('cdWrap');
+    if (wrap) wrap.outerHTML = `<div class="countdown-status status-live">🔴 Стартует сейчас!</div>`;
     return;
   }
-
-  const days    = Math.floor(diff / 86400000);
-  const hours   = Math.floor((diff % 86400000) / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-  const seconds = Math.floor((diff % 60000) / 1000);
-
   const elD = document.getElementById('cdD');
   const elH = document.getElementById('cdH');
   const elM = document.getElementById('cdM');
   const elS = document.getElementById('cdS');
-  if (elD) elD.textContent = pad(days);
-  if (elH) elH.textContent = pad(hours);
-  if (elM) elM.textContent = pad(minutes);
-  if (elS) elS.textContent = pad(seconds);
+  if (elD) elD.textContent = pad(Math.floor(diff / 86400000));
+  if (elH) elH.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+  if (elM) elM.textContent = pad(Math.floor((diff % 3600000) / 60000));
+  if (elS) elS.textContent = pad(Math.floor((diff % 60000) / 1000));
 }
-
 setInterval(tickCountdown, 1000);
 
 /* ---------- INFOBOX ---------- */
@@ -981,62 +716,28 @@ const dateText = t.start === t.end
   ? formatDateLong(t.start)
   : `${formatDateLong(t.start)} — ${formatDateLong(t.end)}`;
 
-const TOURNAMENT_LINK_TYPES = [
-  { key: 'dotabuff', label: 'Dotabuff', icon: 'dotabuff.png', aliases: ['dotabuffLink'] },
-  { key: 'discord',  label: 'Discord',  icon: 'discord.png',  aliases: ['discordLink'] },
-  { key: 'rules',    label: 'Rules',    icon: 'rules.png',    aliases: ['rulesLink'] },
-  { key: 'bracket',  label: 'Bracket',  icon: 'bracket.png',  aliases: ['bracketLink', 'bracketEmbed'] }
-];
-
-function getTournamentExtraLink(type) {
-  const source = t.links || {};
-  const value = source[type.key] || type.aliases.map(alias => t[alias]).find(Boolean) || '';
-  return typeof value === 'string' ? value.trim() : '';
-}
-
-function renderTournamentLinks() {
-  const links = TOURNAMENT_LINK_TYPES
-    .map(type => ({ ...type, url: getTournamentExtraLink(type) }))
-    .filter(type => type.url);
-
-  if (!links.length) return '';
-
-  return `
-    <div class="tournament-links" aria-label="Ссылки турнира">
-      ${links.map(link => `
-        <a class="tournament-link" href="${link.url}" target="_blank" rel="noopener" aria-label="${link.label}" title="${link.label}">
-          <img src="${link.icon}" alt="" loading="lazy" onerror="this.closest('a').classList.add('icon-missing')">
-        </a>
-      `).join('')}
-    </div>`;
-}
-
 document.getElementById('infobox').innerHTML = `
   <h2>${t.title}</h2>
-
   <div class="countdown-wrap">${renderCountdown()}</div>
-
-  <div class="info-row"><span class="info-label">Даты</span>    <span class="info-val">${dateText}</span></div>
-  <div class="info-row"><span class="info-label">Приз</span>    <span class="info-val" style="font-weight:700;color:var(--accent)">${t.prize || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Регион</span>  <span class="info-val">${t.location || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Команд</span>  <span class="info-val">${t.teams ?? '—'}</span></div>
-  <div class="info-row"><span class="info-label">Формат</span>  <span class="info-val">${t.format || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Лимит</span>   <span class="info-val">${t.limit || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${renderTeamName(t.winner || 'TBD')}</span></div>
+  <div class="info-row"><span class="info-label">Даты</span><span class="info-val">${dateText}</span></div>
+  <div class="info-row"><span class="info-label">Приз</span><span class="info-val" style="font-weight:700;color:var(--accent)">${t.prize || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Регион</span><span class="info-val">${t.location || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Команд</span><span class="info-val">${t.teams ?? '—'}</span></div>
+  <div class="info-row"><span class="info-label">Формат</span><span class="info-val">${t.format || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${t.winner || 'TBD'}</span></div>
   <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
-
   <div class="action-btns">
-    <a class="btn btn-reg"   href="${t.registrationLink}" target="_blank" rel="noopener">Регистрация</a>
-    <a class="btn btn-tg"    href="${t.telegramLink}"     target="_blank" rel="noopener">Telegram</a>
+    <a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>
+    <a class="btn btn-tg"  href="${t.telegramLink}"     target="_blank" rel="noopener">✈️ Telegram</a>
     <button class="btn btn-share" onclick="doShare()">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-        <line x1="15.41" y1="6.51"  x2="8.59"  y2="10.49"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
       </svg>
       Поделиться
     </button>
-    ${renderTournamentLinks()}
   </div>
 `;
 
@@ -1046,14 +747,12 @@ function prizeTable() {
     return `<div style="color:var(--text-muted);font-size:13px">Призовой фонд не указан</div>`;
   }
   const medals = ['🥇','🥈','🥉','🏅'];
-  const rows = [...t.prizePool]
-    .sort((a,b) => a.place - b.place)
-    .map(p => `
-      <tr>
-        <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
-        <td>${renderTeamName(p.team || '—')}</td>
-        <td style="font-weight:600;color:var(--text)">${p.amount}</td>
-      </tr>`).join('');
+  const rows = [...t.prizePool].sort((a,b) => a.place - b.place).map(p => `
+    <tr>
+      <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
+      <td>${p.team || '—'}</td>
+      <td style="font-weight:600;color:var(--text)">${p.amount}</td>
+    </tr>`).join('');
   return `
     <table class="prize-table">
       <thead><tr><th>Место</th><th>Команда</th><th>Приз</th></tr></thead>
@@ -1062,9 +761,7 @@ function prizeTable() {
 }
 
 document.getElementById('descBlock').innerHTML = `
-  <div class="title-row">
-    <h1 class="page-title">${t.title}</h1>
-  </div>
+  <div class="title-row"><h1 class="page-title">${t.title}</h1></div>
   <p class="desc-text">${t.description || '—'}</p>
   <div class="block-section-label">Формат</div>
   <p class="desc-text">${t.format || '—'}</p>
@@ -1073,19 +770,20 @@ document.getElementById('descBlock').innerHTML = `
 `;
 
 /* ---------- TEAMS ---------- */
+// Позиции: 1=Carry, 2=Mid, 3=Offlane, 4=Soft Support, 5=Hard Support
+const posLabel = { 1:'Carry', 2:'Mid', 3:'Off', 4:'Sup', 5:'HS' };
+
 document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
   <div class="team-card">
     <div class="team-header">
       <img src="${team.logo || 'dota2.png'}" alt="${team.name}">
-      <div class="team-name">${renderTeamName(team.name)}</div>
+      <div class="team-name">${team.name}</div>
     </div>
-    ${(team.roster || [])
-      .sort((a,b) => a.pos - b.pos)
-      .map(p => `
-        <div class="roster-row">
-          <span class="nick">${p.nick}</span>
-          <span class="pos">${p.pos}</span>
-        </div>`).join('')}
+    ${(team.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
+      <div class="roster-row">
+        <span class="nick">${p.nick}</span>
+        <span class="pos" title="Позиция ${p.pos}">${p.pos}</span>
+      </div>`).join('')}
   </div>`).join('');
 
 /* ---------- BRACKET ---------- */
@@ -1099,19 +797,17 @@ document.getElementById('casters').innerHTML = (t.casters || []).map(c => `
       : `<span>${c.name || 'TBD'}</span>`}
   </div>`).join('');
 
-/* ---------- SEARCH (внутри страницы) ---------- */
+/* ---------- SEARCH ---------- */
 document.getElementById('search').addEventListener('input', e => {
   const q = e.target.value.toLowerCase().trim();
   if (!q) {
     document.querySelectorAll('.team-card, .caster-item').forEach(el => el.classList.remove('search-hidden'));
     return;
   }
-  document.querySelectorAll('.team-card').forEach(el => {
-    el.classList.toggle('search-hidden', !el.innerText.toLowerCase().includes(q));
-  });
-  document.querySelectorAll('.caster-item').forEach(el => {
-    el.classList.toggle('search-hidden', !el.innerText.toLowerCase().includes(q));
-  });
+  document.querySelectorAll('.team-card').forEach(el =>
+    el.classList.toggle('search-hidden', !el.innerText.toLowerCase().includes(q)));
+  document.querySelectorAll('.caster-item').forEach(el =>
+    el.classList.toggle('search-hidden', !el.innerText.toLowerCase().includes(q)));
 });
 </script>
 </body>
