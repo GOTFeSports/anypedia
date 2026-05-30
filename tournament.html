@@ -927,12 +927,22 @@ document.getElementById('descBlock').innerHTML = `
 
 /* ---------- TEAMS ---------- */
 function findTeamByName(name) {
-  if (!name) return null;
-  const key = String(name).normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
-  return teams?.find(team => {
-    const names = [team.name, ...(team.aliases || [])];
-    return names.some(n => 
-      String(n).normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase() === key
+  if (!name || typeof teams === 'undefined') return null;
+  
+  const key = String(name)
+    .normalize('NFKC')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+  return teams.find(team => {
+    const allNames = [team.name, ...(team.aliases || [])];
+    return allNames.some(n => 
+      String(n)
+        .normalize('NFKC')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase() === key
     );
   }) || null;
 }
@@ -947,7 +957,10 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(teamData =>
     <div class="team-card">
       <div class="team-header">
         <img src="${teamData.logo || 'dota2.png'}" alt="${teamData.name}">
-        <a href="${teamLink}" class="team-name" onclick="event.stopPropagation()">${teamData.name}</a>
+        ${foundTeam 
+          ? `<a href="${teamLink}" class="team-name" onclick="event.stopPropagation()">${teamData.name}</a>`
+          : `<div class="team-name" style="color: var(--text);">${teamData.name}</div>`
+        }
       </div>
       ${(teamData.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
         <div class="roster-row">
@@ -956,7 +969,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(teamData =>
         </div>`).join('')}
     </div>`;
 }).join('');
-
+   
 /* ---------- BRACKET ---------- */
 document.getElementById('bracketFrame').src = t.bracketEmbed || '';
 
