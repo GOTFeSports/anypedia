@@ -90,7 +90,7 @@ const teams = [
       },
       {
         title: "AnyLvL x GOTF eSports Tournament #1",
-        date:  "2025-04-19",
+        date:  "2026-04-19",
         place: "9-16",
         prize: "—",
         limit: "До 35.000 MMR на команду"
