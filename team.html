@@ -4,11 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Team · Anypedia</title>
-<style>
-html, body { background: #0f0f10; color: #eaeaea; color-scheme: dark; }
-</style>
+<script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="data.js"></script>
+<script src="teams.js"></script>
+
 <style>
 /* ============================================================
    CSS VARIABLES
@@ -44,7 +45,6 @@ html, body { background: #0f0f10; color: #eaeaea; color-scheme: dark; }
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: var(--bg); }
 body {
   background: var(--bg);
   color: var(--text);
@@ -76,7 +76,7 @@ a:hover { color: var(--accent2); }
   justify-content: space-between;
   gap: 16px;
 }
-.logo-wrap { display: flex; flex-direction: column; min-width: 0; }
+.logo-wrap { display: flex; flex-direction: column; }
 .logo {
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
@@ -109,114 +109,6 @@ a:hover { color: var(--accent2); }
   box-shadow: 0 0 0 3px rgba(107,182,255,.15);
 }
 .header-search::placeholder { color: var(--text-muted); }
-
-.header-search-wrap {
-  position: relative;
-  width: 320px;
-}
-.header-search-wrap .header-search {
-  width: 100%;
-  padding-left: 36px;
-}
-.search-icon {
-  position: absolute;
-  left: 11px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-  pointer-events: none;
-  width: 15px;
-  height: 15px;
-}
-.search-dropdown {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  right: 0;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  z-index: 500;
-  overflow: hidden;
-  display: none;
-  max-height: 420px;
-  overflow-y: auto;
-}
-.search-dropdown.visible { display: block; }
-.sd-group-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  padding: 10px 14px 6px;
-  background: var(--bg3);
-  border-bottom: 1px solid var(--border);
-}
-.sd-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  cursor: pointer;
-  transition: background .12s;
-  border-bottom: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--text);
-}
-.sd-item:last-child { border-bottom: none; }
-.sd-item:hover, .sd-item.active { background: var(--bg3); }
-.sd-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  flex-shrink: 0;
-}
-.sd-item img.sd-logo {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.sd-info { min-width: 0; }
-.sd-title {
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.sd-meta {
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 1px;
-}
-.sd-badge {
-  margin-left: auto;
-  flex-shrink: 0;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  background: var(--bg3);
-}
-.sd-empty {
-  padding: 16px 14px;
-  color: var(--text-muted);
-  font-size: 13px;
-  text-align: center;
-}
 
 /* ============================================================
    LAYOUT
@@ -527,20 +419,8 @@ tr.place-bronze td:first-child {
    ============================================================ */
 @media (max-width: 640px) {
   /* Header */
-  .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 10px; align-items: flex-start; }
-  .logo-wrap { max-width: calc(100% - 56px); }
-  .header-search-wrap { width: 100%; order: 3; }
-  .header-search { width: 100%; }
-  .search-dropdown {
-    position: fixed;
-    left: 12px;
-    right: 12px;
-    top: 96px;
-    max-height: min(420px, calc(100vh - 116px));
-  }
-  .sd-item { padding: 11px 12px; }
-  .sd-title { white-space: normal; }
-  .sd-badge { display: none; }
+  .header-inner { flex-wrap: wrap; padding: 10px 16px; gap: 8px; }
+  .header-search { width: 100%; order: 3; }
 
   /* Layout */
   .page-body { padding: 0 16px; margin-top: 16px; gap: 0; }
@@ -608,9 +488,56 @@ tr.place-bronze td:first-child {
 
 @media (max-width: 400px) {
   .logo { font-size: 20px; }
-  .logo-sub { font-size: 10px; }
   .page-title { font-size: 20px; }
   .team-logo { width: 48px; height: 48px; }
+}
+
+/* ── GLOBAL SEARCH ── */
+.header-search-wrap { position: relative; width: 280px; }
+.header-search { width: 100%; padding: 9px 14px 9px 36px; }
+.search-icon {
+  position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); pointer-events: none; width: 15px; height: 15px;
+}
+.search-dropdown {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  z-index: 500; display: none; max-height: 400px; overflow-y: auto;
+}
+.search-dropdown.visible { display: block; }
+.sd-group-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--text-muted); padding: 10px 14px 6px;
+  background: var(--bg3); border-bottom: 1px solid var(--border);
+}
+.sd-item {
+  display: flex; align-items: center; gap: 10px; padding: 9px 14px;
+  cursor: pointer; transition: background .12s;
+  border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text);
+}
+.sd-item:last-child { border-bottom: none; }
+.sd-item:hover, .sd-item.active { background: var(--bg3); }
+.sd-icon {
+  width: 28px; height: 28px; border-radius: 6px; background: var(--bg3);
+  border: 1px solid var(--border); display: flex; align-items: center;
+  justify-content: center; font-size: 13px; flex-shrink: 0;
+}
+.sd-item img.sd-logo {
+  width: 28px; height: 28px; border-radius: 6px; object-fit: cover;
+  border: 1px solid var(--border); flex-shrink: 0;
+}
+.sd-info { min-width: 0; }
+.sd-title { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sd-meta  { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.sd-badge {
+  margin-left: auto; flex-shrink: 0; font-size: 10px; font-weight: 600;
+  padding: 2px 7px; border-radius: 999px; border: 1px solid var(--border);
+  color: var(--text-muted); background: var(--bg3);
+}
+.sd-empty { padding: 16px 14px; color: var(--text-muted); font-size: 13px; text-align: center; }
+@media (max-width: 640px) {
+  .header-search-wrap { width: 100%; order: 3; }
 }
 </style>
 </head>
@@ -695,9 +622,6 @@ tr.place-bronze td:first-child {
   </svg>
 </button>
 
-<script src="/data.js"></script>
-<script src="/teams.js"></script>
-<script src="/site-search.js"></script>
-<script src="/team.js"></script>
+<script src="team.js"></script>
 </body>
 </html>

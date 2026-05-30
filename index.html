@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Anypedia | Dota 2 Wiki</title>
+<script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -881,18 +882,12 @@ function renderWinner(name) {
   const found = findTeamByName(name);
   if (!found) return name;
   const tid = getTeamId(found);
-  return `<a href="${teamPageLink(tid)}" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent)">${name}</a>`;
+  return `<a href="${siteBase}team.html?id=${tid}" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent)">${name}</a>`;
 }
 
 /* ---------- BASE PATH — вычисляем один раз, используем везде ---------- */
 // Работает корректно и при URL = "/" и при URL = "/index.html"
 const siteBase = location.origin + location.pathname.replace(/index\.html$/, '').replace(/\/[^/]*\.html$/, '/');
-function tournamentPageLink(id) {
-  return `${siteBase}${encodeURIComponent(id)}`;
-}
-function teamPageLink(id) {
-  return `${siteBase}team.html?id=${encodeURIComponent(id)}`;
-}
 
 /* ---------- RENDER ---------- */
 const upcoming = [], live = [], finished = [];
@@ -917,8 +912,8 @@ function buildRow(t) {
   const dateText = t.start === t.end
     ? formatDate(t.start)
     : `${formatDateShort(t.start)} — ${formatDate(t.end)}`;
-  const pageUrl  = tournamentPageLink(t.id);
-  const link     = tournamentPageLink(t.id);
+  const pageUrl  = `${siteBase}tournament.html?id=${t.id}`;
+  const link     = `${siteBase}tournament.html?id=${t.id}`;
 
   return `
     <tr onclick="location.href='${link}'">
@@ -949,8 +944,8 @@ function buildCard(t) {
   const dateText = t.start === t.end
     ? formatDateShort(t.start)
     : `${formatDateShort(t.start)} — ${formatDateShort(t.end)}`;
-  const pageUrl = tournamentPageLink(t.id);
-  const link    = tournamentPageLink(t.id);
+  const pageUrl = `${siteBase}tournament.html?id=${t.id}`;
+  const link    = `${siteBase}tournament.html?id=${t.id}`;
 
   return `
     <div class="t-card" onclick="location.href='${link}'">
@@ -1064,7 +1059,7 @@ function renderDropdown(q) {
     matchedTournaments.forEach(t => {
       const st = getStatus(t);
       const statusBadge = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' }[st];
-      const link = tournamentPageLink(t.id);
+      const link = `${siteBase}tournament.html?id=${t.id}`;
       currentItems.push(link);
       html += `
         <a class="sd-item" href="${link}">
@@ -1082,7 +1077,7 @@ function renderDropdown(q) {
     html += `<div class="sd-group-label">👥 Команды</div>`;
     matchedTeams.forEach(team => {
       const tid = getTeamId(team);
-      const link = teamPageLink(tid);
+      const link = `${siteBase}team.html?id=${tid}`;
       currentItems.push(link);
       html += `
         <a class="sd-item" href="${link}">
