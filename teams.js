@@ -70,7 +70,7 @@ const teams = [
       { nick: "Gigo",   pos: 2, joined: "2026-05-18" },
       { nick: "icememory<3", pos: 3, joined: "2025-04-21" },
       { nick: "danilK",    pos: 4, joined: "2026-05-18" },
-      { nick: "icememory<3",   pos: 5, joined: "2025-04-21" },
+      { nick: "escapist",   pos: 5, joined: "2025-04-21" },
     ],
 
     formerPlayers: [
