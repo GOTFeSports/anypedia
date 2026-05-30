@@ -52,6 +52,11 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Фон на html предотвращает белую вспышку до загрузки CSS-переменных */
+html { background: #0f0f10; }
+[data-theme="light"] html,
+html[data-theme="light"] { background: #f4f4f6; }
+
 body {
   background: var(--bg);
   color: var(--text);
