@@ -767,19 +767,21 @@ const tournaments = [
   dotabuff: "",
   discord: "https://discord.gg/eafqq7bpNe",
   rules: "https://t.me/bedlamtournaments/226?comment=412",
-  bracket: ""
+  bracket: "https://challonge.com/ru/BWFSC"
 },
     teamsList: [],
     
     casters: [
-        { name: "TBD", link: "" }
+        { name: "jimbo_jox", link: "https://www.twitch.tv/jimbo_jox" },
+        { name: "tiltuhabratuha", link: "https://www.twitch.tv/tiltuhabratuha" },
+        { name: "sezen_team", link: "https://www.twitch.tv/sezen_team" },
     ],
     
-    bracketEmbed: "",
+    bracketEmbed: "https://challonge.com/ru/BWFSC/module",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeiGMBcO8fjZQiACg9LhMgLI9qCKc-nM53xWSF-3Y090eSQ2A/viewform",
     telegramLink: "https://t.me/bedlamtournaments",
     
-    description: "BEDLAM: WAITING FOR SUMMER CUP — онлайн-турнир 5×5, Single Elimination. Призовой фонд 10.000₽ (1 место — 6700₽, 2 место — 3300₽). Вход 500₽ с команды. Лимит 35.000 MMR на команду. Минимум 16 команд. Дата: 30 мая 2026.",
+    description: "Bedlam Waiting For Summer Cup — 31.05.2026 в 13:00, Single Elimination, лимит MMR до 35.000 (8.5к на человека), 16+ команд, взнос 500₽ с команды, призовой фонд 15.000₽ (1-е место — 10.000₽, 2-е место — 5.000₽). Организатор: Bedlam Tournaments.",
     
     prizePool: [
         { place: 1, amount: "10.000₽", team: "TBD" },
