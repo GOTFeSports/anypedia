@@ -18,22 +18,6 @@
 <script src="data.js"></script>
 <script src="teams.js"></script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109393123', 'ym');
-
-    ym(109393123, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109393123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
 <style>
 /* ============================================================
    CSS VARIABLES
@@ -860,6 +844,42 @@ function tickCountdown() {
 }
 setInterval(tickCountdown, 1000);
 
+/* ---------- TEAM LOOKUP ---------- */
+function normStr(v) {
+  return String(v || '').normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+function slugifyTeam(value) {
+  return String(value || '').normalize('NFKC').trim()
+    .replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '')
+    .replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
+}
+function getTeamPageId(team) {
+  return team.id || slugifyTeam(team.name);
+}
+function teamAllNames(team) {
+  const a = team.aliases || [];
+  const list = Array.isArray(a) ? a : String(a).split(',').map(s => s.trim()).filter(Boolean);
+  return [team.name, ...list].filter(Boolean).map(normStr);
+}
+function findTeamByName(name) {
+  if (!name || name === '—' || name.toLowerCase() === 'tbd') return null;
+  const allTeams = typeof teams !== 'undefined' ? teams : [];
+  const key = normStr(name);
+  return allTeams.find(team => teamAllNames(team).includes(key)) || null;
+}
+function getSiteBase() {
+  const p = location.pathname.replace(/\/[^/]*\.html$/, '/');
+  return location.origin + p;
+}
+/* Оборачивает имя команды в ссылку если команда найдена в teams.js */
+function renderTeamLink(name, style = '') {
+  if (!name || name === '—') return name || '—';
+  const found = findTeamByName(name);
+  if (!found) return name;
+  const tid = getTeamPageId(found);
+  return `<a href="${getSiteBase()}team.html?id=${encodeURIComponent(tid)}" style="color:var(--accent);font-weight:600${style ? ';' + style : ''}">${name}</a>`;
+}
+
 /* ---------- INFOBOX ---------- */
 const dateText = t.start === t.end
   ? formatDateLong(t.start)
@@ -874,7 +894,7 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Команд</span><span class="info-val">${t.teams ?? '—'}</span></div>
   <div class="info-row"><span class="info-label">Формат</span><span class="info-val">${t.format || '—'}</span></div>
   <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
-  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${t.winner || 'TBD'}</span></div>
+  <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${renderTeamLink(t.winner || 'TBD')}</span></div>
   <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
   <div class="action-btns">
     ${t.registrationLink ? `<a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>` : ''}
@@ -906,7 +926,7 @@ function prizeTable() {
   const rows = [...t.prizePool].sort((a,b) => a.place - b.place).map(p => `
     <tr>
       <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
-      <td>${p.team || '—'}</td>
+      <td>${renderTeamLink(p.team || '—')}</td>
       <td style="font-weight:600;color:var(--text)">${p.amount}</td>
     </tr>`).join('');
   return `
@@ -933,7 +953,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
   <div class="team-card">
     <div class="team-header">
       <img src="${team.logo || 'dota2.png'}" alt="${team.name}">
-      <div class="team-name">${team.name}</div>
+      <div class="team-name">${renderTeamLink(team.name)}</div>
     </div>
     ${(team.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
       <div class="roster-row">
