@@ -810,6 +810,8 @@ const tournaments = [
       { name: "Bedlam Red", logo: "dota2.png", roster: [ { nick: "lonix", pos: 1 }, { nick: "immortall boy", pos: 2 }, { nick: "Edsa1?", pos: 3 }, { nick: "drim", pos: 4 }, { nick: "Ariurn", pos: 5 } ] },
       { name: "GLHF", logo: "dota2.png", roster: [ { nick: "bebebe", pos: 1 }, { nick: "Divan", pos: 2 }, { nick: "mognus", pos: 3 }, { nick: "LasTdep", pos: 4 }, { nick: "heb", pos: 5 } ] },
       { name: "Entropiq", logo: "dota2.png", roster: [ { nick: "321", pos: 1 }, { nick: "destructive thoughts", pos: 2 }, { nick: "ДЖЕНТЕЛЬМЕН ЗОНЫ", pos: 3 }, { nick: "Bang", pos: 4 }, { nick: "katarsis", pos: 5 } ] },
+      { name: "Never Back Down", logo: "dota2.png", roster: [ { nick: "wakeup", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "Darklight", pos: 4 }, { nick: "Rose", pos: 5 } ] },
+      { name: "Смешарики", logo: "dota2.png", roster: [ { nick: "ahtenoma", pos: 1 }, { nick: "Frenzy", pos: 2 }, { nick: "StRaXa NeT", pos: 3 }, { nick: "dRЯnB", pos: 4 }, { nick: "borutsu", pos: 5 } ] },
     ],
     
     casters: [
