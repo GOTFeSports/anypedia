@@ -812,6 +812,14 @@ const tournaments = [
       { name: "Entropiq", logo: "dota2.png", roster: [ { nick: "321", pos: 1 }, { nick: "destructive thoughts", pos: 2 }, { nick: "ДЖЕНТЕЛЬМЕН ЗОНЫ", pos: 3 }, { nick: "Bang", pos: 4 }, { nick: "katarsis", pos: 5 } ] },
       { name: "Never Back Down", logo: "dota2.png", roster: [ { nick: "wakeup", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "Darklight", pos: 4 }, { nick: "Rose", pos: 5 } ] },
       { name: "Смешарики", logo: "dota2.png", roster: [ { nick: "ahtenoma", pos: 1 }, { nick: "Frenzy", pos: 2 }, { nick: "StRaXa NeT", pos: 3 }, { nick: "dRЯnB", pos: 4 }, { nick: "borutsu", pos: 5 } ] },
+      { name: "Tatsinskay Team", logo: "dota2.png", roster: [ { nick: "steelbetteryou", pos: 1 }, { nick: "justToxic", pos: 2 }, { nick: "Sorry4911", pos: 3 }, { nick: "setrakovVi", pos: 4 }, { nick: "3500", pos: 5 } ] },
+      { name: "Cyberia Esports", logo: "dota2.png", roster: [ { nick: "paroksetii", pos: 1 }, { nick: "fobas", pos: 2 }, { nick: "iFlopz", pos: 3 }, { nick: "sheremetov17", pos: 4 }, { nick: "Crimson_witness", pos: 5 } ] },
+      { name: "FuLcons", logo: "dota2.png", roster: [ { nick: "vibeman67", pos: 1 }, { nick: "UnFenixded", pos: 2 }, { nick: "ev1lblue", pos: 3 }, { nick: "oLgeZ21", pos: 4 }, { nick: "Chelovechekc", pos: 5 } ] },
+      { name: "Фонк Brazilian", logo: "dota2.png", roster: [ { nick: "foreversadnesss", pos: 1 }, { nick: "Lianyaw", pos: 2 }, { nick: "pepe101010183", pos: 3 }, { nick: "Ffffrls", pos: 4 }, { nick: "moonprissm", pos: 5 } ] },
+      { name: "AuraFarm", logo: "dota2.png", roster: [ { nick: "kaelthasJ", pos: 1 }, { nick: "szdoxw", pos: 2 }, { nick: "Baobbaab", pos: 3 }, { nick: "Gem4ikkk", pos: 4 }, { nick: "Nexyc1337", pos: 5 } ] },
+      { name: "LAST DANCE", logo: "dota2.png", roster: [ { nick: "Arcotsu", pos: 1 }, { nick: "labubson", pos: 2 }, { nick: "blz1k", pos: 3 }, { nick: "burmolda", pos: 4 }, { nick: "Oshibkaprirody", pos: 5 } ] },
+      { name: "Дефицит", logo: "dota2.png", roster: [ { nick: "died2dayago", pos: 1 }, { nick: "TTFDAWD", pos: 2 }, { nick: "qt4b1k", pos: 3 }, { nick: "neuropurgatory", pos: 4 }, { nick: "hanamiya0", pos: 5 } ] },
+      { name: "Flow Team", logo: "dota2.png", roster: [ { nick: "thea99999", pos: 1 }, { nick: "TheHateSocium", pos: 2 }, { nick: "Pod_metr0", pos: 3 }, { nick: "rmkle", pos: 4 }, { nick: "mtdqq", pos: 5 } ] },
     ],
     
     casters: [
