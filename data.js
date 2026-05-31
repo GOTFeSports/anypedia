@@ -20,7 +20,7 @@ const tournaments = [
     "limit": "Без лимита MMR",
     "start": "2026-07-10",
     "end": "2026-07-12",
-    "startTime": "20:00",
+    "startTime": "19:00",
     "prize": "TBD",
     "location": "СНГ",
     "teams": 8,
