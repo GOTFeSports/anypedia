@@ -769,7 +769,11 @@ const tournaments = [
   rules: "https://t.me/bedlamtournaments/226?comment=412",
   bracket: "https://challonge.com/ru/BWFSC"
 },
-    teamsList: [],
+    teamsList: [
+      { name: "Podosinovik", logo: "podosinovik.png", roster: [ { nick: ":3", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
+      { name: "LETO Junior", logo: "dota2.png", roster: [ { nick: "", pos: 1 }, { nick: "", pos: 2 }, { nick: ", pos: 3 }, { nick: "", pos: 4 }, { nick: "", pos: 5 } ] },
+      { name: "Gitlz", logo: "gitlz.png", roster: [ { nick: "", pos: 1 }, { nick: "", pos: 2 }, { nick: ", pos: 3 }, { nick: "", pos: 4 }, { nick: "", pos: 5 } ] },
+    ],
     
     casters: [
         { name: "jimbo_jox", link: "https://www.twitch.tv/jimbo_jox" },
