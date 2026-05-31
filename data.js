@@ -15,6 +15,39 @@
 
 const tournaments = [
   {
+    "id": "AnyLvL-GOTF-Special-3",
+    "title": "AnyLvL x GOTF eSports: Special 3",
+    "limit": "",
+    "start": "2026-07-10",
+    "end": "2026-07-12",
+    "startTime": "20:00",
+    "prize": "",
+    "location": "СНГ",
+    "teams": null,
+    "winner": "TBD",
+    "format": "",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "", "team": "" },
+        { "place": 2, "amount": "", "team": "" },
+        { "place": 3, "amount": "", "team": "" },
+    ]
+},
+  {
     "id": "rampage-pulik-3",
     "title": "RAMPAGE PULIK #3",
     "limit": "До 3.000 MMR на игрока",
