@@ -807,6 +807,7 @@ const tournaments = [
       { name: "LETO Junior", logo: "dota2.png", roster: [ { nick: "Teenwave", pos: 1 }, { nick: "Alisa", pos: 2 }, { nick: "popi", pos: 3 }, { nick: "el tivke", pos: 4 }, { nick: "Freakuxa", pos: 5 } ] },
       { name: "Gitlz", logo: "gitlz.png", roster: [ { nick: "breaoutlik", pos: 1 }, { nick: "Akama", pos: 2 }, { nick: "Moody", pos: 3 }, { nick: "AstarOtzio", pos: 4 }, { nick: "Nico", pos: 5 } ] },
       { name: "DRAGFIRE Ascent", logo: "dota2.png", roster: [ { nick: "ONSAMIY", pos: 1 }, { nick: "Shima~", pos: 2 }, { nick: "CollapseMini", pos: 3 }, { nick: "splitta", pos: 4 }, { nick: "LegasY221", pos: 5 } ] },
+      { name: "Bedlam Red", logo: "dota2.png", roster: [ { nick: "lonix", pos: 1 }, { nick: "immortall boy", pos: 2 }, { nick: "Edsa1?", pos: 3 }, { nick: "drim", pos: 4 }, { nick: "Ariurn", pos: 5 } ] },
     ],
     
     casters: [
