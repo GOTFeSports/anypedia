@@ -17,18 +17,18 @@ const tournaments = [
   {
     "id": "AnyLvL-GOTF-Special-3",
     "title": "AnyLvL x GOTF eSports: Special 3",
-    "limit": "Нет данных",
+    "limit": "Без лимита MMR",
     "start": "2026-07-10",
     "end": "2026-07-12",
     "startTime": "20:00",
     "prize": "TBD",
     "location": "СНГ",
-    "teams": null,
+    "teams": 8,
     "winner": "TBD",
-    "format": "TBD",
+    "format": "Swiss Stage + Play offs",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
-        "dotabuff": "",
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19830",
         "discord": "https://discord.gg/3N4Jg6Jpak",
         "rules": "",
         "bracket": ""
@@ -42,9 +42,9 @@ const tournaments = [
     "telegramLink": "https://t.me/gotf_dota",
     "description": "Без описания.",
     "prizePool": [
-        { "place": 1, "amount": "TBD", "team": "" },
-        { "place": 2, "amount": "TBD", "team": "" },
-        { "place": 3, "amount": "TBD", "team": "" },
+        { "place": 1, "amount": "55%", "team": "" },
+        { "place": 2, "amount": "30%", "team": "" },
+        { "place": 3, "amount": "15%", "team": "" },
     ]
 },
   {
