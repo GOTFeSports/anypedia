@@ -797,7 +797,7 @@ const tournaments = [
     format: "Single Elimination",
     organizer: "Bedlam Tournaments",
   links: {
-  dotabuff: "",
+  dotabuff: "https://ru.dotabuff.com/esports/leagues/19760-bedlam-waiting-summer-cup",
   discord: "https://discord.gg/eafqq7bpNe",
   rules: "https://t.me/bedlamtournaments/226?comment=412",
   bracket: "https://challonge.com/ru/BWFSC"
