@@ -623,7 +623,7 @@ const tournaments = [
     teamsList: [
         { name: "Bedlam Battle Team", logo: "dota2.png", roster: [ { nick: "arcotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "Edsai1", pos: 3 }, { nick: "ARD3D", pos: 4 }, { nick: "oleg41567", pos: 5 } ] },
         { name: "NoLittleCancer", logo: "dota2.png", roster: [ { nick: "neriel01", pos: 1 }, { nick: "Leo07Mego", pos: 2 }, { nick: "Sir_Damind", pos: 3 }, { nick: "e_cherentsov", pos: 4 }, { nick: "Qissan", pos: 5 } ] },
-        { name: "Gitlz", logo: "dota2.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
+        { name: "Gitlz", logo: "gitlz.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
         { name: "Leto jr", logo: "dota2.png", roster: [ { nick: "LookAtTeenwave", pos: 1 }, { nick: "Kricsalis_mode", pos: 2 }, { nick: "sooqa7", pos: 3 }, { nick: "Mikhael16", pos: 4 }, { nick: "HSMG321", pos: 5 } ] },
         { name: "all my members ceo", logo: "dota2.png", roster: [ { nick: "shiawasebroken", pos: 1 }, { nick: "redrose1098", pos: 2 }, { nick: "PDiddy_don", pos: 3 }, { nick: "x_xMatd", pos: 4 }, { nick: "Marty412", pos: 5 } ] },
         { name: "Destroyer team", logo: "dota2.png", roster: [ { nick: "yamori1", pos: 1 }, { nick: "Vkidavyumef", pos: 2 }, { nick: "MertvecSad", pos: 3 }, { nick: "HELLOMYFRIENDZZZZ", pos: 4 }, { nick: "Dmitriyiyiyiy", pos: 5 } ] },
@@ -646,7 +646,7 @@ const tournaments = [
     description: "Bedlam Swamp Wars — онлайн-турнир по Dota 2. Формат Single Elimination (BO1), финал и матч за 3 место — BO1. Captains Draft. Призовой фонд 10.000₽ (1 место — 5.000₽, 2 место — 3.000₽, 3 место — 2.000₽). Взнос 500₽ с команды. Дата проведения: 29 марта 2026.",
     
     prizePool: [
-        { place: 1, amount: "5.000₽", team: "Glitz" },
+        { place: 1, amount: "5.000₽", team: "Gitlz" },
         { place: 2, amount: "3.000₽", team: "all my members ceo" },
         { place: 3, amount: "2.000₽", team: "LETO jr" }
     ]
@@ -672,13 +672,13 @@ const tournaments = [
     },
     teamsList: [
         { name: "Bedlam Battle Team", logo: "dota2.png", roster: [ { nick: "arcotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "Edsai1", pos: 3 }, { nick: "yomyKo", pos: 4 }, { nick: "Ar1urn", pos: 5 } ] },
-        { name: "Gitlz", logo: "dota2.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
+        { name: "Gitlz", logo: "gitlz.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
         { name: "egoisto team", logo: "dota2.png", roster: [ { nick: "xinegod", pos: 1 }, { nick: "m1nd1q", pos: 2 }, { nick: "dark_light666", pos: 3 }, { nick: "zxcnikita2809", pos: 4 }, { nick: "HSSJEY", pos: 5 } ] },
         { name: "узбагойся", logo: "dota2.png", roster: [ { nick: "Ghostraze", pos: 1 }, { nick: "arcabuse", pos: 2 }, { nick: "xtravs", pos: 3 }, { nick: "rsln_ttr", pos: 4 }, { nick: "VfIDF", pos: 5 } ] },
         { name: "SkyDrifters", logo: "dota2.png", roster: [ { nick: "divinememory", pos: 1 }, { nick: "hopeaddict", pos: 2 }, { nick: "gorilla1799", pos: 3 }, { nick: "alice32544", pos: 4 }, { nick: "Dima_Darwin", pos: 5 } ] },
         { name: "газики", logo: "dota2.png", roster: [ { nick: "imnotevenahuman", pos: 1 }, { nick: "g4zgforce", pos: 2 }, { nick: "dmflnv", pos: 3 }, { nick: "Hisoka_Egorka_Be", pos: 4 }, { nick: "Vivaky", pos: 5 } ] },
         { name: "James & Jeremy", logo: "dota2.png", roster: [ { nick: "Sigmashavel_Ilya2008", pos: 1 }, { nick: "nevxr_mxre", pos: 2 }, { nick: "keepyourideal", pos: 3 }, { nick: "ssonchh", pos: 4 }, { nick: "watashiwa201", pos: 5 } ] },
-        { name: "Podosinoviki", logo: "dota2.png", roster: [ { nick: "HansLandaaaa", pos: 1 }, { nick: "cd_mymind", pos: 2 }, { nick: "Ptshunterzxc", pos: 3 }, { nick: "ig31110n", pos: 4 }, { nick: "prokazz_a", pos: 5 } ] },
+        { name: "Podosinoviki", logo: "podosinovik.png", roster: [ { nick: "HansLandaaaa", pos: 1 }, { nick: "cd_mymind", pos: 2 }, { nick: "Ptshunterzxc", pos: 3 }, { nick: "ig31110n", pos: 4 }, { nick: "prokazz_a", pos: 5 } ] },
         { name: "VATAKE13", logo: "dota2.png", roster: [ { nick: "worldchampion_74kgwrestling", pos: 1 }, { nick: "kkkkk123456777", pos: 2 }, { nick: "LooneyNM", pos: 3 }, { nick: "roflodotka", pos: 4 }, { nick: "Denisjao", pos: 5 } ] },
         { name: "Barracuda jnr", logo: "dota2.png", roster: [ { nick: "Blintlbeis", pos: 1 }, { nick: "bluedolphingod", pos: 2 }, { nick: "lllll33lllll", pos: 3 }, { nick: "fentanyldreams", pos: 4 }, { nick: "", pos: 5 } ] },
         { name: "Barracuda Team", logo: "dota2.png", roster: [ { nick: "l1elielie", pos: 1 }, { nick: "Abednico", pos: 2 }, { nick: "k0libpi", pos: 3 }, { nick: "blz1k", pos: 4 }, { nick: "Mirco9677", pos: 5 } ] },
@@ -952,7 +952,7 @@ const tournaments = [
       { name: "LETO jr",           logo: "dota2.png", roster: [ { nick: "Teenwave", pos: 1 }, { nick: "Alisa", pos: 2 }, { nick: "popi", pos: 3 }, { nick: "el tivke", pos: 4 }, { nick: "UZBEKSILA", pos: 5 } ] },
       { name: "Never Back Down",   logo: "dota2.png", roster: [ { nick: "Лысый", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "Кэп", pos: 3 }, { nick: "Rose", pos: 4 }, { nick: "Błyskawica", pos: 5 } ] },
       { name: "Primal Dance",      logo: "dota2.png", roster: [ { nick: "cotsu", pos: 1 }, { nick: "m33pmap", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "darklight", pos: 4 }, { nick: "Freak", pos: 5 } ] },
-      { name: "Podosinoviki",      logo: "dota2.png", roster: [ { nick: "Ростовский Богатырь", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
+      { name: "Podosinoviki",      logo: "podosinovik.png", roster: [ { nick: "Ростовский Богатырь", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
       { name: "James & Jeremy",    logo: "dota2.png", roster: [ { nick: "ihatekirk", pos: 1 }, { nick: "wannafeels", pos: 2 }, { nick: "Голубчик", pos: 3 }, { nick: "king bob", pos: 4 }, { nick: "CocsmeN", pos: 5 } ] },
       { name: "BandaWidst",        logo: "dota2.png", roster: [ { nick: "orgasm donor+", pos: 1 }, { nick: "hikari", pos: 2 }, { nick: "hornet", pos: 3 }, { nick: "最酷的", pos: 4 }, { nick: "west", pos: 5 } ] },
       { name: "MonKs team",        logo: "dota2.png", roster: [ { nick: "keeps", pos: 1 }, { nick: "Иван лон друид", pos: 2 }, { nick: "Kaban", pos: 3 }, { nick: "tierblade", pos: 4 }, { nick: "RemoRi", pos: 5 } ] }
@@ -1006,7 +1006,7 @@ const tournaments = [
       { name: "Tatsinskay Team",       logo: "dota2.png", roster: [ { nick: "Iny", pos: 1 }, { nick: "gleblixo", pos: 2 }, { nick: "Sorry", pos: 3 }, { nick: "Elmisho", pos: 4 }, { nick: "Poga", pos: 5 } ] },
       { name: "Bedlam battle team",    logo: "dota2.png", roster: [ { nick: "cotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "edsaiii", pos: 3 }, { nick: "marty", pos: 4 }, { nick: "Ariurn", pos: 5 } ] },
       { name: "Team Sexy",             logo: "dota2.png", roster: [ { nick: "hosh1no愛", pos: 1 }, { nick: "fff", pos: 2 }, { nick: "kushinada.", pos: 3 }, { nick: "icememory<3", pos: 4 }, { nick: "Лысый Очколом", pos: 5 } ] },
-      { name: "Gitlz",                 logo: "dota2.png", roster: [ { nick: "breaoutlik", pos: 1 }, { nick: "AstarOtzio", pos: 2 }, { nick: "moody", pos: 3 }, { nick: "Shiroyami", pos: 4 }, { nick: "Akama", pos: 5 } ] },
+      { name: "Gitlz",                 logo: "gitlz.png", roster: [ { nick: "breaoutlik", pos: 1 }, { nick: "AstarOtzio", pos: 2 }, { nick: "moody", pos: 3 }, { nick: "Shiroyami", pos: 4 }, { nick: "Akama", pos: 5 } ] },
       { name: "стул и 4 ножки",        logo: "dota2.png", roster: [ { nick: "Miracle-", pos: 1 }, { nick: "rain,", pos: 2 }, { nick: "MAB1K", pos: 3 }, { nick: "yomyko.", pos: 4 }, { nick: "El Gato Negro", pos: 5 } ] }
     ],
     casters: [
