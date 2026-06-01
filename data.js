@@ -15,9 +15,111 @@
 
 const tournaments = [
   {
+    id: "The-Trial-of-Immortality-5",
+    title: "The Trial of Immortality 5",
+    limit: "До 30.000 MMR на команду",
+    start: "2026-06-13",
+    end: "2026-06-14",
+    startTime: "13:00",
+    prize: "20.000₽",
+    location: "СНГ",
+    teams: 32,
+    winner: "TBD",
+    format: "Double Elimination",
+    organizer: "Immortality",
+    links: {
+        dotabuff: "https://ru.dotabuff.com/esports/leagues/19692-the-trial-of-immortality-season-5",
+        discord: "https://discord.gg/Vu8kNs39PX",
+        rules: "https://t.me/reglamentbyimmortality",
+        bracket: "https://t.me/immsetka"
+    },
+    teamsList: [],
+        casters: [
+        { name: "pepepainstv", link: "https://twitch.tv/pepepainstv" },
+        { name: "waitureally", link: "https://twitch.tv/waitureally" },
+        { name: "9kael", link: "https://twitch.tv/9kael" },
+        { name: "zyat0r0", link: "https://www.twitch.tv/zyat0r0" }
+    ],
+    bracketEmbed: "",
+    registrationLink: "",
+    telegramLink: "https://t.me/cultimm",
+    description: "The Trial of Immortality 5 — 13-14 июня в 13:00 МСК, Double Elimination, Captains Draft, BO1 (гранд-финал BO3), лимит MMR 30000 на команду (10000 на игрока), 16-32 команды, взнос 750₽, призовой фонд 20000₽ (1-е место — 10000₽, 2-е — 6000₽, 3-е — 4000₽). Организатор: Immortality.",
+    prizePool: [
+        { place: 1, amount: "10.000₽", team: "" },
+        { place: 2, amount: "6.000₽", team: "" },
+        { place: 3, amount: "4.000₽", team: "" }
+    ]
+},
+  {
+    "id": "Special-3-Open-Qual",
+    "title": "Special 3: Open Qualification",
+    "limit": "Нет данных",
+    "start": "2026-07-04",
+    "end": "2026-07-04",
+    "startTime": "12:00",
+    "prize": "TBD",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "Без описания.",
+    "prizePool": [
+        { "place": 1, "amount": "", "team": "" },
+        { "place": 2, "amount": "", "team": "" },
+        { "place": 3, "amount": "", "team": "" },
+        { "place": 4, "amount": "", "team": "" },
+    ]
+},
+  {
+    "id": "Special-3-Closed-Qual",
+    "title": "Special 3: Closed Qualification",
+    "limit": "Нет данных",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
+    "startTime": "12:00",
+    "prize": "TBD",
+    "location": "СНГ",
+    "teams": 8,
+    "winner": "TBD",
+    "format": "Double Elimination",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "Без описания.",
+    "prizePool": [
+        { "place": 1, "amount": "", "team": "" },
+        { "place": 2, "amount": "", "team": "" },
+    ]
+},
+  {
     "id": "AnyLvL-GOTF-Special-3",
     "title": "AnyLvL x GOTF eSports: Special 3",
-    "limit": "Без лимита MMR",
+    "limit": "Нет данных",
     "start": "2026-07-10",
     "end": "2026-07-12",
     "startTime": "19:00",
@@ -793,7 +895,7 @@ const tournaments = [
     prize: "15.000₽",
     location: "СНГ",
     teams: 16,
-    winner: "TBD",
+    winner: "Gitlz",
     format: "Single Elimination",
     organizer: "Bedlam Tournaments",
   links: {
@@ -835,8 +937,8 @@ const tournaments = [
     description: "Bedlam Waiting For Summer Cup — 31.05.2026 в 13:00, Single Elimination, лимит MMR до 35.000 (8.5к на человека), 16+ команд, взнос 500₽ с команды, призовой фонд 15.000₽ (1-е место — 10.000₽, 2-е место — 5.000₽). Организатор: Bedlam Tournaments.",
     
     prizePool: [
-        { place: 1, amount: "10.000₽", team: "TBD" },
-        { place: 2, amount: "5.000₽", team: "TBD" }
+        { place: 1, amount: "10.000₽", team: "Gitlz" },
+        { place: 2, amount: "5.000₽", team: "Podosinovik" }
     ]
 },
     {
