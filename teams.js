@@ -261,4 +261,53 @@ const teams = [
       },
     ]
   },
+  {
+    id: "bedlam-red",
+    name: "Bedlam Battle Team Red",
+    aliases: ["Bedlam Battle Team", "Bedlam Red", "Bedlam Battle Team Red"],
+    logo: "bedlamred.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "https://t.me/bedlambattlesteam",   // ссылка на группу/канал команды
+    captainLink:  "https://t.me/ehevbrfypfrb",   // личный TG капитана для связи
+    description: "Команда СНГ-региона, выступавшая ранее под названиями HATE RELATE и Fast & Furious 4. Коллектив регулярно принимает участие в любительских и полупрофессиональных турнирах, постепенно набирая опыт и развивая состав. Azutive Fans объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
+
+    activeRoster: [
+      { nick: "lonixx",  pos: 1, joined: "2026-05-30" },
+      { nick: "imortall_boy",  pos: 2, joined: "2026-04-18" },
+      { nick: "relax",  pos: 3, joined: "2026-04-18" },
+      { nick: "drim.XVI",  pos: 4, joined: "2026-05-30" },
+      { nick: "Ariurn",  pos: 5, joined: "2026-04-18" },
+    ],
+
+    formerPlayers: [
+      { nick: "cotsu", pos: 1, joined: "2026-04-18", left: "2026-05-29" },
+      { nick: "marty", pos: 4, joined: "2026-04-19", left: "2026-05-29" },
+      { nick: "yomyKo", pos: 4, joined: "2026-04-18", left: "2026-04-19" },
+    ],
+
+    tournaments: [
+      {
+        title: "Bedlam Spring Cup",
+        date:  "2026-04-18",
+        place: "1",
+        prize: "12.500₽",
+        limit: "До 8.500 MMR на игрока"
+      },
+      {
+        title: "AnyLvL x GOTF eSports: Special 2",
+        date:  "2025-04-19",
+        place: "9-16",
+        prize: "—",
+        limit: "До 35.000 MMR на команду"
+      },
+      {
+        title: "Bedlam Waiting For Summer Cup",
+        date:  "2025-05-31",
+        place: "9-16",
+        prize: "—",
+        limit: "До 35.000 MMR на команду"
+      },
+    ]
+  },
 ];
