@@ -59,7 +59,7 @@ const tournaments = [
     "startTime": "12:00",
     "prize": "TBD",
     "location": "СНГ",
-    "teams": 16,
+    "teams": 32,
     "winner": "TBD",
     "format": "Single Elimination",
     "organizer": "AnyLvL Community x GOTF eSports",
