@@ -41,7 +41,7 @@ const tournaments = [
         { name: "zyat0r0", link: "https://www.twitch.tv/zyat0r0" }
     ],
     bracketEmbed: "",
-    registrationLink: "https://t.me/cultimm/452",
+    registrationLink: "https://t.me/questionnaireimm",
     telegramLink: "https://t.me/cultimm",
     description: "The Trial of Immortality 5 — 13-14 июня в 13:00 МСК, Double Elimination, Captains Draft, BO1 (гранд-финал BO3), лимит MMR 30000 на команду (10000 на игрока), 16-32 команды, взнос 750₽, призовой фонд 20000₽ (1-е место — 10000₽, 2-е — 6000₽, 3-е — 4000₽). Организатор: Immortality.",
     prizePool: [
