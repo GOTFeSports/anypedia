@@ -1093,7 +1093,18 @@ const tournaments = [
             { "nick": "0l_EG", "pos": 4 },
             { "nick": "KATOSHI", "pos": 5 }
         ]
-    }
+    },
+            {
+        "name": "Barracuda Team",
+        "logo": "barracuda.png",
+        "roster": [
+            { "nick": "teenwave777", "pos": 1 },
+            { "nick": "y6555", "pos": 2 },
+            { "nick": "bla3er", "pos": 3 },
+            { "nick": "jhxdddd", "pos": 4 },
+            { "nick": "zakharius77", "pos": 5 }
+        ]
+    },
 ],
     "casters": [
         { "name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee" }
