@@ -35,7 +35,8 @@ const tournaments = [
     },
     "teamsList": [],
     "casters": [
-        { "name": "TBD", "link": "" }
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
     ],
     "bracketEmbed": "",
     "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeMY67ncN0H96YW7lJniypg2Ee_u6NO3zGg6l_QOmHCFT81Xw/viewform",
