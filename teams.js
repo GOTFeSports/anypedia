@@ -295,7 +295,7 @@ const teams = [
         limit: "До 8.500 MMR на игрока"
       },
       {
-        title: "AnyLvL x GOTF eSports: Special 2",
+        title: "AnyLvL x GOTF eSports Tournament #1",
         date:  "2026-04-19",
         place: "9-16",
         prize: "—",
