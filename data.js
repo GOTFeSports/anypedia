@@ -1050,13 +1050,51 @@ const tournaments = [
         "bracket": ""
     },
     "teamsList": [
-        {
-            "name": "DestroyItems",
-            "logo": "dota2.png",
-            "roster": [ { "nick": "Fuck this society", "pos": 1 }, { "nick": "Rinec1", "pos": 2 }, { "nick": "Squall", "pos": 3 }, { "nick": "14shagov", "pos": 4 }, { "nick": "н угопак~", "pos": 5 },
-            ]
-        }
-    ],
+    {
+        "name": "DestroyItems",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Fuck this society", "pos": 1 },
+            { "nick": "Rinec1", "pos": 2 },
+            { "nick": "Squall", "pos": 3 },
+            { "nick": "14shagov", "pos": 4 },
+            { "nick": "н угопак~", "pos": 5 }
+        ]
+    },
+    {
+        "name": "team squirt",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "модафинил", "pos": 1 },
+            { "nick": "tulpa228", "pos": 2 },
+            { "nick": "太", "pos": 3 },
+            { "nick": "EgorWW", "pos": 4 },
+            { "nick": "krepostyan", "pos": 5 }
+        ]
+    },
+    {
+        "name": "MPGYGY",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "CRIMINAL AUTODRIVING", "pos": 1 },
+            { "nick": "Hamster Cobatёr", "pos": 2 },
+            { "nick": "я в атаке", "pos": 3 },
+            { "nick": "Maroon sh1ne", "pos": 4 },
+            { "nick": "Скам", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Поколение чудес",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "YATOROGOD", "pos": 1 },
+            { "nick": "dance with mу", "pos": 2 },
+            { "nick": "limit!", "pos": 3 },
+            { "nick": "0l_EG", "pos": 4 },
+            { "nick": "KATOSHI", "pos": 5 }
+        ]
+    }
+],
     "casters": [
         { "name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee" }
     ],
