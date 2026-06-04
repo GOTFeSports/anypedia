@@ -14,6 +14,38 @@
 // =============================================
 
 const tournaments = [
+    {
+    "id": "Bedlam-Summer-Cup-1x1",
+    "title": "Bedlam Summer Cup 1x1",
+    "limit": "Без лимита MMR",
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "startTime": "13:00",
+    "prize": "5.000₽",
+    "location": "СНГ",
+    "teams": 128,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/cYzysAHgJd",
+        "rules": "https://t.me/bedlamtournaments/257?comment=485",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeMY67ncN0H96YW7lJniypg2Ee_u6NO3zGg6l_QOmHCFT81Xw/viewform",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "BEDLAM SUMMER CUP 1X1 - турнир с форматом Solo Mid 1x1 который пройдет 14 июня. Призовой фонд составит 5.000 рублей, с бесплатным входом. Изначально даётся пул из 12 героев. Путём голосования игроки выбирают 5 героев. (в отдельном телеграмм канале где будут только участники турнира). Затем каждый игрок в паре банит по 2 героя из 5-ти выбранных. В итоге остаётся 1 герой на котором пары играют BO1. (финал BO3). Сторона на карту выбирается через /roll.",
+    "prizePool": [
+        { "place": 1, "amount": "3.500₽", "team": "" },
+        { "place": 2, "amount": "1.500₽", "team": "" },
+    ]
+},
   {
     id: "The-Trial-of-Immortality-5",
     title: "The Trial of Immortality 5",
