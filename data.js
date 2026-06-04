@@ -15,6 +15,41 @@
 
 const tournaments = [
     {
+    "id": "The-International-2026-Europe-1-Open-Qualifier",
+    "title": "The International 2026 Europe #1 Open Qualifier",
+    "limit": "Без лимита MMR",
+    "start": "2026-06-09",
+    "end": "2026-06-10",
+    "startTime": "15:00",
+    "prize": "Слот в CQ",
+    "location": "Европа",
+    "teams": 512,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "PGL",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/NEAadqE3y7",
+        "rules": "https://docs.google.com/document/d/1e7WvZEgKcGX7sTjHEsXLgrkVLYv9W67ApkaP5pWWjUc/edit?tab=t.0#heading=h.6yxlsl381eby",
+        "bracket": "https://esportal.com/en/tournament/5158/the-international-2026-europe-1-open-qualifier-/matches"
+    },
+    "teamsList": [],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://esportal.com/en/tournament/5158/the-international-2026-europe-1-open-qualifier-/info",
+    "telegramLink": "https://t.me/anylvlcommunity",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "Слот в CQ", "team": "" },
+        { "place": 2, "amount": "Слот в CQ", "team": "" },
+        { "place": 3, "amount": "Слот в CQ", "team": "" },
+        { "place": 4, "amount": "Слот в CQ", "team": "" },
+    ]
+},
+    {
     "id": "Bedlam-Summer-Cup-1x1",
     "title": "Bedlam Summer Cup 1x1",
     "limit": "Без лимита MMR",
