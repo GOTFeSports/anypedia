@@ -1096,7 +1096,7 @@ const tournaments = [
     },
             {
         "name": "Barracuda Team",
-        "logo": "barracuda.png",
+        "logo": "dota2.png",
         "roster": [
             { "nick": "teenwave777", "pos": 1 },
             { "nick": "y6555", "pos": 2 },
