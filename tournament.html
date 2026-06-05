@@ -891,8 +891,7 @@ function findTeamByName(name) {
   return allTeams.find(team => teamAllNames(team).includes(key)) || null;
 }
 function getSiteBase() {
-  const p = location.pathname.replace(/\/[^/]*\.html$/, '/');
-  return location.origin + p;
+  return location.origin + getSiteBasePath(id);
 }
 /* Оборачивает имя команды в ссылку если команда найдена в teams.js */
 function renderTeamLink(name, style = '') {
@@ -900,7 +899,7 @@ function renderTeamLink(name, style = '') {
   const found = findTeamByName(name);
   if (!found) return name;
   const tid = getTeamPageId(found);
-  return `<a href="${getSiteBase()}team.html?id=${encodeURIComponent(tid)}" style="color:var(--accent);font-weight:600${style ? ';' + style : ''}">${name}</a>`;
+  return `<a href="${getSiteBase()}team/${encodeURIComponent(tid)}" style="color:var(--accent);font-weight:600${style ? ';' + style : ''}">${name}</a>`;
 }
 
 /* ---------- INFOBOX ---------- */
