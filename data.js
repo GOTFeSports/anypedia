@@ -137,7 +137,9 @@ const tournaments = [
         { name: "pepepainstv", link: "https://twitch.tv/pepepainstv" },
         { name: "waitureally", link: "https://twitch.tv/waitureally" },
         { name: "9kael", link: "https://twitch.tv/9kael" },
-        { name: "zyat0r0", link: "https://www.twitch.tv/zyat0r0" }
+        { name: "zyat0r0", link: "https://www.twitch.tv/zyat0r0" },
+        { name: "lebowski", link: "https://www.twitch.tv/lebowskidota" },
+        { name: "yosumo", link: "https://www.twitch.tv/yosumo_doto" },
     ],
     bracketEmbed: "",
     registrationLink: "https://t.me/questionnaireimm",
@@ -1105,9 +1107,45 @@ const tournaments = [
             { "nick": "zakharius77", "pos": 5 }
         ]
     },
+            {
+        "name": "Feed4Life",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "gulyonysh", "pos": 1 },
+            { "nick": "ntxra", "pos": 2 },
+            { "nick": "an6elichrzn", "pos": 3 },
+            { "nick": "VeNdettA", "pos": 4 },
+            { "nick": "jormungand", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Team Leto",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "auratoshi", "pos": 1 },
+            { "nick": "Forever young", "pos": 2 },
+            { "nick": "emotionalabyss", "pos": 3 },
+            { "nick": "Мебель", "pos": 4 },
+            { "nick": "Irrelevant", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Gaimin Suetologs",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "nevertxxmuch", "pos": 1 },
+            { "nick": "пидалирование", "pos": 2 },
+            { "nick": "molodoy padonok", "pos": 3 },
+            { "nick": "MaCr0sNik", "pos": 4 },
+            { "nick": "Limp", "pos": 5 }
+        ]
+    }
 ],
     "casters": [
-        { "name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee" }
+        { "name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee" },
+        { "name": "neverdiise", "link": "http://twitch.tv/neverdiise" },
+        { "name": "mugi", "link": "https://www.twitch.tv/mugia1" },
+        { "name": "Forgiven3SS", "link": "https://www.twitch.tv/forgiven3ss" },
     ],
     "bracketEmbed": "",
     "registrationLink": "https://docs.google.com/forms/d/1AOPnhM_jFYUyFw3BUeo6k9FE_l-VBqVLXns_P8DtVpY/edit#response=ACYDBNgetI5JxnfiwHNgNxtbtqmO0hslBtb8rb9AiRT9kiFgFgxuJYrpbzjd2yqG_6mKouk",
