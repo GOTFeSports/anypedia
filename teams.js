@@ -139,6 +139,13 @@ const teams = [
         prize: "—",
         limit: "До 8.500 MMR на игрока"
       },
+      {
+        title: "Bedlam Waiting For Summer Cup",
+        date:  "2026-05-31",
+        place: "1",
+        prize: "10.000₽",
+        limit: "До 35.000 MMR на команду"
+      },
     ]
   },
   {
@@ -224,6 +231,13 @@ const teams = [
         prize: "—",
         limit: "Без лимита"
       },
+      {
+        title: "Bedlam Waiting For Summer Cup",
+        date:  "2026-05-31",
+        place: "5-8",
+        prize: "",
+        limit: "До 35.000 MMR на команду"
+      },
     ]
   },
   {
@@ -258,6 +272,13 @@ const teams = [
         place: "4",
         prize: "—",
         limit: "До 8.500 MMR на игрока"
+      },
+      {
+        title: "Bedlam Waiting For Summer Cup",
+        date:  "2026-05-31",
+        place: "2",
+        prize: "5.000₽",
+        limit: "До 35.000 MMR на команду"
       },
     ]
   },
@@ -319,7 +340,7 @@ const teams = [
     prize: "11.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
-    description: "",
+    description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
       { nick: "KarineGod",  pos: 1, joined: "2025-11-01" },
