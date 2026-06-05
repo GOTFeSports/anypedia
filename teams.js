@@ -313,7 +313,7 @@ const teams = [
   {
     id: "never-back-down",
     name: "Never Back Down",
-    aliases: ["Never Back Down", "Fast & Furious 4"],
+    aliases: ["Never Back Down"],
     logo: "nbdteam.png",
     region: "СНГ",
     prize: "11.500₽",
