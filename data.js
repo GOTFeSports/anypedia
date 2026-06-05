@@ -560,7 +560,7 @@ const tournaments = [
         {"name": "Pavel enragovi4 funs", "logo": "dota2.png", "roster": [{"nick": "Hatershello", "pos": 1}, {"nick": "EgorKul4", "pos": 2}, {"nick": "muff01", "pos": 3}, {"nick": "MihaPlut", "pos": 4}, {"nick": "retarded_as_fuck", "pos": 5}]},
         {"name": "EnrageTurniriDota2", "logo": "dota2.png", "roster": [{"nick": "LookAtTeenwave", "pos": 1}, {"nick": "sooqa7", "pos": 2}, {"nick": "sadpasha123", "pos": 3}, {"nick": "nevercr7", "pos": 4}, {"nick": "Mikhael16", "pos": 5}]},
         {"name": "Sad Boys", "logo": "dota2.png", "roster": [{"nick": "lerc0re", "pos": 1}, {"nick": "alleyesonme166", "pos": 2}, {"nick": "ceogulag", "pos": 3}, {"nick": "whattheffuckkk", "pos": 4}, {"nick": "Keks552", "pos": 5}]},
-        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "Alikk313", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
+        {"name": "Never Back Down", "logo": "nbdteam.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "Alikk313", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
         {"name": "СТЕПАН PRIME", "logo": "dota2.png", "roster": [{"nick": "syze9", "pos": 1}, {"nick": "Manekkkkk", "pos": 2}, {"nick": "mss0280", "pos": 3}, {"nick": "rastoman4ik2", "pos": 4}, {"nick": "bbpoka", "pos": 5}]},
         {"name": "Primal Dance", "logo": "dota2.png", "roster": [{"nick": "Utrataa", "pos": 1}, {"nick": "deox1d3R", "pos": 2}, {"nick": "w8myoverdose", "pos": 3}, {"nick": "Kirill_makhorin", "pos": 4}, {"nick": "oleg41567", "pos": 5}]},
         {"name": "Team zei junior", "logo": "dota2.png", "roster": [{"nick": "lagan322", "pos": 1}, {"nick": "BatonSolo", "pos": 2}, {"nick": "mollypoedatel911", "pos": 3}, {"nick": "depress3dkid", "pos": 4}, {"nick": "matmyee1", "pos": 5}]},
@@ -607,7 +607,7 @@ const tournaments = [
         "bracket": "https://challonge.com/ru/xkyi7hz6"
     },
     "teamsList": [
-        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "karinegod", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "yanazavode", "pos": 3}, {"nick": "SCorPion_LSPD", "pos": 4}, {"nick": "Denzerin", "pos": 5}]},
+        {"name": "Never Back Down", "logo": "nbdteam.png", "roster": [{"nick": "karinegod", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "yanazavode", "pos": 3}, {"nick": "SCorPion_LSPD", "pos": 4}, {"nick": "Denzerin", "pos": 5}]},
         {"name": "TEIKO", "logo": "dota2.png", "roster": [{"nick": "LookAtTeenwave", "pos": 1}, {"nick": "Kricsalis_mode", "pos": 2}, {"nick": "ManuuLq", "pos": 3}, {"nick": "Mikhael16", "pos": 4}, {"nick": "Ingsiontich", "pos": 5}]},
         {"name": "Angetsu", "logo": "dota2.png", "roster": [{"nick": "paroksetii", "pos": 1}, {"nick": "g4denish", "pos": 2}, {"nick": "Kiryqz", "pos": 3}, {"nick": "consumeyou", "pos": 4}, {"nick": "Crimson_witness", "pos": 5}]},
         {"name": "Primal Dance", "logo": "dota2.png", "roster": [{"nick": "arcotsu", "pos": 1}, {"nick": "deox1d3R", "pos": 2}, {"nick": "Edsai1", "pos": 3}, {"nick": "Kirill_makhorin", "pos": 4}, {"nick": "oleg41567", "pos": 5}]},
@@ -706,7 +706,7 @@ const tournaments = [
     },
     "teamsList": [
         {"name": "BuLxS", "logo": "dota2.png", "roster": [{"nick": "kisliy", "pos": 1}, {"nick": "D0nem", "pos": 2}, {"nick": "Malenia", "pos": 3}, {"nick": "Scorpion", "pos": 4}, {"nick": "Ebatov", "pos": 5}]},
-        {"name": "Never Back Down", "logo": "dota2.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "etceterrra", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
+        {"name": "Never Back Down", "logo": "nbdteam.png", "roster": [{"nick": "GUFprime", "pos": 1}, {"nick": "Vkidavyumef", "pos": 2}, {"nick": "qukich", "pos": 3}, {"nick": "etceterrra", "pos": 4}, {"nick": "roseofficial_24", "pos": 5}]},
         {"name": "DF JUNIOR", "logo": "dota2.png", "roster": [{"nick": "misterbrood", "pos": 1}, {"nick": "ssaaaooo1", "pos": 2}, {"nick": "Bot4nS", "pos": 3}, {"nick": "Imfuckingdeadinside", "pos": 4}, {"nick": "DarkManaa", "pos": 5}]},
         {"name": "DF YOUTH", "logo": "dota2.png", "roster": [{"nick": "NamelessMonster300", "pos": 1}, {"nick": "Hurricane_ww", "pos": 2}, {"nick": "o_oshiete", "pos": 3}, {"nick": "Abdulazxc", "pos": 4}, {"nick": "Kulaagnin", "pos": 5}]},
         {"name": "Sternritters", "logo": "dota2.png", "roster": [{"nick": "aceqlzx", "pos": 1}, {"nick": "trenxd", "pos": 2}, {"nick": "Visi1n", "pos": 3}, {"nick": "Wextr1", "pos": 4}, {"nick": "Clevanq", "pos": 5}]},
@@ -767,7 +767,7 @@ const tournaments = [
         { name: "Fallen Angels", logo: "dota2.png", roster: [ { nick: "killklkal", pos: 1 }, { nick: "Invplayer", pos: 2 }, { nick: "Emporgi", pos: 3 }, { nick: "adragg", pos: 4 }, { nick: "zxc5posdeadinside", pos: 5 } ] },
         { name: "VVSU", logo: "dota2.png", roster: [ { nick: "Pudgeb0y", pos: 1 }, { nick: "arzjjd", pos: 2 }, { nick: "muff01", pos: 3 }, { nick: "Limmmmmmp", pos: 4 }, { nick: "", pos: 5 } ] },
         { name: "Oren67_Team", logo: "dota2.png", roster: [ { nick: "tortipur", pos: 1 }, { nick: "BigBlack_Man", pos: 2 }, { nick: "zxcsosiska322", pos: 3 }, { nick: "McLovin252", pos: 4 }, { nick: "Mirlainnn", pos: 5 } ] },
-        { name: "Never Back Down", logo: "dota2.png", roster: [ { nick: "chisto_krovniy", pos: 1 }, { nick: "D0nem", pos: 2 }, { nick: "emoterracted", pos: 3 }, { nick: "roseofficial_26", pos: 4 }, { nick: "hanett135", pos: 5 } ] },
+        { name: "Never Back Down", logo: "nbdteam.png", roster: [ { nick: "chisto_krovniy", pos: 1 }, { nick: "D0nem", pos: 2 }, { nick: "emoterracted", pos: 3 }, { nick: "roseofficial_26", pos: 4 }, { nick: "hanett135", pos: 5 } ] },
         { name: "Strafe Team", logo: "dota2.png", roster: [ { nick: "audiorecorder", pos: 1 }, { nick: "HSSJEY", pos: 2 }, { nick: "M1nd1q", pos: 3 }, { nick: "nearthelamppost", pos: 4 }, { nick: "prtim09", pos: 5 } ] }
     ],
     casters: [
@@ -912,7 +912,7 @@ const tournaments = [
       { name: "Bedlam Red", logo: "bedlamred.png", roster: [ { nick: "lonix", pos: 1 }, { nick: "immortall boy", pos: 2 }, { nick: "Edsa1?", pos: 3 }, { nick: "drim", pos: 4 }, { nick: "Ariurn", pos: 5 } ] },
       { name: "GLHF", logo: "dota2.png", roster: [ { nick: "bebebe", pos: 1 }, { nick: "Divan", pos: 2 }, { nick: "mognus", pos: 3 }, { nick: "LasTdep", pos: 4 }, { nick: "heb", pos: 5 } ] },
       { name: "Entropiq", logo: "dota2.png", roster: [ { nick: "321", pos: 1 }, { nick: "destructive thoughts", pos: 2 }, { nick: "ДЖЕНТЕЛЬМЕН ЗОНЫ", pos: 3 }, { nick: "Bang", pos: 4 }, { nick: "katarsis", pos: 5 } ] },
-      { name: "Never Back Down", logo: "dota2.png", roster: [ { nick: "wakeup", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "Darklight", pos: 4 }, { nick: "Rose", pos: 5 } ] },
+      { name: "Never Back Down", logo: "nbdteam.png", roster: [ { nick: "wakeup", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "Darklight", pos: 4 }, { nick: "Rose", pos: 5 } ] },
       { name: "Смешарики", logo: "dota2.png", roster: [ { nick: "ahtenoma", pos: 1 }, { nick: "Frenzy", pos: 2 }, { nick: "StRaXa NeT", pos: 3 }, { nick: "dRЯnB", pos: 4 }, { nick: "borutsu", pos: 5 } ] },
       { name: "Tatsinskay Team", logo: "dota2.png", roster: [ { nick: "steelbetteryou", pos: 1 }, { nick: "justToxic", pos: 2 }, { nick: "Sorry4911", pos: 3 }, { nick: "setrakovVi", pos: 4 }, { nick: "3500", pos: 5 } ] },
       { name: "Cyberia Esports", logo: "dota2.png", roster: [ { nick: "paroksetii", pos: 1 }, { nick: "fobas", pos: 2 }, { nick: "iFlopz", pos: 3 }, { nick: "sheremetov17", pos: 4 }, { nick: "Crimson_witness", pos: 5 } ] },
@@ -1148,7 +1148,7 @@ const tournaments = [
       { name: "zxc players",       logo: "dota2.png", roster: [ { nick: "absolut", pos: 1 }, { nick: "ягодичный парикм", pos: 2 }, { nick: "-_-", pos: 3 }, { nick: "Dima Kulak Bicuha", pos: 4 }, { nick: "NotChag", pos: 5 } ] },
       { name: "VHS Team",          logo: "dota2.png", roster: [ { nick: "Саша Белый Prime", pos: 1 }, { nick: "MIA", pos: 2 }, { nick: "Raikiri-", pos: 3 }, { nick: "Weekend", pos: 4 }, { nick: "yleuvyu", pos: 5 } ] },
       { name: "LETO jr",           logo: "dota2.png", roster: [ { nick: "Teenwave", pos: 1 }, { nick: "Alisa", pos: 2 }, { nick: "popi", pos: 3 }, { nick: "el tivke", pos: 4 }, { nick: "UZBEKSILA", pos: 5 } ] },
-      { name: "Never Back Down",   logo: "dota2.png", roster: [ { nick: "Лысый", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "Кэп", pos: 3 }, { nick: "Rose", pos: 4 }, { nick: "Błyskawica", pos: 5 } ] },
+      { name: "Never Back Down",   logo: "nbdteam.png", roster: [ { nick: "Лысый", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "Кэп", pos: 3 }, { nick: "Rose", pos: 4 }, { nick: "Błyskawica", pos: 5 } ] },
       { name: "Primal Dance",      logo: "dota2.png", roster: [ { nick: "cotsu", pos: 1 }, { nick: "m33pmap", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "darklight", pos: 4 }, { nick: "Freak", pos: 5 } ] },
       { name: "Podosinoviki",      logo: "podosinovik.png", roster: [ { nick: "Ростовский Богатырь", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
       { name: "James & Jeremy",    logo: "dota2.png", roster: [ { nick: "ihatekirk", pos: 1 }, { nick: "wannafeels", pos: 2 }, { nick: "Голубчик", pos: 3 }, { nick: "king bob", pos: 4 }, { nick: "CocsmeN", pos: 5 } ] },
