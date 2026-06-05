@@ -39,7 +39,7 @@ const teams = [
     ],
 
     formerPlayers: [
-      { nick: "Collapse Mini", pos: 3, joined: "2025-07-18", left: "2026-04-10" },
+      { nick: "Collapse Mini", pos: 3, joined: "2025-07-18", left: "2026-04-10", newTeam: "DRAGFIRE Ascent"  },
     ],
 
     // Добавляйте турниры вручную.
@@ -74,8 +74,8 @@ const teams = [
     ],
 
     formerPlayers: [
-      { nick: "danyok", pos: 2, joined: "2025-04-21", left: "2026-05-17" },
-      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18" },
+      { nick: "danyok", pos: 2, joined: "2025-04-21", left: "2026-05-17", newTeam: ""  },
+      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18", newTeam: "Bedlam Red"  },
     ],
 
     // Добавляйте турниры вручную.
@@ -154,11 +154,11 @@ const teams = [
     activeRoster: [
     ],
     formerPlayers: [
-      { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31" },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14", left: "2026-05-31" },
-      { nick: "popi", pos: 3, joined: "2025-05-14", left: "2026-05-31" },
-      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31" },
-      { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31" },
+      { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: ""  },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14", left: "2026-05-31", newTeam: ""  },
+      { nick: "popi", pos: 3, joined: "2025-05-14", left: "2026-05-31", newTeam: ""  },
+      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: ""  },
+      { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31", newTeam: ""  },
     ],
     tournaments: [
       {
@@ -281,9 +281,9 @@ const teams = [
     ],
 
     formerPlayers: [
-      { nick: "cotsu", pos: 1, joined: "2026-04-18", left: "2026-05-29" },
-      { nick: "marty", pos: 4, joined: "2026-04-19", left: "2026-05-29" },
-      { nick: "yomyKo", pos: 4, joined: "2026-04-18", left: "2026-04-19" },
+      { nick: "cotsu", pos: 1, joined: "2026-04-18", left: "2026-05-29", newTeam: "Gitlz"},
+      { nick: "marty", pos: 4, joined: "2026-04-19", left: "2026-05-29", newTeam: ""},
+      { nick: "yomyKo", pos: 4, joined: "2026-04-18", left: "2026-04-19", newTeam: "" },
     ],
 
     tournaments: [
@@ -295,7 +295,7 @@ const teams = [
         limit: "До 8.500 MMR на игрока"
       },
       {
-        title: "AnyLvL x GOTF eSports Tournament #1",
+        title: "AnyLvL x GOTF eSports: Special 2",
         date:  "2026-04-19",
         place: "9-16",
         prize: "—",

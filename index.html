@@ -12,25 +12,9 @@
   document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
 })();
 </script>
-<script src="page-transition.js"></script>
+<script src="/page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109393123', 'ym');
-
-    ym(109393123, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109393123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
 
 <style>
 /* ============================================================
@@ -122,12 +106,20 @@ a:hover { color: var(--accent2); }
   font-family: 'Rajdhani', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--text);
   letter-spacing: .5px;
   transition: color .2s;
   line-height: 1;
+  /* Лёгкий градиент на логотипе */
+  background: linear-gradient(90deg, var(--text) 60%, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.logo:hover { color: var(--accent); }
+.logo:hover {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 .logo-sub {
   font-size: 11px;
@@ -334,6 +326,158 @@ a:hover { color: var(--accent2); }
 }
 
 /* ============================================================
+   FILTERS
+   ============================================================ */
+.filter-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.filter-toggle-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+.filter-toggle-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(107,182,255,.07);
+}
+.filter-toggle-btn svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.filter-toggle-btn.active svg { transform: rotate(180deg); }
+
+.filter-count-badge {
+  display: none;
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-left: 2px;
+}
+.filter-count-badge.visible { display: inline; }
+
+.filter-bar {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: none;   /* скрыт по умолчанию */
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: var(--transition);
+  margin-bottom: 10px;
+}
+.filter-bar.open { display: flex; }
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-select,
+.filter-input {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 6px 9px;
+  outline: none;
+  transition: border-color .2s, var(--transition);
+  height: 30px;
+}
+.filter-select:focus,
+.filter-input:focus {
+  border-color: var(--accent);
+}
+.filter-select { cursor: pointer; }
+.filter-input  { width: 80px; }
+.filter-input[type="date"] { width: 126px; }
+
+/* Убираем стрелки у number input */
+.filter-input::-webkit-outer-spin-button,
+.filter-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.filter-input[type="number"]             { -moz-appearance: textfield; }
+
+.filter-sep {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-bottom: 2px;
+}
+
+.filter-reset {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 0 12px;
+  height: 30px;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.filter-reset:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+/* Счётчик результатов */
+.filter-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+  align-self: flex-end;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .filter-bar { gap: 10px; }
+  .filter-input[type="date"] { width: 110px; }
+  .filter-input { width: 68px; }
+  .filter-count { display: none; }
+}
+
+/* ============================================================
    SECTION
    ============================================================ */
 .section-label {
@@ -365,15 +509,15 @@ table {
 }
 
 /* Ширины колонок */
-table th:nth-child(1) { width: 13%; }   /* Ограничение */
-table th:nth-child(2) { width: 22%; }   /* Турнир */
-table th:nth-child(3) { width: 17%; }   /* Дата */
-table th:nth-child(4) { width: 9%;  }   /* Приз */
-table th:nth-child(5) { width: 7%;  }   /* Регион */
-table th:nth-child(6) { width: 6%;  }   /* Команд */
-table th:nth-child(7) { width: 10%; }   /* Статус */
-table th:nth-child(8) { width: 12%; }   /* Победитель */
-table th:nth-child(9) { width: 4%;  }   /* Поделиться — дали 4% и padding */
+table th:nth-child(1) { width: 14%; }   /* Ограничение */
+table th:nth-child(2) { width: 21%; }   /* Турнир */
+table th:nth-child(3) { width: 16%; }   /* Дата */
+table th:nth-child(4) { width: 8%;  }   /* Приз */
+table th:nth-child(5) { width: 6%;  }   /* Регион */
+table th:nth-child(6) { width: 5%;  }   /* Команд */
+table th:nth-child(7) { width: 9%;  }   /* Статус */
+table th:nth-child(8) { width: 13%; }   /* Победитель */
+table th:nth-child(9) { width: 3%;  }   /* Поделиться */
 
 th, td {
   padding: 11px 12px;
@@ -401,15 +545,19 @@ th {
   font-size: 11px;
   letter-spacing: .8px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 tr:last-child td { border-bottom: none; }
 
 tbody tr {
   cursor: pointer;
-  transition: background .15s;
+  transition: background .15s, box-shadow .15s;
 }
-tbody tr:hover { background: var(--bg3); }
+tbody tr:hover {
+  background: var(--bg3);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
 
 /* ── STATUS TAGS ── */
 .tag {
@@ -670,10 +818,166 @@ tbody tr:hover { background: var(--bg3); }
   .logo { font-size: 20px; }
   #mainBanner, .banner-placeholder { height: 85px; }
 }
+
+/* ============================================================
+   LIVE SIDEBAR
+   ============================================================ */
+.page-layout {
+  max-width: 1200px;
+  margin: 24px auto 28px;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Основной контент — растягивается */
+.page-layout .container {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Сайдбар LIVE — фиксированная ширина слева */
+.live-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 72px;
+}
+
+.live-sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4444;
+  box-shadow: 0 0 0 0 rgba(255,68,68,.6);
+  animation: livepulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes livepulse {
+  0%   { box-shadow: 0 0 0 0   rgba(255,68,68,.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(255,68,68,0); }
+  100% { box-shadow: 0 0 0 0   rgba(255,68,68,0); }
+}
+
+/* Карточка одного стрима */
+.stream-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid #9146ff;   /* Twitch accent слева */
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: background .15s, transform .15s, box-shadow .15s;
+}
+.stream-card:last-child { margin-bottom: 0; }
+.stream-card:hover {
+  background: var(--bg3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(145,70,255,.15);
+}
+
+.stream-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  color: var(--text);
+  /* Ограничиваем 2 строки */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stream-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stream-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,68,68,.15);
+  color: #ff4444;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.stream-viewers {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.stream-caster {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.stream-caster span {
+  color: #9146ff;
+  font-weight: 600;
+}
+
+.stream-watch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 5px 12px;
+  background: #9146ff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.stream-watch-btn:hover { opacity: .85; color: #fff; }
+
+/* На мобильных — сайдбар едет наверх */
+@media (max-width: 900px) {
+  .page-layout { flex-direction: column; }
+  .live-sidebar { width: 100%; position: static; }
+  .live-sidebar-title { margin-top: 4px; }
+}
+@media (max-width: 768px) {
+  .page-layout { padding: 0 16px; }
+}
 </style>
 
-<script src="data.js"></script>
-<script src="teams.js"></script>
+<script src="/data.js"></script>
+<script src="/teams.js"></script>
 </head>
 <body>
 
@@ -681,7 +985,7 @@ tbody tr:hover { background: var(--bg3); }
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <a class="logo" href="index.html">Anypedia</a>
+      <a class="logo" href="/index.html">Anypedia</a>
       <div class="logo-sub">Dota 2 · Турниры СНГ</div>
     </div>
     <div class="header-search-wrap" id="searchWrap">
@@ -694,10 +998,13 @@ tbody tr:hover { background: var(--bg3); }
   </div>
 </header>
 
-<!-- BANNER — кликабельный, ведёт на Telegram -->
+<!-- BANNER — кликабельный, ведёт на Telegram.
+     Положи файл banner.png в папку с сайтом — он отобразится автоматически.
+     Если файла нет — показывается текстовый плейсхолдер. -->
 <div class="banner-wrap">
   <a class="banner-link" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener" id="bannerLink">
-    <img id="mainBanner" src="" alt="Anypedia Banner">
+    <img id="mainBanner" src="banner.png" alt="Anypedia Banner"
+         onerror="this.closest('.banner-link').style.display='none'; document.getElementById('bannerPlaceholder').style.display='flex';">
   </a>
   <a class="banner-placeholder" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener"
      id="bannerPlaceholder" style="display:none; text-decoration:none;">
@@ -705,8 +1012,65 @@ tbody tr:hover { background: var(--bg3); }
   </a>
 </div>
 
+<!-- PAGE LAYOUT: сайдбар LIVE слева + основной контент справа -->
+<div class="page-layout" id="pageLayout">
+
+  <!-- LIVE SIDEBAR — показывается только если есть текущие турниры с кастерами -->
+  <aside class="live-sidebar" id="liveSidebar" style="display:none">
+    <div class="live-sidebar-title">
+      <span class="live-dot"></span>
+      Сейчас в эфире
+    </div>
+    <div id="liveStreams">
+      <!-- карточки стримов вставляются JS-ом -->
+    </div>
+  </aside>
+
 <!-- MAIN -->
-<main class="container">
+<main class="container" id="mainContainer">
+
+  <!-- ФИЛЬТР -->
+  <div class="filter-toggle-wrap">
+    <button class="filter-toggle-btn" id="filterToggleBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+        <line x1="10" y1="18" x2="14" y2="18"/>
+      </svg>
+      Фильтр
+    </button>
+    <span class="filter-count-badge" id="filterCountBadge"></span>
+  </div>
+
+  <div class="filter-bar" id="filterBar">
+    <!-- Ограничение MMR -->
+    <div class="filter-group">
+      <div class="filter-label">Ограничение</div>
+      <div class="filter-row">
+        <select class="filter-select" id="fLimitType">
+          <option value="">Любое</option>
+          <option value="player">На игрока</option>
+          <option value="team">На команду</option>
+        </select>
+        <input class="filter-input" type="number" id="fMmrMin" placeholder="от" min="0" max="99999">
+        <span class="filter-sep">—</span>
+        <input class="filter-input" type="number" id="fMmrMax" placeholder="до" min="0" max="99999">
+      </div>
+    </div>
+
+    <!-- Дата -->
+    <div class="filter-group">
+      <div class="filter-label">Дата проведения</div>
+      <div class="filter-row">
+        <input class="filter-input" type="date" id="fDateFrom">
+        <span class="filter-sep">—</span>
+        <input class="filter-input" type="date" id="fDateTo">
+      </div>
+    </div>
+
+    <button class="filter-reset" id="fReset">Сбросить</button>
+    <div class="filter-count" id="filterCount"></div>
+  </div>
 
   <!-- Будущие -->
   <section>
@@ -757,6 +1121,8 @@ tbody tr:hover { background: var(--bg3); }
   </section>
 
 </main>
+
+</div><!-- /page-layout -->
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -840,23 +1206,6 @@ function shareUrl(url, title, e) {
   } else {
     navigator.clipboard.writeText(url).then(() => showToast('✓ Ссылка скопирована'));
   }
-}
-
-/* ---------- BANNER ---------- */
-const bannerImg = document.getElementById('mainBanner');
-const bannerPlaceholder = document.getElementById('bannerPlaceholder');
-if (!bannerImg.src || bannerImg.src === window.location.href) {
-  bannerImg.closest('.banner-link').style.display = 'none';
-  bannerPlaceholder.style.display = 'flex';
-}
-bannerImg.onerror = () => {
-  bannerImg.closest('.banner-link').style.display = 'none';
-  bannerPlaceholder.style.display = 'flex';
-};
-
-/* ---------- CLEAN URL (убираем index.html из адресной строки) ---------- */
-if (location.pathname.endsWith('/index.html')) {
-  history.replaceState(null, '', location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
 }
 
 /* ---------- DATA HELPERS ---------- */
@@ -1009,10 +1358,58 @@ function emptyCard() {
   return `<div style="color:var(--text-muted);font-size:13px;padding:16px 4px;">Нет результатов</div>`;
 }
 
+/* ============================================================
+   ФИЛЬТР
+   ============================================================ */
+function getFilters() {
+  return {
+    limitType: document.getElementById('fLimitType').value,   // '' | 'player' | 'team'
+    mmrMin:    parseInt(document.getElementById('fMmrMin').value) || 0,
+    mmrMax:    parseInt(document.getElementById('fMmrMax').value) || Infinity,
+    dateFrom:  document.getElementById('fDateFrom').value,    // 'YYYY-MM-DD' | ''
+    dateTo:    document.getElementById('fDateTo').value,
+  };
+}
+
+/* Парсим число из строки лимита, например "До 8.500 MMR на игрока" → 8500 */
+function parseLimitMmr(limit) {
+  if (!limit) return null;
+  const m = String(limit).replace(/\./g, '').match(/\d+/);
+  return m ? parseInt(m[0]) : null;
+}
+
+function matchesFilter(t, f) {
+  const limit = String(t.limit || '').toLowerCase();
+
+  // Тип ограничения
+  if (f.limitType === 'player' && !limit.includes('игрок') && !limit.includes('на игрока')) return false;
+  if (f.limitType === 'team'   && !limit.includes('команд')) return false;
+
+  // MMR диапазон
+  if (f.mmrMin > 0 || f.mmrMax < Infinity) {
+    const val = parseLimitMmr(t.limit);
+    if (val === null) return false;              // нет числа — не подходит под числовой фильтр
+    if (val < f.mmrMin || val > f.mmrMax) return false;
+  }
+
+  // Дата ОТ
+  if (f.dateFrom && t.end < f.dateFrom) return false;
+  // Дата ДО
+  if (f.dateTo   && t.start > f.dateTo)   return false;
+
+  return true;
+}
+
 function renderAll() {
-  const q = document.getElementById('search').value.toLowerCase().trim();
-  const filter = list => list.filter(t => t.title.toLowerCase().includes(q));
-  const up = filter(upcoming), li = filter(live), fin = filter(finished);
+  const f = getFilters();
+
+  function applyAll(list) {
+    return list.filter(t => matchesFilter(t, f));
+  }
+
+  const up  = applyAll(upcoming);
+  const li  = applyAll(live);
+  const fin = applyAll(finished);
 
   // Таблицы (десктоп)
   document.getElementById('upcoming').innerHTML = up.length  ? up.map(buildRow).join('')  : emptyRow();
@@ -1023,7 +1420,46 @@ function renderAll() {
   document.getElementById('upcoming-cards').innerHTML = up.length  ? up.map(buildCard).join('')  : emptyCard();
   document.getElementById('live-cards').innerHTML     = li.length  ? li.map(buildCard).join('')  : emptyCard();
   document.getElementById('finished-cards').innerHTML = fin.length ? fin.map(buildCard).join('') : emptyCard();
+
+  // Счётчик
+  const total = up.length + li.length + fin.length;
+  const all   = upcoming.length + live.length + finished.length;
+  const countText = total < all ? `Показано: ${total} из ${all}` : '';
+  document.getElementById('filterCount').textContent = countText;
+
+  // Бейдж рядом с кнопкой — показываем только если фильтр активен
+  const badge = document.getElementById('filterCountBadge');
+  if (total < all) {
+    badge.textContent = `${total} из ${all}`;
+    badge.classList.add('visible');
+  } else {
+    badge.textContent = '';
+    badge.classList.remove('visible');
+  }
 }
+
+/* ---------- FILTER TOGGLE ---------- */
+const filterToggleBtn = document.getElementById('filterToggleBtn');
+const filterBar       = document.getElementById('filterBar');
+
+filterToggleBtn.addEventListener('click', () => {
+  const isOpen = filterBar.classList.toggle('open');
+  filterToggleBtn.classList.toggle('active', isOpen);
+});
+
+/* Вешаем обработчики на все элементы фильтра */
+['fLimitType','fMmrMin','fMmrMax','fDateFrom','fDateTo'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderAll);
+  document.getElementById(id).addEventListener('change', renderAll);
+});
+document.getElementById('fReset').addEventListener('click', () => {
+  document.getElementById('fLimitType').value = '';
+  document.getElementById('fMmrMin').value    = '';
+  document.getElementById('fMmrMax').value    = '';
+  document.getElementById('fDateFrom').value  = '';
+  document.getElementById('fDateTo').value    = '';
+  renderAll();
+});
 
 /* ============================================================
    GLOBAL SEARCH — турниры + команды
@@ -1168,8 +1604,102 @@ searchInput.addEventListener('focus', () => {
   if (q) renderDropdown(q);
 });
 
-/* Первоначальная отрисовка таблиц */
+/* Первичная отрисовка: при заходе показываем все турниры без фильтра */
 renderAll();
+
+/* ============================================================
+   LIVE STREAMS — проверяем в фоне, показываем только если есть
+   ============================================================ */
+
+function getLiveTournamentCasters() {
+  const casters = [];
+  const seen = new Set();
+  tournaments.forEach(t => {
+    if (getStatus(t) !== 'live') return;
+    if (!Array.isArray(t.casters)) return;
+    t.casters.forEach(c => {
+      if (!c.link) return;
+      const match = c.link.match(/twitch\.tv\/([^/?#]+)/i);
+      if (!match) return;
+      const login = match[1].toLowerCase();
+      if (seen.has(login)) return;
+      seen.add(login);
+      casters.push({ name: c.name || login, login, link: c.link });
+    });
+  });
+  return casters;
+}
+
+async function checkTwitchChannel(login) {
+  try {
+    const [uptimeRes, titleRes] = await Promise.all([
+      fetch(`https://decapi.me/twitch/uptime/${login}?offline_msg=OFFLINE`, { signal: AbortSignal.timeout(5000) }),
+      fetch(`https://decapi.me/twitch/title/${login}`, { signal: AbortSignal.timeout(5000) }),
+    ]);
+    const uptime = (await uptimeRes.text()).trim();
+    if (uptime === 'OFFLINE' || uptime.toLowerCase().includes('offline')) return { online: false };
+    const title   = (await titleRes.text()).trim();
+    const viewRes = await fetch(`https://decapi.me/twitch/viewercount/${login}`, { signal: AbortSignal.timeout(5000) });
+    const viewers = (await viewRes.text()).trim();
+    return {
+      online:  true,
+      title:   title || login,
+      viewers: isNaN(parseInt(viewers)) ? '?' : parseInt(viewers).toLocaleString('ru-RU'),
+    };
+  } catch { return { online: false }; }
+}
+
+function renderStreamCard(caster, info) {
+  return `
+    <a class="stream-card" href="${caster.link}" target="_blank" rel="noopener">
+      <div class="stream-title">${info.title}</div>
+      <div class="stream-meta">
+        <span class="stream-live-badge">
+          <span class="live-dot" style="width:6px;height:6px;animation-duration:1s"></span>
+          LIVE
+        </span>
+        <span class="stream-viewers">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+          </svg>
+          ${info.viewers}
+        </span>
+      </div>
+      <div class="stream-caster">Кастер: <span>${caster.name}</span></div>
+      <span class="stream-watch-btn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7l5 4-5 4v-4z"/>
+        </svg>
+        Смотреть
+      </span>
+    </a>`;
+}
+
+async function checkLiveStreams() {
+  const casters   = getLiveTournamentCasters();
+  const sidebar   = document.getElementById('liveSidebar');
+  const container = document.getElementById('liveStreams');
+
+  /* Нет текущих турниров с кастерами — ничего не делаем */
+  if (!casters.length) return;
+
+  /* Параллельно проверяем все каналы — сайдбар скрыт до результата */
+  const results = await Promise.all(
+    casters.map(c => checkTwitchChannel(c.login).then(info => ({ caster: c, info })))
+  );
+  const online = results.filter(r => r.info.online);
+
+  /* Никто не стримит — оставляем скрытым */
+  if (!online.length) return;
+
+  /* Есть стримы — показываем сайдбар */
+  container.innerHTML = online.map(r => renderStreamCard(r.caster, r.info)).join('');
+  sidebar.style.display = '';
+}
+
+/* Запуск + обновление каждые 2 минуты */
+checkLiveStreams();
+setInterval(checkLiveStreams, 2 * 60 * 1000);
 </script>
 </body>
 </html>

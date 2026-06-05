@@ -12,11 +12,11 @@
   document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
 })();
 </script>
-<script src="page-transition.js"></script>
+<script src="/page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="data.js"></script>
-<script src="teams.js"></script>
+<script src="/data.js"></script>
+<script src="/teams.js"></script>
 
 <style>
 /* ============================================================
@@ -643,7 +643,7 @@ a:hover { color: var(--accent2); }
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <a class="logo" href="/">Anypedia</a>
+      <a class="logo" href="/index.html">Anypedia</a>
       <div class="logo-sub">Dota 2 · Турниры СНГ</div>
     </div>
     <div class="header-search-wrap" id="searchWrap">
@@ -738,8 +738,31 @@ function doShare() {
 }
 
 /* ---------- TOURNAMENT DATA ---------- */
-const id = new URLSearchParams(window.location.search).get('id');
+function getTournamentIdFromUrl() {
+  const paramsId = new URLSearchParams(window.location.search).get('id');
+  if (paramsId) return paramsId;
+
+  const path = location.pathname.replace(/\/+$/, '');
+  const lastSegment = decodeURIComponent(path.split('/').pop() || '');
+  if (!lastSegment || lastSegment === 'tournament.html' || lastSegment === 'index.html') return '';
+  return lastSegment;
+}
+
+function getSiteBasePath(id) {
+  const path = location.pathname;
+  if (path.endsWith('/tournament.html') || path.endsWith('/index.html')) {
+    return path.slice(0, path.lastIndexOf('/') + 1) || '/';
+  }
+  const suffix = `/${encodeURIComponent(id)}`;
+  return path.endsWith(suffix) ? path.slice(0, -suffix.length + 1) : '/';
+}
+
+const id = getTournamentIdFromUrl();
 const t  = tournaments.find(x => x.id === id);
+
+if (t && new URLSearchParams(window.location.search).has('id')) {
+  history.replaceState(null, '', `${getSiteBasePath(id)}${encodeURIComponent(id)}`);
+}
 
 if (!t) {
   document.body.innerHTML = `
@@ -748,7 +771,7 @@ if (!t) {
       <div>
         <h1 style="font-size:22px;margin-bottom:10px">❌ Турнир не найден</h1>
         <p style="color:#888;margin-bottom:20px">Проверьте ссылку или вернитесь на главную</p>
-        <a href="index.html" style="padding:10px 18px;background:#1c1c1e;border:1px solid #2a2a2a;
+        <a href="/index.html" style="padding:10px 18px;background:#1c1c1e;border:1px solid #2a2a2a;
            border-radius:10px;color:#6bb6ff;display:inline-block">← Назад</a>
       </div>
     </div>`;
@@ -973,6 +996,6 @@ document.getElementById('casters').innerHTML = (t.casters || []).map(c => `
       : `<span>${c.name || 'TBD'}</span>`}
   </div>`).join('');
 </script>
-<script src="search.js"></script>
+<script src="/search.js"></script>
 </body>
 </html>
