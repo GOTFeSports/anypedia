@@ -316,7 +316,7 @@ const teams = [
     aliases: ["Never Back Down", "Fast & Furious 4"],
     logo: "nbdteam.png",
     region: "СНГ",
-    prize: "7.500₽",
+    prize: "11.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
     description: "",
@@ -370,6 +370,13 @@ const teams = [
         place: "3-4",
         prize: "—",
         limit: "До 35.000 MMR на команду"
+      },
+      {
+        title: "Bedlam Christmas Cup",
+        date:  "2025-12-14",
+        place: "3",
+        prize: "4.000₽",
+        limit: "До 7.000 MMR на игрока"
       },
     ]
   },
