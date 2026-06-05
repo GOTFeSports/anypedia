@@ -310,4 +310,67 @@ const teams = [
       },
     ]
   },
+  {
+    id: "never-back-down",
+    name: "Never Back Down",
+    aliases: ["Never Back Down", "Fast & Furious 4"],
+    logo: "nbdteam.png",
+    region: "СНГ",
+    prize: "7.500₽",
+    telegramLink: "",   // ссылка на группу/канал команды
+    captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
+    description: "",
+
+    activeRoster: [
+      { nick: "KarineGod",  pos: 1, joined: "2025-11-01" },
+      { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" },
+      { nick: "m1nd1",   pos: 3, joined: "2026-05-31" },
+      { nick: "Darklight",   pos: 4, joined: "2026-05-31" },
+      { nick: "Rose",   pos: 5, joined: "2025-11-01" },
+    ],
+
+    formerPlayers: [
+      
+    ],
+
+    // Добавляйте турниры вручную.
+    // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
+    tournaments: [
+      {
+        title: "Bedlam Battles Season 3",
+        date:  "2025-11-09",
+        place: "1",
+        prize: "7.500₽",
+        limit: "До 7.000 MMR на игрока"
+      },
+      {
+        title: "Bedlam Winter Cup: Division 1",
+        date:  "2026-02-22",
+        place: "7-8",
+        prize: "—",
+        limit: "До 8.500 MMR на игрока"
+      },
+      {
+        title: "Bedlam Swamp Wars",
+        date:  "2026-03-29",
+        place: "5-8",
+        prize: "—",
+        limit: "До 7.500 MMR на игрока"
+      },
+      {
+        title: "SkewerEsports Season 1",
+        date:  "2026-05-08",
+        place: "2",
+        prize: "—",
+        limit: "До 35.000 MMR на команду"
+      },
+      {
+        title: "Bedlam Waiting For Summer Cup",
+        date:  "2026-05-31",
+        place: "3-4",
+        prize: "—",
+        limit: "До 35.000 MMR на команду"
+      },
+    ]
+  },
 ];
