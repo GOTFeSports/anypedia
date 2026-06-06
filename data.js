@@ -1139,6 +1139,52 @@ const tournaments = [
             { "nick": "MaCr0sNik", "pos": 4 },
             { "nick": "Limp", "pos": 5 }
         ]
+    },
+            {
+        "name": "Immortal Dragons",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Dragonaychik", "pos": 1 },
+            { "nick": "thats all", "pos": 2 },
+            { "nick": "I have no enemies-MODE", "pos": 3 },
+            { "nick": "Rubistan", "pos": 4 },
+            { "nick": "4к ранг уебище", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Screenshot#3",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "headache", "pos": 1 },
+            { "nick": "KaSu", "pos": 2 },
+            { "nick": "Dr Dolitle", "pos": 3 },
+            { "nick": "Димасик67", "pos": 4 },
+            { "nick": "нож в руке", "pos": 5 }
+        ],
+        "substitutes": ["diffi"]
+    },
+    {
+        "name": "mid diff",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "dodikre⁶⁷", "pos": 1 },
+            { "nick": "Baby, Nice Try", "pos": 2 },
+            { "nick": "плюсы", "pos": 3 },
+            { "nick": "rork_a", "pos": 4 },
+            { "nick": "Condemnation", "pos": 5 }
+        ],
+        "substitutes": ["чихлюп", "procto_kot"]
+    },
+    {
+        "name": "Gods Only Team",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "rokadam", "pos": 1 },
+            { "nick": "nosebleed~", "pos": 2 },
+            { "nick": "ammanual独唱", "pos": 3 },
+            { "nick": "мистер чипс)", "pos": 4 },
+            { "nick": "Razdor", "pos": 5 }
+        ]
     }
 ],
     "casters": [
