@@ -1198,8 +1198,8 @@ const tournaments = [
     "telegramLink": "https://t.me/SkewerEsports",
     "description": "SkewerEsports Season 2. Single Elimination (BO1, финал BO3). Лимит 8500 MMR на игрока. Взнос 500₽ с команды. Призовой фонд 6.500₽ (6.000₽ — 1 место + 500₽ — мини-игра 1v1 между мидерами). Старт: 7 июня 2026 в 11:00.",
     "prizePool": [
-        { "place": 1, "amount": "6.000₽", "team": "" },
-        { "place": "1v1 Mid", "amount": "500₽", "team": "" }
+        { "place": 1, "amount": "6.000₽", "team": "mid diff" },
+        { "place": "1v1 Mid", "amount": "500₽", "team": "Baby, Nice Try!" }
     ]
 },
   {
