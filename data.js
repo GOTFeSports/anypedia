@@ -168,13 +168,13 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/yBGQ4ssxH",
         "rules": "",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/5s0i3t8n"
     },
     "teamsList": [],
     "casters": [
         { "name": "TBD", "link": "" }
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/5s0i3t8n/module",
     "registrationLink": "https://t.me/visagebroken",
     "telegramLink": "https://t.me/rampagetournaments",
     "description": "RAMPAGE PULIK #3 — турнир для игроков до 3.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
