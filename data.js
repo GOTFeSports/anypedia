@@ -1049,7 +1049,7 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/M6QaGMkdDr",
         "rules": "",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/ju8y4e0"
     },
     "teamsList": [
     {
@@ -1193,7 +1193,7 @@ const tournaments = [
         { "name": "mugi", "link": "https://www.twitch.tv/mugia1" },
         { "name": "Forgiven3SS", "link": "https://www.twitch.tv/forgiven3ss" },
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/ju8y4e0/module",
     "registrationLink": "https://docs.google.com/forms/d/1AOPnhM_jFYUyFw3BUeo6k9FE_l-VBqVLXns_P8DtVpY/edit#response=ACYDBNgetI5JxnfiwHNgNxtbtqmO0hslBtb8rb9AiRT9kiFgFgxuJYrpbzjd2yqG_6mKouk",
     "telegramLink": "https://t.me/SkewerEsports",
     "description": "SkewerEsports Season 2. Single Elimination (BO1, финал BO3). Лимит 8500 MMR на игрока. Взнос 500₽ с команды. Призовой фонд 6.500₽ (6.000₽ — 1 место + 500₽ — мини-игра 1v1 между мидерами). Старт: 7 июня 2026 в 11:00.",
