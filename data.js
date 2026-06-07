@@ -172,7 +172,7 @@ const tournaments = [
     },
     "teamsList": [],
     "casters": [
-        { "name": "TBD", "link": "" }
+        { "name": "nandecrew", "link": "https://www.twitch.tv/nandecrew" }
     ],
     "bracketEmbed": "https://challonge.com/ru/5s0i3t8n/module",
     "registrationLink": "https://t.me/visagebroken",
