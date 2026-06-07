@@ -12,7 +12,7 @@
   document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
 })();
 </script>
-<script src="/page-transition.js"></script>
+<script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -976,8 +976,8 @@ tbody tr:hover {
 }
 </style>
 
-<script src="/data.js"></script>
-<script src="/teams.js"></script>
+<script src="data.js"></script>
+<script src="teams.js"></script>
 </head>
 <body>
 
@@ -985,7 +985,7 @@ tbody tr:hover {
 <header class="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <a class="logo" href="/index.html">Anypedia</a>
+      <a class="logo" href="/">Anypedia</a>
       <div class="logo-sub">Dota 2 · Турниры СНГ</div>
     </div>
     <div class="header-search-wrap" id="searchWrap">
@@ -1208,6 +1208,11 @@ function shareUrl(url, title, e) {
   }
 }
 
+/* ---------- CLEAN URL (убираем index.html из адресной строки) ---------- */
+if (location.pathname.endsWith('/index.html')) {
+  history.replaceState(null, '', location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+}
+
 /* ---------- DATA HELPERS ---------- */
 function toLocalDate(s) {
   const [y, m, d] = s.split('-').map(Number);
@@ -1401,10 +1406,14 @@ function matchesFilter(t, f) {
 }
 
 function renderAll() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
   const f = getFilters();
 
   function applyAll(list) {
-    return list.filter(t => matchesFilter(t, f));
+    return list.filter(t =>
+      (!q || t.title.toLowerCase().includes(q)) &&
+      matchesFilter(t, f)
+    );
   }
 
   const up  = applyAll(upcoming);
@@ -1604,15 +1613,68 @@ searchInput.addEventListener('focus', () => {
   if (q) renderDropdown(q);
 });
 
-/* Первичная отрисовка: при заходе показываем все турниры без фильтра */
+/* Первоначальная отрисовка всех турниров */
 renderAll();
 
 /* ============================================================
-   LIVE STREAMS — проверяем в фоне, показываем только если есть
+   LIVE STREAMS — Twitch GQL (без ключей, работает везде)
+   Используется публичный Client-ID веб-клиента Twitch.
+   Не требует регистрации, не заблокирован в России/СНГ.
    ============================================================ */
 
-function getLiveTournamentCasters() {
-  const casters = [];
+/* Получить данные о стримах одним GQL-запросом */
+async function получитьДанныеСтримов(логины) {
+  if (!логины.length) return [];
+  try {
+    /* Inline-запрос явно запрашивает viewersCount — надёжнее persisted query */
+    const запросы = логины.map(логин => ({
+      operationName: 'ChannelShell',
+      variables: { login: логин },
+      query: `query ChannelShell($login: String!) {
+        user(login: $login) {
+          login
+          stream {
+            title
+            viewersCount
+          }
+        }
+      }`
+    }));
+
+    const res = await fetch('https://gql.twitch.tv/gql', {
+      method: 'POST',
+      headers: {
+        'Client-Id': 'kimne78kx3ncx6brgo4mv6wki5h1ko',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(запросы),
+      signal: AbortSignal.timeout(8000),
+    });
+
+    if (!res.ok) return [];
+    const данные = await res.json();
+
+    const онлайн = [];
+    данные.forEach((блок, индекс) => {
+      const стрим = блок?.data?.user?.stream;
+      if (!стрим) return; // канал оффлайн
+      const зрители = стрим.viewersCount;
+      онлайн.push({
+        логин:    логины[индекс],
+        название: стрим.title || логины[индекс],
+        зрители:  typeof зрители === 'number'
+          ? зрители.toLocaleString('ru-RU')
+          : '—',
+      });
+    });
+    return онлайн;
+  } catch {
+    return [];
+  }
+}
+
+function получитьКастеровЖивыхТурниров() {
+  const кастеры = [];
   const seen = new Set();
   tournaments.forEach(t => {
     if (getStatus(t) !== 'live') return;
@@ -1621,38 +1683,19 @@ function getLiveTournamentCasters() {
       if (!c.link) return;
       const match = c.link.match(/twitch\.tv\/([^/?#]+)/i);
       if (!match) return;
-      const login = match[1].toLowerCase();
-      if (seen.has(login)) return;
-      seen.add(login);
-      casters.push({ name: c.name || login, login, link: c.link });
+      const логин = match[1].toLowerCase();
+      if (seen.has(логин)) return;
+      seen.add(логин);
+      кастеры.push({ name: c.name || логин, login: логин, link: c.link });
     });
   });
-  return casters;
+  return кастеры;
 }
 
-async function checkTwitchChannel(login) {
-  try {
-    const [uptimeRes, titleRes] = await Promise.all([
-      fetch(`https://decapi.me/twitch/uptime/${login}?offline_msg=OFFLINE`, { signal: AbortSignal.timeout(5000) }),
-      fetch(`https://decapi.me/twitch/title/${login}`, { signal: AbortSignal.timeout(5000) }),
-    ]);
-    const uptime = (await uptimeRes.text()).trim();
-    if (uptime === 'OFFLINE' || uptime.toLowerCase().includes('offline')) return { online: false };
-    const title   = (await titleRes.text()).trim();
-    const viewRes = await fetch(`https://decapi.me/twitch/viewercount/${login}`, { signal: AbortSignal.timeout(5000) });
-    const viewers = (await viewRes.text()).trim();
-    return {
-      online:  true,
-      title:   title || login,
-      viewers: isNaN(parseInt(viewers)) ? '?' : parseInt(viewers).toLocaleString('ru-RU'),
-    };
-  } catch { return { online: false }; }
-}
-
-function renderStreamCard(caster, info) {
+function рендерКарточкиСтрима(кастер, стрим) {
   return `
-    <a class="stream-card" href="${caster.link}" target="_blank" rel="noopener">
-      <div class="stream-title">${info.title}</div>
+    <a class="stream-card" href="${кастер.link}" target="_blank" rel="noopener">
+      <div class="stream-title">${стрим.название}</div>
       <div class="stream-meta">
         <span class="stream-live-badge">
           <span class="live-dot" style="width:6px;height:6px;animation-duration:1s"></span>
@@ -1662,10 +1705,10 @@ function renderStreamCard(caster, info) {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
           </svg>
-          ${info.viewers}
+          ${стрим.зрители}
         </span>
       </div>
-      <div class="stream-caster">Кастер: <span>${caster.name}</span></div>
+      <div class="stream-caster">Кастер: <span>${кастер.name}</span></div>
       <span class="stream-watch-btn">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
           <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7l5 4-5 4v-4z"/>
@@ -1675,31 +1718,32 @@ function renderStreamCard(caster, info) {
     </a>`;
 }
 
-async function checkLiveStreams() {
-  const casters   = getLiveTournamentCasters();
-  const sidebar   = document.getElementById('liveSidebar');
-  const container = document.getElementById('liveStreams');
+async function проверитьЖивыеСтримы() {
+  const кастеры   = получитьКастеровЖивыхТурниров();
+  const сайдбар   = document.getElementById('liveSidebar');
+  const контейнер = document.getElementById('liveStreams');
 
-  /* Нет текущих турниров с кастерами — ничего не делаем */
-  if (!casters.length) return;
+  if (!кастеры.length) return;
 
-  /* Параллельно проверяем все каналы — сайдбар скрыт до результата */
-  const results = await Promise.all(
-    casters.map(c => checkTwitchChannel(c.login).then(info => ({ caster: c, info })))
-  );
-  const online = results.filter(r => r.info.online);
+  const логины = кастеры.map(c => c.login);
+  const онлайн = await получитьДанныеСтримов(логины);
 
-  /* Никто не стримит — оставляем скрытым */
-  if (!online.length) return;
+  if (!онлайн.length) return;
 
-  /* Есть стримы — показываем сайдбар */
-  container.innerHTML = online.map(r => renderStreamCard(r.caster, r.info)).join('');
-  sidebar.style.display = '';
+  const карточки = онлайн.map(стрим => {
+    const кастер = кастеры.find(c => c.login === стрим.логин);
+    return кастер ? рендерКарточкиСтрима(кастер, стрим) : null;
+  }).filter(Boolean);
+
+  if (!карточки.length) return;
+
+  контейнер.innerHTML = карточки.join('');
+  сайдбар.style.display = '';
 }
 
-/* Запуск + обновление каждые 2 минуты */
-checkLiveStreams();
-setInterval(checkLiveStreams, 2 * 60 * 1000);
+/* Запуск при загрузке + обновление каждые 2 минуты */
+проверитьЖивыеСтримы();
+setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
 </script>
 </body>
 </html>
