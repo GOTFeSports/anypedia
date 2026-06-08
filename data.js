@@ -161,7 +161,7 @@ const tournaments = [
     "prize": "1.000₽",
     "location": "СНГ",
     "teams": 16,
-    "winner": "TBD",
+    "winner": "HalalTeam",
     "format": "Double Elimination",
     "organizer": "RAMPAGE Tournaments",
     "links": {
@@ -1042,7 +1042,7 @@ const tournaments = [
     "prize": "6.500₽",
     "location": "СНГ",
     "teams": 16,
-    "winner": "TBD",
+    "winner": "mid diff",
     "format": "Single Elimination",
     "organizer": "SkewerEsports",
     "links": {
