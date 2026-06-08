@@ -179,7 +179,7 @@ const tournaments = [
     "telegramLink": "https://t.me/rampagetournaments",
     "description": "RAMPAGE PULIK #3 — турнир для игроков до 3.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
     "prizePool": [
-        { "place": 1, "amount": "1.000₽", "team": "" }
+        { "place": 1, "amount": "1.000₽", "team": "HalalTeam" }
     ]
 },
   {
