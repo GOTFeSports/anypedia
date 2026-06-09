@@ -38,8 +38,7 @@ const tournaments = [        {
     "bracketEmbed": "",
     "registrationLink": "",
     "telegramLink": "https://t.me/haterzdes",
-    "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).
-",
+    "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).",
     "prizePool": [
         { "place": 1, "amount": "67.000₽", "team": "" }
     ]
