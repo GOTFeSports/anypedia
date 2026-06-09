@@ -13,8 +13,7 @@
 //  Пустые или отсутствующие ссылки не отображаются.
 // =============================================
 
-const tournaments = [
-        {
+const tournaments = [        {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
     "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
     "limit": "До 30.000 MMR на команду",
@@ -42,7 +41,7 @@ const tournaments = [
     "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).
 ",
     "prizePool": [
-        { "place": 1, "amount": "67.000₽", "team": "" },
+        { "place": 1, "amount": "67.000₽", "team": "" }
     ]
 },
     {
