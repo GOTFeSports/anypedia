@@ -15,38 +15,6 @@
 
 const tournaments = [        
     {
-    "id": "Special-3-Open-Qual",
-    "title": "Special 3: Open Qualification",
-    "limit": "Нет данных",
-    "start": "2026-07-04",
-    "end": "2026-07-04",
-    "startTime": "14:00",
-    "prize": "Слот в CQ",
-    "location": "СНГ",
-    "teams": 32,
-    "winner": "TBD",
-    "format": "Single Elimination",
-    "organizer": "AnyLvL Community x GOTF eSports",
-    "links": {
-        "dotabuff": "",
-        "discord": "https://discord.gg/3N4Jg6Jpak",
-        "rules": "",
-        "bracket": ""
-    },
-    "teamsList": [],
-    "casters": [
-        { "name": "TBD", "link": "" }
-    ],
-    "bracketEmbed": "",
-    "registrationLink": "",
-    "telegramLink": "https://t.me/gotf_dota",
-    "description": "Без описания.",
-    "prizePool": [
-        { "place": 1, "amount": "Слот в CQ", "team": "" },
-        { "place": 2, "amount": "Слот в CQ", "team": "" }
-    ]
-},
-    {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
     "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
     "limit": "До 30.000 MMR на команду",
