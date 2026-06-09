@@ -14,6 +14,37 @@
 // =============================================
 
 const tournaments = [
+        {
+    "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
+    "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
+    "limit": "До 30.000 MMR на команду",
+    "start": "2026-07-27",
+    "end": "2026-08-04",
+    "startTime": "18:00",
+    "prize": "67.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "TBD",
+    "format": "Swiss Stage + Double Elimination",
+    "organizer": "HATER ZDES`",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/haterzdes",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/haterzdes",
+    "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).
+",
+    "prizePool": [
+        { "place": 1, "amount": "67.000₽", "team": "" },
+    ]
+},
     {
     "id": "The-International-2026-Europe-2-Open-Qualifier",
     "title": "The International 2026 Europe #2 Open Qualifier",
