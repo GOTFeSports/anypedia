@@ -13,7 +13,39 @@
 //  Пустые или отсутствующие ссылки не отображаются.
 // =============================================
 
-const tournaments = [        
+const tournaments = [  
+    {      
+    "id": "ECHO-Rapture-x-Rampage-TURIK-1",
+    "title": "ECHO Rapture x Rampage TURIK",
+    "limit": "До 25.000 MMR на команду",
+    "start": "2026-06-13",
+    "end": "2026-06-14",
+    "startTime": "17:00",
+    "prize": "2.500₽",
+    "location": "СНГ",
+    "teams": 32,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "ECHO Rapture & RAMPAGE Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        {"name": "Echo Rapture", "link": "https://twitch.tv/echo_rapture"},
+        {"name": "RAMPAGE Tournaments", "link": "https://www.twitch.tv/rampagetouriks"}
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://echorapture.ru/",
+    "telegramLink": "https://t.me/rampagetournaments",
+    "description": "Турнир для игроков до 25.000 MMR на команду. Регистрация бесплатная. Обязательные условия: подписка на Telegram-каналы RAMPAGE TOURIKS и ECHO RAPTURE. Если сайт регистрации не открывается, необходимо использовать VPN.",
+    "prizePool": [
+        { "place": 1, "amount": "2.500₽", "team": "" }
+    ]
+},
     {
     "id": "SkewerEsports-Season-3",
     "title": "SkewerEsports Season 3",
@@ -73,39 +105,6 @@ const tournaments = [
     "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).",
     "prizePool": [
         { "place": 1, "amount": "67.000₽", "team": "" }
-    ]
-},
-    {
-    "id": "The-International-2026-Europe-2-Open-Qualifier",
-    "title": "The International 2026 Europe #2 Open Qualifier",
-    "limit": "Без лимита MMR",
-    "start": "2026-06-11",
-    "end": "2026-06-12",
-    "startTime": "15:00",
-    "prize": "Слот в CQ",
-    "location": "Европа",
-    "teams": 512,
-    "winner": "TBD",
-    "format": "Single Elimination",
-    "organizer": "PGL",
-    "links": {
-        "dotabuff": "",
-        "discord": "https://discord.gg/NEAadqE3y7",
-        "rules": "https://docs.google.com/document/d/1e7WvZEgKcGX7sTjHEsXLgrkVLYv9W67ApkaP5pWWjUc/edit?tab=t.0#heading=h.6yxlsl381eby",
-        "bracket": "https://esportal.com/en/tournament/5159/the-international-2026-europe-2-open-qualifier-/matches"
-    },
-    "teamsList": [],
-    "casters": [
-    ],
-    "bracketEmbed": "",
-    "registrationLink": "https://esportal.com/en/tournament/5159/the-international-2026-europe-2-open-qualifier-/info",
-    "telegramLink": "https://t.me/anylvlcommunity",
-    "description": "",
-    "prizePool": [
-        { "place": 1, "amount": "Слот в CQ", "team": "" },
-        { "place": 2, "amount": "Слот в CQ", "team": "" },
-        { "place": 3, "amount": "Слот в CQ", "team": "" },
-        { "place": 4, "amount": "Слот в CQ", "team": "" },
     ]
 },
     {
