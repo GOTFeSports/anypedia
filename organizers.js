@@ -71,7 +71,7 @@ const organizers = [
   {
     id: "rampage-tournaments",
     name: "RAMPAGE Tournaments",
-    aliases: ["RAMPAGE Tournaments", "RAMPAGE"],
+    aliases: ["RAMPAGE Tournaments", "RAMPAGE", "ECHO Rapture & RAMPAGE Tournaments"],
     logo: "dota2.png",
     region: "СНГ",
     description: "RAMPAGE Tournaments — турнирный оператор, фокусирующийся на создании регулярных любительских турниров по Dota 2 для игроков низких рангов. Организация проводит частые онлайн-турниры и события для начинающих и развивающихся команд.",
