@@ -28,6 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="/data.js"></script>
 <script src="/teams.js"></script>
+<script src="/organizers.js"></script>
 
 <style>
 /* ============================================================
@@ -913,6 +914,15 @@ function renderTeamLink(name, style = '') {
   return `<a href="${getSiteBase()}team/${encodeURIComponent(tid)}" style="color:var(--accent);font-weight:600${style ? ';' + style : ''}">${name}</a>`;
 }
 
+/* Оборачивает имя организатора в ссылку если организатор найден в organizers.js */
+function renderOrganizerLink(name) {
+  if (!name || name === '—') return name || '—';
+  const found = typeof findOrganizerByName === 'function' ? findOrganizerByName(name) : null;
+  if (!found) return name;
+  const oid = getOrganizerId(found);
+  return `<a href="${getSiteBase()}organizer/${encodeURIComponent(oid)}" style="color:var(--accent);font-weight:600">${name}</a>`;
+}
+
 /* ---------- INFOBOX ---------- */
 const dateText = t.start === t.end
   ? formatDateLong(t.start)
@@ -928,7 +938,7 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Формат</span><span class="info-val">${t.format || '—'}</span></div>
   <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
   <div class="info-row"><span class="info-label">Победитель</span><span class="info-val">${renderTeamLink(t.winner || 'TBD')}</span></div>
-  <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${t.organizer || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Организатор</span><span class="info-val">${renderOrganizerLink(t.organizer || '—')}</span></div>
   <div class="action-btns">
     ${t.registrationLink ? `<a class="btn btn-reg" href="${t.registrationLink}" target="_blank" rel="noopener">📋 Регистрация</a>` : ''}
     ${t.telegramLink     ? `<a class="btn btn-tg"  href="${t.telegramLink}"     target="_blank" rel="noopener">✈️ Telegram</a>` : ''}

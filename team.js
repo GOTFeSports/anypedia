@@ -278,6 +278,7 @@ function инициализироватьПоиск() {
 
   const всеТурнирыСписок = typeof tournaments !== 'undefined' ? tournaments : [];
   const всеКоманды  = typeof teams       !== 'undefined' ? teams       : [];
+  const всеОрганизаторы = typeof organizers !== 'undefined' ? organizers : [];
 
   const статусТекст = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' };
   let активныйИндекс = -1;
@@ -295,6 +296,15 @@ function инициализироватьПоиск() {
 
   function командаПодходит(команда, запрос) {
     return всеИменаКоманды(команда).some(н => н.includes(запрос));
+  }
+
+  function организаторПодходит(организатор, запрос) {
+    const псевдонимы = организатор.aliases || [];
+    const список = Array.isArray(псевдонимы)
+      ? псевдонимы
+      : String(псевдонимы).split(',').map(s => s.trim()).filter(Boolean);
+    return [организатор.name, ...список].filter(Boolean)
+      .map(нормализовать).some(н => н.includes(запрос));
   }
 
   function закрыть() {
@@ -315,7 +325,11 @@ function инициализироватьПоиск() {
       .filter(к => командаПодходит(к, запрос))
       .slice(0, 5);
 
-    if (!турниры.length && !команды.length) {
+    const организаторы = всеОрганизаторы
+      .filter(о => организаторПодходит(о, запрос))
+      .slice(0, 5);
+
+    if (!турниры.length && !команды.length && !организаторы.length) {
       дропдаун.innerHTML = `<div class="sd-empty">Ничего не найдено</div>`;
       дропдаун.classList.add('visible');
       return;
@@ -355,6 +369,25 @@ function инициализироватьПоиск() {
               <div class="sd-meta">${к.region || '—'}${к.prize ? ' · ' + к.prize : ''}</div>
             </div>
             <span class="sd-badge">Команда</span>
+          </a>`;
+      });
+    }
+
+    if (организаторы.length) {
+      html += `<div class="sd-group-label">🛡️ Организаторы</div>`;
+      организаторы.forEach(о => {
+        const id = о.id || транслитерироватьСлаг(о.name);
+        const ссылка = `${база}organizer.html?id=${encodeURIComponent(id)}`;
+        html += `
+          <a class="sd-item" href="${ссылка}">
+            <img class="sd-logo" src="${база}${о.logo || 'dota2.png'}"
+                 alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="sd-icon" style="display:none">🛡️</div>
+            <div class="sd-info">
+              <div class="sd-title">${о.name}</div>
+              <div class="sd-meta">${о.region || '—'}</div>
+            </div>
+            <span class="sd-badge">Организатор</span>
           </a>`;
       });
     }

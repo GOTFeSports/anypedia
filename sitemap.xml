@@ -139,6 +139,32 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- ==================== ОРГАНИЗАТОРЫ ==================== -->
+
+  <url>
+    <loc>https://anypedia.ru/organizer/bedlam-tournaments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://anypedia.ru/organizer/skeweresports</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://anypedia.ru/organizer/reflection-league</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://anypedia.ru/organizer/rampage-tournaments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- ==================== КОМАНДЫ ==================== -->
 
   <url>
