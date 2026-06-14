@@ -15,6 +15,38 @@
 
 const tournaments = [  
     {      
+    "id": "Bedlam-Season-4-Division-1",
+    "title": "Bedlam Season 4 Division 1",
+    "limit": "До 25.000 MMR на команду",
+    "start": "2026-06-20",
+    "end": "2026-06-28",
+    "startTime": "17:00",
+    "prize": "20.000₽",
+    "location": "СНГ",
+    "teams": 32,
+    "winner": "TBD",
+    "format": "Group Stage + Double Elimination",
+    "organizer": "Bedlam Tournaments",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/bedlamtournaments",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "", "team": "" }
+    ]
+},
+    {      
     "id": "ECHO-Rapture-x-Rampage-TURIK-1",
     "title": "ECHO Rapture x Rampage TURIK",
     "limit": "До 25.000 MMR на команду",
@@ -162,9 +194,7 @@ const tournaments = [
     teamsList: [],
         casters: [
         { name: "pepepainstv", link: "https://twitch.tv/pepepainstv" },
-        { name: "waitureally", link: "https://twitch.tv/waitureally" },
         { name: "9kael", link: "https://twitch.tv/9kael" },
-        { name: "zyat0r0", link: "https://www.twitch.tv/zyat0r0" },
         { name: "lebowski", link: "https://www.twitch.tv/lebowskidota" },
         { name: "yosumo", link: "https://www.twitch.tv/yosumo_doto" },
     ],
@@ -439,8 +469,8 @@ const tournaments = [
     "id": "reflection-league-6",
     "title": "Reflection League 6",
     "limit": "До 35.500 MMR на команду",
-    "start": "2026-06-14",
-    "end": "2026-06-14",
+    "start": "2026-06-21",
+    "end": "2026-06-21",
     "startTime": "14:00",
     "prize": "TBD",
     "location": "СНГ",
