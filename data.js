@@ -41,7 +41,7 @@ const tournaments = [
     "bracketEmbed": "",
     "registrationLink": "",
     "telegramLink": "https://t.me/bedlamtournaments",
-    "description": "",
+    "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
     "prizePool": [
         { "place": 1, "amount": "", "team": "" }
     ]
