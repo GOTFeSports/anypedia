@@ -157,14 +157,17 @@ const teams = [
     prize: ">4.000₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
-    description: "СНГ-команда, существовавшая с 2025 по 2026 год. За время выступлений коллектив неоднократно показывал достойные результаты на региональных турнирах и сумел завоевать чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior считалась одной из заметных молодых команд своей сцены, однако в мае 2026 года состав был официально распущен.",
+    description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
     activeRoster: [
+      { nick: "cotsu", pos: 1, joined: "2026-05-31" },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14" },
+      { nick: "popi", pos: 3, joined: "2025-05-14" },
+      { nick: "Dark Light", pos: 4, joined: "2026-05-31" },
+      { nick: "Freak", pos: 5, joined: "2026-05-31" },
     ],
     formerPlayers: [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
-      { nick: "popi", pos: 3, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
-      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
+      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
       { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
     ],
     tournaments: [
@@ -251,7 +254,7 @@ const teams = [
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
     activeRoster: [
-      { nick: "ИНП",                      pos: 1, joined: "2026-01-03" },
+      { nick: "Woods",                      pos: 1, joined: "2026-06-09" },
       { nick: "зато уютно умирать",       pos: 2, joined: "2026-01-03" },
       { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" },
       { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" },
