@@ -156,20 +156,20 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/cYzysAHgJd",
         "rules": "https://t.me/bedlamtournaments/257?comment=485",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/BSC1X1"
     },
     "teamsList": [],
     "casters": [
         {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
         {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/BSC1X1/module",
     "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSeMY67ncN0H96YW7lJniypg2Ee_u6NO3zGg6l_QOmHCFT81Xw/viewform",
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "BEDLAM SUMMER CUP 1X1 - турнир с форматом Solo Mid 1x1 который пройдет 14 июня. Призовой фонд составит 5.000 рублей, с бесплатным входом. Изначально даётся пул из 12 героев. Путём голосования игроки выбирают 5 героев. (в отдельном телеграмм канале где будут только участники турнира). Затем каждый игрок в паре банит по 2 героя из 5-ти выбранных. В итоге остаётся 1 герой на котором пары играют BO1. (финал BO3). Сторона на карту выбирается через /roll.",
     "prizePool": [
-        { "place": 1, "amount": "3.500₽", "team": "" },
-        { "place": 2, "amount": "1.500₽", "team": "" },
+        { "place": 1, "amount": "3.500₽", "team": "tdd" },
+        { "place": 2, "amount": "1.500₽", "team": " Imortall_boy" },
     ]
 },
   {
