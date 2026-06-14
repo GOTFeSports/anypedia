@@ -193,6 +193,8 @@ const tournaments = [
     },
     teamsList: [],
         casters: [
+        { name: "pepepainstv", link: "https://twitch.tv/pepepainstv" },
+        { name: "9kael", link: "https://twitch.tv/9kael" },
         { name: "lebowski", link: "https://www.twitch.tv/lebowskidota" },
         { name: "yosumo", link: "https://www.twitch.tv/yosumo_doto" },
     ],
