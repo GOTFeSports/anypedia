@@ -17,10 +17,10 @@ const tournaments = [
     {      
     "id": "Bedlam-Season-4-Division-1",
     "title": "Bedlam Season 4 Division 1",
-    "limit": "До 25.000 MMR на команду",
+    "limit": "До 9.000 MMR на игрока",
     "start": "2026-06-20",
     "end": "2026-06-28",
-    "startTime": "17:00",
+    "startTime": "16:00",
     "prize": "20.000₽",
     "location": "СНГ",
     "teams": 32,
