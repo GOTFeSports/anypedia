@@ -133,8 +133,8 @@ const tournaments = [
     "prizePool": [
         { "place": 1, "amount": "67.000₽", "team": "" }
     ],
-    "registrationStart": "",
-    "registrationEnd": "",
+    "registrationStart": "2026-06-28",
+    "registrationEnd": "2026-07-20",
     "gameFormat": "Captains Draft"
 },
     {
