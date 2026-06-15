@@ -97,7 +97,9 @@ const tournaments = [
         "rules": "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
         "bracket": ""
     },
-    "teamsList": [],
+    "teamsList": [
+         {"name": "Gray Matter", "logo": "dota2.png", "roster": [{"nick": "ロキシー", "pos": 1}, {"nick": "control", "pos": 2}, {"nick": "nookie56", "pos": 3}, {"nick": "新神", "pos": 4}, {"nick": "écいouいteも", "pos": 5}]},
+    ],
     "casters": [],
     "bracketEmbed": "",
     "registrationLink": "https://forms.gle/BGr29FgBjSfwYCbj6",
