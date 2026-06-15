@@ -149,7 +149,7 @@ const tournaments = [
     "prize": "5.000₽",
     "location": "СНГ",
     "teams": 128,
-    "winner": "TBD",
+    "winner": "tdd",
     "format": "Single Elimination",
     "organizer": "Bedlam Tournaments",
     "links": {
@@ -182,7 +182,7 @@ const tournaments = [
     prize: "20.000₽",
     location: "СНГ",
     teams: 32,
-    winner: "TBD",
+    winner: "VMYASO200",
     format: "Double Elimination",
     organizer: "Immortality",
     links: {
@@ -203,9 +203,9 @@ const tournaments = [
     telegramLink: "https://t.me/cultimm",
     description: "The Trial of Immortality 5 — 13-14 июня в 13:00 МСК, Double Elimination, Captains Draft, BO1 (гранд-финал BO3), лимит MMR 30000 на команду (10000 на игрока), 16-32 команды, взнос 750₽, призовой фонд 20000₽ (1-е место — 10000₽, 2-е — 6000₽, 3-е — 4000₽). Организатор: Immortality.",
     prizePool: [
-        { place: 1, amount: "10.000₽", team: "" },
-        { place: 2, amount: "6.000₽", team: "" },
-        { place: 3, amount: "4.000₽", team: "" }
+        { place: 1, amount: "10.000₽", team: "VMYASO200" },
+        { place: 2, amount: "6.000₽", team: "Rakuzan" },
+        { place: 3, amount: "4.000₽", team: "Veni Vidi Vici" }
     ]
 },
   {
