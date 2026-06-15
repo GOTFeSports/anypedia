@@ -15,7 +15,7 @@ const tournaments = [
     "links": {
         "dotabuff": "",
         "discord": "https://discord.gg/FktVXm4gRD",
-        "rules": "",
+        "rules": "https://t.me/bedlamtournaments/277?comment=509",
         "bracket": ""
     },
     "teamsList": [],
