@@ -1,8 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^team/([^/]+)/?$ team.html?id=$1 [L,QSA]
-RewriteRule ^([^/]+)/?$ tournament.html?id=$1 [L,QSA]
-RewriteRule ^([^/]+)/?$ organizers-list.html?id=$1 [L,QSA]
-RewriteRule ^([^/]+)/?$ teams-list.html?id=$1 [L,QSA]
