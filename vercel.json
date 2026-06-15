@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/organizer/:id",
@@ -13,7 +14,4 @@
       "destination": "/tournament.html?id=:id"
     }
   ]
-},
-{
-  "cleanUrls": true
 }
