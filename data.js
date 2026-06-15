@@ -24,14 +24,14 @@ const tournaments = [
         {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
     ],
     "bracketEmbed": "",
-    "registrationLink": "",
+    "registrationLink": "https://forms.gle/iajJB3njm95yvNrt5",
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
     "prizePool": [
         { "place": 1, "amount": "", "team": "" }
     ],
-    "registrationStart": "",
-    "registrationEnd": "",
+    "registrationStart": "2026-06-15",
+    "registrationEnd": "2026-06-19",
     "gameFormat": "Captains Mode"
 },
     {      
