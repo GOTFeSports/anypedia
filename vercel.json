@@ -13,7 +13,7 @@
       "destination": "/tournament.html?id=:id"
     }
   ]
-}
+},
 {
   "cleanUrls": true
 }
