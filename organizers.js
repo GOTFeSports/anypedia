@@ -126,10 +126,87 @@ function organizerAllNames(org) {
   return [org.name, ...list].filter(Boolean).map(normOrgStr);
 }
 
-/* Найти организатора по строке из поля tournament.organizer */
+/* Разбивает строку организатора на отдельные "куски" —
+   на случай коллабораций вида "ECHO Rapture & RAMPAGE Tournaments",
+   "Organizer1 x Organizer2", "A, B" и т.д. */
+function splitOrganizerName(name) {
+  return String(name || '')
+    .split(/\s*(?:&|\+|,|\/|×| x | X | vs | VS | и )\s*/)
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
+/* Найти организатора по строке из поля tournament.organizer.
+   Сначала пробуем точное совпадение всей строки, затем —
+   совпадение по отдельным частям (для коллабораций). */
 function findOrganizerByName(name) {
   if (!name) return null;
-  const key = normOrgStr(name);
   const list = typeof organizers !== 'undefined' ? organizers : [];
-  return list.find(o => organizerAllNames(o).includes(key)) || null;
+
+  const key = normOrgStr(name);
+  let found = list.find(o => organizerAllNames(o).includes(key));
+  if (found) return found;
+
+  for (const part of splitOrganizerName(name)) {
+    const partKey = normOrgStr(part);
+    if (!partKey) continue;
+    found = list.find(o => organizerAllNames(o).includes(partKey));
+    if (found) return found;
+  }
+
+  return null;
+}
+
+/* Найти ВСЕХ организаторов, упомянутых в строке (для коллабораций) */
+function findAllOrganizersByName(name) {
+  if (!name) return [];
+  const list = typeof organizers !== 'undefined' ? organizers : [];
+  const result = [];
+  const seen = new Set();
+
+  const tryAdd = (key) => {
+    const found = list.find(o => organizerAllNames(o).includes(key));
+    if (found) {
+      const id = getOrganizerId(found);
+      if (!seen.has(id)) { seen.add(id); result.push(found); }
+    }
+  };
+
+  tryAdd(normOrgStr(name));
+  for (const part of splitOrganizerName(name)) {
+    tryAdd(normOrgStr(part));
+  }
+
+  return result;
+}
+
+/* Получить все турниры конкретного организатора (с учётом коллабораций —
+   турнир засчитывается организатору, если он упомянут где-либо в поле organizer) */
+function getOrganizerTournaments(org) {
+  if (!org) return [];
+  const allT = typeof tournaments !== 'undefined' ? tournaments : [];
+  const oid = getOrganizerId(org);
+  return allT.filter(t => {
+    const matched = findAllOrganizersByName(t.organizer);
+    return matched.some(m => getOrganizerId(m) === oid);
+  });
+}
+
+/* Автоматический подсчёт суммарного призового фонда организатора
+   на основе всех его турниров из data.js */
+function calcOrganizerPrize(org) {
+  if (!org) return null;
+  const myT = getOrganizerTournaments(org);
+
+  let total = 0;
+  let hasParsed = false;
+  myT.forEach(t => {
+    const raw = String(t.prize || '');
+    // Убираем пробелы/точки-разделители тысяч, ищем число
+    const m = raw.replace(/\s/g, '').replace(/\./g, '').match(/(\d+)/);
+    if (m) { total += parseInt(m[1], 10); hasParsed = true; }
+  });
+
+  if (!hasParsed) return null;
+  return total.toLocaleString('ru-RU') + '₽';
 }

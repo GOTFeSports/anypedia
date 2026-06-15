@@ -1,18 +1,3 @@
-// =============================================
-//  Anypedia — Tournament Data
-//  Добавьте startTime в формате "HH:MM" для
-//  отображения таймера обратного отсчёта.
-//
-//  Дополнительные ссылки для правого меню турнира:
-//  links: {
-//    dotabuff: "https://...",
-//    discord:  "https://...",
-//    rules:    "https://...",
-//    bracket:  "https://..."
-//  }
-//  Пустые или отсутствующие ссылки не отображаются.
-// =============================================
-
 const tournaments = [  
     {      
     "id": "Bedlam-Season-4-Division-1",
@@ -44,7 +29,10 @@ const tournaments = [
     "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
     "prizePool": [
         { "place": 1, "amount": "", "team": "" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
     {      
     "id": "ECHO-Rapture-x-Rampage-TURIK-1",
@@ -56,7 +44,6 @@ const tournaments = [
     "prize": "2.500₽",
     "location": "СНГ",
     "teams": 32,
-    "winner": "ANTI-PUSSY-BOYS",
     "format": "Single Elimination",
     "organizer": "ECHO Rapture & RAMPAGE Tournaments",
     "links": {
@@ -76,7 +63,10 @@ const tournaments = [
     "description": "Турнир для игроков до 25.000 MMR на команду. Регистрация бесплатная. Обязательные условия: подписка на Telegram-каналы RAMPAGE TOURIKS и ECHO RAPTURE. Если сайт регистрации не открывается, необходимо использовать VPN.",
     "prizePool": [
         { "place": 1, "amount": "2.500₽", "team": "ANTI-PUSSY-BOYS" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
     {
     "id": "SkewerEsports-Season-3",
@@ -109,7 +99,10 @@ const tournaments = [
         { "place": 1, "amount": "6.000₽", "team": "" },
         { "place": 2, "amount": "2.000₽", "team": "" },
         { "place": "MVP", "amount": "500₽", "team": "" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
     {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
@@ -139,7 +132,10 @@ const tournaments = [
     "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).",
     "prizePool": [
         { "place": 1, "amount": "67.000₽", "team": "" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Draft"
 },
     {
     "id": "Bedlam-Summer-Cup-1x1",
@@ -172,7 +168,10 @@ const tournaments = [
     "prizePool": [
         { "place": 1, "amount": "3.500₽", "team": "tdd" },
         { "place": 2, "amount": "1.500₽", "team": " Imortall_boy" },
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Solo Mid 1vs1"
 },
   {
     id: "The-Trial-of-Immortality-5",
@@ -208,7 +207,10 @@ const tournaments = [
         { place: 1, amount: "10.000₽", team: "VMYASO200" },
         { place: 2, amount: "6.000₽", team: "Rakuzan" },
         { place: 3, amount: "4.000₽", team: "Veni Vidi Vici" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Draft"
 },
   {
     "id": "rampage-pulik-3",
@@ -239,7 +241,10 @@ const tournaments = [
     "description": "RAMPAGE PULIK #3 — турнир для игроков до 3.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Призовой фонд 1.000₽ (может быть увеличен). Дата проведения: 6-7 июня 2026. Регистрация через @visagebroken.",
     "prizePool": [
         { "place": 1, "amount": "1.000₽", "team": "HalalTeam" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "reflection-league-1",
@@ -270,7 +275,10 @@ const tournaments = [
     "description": "Reflection League — турнир 5x5 в режиме Captains Mode. Призовой фонд 6000₽. Турнир прошёл 31 января 2026 года в 15:00 МСК. Победитель — Xtreme Gaming Team.",
     "prizePool": [
         { "place": 1, "amount": "6.000₽", "team": "Xtreme Gaming Team" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "reflection-league-2",
@@ -308,7 +316,10 @@ const tournaments = [
     "description": "Reflection League №2 в формате Immortal Draft + Captain’s Mode. Индивидуальная регистрация. Игроки играют серию матчей с разными тиммейтами. Победители определяются по количеству побед. Призовой фонд 5000₽ на 5 лучших игроков.",
     "prizePool": [
         { "place": "1-5", "amount": "5000₽ (общий)", "team": "Gavr, getto228, Amurik, okaycool, Abakio" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Immortal Draft"
 },
   {
     "id": "reflection-league-3",
@@ -340,7 +351,10 @@ const tournaments = [
     "prizePool": [
         { "place": 1, "amount": "5.000₽", "team": "Angetsu" },
         { "place": 2, "amount": "3.000₽", "team": "RAKUZAN TEAM" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "reflection-league-4",
@@ -371,7 +385,10 @@ const tournaments = [
     "description": "Reflection League №4 — турнир 5x5 в режиме Captains Mode без ограничений по MMR. Взнос 500₽ с команды. Призовой фонд 6.000₽. Дата проведения: 21 февраля 2026 в 15:00.",
     "prizePool": [
         { "place": 1, "amount": "6.000₽", "team": "DF JUNIOR 1" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "reflection-league-5",
@@ -403,7 +420,10 @@ const tournaments = [
     "description": "Reflection League №5 — турнир 5x5 в режиме Captains Mode. Дата проведения: 22 марта 2026 в 14:00. Призовой фонд будет анонсирован. Победитель — Xtreme Gaming.",
     "prizePool": [
         { "place": 1, "amount": "4.000₽", "team": "Xtreme Gaming" },
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "rampage-turik-1",
@@ -434,7 +454,10 @@ const tournaments = [
     "description": "RAMPAGE TURIK #1 — открытый турнир без ограничений по MMR. Формат Single Elimination (BO1), гранд-финал BO3. Призовой фонд 6500₽ + дополнительные призы от WHYNOT.GAME. Дата проведения: 14-15 марта 2026.",
     "prizePool": [
         { "place": 1, "amount": "6.500₽", "team": "doublerr" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "rampage-kurik-4",
@@ -465,7 +488,10 @@ const tournaments = [
     "description": "RAMPAGE KURIK #4 — турнир для игроков до 5000 MMR. Формат Single Elimination (BO1), гранд-финал BO3. Призовой фонд 4000₽. Дата проведения: 4-5 апреля 2026.",
     "prizePool": [
         { "place": 1, "amount": "4.000₽", "team": "SiniyLis" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "reflection-league-6",
@@ -496,7 +522,10 @@ const tournaments = [
     "description": "Reflection League #6 — возвращение популярной лиги. Лимит 35 500 MMR на команду. Взнос 500₽ с команды. Дата проведения: 7 июня 2026. Призовой фонд будет объявлен в зависимости от количества участников. Минимум 10 команд для старта турнира.",
     "prizePool": [
         { "place": 1, "amount": "100%", "team": "" },
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "bedlam-battles-season-1",
@@ -543,7 +572,10 @@ const tournaments = [
         {"place": 1, "amount": "3000₽", "team": "Team eblan's"},
         {"place": 2, "amount": "1800₽", "team": "Storm Swift"},
         {"place": 3, "amount": "1200₽", "team": "Team Zei"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
 {
     "id": "bedlam-battles-season-2",
@@ -592,7 +624,10 @@ const tournaments = [
         {"place": 1, "amount": "3500₽", "team": "AnyRage"},
         {"place": 2, "amount": "2100₽", "team": "Dark Horse"},
         {"place": 3, "amount": "1400₽", "team": "TEAM SPIRT"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
 {
     "id": "bedlam-christmas-cup",
@@ -646,7 +681,10 @@ const tournaments = [
         {"place": 1, "amount": "10000₽", "team": "СТЕПАН PRIME"},
         {"place": 2, "amount": "6000₽", "team": "Chill Guys"},
         {"place": 3, "amount": "4000₽", "team": "Never Back Down"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
 {
     "id": "bedlam-winter-cup-division-1",
@@ -693,7 +731,10 @@ const tournaments = [
         {"place": 1, "amount": "12500₽", "team": "МЫ"},
         {"place": 2, "amount": "7500₽", "team": "anonymous dota players"},
         {"place": 3, "amount": "5000₽", "team": "Angetsu"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
 {
     "id": "bedlam-winter-cup-division-2",
@@ -744,7 +785,10 @@ const tournaments = [
         {"place": 1, "amount": "10000₽", "team": "sigma aura"},
         {"place": 2, "amount": "6000₽", "team": "MMAshonki61"},
         {"place": 3, "amount": "4000₽", "team": "DF RISING 2"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
 {
     "id": "bedlam-battles-season-3",
@@ -795,7 +839,10 @@ const tournaments = [
         {"place": 1, "amount": "7500₽", "team": "Never Back Down"},
         {"place": 2, "amount": "4500₽", "team": "Fish sticks"},
         {"place": 3, "amount": "3000₽", "team": "BuLxS"}
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     id: "Bedlam-Swamp-Wars",
@@ -845,7 +892,10 @@ const tournaments = [
         { place: 1, amount: "5.000₽", team: "Gitlz" },
         { place: 2, amount: "3.000₽", team: "all my members ceo" },
         { place: 3, amount: "2.000₽", team: "LETO jr" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Draft"
 },
 {
     id: "Bedlam-Spring-Cup",
@@ -897,7 +947,10 @@ const tournaments = [
         { place: 1, amount: "12.500₽", team: "Bedlam Battle Team" },
         { place: 2, amount: "7.500₽", team: "DF Junior" },
         { place: 3, amount: "5.000₽", team: "EGOISTO Team" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     id: "Armagedon-Championship-S8",
@@ -944,7 +997,10 @@ const tournaments = [
     prizePool: [
         { place: 1, amount: "7.000₽", team: "VHS Team" },
         { place: 2, amount: "3.000₽", team: "sigma aura" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     id: "Bedlam-Waiting-For-Summer-Cup",
@@ -1000,7 +1056,10 @@ const tournaments = [
     prizePool: [
         { place: 1, amount: "10.000₽", team: "Gitlz" },
         { place: 2, amount: "5.000₽", team: "Podosinovik" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
     {
     id: "AnyLvL-GOTF-Special-1",
@@ -1044,7 +1103,10 @@ const tournaments = [
     
     prizePool: [
         { place: 1, amount: "1.000₽", team: "Eaters of Fear" },
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
     {
     id: "AnyLvL-GOTF-Special-2",
@@ -1089,7 +1151,10 @@ const tournaments = [
     prizePool: [
         { place: 1, amount: "2.000₽", team: "TEIKO" },
         { place: 2, amount: "1.000₽", team: "ЧВК \"ЛитЭнерджи\"" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     "id": "SkewerEsports-Season-2",
@@ -1259,7 +1324,10 @@ const tournaments = [
     "prizePool": [
         { "place": 1, "amount": "6.000₽", "team": "mid diff" },
         { "place": "1v1 Mid", "amount": "500₽", "team": "Baby, Nice Try!" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
 },
   {
     id: "SkewerEsports-Season-1",
@@ -1307,7 +1375,10 @@ const tournaments = [
     description: "Skewer Esports Season 1 — онлайн-турнир Dota 2, 5×5, bo1 (финал bo3), лимит суммарного MMR команды — 35.000, призовой фонд — 4000₽ (1 место — 3500₽, MVP турнира — 500₽). Взнос 200₽ с команды, минимально 10 команд. Победитель: Podosinoviki (2:1 против NDB). MVP: Мишка Морген (Podosinoviki). Турнир завершён.",
     prizePool: [
       { place: 1, amount: "3.500₽ + 500₽ MVP", team: "Podosinoviki" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
   },
 
   {
@@ -1360,6 +1431,9 @@ const tournaments = [
     prizePool: [
       { place: 1, amount: "9.000₽",  team: "EGOISTO Team" },
       { place: 2, amount: "4.500₽",  team: "Neki4+4" }
-    ]
+    ],
+    "registrationStart": "",
+    "registrationEnd": "",
+    "gameFormat": "Captains Mode"
   }
 ];

@@ -141,6 +141,20 @@ a:hover { color: var(--accent2); }
   margin-top: 2px;
 }
 
+/* ── SITE NAV ── */
+.site-nav {
+  display: flex; align-items: center; gap: 4px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 10px; padding: 4px;
+}
+.nav-link {
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+  color: var(--text-muted); padding: 6px 14px; border-radius: 7px;
+  text-decoration: none; transition: color .2s, background .2s; white-space: nowrap;
+}
+.nav-link:hover { color: var(--text); background: var(--bg2); }
+.nav-link.active { color: var(--accent); background: var(--bg2); }
+
 .header-search-wrap {
   position: relative;
   width: 320px;
@@ -807,6 +821,8 @@ tbody tr:hover {
   .header-inner { padding: 10px 16px; gap: 10px; flex-wrap: wrap; }
   .header-search-wrap { width: 100%; order: 3; }
   .header-search { width: 100%; }
+  .site-nav { order: 2; width: 100%; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .nav-link { padding: 6px 12px; font-size: 12px; }
 
   .banner-wrap { padding: 0 16px; margin-top: 14px; }
   #mainBanner, .banner-placeholder { height: 110px; }
@@ -999,13 +1015,18 @@ tbody tr:hover {
   <div class="header-inner">
     <div class="logo-wrap">
       <a class="logo" href="/">Anypedia</a>
-      <div class="logo-sub">Dota 2 · Турниры СНГ</div>
+      <div class="logo-sub">Киберспортивное Dota 2 Wiki</div>
     </div>
+    <nav class="site-nav">
+      <a class="nav-link active" href="/">Турниры</a>
+      <a class="nav-link" href="/teams-list.html">Команды</a>
+      <a class="nav-link" href="/organizers-list.html">Организаторы</a>
+    </nav>
     <div class="header-search-wrap" id="searchWrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <input id="search" class="header-search" type="text" placeholder="Поиск турниров и команд…" autocomplete="off" />
+      <input id="search" class="header-search" type="text" placeholder="Поиск…" autocomplete="off" />
       <div class="search-dropdown" id="searchDropdown"></div>
     </div>
   </div>
@@ -1021,7 +1042,7 @@ tbody tr:hover {
   </a>
   <a class="banner-placeholder" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener"
      id="bannerPlaceholder" style="display:none; text-decoration:none;">
-     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg> 
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg> 
     &nbsp; Переходите в наш Телеграм канал.
   </a>
 </div>
@@ -1088,7 +1109,7 @@ tbody tr:hover {
 
   <!-- Будущие -->
   <section>
-    <div class="section-label">📅 Будущие турниры</div>
+    <div class="section-label">Будущие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1104,7 +1125,7 @@ tbody tr:hover {
 
   <!-- Текущие -->
   <section>
-    <div class="section-label">🔴 Текущие турниры</div>
+    <div class="section-label">Текущие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1120,7 +1141,7 @@ tbody tr:hover {
 
   <!-- Прошедшие -->
   <section>
-    <div class="section-label">✅ Прошедшие турниры</div>
+    <div class="section-label">Прошедшие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1311,6 +1332,14 @@ function buildRow(t) {
     : `${formatDateShort(t.start)} — ${formatDate(t.end)}`;
   const pageUrl  = `${siteBase}tournament.html?id=${t.id}`;
   const link     = `${siteBase}tournament.html?id=${t.id}`;
+  const winner =
+  t.winner ||
+  (
+    Array.isArray(t.prizePool)
+      ? t.prizePool.find(p => Number(p.place) === 1)?.team
+      : null
+  ) ||
+  '—';
 
   return `
     <tr onclick="location.href='${link}'">
@@ -1321,7 +1350,7 @@ function buildRow(t) {
       <td>${t.location || '—'}</td>
       <td>${t.teams ?? '—'}</td>
       <td><span class="tag ${statusClass[st]}">${statusLabel[st]}</span></td>
-      <td class="winner-cell">${renderWinner(t.winner || '—')}</td>
+      <td class="winner-cell">${renderWinner(winner)}</td>
       <td>
         <button class="share-btn" title="Поделиться"
           onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
@@ -1343,6 +1372,14 @@ function buildCard(t) {
     : `${formatDateShort(t.start)} — ${formatDateShort(t.end)}`;
   const pageUrl = `${siteBase}tournament.html?id=${t.id}`;
   const link    = `${siteBase}tournament.html?id=${t.id}`;
+  const winner =
+  t.winner ||
+  (
+    Array.isArray(t.prizePool)
+      ? t.prizePool.find(p => Number(p.place) === 1)?.team
+      : null
+  ) ||
+  '—';
 
   return `
     <div class="t-card" onclick="location.href='${link}'">
@@ -1354,7 +1391,7 @@ function buildCard(t) {
         <span>📅 <b>${dateText}</b></span>
         <span>🌍 <b>${t.location || '—'}</b></span>
         <span>👥 <b>${t.teams ?? '—'} команд</b></span>
-        <span>🏆 <b>${renderWinner(t.winner || 'TBD')}</b></span>
+        <span>🏆 <b>${renderWinner(winner)}</b></span>
       </div>
       <div class="t-card-bottom">
         <div class="t-card-prize">${t.prize || '—'}</div>

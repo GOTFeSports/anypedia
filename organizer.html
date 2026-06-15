@@ -412,6 +412,20 @@ a:hover { color: var(--accent2); }
   .team-logo { width: 48px; height: 48px; }
 }
 
+/* SITE NAV */
+.site-nav {
+  display: flex; align-items: center; gap: 4px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 10px; padding: 4px;
+}
+.nav-link {
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+  color: var(--text-muted); padding: 6px 14px; border-radius: 7px;
+  text-decoration: none; transition: color .2s, background .2s; white-space: nowrap;
+}
+.nav-link:hover { color: var(--text); background: var(--bg2); }
+.nav-link.active { color: var(--accent); background: var(--bg2); }
+
 /* GLOBAL SEARCH */
 .header-search-wrap { position: relative; width: 280px; }
 .header-search {
@@ -469,6 +483,11 @@ a:hover { color: var(--accent2); }
   color: var(--text-muted); background: var(--bg3);
 }
 .sd-empty { padding: 16px 14px; color: var(--text-muted); font-size: 13px; text-align: center; }
+@media (max-width: 640px) {
+  .header-search-wrap { width: 100%; order: 3; }
+  .site-nav { order: 2; width: 100%; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .nav-link { padding: 6px 12px; font-size: 12px; }
+}
 </style>
 </head>
 <body>
@@ -478,13 +497,18 @@ a:hover { color: var(--accent2); }
   <div class="header-inner">
     <div class="logo-wrap">
       <a class="logo" id="homeLink" href="/index.html">Anypedia</a>
-      <div class="logo-sub">Dota 2 · Организаторы</div>
+      <div class="logo-sub">Киберспортивное Dota 2 Wiki</div>
     </div>
+    <nav class="site-nav">
+      <a class="nav-link" href="/index.html">Турниры</a>
+      <a class="nav-link" href="/teams-list.html">Команды</a>
+      <a class="nav-link active" href="/organizers-list.html">Организаторы</a>
+    </nav>
     <div class="header-search-wrap" id="searchWrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <input id="search" class="header-search" placeholder="Поиск турниров и команд…" autocomplete="off"/>
+      <input id="search" class="header-search" placeholder="Поиск…" autocomplete="off"/>
       <div class="search-dropdown" id="searchDropdown"></div>
     </div>
   </div>

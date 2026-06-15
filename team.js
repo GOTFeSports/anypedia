@@ -488,11 +488,15 @@ document.getElementById('teamInfobox').innerHTML = `
   </div>
   <a class="btn btn-tg ${команда.telegramLink ? '' : 'is-disabled'}"
      href="${экранировать(команда.telegramLink || '#')}" target="_blank" rel="noopener">
-    ✈️ Telegram
+     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
+    Telegram
   </a>
   <a class="btn btn-captain ${команда.captainLink ? '' : 'is-disabled'}"
      href="${экранировать(команда.captainLink || '#')}" target="_blank" rel="noopener">
-    👤 Связаться с капитаном
+     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-3.314 0-10 1.657-10 5v2h20v-2c0-3.343-6.686-5-10-5z"/>
+</svg>
+    Связаться с капитаном
   </a>
 `;
 
