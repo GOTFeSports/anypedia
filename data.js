@@ -817,7 +817,7 @@ const tournaments = [
         bracket: "https://challonge.com/ru/BSW123"
     },
     teamsList: [
-        { name: "Bedlam Battle Team", logo: "dota2.png", roster: [ { nick: "arcotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "Edsai1", pos: 3 }, { nick: "ARD3D", pos: 4 }, { nick: "oleg41567", pos: 5 } ] },
+        { name: "Bedlam Battle Team", logo: "bedlamred.png", roster: [ { nick: "arcotsu", pos: 1 }, { nick: "imortall_boy", pos: 2 }, { nick: "Edsai1", pos: 3 }, { nick: "ARD3D", pos: 4 }, { nick: "oleg41567", pos: 5 } ] },
         { name: "NoLittleCancer", logo: "dota2.png", roster: [ { nick: "neriel01", pos: 1 }, { nick: "Leo07Mego", pos: 2 }, { nick: "Sir_Damind", pos: 3 }, { nick: "e_cherentsov", pos: 4 }, { nick: "Qissan", pos: 5 } ] },
         { name: "Gitlz", logo: "gitlz.png", roster: [ { nick: "konfetkaaap", pos: 1 }, { nick: "puziblinchik96", pos: 2 }, { nick: "Idcwhour", pos: 3 }, { nick: "Pod_metr0", pos: 4 }, { nick: "Phwvnu", pos: 5 } ] },
         { name: "Leto jr", logo: "dota2.png", roster: [ { nick: "LookAtTeenwave", pos: 1 }, { nick: "Kricsalis_mode", pos: 2 }, { nick: "sooqa7", pos: 3 }, { nick: "Mikhael16", pos: 4 }, { nick: "HSMG321", pos: 5 } ] },
