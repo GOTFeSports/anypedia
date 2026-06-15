@@ -56,7 +56,7 @@ const tournaments = [
     "prize": "2.500₽",
     "location": "СНГ",
     "teams": 32,
-    "winner": "TBD",
+    "winner": "ANTI-PUSSY-BOYS",
     "format": "Single Elimination",
     "organizer": "ECHO Rapture & RAMPAGE Tournaments",
     "links": {
