@@ -14,3 +14,6 @@
     }
   ]
 }
+{
+  "cleanUrls": true
+}
