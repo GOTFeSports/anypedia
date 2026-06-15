@@ -1,4 +1,107 @@
 const tournaments = [  
+        {
+    "id": "Special-3-Open-Qual",
+    "title": "Special 3: Open Qualification",
+    "limit": "До 37.500 MMR на команду",
+    "start": "2026-07-04",
+    "end": "2026-07-04",
+    "startTime": "14:00",
+    "prize": "Слот в CQ",
+    "location": "СНГ",
+    "teams": 32,
+    "winner": "TBD",
+    "format": "Single Elimination",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "Без описания.",
+    "prizePool": [
+        { "place": 1, "amount": "Слот в CQ", "team": "" },
+        { "place": 2, "amount": "Слот в CQ", "team": "" }
+    ],
+    "registrationStart": "2026-06-27",
+    "registrationEnd": "2026-07-03",
+    "gameFormat": "Elimination Draft"
+},
+      {
+    "id": "Special-3-Closed-Qual",
+    "title": "Special 3: Closed Qualification",
+    "limit": "До 37.500 MMR на команду",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
+    "startTime": "14:00",
+    "prize": "Слот в Special",
+    "location": "СНГ",
+    "teams": 8,
+    "winner": "TBD",
+    "format": "Split Bracket",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "Без описания.",
+    "prizePool": [
+        { "place": 1, "amount": "Слот в Special", "team": "" },
+        { "place": 2, "amount": "Слот в Special", "team": "" },
+    ],
+          "gameFormat": "Elimination Draft"
+},
+  {
+    "id": "AnyLvL-GOTF-Special-3",
+    "title": "AnyLvL x GOTF eSports: Special 3",
+    "limit": "До 37.500 MMR на команду",
+    "start": "2026-07-10",
+    "end": "2026-07-12",
+    "startTime": "19:00",
+    "prize": "TBD",
+    "location": "СНГ",
+    "teams": 8,
+    "winner": "TBD",
+    "format": "Swiss Stage + Play offs",
+    "organizer": "AnyLvL Community x GOTF eSports",
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19830-anylvl-x-gotf-esports-special-3",
+        "discord": "https://discord.gg/3N4Jg6Jpak",
+        "rules": "",
+        "bracket": ""
+    },
+    "teamsList": [
+        {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "", "pos": 1}, {"nick": "", "pos": 2}, {"nick": "", "pos": 3}, {"nick": "", "pos": 4}, {"nick": "", "pos": 5}]},
+        {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "", "pos": 1}, {"nick": "", "pos": 2}, {"nick": "", "pos": 3}, {"nick": "", "pos": 4}, {"nick": "", "pos": 5}]}
+    ],
+    "casters": [
+        { "name": "TBD", "link": "" }
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "",
+    "telegramLink": "https://t.me/gotf_dota",
+    "description": "Без описания.",
+    "prizePool": [
+        { "place": 1, "amount": "100%", "team": "" },
+    ],
+        "gameFormat": "Elimination Draft"
+},
     {      
     "id": "Bedlam-Season-4-Division-1",
     "title": "Bedlam Season 4 Division 1",
