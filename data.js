@@ -87,8 +87,8 @@ const tournaments = [
         "bracket": ""
     },
     "teamsList": [
-        {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "", "pos": 1}, {"nick": "", "pos": 2}, {"nick": "", "pos": 3}, {"nick": "", "pos": 4}, {"nick": "", "pos": 5}]},
-        {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "", "pos": 1}, {"nick": "", "pos": 2}, {"nick": "", "pos": 3}, {"nick": "", "pos": 4}, {"nick": "", "pos": 5}]}
+        {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+        {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
     ],
     "casters": [
         { "name": "TBD", "link": "" }
