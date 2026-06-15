@@ -75,7 +75,7 @@ const tournaments = [
     "telegramLink": "https://t.me/rampagetournaments",
     "description": "Турнир для игроков до 25.000 MMR на команду. Регистрация бесплатная. Обязательные условия: подписка на Telegram-каналы RAMPAGE TOURIKS и ECHO RAPTURE. Если сайт регистрации не открывается, необходимо использовать VPN.",
     "prizePool": [
-        { "place": 1, "amount": "2.500₽", "team": "" }
+        { "place": 1, "amount": "2.500₽", "team": "ANTI-PUSSY-BOYS" }
     ]
 },
     {
