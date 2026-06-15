@@ -6,7 +6,7 @@ const tournaments = [
     "start": "2026-06-20",
     "end": "2026-06-28",
     "startTime": "16:00",
-    "prize": "20.000₽",
+    "prize": "25.000₽",
     "location": "СНГ",
     "teams": 32,
     "winner": "TBD",
@@ -28,7 +28,9 @@ const tournaments = [
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "", "team": "" }
+        { "place": 1, "amount": "12500₽", "team": "" },
+        { "place": 2, "amount": "7500₽", "team": "" },
+        { "place": 3, "amount": "5000₽", "team": "" },
     ],
     "registrationStart": "2026-06-15",
     "registrationEnd": "2026-06-19",
