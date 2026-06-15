@@ -5,4 +5,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^organizer/([^/]+)/?$ organizer.html?id=$1 [L,QSA]
 RewriteRule ^team/([^/]+)/?$ team.html?id=$1 [L,QSA]
 RewriteRule ^([^/]+)/?$ tournament.html?id=$1 [L,QSA]
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteRule ^([^/]+)/?$ organizers-list.html?id=$1 [L,QSA]
+RewriteRule ^([^/]+)/?$ teams-list.html?id=$1 [L,QSA]
