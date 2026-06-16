@@ -1,5 +1,40 @@
 const tournaments = [  
         {
+    "id": "Fast-Cup-Armagedon-S4",
+    "title": "Fast Cup Armagedon S4",
+    "limit": "До 35.000 MMR на команду.",
+    "start": "2026-06-20",
+    "end": "2026-06-21",
+    "startTime": "16:00",
+    "registrationStart": "2026-06-16",
+    "registrationEnd": "2026-06-21",
+    "prize": "20.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Armagedon Championship",
+    "bracketEmbed": "",
+    "registrationLink": "https://t.me/MetamindArmagedonbot",
+    "telegramLink": "https://t.me/armagedonchamp",
+    "description": "Турнир FAST CUP ARMAGEDON S4 по Dota 2 в формате 5x5 Captains mode. Система Single Elimination (на вылет). Проводится при наборе от 16 команд. Ограничение по рейтингу: 35000 MMR на команду. Турнир с входным взносом 1000 рублей с команды (200 рублей с человека).",
+    "prizePool": [
+        { "place": 1, "amount": "12.500₽", "team": "" },
+        { "place": 2, "amount": "5.000₽", "team": "" },
+        { "place": 3, "amount": "2.500₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "https://docs.google.com/document/d/1t3ujldMdXG6cEgK5-HuHRFMXadqVP9-65KEDExYiHj0/edit?usp=sharing",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
+        {
     "id": "Yarf-Cup-1",
     "title": "Yarf Cup 1 Dota 2 Tournaemnts",
     "limit": "Без лимита MMR",
