@@ -15,7 +15,7 @@ const tournaments = [
     "gameFormat": "Captains Mode",
     "organizer": "Armagedon Championship",
     "bracketEmbed": "",
-    "registrationLink": "https://t.me/MetamindArmagedonbot",
+    "registrationLink": "",
     "telegramLink": "https://t.me/armagedonchamp",
     "description": "Турнир FAST CUP ARMAGEDON S4 по Dota 2 в формате 5x5 Captains mode. Система Single Elimination (на вылет). Проводится при наборе от 16 команд. Ограничение по рейтингу: 35000 MMR на команду. Турнир с входным взносом 1000 рублей с команды (200 рублей с человека).",
     "prizePool": [
