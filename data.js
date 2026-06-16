@@ -1,5 +1,39 @@
 const tournaments = [  
         {
+    "id": "Enrage-Lowrank-69",
+    "title": "Enrage Lowrank #69",
+    "limit": "До 30.000 MMR на команду",
+    "start": "2026-06-20",
+    "end": "2026-06-21",
+    "startTime": "11:00",
+    "registrationStart": "2026-06-15",
+    "registrationEnd": "2026-06-20",
+    "prize": "12.000₽",
+    "location": "СНГ",
+    "teams": 28,
+    "format": "Double Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Enrage",
+    "bracketEmbed": "",
+    "registrationLink": "https://forms.gle/yrEiTYQrjsW3pY4b6",
+    "telegramLink": "https://t.me/enragetournaments",
+    "description": "Шестьдесят девятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в два дня, с нижней сеткой.",
+    "prizePool": [
+        { "place": 1, "amount": "8500₽", "team": "" },
+        { "place": 2, "amount": "3500₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-69",
+        "discord": "https://discord.com/invite/enrage",
+        "rules": "https://docs.google.com/document/d/1j2ClFyQKO9gDpAwGADx2albO4vO62bbEIuD5A0ihcDw/edit?usp=sharing",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
+        {
     "id": "Special-3-Open-Qual",
     "title": "Special 3: Open Qualification",
     "limit": "До 37.500 MMR на команду",
