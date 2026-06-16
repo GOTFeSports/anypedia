@@ -43,7 +43,7 @@ const tournaments = [
     "prize": "Слот в CQ",
     "location": "СНГ",
     "teams": 32,
-    "winner": "TBD",
+    "winner": "",
     "format": "Single Elimination",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -78,7 +78,7 @@ const tournaments = [
     "prize": "Слот в Special",
     "location": "СНГ",
     "teams": 8,
-    "winner": "TBD",
+    "winner": "",
     "format": "Split Bracket",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -111,7 +111,7 @@ const tournaments = [
     "prize": "TBD",
     "location": "СНГ",
     "teams": 8,
-    "winner": "TBD",
+    "winner": "",
     "format": "Swiss Stage + Play offs",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -146,7 +146,7 @@ const tournaments = [
     "prize": "25.000₽",
     "location": "СНГ",
     "teams": 32,
-    "winner": "TBD",
+    "winner": "",
     "format": "Group Stage + Double Elimination",
     "organizer": "Bedlam Tournaments",
     "links": {
@@ -217,7 +217,7 @@ const tournaments = [
     "prize": "8.500₽",
     "location": "СНГ",
     "teams": 10,
-    "winner": "TBD",
+    "winner": "",
     "format": "Single Elimination",
     "organizer": "SkewerEsports",
     "links": {
@@ -253,7 +253,7 @@ const tournaments = [
     "prize": "67.000₽",
     "location": "СНГ",
     "teams": 16,
-    "winner": "TBD",
+    "winner": "",
     "format": "Swiss Stage + Double Elimination",
     "organizer": "HATER ZDES`",
     "links": {
@@ -642,7 +642,7 @@ const tournaments = [
     "prize": "TBD",
     "location": "СНГ",
     "teams": 10,
-    "winner": "TBD",
+    "winner": "",
     "format": "Single Elimination",
     "organizer": "Reflection League",
     "links": {
