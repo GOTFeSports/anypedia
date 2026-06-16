@@ -1,11 +1,46 @@
 const tournaments = [  
         {
+    "id": "Yarf-Cup-1",
+    "title": "Yarf Cup 1 Dota 2 Tournaemnts",
+    "limit": "Без лимита MMR",
+    "start": "2026-06-28",
+    "end": "2026-06-28",
+    "startTime": "12:00",
+    "registrationStart": "2026-06-15",
+    "registrationEnd": "2026-06-28",
+    "prize": "1ю500₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Draft",
+    "organizer": "Yarf Cup",
+    "bracketEmbed": "",
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScZS3_JUZw7ctTaaGhgpG03MZpSq9u0vrm2L7T-ieVBFOEwMA/viewform?usp=dialog",
+    "telegramLink": "https://t.me/yarfcup",
+    "description": "Первый турнир от YARF CUP по Dota 2 в формате 5x5 Captains Draft. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
+    "prizePool": [
+        { "place": 1, "amount": "1500₽", "team": "" },
+        { "place": 2, "amount": "Привелегии", "team": "" },
+        { "place": 3, "amount": "Привелегии", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
+        {
     "id": "Enrage-Lowrank-69",
     "title": "Enrage Lowrank #69",
     "limit": "До 30.000 MMR на команду",
     "start": "2026-06-20",
     "end": "2026-06-21",
-    "startTime": "11:00",
+    "startTime": "13:00",
     "registrationStart": "2026-06-15",
     "registrationEnd": "2026-06-20",
     "prize": "12.000₽",
@@ -212,7 +247,7 @@ const tournaments = [
     "title": "SkewerEsports Season 3",
     "limit": "До 36.500 MMR на команду",
     "start": "2026-06-21",
-    "end": "2026-06-22",
+    "end": "2026-06-21",
     "startTime": "12:00",
     "prize": "8.500₽",
     "location": "СНГ",
