@@ -59,7 +59,7 @@ const tournaments = [
     ],
     "links": {
         "dotabuff": "",
-        "discord": "",
+        "discord": "https://discord.gg/ZwnPbEYtdf",
         "rules": "https://docs.google.com/document/d/1t3ujldMdXG6cEgK5-HuHRFMXadqVP9-65KEDExYiHj0/edit?usp=sharing",
         "bracket": ""
     },
@@ -228,6 +228,7 @@ const tournaments = [
         {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "Never Back Down", "logo": "nbdteam.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+        {"name": "HATER ZDES` Team", "logo": "haterzdes.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
     ],
     "casters": [
         { "name": "TBD", "link": "" }
