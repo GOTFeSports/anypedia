@@ -1,6 +1,6 @@
 const tournaments = [  
         {
-    "id": "The-Trial-of-Immortality-Season 6",
+    "id": "The-Trial-of-Immortality-Season-6",
     "title": "The Trial of Immortality Season 6",
     "limit": "До 30.000 MMR на команду",
     "start": "2026-06-27",
