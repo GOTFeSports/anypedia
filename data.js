@@ -1,5 +1,39 @@
 const tournaments = [  
         {
+    "id": "Twintournaments-1",
+    "title": "TWINTOURNAMENTS 1",
+    "limit": "До 50.000 MMR на команду",
+    "start": "2026-06-20",
+    "end": "2026-06-20",
+    "startTime": "14:00",
+    "registrationStart": "2026-06-17",
+    "registrationEnd": "2026-06-20",
+    "prize": "10.821₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Twin Tournaments",
+    "bracketEmbed": "",
+    "registrationLink": "https://discord.gg/2BWxgu3Gg",
+    "telegramLink": "https://t.me/Dota2twintournaments",
+    "description": "Бесплатный турнир по Dota 2 от TWINTOURNAMENTS. Все матчи проходят в формате Bo1, финал — Bo3. Обязательные условия участия: подписка на Telegram, Discord и Faceit организатора. Суммарный рейтинг команды не должен превышать 50 000 MMR. Турнир проводится при наборе 16 команд и более.",
+    "prizePool": [
+        { "place": 1, "amount": "7214₽", "team": "" },
+        { "place": 2, "amount": "3607₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/2BWxgu3Gg",
+        "rules": "",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
+        {
     "id": "Fast-Cup-Armagedon-S4",
     "title": "Fast Cup Armagedon S4",
     "limit": "До 35.000 MMR на команду.",
