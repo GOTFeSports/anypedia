@@ -1,5 +1,42 @@
 const tournaments = [  
         {
+    "id": "The-Trial-of-Immortality-Season 6",
+    "title": "The Trial of Immortality Season 6",
+    "limit": "До 30.000 MMR на команду",
+    "start": "2026-06-27",
+    "end": "2026-06-28",
+    "startTime": "13:00",
+    "registrationStart": "2026-06-17",
+    "registrationEnd": "2026-06-26",
+    "prize": "15.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Double Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Immortality",
+    "bracketEmbed": "",
+    "registrationLink": "https://t.me/questionnaireimm",
+    "telegramLink": "https://t.me/cultimm",
+    "description": "Шестой сезон турниров от Immortality. Взнос с команды 1000 рублей, все игры Best of 1, Грандфинал в формате Best of 3.",
+    "prizePool": [
+        { "place": 1, "amount": "7500₽", "team": "" },
+        { "place": 2, "amount": "4500₽", "team": "" },
+        { "place": 2, "amount": "3000₽", "team": "" },
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/Vu8kNs39PX",
+        "rules": "https://t.me/reglamentbyimmortality",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "pepepainstv", "link": "https://twitch.tv/pepepainstv" },
+        { "name": "9kael", "link": "https://twitch.tv/9kael" },
+        { "name": "yosumo", "link": "https://www.twitch.tv/yosumo_doto" }
+    ],
+    "teamsList": []
+},
+        {
     "id": "Twintournaments-1",
     "title": "TWINTOURNAMENTS 1",
     "limit": "До 50.000 MMR на команду",
