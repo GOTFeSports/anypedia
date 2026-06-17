@@ -30,6 +30,26 @@
 
 const organizers = [
   {
+    "id": "Armagedon",
+    "name": "Armagedon Championship",
+    "aliases": ["Armagedon", "ARMAGEDON CHAMPIONSHIP"],
+    "logo": "arm.png",
+    "region": "СНГ",
+    "description": "ARMAGEDON CHAMPIONSHIP — организатор регулярных турниров по Dota 2 в формате 5x5. Проводит серии турниров FAST CUP ARMAGEDON с ограничением по рейтингу и солидными призовыми фондами. Турниры проходят в онлайн-формате. Имеет собственный бот для регистрации команд и чат для поиска игроков.",
+    "telegramLink": "https://t.me/armagedonchamp",
+    "discordLink": "https://discord.gg/ZwnPbEYtdf"
+},
+  {
+    "id": "Twin-Tournaments",
+    "name": "Twin Tournaments",
+    "aliases": ["Twintournaments", "Twin Tournaments"],
+    "logo": "twin.png",
+    "region": "СНГ",
+    "description": "TwinTournaments — организатор турниров по Dota 2 и CS2. Проводят турниры и для маленьких рангов и без ограничения.",
+    "telegramLink": "https://t.me/Dota2twintournaments",
+    "discordLink": "https://discord.gg/2BWxgu3Gg"
+},
+  {
     id: "Enrage",
     name: "Enrage",
     aliases: ["Enrage"],
