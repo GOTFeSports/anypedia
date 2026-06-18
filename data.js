@@ -202,8 +202,8 @@ const tournaments = [
     "telegramLink": "https://t.me/gotf_dota",
     "description": "Без описания.",
     "prizePool": [
-        { "place": 1, "amount": "Слот в CQ", "team": "" },
-        { "place": 2, "amount": "Слот в CQ", "team": "" }
+        { "place": "1-2", "amount": "Слот в CQ", "team": "" },
+        { "place": "1-2", "amount": "Слот в CQ", "team": "" }
     ],
     "registrationStart": "2026-06-27",
     "registrationEnd": "2026-07-03",
@@ -246,8 +246,8 @@ const tournaments = [
     "telegramLink": "https://t.me/gotf_dota",
     "description": "Без описания.",
     "prizePool": [
-        { "place": 1, "amount": "Слот в Special", "team": "" },
-        { "place": 2, "amount": "Слот в Special", "team": "" },
+        { "place": "1-2", "amount": "Слот в Special", "team": "" },
+        { "place": "1-2", "amount": "Слот в Special", "team": "" },
     ],
           "gameFormat": "Elimination Draft"
 },
