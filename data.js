@@ -236,7 +236,7 @@ const tournaments = [
             {"name": "TBD", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
     ],
     "casters": [
         { "name": "TBD", "link": "" }
