@@ -264,8 +264,9 @@ const tournaments = [
     "teamsList": [
         {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "Never Back Down", "logo": "nbdteam.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-        {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+        {"name": "Gitlz", "logo": "gitlz.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "Bedlam Red", "logo": "bedlamred.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+        {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "HATER ZDES` Team", "logo": "haterzdes.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "TBD", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "TBD", "logo": "dota2.png", seed: "Closed Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
