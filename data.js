@@ -145,13 +145,13 @@ const tournaments = [
     "title": "Enrage Lowrank #69",
     "limit": "До 30.000 MMR на команду",
     "start": "2026-06-20",
-    "end": "2026-06-21",
+    "end": "2026-06-20",
     "startTime": "13:00",
     "registrationStart": "2026-06-15",
     "registrationEnd": "2026-06-20",
-    "prize": "12.000₽",
+    "prize": "6.000₽",
     "location": "СНГ",
-    "teams": 28,
+    "teams": 8,
     "format": "Double Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Enrage",
@@ -160,8 +160,8 @@ const tournaments = [
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Шестьдесят девятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в два дня, с нижней сеткой.",
     "prizePool": [
-        { "place": 1, "amount": "8500₽", "team": "" },
-        { "place": 2, "amount": "3500₽", "team": "" }
+        { "place": 1, "amount": "4250₽", "team": "" },
+        { "place": 2, "amount": "1500₽", "team": "" }
     ],
     "links": {
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-69",
@@ -170,9 +170,109 @@ const tournaments = [
         "bracket": ""
     },
     "casters": [
-        { "name": "", "link": "" }
+        { "name": "u_mavka", "link": "https://www.twitch.tv/u_mavka" }
     ],
-    "teamsList": []
+    "teamsList": [
+  {
+    "name": "LEONID MOSCOT TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Serejaspit", "pos": 1 },
+      { "nick": "lenyascr", "pos": 2 },
+      { "nick": "suslik8143", "pos": 3 },
+      { "nick": "qwe123111222321", "pos": 4 },
+      { "nick": "olga_lebed88", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Anvorgeza",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "yume2.0", "pos": 1 },
+      { "nick": "rlyublyumacaticicki", "pos": 2 },
+      { "nick": "jesuz41_kam", "pos": 3 },
+      { "nick": "iviv5h33nb01", "pos": 4 },
+      { "nick": "killdesigner22", "pos": 5 }
+    ]
+  },
+  {
+    "name": "UpbIri iZada",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Androsqqq", "pos": 1 },
+      { "nick": "dobryakdobri", "pos": 2 },
+      { "nick": "Oii037", "pos": 3 },
+      { "nick": "Kuvalfa", "pos": 4 },
+      { "nick": "kyniks", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Guzlik team",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "emilkleaplse", "pos": 1 },
+      { "nick": "nyann1ks", "pos": 2 },
+      { "nick": "superporoseno", "pos": 3 },
+      { "nick": "badrlgn", "pos": 4 },
+      { "nick": "arturkarr", "pos": 5 }
+    ]
+  },
+  {
+    "name": "VMYASO TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "maloy167", "pos": 1 },
+      { "nick": "asdwork3", "pos": 2 },
+      { "nick": "prbbl", "pos": 3 },
+      { "nick": "alexxandro66", "pos": 4 },
+      { "nick": "maison228", "pos": 5 }
+    ]
+  },
+  {
+    "name": "sigma aura",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "lerc0re", "pos": 1 },
+      { "nick": "vino5856", "pos": 2 },
+      { "nick": "kokokopro", "pos": 3 },
+      { "nick": "ubilmarka", "pos": 4 },
+      { "nick": "oceanofmyhope1", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Veni Vidi Vici",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Magicalonely", "pos": 1 },
+      { "nick": "iamzakharin", "pos": 2 },
+      { "nick": "Amirlan0306", "pos": 3 },
+      { "nick": "M1chter", "pos": 4 },
+      { "nick": "To61ol", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Team Bakugan",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "arcotsu", "pos": 1 },
+      { "nick": "trivia_l", "pos": 2 },
+      { "nick": "dimadryndiricckk", "pos": 3 },
+      { "nick": "Mikhael16", "pos": 4 },
+      { "nick": "dissociativei", "pos": 5 }
+    ]
+  },
+  {
+    "name": "БАРНИ",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "hYn_tT4r", "pos": 1 },
+      { "nick": "trivvialll", "pos": 2 },
+      { "nick": "core_kira", "pos": 3 },
+      { "nick": "FavarQrong", "pos": 4 },
+      { "nick": "LiSilent", "pos": 5 }
+    ]
+  }
+],
 },
         {
     "id": "Special-3-Open-Qual",
@@ -783,40 +883,6 @@ const tournaments = [
     "description": "RAMPAGE KURIK #4 — турнир для игроков до 5000 MMR. Формат Single Elimination (BO1), гранд-финал BO3. Призовой фонд 4000₽. Дата проведения: 4-5 апреля 2026.",
     "prizePool": [
         { "place": 1, "amount": "4.000₽", "team": "SiniyLis" }
-    ],
-    "registrationStart": "",
-    "registrationEnd": "",
-    "gameFormat": "Captains Mode"
-},
-  {
-    "id": "reflection-league-6",
-    "title": "Reflection League 6",
-    "limit": "До 35.500 MMR на команду",
-    "start": "2026-06-21",
-    "end": "2026-06-21",
-    "startTime": "14:00",
-    "prize": "TBD",
-    "location": "СНГ",
-    "teams": 10,
-    "winner": "",
-    "format": "Single Elimination",
-    "organizer": "Reflection League",
-    "links": {
-        "dotabuff": "",
-        "discord": "https://discord.gg/n2XX8cPu",
-        "rules": "https://docs.google.com/document/d/1ZSvI6YmK0SRa3pGnyr01G9_N-Jv4AYSViFMEroqg4uU/edit?usp=sharing",
-        "bracket": ""
-    },
-    "teamsList": [],
-    "casters": [
-        { "name": "TBD", "link": "" }
-    ],
-    "bracketEmbed": "",
-    "registrationLink": "https://forms.gle/qJir35C6rLjPQn1bA",
-    "telegramLink": "https://t.me/reflectionleague",
-    "description": "Reflection League #6 — возвращение популярной лиги. Лимит 35 500 MMR на команду. Взнос 500₽ с команды. Дата проведения: 7 июня 2026. Призовой фонд будет объявлен в зависимости от количества участников. Минимум 10 команд для старта турнира.",
-    "prizePool": [
-        { "place": 1, "amount": "100%", "team": "" },
     ],
     "registrationStart": "",
     "registrationEnd": "",
