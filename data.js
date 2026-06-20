@@ -409,14 +409,192 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/FktVXm4gRD",
         "rules": "https://t.me/bedlamtournaments/277?comment=509",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/BBS_4D1"
     },
-    "teamsList": [],
+    "teamsList": [
+  {
+    "name": "Barracuda",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Const00", "pos": 1 },
+      { "nick": "MedveDemon", "pos": 2 },
+      { "nick": "Kiryqz", "pos": 3 },
+      { "nick": "Crimson_witness", "pos": 4 },
+      { "nick": "Micro9677", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Team Leto",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "arcotsu", "pos": 1 },
+      { "nick": "Kricsalis_mode", "pos": 2 },
+      { "nick": "sooqa7", "pos": 3 },
+      { "nick": "dark_light666", "pos": 4 },
+      { "nick": "pacananimator", "pos": 5 }
+    ]
+  },
+  {
+    "name": "DF JUNIOR",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "NamelessMonster300", "pos": 1 },
+      { "nick": "Dmytro_rmn", "pos": 2 },
+      { "nick": "Veles_21", "pos": 3 },
+      { "nick": "h1mba1x9", "pos": 4 },
+      { "nick": "levkin55", "pos": 5 }
+    ]
+  },
+  {
+    "name": "HATER ZDES",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Sk1ble", "pos": 1 },
+      { "nick": "Notearz", "pos": 2 },
+      { "nick": "zak3rrr", "pos": 3 },
+      { "nick": "gogaa_00", "pos": 4 },
+      { "nick": "tarflare", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Podosinovik",
+    "logo": "podosinovik.png",
+    "roster": [
+      { "nick": "user_klop", "pos": 1 },
+      { "nick": "cd_mymind", "pos": 2 },
+      { "nick": "Ptshunterzxc", "pos": 3 },
+      { "nick": "ig31110n", "pos": 4 },
+      { "nick": "prokazz_a", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Phantom Players",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "yydhdw", "pos": 1 },
+      { "nick": "hyakuya666", "pos": 2 },
+      { "nick": "Bubikuss", "pos": 3 },
+      { "nick": "rikitheslayer", "pos": 4 },
+      { "nick": "Kirill_Suetin", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Op9lta",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "asdaswqe", "pos": 1 },
+      { "nick": "Sircheese67", "pos": 2 },
+      { "nick": "kiruxarampaga", "pos": 3 },
+      { "nick": "m1to6666", "pos": 4 },
+      { "nick": "JaNaradziusiaTut", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Gitlz",
+    "logo": "gitlz.png",
+    "roster": [
+      { "nick": "konfetkaaap", "pos": 1 },
+      { "nick": "Phwvnu", "pos": 2 },
+      { "nick": "Idcwhour", "pos": 3 },
+      { "nick": "puziblinchik96", "pos": 4 },
+      { "nick": "Nikolay35", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Bedlam Battle Team Red",
+    "logo": "bedlamred.png",
+    "roster": [
+      { "nick": "lonixx_s", "pos": 1 },
+      { "nick": "imortall_boy", "pos": 2 },
+      { "nick": "Fretorr", "pos": 3 },
+      { "nick": "Damirgzru", "pos": 4 },
+      { "nick": "lonixx_s", "pos": 5 }
+    ]
+  },
+  {
+    "name": "The winners",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "yqrhbqdv", "pos": 1 },
+      { "nick": "vlannnn", "pos": 2 },
+      { "nick": "Fanik_xD", "pos": 3 },
+      { "nick": "Gnom_95", "pos": 4 },
+      { "nick": "vlannnn", "pos": 5 }
+    ]
+  },
+  {
+    "name": "МЫ",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Mageyache", "pos": 1 },
+      { "nick": "akkamy10", "pos": 2 },
+      { "nick": "mognuss", "pos": 3 },
+      { "nick": "angrypeon", "pos": 4 },
+      { "nick": "legasy2211", "pos": 5 }
+    ]
+  },
+  {
+    "name": "egoisto",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "atuc7264", "pos": 1 },
+      { "nick": "Vkidavyumef", "pos": 2 },
+      { "nick": "m1nd1q", "pos": 3 },
+      { "nick": "Hate_niger", "pos": 4 },
+      { "nick": "KonstantaKostikulus", "pos": 5 }
+    ]
+  },
+  {
+    "name": "VATAKE13",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "kkkkk123456777", "pos": 1 },
+      { "nick": "Ghtrwneq", "pos": 2 },
+      { "nick": "Agrael2401", "pos": 3 },
+      { "nick": "rodflodotka", "pos": 4 },
+      { "nick": "Denisjao", "pos": 5 }
+    ]
+  },
+  {
+    "name": "YOPERESETE",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "taikutsuyo", "pos": 1 },
+      { "nick": "dissociativei", "pos": 2 },
+      { "nick": "trivia_l", "pos": 3 },
+      { "nick": "mortuuuum", "pos": 4 },
+      { "nick": "dimadryndiricckk", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Manja+4",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Stasmanja", "pos": 1 },
+      { "nick": "qsarigama", "pos": 2 },
+      { "nick": "Last312", "pos": 3 },
+      { "nick": "nolacklerick", "pos": 4 },
+      { "nick": "Shomnikofff", "pos": 5 }
+    ]
+  },
+  {
+    "name": "BulxS",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Blood_flow1", "pos": 1 },
+      { "nick": "Miyamorro", "pos": 2 },
+      { "nick": "jambojox", "pos": 3 },
+      { "nick": "TREVOJNOSTb", "pos": 4 },
+      { "nick": "SCorPion_LSPD", "pos": 5 }
+    ]
+  }
+],
     "casters": [
         {"name": "jimbo_jox", "link": "https://www.twitch.tv/jimbo_jox"},
-        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"}
+        {"name": "tiltuhabratuha", "link": "https://www.twitch.tv/tiltuhabratuha"},
+        {"name": "sezen team", "link": "https://www.twitch.tv/sezen_team"}
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/BBS_4D1/module",
     "registrationLink": "https://forms.gle/iajJB3njm95yvNrt5",
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
