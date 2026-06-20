@@ -74,8 +74,8 @@ const tournaments = [
     "id": "Fast-Cup-Armagedon-S4",
     "title": "Fast Cup Armagedon S4",
     "limit": "До 35.000 MMR на команду.",
-    "start": "2026-06-20",
-    "end": "2026-06-21",
+    "start": "2026-06-27",
+    "end": "2026-06-27",
     "startTime": "16:00",
     "registrationStart": "2026-06-16",
     "registrationEnd": "2026-06-21",
@@ -160,8 +160,7 @@ const tournaments = [
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Шестьдесят девятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в два дня, с нижней сеткой.",
     "prizePool": [
-        { "place": 1, "amount": "4250₽", "team": "" },
-        { "place": 2, "amount": "1500₽", "team": "" }
+        { "place": 1, "amount": "6000₽", "team": "" },
     ],
     "links": {
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-69",
@@ -406,7 +405,7 @@ const tournaments = [
     "format": "Group Stage + Double Elimination",
     "organizer": "Bedlam Tournaments",
     "links": {
-        "dotabuff": "",
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19876-bedlam-season-4-division-1",
         "discord": "https://discord.gg/FktVXm4gRD",
         "rules": "https://t.me/bedlamtournaments/277?comment=509",
         "bracket": "https://challonge.com/ru/BBS_4D1"
