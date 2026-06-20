@@ -424,7 +424,7 @@ const tournaments = [
     ]
   },
   {
-    "name": "Team Leto",
+    "name": "LETO Junior",
     "logo": "dota2.png",
     "roster": [
       { "nick": "arcotsu", "pos": 1 },
