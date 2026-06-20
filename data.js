@@ -155,7 +155,7 @@ const tournaments = [
     "format": "Double Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Enrage",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/ENRAGE5x5low69/module",
     "registrationLink": "https://forms.gle/yrEiTYQrjsW3pY4b6",
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Шестьдесят девятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в два дня, с нижней сеткой.",
@@ -167,7 +167,7 @@ const tournaments = [
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-69",
         "discord": "https://discord.com/invite/enrage",
         "rules": "https://docs.google.com/document/d/1j2ClFyQKO9gDpAwGADx2albO4vO62bbEIuD5A0ihcDw/edit?usp=sharing",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/ENRAGE5x5low69"
     },
     "casters": [
         { "name": "u_mavka", "link": "https://www.twitch.tv/u_mavka" }
