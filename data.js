@@ -333,7 +333,7 @@ const tournaments = [
             {"name": "Team Amplify", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "EGOISTO Team", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "ЧВК Литэнерджи", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "TBD", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+            {"name": "sigma aura", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
     ],
