@@ -660,9 +660,165 @@ const tournaments = [
         "bracket": ""
     },
     "teamsList": [
-         {"name": "Gray Matter", "logo": "dota2.png", "roster": [{"nick": "ロキシー", "pos": 1}, {"nick": "control", "pos": 2}, {"nick": "nookie56", "pos": 3}, {"nick": "新神", "pos": 4}, {"nick": "écいouいteも", "pos": 5}]},
+    {
+        "name": "Feed4Life",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "gulyonysh", "pos": 1 },
+            { "nick": "ntxra", "pos": 2 },
+            { "nick": "an6elichrzn", "pos": 3 },
+            { "nick": "VeNdettA", "pos": 4 },
+            { "nick": "jormungand", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Team Leto",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "win or die", "pos": 1 },
+            { "nick": "-forever young", "pos": 2 },
+            { "nick": "69", "pos": 3 },
+            { "nick": "хуевый", "pos": 4 },
+            { "nick": "♥️", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Gitlz",
+        "logo": "gitlz.png",
+        "roster": [
+            { "nick": "Неудача в войне", "pos": 1 },
+            { "nick": "Akama", "pos": 2 },
+            { "nick": "Moody", "pos": 3 },
+            { "nick": "Bilbo Baggins", "pos": 4 },
+            { "nick": "Nico", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Immortal Dragons",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Dragonaychik", "pos": 1 },
+            { "nick": "thats all", "pos": 2 },
+            { "nick": "I have no enemies-MODE", "pos": 3 },
+            { "nick": "Rubistan", "pos": 4 },
+            { "nick": "влитый (не брать)", "pos": 5 }
+        ]
+    },
+    {
+        "name": "The winners",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "dgorsh", "pos": 1 },
+            { "nick": "vlan666", "pos": 2 },
+            { "nick": "fanik_1", "pos": 3 },
+            { "nick": "nikita9868", "pos": 4 },
+            { "nick": "podniatdiskettu", "pos": 5 }
+        ]
+    },
+    {
+        "name": "ЕЩЕ ПОСИДИМ",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "yotsukai", "pos": 1 },
+            { "nick": "sympathy", "pos": 2 },
+            { "nick": "manualbanned", "pos": 3 },
+            { "nick": "wereeewka", "pos": 4 },
+            { "nick": "czuhmandoit", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Podosinoviki",
+        "logo": "podosinovik.png",
+        "roster": [
+            { "nick": "Woods", "pos": 1 },
+            { "nick": "зато уютно умирать", "pos": 2 },
+            { "nick": "МИШКА МОРГЕН", "pos": 3 },
+            { "nick": "El Oreshniko del Peru", "pos": 4 },
+            { "nick": "N9lwkA", "pos": 5 }
+        ]
+    },
+    {
+        "name": "TSU.SUNRISE",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Меконий", "pos": 1 },
+            { "nick": "Я - Максим", "pos": 2 },
+            { "nick": "Dota players are not human", "pos": 3 },
+            { "nick": "Lame", "pos": 4 },
+            { "nick": "Mat_Konoily", "pos": 5 }
+        ]
+    },
+    {
+        "name": "СИБЕРЕКИ",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "#СелаДала", "pos": 1 },
+            { "nick": "я_сиберяк_сука", "pos": 2 },
+            { "nick": "СЕБЕРЯК", "pos": 3 },
+            { "nick": "влитый", "pos": 4 },
+            { "nick": "Den Lader", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Never Back Down",
+        "logo": "nbd.png",
+        "roster": [
+            { "nick": "epileptick1d", "pos": 1 },
+            { "nick": "Baby, Nice Try", "pos": 2 },
+            { "nick": "effume", "pos": 3 },
+            { "nick": "Rose", "pos": 4 },
+            { "nick": "miyamoto-san", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Rakuzan",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Slavjo", "pos": 1 },
+            { "nick": "Edelveis", "pos": 2 },
+            { "nick": "милашка (prime)", "pos": 3 },
+            { "nick": "kolasal", "pos": 4 },
+            { "nick": "chenopicker 陳", "pos": 5 }
+        ]
+    },
+    {
+        "name": "bonds",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "savagebuff", "pos": 1 },
+            { "nick": "Бахр0мA Gлавн1i (anal)", "pos": 2 },
+            { "nick": "grah1n pr1me", "pos": 3 },
+            { "nick": "maroon sh1ne", "pos": 4 },
+            { "nick": "player", "pos": 5 }
+        ]
+    },
+    {
+        "name": "Egoisto",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "dodikre⁶⁷", "pos": 1 },
+            { "nick": "Oketra", "pos": 2 },
+            { "nick": "плюсы", "pos": 3 },
+            { "nick": "Y61l v S3b3 43LOV3kA", "pos": 4 },
+            { "nick": "RoRk_a", "pos": 5 }
+        ]
+    },
+    {
+        "name": "VHS team",
+        "logo": "dota2.png",
+        "roster": [
+            { "nick": "Саша Белый Prime", "pos": 1 },
+            { "nick": "evanora#npc", "pos": 2 },
+            { "nick": "manulyan", "pos": 3 },
+            { "nick": "coldeyes", "pos": 4 },
+            { "nick": "Discipline_", "pos": 5 }
+        ]
+    },
+            {"name": "Gray Matter", "logo": "dota2.png", "roster": [{"nick": "ロキシー", "pos": 1}, {"nick": "control", "pos": 2}, {"nick": "nookie56", "pos": 3}, {"nick": "新神", "pos": 4}, {"nick": "écいouいteも", "pos": 5}]},
     ],
-    "casters": [],
+    "casters": [
+            {"name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee"},
+    ],
     "bracketEmbed": "",
     "registrationLink": "https://forms.gle/BGr29FgBjSfwYCbj6",
     "telegramLink": "https://t.me/SkewerEsports",
