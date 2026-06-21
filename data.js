@@ -160,7 +160,7 @@ const tournaments = [
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Шестьдесят девятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в два дня, с нижней сеткой.",
     "prizePool": [
-        { "place": 1, "amount": "6000₽", "team": "" },
+        { "place": 1, "amount": "6000₽", "team": "Veni Vidi Vici" },
     ],
     "links": {
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-69",
