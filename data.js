@@ -51,19 +51,19 @@ const tournaments = [
     "format": "Single Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Twin Tournaments",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/tocdnrkh/module",
     "registrationLink": "https://discord.gg/2BWxgu3Gg",
     "telegramLink": "https://t.me/Dota2twintournaments",
     "description": "Бесплатный турнир по Dota 2 от TWINTOURNAMENTS. Все матчи проходят в формате Bo1, финал — Bo3. Обязательные условия участия: подписка на Telegram, Discord и Faceit организатора. Суммарный рейтинг команды не должен превышать 50 000 MMR. Турнир проводится при наборе 16 команд и более.",
     "prizePool": [
-        { "place": 1, "amount": "7214₽", "team": "" },
-        { "place": 2, "amount": "3607₽", "team": "" }
+        { "place": 1, "amount": "7214₽", "team": "Teto`s Fatass" },
+        { "place": 2, "amount": "3607₽", "team": "ZavoD" }
     ],
     "links": {
         "dotabuff": "",
         "discord": "https://discord.gg/2BWxgu3Gg",
         "rules": "",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/tocdnrkh"
     },
     "casters": [
         { "name": "", "link": "" }
@@ -654,7 +654,7 @@ const tournaments = [
     "format": "Single Elimination",
     "organizer": "SkewerEsports",
     "links": {
-        "dotabuff": "",
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19901-skewer-esports",
         "discord": "https://discord.gg/pDAytCj3fe",
         "rules": "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
         "bracket": "https://challonge.com/ru/l73x3yh5"
@@ -824,7 +824,7 @@ const tournaments = [
     "telegramLink": "https://t.me/SkewerEsports",
     "description": "Турнир будет отменён, если не будет набрано минимум 10 команд. Формат Single Elimination, все матчи Bo1, финал Bo3. Взнос с команды — 800 рублей. Участники должны подписаться на Telegram-канал, подключиться к Discord и заполнить Google-форму. MVP турнира получает 500 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "8.400₽", "team": "" }
+        { "place": 1, "amount": "8.400₽", "team": "egoisto" }
     ],
     "registrationStart": "",
     "registrationEnd": "",
