@@ -657,7 +657,7 @@ const tournaments = [
         "dotabuff": "",
         "discord": "https://discord.gg/pDAytCj3fe",
         "rules": "https://docs.google.com/document/d/e/2PACX-1vTI-P2IVy8orZfORzNnueF16-yd0-Czoe0YaFr0TaUqt8f69OBUHycF7wJmqQQqQC6UJwrJY7dW7XQz/pub",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/l73x3yh5"
     },
     "teamsList": [
     {
@@ -819,14 +819,12 @@ const tournaments = [
     "casters": [
             {"name": "mansh1nee", "link": "https://www.twitch.tv/mansh1nee"},
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/l73x3yh5/module",
     "registrationLink": "https://forms.gle/BGr29FgBjSfwYCbj6",
     "telegramLink": "https://t.me/SkewerEsports",
     "description": "Турнир будет отменён, если не будет набрано минимум 10 команд. Формат Single Elimination, все матчи Bo1, финал Bo3. Взнос с команды — 800 рублей. Участники должны подписаться на Telegram-канал, подключиться к Discord и заполнить Google-форму. MVP турнира получает 500 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "6.000₽", "team": "" },
-        { "place": 2, "amount": "2.000₽", "team": "" },
-        { "place": "MVP", "amount": "500₽", "team": "" }
+        { "place": 1, "amount": "8.400₽", "team": "" }
     ],
     "registrationStart": "",
     "registrationEnd": "",
