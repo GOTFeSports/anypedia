@@ -1,5 +1,38 @@
 const tournaments = [  
         {
+    "id": "Twintournaments-2",
+    "title": "TWINTOURNAMENTS 2",
+    "limit": "До 40.000 MMR на команду",
+    "start": "2026-06-27",
+    "end": "2026-06-27",
+    "startTime": "14:00",
+    "registrationStart": "2026-06-27",
+    "registrationEnd": "2026-06-27",
+    "prize": "25.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Twin Tournaments",
+    "bracketEmbed": "",
+    "registrationLink": "https://discord.gg/2BWxgu3Gg",
+    "telegramLink": "https://t.me/Dota2twintournaments",
+    "description": "Турнир по Dota 2 от Twintournaments. Взнос: 1000₽ с команды (200₽ с человека).Все матчи Bo1, Финал — Bo3.",
+    "prizePool": [
+        { "place": 1, "amount": "12500₽", "team": "" },
+        { "place": 2, "amount": "7500₽", "team": "" },
+        { "place": 3, "amount": "5000₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/2BWxgu3Gg",
+        "rules": "",
+        "bracket": ""
+    },
+    "casters": [],
+    "teamsList": []
+},
+        {
     "id": "The-Trial-of-Immortality-Season-6",
     "title": "The Trial of Immortality Season 6",
     "limit": "До 30.000 MMR на команду",
