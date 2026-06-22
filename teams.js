@@ -48,7 +48,7 @@ const teams = [
       {
         title: "AnyLvL x GOTF eSports: Special 2",
         date:  "2025-07-18",
-        place: "3-4",
+        place: "3",
         prize: "—",
         limit: "Без лимита MMR"
       },
@@ -84,7 +84,7 @@ const teams = [
       {
         title: "AnyLvL x GOTF eSports: Special 2",
         date:  "2025-07-20",
-        place: "3-4",
+        place: "3",
         prize: "—",
         limit: "Без лимита MMR"
       },
@@ -405,7 +405,7 @@ const teams = [
       {
         title: "Bedlam Waiting For Summer Cup",
         date:  "2026-05-31",
-        place: "3-4",
+        place: "3",
         prize: "—",
         limit: "До 35.000 MMR на команду"
       },
