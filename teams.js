@@ -149,7 +149,7 @@ const teams = [
       {
         title: "SkewerEsports Season 3",
         date:  "2026-06-21",
-        place: "3-4",
+        place: "3",
         prize: "—",
         limit: "До 36.500 MMR на команду"
       },
@@ -293,7 +293,7 @@ const teams = [
       {
         title: "SkewerEsports Season 3",
         date:  "2026-06-21",
-        place: "3-4",
+        place: "3",
         prize: "—",
         limit: "До 36.500 MMR на команду"
       },
@@ -415,6 +415,13 @@ const teams = [
         place: "3",
         prize: "4.000₽",
         limit: "До 7.000 MMR на игрока"
+      },
+      {
+        title: "SkewerEsports Season 3",
+        date:  "2026-06-21",
+        place: "2",
+        prize: "—",
+        limit: "До 36.500 MMR на команду"
       },
     ]
   },
