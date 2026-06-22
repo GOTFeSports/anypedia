@@ -30,6 +30,20 @@
 
 const organizers = [
   {
+    "id": "League-of-Spirits",
+    "name": "League of Spirits",
+    "aliases": ["League of Spirits", "LOST"],
+    "logo": "lost.png",
+    "region": "СНГ",
+    "description": "League of Spirits — любительская киберспортивная лига по Dota 2, объединяющая игроков из Беларуси и стран СНГ. Лига регулярно проводит турниры формата 5×5, развивает команды, создаёт понятную и прозрачную соревновательную среду и формирует вокруг себя активное комьюнити. В League of Spirits проходят продолжительные сезонные турниры с групповой стадией и плей-офф, внутренние микс-турниры, шоу-матчи, челленджи Spirit Trials, действует система Tournament Points, а также реализуются различные активности для игроков, кастеров и стримеров.",
+    "telegramLink": "https://t.me/l_of_spirits",
+    "discordLink": "https://discord.gg/NKSVVcAw2g",
+    links: {
+      website: "https://leagueofspirits.ru",
+      youtube: "https://www.youtube.com/@LeagueofSpirits4",
+    }
+},
+  {
     "id": "Armagedon",
     "name": "Armagedon Championship",
     "aliases": ["Armagedon", "ARMAGEDON CHAMPIONSHIP"],
