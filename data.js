@@ -330,7 +330,7 @@ const tournaments = [
         { "name": "TBD", "link": "" }
     ],
     "bracketEmbed": "",
-    "registrationLink": "https://t.me/anylvlcommunity",
+    "registrationLink": "https://forms.gle/QxYsxjd48FzAyG6i6",
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Квалификации на третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Вся открытая квалификация пройдет в формате Best of 1, а матчи за слот в формате Best of 3, принять участие может каждый. Победители Split Bracket (две сетки) попадут в основную часть турнира.",
     "prizePool": [
