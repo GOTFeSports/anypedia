@@ -1,5 +1,71 @@
 const tournaments = [  
         {
+    "id": "LOST-S2-Division2",
+    "title": "LOST Season 2 - Division 2",
+    "limit": "До 25.000 MMR на команду",
+    "start": "2026-05-11",
+    "end": "2026-06-27",
+    "startTime": "14:00",
+    "registrationStart": "2026-04-27",
+    "registrationEnd": "2026-08-16",
+    "prize": "55.671₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Group Stage + Playoffs",
+    "gameFormat": "Captains Mode",
+    "organizer": "League of Spirits",
+    "bracketEmbed": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744",
+    "registrationLink": "https://anypedia.vercel.app/organizer/League-of-Spirits",
+    "telegramLink": "https://t.me/l_of_spirits",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "27835₽", "team": "" },
+        { "place": 2, "amount": "16569₽", "team": "" },
+        { "place": 3, "amount": "11267₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19701-lost-s2-div-2",
+        "discord": "https://discord.gg/NKSVVcAw2g",
+        "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
+        "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
+    },
+    "casters": [],
+    "teamsList": []
+},
+        {
+    "id": "LOST-S2-Division1",
+    "title": "LOST Season 2 - Division 1",
+    "limit": "До 35.000 MMR на команду",
+    "start": "2026-05-11",
+    "end": "2026-06-27",
+    "startTime": "14:00",
+    "registrationStart": "2026-04-27",
+    "registrationEnd": "2026-08-16",
+    "prize": "79.530₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Group Stage + Playoffs",
+    "gameFormat": "Captains Mode",
+    "organizer": "League of Spirits",
+    "bracketEmbed": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744",
+    "registrationLink": "https://anypedia.vercel.app/organizer/League-of-Spirits",
+    "telegramLink": "https://t.me/l_of_spirits",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "39765₽", "team": "" },
+        { "place": 2, "amount": "23859₽", "team": "" },
+        { "place": 3, "amount": "15906₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19700-lost-s2-div-1",
+        "discord": "https://discord.gg/NKSVVcAw2g",
+        "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
+        "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
+    },
+    "casters": [],
+    "teamsList": []
+},
+        {
     "id": "Twintournaments-2",
     "title": "TWINTOURNAMENTS 2",
     "limit": "До 40.000 MMR на команду",
