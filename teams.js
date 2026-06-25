@@ -153,6 +153,13 @@ const teams = [
         prize: "—",
         limit: "До 36.500 MMR на команду"
       },
+      {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2026-06-28",
+        place: "9-12",
+        prize: "—",
+        limit: "До 9.000 MMR на игрока"
+      },
     ]
   },
   {
@@ -297,6 +304,13 @@ const teams = [
         prize: "—",
         limit: "До 36.500 MMR на команду"
       },
+      {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2026-06-28",
+        place: "9-12",
+        prize: "—",
+        limit: "До 9.000 MMR на игрока"
+      },
     ]
   },
   {
@@ -345,6 +359,13 @@ const teams = [
         place: "9-16",
         prize: "—",
         limit: "До 35.000 MMR на команду"
+      },
+      {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2026-06-28",
+        place: "13-16",
+        prize: "—",
+        limit: "До 9.000 MMR на игрока"
       },
     ]
   },
