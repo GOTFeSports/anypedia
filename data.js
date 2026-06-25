@@ -206,7 +206,7 @@ const tournaments = [
 },
         {
     "id": "Yarf-Cup-1",
-    "title": "Yarf Cup 1 Dota 2 Tournaemnts",
+    "title": "Yarf Cup 1 Dota 2 Tournaments",
     "limit": "Без лимита MMR",
     "start": "2026-06-28",
     "end": "2026-06-28",
