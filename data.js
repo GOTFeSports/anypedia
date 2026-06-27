@@ -217,7 +217,7 @@ const tournaments = [
     "location": "СНГ",
     "teams": 16,
     "format": "Single Elimination",
-    "gameFormat": "Captains Draft",
+    "gameFormat": "Captains Mode",
     "organizer": "Yarf Cup",
     "bracketEmbed": "",
     "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScZS3_JUZw7ctTaaGhgpG03MZpSq9u0vrm2L7T-ieVBFOEwMA/viewform?usp=dialog",
