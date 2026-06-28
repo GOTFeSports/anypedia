@@ -120,7 +120,7 @@ const tournaments = [
     "prizePool": [
         { "place": 1, "amount": "7500₽", "team": "Ultima Team" },
         { "place": 2, "amount": "4500₽", "team": "Anvorgeza" },
-        { "place": 2, "amount": "3000₽", "team": "burmalda boys" },
+        { "place": 3, "amount": "3000₽", "team": "burmalda boys" },
     ],
     "links": {
         "dotabuff": "",
