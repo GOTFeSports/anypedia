@@ -118,9 +118,9 @@ const tournaments = [
     "telegramLink": "https://t.me/cultimm",
     "description": "Шестой сезон турниров от Immortality. Взнос с команды 1000 рублей, все игры Best of 1, Грандфинал в формате Best of 3.",
     "prizePool": [
-        { "place": 1, "amount": "7500₽", "team": "" },
-        { "place": 2, "amount": "4500₽", "team": "" },
-        { "place": 2, "amount": "3000₽", "team": "" },
+        { "place": 1, "amount": "7500₽", "team": "Ultima Team" },
+        { "place": 2, "amount": "4500₽", "team": "Anvorgeza" },
+        { "place": 2, "amount": "3000₽", "team": "burmalda boys" },
     ],
     "links": {
         "dotabuff": "",
@@ -224,9 +224,9 @@ const tournaments = [
     "telegramLink": "https://t.me/yarfcup",
     "description": "Первый турнир от YARF CUP по Dota 2 в формате 5x5 Captains Draft. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
     "prizePool": [
-        { "place": 1, "amount": "1000₽", "team": "" },
-        { "place": 2, "amount": "Привелегии", "team": "" },
-        { "place": 3, "amount": "Привелегии", "team": "" }
+        { "place": 1, "amount": "1000₽", "team": "Evil Masters" },
+        { "place": 2, "amount": "Привелегии", "team": "МЫ" },
+        { "place": 3, "amount": "Привелегии", "team": "echo silence" }
     ],
     "links": {
         "dotabuff": "",
