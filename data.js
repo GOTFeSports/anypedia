@@ -213,9 +213,9 @@ const tournaments = [
     "startTime": "12:00",
     "registrationStart": "2026-06-15",
     "registrationEnd": "2026-06-28",
-    "prize": "1.500₽",
+    "prize": "1.000₽",
     "location": "СНГ",
-    "teams": 16,
+    "teams": 14,
     "format": "Single Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Yarf Cup",
@@ -224,7 +224,7 @@ const tournaments = [
     "telegramLink": "https://t.me/yarfcup",
     "description": "Первый турнир от YARF CUP по Dota 2 в формате 5x5 Captains Draft. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
     "prizePool": [
-        { "place": 1, "amount": "1500₽", "team": "" },
+        { "place": 1, "amount": "1000₽", "team": "" },
         { "place": 2, "amount": "Привелегии", "team": "" },
         { "place": 3, "amount": "Привелегии", "team": "" }
     ],
