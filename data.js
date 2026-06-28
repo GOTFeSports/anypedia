@@ -219,7 +219,7 @@ const tournaments = [
     "format": "Single Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Yarf Cup",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/YarfCup_1/module",
     "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScZS3_JUZw7ctTaaGhgpG03MZpSq9u0vrm2L7T-ieVBFOEwMA/viewform?usp=dialog",
     "telegramLink": "https://t.me/yarfcup",
     "description": "Первый турнир от YARF CUP по Dota 2 в формате 5x5 Captains Draft. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
@@ -232,7 +232,7 @@ const tournaments = [
         "dotabuff": "",
         "discord": "",
         "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/YarfCup_1"
     },
     "casters": [
         { "name": "", "link": "" }
