@@ -13,11 +13,11 @@ const tournaments = [
     "teams": 16,
     "format": "Single Elimination",
     "gameFormat": "Captains Mode",
-    "organizer": "SkewerEsports",
+    "organizer": "Enrage",
     "bracketEmbed": "",
     "registrationLink": "https://forms.gle/ssawxjomrfPzKLnk9",
     "telegramLink": "https://t.me/enragetournaments",
-    "description": "Четвертый турнир от SkewerEsports. Взнос с команды составит 1000 рублей, турнир пройдет в два дня.",
+    "description": "Семидесятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в один день. Взнос 1000 рублей."
     "prizePool": [
         { "place": 1, "amount": "5500₽", "team": "" },
         { "place": 2, "amount": "3000₽", "team": "" },
