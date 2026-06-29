@@ -1,9 +1,42 @@
 const tournaments = [  
+         {
+    "id": "Enrage-Lowrank-70",
+    "title": "Enrage Lowrank #70",
+    "limit": "До Божество 5 на игрока",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
+    "startTime": "11:00",
+    "registrationStart": "2026-06-29",
+    "registrationEnd": "2026-07-05",
+    "prize": "10.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "SkewerEsports",
+    "bracketEmbed": "",
+    "registrationLink": "https://forms.gle/ssawxjomrfPzKLnk9",
+    "telegramLink": "https://t.me/enragetournaments",
+    "description": "Четвертый турнир от SkewerEsports. Взнос с команды составит 1000 рублей, турнир пройдет в два дня.",
+    "prizePool": [
+        { "place": 1, "amount": "5500₽", "team": "" },
+        { "place": 2, "amount": "3000₽", "team": "" },
+        { "place": 3, "amount": "3000₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-70",
+        "discord": "https://discord.com/invite/enrage",
+        "rules": "https://docs.google.com/document/d/1j2ClFyQKO9gDpAwGADx2albO4vO62bbEIuD5A0ihcDw/edit?usp=sharing",
+        "bracket": ""
+    },
+    "casters": [],
+    "teamsList": []
+},
         {
     "id": "SkewerEsports-Season-4",
     "title": "SkewerEsports Season 4",
     "limit": "До 8.000 MMR на игрока",
-    "start": "2026-07-9",
+    "start": "2026-07-09",
     "end": "2026-07-10",
     "startTime": "14:00",
     "registrationStart": "2026-06-29",
