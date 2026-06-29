@@ -1,5 +1,37 @@
 const tournaments = [  
         {
+    "id": "SkewerEsports-Season-4",
+    "title": "SkewerEsports Season 4",
+    "limit": "До 8.000 MMR на игрока",
+    "start": "2026-07-9",
+    "end": "2026-07-10",
+    "startTime": "14:00",
+    "registrationStart": "2026-06-29",
+    "registrationEnd": "2026-07-09",
+    "prize": "12.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Double Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "SkewerEsports",
+    "bracketEmbed": "",
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=dialog",
+    "telegramLink": "https://t.me/SkewerEsports",
+    "description": "Четвертый турнир от SkewerEsports. Взнос с команды составит 1000 рублей, турнир пройдет в два дня.",
+    "prizePool": [
+        { "place": 1, "amount": "10000₽", "team": "" },
+        { "place": 2, "amount": "2000₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/s7RCg2gmpS",
+        "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+        "bracket": ""
+    },
+    "casters": [],
+    "teamsList": []
+},
+        {
     "id": "LOST-S2-Division2",
     "title": "LOST Season 2 - Division 2",
     "limit": "До 25.000 MMR на команду",
