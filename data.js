@@ -1041,9 +1041,9 @@ const tournaments = [
     "format": "Swiss Stage + Double Elimination",
     "organizer": "HATER ZDES`",
     "links": {
-        "dotabuff": "",
+        "dotabuff": "https://discord.gg/KgsxB8J2N",
         "discord": "https://discord.gg/haterzdes",
-        "rules": "",
+        "rules": "https://disk.yandex.ru/d/DJaYjkl7IQUO2A",
         "bracket": ""
     },
     "teamsList": [],
