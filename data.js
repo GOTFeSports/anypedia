@@ -1,5 +1,5 @@
 const tournaments = [  
-         {
+{
     "id": "Enrage-Lowrank-70",
     "title": "Enrage Lowrank #70",
     "limit": "До Божество 5 на игрока",
@@ -17,7 +17,7 @@ const tournaments = [
     "bracketEmbed": "",
     "registrationLink": "https://forms.gle/ssawxjomrfPzKLnk9",
     "telegramLink": "https://t.me/enragetournaments",
-    "description": "Семидесятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в один день. Взнос 1000 рублей."
+    "description": "Семидесятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в один день. Взнос 1000 рублей.",
     "prizePool": [
         { "place": 1, "amount": "5500₽", "team": "" },
         { "place": 2, "amount": "3000₽", "team": "" },
@@ -32,7 +32,7 @@ const tournaments = [
     "casters": [],
     "teamsList": []
 },
-        {
+{
     "id": "SkewerEsports-Season-4",
     "title": "SkewerEsports Season 4",
     "limit": "До 8.000 MMR на игрока",
