@@ -598,7 +598,7 @@ const tournaments = [
     "prize": "25.000₽",
     "location": "СНГ",
     "teams": 32,
-    "winner": "",
+    "winner": "EGOISTO",
     "format": "Group Stage + Double Elimination",
     "organizer": "Bedlam Tournaments",
     "links": {
@@ -795,9 +795,9 @@ const tournaments = [
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "Bedlam Season 4 Division 1 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 8 дней, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 1000 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "12500₽", "team": "" },
-        { "place": 2, "amount": "7500₽", "team": "" },
-        { "place": 3, "amount": "5000₽", "team": "" },
+        { "place": 1, "amount": "12500₽", "team": "EGOISTO" },
+        { "place": 2, "amount": "7500₽", "team": "LETO Junior" },
+        { "place": 3, "amount": "5000₽", "team": "Op9lta" },
     ],
     "registrationStart": "2026-06-15",
     "registrationEnd": "2026-06-19",
