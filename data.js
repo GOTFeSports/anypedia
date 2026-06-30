@@ -1,4 +1,37 @@
 const tournaments = [  
+    {
+    "id": "Yarf-Cup-2",
+    "title": "Yarf Cup 2 Dota 2 Tournaments",
+    "limit": "Без лимита MMR",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
+    "startTime": "12:00",
+    "registrationStart": "2026-06-30",
+    "registrationEnd": "2026-07-04",
+    "prize": "1.500₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Yarf Cup",
+    "bracketEmbed": "",
+    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSf85oX-cTtPeOAvmqSshDLQhE1fUlYyOWJMV1zr3U0Aueu-WA/viewform?usp=dialog",
+    "telegramLink": "https://t.me/yarfcup",
+    "description": "Второй турнир от YARF CUP по Dota 2 в формате 5x5 Captains Mode. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
+    "prizePool": [
+        { "place": 1, "amount": "1500₽", "team": "Evil Masters" },
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
 {
     "id": "Enrage-Lowrank-70",
     "title": "Enrage Lowrank #70",
