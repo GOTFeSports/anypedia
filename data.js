@@ -1050,9 +1050,9 @@ const tournaments = [
     "casters": [
     ],
     "bracketEmbed": "",
-    "registrationLink": "",
+    "registrationLink": "https://forms.gle/DHsjTBAgbSLUa5nH9",
     "telegramLink": "https://t.me/haterzdes",
-    "description": "В случае набора более 16 участников проводятся квалификации по системе Single Elimination. На турнире действует Captains Draft. Все матчи проходят в формате Bo1, за исключением гранд-финала (Bo3).",
+    "description": "Организатор турнира – медиа HATER ZDES’. Участие бесплатное, цензуры нет, количество команд не ограничено. Призовой фонд — 67.000 рублей. Игры в режиме Captains Draft, группа — Swiss System, ПО — Double Elimination",
     "prizePool": [
         { "place": 1, "amount": "67.000₽", "team": "" }
     ],
