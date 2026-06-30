@@ -19,7 +19,7 @@ const tournaments = [
     "telegramLink": "https://t.me/yarfcup",
     "description": "Второй турнир от YARF CUP по Dota 2 в формате 5x5 Captains Mode. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
     "prizePool": [
-        { "place": 1, "amount": "1500₽", "team": "Evil Masters" },
+        { "place": 1, "amount": "1500₽", "team": "" },
     ],
     "links": {
         "dotabuff": "",
