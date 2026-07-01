@@ -98,15 +98,15 @@ const tournaments = [
     "teamsList": []
 },
         {
-    "id": "LOST-S2-Division2",
-    "title": "LOST Season 2 - Division 2",
-    "limit": "До 25.000 MMR на команду",
+    "id": "LOST-S2-Division1",
+    "title": "LOST Season 2 - Division 1",
+    "limit": "До 35.000 MMR на команду",
     "start": "2026-05-25",
     "end": "2026-06-27",
     "startTime": "14:00",
     "registrationStart": "2026-04-27",
     "registrationEnd": "2026-05-10",
-    "prize": "55.671₽",
+    "prize": "79.530₽",
     "location": "СНГ",
     "teams": 16,
     "format": "Group Stage + Playoffs",
@@ -117,54 +117,196 @@ const tournaments = [
     "telegramLink": "https://t.me/l_of_spirits",
     "description": "",
     "prizePool": [
-        { "place": 1, "amount": "27835₽", "team": "" },
-        { "place": 2, "amount": "16569₽", "team": "" },
-        { "place": 3, "amount": "11267₽", "team": "" }
+        { "place": 1, "amount": "39765₽", "team": "" },
+        { "place": 2, "amount": "23859₽", "team": "" },
+        { "place": 3, "amount": "15906₽", "team": "" }
     ],
     "links": {
-        "dotabuff": "https://www.dotabuff.com/esports/leagues/19701-lost-s2-div-2",
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19700-lost-s2-div-1",
         "discord": "https://discord.gg/NKSVVcAw2g",
         "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
         "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
     },
     "casters": [],
-    "teamsList": []
-},
-    },
-    {
-        "id": "LOST-S2-Division1",
-        "title": "LOST Season 2 - Division 1",
-        "limit": "До 35.000 MMR на команду",
-        "start": "2026-05-25",
-        "end": "2026-06-27",
-        "startTime": "14:00",
-        "registrationStart": "2026-04-27",
-        "registrationEnd": "2026-05-10",
-        "prize": "79.530₽",
-        "location": "СНГ",
-        "teams": 16,
-        "format": "Group Stage + Playoffs",
-        "gameFormat": "Captains Mode",
-        "organizer": "League of Spirits",
-        "bracketEmbed": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744",
-        "registrationLink": "https://anypedia.vercel.app/organizer/League-of-Spirits",
-        "telegramLink": "https://t.me/l_of_spirits",
-        "description": "",
-        "prizePool": [
-            { "place": 1, "amount": "39765₽", "team": "" },
-            { "place": 2, "amount": "23859₽", "team": "" },
-            { "place": 3, "amount": "15906₽", "team": "" }
-        ],
-        "links": {
-            "dotabuff": "https://www.dotabuff.com/esports/leagues/19700-lost-s2-div-1",
-            "discord": "https://discord.gg/NKSVVcAw2g",
-            "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
-            "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
-        },
-        "casters": [],
-        "teamsList": [
+    "teamsList": [
+        {
+            "name": "PSIXDISPANCER (PDSN)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Zagada", "pos": 1 },
+                { "nick": "Dmetrodiy", "pos": 2 },
+                { "nick": "MAXINA", "pos": 3 },
+                { "nick": "qwick", "pos": 4 },
+                { "nick": "Savety", "pos": 5 }
             ]
-    },
+        },
+        {
+            "name": "MOLOKO (MLK)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "irishtea", "pos": 1 },
+                { "nick": "NPQ", "pos": 2 },
+                { "nick": "morgan", "pos": 3 },
+                { "nick": "saldatau", "pos": 4 },
+                { "nick": "EHOT", "pos": 5 }
+            ]
+        },
+        {
+            "name": "BBC",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Pugovichka otorvalasya", "pos": 1 },
+                { "nick": "Turtle", "pos": 2 },
+                { "nick": "V1ole", "pos": 3 },
+                { "nick": "p1rat", "pos": 4 },
+                { "nick": "fallen", "pos": 5 }
+            ]
+        },
+        {
+            "name": "ReMix",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "morphine ($)", "pos": 1 },
+                { "nick": "Старый Ёж", "pos": 2 },
+                { "nick": "Mayonez1s", "pos": 3 },
+                { "nick": "moiofc", "pos": 4 },
+                { "nick": "Nosferatu", "pos": 5 }
+            ]
+        },
+        {
+            "name": "From Paris (FP)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "nohara", "pos": 1 },
+                { "nick": "foolovskiy", "pos": 2 },
+                { "nick": "Flint Lockwood", "pos": 3 },
+                { "nick": "Destro", "pos": 4 },
+                { "nick": "FRVR", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Etherial Prime (EP)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "sdd", "pos": 1 },
+                { "nick": "DeZeSmoL", "pos": 2 },
+                { "nick": "Rox", "pos": 3 },
+                { "nick": "Seraphim", "pos": 4 },
+                { "nick": "Blasé", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Ethereal (ETHRL)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "despair", "pos": 1 },
+                { "nick": "pizzacodeine", "pos": 2 },
+                { "nick": "Xus", "pos": 3 },
+                { "nick": "gerein3008", "pos": 4 },
+                { "nick": "Neverland", "pos": 5 }
+            ]
+        },
+        {
+            "name": "morbus mentis (morme)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "E-sim", "pos": 1 },
+                { "nick": "ArmyanMan", "pos": 2 },
+                { "nick": "Beda...", "pos": 3 },
+                { "nick": "sh1za_qb", "pos": 4 },
+                { "nick": "Chipollino", "pos": 5 }
+            ]
+        },
+        {
+            "name": "ГУЗЛИКИ",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "kurame", "pos": 1 },
+                { "nick": "sexmachine", "pos": 2 },
+                { "nick": "PashCOCK", "pos": 3 },
+                { "nick": "rty", "pos": 4 },
+                { "nick": "sunlive", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Мальчишки (MLC)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Петька", "pos": 1 },
+                { "nick": "Илюшка", "pos": 2 },
+                { "nick": "Еламашка", "pos": 3 },
+                { "nick": "Максимка", "pos": 4 },
+                { "nick": "Сашка", "pos": 5 }
+            ]
+        },
+        {
+            "name": "5KN",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Zhozik", "pos": 1 },
+                { "nick": "qsarigama", "pos": 2 },
+                { "nick": "treshzor", "pos": 3 },
+                { "nick": "Amok", "pos": 4 },
+                { "nick": "Санёк", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Eclipse Gaming (EG)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "dafutka", "pos": 1 },
+                { "nick": "Foxxxyyy", "pos": 2 },
+                { "nick": "Bann", "pos": 3 },
+                { "nick": "BENZO", "pos": 4 },
+                { "nick": "rost1k", "pos": 5 }
+            ]
+        },
+        {
+            "name": "300$",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Devileye", "pos": 1 },
+                { "nick": "mangekyou6o$$", "pos": 2 },
+                { "nick": "Андрюша", "pos": 3 },
+                { "nick": "Колпакс", "pos": 4 },
+                { "nick": "Tokyomane", "pos": 5 }
+            ]
+        },
+        {
+            "name": "4naturala",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Askme", "pos": 1 },
+                { "nick": "Yng", "pos": 2 },
+                { "nick": "uwunterffol", "pos": 3 },
+                { "nick": "Nikita", "pos": 4 },
+                { "nick": "svinovizhimalka", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Gitlz",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "breaoutlik", "pos": 1 },
+                { "nick": "Akama", "pos": 2 },
+                { "nick": "Moody", "pos": 3 },
+                { "nick": "AstarOtzio", "pos": 4 },
+                { "nick": "Nico", "pos": 5 }
+            ]
+        },
+        {
+            "name": "Cruiser Aurora Team (CAT)",
+            "logo": "dota2.png",
+            "roster": [
+                { "nick": "Amidamaru", "pos": 1 },
+                { "nick": "B U R I Z A", "pos": 2 },
+                { "nick": "pasteroni_ja", "pos": 3 },
+                { "nick": "RENAISSANCE", "pos": 4 },
+                { "nick": "FRIZZING", "pos": 5 }
+            ]
+        }
+    ]
+},
         {
     "id": "Twintournaments-2",
     "title": "TWINTOURNAMENTS 2",
