@@ -473,6 +473,41 @@ const tournaments = [
         }
     ]
 },
+    {
+    "id": "Twintournaments-2",
+    "title": "TWINTOURNAMENTS 2",
+    "limit": "До 40.000 MMR на команду",
+    "start": "2026-07-11",
+    "end": "2026-07-11",
+    "startTime": "14:00",
+    "registrationStart": "2026-06-20",
+    "registrationEnd": "2026-07-11",
+    "prize": "25.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Twin Tournaments",
+    "bracketEmbed": "",
+    "registrationLink": "https://discord.gg/2BWxgu3Gg",
+    "telegramLink": "https://t.me/Dota2twintournaments",
+    "description": "Турнир по Dota 2 от TWINTOURNAMENTS. Все матчи проходят в формате Bo1, финал — Bo3. Взнос 1000 рублей. В команде может быть только 1 игрок с рейтингом более 12 000 MMR..",
+    "prizePool": [
+        { "place": 1, "amount": "12500₽", "team": "" },
+        { "place": 2, "amount": "7500₽", "team": "" },
+        { "place": 3, "amount": "5000₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.gg/2BWxgu3Gg",
+        "rules": "",
+        "bracket": ""
+    },
+    "casters": [
+        { "name": "", "link": "" }
+    ],
+    "teamsList": []
+},
         {
     "id": "Twintournaments-1",
     "title": "TWINTOURNAMENTS 1",
