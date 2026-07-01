@@ -101,8 +101,8 @@ const tournaments = [
     "id": "LOST-S2-Division1",
     "title": "LOST Season 2 - Division 1",
     "limit": "До 35.000 MMR на команду",
-    "start": "2026-05-25",
-    "end": "2026-06-27",
+    "start": "2026-10-05",
+    "end": "2026-08-16",
     "startTime": "14:00",
     "registrationStart": "2026-04-27",
     "registrationEnd": "2026-05-10",
@@ -285,7 +285,7 @@ const tournaments = [
         },
         {
             "name": "Gitlz",
-            "logo": "dota2.png",
+            "logo": "gitlz.png",
             "roster": [
                 { "nick": "breaoutlik", "pos": 1 },
                 { "nick": "Akama", "pos": 2 },
