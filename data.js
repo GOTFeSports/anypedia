@@ -1,5 +1,36 @@
 const tournaments = [  
     {
+    "id": "rampage-kurik-5",
+    "title": "RAMPAGE KURIK 5",
+    "limit": "До 5.000 MMR на игрока",
+    "start": "2026-07-11",
+    "end": "2026-07-12",
+    "startTime": "16:00",
+    "registrationStart": "2026-07-01",
+    "registrationEnd": "2026-07-10",
+    "prize": "16.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Double Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "RAMPAGE Tournaments",
+    "bracketEmbed": "",
+    "registrationLink": "https://t.me/visagebroken",
+    "telegramLink": "https://t.me/rampagetournaments",
+    "description": "RAMPAGE KURIK #5 — турнир для игроков до 5.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Взнос с команды 1000 рублей.",
+    "prizePool": [
+        { "place": 1, "amount": "16000₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "https://discord.com/invite/yBGQ4ssxH",
+        "rules": "",
+        "bracket": ""
+    },
+    "casters": [],
+    "teamsList": []
+},
+    {
     "id": "Bedlam-Season-4-Division-2",
     "title": "Bedlam Season 4 Division 2",
     "limit": "До 5.620 MMR на игрока",
@@ -25,8 +56,8 @@ const tournaments = [
     ],
     "links": {
         "dotabuff": "",
-        "discord": "https://discord.gg/s7RCg2gmpS",
-        "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+        "discord": "https://discord.gg/FktVXm4gRD",
+        "rules": "",
         "bracket": ""
     },
     "casters": [],
