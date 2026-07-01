@@ -97,6 +97,172 @@ const tournaments = [
     "casters": [],
     "teamsList": []
 },
+    {
+    "id": "LOST-S2-Division2",
+    "title": "LOST Season 2 - Division 2",
+    "limit": "До 25.000 MMR на команду",
+    "start": "2026-10-05",
+    "end": "2026-08-16",
+    "startTime": "14:00",
+    "registrationStart": "2026-04-27",
+    "registrationEnd": "2026-05-10",
+    "prize": "56.175₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Group Stage + Playoffs",
+    "gameFormat": "Captains Mode",
+    "organizer": "League of Spirits",
+    "bracketEmbed": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744",
+    "registrationLink": "https://anypedia.vercel.app/organizer/League-of-Spirits",
+    "telegramLink": "https://t.me/l_of_spirits",
+    "description": "",
+    "prizePool": [
+        { "place": 1, "amount": "28088₽", "team": "" },
+        { "place": 2, "amount": "16719₽", "team": "" },
+        { "place": 3, "amount": "11368₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "https://www.dotabuff.com/esports/leagues/19700-lost-s2-div-2",
+        "discord": "https://discord.gg/NKSVVcAw2g",
+        "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
+        "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
+    },
+    "casters": [],
+    "teamsList": [
+        {
+    "name": "Слонимский Пачастунок",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "1.01b", "pos": 1 },
+      { "nick": "NPQ", "pos": 2 },
+      { "nick": "BRAZIL", "pos": 3 },
+      { "nick": "highlight provider", "pos": 4 },
+      { "nick": "Estacada", "pos": 5 }
+    ]
+  },
+  {
+    "name": "ACOLYTES",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Serhio", "pos": 1 },
+      { "nick": "Lonely", "pos": 2 },
+      { "nick": "Chervyak", "pos": 3 },
+      { "nick": "HappySadMan", "pos": 4 },
+      { "nick": "l_BioniX_l", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Chubriki",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Mel", "pos": 1 },
+      { "nick": "EgorkaNoobas", "pos": 2 },
+      { "nick": "Cookei_1", "pos": 3 },
+      { "nick": "КиСлОмОлОчНыЙ", "pos": 4 },
+      { "nick": "Chomoske", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Eclipse Gaming Young",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Pugovichka otorvalasya", "pos": 1 },
+      { "nick": "smn^", "pos": 2 },
+      { "nick": "Flint Lockwood", "pos": 3 },
+      { "nick": "p1rat", "pos": 4 },
+      { "nick": "BRONEPOEZD", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Dark Aria",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "The One", "pos": 1 },
+      { "nick": "Nimpo", "pos": 2 },
+      { "nick": "GLEBASTA*CMSTORM", "pos": 3 },
+      { "nick": "FRVR", "pos": 4 },
+      { "nick": "Chiga", "pos": 5 }
+    ]
+  },
+  {
+    "name": "U.S.Burgers",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Devileye", "pos": 1 },
+      { "nick": "TwilightNest", "pos": 2 },
+      { "nick": "Андрюша", "pos": 3 },
+      { "nick": "Колпакс", "pos": 4 },
+      { "nick": "delovo1", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Помидоры",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "let's dance", "pos": 1 },
+      { "nick": "sexmachine", "pos": 2 },
+      { "nick": "Xrumiks", "pos": 3 },
+      { "nick": "rty", "pos": 4 },
+      { "nick": "Kungfury", "pos": 5 }
+    ]
+  },
+  {
+    "name": "НАВИ",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "KIT_ANO", "pos": 1 },
+      { "nick": "Wilkinson", "pos": 2 },
+      { "nick": "Beda...", "pos": 3 },
+      { "nick": "Snorlax212", "pos": 4 },
+      { "nick": "Nicolas Sarcozy", "pos": 5 }
+    ]
+  },
+  {
+    "name": "ALT+Q+Q",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "TpaBka", "pos": 1 },
+      { "nick": "Gata me liga", "pos": 2 },
+      { "nick": "Кислый", "pos": 3 },
+      { "nick": "Шастик", "pos": 4 },
+      { "nick": "Да это жёстко", "pos": 5 }
+    ]
+  },
+  {
+    "name": "ReMix",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "44", "pos": 1 },
+      { "nick": "Старый Ёж", "pos": 2 },
+      { "nick": "Mayonez1s", "pos": 3 },
+      { "nick": "VarGos", "pos": 4 },
+      { "nick": "Mr.Daddy", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Looking For a Guilty Prime",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "dezzare", "pos": 1 },
+      { "nick": "Someday", "pos": 2 },
+      { "nick": "treshzor", "pos": 3 },
+      { "nick": "Morda", "pos": 4 },
+      { "nick": "Light-", "pos": 5 }
+    ]
+  },
+  {
+    "name": "Team Sausages",
+    "logo": "dota2.png",
+    "roster": [
+      { "nick": "Gommage", "pos": 1 },
+      { "nick": "moiofc", "pos": 2 },
+      { "nick": "мини байк", "pos": 3 },
+      { "nick": "masterokxd", "pos": 4 },
+      { "nick": "Рома шкеребердь", "pos": 5 }
+    ]
+  }
+    ]
+},
         {
     "id": "LOST-S2-Division1",
     "title": "LOST Season 2 - Division 1",
