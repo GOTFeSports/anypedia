@@ -339,7 +339,7 @@ const tournaments = [
       { "nick": "FRIZZING", "pos": 5 }
     ]
   }
-            ],
+            ]
     },
         {
     "id": "Twintournaments-2",
