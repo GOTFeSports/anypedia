@@ -60,7 +60,7 @@ const teams = [
     aliases: ["Team Sexy", "team sexy", "Team sexy"],
     logo: "teamsexy.png",
     region: "СНГ",
-    prize: "~25.000₽",
+    prize: "0₽",
     telegramLink: "https://t.me/teamsexy1",
     captainLink: "https://t.me/aokee1",
     description: "Одна из наиболее известных любительских команд СНГ-сцены своего уровня. Основана в апреле 2025 года и за время существования стала победителем и призёром множества турниров, включая соревнования серий AnyLvL, Twin и Enrage. В январе 2026 года коллектив временно выступал под тегом GOTF Next, однако позже вернулся к своему основному названию. Team Sexy сохраняет статус опытной команды с богатой турнирной историей и стабильными результатами.",
@@ -103,7 +103,7 @@ const teams = [
     aliases: ["Gitlz", "Glitz"],
     logo: "gitlz.png",
     region: "СНГ",
-    prize: "35.000₽",
+    prize: "15.000₽",
     telegramLink: "",
     captainLink: "https://t.me/puziblinchik96",
     description: "Молодая команда СНГ-региона, созданная в начале 2026 года. Коллектив был собран из игроков, объединённых желанием развиваться и добиваться высоких результатов на любительской сцене. Несмотря на небольшой срок существования, Gitlz уже успела завоевать титул Bedlam Swamp Wars и несколько раз попасть в число призёров различных турниров, зарекомендовав себя как перспективный состав.",
@@ -168,7 +168,7 @@ const teams = [
     aliases: ["LETO Junior", "LETO jr", "LETO junior", "Teiko", "TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: ">4.000₽",
+    prize: "11.500₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
@@ -187,7 +187,7 @@ const teams = [
     tournaments: [
       {
         title: "Bedlam Season 4 Division 1",
-        date:  "2025-06-28",
+        date:  "2026-06-28",
         place: "2",
         prize: "7.500₽",
         limit: "До 9.000 MMR на игрока"
