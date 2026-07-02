@@ -186,6 +186,13 @@ const teams = [
     ],
     tournaments: [
       {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2025-06-28",
+        place: "2",
+        prize: "7.500₽",
+        limit: "До 9.000 MMR на игрока"
+      },
+      {
         title: "AnyLvL x GOTF eSports: Special 2",
         date:  "2025-07-20",
         place: "1",
