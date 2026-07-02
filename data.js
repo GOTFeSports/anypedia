@@ -1,5 +1,38 @@
 const tournaments = [  
     {
+    "id": "Armagedon-Championship-S9",
+    "title": "Armagedon Championship S9",
+    "limit": "До 5.000 MMR на игрока",
+    "start": "2026-07-08",
+    "end": "2026-07-13",
+    "startTime": "16:00",
+    "registrationStart": "2026-07-02",
+    "registrationEnd": "2026-07-07",
+    "prize": "20.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "format": "Single Elimination",
+    "gameFormat": "Captains Mode",
+    "organizer": "Armagedon Championship",
+    "bracketEmbed": "",
+    "registrationLink": "https://t.me/MetamindArmagedonbot",
+    "telegramLink": "https://t.me/armagedonchamp",
+    "description": "ARMAGEDON CHAMPIONSHIP S9 — турнир по Dota 2 для игроков до 5000 MMR. Формат Single Elimination (на вылет), Captains Mode, от 16 команд. Призовой фонд 20 000 рублей.",
+    "prizePool": [
+        { "place": 1, "amount": "12500₽", "team": "" },
+        { "place": 2, "amount": "5000₽", "team": "" },
+        { "place": 3, "amount": "2500₽", "team": "" }
+    ],
+    "links": {
+        "dotabuff": "",
+        "discord": "",
+        "rules": "https://docs.google.com/document/d/1t3ujldMdXG6cEgK5-HuHRFMXadqVP9-65KEDExYiHj0/edit?usp=sharing",
+        "bracket": ""
+    },
+    "casters": [],
+    "teamsList": []
+},
+    {
     "id": "rampage-kurik-5",
     "title": "RAMPAGE KURIK 5",
     "limit": "До 5.000 MMR на игрока",
@@ -191,7 +224,10 @@ const tournaments = [
         "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
         "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
     },
-    "casters": [],
+    "casters": [
+        { "name": "https://www.twitch.tv/leagueofspirits", "link": "" },
+        { "name": "https://www.twitch.tv/leagueofspirits_2", "link": "" }
+    ],
     "teamsList": [
         {
     "name": "Слонимский Пачастунок",
@@ -357,7 +393,10 @@ const tournaments = [
         "rules": "https://leagueofspirits.tilda.ws/reglament_lost_s2",
         "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
     },
-    "casters": [],
+    "casters": [
+        { "name": "https://www.twitch.tv/leagueofspirits", "link": "" },
+        { "name": "https://www.twitch.tv/leagueofspirits_2", "link": "" }
+    ],
     "teamsList": [
         {
             "name": "PSIXDISPANCER (PDSN)",
