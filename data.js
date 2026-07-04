@@ -865,13 +865,13 @@ const tournaments = [
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19830-anylvl-x-gotf-esports-special-3",
         "discord": "https://discord.gg/3N4Jg6Jpak",
         "rules": "https://docs.google.com/document/d/1EtWhOh2EJtNIVNVd-nOucqHPZ7aX2tB-/edit?usp=sharing&ouid=111035949132865620643&rtpof=true&sd=true",
-        "bracket": ""
+        "bracket": "https://bracket-openqualification-special3.vercel.app"
     },
     "teamsList": [],
     "casters": [
         { "name": "TBD", "link": "" }
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://bracket-openqualification-special3.vercel.app",
     "registrationLink": "https://forms.gle/QxYsxjd48FzAyG6i6",
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Квалификации на третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Вся открытая квалификация пройдет в формате Best of 1, а матчи за слот в формате Best of 3, принять участие может каждый. Победители Split Bracket (две сетки) попадут в основную часть турнира.",
