@@ -966,6 +966,17 @@ const tournaments = [
       {"nick": "Klimich", "pos": 4},
       {"nick": "mnerZAK<3", "pos": 5}
     ]
+  },
+        {
+    "name": "Prodigy",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Raynor", "pos": 1},
+      {"nick": "F4cker", "pos": 2},
+      {"nick": "Ykoroh", "pos": 3},
+      {"nick": "Malutka", "pos": 4},
+      {"nick": "Emperor", "pos": 5}
+    ]
   }
     ],
     "casters": [
