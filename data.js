@@ -859,7 +859,7 @@ const tournaments = [
     "prize": "Слот в CQ",
     "location": "СНГ",
     "teams": 32,
-    "winner": "",
+    "winner": "friedzone, Op9tla, МЫ",
     "format": "Single Elimination",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -988,9 +988,9 @@ const tournaments = [
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Квалификации на третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Вся открытая квалификация пройдет в формате Best of 1, а матчи за слот в формате Best of 3, принять участие может каждый. Победители Split Bracket (две сетки) попадут в основную часть турнира.",
     "prizePool": [
-        { "place": "1-2", "amount": "Слот в CQ", "team": "" },
-        { "place": "1-2", "amount": "Слот в CQ", "team": "" },
-        { "place": "3", "amount": "Слот в CQ", "team": "" }
+        { "place": "1-2", "amount": "Слот в CQ", "team": "friendzone" },
+        { "place": "1-2", "amount": "Слот в CQ", "team": "Op9tla" },
+        { "place": "3", "amount": "Слот в CQ", "team": "МЫ" }
     ],
     "registrationStart": "2026-06-27",
     "registrationEnd": "2026-07-03",
@@ -1016,14 +1016,47 @@ const tournaments = [
         "bracket": ""
     },
     "teamsList": [
-            {"name": "Team Sexy", "logo": "teamsexy.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "Azutive Fans", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "Team Amplify", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "EGOISTO Team", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "ЧВК Литэнерджи", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
+            {"name": "Team Sexy", "logo": "teamsexy.png", seed: "Invited", "roster": [{"nick": "rin", "pos": 1}, {"nick": "XieZ", "pos": 2}, {"nick": "icememory<3", "pos": 3}, {"nick": "RoRK_a", "pos": 4}, {"nick": "Soer", "pos": 5}]},
+            {"name": "Azutive Fans", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "haginsson", "pos": 1}, {"nick": "azutive", "pos": 2}, {"nick": "29", "pos": 3}, {"nick": "dopaminecoma", "pos": 4}, {"nick": "Parasiu", "pos": 5}]},
+            {"name": "Team Amplify", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "Amelie", "pos": 1}, {"nick": "Давид", "pos": 2}, {"nick": "Sanraizu", "pos": 3}, {"nick": "Zol", "pos": 4}, {"nick": "Glamdring〩", "pos": 5}]},
+            {"name": "EGOISTO Team", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "dodikre⁶⁷", "pos": 1}, {"nick": "Oketra", "pos": 2}, {"nick": "m1nd1", "pos": 3}, {"nick": "yltra", "pos": 4}, {"nick": "vsplesk", "pos": 5}]},
+            {"name": "ЧВК Литэнерджи", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "Zitraks", "pos": 1}, {"nick": "okak", "pos": 2}, {"nick": "dedych", "pos": 3}, {"nick": "бруклинский мост", "pos": 4}, {"nick": "VoronLTF", "pos": 5}]},
+            {
+    "name": "МЫ",
+    "seed": "Open Qualification",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "K1rne4", "pos": 1},
+      {"nick": "Akkamy", "pos": 2},
+      {"nick": "Mognus", "pos": 3},
+      {"nick": "якончаю", "pos": 4},
+      {"nick": "LegasY221", "pos": 5}
+    ]
+  },
+        {
+    "name": "friendzone",
+    "logo": "dota2.png",
+            "seed": "Open Qualification",
+    "roster": [
+      {"nick": "dest1n_y7", "pos": 1},
+      {"nick": "Yaggodl", "pos": 2},
+      {"nick": "Tundra", "pos": 3},
+      {"nick": "xrchdmlvlnc12", "pos": 4},
+      {"nick": "Runninglow17", "pos": 5}
+    ]
+  },
+        {
+    "name": "Op9tla",
+    "logo": "dota2.png",
+            "seed": "Open Qualification",
+    "roster": [
+      {"nick": "heatolonq", "pos": 1},
+      {"nick": "kiruha", "pos": 2},
+      {"nick": "cherepashka", "pos": 3},
+      {"nick": "Mary doll", "pos": 4},
+      {"nick": "Unaboomer", "pos": 5}
+    ]
+  }
     ],
     "casters": [
         { "name": "TBD", "link": "" }
