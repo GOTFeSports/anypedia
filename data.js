@@ -225,8 +225,9 @@ const tournaments = [
         "bracket": "https://docs.google.com/spreadsheets/d/1I5-x60vQUG0p8BhEQW0Ri8KWZ2PxQ8NOYJA9eKK15tU/edit?gid=1056710744#gid=1056710744"
     },
     "casters": [
-        { "name": "https://www.twitch.tv/leagueofspirits", "link": "" },
-        { "name": "https://www.twitch.tv/leagueofspirits_2", "link": "" }
+        { "name": "leagueofspirits", "link": "https://www.twitch.tv/leagueofspirits" },
+        { "name": "leagueofspirits_2", "link": "https://www.twitch.tv/leagueofspirits_2" },
+        { "NAME": "manja5", "link": "https://www.twitch.tv/manja5" }
     ],
     "teamsList": [
         {
