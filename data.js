@@ -867,7 +867,107 @@ const tournaments = [
         "rules": "https://docs.google.com/document/d/1EtWhOh2EJtNIVNVd-nOucqHPZ7aX2tB-/edit?usp=sharing&ouid=111035949132865620643&rtpof=true&sd=true",
         "bracket": "https://bracket-openqualification-special3.vercel.app"
     },
-    "teamsList": [],
+    "teamsList": [
+  {
+    "name": "Op9tla",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "heatolonq", "pos": 1},
+      {"nick": "kiruha", "pos": 2},
+      {"nick": "cherepashka", "pos": 3},
+      {"nick": "Mary doll", "pos": 4},
+      {"nick": "Unaboomer", "pos": 5}
+    ]
+  },
+  {
+    "name": "Echo Silence",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "SleePy", "pos": 1},
+      {"nick": "dreamless", "pos": 2},
+      {"nick": "sayo", "pos": 3},
+      {"nick": "Бледный", "pos": 4},
+      {"nick": "114", "pos": 5}
+    ]
+  },
+  {
+    "name": "6GAZAN7",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "satan broken", "pos": 1},
+      {"nick": "mid/double", "pos": 2},
+      {"nick": "-FXCK3R-", "pos": 3},
+      {"nick": "Узнаваемый", "pos": 4},
+      {"nick": "Megadat", "pos": 5}
+    ]
+  },
+  {
+    "name": "Team Sparta",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "frySSt", "pos": 1},
+      {"nick": "Nyxello", "pos": 2},
+      {"nick": "demons never cry", "pos": 3},
+      {"nick": "NIRRIZ", "pos": 4},
+      {"nick": "Stay hard", "pos": 5}
+    ]
+  },
+  {
+    "name": "SnowBallTeam",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Laur", "pos": 1},
+      {"nick": "smych", "pos": 2},
+      {"nick": "azwraith", "pos": 3},
+      {"nick": "misha666", "pos": 4},
+      {"nick": "zMipo$hka", "pos": 5}
+    ]
+  },
+  {
+    "name": "friendzone",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "dest1n_y7", "pos": 1},
+      {"nick": "Yaggodl", "pos": 2},
+      {"nick": "Tundra", "pos": 3},
+      {"nick": "xrchdmlvlnc12", "pos": 4},
+      {"nick": "Runninglow17", "pos": 5}
+    ]
+  },
+  {
+    "name": "МЫ",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "K1rne4", "pos": 1},
+      {"nick": "Akkamy", "pos": 2},
+      {"nick": "Mognus", "pos": 3},
+      {"nick": "якончаю", "pos": 4},
+      {"nick": "LegasY221", "pos": 5}
+    ]
+  },
+  {
+    "name": "VATAKE13",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "obowduj", "pos": 1},
+      {"nick": "PUSHINKA", "pos": 2},
+      {"nick": "Agrael", "pos": 3},
+      {"nick": "Pablo Escobar", "pos": 4},
+      {"nick": "Glamdring〩", "pos": 5}
+    ]
+  },
+  {
+    "name": "destroy dota players",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "696", "pos": 1},
+      {"nick": "darkprinceee", "pos": 2},
+      {"nick": "ROARVPOLICIYMOYMI", "pos": 3},
+      {"nick": "Klimich", "pos": 4},
+      {"nick": "mnerZAK<3", "pos": 5}
+    ]
+  }
+    ],
     "casters": [
         { "name": "TBD", "link": "" }
     ],
@@ -877,7 +977,8 @@ const tournaments = [
     "description": "Квалификации на третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Вся открытая квалификация пройдет в формате Best of 1, а матчи за слот в формате Best of 3, принять участие может каждый. Победители Split Bracket (две сетки) попадут в основную часть турнира.",
     "prizePool": [
         { "place": "1-2", "amount": "Слот в CQ", "team": "" },
-        { "place": "1-2", "amount": "Слот в CQ", "team": "" }
+        { "place": "1-2", "amount": "Слот в CQ", "team": "" },
+        { "place": "3", "amount": "Слот в CQ", "team": "" }
     ],
     "registrationStart": "2026-06-27",
     "registrationEnd": "2026-07-03",
@@ -908,7 +1009,7 @@ const tournaments = [
             {"name": "Team Amplify", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "EGOISTO Team", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "ЧВК Литэнерджи", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-            {"name": "sigma aura", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
+            {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
             {"name": "TBD", "logo": "dota2.png", seed: "Open Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
     ],
