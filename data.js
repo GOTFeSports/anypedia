@@ -159,8 +159,143 @@ const tournaments = [
         "rules": "https://docs.google.com/document/d/1j2ClFyQKO9gDpAwGADx2albO4vO62bbEIuD5A0ihcDw/edit?usp=sharing",
         "bracket": ""
     },
-    "casters": [],
-    "teamsList": []
+    "casters": [
+        { "name": "u_mavka", "link": "https://www.twitch.tv/u_mavka" },
+    ],
+    "teamsList": [
+  {
+    "name": "LEONID MOSCOT TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Serejaspit", "pos": 1},
+      {"nick": "blednomertviy", "pos": 2},
+      {"nick": "suslik8143", "pos": 3},
+      {"nick": "olga_lebed88", "pos": 4},
+      {"nick": "trums24", "pos": 5}
+    ]
+  },
+  {
+    "name": "echo silence",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "SleePy100000", "pos": 1},
+      {"nick": "Okaaaak_22", "pos": 2},
+      {"nick": "dopebo1OG", "pos": 3},
+      {"nick": "lustoftruth", "pos": 4},
+      {"nick": "prosheniy", "pos": 5}
+    ]
+  },
+  {
+    "name": "SnowballTeam",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "wefawk", "pos": 1},
+      {"nick": "SmyCh145", "pos": 2},
+      {"nick": "lToxic_Catl", "pos": 3},
+      {"nick": "just_a_Mice", "pos": 4},
+      {"nick": "perchekkkk", "pos": 5}
+    ]
+  },
+  {
+    "name": "красные треугольники",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Jesuz_41", "pos": 1},
+      {"nick": "another_field", "pos": 2},
+      {"nick": "SaLLyyLol", "pos": 3},
+      {"nick": "xtr_666", "pos": 4},
+      {"nick": "iamzakharin", "pos": 5}
+    ]
+  },
+  {
+    "name": "boevie petuhi",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "aloeXgoddamn", "pos": 1},
+      {"nick": "Korzhik_jr", "pos": 2},
+      {"nick": "INDRALZT", "pos": 3},
+      {"nick": "skxwered", "pos": 4},
+      {"nick": "misha14588", "pos": 5}
+    ]
+  },
+  {
+    "name": "Turbo Warriors",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "dengalev", "pos": 1},
+      {"nick": "M1chter", "pos": 2},
+      {"nick": "TheNotBig", "pos": 3},
+      {"nick": "Dambaobab", "pos": 4},
+      {"nick": "arpl3s", "pos": 5}
+    ]
+  },
+  {
+    "name": "Ultima Team",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "maxmaxm1", "pos": 1},
+      {"nick": "Sergeipanda", "pos": 2},
+      {"nick": "cuteAlister", "pos": 3},
+      {"nick": "antognist", "pos": 4},
+      {"nick": "emelyan221", "pos": 5}
+    ]
+  },
+  {
+    "name": "TrailerParkBoys",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "raf500", "pos": 1},
+      {"nick": "Ivanbrackman", "pos": 2},
+      {"nick": "nemesis.ynt", "pos": 3},
+      {"nick": "deidarochka1585", "pos": 4},
+      {"nick": "Piligrimma", "pos": 5}
+    ]
+  },
+  {
+    "name": "Joll Team",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "cheburechek0", "pos": 1},
+      {"nick": "godj1902", "pos": 2},
+      {"nick": "Case7r", "pos": 3},
+      {"nick": "puzaliiy", "pos": 4},
+      {"nick": "Sinason456", "pos": 5}
+    ]
+  },
+  {
+    "name": "БАРНИ",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "core_kira", "pos": 1},
+      {"nick": "hYn_tT4r", "pos": 2},
+      {"nick": "coldrainent", "pos": 3},
+      {"nick": "Romaa0071", "pos": 4},
+      {"nick": "trivvialll", "pos": 5}
+    ]
+  },
+  {
+    "name": "Onda Andar",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "dankliz", "pos": 1},
+      {"nick": "SEXPORNODRIPCHIK", "pos": 2},
+      {"nick": "Rusillion", "pos": 3},
+      {"nick": "Papagett", "pos": 4},
+      {"nick": "GeMeDe228", "pos": 5}
+    ]
+  },
+  {
+    "name": "меньшевекиЧЁРТ.",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Spring_of_young", "pos": 1},
+      {"nick": "cooldude2004", "pos": 2},
+      {"nick": "amasalovv", "pos": 3},
+      {"nick": "MimiMoral0", "pos": 4},
+      {"nick": "Radharaman00", "pos": 5}
+    ]
+  }
+]
 },
 {
     "id": "SkewerEsports-Season-4",
