@@ -1194,7 +1194,7 @@ const tournaments = [
   }
     ],
     "casters": [
-        { "name": "TBD", "link": "" }
+        { "name": "prokaz_za", "link": "https://www.twitch.tv/prokaz_za" }
     ],
     "bracketEmbed": "https://bracket-closedqualification-special.vercel.app/",
     "registrationLink": "https://t.me/anylvlcommunity",
