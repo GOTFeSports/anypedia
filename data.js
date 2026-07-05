@@ -144,7 +144,7 @@ const tournaments = [
     "format": "Single Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "Enrage",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/ENRAGE5x5low70/module",
     "registrationLink": "https://forms.gle/ssawxjomrfPzKLnk9",
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Семидесятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в один день. Взнос 1000 рублей.",
@@ -157,7 +157,7 @@ const tournaments = [
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-70",
         "discord": "https://discord.com/invite/enrage",
         "rules": "https://docs.google.com/document/d/1j2ClFyQKO9gDpAwGADx2albO4vO62bbEIuD5A0ihcDw/edit?usp=sharing",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/ENRAGE5x5low70"
     },
     "casters": [
         { "name": "u_mavka", "link": "https://www.twitch.tv/u_mavka" },
