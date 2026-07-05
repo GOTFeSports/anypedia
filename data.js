@@ -1141,7 +1141,7 @@ const tournaments = [
     "prize": "Слот в Special",
     "location": "СНГ",
     "teams": 8,
-    "winner": "",
+    "winner": "Team Amplify, friendzone",
     "format": "Split Bracket",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -1201,8 +1201,8 @@ const tournaments = [
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Квалификации на третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Вся закрытая квалификация пройдет в формате Best of 3, примут участие 6 приглашенных команд и 2 попадут через открытые квалификации. Победители Split Bracket (две сетки) попадут в основную часть турнира.",
     "prizePool": [
-        { "place": "1-2", "amount": "Слот в Special", "team": "" },
-        { "place": "1-2", "amount": "Слот в Special", "team": "" },
+        { "place": "1-2", "amount": "Слот в Special", "team": "Team Amplify" },
+        { "place": "1-2", "amount": "Слот в Special", "team": "friendzone" },
     ],
           "gameFormat": "Elimination Draft"
 },
