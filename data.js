@@ -149,9 +149,9 @@ const tournaments = [
     "telegramLink": "https://t.me/enragetournaments",
     "description": "Семидесятый турнир от Enrage турниры для маленьких рангов по Dota 2. Турнир пройдет в один день. Взнос 1000 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "5500₽", "team": "" },
-        { "place": 2, "amount": "3000₽", "team": "" },
-        { "place": 3, "amount": "3000₽", "team": "" }
+        { "place": 1, "amount": "5500₽", "team": "меньшевекиЧЁРТ" },
+        { "place": 2, "amount": "3000₽", "team": "красные треугольники" },
+        { "place": 3, "amount": "3000₽", "team": "echo silence" }
     ],
     "links": {
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19311-enrage-70",
