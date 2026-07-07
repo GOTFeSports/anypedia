@@ -1583,7 +1583,7 @@ const tournaments = [
         ]
     },
     {
-        "name": "Bedlam Orangei",
+        "name": "Bedlam Orange",
         "logo": "bbtorange.png",
         "roster": [
             { "nick": "Woods", "pos": 1 },
@@ -2472,7 +2472,7 @@ const tournaments = [
         { name: "SkyDrifters", logo: "dota2.png", roster: [ { nick: "divinememory", pos: 1 }, { nick: "hopeaddict", pos: 2 }, { nick: "gorilla1799", pos: 3 }, { nick: "alice32544", pos: 4 }, { nick: "Dima_Darwin", pos: 5 } ] },
         { name: "газики", logo: "dota2.png", roster: [ { nick: "imnotevenahuman", pos: 1 }, { nick: "g4zgforce", pos: 2 }, { nick: "dmflnv", pos: 3 }, { nick: "Hisoka_Egorka_Be", pos: 4 }, { nick: "Vivaky", pos: 5 } ] },
         { name: "James & Jeremy", logo: "dota2.png", roster: [ { nick: "Sigmashavel_Ilya2008", pos: 1 }, { nick: "nevxr_mxre", pos: 2 }, { nick: "keepyourideal", pos: 3 }, { nick: "ssonchh", pos: 4 }, { nick: "watashiwa201", pos: 5 } ] },
-        { name: "Bedlam Orangei", logo: "bbtorange.png", roster: [ { nick: "HansLandaaaa", pos: 1 }, { nick: "cd_mymind", pos: 2 }, { nick: "Ptshunterzxc", pos: 3 }, { nick: "ig31110n", pos: 4 }, { nick: "prokazz_a", pos: 5 } ] },
+        { name: "Bedlam Orange", logo: "bbtorange.png", roster: [ { nick: "HansLandaaaa", pos: 1 }, { nick: "cd_mymind", pos: 2 }, { nick: "Ptshunterzxc", pos: 3 }, { nick: "ig31110n", pos: 4 }, { nick: "prokazz_a", pos: 5 } ] },
         { name: "VATAKE13", logo: "dota2.png", roster: [ { nick: "worldchampion_74kgwrestling", pos: 1 }, { nick: "kkkkk123456777", pos: 2 }, { nick: "LooneyNM", pos: 3 }, { nick: "roflodotka", pos: 4 }, { nick: "Denisjao", pos: 5 } ] },
         { name: "Barracuda jnr", logo: "dota2.png", roster: [ { nick: "Blintlbeis", pos: 1 }, { nick: "bluedolphingod", pos: 2 }, { nick: "lllll33lllll", pos: 3 }, { nick: "fentanyldreams", pos: 4 }, { nick: "", pos: 5 } ] },
         { name: "Barracuda Team", logo: "dota2.png", roster: [ { nick: "l1elielie", pos: 1 }, { nick: "Abednico", pos: 2 }, { nick: "k0libpi", pos: 3 }, { nick: "blz1k", pos: 4 }, { nick: "Mirco9677", pos: 5 } ] },
@@ -2887,7 +2887,7 @@ const tournaments = [
     prize: "4.000₽",
     location: "СНГ",
     teams: 16,
-    winner: "Bedlam Orangei",
+    winner: "Bedlam Orange",
     format: "Single Elimination",
     organizer: "SkewerEsports",
     links: {
@@ -2909,7 +2909,7 @@ const tournaments = [
       { name: "LETO jr",           logo: "dota2.png", roster: [ { nick: "Teenwave", pos: 1 }, { nick: "Alisa", pos: 2 }, { nick: "popi", pos: 3 }, { nick: "el tivke", pos: 4 }, { nick: "UZBEKSILA", pos: 5 } ] },
       { name: "Never Back Down",   logo: "nbdteam.png", roster: [ { nick: "Лысый", pos: 1 }, { nick: "Baby, Nice Try", pos: 2 }, { nick: "Кэп", pos: 3 }, { nick: "Rose", pos: 4 }, { nick: "Błyskawica", pos: 5 } ] },
       { name: "Primal Dance",      logo: "dota2.png", roster: [ { nick: "cotsu", pos: 1 }, { nick: "m33pmap", pos: 2 }, { nick: "m1nd1", pos: 3 }, { nick: "darklight", pos: 4 }, { nick: "Freak", pos: 5 } ] },
-      { name: "Bedlam Orangei",      logo: "bbtorange.png", roster: [ { nick: "Ростовский Богатырь", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
+      { name: "Bedlam Orange",      logo: "bbtorange.png", roster: [ { nick: "Ростовский Богатырь", pos: 1 }, { nick: "зато уютно умирать", pos: 2 }, { nick: "МИШКА МОРГЕН", pos: 3 }, { nick: "El Oreshniko del Perú", pos: 4 }, { nick: "аурная зараза", pos: 5 } ] },
       { name: "James & Jeremy",    logo: "dota2.png", roster: [ { nick: "ihatekirk", pos: 1 }, { nick: "wannafeels", pos: 2 }, { nick: "Голубчик", pos: 3 }, { nick: "king bob", pos: 4 }, { nick: "CocsmeN", pos: 5 } ] },
       { name: "BandaWidst",        logo: "dota2.png", roster: [ { nick: "orgasm donor+", pos: 1 }, { nick: "hikari", pos: 2 }, { nick: "hornet", pos: 3 }, { nick: "最酷的", pos: 4 }, { nick: "west", pos: 5 } ] },
       { name: "MonKs team",        logo: "dota2.png", roster: [ { nick: "keeps", pos: 1 }, { nick: "Иван лон друид", pos: 2 }, { nick: "Kaban", pos: 3 }, { nick: "tierblade", pos: 4 }, { nick: "RemoRi", pos: 5 } ] }
@@ -2920,9 +2920,9 @@ const tournaments = [
     bracketEmbed: "https://challonge.com/ru/g4aub1b4/module",
     registrationLink: "https://docs.google.com/forms/d/1enASbjmlEUqkB8977LhUoBGrmVHD0WyoOi4Xuq7NiXA/edit",
     telegramLink: "https://t.me/SkewerEsports",
-    description: "Skewer Esports Season 1 — онлайн-турнир Dota 2, 5×5, bo1 (финал bo3), лимит суммарного MMR команды — 35.000, призовой фонд — 4000₽ (1 место — 3500₽, MVP турнира — 500₽). Взнос 200₽ с команды, минимально 10 команд. Победитель: Bedlam Orangei (2:1 против NDB). MVP: Мишка Морген (Bedlam Orangei). Турнир завершён.",
+    description: "Skewer Esports Season 1 — онлайн-турнир Dota 2, 5×5, bo1 (финал bo3), лимит суммарного MMR команды — 35.000, призовой фонд — 4000₽ (1 место — 3500₽, MVP турнира — 500₽). Взнос 200₽ с команды, минимально 10 команд. Победитель: Bedlam Orange (2:1 против NDB). MVP: Мишка Морген (Bedlam Orange). Турнир завершён.",
     prizePool: [
-      { place: 1, amount: "3.500₽ + 500₽ MVP", team: "Bedlam Orangei" }
+      { place: 1, amount: "3.500₽ + 500₽ MVP", team: "Bedlam Orange" }
     ],
     "registrationStart": "",
     "registrationEnd": "",
