@@ -1,36 +1,36 @@
 const tournaments = [  
-    {
-    "id": "Armagedon-Championship-S9",
-    "title": "Armagedon Championship S9",
-    "limit": "До 5.000 MMR на игрока",
-    "start": "2026-07-08",
-    "end": "2026-07-13",
-    "startTime": "16:00",
-    "registrationStart": "2026-07-02",
-    "registrationEnd": "2026-07-07",
-    "prize": "20.000₽",
-    "location": "СНГ",
-    "teams": 16,
-    "format": "Single Elimination",
-    "gameFormat": "Captains Mode",
-    "organizer": "Armagedon Championship",
-    "bracketEmbed": "",
-    "registrationLink": "https://t.me/MetamindArmagedonbot",
-    "telegramLink": "https://t.me/armagedonchamp",
-    "description": "ARMAGEDON CHAMPIONSHIP S9 — турнир по Dota 2 для игроков до 5000 MMR. Формат Single Elimination (на вылет), Captains Mode, от 16 команд. Призовой фонд 20 000 рублей.",
-    "prizePool": [
-        { "place": 1, "amount": "12500₽", "team": "" },
-        { "place": 2, "amount": "5000₽", "team": "" },
-        { "place": 3, "amount": "2500₽", "team": "" }
-    ],
-    "links": {
-        "dotabuff": "",
-        "discord": "",
-        "rules": "https://docs.google.com/document/d/1t3ujldMdXG6cEgK5-HuHRFMXadqVP9-65KEDExYiHj0/edit?usp=sharing",
-        "bracket": ""
-    },
-    "casters": [],
-    "teamsList": []
+{
+  "id": "CL-Rivals",
+  "title": "CL: Rivals",
+  "limit": "До 40.000 MMR на команду",
+  "start": "2026-07-18",
+  "end": "2026-07-19",
+  "startTime": "16:00",
+  "registrationStart": "2026-07-07",
+  "registrationEnd": "2026-07-17",
+  "prize": "Подарки",
+  "location": "Online",
+  "teams": 16,
+  "format": "Group Stage + Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "League of Spirits & Bedlam Battles Tournaments",
+  "bracketEmbed": "",
+  "registrationLink": "",
+  "telegramLink": "https://t.me/l_of_spirits",
+  "description": "CL: Rivals — турнир по Dota 2 между лигами League of Spirits и Bedlam Battles Tournaments. 16 команд (по 8 с каждой стороны), групповая стадия bo1, плей-офф Single Elimination bo1, финал bo3, матч за 3 место bo1. Призы от Collector's Shop.",
+  "prizePool": [
+    { "place": 1, "amount": "Подарки от Collector's Shop", "team": "" },
+    { "place": 2, "amount": "Подарки от Collector's Shop", "team": "" },
+    { "place": 3, "amount": "Подарки от Collector's Shop", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
 },
     {
     "id": "rampage-kurik-5",
