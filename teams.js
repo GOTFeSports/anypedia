@@ -82,6 +82,13 @@ const teams = [
     // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
     tournaments: [
       {
+        title: "Special 3: Closed Qualification",
+        date:  "2026-07-05",
+        place: "5-8",
+        prize: "—",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
         title: "AnyLvL x GOTF eSports: Special 2",
         date:  "2025-07-20",
         place: "3",
@@ -265,10 +272,10 @@ const teams = [
     ]
   },
   {
-    id: "podosinovik",
-    name: "Podosinovik",
-    aliases: ["Podosinovik team", "Podosinovik", "Подосиновик", "Podosinoviki"],
-    logo: "podosinovik.png",
+    id: "bedlam-orange",
+    name: "Bedlam Battle Team Orange",
+    aliases: ["Podosinovik team", "Podosinovik", "Подосиновик", "Podosinoviki", "Bedlam Orange"],
+    logo: "bbtorange.png",
     region: "СНГ",
     prize: "8.500₽",
     telegramLink: "https://t.me/podosinovik_dota",
