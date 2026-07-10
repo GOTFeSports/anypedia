@@ -1223,7 +1223,7 @@ const tournaments = [
         "dotabuff": "https://ru.dotabuff.com/esports/leagues/19830-anylvl-x-gotf-esports-special-3",
         "discord": "https://discord.gg/3N4Jg6Jpak",
         "rules": "https://docs.google.com/document/d/1EtWhOh2EJtNIVNVd-nOucqHPZ7aX2tB-/edit?usp=sharing&ouid=111035949132865620643&rtpof=true&sd=true",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/special3"
     },
     "teamsList": [
         {"name": "Podosinovik", "logo": "podosinovik.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
@@ -1232,13 +1232,26 @@ const tournaments = [
         {"name": "Bedlam Red", "logo": "bedlamred.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "LETO Junior", "logo": "dota2.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
         {"name": "HATER ZDES` Team", "logo": "haterzdes.png", seed: "Invited", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-        {"name": "TBD", "logo": "dota2.png", seed: "Closed Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]},
-        {"name": "TBD", "logo": "dota2.png", seed: "Closed Qual", "roster": [{"nick": "TBD", "pos": 1}, {"nick": "TBD", "pos": 2}, {"nick": "TBD", "pos": 3}, {"nick": "TBD", "pos": 4}, {"nick": "TBD", "pos": 5}]}
+        {"name": "Team Amplify", "logo": "dota2.png", seed: "Closed Qualification", "roster": [{"nick": "Amelie", "pos": 1}, {"nick": "Давид", "pos": 2}, {"nick": "Sanraizu", "pos": 3}, {"nick": "Zol", "pos": 4}, {"nick": "Glamdring〩", "pos": 5}]},
+            {
+    "name": "МЫ",
+    "seed": "Closed Qualification",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "K1rne4", "pos": 1},
+      {"nick": "Akkamy", "pos": 2},
+      {"nick": "Mognus", "pos": 3},
+      {"nick": "якончаю", "pos": 4},
+      {"nick": "LegasY221", "pos": 5}
+    ]
+  },
     ],
     "casters": [
-        { "name": "TBD", "link": "" }
+        { "name": "Forgiven3ss", "link": "https://www.twitch.tv/forgiven3ss" },
+      { "name": "Paradox Pog", "link": "https://www.twitch.tv/paradox_pog" },
+      { "name": "Un1xs", "link": "https://www.twitch.tv/un1x_s" }
     ],
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/special3/module",
     "registrationLink": "https://t.me/anylvlcommunity",
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Весь турнир пройдет в формате Best of 3, примут участие 6 приглашенных команд и 2 попадут через закрытые квалификации. На грандфинале турнира в формате Best of 5 будет присутстовать звёзда мировой сцены.",
