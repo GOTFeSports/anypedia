@@ -1246,10 +1246,10 @@ const tournaments = [
     "start": "2026-07-10",
     "end": "2026-07-12",
     "startTime": "19:00",
-    "prize": "TBD",
+    "prize": "5000₽",
     "location": "СНГ",
     "teams": 8,
-    "winner": "",
+    "winner": "LETO Junior",
     "format": "Swiss Stage + Play offs",
     "organizer": "AnyLvL Community x GOTF eSports",
     "links": {
@@ -1289,7 +1289,8 @@ const tournaments = [
     "telegramLink": "https://t.me/anylvlcommunity",
     "description": "Третий турнир серии Special от AnyLvL Community и GOTF eSports. На турнире как обычно используется формат Elimination Draft (Герои, выбранные в одной игре серии, не могут быть повторно выбраны в этой же серии). Весь турнир пройдет в формате Best of 3, примут участие 6 приглашенных команд и 2 попадут через закрытые квалификации. На грандфинале турнира в формате Best of 5 будет присутстовать звёзда мировой сцены.",
     "prizePool": [
-        { "place": 1, "amount": "100%", "team": "" },
+        { "place": 1, "amount": "5000₽", "team": "LETO Junior" },
+        { "place": 2, "amount": "", "team": "Never Back Down" },
     ],
         "gameFormat": "Elimination Draft"
 },
