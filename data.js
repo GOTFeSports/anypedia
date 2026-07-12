@@ -1,4 +1,37 @@
 const tournaments = [  
+  {
+  "id": "Barracuda-Battles-1",
+  "title": "Barracuda Battles №1",
+  "limit": "До 8.500 MMR на игрока",
+  "start": "2026-07-18",
+  "end": "2026-07-18",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-11",
+  "registrationEnd": "2026-07-18",
+  "prize": "5500₽",
+  "location": "СНГ",
+  "teams": 8,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Barracuda Battles",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/1a6MsK330mN3jJovTTXCMCcJW6DDGl9mn-t1GDf-YZrU/edit",
+  "telegramLink": "https://t.me/BarracudaBattles",
+  "description": "Первый турнир от Barracuda Battles. На турнире будет полная статистика матчей, определяется лучший игрок турнира. Без взноса.",
+  "prizePool": [
+    { "place": 1, "amount": "4000₽", "team": "" },
+    { "place": 2, "amount": "1000₽", "team": "" },
+    { "place": "MVP", "amount": "500₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/ecndHtGuj",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
 {
   "id": "CL-Rivals",
   "title": "CL: Rivals",
@@ -9,7 +42,7 @@ const tournaments = [
   "registrationStart": "2026-07-07",
   "registrationEnd": "2026-07-17",
   "prize": "Подарки",
-  "location": "Online",
+  "location": "СНГ",
   "teams": 16,
   "format": "Group Stage + Single Elimination",
   "gameFormat": "Captains Mode",
