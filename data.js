@@ -8,7 +8,7 @@ const tournaments = [
   "startTime": "18:00",
   "registrationStart": "2026-07-14",
   "registrationEnd": "2026-07-24",
-  "prize": "10/000₽",
+  "prize": "10.000₽",
   "location": "СНГ",
   "teams": 16,
   "format": "Single Elimination",
