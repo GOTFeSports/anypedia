@@ -1,5 +1,79 @@
 const tournaments = [  
   {
+  "id": "SkewerEsports-Season-5",
+  "title": "SkewerEsports Season 5",
+  "limit": "До 38.000 MMR на команду",
+  "start": "2026-07-24",
+  "end": "2026-07-24",
+  "startTime": "18:00",
+  "registrationStart": "2026-07-14",
+  "registrationEnd": "2026-07-24",
+  "prize": "10/000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Skewer eSports",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
+  "telegramLink": "https://t.me/SkewerEsports",
+  "description": "Skewer eSports Season 5 — турнир по Dota 2 с ограничением 38.000 MMR на команду. Single Elimination. Призовой фонд 10.000₽. Взнос 1000₽ с команды.",
+  "prizePool": [
+    { "place": 1, "amount": "7000₽", "team": "" },
+    { "place": 2, "amount": "3000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/s7RCg2gmpS",
+    "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+ {
+  "id": "Trial-of-Immortality-7",
+  "title": "The Trial of Immortality 7",
+  "limit": "До 35.000 MMR на команду",
+  "start": "2026-07-25",
+  "end": "2026-07-26",
+  "startTime": "13:00",
+  "registrationStart": "2026-07-14",
+  "registrationEnd": "2026-07-25",
+  "prize": "20.000₽",
+  "location": "СНГ",
+  "teams": 32,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Immortality",
+  "bracketEmbed": "",
+  "registrationLink": "https://t.me/questionnaireimm/8",
+  "telegramLink": "https://t.me/cultimm",
+  "description": "The Trial of Immortality VII — 7-й сезон турнира по Dota 2 с открытой регистрацией. Формат 5x5, Double Elimination, BO1 (Гранд-Финал BO3). Взнос 500₽ с команды.",
+  "prizePool": [
+    { "place": 1, "amount": "10000₽", "team": "" },
+    { "place": 2, "amount": "6000₽", "team": "" },
+    { "place": 3, "amount": "4000₽", "team": "" },
+    { "place": 4, "amount": "Dota+ (1 месяц)", "team": "" },
+    { "place": "MVP", "amount": "1500₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/Vu8kNs39PX",
+    "rules": "https://t.me/reglamentbyimmortality",
+    "bracket": ""
+  },
+  "casters": [
+    { "name": "pepepainstv", "link": "https://twitch.tv/pepepainstv" },
+    { "name": "9kael", "link": "https://twitch.tv/9kael" },
+    { "name": "vivalahoya", "link": "https://www.twitch.tv/vivalahoya" },
+    { "name": "yosumo_doto", "link": "https://www.twitch.tv/yosumo_doto" },
+    { "name": "kaworu_doto", "link": "https://www.twitch.tv/kaworu_doto" },
+    { "name": "1s8d", "link": "https://twitch.tv/1s8d" }
+  ],
+  "teamsList": []
+},
+  {
   "id": "Barracuda-Battles-1",
   "title": "Barracuda Battles №1",
   "limit": "До 8.500 MMR на игрока",
