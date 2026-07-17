@@ -1,5 +1,36 @@
 const tournaments = [  
   {
+  "id": "Yarf-Cup-3",
+  "title": "Yarf Cup 3",
+  "limit": "Без ограничений по MMR",
+  "start": "2026-07-19",
+  "end": "2026-07-19",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-17",
+  "registrationEnd": "2026-07-18",
+  "prize": "1500₽+",
+  "location": "СНГ",
+  "teams": 8,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Yarf Cup",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdjO4rsy2qcyokSjsH3tDyogX1VQ6__OBQyNUnbi1CvMspZaA/viewform?usp=header",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Yarf Cup 3 — онлайн-турнир по Dota 2 (5x5). Single Elimination, все матчи Bo1, Финал Bo3. Призовой фонд 1500₽ (увеличивается при большем количестве команд). Взнос 500₽ с команды.",
+  "prizePool": [
+    { "place": 1, "amount": "1500₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "SkewerEsports-Season-5",
   "title": "SkewerEsports Season 5",
   "limit": "До 38.000 MMR на команду",
