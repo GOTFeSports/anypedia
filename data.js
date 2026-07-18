@@ -185,18 +185,18 @@ const tournaments = [
     "format": "Double Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "RAMPAGE Tournaments",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/6us57f6n/module",
     "registrationLink": "https://t.me/visagebroken",
     "telegramLink": "https://t.me/rampagetournaments",
     "description": "RAMPAGE KURIK #5 — турнир для игроков до 5.000 MMR. Формат Double Elimination (BO1), гранд-финал BO3. Взнос с команды 1000 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "16000₽", "team": "" }
+        { "place": 1, "amount": "16000₽", "team": "ML Bulfinch" }
     ],
     "links": {
         "dotabuff": "",
         "discord": "https://discord.com/invite/yBGQ4ssxH",
         "rules": "",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/6us57f6n"
     },
     "casters": [],
     "teamsList": []
@@ -221,9 +221,9 @@ const tournaments = [
     "telegramLink": "https://t.me/bedlamtournaments",
     "description": "Bedlam Season 4 Division 2 - четвертый сезон турниров от Bedlam Tournaments. Турнир будет длиться 2 дня, в формате с групповым этапом и сеткой с двойным шансом. Взнос с одной команды, 750 рублей.",
     "prizePool": [
-        { "place": 1, "amount": "10000₽", "team": "" },
-        { "place": 2, "amount": "6000₽", "team": "" },
-        { "place": 2, "amount": "4000₽", "team": "" },
+        { "place": 1, "amount": "10000₽", "team": "Team Барни" },
+        { "place": 2, "amount": "6000₽", "team": "Rozen" },
+        { "place": 2, "amount": "4000₽", "team": "MMAshonki61" },
     ],
     "links": {
         "dotabuff": "",
@@ -232,39 +232,6 @@ const tournaments = [
         "bracket": ""
     },
     "casters": [],
-    "teamsList": []
-},
-    {
-    "id": "Yarf-Cup-2",
-    "title": "Yarf Cup 2 Dota 2 Tournaments",
-    "limit": "Без лимита MMR",
-    "start": "2026-07-12",
-    "end": "2026-07-12",
-    "startTime": "12:00",
-    "registrationStart": "2026-06-30",
-    "registrationEnd": "2026-07-11",
-    "prize": "1.500₽",
-    "location": "СНГ",
-    "teams": 16,
-    "format": "Single Elimination",
-    "gameFormat": "Captains Mode",
-    "organizer": "Yarf Cup",
-    "bracketEmbed": "",
-    "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSf85oX-cTtPeOAvmqSshDLQhE1fUlYyOWJMV1zr3U0Aueu-WA/viewform?usp=dialog",
-    "telegramLink": "https://t.me/yarfcup",
-    "description": "Второй турнир от YARF CUP по Dota 2 в формате 5x5 Captains Mode. Турнир проходит в один день по системе Single Elimination. Проводится только при наборе 16 команд. Без ограничений по рангу.",
-    "prizePool": [
-        { "place": 1, "amount": "1500₽", "team": "" },
-    ],
-    "links": {
-        "dotabuff": "",
-        "discord": "",
-        "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-        "bracket": ""
-    },
-    "casters": [
-        { "name": "", "link": "" }
-    ],
     "teamsList": []
 },
 {
@@ -450,19 +417,19 @@ const tournaments = [
     "format": "Double Elimination",
     "gameFormat": "Captains Mode",
     "organizer": "SkewerEsports",
-    "bracketEmbed": "",
+    "bracketEmbed": "https://challonge.com/ru/nwwrsvy3/module",
     "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=dialog",
     "telegramLink": "https://t.me/SkewerEsports",
     "description": "Четвертый турнир от SkewerEsports. Взнос с команды составит 1000 рублей, турнир пройдет в два дня.",
     "prizePool": [
-        { "place": 1, "amount": "10000₽", "team": "" },
-        { "place": 2, "amount": "2000₽", "team": "" }
+        { "place": 1, "amount": "10000₽", "team": "LETO Junior" },
+        { "place": 2, "amount": "2000₽", "team": "Bulbanyats" }
     ],
     "links": {
         "dotabuff": "",
         "discord": "https://discord.gg/s7RCg2gmpS",
         "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
-        "bracket": ""
+        "bracket": "https://challonge.com/ru/nwwrsvy3"
     },
     "casters": [],
     "teamsList": []
@@ -854,12 +821,12 @@ const tournaments = [
     "id": "Twintournaments-2",
     "title": "TWINTOURNAMENTS 2",
     "limit": "До 40.000 MMR на команду",
-    "start": "2026-07-11",
-    "end": "2026-07-11",
+    "start": "2026-07-05",
+    "end": "2026-07-05",
     "startTime": "14:00",
     "registrationStart": "2026-06-20",
-    "registrationEnd": "2026-07-11",
-    "prize": "25.000₽",
+    "registrationEnd": "2026-07-05",
+    "prize": "5.000₽",
     "location": "СНГ",
     "teams": 16,
     "format": "Single Elimination",
@@ -870,9 +837,7 @@ const tournaments = [
     "telegramLink": "https://t.me/Dota2twintournaments",
     "description": "Турнир по Dota 2 от TWINTOURNAMENTS. Все матчи проходят в формате Bo1, финал — Bo3. Взнос 1000 рублей. В команде может быть только 1 игрок с рейтингом более 12 000 MMR..",
     "prizePool": [
-        { "place": 1, "amount": "12500₽", "team": "" },
-        { "place": 2, "amount": "7500₽", "team": "" },
-        { "place": 3, "amount": "5000₽", "team": "" }
+        { "place": 1, "amount": "5000₽", "team": "Bad Bees" },
     ],
     "links": {
         "dotabuff": "",
