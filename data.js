@@ -1,36 +1,5 @@
 const tournaments = [  
   {
-  "id": "Yarf-Cup-3",
-  "title": "Yarf Cup 3",
-  "limit": "Без ограничений по MMR",
-  "start": "2026-07-19",
-  "end": "2026-07-19",
-  "startTime": "12:00",
-  "registrationStart": "2026-07-17",
-  "registrationEnd": "2026-07-18",
-  "prize": "1500₽+",
-  "location": "СНГ",
-  "teams": 8,
-  "format": "Single Elimination",
-  "gameFormat": "Captains Mode",
-  "organizer": "Yarf Cup",
-  "bracketEmbed": "",
-  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdjO4rsy2qcyokSjsH3tDyogX1VQ6__OBQyNUnbi1CvMspZaA/viewform?usp=header",
-  "telegramLink": "https://t.me/yarfcup",
-  "description": "Yarf Cup 3 — онлайн-турнир по Dota 2 (5x5). Single Elimination, все матчи Bo1, Финал Bo3. Призовой фонд 1500₽ (увеличивается при большем количестве команд). Взнос 500₽ с команды.",
-  "prizePool": [
-    { "place": 1, "amount": "1500₽", "team": "" }
-  ],
-  "links": {
-    "dotabuff": "",
-    "discord": "",
-    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-    "bracket": ""
-  },
-  "casters": [],
-  "teamsList": []
-},
-  {
   "id": "SkewerEsports-Season-5",
   "title": "SkewerEsports Season 5",
   "limit": "До 38.000 MMR на команду",
@@ -124,8 +93,8 @@ const tournaments = [
   "telegramLink": "https://t.me/BarracudaBattles",
   "description": "Первый турнир от Barracuda Battles. На турнире будет полная статистика матчей, определяется лучший игрок турнира. Без взноса.",
   "prizePool": [
-    { "place": 1, "amount": "4000₽", "team": "" },
-    { "place": 2, "amount": "1000₽", "team": "" },
+    { "place": 1, "amount": "4000₽", "team": "EGOISTO" },
+    { "place": 2, "amount": "1000₽", "team": "Артур и его фанаты" },
     { "place": "MVP", "amount": "500₽", "team": "" }
   ],
   "links": {
@@ -157,9 +126,9 @@ const tournaments = [
   "telegramLink": "https://t.me/l_of_spirits",
   "description": "CL: Rivals — турнир по Dota 2 между лигами League of Spirits и Bedlam Battles Tournaments. 16 команд (по 8 с каждой стороны), групповая стадия bo1, плей-офф Single Elimination bo1, финал bo3, матч за 3 место bo1. Призы от Collector's Shop.",
   "prizePool": [
-    { "place": 1, "amount": "Подарки от Collector's Shop", "team": "" },
-    { "place": 2, "amount": "Подарки от Collector's Shop", "team": "" },
-    { "place": 3, "amount": "Подарки от Collector's Shop", "team": "" }
+    { "place": 1, "amount": "Подарки от Collector's Shop", "team": "LETO Junior" },
+    { "place": 2, "amount": "Подарки от Collector's Shop", "team": "OFRENDA MID" },
+    { "place": 3, "amount": "Подарки от Collector's Shop", "team": "Design Machine" }
   ],
   "links": {
     "dotabuff": "",
