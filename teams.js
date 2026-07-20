@@ -208,7 +208,7 @@ const teams = [
     tournaments: [
       {
         title: "CL: Rivals",
-        date:  "2025-07-19",
+        date:  "2026-07-19",
         place: "1",
         prize: "Подарки от Collector's Shop",
         limit: "До 40.000 MMR на команду"
@@ -327,7 +327,7 @@ const teams = [
     tournaments: [
        {
         title: "CL: Rivals",
-        date:  "2025-07-19",
+        date:  "2026-07-19",
         place: "9-12",
         prize: "",
         limit: "До 40.000 MMR на команду"
@@ -411,7 +411,7 @@ const teams = [
     tournaments: [
       {
         title: "CL: Rivals",
-        date:  "2025-07-19",
+        date:  "2026-07-19",
         place: "9-12",
         prize: "",
         limit: "До 40.000 MMR на команду"
@@ -478,7 +478,7 @@ const teams = [
     tournaments: [
       {
         title: "CL: Rivals",
-        date:  "2025-07-19",
+        date:  "2026-07-19",
         place: "13-16",
         prize: "",
         limit: "До 40.000 MMR на команду"
