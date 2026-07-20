@@ -52,6 +52,13 @@ const teams = [
         prize: "—",
         limit: "Без лимита MMR"
       },
+      {
+        title: "Special 3: Closed Qualification",
+        date:  "2026-07--5",
+        place: "5-8",
+        prize: "—",
+        limit: "До 37.500 MMR на команду"
+      },
     ]
   },
     {
@@ -126,6 +133,13 @@ const teams = [
     ],
     tournaments: [
       {
+        title: "AnyLvL x GOTF eSports: Special 3",
+        date:  "2026-07-12",
+        place: "7-8",
+        prize: "",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
         title: "Bedlam Swamp Wars",
         date:  "2026-03-29",
         place: "1",
@@ -193,11 +207,32 @@ const teams = [
     ],
     tournaments: [
       {
+        title: "CL: Rivals",
+        date:  "2025-07-19",
+        place: "1",
+        prize: "Подарки от Collector's Shop",
+        limit: "До 40.000 MMR на команду"
+      },
+      {
+        title: "AnyLvL x GOTF eSports: Special 3",
+        date:  "2026-07-12",
+        place: "1",
+        prize: "5.000₽",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
+        title: "SkewerEsports Season 4",
+        date:  "2026-07-10",
+        place: "1",
+        prize: "10.000₽",
+        limit: "До 9.000 MMR на игрока"
+      },
+      {
         title: "Bedlam Season 4 Division 1",
         date:  "2026-06-28",
         place: "2",
         prize: "7.500₽",
-        limit: "До 9.000 MMR на игрока"
+        limit: "До 8.000 MMR на игрока"
       },
       {
         title: "AnyLvL x GOTF eSports: Special 2",
@@ -290,6 +325,27 @@ const teams = [
     ],
     formerPlayers: [],
     tournaments: [
+       {
+        title: "CL: Rivals",
+        date:  "2025-07-19",
+        place: "9-12",
+        prize: "",
+        limit: "До 40.000 MMR на команду"
+      },
+      {
+        title: "AnyLvL x GOTF eSports: Special 3",
+        date:  "2026-07-12",
+        place: "5-6",
+        prize: "",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2026-06-28",
+        place: "3-4",
+        prize: "",
+        limit: "До 8.000 MMR на игрока"
+      },
       {
         title: "SkewerEsports Season 1",
         date:  "2026-05-08",
@@ -354,6 +410,20 @@ const teams = [
 
     tournaments: [
       {
+        title: "CL: Rivals",
+        date:  "2025-07-19",
+        place: "9-12",
+        prize: "",
+        limit: "До 40.000 MMR на команду"
+      },
+      {
+        title: "AnyLvL x GOTF eSports: Special 3",
+        date:  "2026-07-12",
+        place: "7-8",
+        prize: "",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
         title: "Bedlam Spring Cup",
         date:  "2026-04-18",
         place: "1",
@@ -405,10 +475,28 @@ const teams = [
     formerPlayers: [
       
     ],
-
-    // Добавляйте турниры вручную.
-    // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
     tournaments: [
+      {
+        title: "CL: Rivals",
+        date:  "2025-07-19",
+        place: "13-16",
+        prize: "",
+        limit: "До 40.000 MMR на команду"
+      },
+      {
+        title: "AnyLvL x GOTF eSports: Special 3",
+        date:  "2026-07-12",
+        place: "2",
+        prize: "",
+        limit: "До 37.500 MMR на команду"
+      },
+      {
+        title: "Bedlam Season 4 Division 1",
+        date:  "2026-06-28",
+        place: "3-4",
+        prize: "",
+        limit: "До 8.000 MMR на игрока"
+      },
       {
         title: "Bedlam Battles Season 3",
         date:  "2025-11-09",
