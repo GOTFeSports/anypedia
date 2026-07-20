@@ -189,7 +189,7 @@ const teams = [
     aliases: ["LETO Junior", "LETO jr", "LETO junior", "Teiko", "TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "11.500₽",
+    prize: "26.500₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
