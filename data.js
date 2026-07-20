@@ -95,7 +95,7 @@ const tournaments = [
   "prizePool": [
     { "place": 1, "amount": "4000₽", "team": "EGOISTO" },
     { "place": 2, "amount": "1000₽", "team": "Артур и его фанаты" },
-    { "place": "MVP", "amount": "500₽", "team": "" }
+    { "place": "MVP", "amount": "500₽", "team": "dodikre⁶⁷" }
   ],
   "links": {
     "dotabuff": "",
