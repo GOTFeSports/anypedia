@@ -19,48 +19,6 @@
 // =============================================
 
 const teams = [
-  {
-    id: "azutive-fans",
-    name: "Azutive Fans",
-    aliases: ["HATE RELATE", "Fast & Furious 4"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "https://t.me/...",   // ссылка на группу/канал команды
-    captainLink:  "https://t.me/...",   // личный TG капитана для связи
-    description: "Команда СНГ-региона, выступавшая ранее под названиями HATE RELATE и Fast & Furious 4. Коллектив регулярно принимает участие в любительских и полупрофессиональных турнирах, постепенно набирая опыт и развивая состав. Azutive Fans объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
-
-    activeRoster: [
-      { nick: "haginsson",  pos: 1, joined: "2025-07-18" },
-      { nick: "azutive",   pos: 2, joined: "2025-07-18" },
-      { nick: "///",       pos: 3, joined: "2025-07-18" },
-      { nick: "matbym",    pos: 4, joined: "2026-04-01" },
-      { nick: "Parasiu",   pos: 5, joined: "2025-07-18" },
-    ],
-
-    formerPlayers: [
-      { nick: "Collapse Mini", pos: 3, joined: "2025-07-18", left: "2026-04-10", newTeam: "DRAGFIRE Ascent"   },
-    ],
-
-    // Добавляйте турниры вручную.
-    // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
-    tournaments: [
-      {
-        title: "AnyLvL x GOTF eSports: Special 2",
-        date:  "2025-07-18",
-        place: "3",
-        prize: "—",
-        limit: "Без лимита MMR"
-      },
-      {
-        title: "Special 3: Closed Qualification",
-        date:  "2026-07--5",
-        place: "5-8",
-        prize: "—",
-        limit: "До 37.500 MMR на команду"
-      },
-    ]
-  },
     {
     id: "team-sexy",
     name: "Team Sexy",
@@ -465,10 +423,7 @@ const teams = [
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
-      { nick: "KarineGod",  pos: 1, joined: "2025-11-01" },
       { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" },
-      { nick: "m1nd1",   pos: 3, joined: "2026-05-31" },
-      { nick: "Darklight",   pos: 4, joined: "2026-05-31" },
       { nick: "Rose",   pos: 5, joined: "2025-11-01" },
     ],
 
