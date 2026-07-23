@@ -317,13 +317,15 @@ const teams = [
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
     activeRoster: [
-      { nick: "Woods",                      pos: 1, joined: "2026-06-09" },
-      { nick: "N9lwkA",       pos: 2, joined: "2026-01-03" },
+      { nick: "Teenwave",                 pos: 1, joined: "2026-07-17" },
+      { nick: "Stimsly",                  pos: 2, joined: "2026-04-01" },
       { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" },
       { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" },
-      { nick: "аурная зараза",            pos: 5, joined: "2026-01-03" },
+      { nick: "N9lwkA",                   pos: 5, joined: "2026-01-03" },
     ],
-    formerPlayers: [],
+    formerPlayers: [
+      { nick: "Woods", pos: 1, joined: "2026-06-09", left: "2026-07-13", newTeam: ""    },
+    ],
     tournaments: [
        {
         title: "CL: Rivals",
