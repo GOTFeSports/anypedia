@@ -21,50 +21,60 @@
 (function(){
   var t = localStorage.getItem('ap-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', t);
-  document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
+  document.documentElement.style.background = t === 'light' ? '#f3f7f4' : '#080b09';
 })();
 </script>
 <script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
    CSS VARIABLES
    ============================================================ */
 :root {
-  --bg:        #0f0f10;
-  --bg2:       #151516;
-  --bg3:       #1c1c1e;
-  --border:    #252528;
-  --text:      #eaeaea;
-  --text-muted:#888;
-  --accent:    #6bb6ff;
-  --accent2:   #3d8fe0;
-  --live:      #ff6b6b;
-  --upcoming:  #6bb6ff;
-  --finished:  #5dff9c;
-  --finished-bg: rgba(93,255,156,.10);
+  --bg:        #080b09;
+  --bg2:       #0e1512;
+  --bg3:       #141d18;
+  --border:    #1c2721;
+  --text:      #e6efe9;
+  --text-muted:#7d9488;
+  --accent:    #7ed88f;
+  --accent2:   #63c078;
+  --on-accent: #06130b;
+  --gold:      #d3a94e;
+  --live:      #ff9166;
+  --upcoming:  #7ed88f;
+  --finished:  #6f8577;
+  --live-bg:      rgba(255,145,102,.15);
+  --upcoming-bg:  rgba(126,216,143,.15);
+  --finished-bg:  rgba(111,133,119,.14);
   --radius:    12px;
   --shadow:    0 4px 24px rgba(0,0,0,.45);
   --transition:color .25s, background-color .25s, border-color .25s;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
 }
 
 [data-theme="light"] {
-  --bg:        #f4f4f6;
+  --bg:        #f3f7f4;
   --bg2:       #ffffff;
-  --bg3:       #e8e8ec;
-  --border:    #d0d0d8;
-  --text:      #111114;
-  --text-muted:#666;
-  --accent:    #1a6fcc;
-  --accent2:   #1452a0;
+  --bg3:       #e7f0ea;
+  --border:    #d3e0d8;
+  --text:      #102016;
+  --text-muted:#5b6f63;
+  --accent:    #2f8f52;
+  --accent2:   #23703f;
+  --on-accent: #ffffff;
+  --gold:      #a67a1e;
   --shadow:    0 4px 24px rgba(0,0,0,.12);
   /* Статусы на светлом фоне — тёмные насыщенные цвета */
-  --live:      #c0392b;
-  --upcoming:  #1a6fcc;
-  --finished:  #1a7a3a;
-  --finished-bg: rgba(26,122,58,.13);
+  --live:      #d0512b;
+  --upcoming:  #2f8f52;
+  --finished:  #3f6b52;
+  --live-bg:      rgba(208,81,43,.12);
+  --upcoming-bg:  rgba(47,143,82,.12);
+  --finished-bg:  rgba(63,107,82,.13);
 }
 
 /* ============================================================
@@ -73,9 +83,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* Фон на html предотвращает белую вспышку до загрузки CSS-переменных */
-html { background: #0f0f10; }
+html { background: #080b09; scroll-behavior: smooth; }
 [data-theme="light"] html,
-html[data-theme="light"] { background: #f4f4f6; }
+html[data-theme="light"] { background: #f3f7f4; }
 
 body {
   background: var(--bg);
@@ -115,7 +125,7 @@ a:hover { color: var(--accent2); }
 .logo-wrap { display: flex; flex-direction: column; }
 
 .logo {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
   letter-spacing: .5px;
@@ -174,7 +184,7 @@ a:hover { color: var(--accent2); }
 }
 .header-search:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(107,182,255,.15);
+  box-shadow: 0 0 0 3px rgba(126,216,143,.15);
 }
 .header-search::placeholder { color: var(--text-muted); }
 
@@ -288,55 +298,91 @@ a:hover { color: var(--accent2); }
 }
 
 /* ============================================================
-   BANNER
+   HERO
    ============================================================ */
-.banner-wrap {
+.hero-wrap {
   max-width: 1200px;
-  margin: 18px auto 0;
+  margin: 20px auto 0;
   padding: 0 20px;
 }
-
-/* Кликабельная обёртка баннера */
-.banner-link {
-  display: block;
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: opacity .2s, transform .2s;
-}
-.banner-link:hover { opacity: .9; transform: scale(1.005); }
-
-#mainBanner {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  transition: filter .3s;
-}
-[data-theme="light"] #mainBanner {
-  filter: brightness(1.35) contrast(0.88) saturate(0.9);
-}
-
-.banner-placeholder {
-  width: 100%;
-  height: 150px;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, #1a2840 0%, #0f1f35 40%, #162033 100%);
-  display: flex;
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
   align-items: center;
-  justify-content: center;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 1px;
+  gap: 28px;
+  background: var(--bg2);
   border: 1px solid var(--border);
-  cursor: pointer;
-  transition: opacity .2s, background .3s;
+  border-radius: var(--radius);
+  padding: 40px 44px;
+  transition: var(--transition);
 }
-.banner-placeholder:hover { opacity: .85; }
-[data-theme="light"] .banner-placeholder {
-  background: linear-gradient(135deg, #3a5f8a 0%, #2a4a6e 40%, #334d70 100%);
-  color: #fff;
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .2px;
+  margin-bottom: 14px;
+}
+.hero-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 48ch;
+  margin-bottom: 26px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: opacity .2s, transform .15s, var(--transition);
+}
+.hero-btn:hover { transform: translateY(-1px); }
+.hero-btn-primary { background: var(--accent); color: var(--on-accent); }
+.hero-btn-primary:hover { opacity: .9; color: var(--on-accent); }
+.hero-btn-secondary {
+  background: var(--bg3);
+  color: var(--text);
+  border-color: var(--border);
+}
+.hero-btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Сигнатурная иллюстрация — сходящиеся линии турнирной сетки,
+   выстроенные лесенкой рангов (Herald → Immortal) */
+.hero-art { display: flex; align-items: center; justify-content: center; }
+.hero-art svg { width: 100%; max-width: 260px; height: auto; }
+.bracket-node { fill: var(--bg3); stroke: var(--border); }
+.bracket-line { stroke: var(--accent); }
+.bracket-final { fill: var(--gold); }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding: 32px 28px; text-align: center; }
+  .hero-text { max-width: none; margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-art { order: -1; margin-bottom: 8px; }
+  .hero-art svg { max-width: 180px; }
+}
+@media (max-width: 640px) {
+  .hero-wrap { padding: 0 16px; margin-top: 14px; }
+  .hero { padding: 26px 20px; border-radius: 10px; }
+  .hero-title { font-size: 24px; }
+  .hero-text { font-size: 13px; }
+  .hero-btn { flex: 1; justify-content: center; padding: 11px 14px; font-size: 13px; }
 }
 
 /* ============================================================
@@ -349,6 +395,7 @@ a:hover { color: var(--accent2); }
   display: flex;
   flex-direction: column;
   gap: 28px;
+  scroll-margin-top: 84px;
 }
 
 /* ============================================================
@@ -383,7 +430,7 @@ a:hover { color: var(--accent2); }
 .filter-toggle-btn.active {
   color: var(--accent);
   border-color: var(--accent);
-  background: rgba(107,182,255,.07);
+  background: rgba(126,216,143,.09);
 }
 .filter-toggle-btn svg {
   width: 13px;
@@ -507,14 +554,18 @@ a:hover { color: var(--accent2); }
    SECTION
    ============================================================ */
 .section-label {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+.section-label svg { color: var(--accent); flex-shrink: 0; }
 
 /* ============================================================
    TABLE
@@ -595,12 +646,12 @@ tbody tr:hover {
   display: inline-block;
   white-space: nowrap;
 }
-.live-tag     { background: rgba(255,107,107,.15); color: var(--live); }
-.upcoming-tag { background: rgba(107,182,255,.15); color: var(--upcoming); }
+.live-tag     { background: var(--live-bg);     color: var(--live); }
+.upcoming-tag { background: var(--upcoming-bg); color: var(--upcoming); }
 .finished-tag { background: var(--finished-bg);    color: var(--finished); }
 
 .limit-cell  { color: var(--text-muted); font-size: 12px; }
-.prize-cell  { font-weight: 600; }
+.prize-cell  { font-weight: 600; font-family: var(--font-mono); color: var(--gold); }
 .winner-cell { font-size: 12px; }
 
 /* share icon button */
@@ -616,7 +667,7 @@ tbody tr:hover {
   align-items: center;
   justify-content: center;
 }
-.share-btn:hover { color: var(--accent); background: rgba(107,182,255,.1); }
+.share-btn:hover { color: var(--accent); background: rgba(126,216,143,.1); }
 
 /* Empty row */
 .empty-row td {
@@ -694,7 +745,7 @@ tbody tr:hover {
   flex-wrap: wrap;
 }
 .footer-brand .logo-foot {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
@@ -795,7 +846,8 @@ tbody tr:hover {
 .t-card-prize {
   font-weight: 700;
   font-size: 15px;
-  color: var(--accent);
+  font-family: var(--font-mono);
+  color: var(--gold);
 }
 .t-card-share {
   background: none;
@@ -808,7 +860,7 @@ tbody tr:hover {
   align-items: center;
   transition: color .2s, background .2s;
 }
-.t-card-share:hover { color: var(--accent); background: rgba(107,182,255,.1); }
+.t-card-share:hover { color: var(--accent); background: rgba(126,216,143,.1); }
 
 /* ============================================================
    RESPONSIVE
@@ -823,9 +875,6 @@ tbody tr:hover {
   .header-search { width: 100%; }
   .site-nav { order: 2; width: 100%; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .nav-link { padding: 6px 12px; font-size: 12px; }
-
-  .banner-wrap { padding: 0 16px; margin-top: 14px; }
-  #mainBanner, .banner-placeholder { height: 110px; }
 
   .container { padding: 0 16px; margin-top: 18px; gap: 22px; }
 
@@ -844,7 +893,6 @@ tbody tr:hover {
 
 @media (max-width: 400px) {
   .logo { font-size: 20px; }
-  #mainBanner, .banner-placeholder { height: 85px; }
 }
 
 /* ============================================================
@@ -880,7 +928,7 @@ tbody tr:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1018,7 +1066,7 @@ tbody tr:hover {
       <div class="logo-sub">Киберспортивное Dota 2 Wiki</div>
     </div>
     <nav class="site-nav">
-      <a class="nav-link active" href="/">Турниры</a>
+      <a class="nav-link active" href="#mainContainer">Турниры</a>
       <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
     </nav>
@@ -1032,19 +1080,59 @@ tbody tr:hover {
   </div>
 </header>
 
-<!-- BANNER — кликабельный, ведёт на Telegram.
-     Положи файл banner.png в папку с сайтом — он отобразится автоматически.
-     Если файла нет — показывается текстовый плейсхолдер. -->
-<div class="banner-wrap">
-  <a class="banner-link" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener" id="bannerLink">
-    <img id="mainBanner" src="banner.png" alt="Anypedia Banner"
-         onerror="this.closest('.banner-link').style.display='none'; document.getElementById('bannerPlaceholder').style.display='flex';">
-  </a>
-  <a class="banner-placeholder" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener"
-     id="bannerPlaceholder" style="display:none; text-decoration:none;">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg> 
-    &nbsp; Подписывайтесь на наш Telegram канал
-  </a>
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Dota 2 · СНГ-турниры</div>
+      <h1 class="hero-title">Anypedia — Dota 2 Wiki для турниров с&nbsp;ограничением по рейтингу</h1>
+      <p class="hero-text">Следите за расписанием, призовыми и составами команд на любительских турнирах СНГ — от Herald-лоурангов до высоких дивизионов. Актуальные брекеты, организаторы и статистика в одном месте.</p>
+      <div class="hero-actions">
+        <a class="hero-btn hero-btn-secondary" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
+          Посетить наш Telegram
+        </a>
+        <a class="hero-btn hero-btn-primary" href="#mainContainer">
+          Смотреть турниры
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 250 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Турнирная сетка">
+  <path class="bracket-line" opacity=".35" d="M20 200 L35 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M50 200 L35 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M80 200 L95 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M110 200 L95 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M140 200 L155 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M170 200 L155 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M200 200 L215 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".35" d="M230 200 L215 150" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".6" d="M35 150 L65 100" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".6" d="M95 150 L65 100" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".6" d="M155 150 L185 100" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".6" d="M215 150 L185 100" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".9" d="M65 100 L125 50" stroke-width="2" stroke-linecap="round"/>
+  <path class="bracket-line" opacity=".9" d="M185 100 L125 50" stroke-width="2" stroke-linecap="round"/>
+  <circle class="bracket-node" cx="20" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="50" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="80" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="110" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="140" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="170" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="200" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="230" cy="200" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="35" cy="150" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="95" cy="150" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="155" cy="150" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="215" cy="150" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="65" cy="100" r="4" stroke-width="1.5"/>
+  <circle class="bracket-node" cx="185" cy="100" r="4" stroke-width="1.5"/>
+  <circle class="bracket-final" cx="125" cy="50" r="7"/>
+  <circle cx="125" cy="50" r="11" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity=".45"/>
+</svg>
+    </div>
+  </div>
 </div>
 
 <!-- PAGE LAYOUT: сайдбар LIVE слева + основной контент справа -->
@@ -1109,7 +1197,7 @@ tbody tr:hover {
 
   <!-- Будущие -->
   <section>
-    <div class="section-label">Будущие турниры</div>
+    <div class="section-label"><svg width="14" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 2L8 7L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="7" r="1.5" fill="currentColor"/></svg>Будущие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1125,7 +1213,7 @@ tbody tr:hover {
 
   <!-- Текущие -->
   <section>
-    <div class="section-label">Текущие турниры</div>
+    <div class="section-label"><svg width="14" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 2L8 7L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="7" r="1.5" fill="currentColor"/></svg>Текущие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1141,7 +1229,7 @@ tbody tr:hover {
 
   <!-- Прошедшие -->
   <section>
-    <div class="section-label">Прошедшие турниры</div>
+    <div class="section-label"><svg width="14" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 2L8 7L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="7" r="1.5" fill="currentColor"/></svg>Прошедшие турниры</div>
     <div class="table-wrap">
       <table>
         <thead><tr>
@@ -1521,174 +1609,6 @@ document.getElementById('fReset').addEventListener('click', () => {
   renderAll();
 });
 
-/* ============================================================
-   GLOBAL SEARCH — турниры + команды
-   ============================================================ */
-const searchInput    = document.getElementById('search');
-const searchDropdown = document.getElementById('searchDropdown');
-const searchWrap     = document.getElementById('searchWrap');
-
-/* helpers */
-function slugifyTeam(value) {
-  return String(value || '').normalize('NFKC').trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\p{L}\p{N}_-]+/gu, '')
-    .replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
-}
-function getTeamId(team) { return team.id || slugifyTeam(team.name); }
-
-function teamAliasNames(team) {
-  const a = team.aliases || [];
-  if (Array.isArray(a)) return a;
-  return String(a).split(',').map(s => s.trim()).filter(Boolean);
-}
-
-function teamMatchesQuery(team, q) {
-  return [team.name, ...teamAliasNames(team)]
-    .some(n => n.toLowerCase().includes(q));
-}
-
-let activeIdx = -1;
-let currentItems = [];
-
-function closeDropdown() {
-  searchDropdown.classList.remove('visible');
-  activeIdx = -1;
-}
-
-function renderDropdown(q) {
-  if (!q) { closeDropdown(); return; }
-
-  const allTeamsList = typeof teams !== 'undefined' ? teams : [];
-  const allOrganizersList = typeof organizers !== 'undefined' ? organizers : [];
-
-  const matchedTournaments = tournaments.filter(t =>
-    t.title.toLowerCase().includes(q)
-  ).slice(0, 6);
-
-  const matchedTeams = allTeamsList.filter(t =>
-    teamMatchesQuery(t, q)
-  ).slice(0, 5);
-
-  const matchedOrganizers = allOrganizersList.filter(o =>
-    organizerAllNames(o).some(n => n.includes(q))
-  ).slice(0, 5);
-
-  if (!matchedTournaments.length && !matchedTeams.length && !matchedOrganizers.length) {
-    searchDropdown.innerHTML = `<div class="sd-empty">Ничего не найдено</div>`;
-    searchDropdown.classList.add('visible');
-    currentItems = [];
-    return;
-  }
-
-  let html = '';
-  currentItems = [];
-
-  if (matchedTournaments.length) {
-    html += `<div class="sd-group-label">🏆 Турниры</div>`;
-    matchedTournaments.forEach(t => {
-      const st = getStatus(t);
-      const statusBadge = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' }[st];
-      const link = `${siteBase}tournament.html?id=${t.id}`;
-      currentItems.push(link);
-      html += `
-        <a class="sd-item" href="${link}">
-          <div class="sd-icon">🏆</div>
-          <div class="sd-info">
-            <div class="sd-title">${t.title}</div>
-            <div class="sd-meta">${t.prize || '—'} · ${t.location || '—'}</div>
-          </div>
-          <span class="sd-badge">${statusBadge}</span>
-        </a>`;
-    });
-  }
-
-  if (matchedTeams.length) {
-    html += `<div class="sd-group-label">👥 Команды</div>`;
-    matchedTeams.forEach(team => {
-      const tid = getTeamId(team);
-      const link = `${siteBase}team.html?id=${tid}`;
-      currentItems.push(link);
-      html += `
-        <a class="sd-item" href="${link}">
-          <img class="sd-logo" src="${siteBase}${team.logo || 'dota2.png'}"
-               alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="sd-icon" style="display:none">👥</div>
-          <div class="sd-info">
-            <div class="sd-title">${team.name}</div>
-            <div class="sd-meta">${team.region || '—'}${team.prize ? ' · ' + team.prize : ''}</div>
-          </div>
-          <span class="sd-badge">Команда</span>
-        </a>`;
-    });
-  }
-
-  if (matchedOrganizers.length) {
-    html += `<div class="sd-group-label">🛡️ Организаторы</div>`;
-    matchedOrganizers.forEach(org => {
-      const oid = getOrganizerId(org);
-      const link = `${siteBase}organizer.html?id=${oid}`;
-      currentItems.push(link);
-      html += `
-        <a class="sd-item" href="${link}">
-          <img class="sd-logo" src="${siteBase}${org.logo || 'dota2.png'}"
-               alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="sd-icon" style="display:none">🛡️</div>
-          <div class="sd-info">
-            <div class="sd-title">${org.name}</div>
-            <div class="sd-meta">${org.region || '—'}</div>
-          </div>
-          <span class="sd-badge">Организатор</span>
-        </a>`;
-    });
-  }
-
-  searchDropdown.innerHTML = html;
-  searchDropdown.classList.add('visible');
-  activeIdx = -1;
-}
-
-searchInput.addEventListener('input', e => {
-  const q = e.target.value.toLowerCase().trim();
-  renderDropdown(q);
-});
-
-/* Клавиатурная навигация */
-searchInput.addEventListener('keydown', e => {
-  const items = searchDropdown.querySelectorAll('.sd-item');
-  if (!items.length) return;
-
-  if (e.key === 'ArrowDown') {
-    e.preventDefault();
-    activeIdx = Math.min(activeIdx + 1, items.length - 1);
-  } else if (e.key === 'ArrowUp') {
-    e.preventDefault();
-    activeIdx = Math.max(activeIdx - 1, 0);
-  } else if (e.key === 'Enter' && activeIdx >= 0) {
-    e.preventDefault();
-    items[activeIdx].click();
-    return;
-  } else if (e.key === 'Escape') {
-    closeDropdown();
-    searchInput.blur();
-    return;
-  }
-
-  items.forEach((el, i) => el.classList.toggle('active', i === activeIdx));
-  if (activeIdx >= 0) items[activeIdx].scrollIntoView({ block: 'nearest' });
-});
-
-/* Закрыть при клике вне */
-document.addEventListener('click', e => {
-  if (!searchWrap.contains(e.target)) closeDropdown();
-});
-
-/* Открыть снова при фокусе если есть текст */
-searchInput.addEventListener('focus', () => {
-  const q = searchInput.value.toLowerCase().trim();
-  if (q) renderDropdown(q);
-});
-
 /* Первоначальная отрисовка всех турниров */
 renderAll();
 
@@ -1821,5 +1741,6 @@ async function проверитьЖивыеСтримы() {
 проверитьЖивыеСтримы();
 setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
 </script>
+<script src="/search.js"></script>
 </body>
 </html>

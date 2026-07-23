@@ -42,7 +42,7 @@
     const p = location.pathname;
     if (/\/[^/]+\.html$/.test(p)) return location.origin + p.slice(0, p.lastIndexOf('/') + 1);
     const parts = p.replace(/\/+$/, '').split('/').filter(Boolean);
-    if (!parts.length || parts[0] === 'team') return location.origin + '/';
+    if (!parts.length || parts[0] === 'team' || parts[0] === 'organizer') return location.origin + '/';
     if (parts.length === 1) return location.origin + '/';
     return location.origin + '/' + parts.slice(0, -1).join('/') + '/';
   }

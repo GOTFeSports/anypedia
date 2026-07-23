@@ -4,8 +4,8 @@
    Антивспышка решена инлайн-скриптом в каждом <head>.
    ============================================================ */
 (function () {
-  const DARK_BG  = '#0f0f10';
-  const LIGHT_BG = '#f4f4f6';
+  const DARK_BG  = '#080b09';
+  const LIGHT_BG = '#f3f7f4';
 
   function applyBg(theme) {
     const bg = theme === 'light' ? LIGHT_BG : DARK_BG;

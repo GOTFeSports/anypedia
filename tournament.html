@@ -20,12 +20,12 @@
 (function(){
   var t = localStorage.getItem('ap-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', t);
-  document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
+  document.documentElement.style.background = t === 'light' ? '#f3f7f4' : '#080b09';
 })();
 </script>
 <script src="/page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <script src="/data.js"></script>
 <script src="/teams.js"></script>
 <script src="/organizers.js"></script>
@@ -35,34 +35,48 @@
    CSS VARIABLES
    ============================================================ */
 :root {
-  --bg:         #0f0f10;
-  --bg2:        #151516;
-  --bg3:        #1c1c1e;
-  --border:     #252528;
+  --bg:         #080b09;
+  --bg2:        #0e1512;
+  --bg3:        #141d18;
+  --border:     #1c2721;
   --text:       #eaeaea;
-  --text-muted: #888;
-  --accent:     #6bb6ff;
-  --accent2:    #3d8fe0;
+  --text-muted: #7d9488;
+  --accent:     #7ed88f;
+  --accent2:    #63c078;
+  --on-accent:  #06130b;
+  --gold:       #d3a94e;
   --tg:         #2ea6ff;
-  --live:       #ff6b6b;
-  --upcoming:   #6bb6ff;
-  --finished:   #5dff9c;
+  --live:       #ff9166;
+  --upcoming:   #7ed88f;
+  --finished:   #6f8577;
+  --live-bg:      rgba(255,145,102,.15);
+  --upcoming-bg:  rgba(126,216,143,.15);
+  --finished-bg:  rgba(111,133,119,.14);
   --radius:     12px;
   --shadow:     0 4px 24px rgba(0,0,0,.45);
   --transition: color .25s, background-color .25s, border-color .25s;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
 }
 [data-theme="light"] {
-  --bg:         #f4f4f6;
+  --bg:         #f3f7f4;
   --bg2:        #ffffff;
-  --bg3:        #e8e8ec;
-  --border:     #d0d0d8;
+  --bg3:        #e7f0ea;
+  --border:     #d3e0d8;
   --text:       #111114;
-  --text-muted: #666;
-  --accent:     #1a6fcc;
-  --accent2:    #1452a0;
+  --text-muted: #5c6b62;
+  --accent:     #2f8f52;
+  --accent2:    #23703f;
+  --on-accent:  #ffffff;
+  --gold:       #a67a1e;
   --tg:         #1a88d6;
   --shadow:     0 4px 24px rgba(0,0,0,.12);
-  --finished:   #1a7a3a;
+  --live:       #d0512b;
+  --upcoming:   #2f8f52;
+  --finished:   #3f6b52;
+  --live-bg:      rgba(208,81,43,.12);
+  --upcoming-bg:  rgba(47,143,82,.12);
+  --finished-bg:  rgba(63,107,82,.13);
 }
 
 /* ============================================================
@@ -70,8 +84,8 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { background: #0f0f10; }
-html[data-theme="light"] { background: #f4f4f6; }
+html { background: #080b09; scroll-behavior: smooth; }
+html[data-theme="light"] { background: #f3f7f4; }
 
 body {
   background: var(--bg);
@@ -106,7 +120,7 @@ a:hover { color: var(--accent2); }
 }
 .logo-wrap { display: flex; flex-direction: column; }
 .logo {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
   color: var(--text);
@@ -135,7 +149,7 @@ a:hover { color: var(--accent2); }
 }
 .header-search:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(107,182,255,.15);
+  box-shadow: 0 0 0 3px rgba(126,216,143,.15);
 }
 .header-search::placeholder { color: var(--text-muted); }
 
@@ -164,7 +178,7 @@ a:hover { color: var(--accent2); }
   transition: var(--transition);
 }
 .block h2 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: .5px;
@@ -185,7 +199,7 @@ a:hover { color: var(--accent2); }
   transition: var(--transition);
 }
 .infobox h2 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 14px;
@@ -226,7 +240,7 @@ a:hover { color: var(--accent2); }
 }
 .btn:active { transform: scale(.98); }
 .btn:hover  { opacity: .88; }
-.btn-reg    { background: var(--accent); color: #000; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.btn-reg    { background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 7px; }
 .btn-tg     { background: var(--tg);    color: #000; display: flex; align-items: center; justify-content: center; gap: 7px; }
 .btn-share  {
   background: var(--bg3);
@@ -244,7 +258,7 @@ a:hover { color: var(--accent2); }
 .countdown-wrap { margin-bottom: 14px; }
 .start-time-label { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
 .start-time-val {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 17px;
   font-weight: 600;
   color: var(--accent);
@@ -260,7 +274,7 @@ a:hover { color: var(--accent2); }
   padding: 8px 4px 6px;
 }
 .cd-num {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 700;
   color: var(--text);
@@ -274,7 +288,7 @@ a:hover { color: var(--accent2); }
   margin-top: 2px;
 }
 .countdown-status {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
   padding: 10px 0;
@@ -294,7 +308,7 @@ a:hover { color: var(--accent2); }
   flex-wrap: wrap;
 }
 .page-title {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 28px;
   font-weight: 700;
   line-height: 1.1;
@@ -974,7 +988,7 @@ document.getElementById('infobox').innerHTML = `
   <div class="countdown-wrap">${renderCountdown()}</div>
   <div class="info-row"><span class="info-label">Регистрация</span><span class="info-val">${t.registrationStart && t.registrationEnd? `${formatDateLong(t.registrationStart)} — ${formatDateLong(t.registrationEnd)}`: '—'}</span></div>
   <div class="info-row"><span class="info-label">Даты</span><span class="info-val">${dateText}</span></div>
-  <div class="info-row"><span class="info-label">Приз</span><span class="info-val" style="font-weight:700;color:var(--accent)">${t.prize || '—'}</span></div>
+  <div class="info-row"><span class="info-label">Приз</span><span class="info-val" style="font-weight:700;color:var(--gold);font-family:var(--font-mono)">${t.prize || '—'}</span></div>
   <div class="info-row"><span class="info-label">Регион</span><span class="info-val">${t.location || '—'}</span></div>
   <div class="info-row"><span class="info-label">Команд</span><span class="info-val">${t.teams ?? '—'}</span></div>
   <div class="info-row"><span class="info-label">Формат Сетки</span><span class="info-val">${t.format || '—'}</span></div>
@@ -1023,7 +1037,7 @@ function prizeTable() {
     <tr>
       <td><span class="prize-place">${medals[p.place-1]||'🏅'}</span> ${p.place}</td>
       <td>${renderTeamLink(p.team || '—')}</td>
-      <td style="font-weight:600;color:var(--text)">${p.amount}</td>
+      <td style="font-weight:600;color:var(--gold);font-family:var(--font-mono)">${p.amount}</td>
     </tr>`).join('');
   return `
     <table class="prize-table">

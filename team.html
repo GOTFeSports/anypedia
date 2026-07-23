@@ -9,12 +9,12 @@
 (function(){
   var t = localStorage.getItem('ap-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', t);
-  document.documentElement.style.background = t === 'light' ? '#f4f4f6' : '#0f0f10';
+  document.documentElement.style.background = t === 'light' ? '#f3f7f4' : '#080b09';
 })();
 </script>
 <script src="/page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <script src="/data.js"></script>
 <script src="/teams.js"></script>
 <script src="/organizers.js"></script>
@@ -39,28 +39,34 @@
    CSS VARIABLES
    ============================================================ */
 :root {
-  --bg:         #0f0f10;
-  --bg2:        #151516;
-  --bg3:        #1c1c1e;
-  --border:     #252528;
+  --bg:         #080b09;
+  --bg2:        #0e1512;
+  --bg3:        #141d18;
+  --border:     #1c2721;
   --text:       #eaeaea;
-  --text-muted: #888;
-  --accent:     #6bb6ff;
-  --accent2:    #3d8fe0;
+  --text-muted: #7d9488;
+  --accent:     #7ed88f;
+  --accent2:    #63c078;
+  --on-accent:  #06130b;
+  --gold:       #d3a94e;
   --tg:         #2ea6ff;
   --radius:     12px;
   --shadow:     0 4px 24px rgba(0,0,0,.45);
   --transition: color .25s, background-color .25s, border-color .25s;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
 }
 [data-theme="light"] {
-  --bg:         #f4f4f6;
+  --bg:         #f3f7f4;
   --bg2:        #ffffff;
-  --bg3:        #e8e8ec;
-  --border:     #d0d0d8;
+  --bg3:        #e7f0ea;
+  --border:     #d3e0d8;
   --text:       #111114;
-  --text-muted: #666;
-  --accent:     #1a6fcc;
-  --accent2:    #1452a0;
+  --text-muted: #5c6b62;
+  --accent:     #2f8f52;
+  --accent2:    #23703f;
+  --on-accent:  #ffffff;
+  --gold:       #a67a1e;
   --tg:         #1a88d6;
   --shadow:     0 4px 24px rgba(0,0,0,.12);
 }
@@ -70,8 +76,8 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { background: #0f0f10; }
-html[data-theme="light"] { background: #f4f4f6; }
+html { background: #080b09; scroll-behavior: smooth; }
+html[data-theme="light"] { background: #f3f7f4; }
 
 body {
   background: var(--bg);
@@ -106,7 +112,7 @@ a:hover { color: var(--accent2); }
 }
 .logo-wrap { display: flex; flex-direction: column; }
 .logo {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
   color: var(--text);
@@ -134,7 +140,7 @@ a:hover { color: var(--accent2); }
 }
 .header-search:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(107,182,255,.15);
+  box-shadow: 0 0 0 3px rgba(126,216,143,.15);
 }
 .header-search::placeholder { color: var(--text-muted); }
 
@@ -163,14 +169,14 @@ a:hover { color: var(--accent2); }
   transition: var(--transition);
 }
 .block h2 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: .5px;
   margin-bottom: 14px;
 }
 .page-title {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 28px;
   font-weight: 700;
   line-height: 1.1;
@@ -205,7 +211,7 @@ a:hover { color: var(--accent2); }
   background: var(--bg3);
 }
 .team-infobox h1 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   line-height: 1.1;
   margin-bottom: 14px;
@@ -354,7 +360,7 @@ tr.place-bronze td:first-child {
   flex-wrap: wrap;
 }
 .footer-brand .logo-foot {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
   color: var(--text);

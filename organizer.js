@@ -101,7 +101,6 @@ if (!org) {
            border-radius:10px;display:inline-block;color:var(--accent)">← Назад</a>
       </div>
     </div>`;
-  initSearch();
   throw new Error('Организатор не найден');
 }
 
@@ -134,7 +133,7 @@ document.getElementById('orgInfobox').innerHTML = `
   </div>
   <div class="info-row">
     <span class="info-label">Призовые</span>
-    <span class="info-val" style="color:var(--accent);font-weight:700">${escapeHtml((typeof calcOrganizerPrize === 'function' ? calcOrganizerPrize(org) : org.prize) || '—')}</span>
+    <span class="info-val" style="color:var(--gold);font-weight:700;font-family:var(--font-mono)">${escapeHtml((typeof calcOrganizerPrize === 'function' ? calcOrganizerPrize(org) : org.prize) || '—')}</span>
   </div>
   <a class="btn btn-tg ${org.telegramLink ? '' : 'is-disabled'}"
      href="${escapeHtml(org.telegramLink || '#')}" target="_blank" rel="noopener">
@@ -179,7 +178,7 @@ function buildOrgTournamentsTable() {
         <td data-label="Дата">${dateText}</td>
         <td data-label="Турнир"><a href="${link}" style="font-weight:600">${escapeHtml(t.title)}</a></td>
         <td data-label="Статус"><span class="tag ${statusClass[st]}">${statusLabel[st]}</span></td>
-        <td data-label="Приз" style="font-weight:600">${escapeHtml(t.prize || '—')}</td>
+        <td data-label="Приз" style="font-weight:600;font-family:var(--font-mono);color:var(--gold)">${escapeHtml(t.prize || '—')}</td>
         <td data-label="Команд">${t.teams ?? '—'}</td>
       </tr>`;
   }).join('');
@@ -193,128 +192,5 @@ function buildOrgTournamentsTable() {
 
 document.getElementById('organizerTournaments').innerHTML = buildOrgTournamentsTable();
 
-/* ============================================================
-   ПОИСК — турниры + команды + организаторы
-   ============================================================ */
-function initSearch() {
-  const input    = document.getElementById('search');
-  const dropdown = document.getElementById('searchDropdown');
-  const wrap     = document.getElementById('searchWrap');
-  if (!input || !dropdown || !wrap) return;
-
-  const allTournaments = typeof tournaments !== 'undefined' ? tournaments : [];
-  const allTeams       = typeof teams !== 'undefined' ? teams : [];
-  const allOrganizers  = typeof organizers !== 'undefined' ? organizers : [];
-
-  let activeIdx = -1;
-
-  function close() {
-    dropdown.classList.remove('visible');
-    activeIdx = -1;
-  }
-
-  function teamSlug(team) {
-    return team.id || String(team.name || '').normalize('NFKC').trim()
-      .replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]+/gu, '')
-      .replace(/-+/g, '-').replace(/^-|-$/g, '') || 'team';
-  }
-  function teamNames(team) {
-    const a = team.aliases || [];
-    const aliases = Array.isArray(a) ? a : String(a).split(',').map(s => s.trim()).filter(Boolean);
-    return [team.name, ...aliases].filter(Boolean).map(normOrgStr);
-  }
-
-  function render(q) {
-    if (!q) { close(); return; }
-    const base = siteRoot();
-
-    const matchT = allTournaments.filter(t => normOrgStr(t.title).includes(q)).slice(0, 6);
-    const matchK = allTeams.filter(team => teamNames(team).some(n => n.includes(q))).slice(0, 5);
-    const matchO = allOrganizers.filter(o => organizerAllNames(o).some(n => n.includes(q))).slice(0, 5);
-
-    if (!matchT.length && !matchK.length && !matchO.length) {
-      dropdown.innerHTML = `<div class="sd-empty">Ничего не найдено</div>`;
-      dropdown.classList.add('visible');
-      return;
-    }
-
-    let out = '';
-
-    if (matchT.length) {
-      out += `<div class="sd-group-label">🏆 Турниры</div>`;
-      matchT.forEach(t => {
-        const link = `${base}${encodeURIComponent(t.id)}`;
-        out += `
-          <a class="sd-item" href="${link}">
-            <div class="sd-icon">🏆</div>
-            <div class="sd-info">
-              <div class="sd-title">${escapeHtml(t.title)}</div>
-              <div class="sd-meta">${escapeHtml(t.prize || '—')} · ${escapeHtml(t.location || '—')}</div>
-            </div>
-            <span class="sd-badge">${statusLabel[getStatus(t)] || ''}</span>
-          </a>`;
-      });
-    }
-
-    if (matchK.length) {
-      out += `<div class="sd-group-label">👥 Команды</div>`;
-      matchK.forEach(team => {
-        const tid = teamSlug(team);
-        const link = `${base}team/${encodeURIComponent(tid)}`;
-        out += `
-          <a class="sd-item" href="${link}">
-            <img class="sd-logo" src="${base}${team.logo || 'dota2.png'}"
-                 alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="sd-icon" style="display:none">👥</div>
-            <div class="sd-info">
-              <div class="sd-title">${escapeHtml(team.name)}</div>
-              <div class="sd-meta">${escapeHtml(team.region || '—')}${team.prize ? ' · ' + escapeHtml(team.prize) : ''}</div>
-            </div>
-            <span class="sd-badge">Команда</span>
-          </a>`;
-      });
-    }
-
-    if (matchO.length) {
-      out += `<div class="sd-group-label">🛡️ Организаторы</div>`;
-      matchO.forEach(o => {
-        const oid = getOrganizerId(o);
-        const link = `${base}organizer/${encodeURIComponent(oid)}`;
-        out += `
-          <a class="sd-item" href="${link}">
-            <img class="sd-logo" src="${base}${o.logo || 'dota2.png'}"
-                 alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="sd-icon" style="display:none">🛡️</div>
-            <div class="sd-info">
-              <div class="sd-title">${escapeHtml(o.name)}</div>
-              <div class="sd-meta">${escapeHtml(o.region || '—')}</div>
-            </div>
-            <span class="sd-badge">Организатор</span>
-          </a>`;
-      });
-    }
-
-    dropdown.innerHTML = out;
-    dropdown.classList.add('visible');
-    activeIdx = -1;
-  }
-
-  input.addEventListener('input', e => render(normOrgStr(e.target.value)));
-
-  input.addEventListener('keydown', e => {
-    const items = dropdown.querySelectorAll('.sd-item');
-    if (!items.length) return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); }
-    else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); items[activeIdx].click(); return; }
-    else if (e.key === 'Escape') { close(); input.blur(); return; }
-    else return;
-    items.forEach((el, i) => el.classList.toggle('active', i === activeIdx));
-    items[activeIdx]?.scrollIntoView({ block: 'nearest' });
-  });
-
-  input.addEventListener('focus', () => { if (input.value.trim()) render(normOrgStr(input.value)); });
-  document.addEventListener('click', e => { if (!wrap.contains(e.target)) close(); });
-}
-
-initSearch();
+/* Поиск (турниры + команды + организаторы) вынесен в общий /search.js,
+   подключаемый в organizer.html — единая реализация для всех страниц. */
