@@ -13,4 +13,4 @@ Allow: /team.html
 Disallow: /node_modules/
 
 # Карта сайта
-Sitemap: https://anypedia.ru/sitemap.xml
+Sitemap: https://anypedia.vercel.app/sitemap.xml
