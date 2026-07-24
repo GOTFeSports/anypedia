@@ -67,3 +67,24 @@ body {
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent2); }
+
+/* ============================================================
+   FAV-STAR — кнопка «в избранное», общая для всех карточек
+   ============================================================ */
+.fav-star {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.fav-star:hover { color: var(--accent); border-color: var(--accent); }
+.fav-star.is-fav { color: var(--accent); border-color: var(--accent); background: var(--upcoming-bg); }
+.fav-star.is-fav svg { fill: currentColor; }

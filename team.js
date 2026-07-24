@@ -316,7 +316,12 @@ document.getElementById('teamInfobox').innerHTML = `
        src="${базаПути}${экранировать(команда.logo || 'dota2.png')}"
        alt="${экранировать(команда.name)}"
        onerror="this.style.display='none'">
-  <h1>${экранировать(команда.name)}</h1>
+  <div class="infobox-title-row">
+    <h1>${экранировать(команда.name)}</h1>
+    <button class="fav-star" data-fav-type="team" data-fav-id="${текущийId}" title="В избранное" aria-pressed="false">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </button>
+  </div>
   <div class="info-row">
     <span class="info-label">Регион</span>
     <span class="info-val">${экранировать(команда.region || '—')}</span>
@@ -340,6 +345,8 @@ document.getElementById('teamInfobox').innerHTML = `
     Связаться с капитаном
   </a>
 `;
+
+if (window.Favorites) Favorites.initStars();
 
 /* Описание */
 document.getElementById('summaryBlock').innerHTML = `

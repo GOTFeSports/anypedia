@@ -29,6 +29,7 @@
 <script src="/data.js"></script>
 <script src="/teams.js"></script>
 <script src="/organizers.js"></script>
+<script src="/favorites.js"></script>
 
 <link rel="stylesheet" href="/theme.css">
 
@@ -141,8 +142,14 @@
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 14px;
   line-height: 1.2;
+}
+.infobox-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 .info-row {
   display: flex;
@@ -643,6 +650,7 @@
       <a class="nav-link active" href="/index.html">Турниры</a>
       <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
+      <a class="nav-link" href="/favorites">Избранное</a>
     </nav>
     <div class="header-search-wrap" id="searchWrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -923,7 +931,12 @@ const autoWinner =
   'TBD';
 
 document.getElementById('infobox').innerHTML = `
-  <h2>${t.title}</h2>
+  <div class="infobox-title-row">
+    <h2>${t.title}</h2>
+    <button class="fav-star" data-fav-type="tournament" data-fav-id="${t.id}" title="В избранное" aria-pressed="false">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </button>
+  </div>
   <div class="countdown-wrap">${renderCountdown()}</div>
   <div class="info-row"><span class="info-label">Регистрация</span><span class="info-val">${t.registrationStart && t.registrationEnd? `${formatDateLong(t.registrationStart)} — ${formatDateLong(t.registrationEnd)}`: '—'}</span></div>
   <div class="info-row"><span class="info-label">Даты</span><span class="info-val">${dateText}</span></div>
@@ -965,6 +978,8 @@ document.getElementById('infobox').innerHTML = `
     ${t.links.bracket  ? `<a href="${t.links.bracket}"  target="_blank" rel="noopener" class="link-icon link-bracket" title="Сетка"><img src="/bracket.png" alt="Bracket"></a>` : ''}
   </div>` : ''}
 `;
+
+if (window.Favorites) Favorites.initStars();
 
 /* ---------- DESCRIPTION + PRIZES ---------- */
 function prizeTable() {

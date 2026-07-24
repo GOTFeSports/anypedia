@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Команды · Anypedia</title>
+<title>Избранное · Anypedia</title>
 <script>
 (function(){
   var t = localStorage.getItem('ap-theme') || 'dark';
@@ -122,26 +122,62 @@
 .page-heading span { color: var(--accent); }
 .page-sub { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
 
-/* ── FILTER BAR ── */
-.filter-row {
-  display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; align-items: center;
+/* ── SECTIONS ── */
+.fav-section { margin-bottom: 32px; }
+.fav-section-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
 }
-.filter-search {
-  flex: 1; min-width: 200px; max-width: 360px;
-  padding: 9px 14px 9px 36px; border-radius: 9px;
-  border: 1px solid var(--border); background: var(--bg2);
-  color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
-  transition: border-color .2s, var(--transition);
-  position: relative;
+
+/* ── TOURNAMENT CARDS (как на главной) ── */
+.t-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
 }
-.filter-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(126,216,143,.12); }
-.filter-search::placeholder { color: var(--text-muted); }
-.filter-search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
-.filter-search-wrap .fi-icon {
-  position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
-  color: var(--text-muted); pointer-events: none; width: 15px; height: 15px;
+.t-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: background .15s;
 }
-.filter-count { font-size: 12px; color: var(--text-muted); margin-left: auto; white-space: nowrap; }
+.t-card:hover { background: var(--bg3); }
+.t-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.t-card-title { font-weight: 600; font-size: 14px; color: var(--text); line-height: 1.3; flex: 1; }
+.t-card-tag { flex-shrink: 0; }
+.t-card-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.t-card-meta span b { color: var(--text); font-weight: 500; }
+.t-card-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 2px; }
+.t-card-prize { font-weight: 700; font-size: 15px; font-family: var(--font-mono); color: var(--gold); }
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.live-tag     { background: var(--live-bg);     color: var(--live); }
+.upcoming-tag { background: var(--upcoming-bg); color: var(--upcoming); }
+.finished-tag { background: var(--finished-bg); color: var(--finished); }
 
 /* ── TEAMS GRID ── */
 .teams-grid {
@@ -232,7 +268,7 @@
 @media (max-width: 640px) {
   .header-inner { padding: 10px 16px; }
   .container { padding: 0 16px; margin-top: 20px; }
-  .teams-grid { grid-template-columns: 1fr; gap: 10px; }
+  .teams-grid, .t-cards { grid-template-columns: 1fr; gap: 10px; }
   .page-heading { font-size: 24px; }
   .fab { width: 40px; height: 40px; }
   #themeBtn { bottom: 16px; left: 16px; }
@@ -244,7 +280,7 @@
 }
 @media (max-width: 400px) {
   .logo { font-size: 20px; }
-  .teams-grid { grid-template-columns: 1fr; }
+  .teams-grid, .t-cards { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -258,9 +294,9 @@
     </div>
     <nav class="site-nav">
       <a class="nav-link" href="/">Турниры</a>
-      <a class="nav-link active" href="/teams-list">Команды</a>
+      <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
-      <a class="nav-link" href="/favorites">Избранное</a>
+      <a class="nav-link active" href="/favorites">Избранное</a>
     </nav>
 
     <div class="header-search-wrap" id="searchWrap">
@@ -275,21 +311,19 @@
 
 <div class="container">
   <div class="page-header">
-    <h1 class="page-heading">Команды <span id="totalCount"></span></h1>
-    <p class="page-sub">Команды СНГ-региона, участвующие в турнирах Anypedia</p>
+    <h1 class="page-heading">Избранное</h1>
+    <p class="page-sub">Турниры и команды, за которыми вы следите — сохраняется только в этом браузере.</p>
   </div>
 
-  <div class="filter-row">
-    <div class="filter-search-wrap">
-      <svg class="fi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
-      <input class="filter-search" id="teamFilter" type="text" placeholder="Поиск по названию…" autocomplete="off"/>
-    </div>
-    <span class="filter-count" id="filterCount"></span>
+  <div class="fav-section">
+    <div class="fav-section-label">🏆 Турниры</div>
+    <div class="t-cards" id="favTournaments"></div>
   </div>
 
-  <div class="teams-grid" id="teamsGrid"></div>
+  <div class="fav-section">
+    <div class="fav-section-label">👥 Команды</div>
+    <div class="teams-grid" id="favTeams"></div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -356,43 +390,91 @@ function slugifyTeam(team) {
     .replace(/\s+/g,'-').replace(/[^\p{L}\p{N}_-]+/gu,'')
     .replace(/-+/g,'-').replace(/^-|-$/g,'') || 'team';
 }
-
-/* Считаем призовые из турниров */
 function calcTeamPrize(team) {
   if (team.prize && team.prize !== '0₽' && team.prize !== '—') return team.prize;
   return null;
 }
+function getTournamentCount(team) { return (team.tournaments || []).length; }
+function getActiveRoster(team) { return team.activeRoster || team.roster || []; }
 
-/* Считаем кол-во турниров */
-function getTournamentCount(team) {
-  return (team.tournaments || []).length;
+function toLocalDate(s) {
+  const [y, m, d] = String(s).split('-').map(Number);
+  return new Date(y, m - 1, d);
 }
-
-/* Активный состав */
-function getActiveRoster(team) {
-  return team.activeRoster || team.roster || [];
+function formatDateShort(s) {
+  const [y, m, d] = String(s).split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' });
 }
+const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+function getStatus(t) {
+  const s = toLocalDate(t.start), e = toLocalDate(t.end);
+  if (today < s) return 'upcoming';
+  if (today > e) return 'finished';
+  return 'live';
+}
+const statusLabel = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' };
+const statusClass = { upcoming: 'upcoming-tag', live: 'live-tag', finished: 'finished-tag' };
 
-/* ---------- RENDER ---------- */
-function renderTeams(list) {
-  const grid = document.getElementById('teamsGrid');
-  const countEl = document.getElementById('filterCount');
+/* ---------- RENDER: ТУРНИРЫ ---------- */
+function renderFavTournaments() {
+  const wrap = document.getElementById('favTournaments');
+  const allTournaments = typeof tournaments !== 'undefined' ? tournaments : [];
+  const favIds = Favorites.read().tournaments;
+  const list = allTournaments.filter(t => favIds.includes(t.id));
 
   if (!list.length) {
-    grid.innerHTML = `<div class="empty-state">🔍 Ничего не найдено</div>`;
-    countEl.textContent = '';
+    wrap.innerHTML = `<div class="empty-state">Пока нет избранных турниров — нажмите ★ на карточке турнира, чтобы добавить сюда. <a href="/">Перейти к турнирам →</a></div>`;
     return;
   }
 
-  countEl.textContent = `Показано: ${list.length} из ${(typeof teams !== 'undefined' ? teams : []).length}`;
+  list.sort((a, b) => toLocalDate(b.start) - toLocalDate(a.start));
 
-  grid.innerHTML = list.map(team => {
+  wrap.innerHTML = list.map(t => {
+    const st = getStatus(t);
+    const dateText = t.start === t.end
+      ? formatDateShort(t.start)
+      : `${formatDateShort(t.start)} — ${formatDateShort(t.end)}`;
+    const link = `/${encodeURIComponent(t.id)}`;
+    return `
+      <div class="t-card" onclick="location.href='${link}'">
+        <div class="t-card-top">
+          <div class="t-card-title">${esc(t.title)}</div>
+          <span class="t-card-tag tag ${statusClass[st]}">${statusLabel[st]}</span>
+        </div>
+        <div class="t-card-meta">
+          <span>📅 <b>${dateText}</b></span>
+          <span>🌍 <b>${esc(t.location || '—')}</b></span>
+        </div>
+        <div class="t-card-bottom">
+          <div class="t-card-prize">${esc(t.prize || '—')}</div>
+          <button class="fav-star" data-fav-type="tournament" data-fav-id="${t.id}" title="Убрать из избранного" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </button>
+        </div>
+      </div>`;
+  }).join('');
+
+  Favorites.initStars();
+}
+
+/* ---------- RENDER: КОМАНДЫ ---------- */
+function renderFavTeams() {
+  const wrap = document.getElementById('favTeams');
+  const allTeams = typeof teams !== 'undefined' ? teams : [];
+  const favIds = Favorites.read().teams;
+  const list = allTeams.filter(team => favIds.includes(slugifyTeam(team)));
+
+  if (!list.length) {
+    wrap.innerHTML = `<div class="empty-state">Пока нет избранных команд — нажмите ★ на карточке команды, чтобы добавить сюда. <a href="/teams-list">Перейти к командам →</a></div>`;
+    return;
+  }
+
+  wrap.innerHTML = list.map(team => {
     const id = slugifyTeam(team);
     const roster = getActiveRoster(team);
     const playerChips = roster.slice(0, 5).map(p =>
       `<span class="tc-player">${esc(p.nick || '—')}</span>`
     ).join('');
-
     const prize = calcTeamPrize(team);
     const tCount = getTournamentCount(team);
 
@@ -405,7 +487,7 @@ function renderTeams(list) {
             <div class="tc-name">${esc(team.name)}</div>
             <div class="tc-region">${esc(team.region || '—')}</div>
           </div>
-          <button class="fav-star" data-fav-type="team" data-fav-id="${id}" title="В избранное" aria-pressed="false">
+          <button class="fav-star" data-fav-type="team" data-fav-id="${id}" title="Убрать из избранного" aria-pressed="false">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </button>
         </div>
@@ -423,33 +505,19 @@ function renderTeams(list) {
       </a>`;
   }).join('');
 
-  if (window.Favorites) Favorites.initStars();
+  Favorites.initStars();
 }
 
 /* ---------- INIT ---------- */
-const allTeams = typeof teams !== 'undefined' ? [...teams] : [];
+function renderFavorites() {
+  renderFavTournaments();
+  renderFavTeams();
+}
+renderFavorites();
 
-// Сортировка: сначала активные (с составом), потом по призовым
-allTeams.sort((a, b) => {
-  const aActive = (a.activeRoster || a.roster || []).length;
-  const bActive = (b.activeRoster || b.roster || []).length;
-  if (bActive !== aActive) return bActive - aActive;
-  return (b.tournaments || []).length - (a.tournaments || []).length;
-});
-
-document.getElementById('totalCount').textContent = allTeams.length ? `(${allTeams.length})` : '';
-
-renderTeams(allTeams);
-
-document.getElementById('teamFilter').addEventListener('input', e => {
-  const q = e.target.value.toLowerCase().trim();
-  if (!q) { renderTeams(allTeams); return; }
-  const filtered = allTeams.filter(t => {
-    const names = [t.name, ...(Array.isArray(t.aliases) ? t.aliases : [])];
-    return names.some(n => n && n.toLowerCase().includes(q));
-  });
-  renderTeams(filtered);
-});
+/* Если звезду сняли прямо на этой странице — список должен обновиться сразу,
+   без перезагрузки (иначе карточка "избранного" осталась бы висеть пустой). */
+document.addEventListener('favorites-changed', renderFavorites);
 </script>
 <script src="/search.js"></script>
 </body>

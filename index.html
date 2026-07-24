@@ -989,6 +989,7 @@ tbody tr:hover {
 <script src="data.js"></script>
 <script src="teams.js"></script>
 <script src="organizers.js"></script>
+<script src="favorites.js"></script>
 </head>
 <body>
 
@@ -1003,6 +1004,7 @@ tbody tr:hover {
       <a class="nav-link active" href="#mainContainer">Турниры</a>
       <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
+      <a class="nav-link" href="/favorites">Избранное</a>
     </nav>
     <div class="header-search-wrap" id="searchWrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1374,14 +1376,19 @@ function buildRow(t) {
       <td><span class="tag ${statusClass[st]}">${statusLabel[st]}</span></td>
       <td class="winner-cell">${renderWinner(winner)}</td>
       <td>
-        <button class="share-btn" title="Поделиться"
-          onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-        </button>
+        <div style="display:flex;gap:4px;justify-content:center;align-items:center">
+          <button class="fav-star" data-fav-type="tournament" data-fav-id="${t.id}" title="В избранное" aria-pressed="false">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </button>
+          <button class="share-btn" title="Поделиться"
+            onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+        </div>
       </td>
     </tr>`;
 }
@@ -1417,14 +1424,19 @@ function buildCard(t) {
       </div>
       <div class="t-card-bottom">
         <div class="t-card-prize">${t.prize || '—'}</div>
-        <button class="t-card-share" title="Поделиться"
-          onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-        </button>
+        <div style="display:flex;gap:6px;align-items:center">
+          <button class="fav-star" data-fav-type="tournament" data-fav-id="${t.id}" title="В избранное" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </button>
+          <button class="t-card-share" title="Поделиться"
+            onclick="shareUrl('${pageUrl}','${t.title.replace(/'/g, "\\'")}',event)">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>`;
 }
@@ -1502,6 +1514,8 @@ function renderAll() {
   document.getElementById('upcoming-cards').innerHTML = up.length  ? up.map(buildCard).join('')  : emptyCard();
   document.getElementById('live-cards').innerHTML     = li.length  ? li.map(buildCard).join('')  : emptyCard();
   document.getElementById('finished-cards').innerHTML = fin.length ? fin.map(buildCard).join('') : emptyCard();
+
+  if (window.Favorites) Favorites.initStars();
 
   // Счётчик
   const total = up.length + li.length + fin.length;
