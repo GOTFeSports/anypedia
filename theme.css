@@ -1,0 +1,69 @@
+/* ============================================================
+   theme.css — общие переменные темы и базовый сброс для Anypedia.
+   Подключается на каждой странице ДО страничного <style>.
+
+   Меняешь тему сайта — меняешь только этот файл, а не 6-7 копий
+   одного и того же :root в каждом HTML.
+   ============================================================ */
+
+:root {
+  --bg:         #080b09;
+  --bg2:        #0e1512;
+  --bg3:        #141d18;
+  --border:     #1c2721;
+  --text:       #eaeaea;
+  --text-muted: #7d9488;
+  --accent:     #7ed88f;
+  --accent2:    #63c078;
+  --on-accent:  #06130b;
+  --gold:       #d3a94e;
+  --tg:         #2ea6ff;
+  --live:       #ff9166;
+  --upcoming:   #7ed88f;
+  --finished:   #6f8577;
+  --live-bg:      rgba(255,145,102,.15);
+  --upcoming-bg:  rgba(126,216,143,.15);
+  --finished-bg:  rgba(111,133,119,.14);
+  --radius:     12px;
+  --shadow:     0 4px 24px rgba(0,0,0,.45);
+  --transition: color .25s, background-color .25s, border-color .25s;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+[data-theme="light"] {
+  --bg:         #f3f7f4;
+  --bg2:        #ffffff;
+  --bg3:        #e7f0ea;
+  --border:     #d3e0d8;
+  --text:       #111114;
+  --text-muted: #5c6b62;
+  --accent:     #2f8f52;
+  --accent2:    #23703f;
+  --on-accent:  #ffffff;
+  --gold:       #a67a1e;
+  --tg:         #1a88d6;
+  --shadow:     0 4px 24px rgba(0,0,0,.12);
+  --live:       #d0512b;
+  --upcoming:   #2f8f52;
+  --finished:   #3f6b52;
+  --live-bg:      rgba(208,81,43,.12);
+  --upcoming-bg:  rgba(47,143,82,.12);
+  --finished-bg:  rgba(63,107,82,.13);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: #080b09; scroll-behavior: smooth; }
+html[data-theme="light"] { background: #f3f7f4; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  transition: var(--transition);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent2); }

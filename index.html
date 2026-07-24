@@ -26,77 +26,11 @@
 </script>
 <script src="page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/theme.css">
 
 <style>
-/* ============================================================
-   CSS VARIABLES
-   ============================================================ */
-:root {
-  --bg:        #080b09;
-  --bg2:       #0e1512;
-  --bg3:       #141d18;
-  --border:    #1c2721;
-  --text:      #e6efe9;
-  --text-muted:#7d9488;
-  --accent:    #7ed88f;
-  --accent2:   #63c078;
-  --on-accent: #06130b;
-  --gold:      #d3a94e;
-  --live:      #ff9166;
-  --upcoming:  #7ed88f;
-  --finished:  #6f8577;
-  --live-bg:      rgba(255,145,102,.15);
-  --upcoming-bg:  rgba(126,216,143,.15);
-  --finished-bg:  rgba(111,133,119,.14);
-  --radius:    12px;
-  --shadow:    0 4px 24px rgba(0,0,0,.45);
-  --transition:color .25s, background-color .25s, border-color .25s;
-  --font-display: 'Oswald', sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
-}
-
-[data-theme="light"] {
-  --bg:        #f3f7f4;
-  --bg2:       #ffffff;
-  --bg3:       #e7f0ea;
-  --border:    #d3e0d8;
-  --text:      #102016;
-  --text-muted:#5b6f63;
-  --accent:    #2f8f52;
-  --accent2:   #23703f;
-  --on-accent: #ffffff;
-  --gold:      #a67a1e;
-  --shadow:    0 4px 24px rgba(0,0,0,.12);
-  /* Статусы на светлом фоне — тёмные насыщенные цвета */
-  --live:      #d0512b;
-  --upcoming:  #2f8f52;
-  --finished:  #3f6b52;
-  --live-bg:      rgba(208,81,43,.12);
-  --upcoming-bg:  rgba(47,143,82,.12);
-  --finished-bg:  rgba(63,107,82,.13);
-}
-
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* Фон на html предотвращает белую вспышку до загрузки CSS-переменных */
-html { background: #080b09; scroll-behavior: smooth; }
-[data-theme="light"] html,
-html[data-theme="light"] { background: #f3f7f4; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  transition: var(--transition);
-  min-height: 100vh;
-}
-
-a { color: var(--accent); text-decoration: none; }
-a:hover { color: var(--accent2); }
+/* Переменные темы, сброс и базовые правила (:root, body, a) —
+   в общем /theme.css. Ниже только CSS, специфичный для этой страницы. */
 
 /* ============================================================
    SITE HEADER (sticky)
@@ -1086,7 +1020,7 @@ tbody tr:hover {
     <div class="hero-content">
       <div class="hero-eyebrow">Dota 2 · СНГ-турниры</div>
       <h1 class="hero-title">Anypedia — Dota 2 Wiki для турниров с&nbsp;ограничением по рейтингу</h1>
-      <p class="hero-text">Каталог турниров, команд и турнирных операторов любительской Dota 2-сцены СНГ. Расписание и сетки турниров, составы команд и история их результатов, профили организаторов — от лоурангов до высоких ммр.</p>
+      <p class="hero-text">Следите за расписанием, призовыми и составами команд на любительских турнирах СНГ — от Herald-лоурангов до высоких дивизионов. Актуальные брекеты, организаторы и статистика в одном месте.</p>
       <div class="hero-actions">
         <a class="hero-btn hero-btn-secondary" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
