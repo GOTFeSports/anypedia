@@ -19,23 +19,6 @@
 // =============================================
 
 const teams = [
-    tournaments: [
-      {
-        title: "AnyLvL x GOTF eSports: Special 2",
-        date:  "2025-07-18",
-        place: "3",
-        prize: "—",
-        limit: "Без лимита MMR"
-      },
-      {
-        title: "Special 3: Closed Qualification",
-        date:  "2026-07--5",
-        place: "5-8",
-        prize: "—",
-        limit: "До 37.500 MMR на команду"
-      },
-    ]
-  },
     {
     id: "team-sexy",
     name: "Team Sexy",
