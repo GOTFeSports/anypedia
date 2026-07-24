@@ -1,5 +1,41 @@
 const tournaments = [  
   {
+  "id": "Bedlam-First-Anniversary-Cup",
+  "title": "Bedlam: First Anniversary Cup",
+  "limit": "До 9.000 MMR на игрока",
+  "start": "2026-07-31",
+  "end": "2026-08-09",
+  "startTime": "18:00",
+  "registrationStart": "2026-07-23",
+  "registrationEnd": "2026-07-31",
+  "prize": "30.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Group Stage + Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Bedlam Tournaments",
+  "bracketEmbed": "",
+  "registrationLink": "https://t.me/bedlamtournaments_bot",
+  "telegramLink": "https://t.me/bedlamtournaments",
+  "description": "В честь того что Bedlam Battles Tournaments исполняется один год проводится данный турнир. Комментаторами грандфинала будут BlackArhangel × y0nd. Взнос 1000 рублей.",
+  "prizePool": [
+    { "place": 1, "amount": "15000₽", "team": "" },
+    { "place": 2, "amount": "10000₽", "team": "" },
+    { "place": 3, "amount": "5000₽", "team": "" },
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/B3DACKcHpz",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [
+    { "name": "yond", "link": "https://www.twitch.tv/y0nd" },
+    { "name": "BLACKARHANGEL", "link": "https://www.twitch.tv/blackarhangel" }
+  ],
+  "teamsList": []
+},
+  {
   "id": "SkewerEsports-Season-5",
   "title": "SkewerEsports Season 5",
   "limit": "До 38.000 MMR на команду",
@@ -14,7 +50,7 @@ const tournaments = [
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "SkewerEsports",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/sg6x11z3/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "Skewer eSports Season 5 — турнир по Dota 2 с ограничением 38.000 MMR на команду. Single Elimination. Призовой фонд 10.000₽. Взнос 1000₽ с команды.",
@@ -26,7 +62,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "https://discord.gg/s7RCg2gmpS",
     "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/sg6x11z3"
   },
   "casters": [],
   "teamsList": []
