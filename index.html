@@ -1854,6 +1854,7 @@ setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
       el.classList.toggle('is-loser', el.dataset.side !== winnerSide);
     });
 
+    const isTie = ls === rs;
     const correct = side === winnerSide;
     streak = correct ? streak + 1 : 0;
     if (streak > best) {
@@ -1863,10 +1864,14 @@ setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
     streakEl.textContent = streak;
     bestEl.textContent = best;
 
+    const resultLine = isTie
+      ? `Ничья — по правилу дальше играет Dire: <b>${winnerName}</b>`
+      : `${correct ? '✓ Угадали' : '✗ Не угадали'} — дальше играет ${winnerName}`;
+
     resultEl.innerHTML = `
       <span class="score">${ls}:${rs}</span>
       <span class="${correct ? 'h2h-guess-correct' : 'h2h-guess-wrong'}">
-        ${correct ? '✓ Угадали' : '✗ Не угадали'} — дальше играет ${winnerName}
+        ${resultLine}
       </span>`;
     resultEl.style.display = 'block';
 
