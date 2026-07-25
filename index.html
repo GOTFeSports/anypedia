@@ -374,6 +374,7 @@
 .h2h-result .score { display: block; margin-bottom: 4px; font-family: var(--font-mono); font-weight: 700; color: var(--gold); font-size: 20px; }
 .h2h-guess-correct { color: var(--upcoming); }
 .h2h-guess-wrong { color: var(--live); }
+.h2h-guess-tie { color: var(--text-muted); }
 
 .h2h-next {
   display: block;
@@ -1856,21 +1857,26 @@ setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
 
     const isTie = ls === rs;
     const correct = side === winnerSide;
-    streak = correct ? streak + 1 : 0;
-    if (streak > best) {
-      best = streak;
-      try { localStorage.setItem('ap-h2h-best', String(best)); } catch {}
+
+    if (!isTie) {
+      streak = correct ? streak + 1 : 0;
+      if (streak > best) {
+        best = streak;
+        try { localStorage.setItem('ap-h2h-best', String(best)); } catch {}
+      }
+      streakEl.textContent = streak;
+      bestEl.textContent = best;
     }
-    streakEl.textContent = streak;
-    bestEl.textContent = best;
+    // При ничьей серия и рекорд не меняются — сколько было, столько и осталось.
 
     const resultLine = isTie
       ? `Ничья — по правилу дальше играет Dire: <b>${winnerName}</b>`
       : `${correct ? '✓ Угадали' : '✗ Не угадали'} — дальше играет ${winnerName}`;
+    const resultClass = isTie ? 'h2h-guess-tie' : (correct ? 'h2h-guess-correct' : 'h2h-guess-wrong');
 
     resultEl.innerHTML = `
       <span class="score">${ls}:${rs}</span>
-      <span class="${correct ? 'h2h-guess-correct' : 'h2h-guess-wrong'}">
+      <span class="${resultClass}">
         ${resultLine}
       </span>`;
     resultEl.style.display = 'block';
