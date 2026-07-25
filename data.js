@@ -55,8 +55,8 @@ const tournaments = [
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "Skewer eSports Season 5 — турнир по Dota 2 с ограничением 38.000 MMR на команду. Single Elimination. Призовой фонд 10.000₽. Взнос 1000₽ с команды.",
   "prizePool": [
-    { "place": 1, "amount": "7000₽", "team": "" },
-    { "place": 2, "amount": "3000₽", "team": "" }
+    { "place": 1, "amount": "7000₽", "team": "Cыpoeжki" },
+    { "place": 2, "amount": "3000₽", "team": "Xie Bu" }
   ],
   "links": {
     "dotabuff": "",
