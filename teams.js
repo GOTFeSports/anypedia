@@ -164,6 +164,13 @@ const teams = [
       { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
     ],
     tournaments: [
+        {
+        title: "SkewerEsports Season 5",
+        date:  "2026-07-24",
+        place: "3",
+        prize: "",
+        limit: "До 38.000 MMR на команду"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
