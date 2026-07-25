@@ -320,6 +320,85 @@
 }
 
 /* ============================================================
+   HEAD-TO-HEAD — мини-игра «кто кого чаще обыгрывал»
+   ============================================================ */
+.h2h-wrap { max-width: 1200px; margin: 20px auto 0; padding: 0 20px; }
+.h2h-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  transition: var(--transition);
+}
+.h2h-sub { font-size: 13px; color: var(--text-muted); margin: 0 0 16px; max-width: 60ch; }
+.h2h-streak { font-size: 12px; color: var(--text-muted); margin-bottom: 18px; }
+.h2h-streak b { color: var(--accent); font-family: var(--font-mono); font-weight: 600; }
+
+.h2h-arena {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+.h2h-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg3);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  cursor: pointer;
+  transition: border-color .2s, transform .15s, background .2s, opacity .2s;
+  font-family: 'Inter', sans-serif;
+}
+.h2h-team:hover { transform: translateY(-2px); }
+.h2h-team.h2h-radiant { border-left: 4px solid var(--accent); }
+.h2h-team.h2h-dire    { border-left: 4px solid var(--dire); }
+.h2h-logo {
+  width: 56px; height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.h2h-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; text-align: center; color: var(--text); }
+.h2h-vs { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--text-muted); text-align: center; }
+
+.h2h-team.is-winner { border-color: var(--gold); background: var(--upcoming-bg); }
+.h2h-team.is-loser  { opacity: .5; }
+.h2h-team.is-done { cursor: default; pointer-events: none; }
+
+.h2h-result { margin-top: 16px; text-align: center; font-size: 14px; }
+.h2h-result .score { display: block; margin-bottom: 4px; font-family: var(--font-mono); font-weight: 700; color: var(--gold); font-size: 20px; }
+.h2h-guess-correct { color: var(--upcoming); }
+.h2h-guess-wrong { color: var(--live); }
+
+.h2h-next {
+  display: block;
+  margin: 18px auto 0;
+  padding: 10px 24px;
+  border-radius: 9px;
+  border: none;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.h2h-next:hover { opacity: .9; }
+
+@media (max-width: 640px) {
+  .h2h-wrap { padding: 0 16px; margin-top: 14px; }
+  .h2h-card { padding: 20px; border-radius: 10px; }
+  .h2h-arena { grid-template-columns: 1fr; gap: 10px; }
+  .h2h-logo { width: 44px; height: 44px; }
+}
+
+/* ============================================================
    MAIN CONTENT
    ============================================================ */
 .container {
@@ -990,6 +1069,7 @@ tbody tr:hover {
 <script src="teams.js"></script>
 <script src="organizers.js"></script>
 <script src="favorites.js"></script>
+<script src="h2h-data.js"></script>
 </head>
 <body>
 
@@ -1068,6 +1148,18 @@ tbody tr:hover {
   <circle cx="125" cy="50" r="11" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity=".45"/>
 </svg>
     </div>
+  </div>
+</div>
+
+<!-- HEAD-TO-HEAD -->
+<div class="h2h-wrap">
+  <div class="h2h-card">
+    <div class="section-label"><svg width="14" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 2L8 7L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="7" r="1.5" fill="currentColor"/></svg>Head-to-Head</div>
+    <p class="h2h-sub">Кто чаще побеждал в очных встречах? Выберите команду, которая, на ваш взгляд, побеждала чаще — победитель остаётся в игре и встречает следующего соперника.</p>
+    <div class="h2h-streak">Серия: <b id="h2hStreak">0</b> &nbsp;·&nbsp; Рекорд: <b id="h2hBest">0</b></div>
+    <div class="h2h-arena" id="h2hArena"></div>
+    <div class="h2h-result" id="h2hResult" style="display:none"></div>
+    <button class="h2h-next" id="h2hNext" style="display:none"></button>
   </div>
 </div>
 
@@ -1688,6 +1780,110 @@ async function проверитьЖивыеСтримы() {
 /* Запуск при загрузке + обновление каждые 2 минуты */
 проверитьЖивыеСтримы();
 setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
+
+/* ============================================================
+   HEAD-TO-HEAD — мини-игра «кто кого чаще обыгрывал»
+   Данные раундов — в h2h-data.js (h2hRounds). Раунды идут по
+   порядку; кто выигрывает по счёту — тот и остаётся в игре
+   на следующий раунд. Ничья засчитывается в пользу Dire (правой).
+   ============================================================ */
+(function () {
+  const arena    = document.getElementById('h2hArena');
+  const resultEl = document.getElementById('h2hResult');
+  const nextBtn  = document.getElementById('h2hNext');
+  const streakEl = document.getElementById('h2hStreak');
+  const bestEl   = document.getElementById('h2hBest');
+  if (!arena || typeof h2hRounds === 'undefined' || !h2hRounds.length) return;
+
+  const allTeams = typeof teams !== 'undefined' ? teams : [];
+
+  function normName(v) {
+    return String(v || '').normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+  function findTeam(name) {
+    const key = normName(name);
+    return allTeams.find(t => {
+      const names = [t.name, ...(Array.isArray(t.aliases) ? t.aliases : [])];
+      return names.some(n => normName(n) === key);
+    });
+  }
+
+  let round = 0;
+  let streak = 0;
+  let best = parseInt(localStorage.getItem('ap-h2h-best') || '0', 10) || 0;
+  let guessed = false;
+  bestEl.textContent = best;
+
+  function renderRound() {
+    guessed = false;
+    resultEl.style.display = 'none';
+    nextBtn.style.display = 'none';
+
+    const r = h2hRounds[round];
+    const left = findTeam(r.left);
+    const right = findTeam(r.right);
+
+    arena.innerHTML = `
+      <button class="h2h-team h2h-radiant" data-side="left">
+        <img class="h2h-logo" src="/${(left && left.logo) || 'dota2.png'}" alt="" onerror="this.style.display='none'">
+        <div class="h2h-name">${r.left}</div>
+      </button>
+      <div class="h2h-vs">VS</div>
+      <button class="h2h-team h2h-dire" data-side="right">
+        <img class="h2h-logo" src="/${(right && right.logo) || 'dota2.png'}" alt="" onerror="this.style.display='none'">
+        <div class="h2h-name">${r.right}</div>
+      </button>`;
+
+    arena.querySelectorAll('.h2h-team').forEach(btn => {
+      btn.addEventListener('click', () => handleGuess(btn.dataset.side));
+    });
+  }
+
+  function handleGuess(side) {
+    if (guessed) return;
+    guessed = true;
+
+    const r = h2hRounds[round];
+    const [ls, rs] = r.score.split('-').map(n => parseInt(n, 10));
+    const winnerSide = rs >= ls ? 'right' : 'left'; // ничья -> Dire (правая)
+    const winnerName = winnerSide === 'left' ? r.left : r.right;
+
+    arena.querySelectorAll('.h2h-team').forEach(el => {
+      el.classList.add('is-done');
+      el.classList.toggle('is-winner', el.dataset.side === winnerSide);
+      el.classList.toggle('is-loser', el.dataset.side !== winnerSide);
+    });
+
+    const correct = side === winnerSide;
+    streak = correct ? streak + 1 : 0;
+    if (streak > best) {
+      best = streak;
+      try { localStorage.setItem('ap-h2h-best', String(best)); } catch {}
+    }
+    streakEl.textContent = streak;
+    bestEl.textContent = best;
+
+    resultEl.innerHTML = `
+      <span class="score">${ls}:${rs}</span>
+      <span class="${correct ? 'h2h-guess-correct' : 'h2h-guess-wrong'}">
+        ${correct ? '✓ Угадали' : '✗ Не угадали'} — дальше играет ${winnerName}
+      </span>`;
+    resultEl.style.display = 'block';
+
+    const hasNext = round < h2hRounds.length - 1;
+    nextBtn.textContent = hasNext ? 'Дальше →' : 'Начать заново';
+    nextBtn.style.display = 'block';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    const wasLast = round >= h2hRounds.length - 1;
+    round = wasLast ? 0 : round + 1;
+    if (wasLast) { streak = 0; streakEl.textContent = '0'; }
+    renderRound();
+  });
+
+  renderRound();
+})();
 </script>
 <script src="/search.js"></script>
 </body>

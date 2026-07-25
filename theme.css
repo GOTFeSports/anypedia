@@ -24,6 +24,8 @@
   --live-bg:      rgba(255,145,102,.15);
   --upcoming-bg:  rgba(126,216,143,.15);
   --finished-bg:  rgba(111,133,119,.14);
+  --dire:       #c1543f;
+  --dire-bg:      rgba(193,84,63,.14);
   --radius:     12px;
   --shadow:     0 4px 24px rgba(0,0,0,.45);
   --transition: color .25s, background-color .25s, border-color .25s;
@@ -50,6 +52,8 @@
   --live-bg:      rgba(208,81,43,.12);
   --upcoming-bg:  rgba(47,143,82,.12);
   --finished-bg:  rgba(63,107,82,.13);
+  --dire:       #a8402c;
+  --dire-bg:      rgba(168,64,44,.1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
