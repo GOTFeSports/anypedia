@@ -114,7 +114,7 @@ const tournaments = [
   "format": "Double Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "Immortality",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://theimmortal.net/bracket",
   "registrationLink": "https://t.me/questionnaireimm/8",
   "telegramLink": "https://t.me/cultimm",
   "description": "The Trial of Immortality VII — 7-й сезон турнира по Dota 2 с открытой регистрацией. Формат 5x5, Double Elimination, BO1 (Гранд-Финал BO3). Взнос 500₽ с команды.",
@@ -129,7 +129,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "https://discord.gg/Vu8kNs39PX",
     "rules": "https://t.me/reglamentbyimmortality",
-    "bracket": ""
+    "bracket": "https://theimmortal.net/bracket"
   },
   "casters": [
     { "name": "pepepainstv", "link": "https://twitch.tv/pepepainstv" },
