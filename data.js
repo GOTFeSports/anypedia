@@ -1,4 +1,36 @@
 const tournaments = [  
+   {
+  "id": "SkewerEsports-Season-6",
+  "title": "SkewerEsports Season 6",
+  "limit": "До 38.500 MMR на команду",
+  "start": "2026-08-06",
+  "end": "2026-06-07",
+  "startTime": "18:30",
+  "registrationStart": "2026-07-26",
+  "registrationEnd": "2026-08-05",
+  "prize": "8.000₽",
+  "location": "СНГ",
+  "teams": 10,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "SkewerEsports",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
+  "telegramLink": "https://t.me/SkewerEsports",
+  "description": "Skewer eSports Season 6 — турнир по Dota 2 с ограничением 38.500 MMR на команду. Double Elimination. Призовой фонд 8.000₽. Взнос 800₽ с команды.",
+  "prizePool": [
+    { "place": 1, "amount": "6000₽", "team": "" },
+    { "place": 2, "amount": "2000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/s7RCg2gmpS",
+    "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
   {
   "id": "Bedlam-First-Anniversary-Cup",
   "title": "Bedlam: First Anniversary Cup",
