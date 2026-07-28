@@ -150,11 +150,11 @@ const tournaments = [
   "telegramLink": "https://t.me/cultimm",
   "description": "The Trial of Immortality VII — 7-й сезон турнира по Dota 2 с открытой регистрацией. Формат 5x5, Double Elimination, BO1 (Гранд-Финал BO3). Взнос 500₽ с команды.",
   "prizePool": [
-    { "place": 1, "amount": "10000₽", "team": "" },
-    { "place": 2, "amount": "6000₽", "team": "" },
-    { "place": 3, "amount": "4000₽", "team": "" },
-    { "place": 4, "amount": "Dota+ (1 месяц)", "team": "" },
-    { "place": "MVP", "amount": "1500₽", "team": "" }
+    { "place": 1, "amount": "10000₽", "team": "EGOISTO" },
+    { "place": 2, "amount": "6000₽", "team": "LETO Junior" },
+    { "place": 3, "amount": "4000₽", "team": "Сыроежкi" },
+    { "place": 4, "amount": "Dota+ (1 месяц)", "team": "Nexus Team" },
+    { "place": "MVP", "amount": "1500₽", "team": "dodikre" }
   ],
   "links": {
     "dotabuff": "",
