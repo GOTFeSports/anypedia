@@ -147,7 +147,7 @@ const teams = [
     aliases: ["LETO Junior", "LETO jr", "LETO junior", "Teiko", "TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "26.500₽",
+    prize: "32.500₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
@@ -156,14 +156,21 @@ const teams = [
       { nick: "Alisa", pos: 2, joined: "2025-05-14" },
       { nick: "popi", pos: 3, joined: "2025-05-14" },
       { nick: "Dark Light", pos: 4, joined: "2026-05-31" },
-      { nick: "Freak", pos: 5, joined: "2026-05-31" },
+      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" },
     ],
     formerPlayers: [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
       { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
-      { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
+      { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: ""    },
     ],
     tournaments: [
+        {
+        title: "The Trial of Immortality 7",
+        date:  "2026-07-26",
+        place: "2",
+        prize: "6.000₽",
+        limit: "До 35.000 MMR на команду"
+      },
         {
         title: "SkewerEsports Season 5",
         date:  "2026-07-24",
