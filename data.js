@@ -1,5 +1,34 @@
 const tournaments = [  
    {
+  "id": "Lor-Tournament-1",
+  "title": "Лорный Турнир от Кисы и ТПвКД",
+  "limit": "Без лимита MMR",
+  "start": "2026-08-29",
+  "end": "2026-08-30",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-29",
+  "registrationEnd": "2026-08-21",
+  "prize": "TBD",
+  "location": "Мио",
+  "teams": 1024,
+  "format": "Group Stage",
+  "gameFormat": "Predraft Turbo",
+  "organizer": "ТПвКД",
+  "bracketEmbed": "tpscd.ru",
+  "registrationLink": "tpscd.ru",
+  "telegramLink": "https://t.me/tpscd_dota",
+  "description": "Лорный Турнир от Кисы и ТПвКД — онлайн-турнир по Dota 2 в режиме Predraft Turbo. Формат проведения — Group Round Robin. Призы не являются денежными и остаются секретными.",
+  "prizePool": [],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/cz5PDkJSc",
+    "rules": "tpscd.ru",
+    "bracket": "tpscd.ru"
+  },
+  "casters": [],
+  "teamsList": []
+},
+   {
   "id": "Yarf-Cup-4",
   "title": "Yarf Cup №4",
   "limit": "Без лимита MMR",
