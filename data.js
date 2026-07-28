@@ -9,7 +9,7 @@ const tournaments = [
   "registrationStart": "2026-07-29",
   "registrationEnd": "2026-08-21",
   "prize": "TBD",
-  "location": "Мио",
+  "location": "Мир",
   "teams": 1024,
   "format": "Group Stage",
   "gameFormat": "Predraft Turbo",
