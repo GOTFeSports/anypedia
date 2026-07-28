@@ -15,15 +15,15 @@ const tournaments = [
   "gameFormat": "Predraft Turbo",
   "organizer": "ТПвКД",
   "bracketEmbed": "",
-  "registrationLink": "tpscd.ru",
+  "registrationLink": "https:/tpscd.ru",
   "telegramLink": "https://t.me/tpscd_dota",
   "description": "Лорный Турнир от Кисы и ТПвКД — онлайн-турнир по Dota 2 в режиме Predraft Turbo. Формат проведения — Group Round Robin. Призы не являются денежными и остаются секретными.",
   "prizePool": [],
   "links": {
     "dotabuff": "",
     "discord": "https://discord.gg/cz5PDkJSc",
-    "rules": "tpscd.ru",
-    "bracket": "tpscd.ru"
+    "rules": "https:/tpscd.ru",
+    "bracket": "https:/tpscd.ru"
   },
   "casters": [],
   "teamsList": []
