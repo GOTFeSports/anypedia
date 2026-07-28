@@ -2021,7 +2021,7 @@ const tournaments = [
   },
   {
     "name": "Never Back Down",
-    "logo": "dota2.png",
+    "logo": "nbd.png",
     "roster": [
       {"nick": "epk1d", "pos": 1},
       {"nick": "Vkidavyumef", "pos": 2},
