@@ -27,7 +27,7 @@ const tournaments = [
   },
   "casters": [],
   "teamsList": []
-},
+}
    {
   "id": "Yarf-Cup-4",
   "title": "Yarf Cup №4",
