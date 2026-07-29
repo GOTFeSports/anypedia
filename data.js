@@ -1,4 +1,79 @@
 const tournaments = [  
+   {"nick": "alleyesonme166", "pos": 2},
+      {"nick": "-", "pos": 3},
+      {"nick": "Yookich1337", "pos": 4},
+      {"nick": "okeanmoeynadezhdy", "pos": 5}
+    ]
+  },
+  {
+    "name": "Team Amplify",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "darknetovo", "pos": 1},
+      {"nick": "rflwrr", "pos": 2},
+      {"nick": "grisha_gavrik", "pos": 3},
+      {"nick": "a1akey", "pos": 4},
+      {"nick": "Snowrunner777", "pos": 5}
+    ]
+  },
+  {
+    "name": "Che_ZVal_slARK",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "lllsunstrikelll", "pos": 1},
+      {"nick": "top1brood", "pos": 2},
+      {"nick": "minet_enjoyer", "pos": 3},
+      {"nick": "sovokanx", "pos": 4},
+      {"nick": "Bist_Dan", "pos": 5}
+    ]
+  },
+  {
+    "name": "Egoisto",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Road2primee", "pos": 1},
+      {"nick": "oketraa", "pos": 2},
+      {"nick": "m1n1q", "pos": 3},
+      {"nick": "Ttoo_feee", "pos": 4},
+      {"nick": "zxcnikita2809", "pos": 5}
+    ]
+  },
+  {
+    "name": "rozen",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "aurexoq", "pos": 1},
+      {"nick": "ogog7", "pos": 2},
+      {"nick": "IlllllIllllIll", "pos": 3},
+      {"nick": "mikeukolov", "pos": 4},
+      {"nick": "angelicvanilla", "pos": 5}
+    ]
+  },
+  {
+    "name": "Anypedia Esports",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "DieWithUBaby163", "pos": 1},
+      {"nick": "antognist", "pos": 2},
+      {"nick": "Yaneg1", "pos": 3},
+      {"nick": "dark_light666", "pos": 4},
+      {"nick": "prtim09", "pos": 5}
+    ]
+  }
+],
+    "casters": [
+    ],
+    "bracketEmbed": "",
+    "registrationLink": "https://forms.gle/DHsjTBAgbSLUa5nH9",
+    "telegramLink": "https://t.me/haterzdes",
+    "description": "Организатор турнира – медиа HATER ZDES’. Участие бесплатное, цензуры нет, количество команд не ограничено. Призовой фонд — 67.000 рублей. Игры в режиме Captains Draft, группа — Swiss System, ПО — Double Elimination",
+    "prizePool": [
+        { "place": 1, "amount": "67.000₽", "team": "" }
+    ],
+    "registrationStart": "2026-06-28",
+    "registrationEnd": "2026-07-20",
+    "gameFormat": "Captains Draft"
+},
    {
   "id": "Lor-Tournament-1",
   "title": "Лорный Турнир от Кисы и ТПвКД",
@@ -27,7 +102,7 @@ const tournaments = [
   },
   "casters": [],
   "teamsList": []
-}
+},
    {
   "id": "Yarf-Cup-4",
   "title": "Yarf Cup №4",
