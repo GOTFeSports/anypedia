@@ -600,15 +600,15 @@ table {
 }
 
 /* Ширины колонок */
-table th:nth-child(1) { width: 14%; }   /* Ограничение */
+table th:nth-child(1) { width: 13%; }   /* Ограничение */
 table th:nth-child(2) { width: 21%; }   /* Турнир */
-table th:nth-child(3) { width: 16%; }   /* Дата */
+table th:nth-child(3) { width: 13%; }   /* Дата */
 table th:nth-child(4) { width: 8%;  }   /* Приз */
-table th:nth-child(5) { width: 6%;  }   /* Регион */
-table th:nth-child(6) { width: 5%;  }   /* Команд */
+table th:nth-child(5) { width: 5%;  }   /* Регион */
+table th:nth-child(6) { width: 4%;  }   /* Команд */
 table th:nth-child(7) { width: 9%;  }   /* Статус */
 table th:nth-child(8) { width: 13%; }   /* Победитель */
-table th:nth-child(9) { width: 3%;  }   /* Поделиться */
+table th:nth-child(9) { width: 9%;  }   /* Поделиться + избранное */
 
 th, td {
   padding: 11px 12px;
@@ -621,12 +621,25 @@ th, td {
   transition: var(--transition);
 }
 
-/* Колонка «Поделиться»: по центру, с нормальным отступом с обеих сторон */
+/* Короткие колонки — цифры и тег статуса никогда не переносятся,
+   даже когда таблица сужается из-за сайдбара с LIVE-стримами */
+table td:nth-child(5),
+table td:nth-child(6),
+table td:nth-child(7) {
+  white-space: nowrap;
+}
+
+/* Колонка «Поделиться»: по центру, с плотным отступом — там теперь
+   две кнопки (избранное + шеринг), места в обрез при сайдбаре LIVE */
 table td:nth-child(9),
 table th:nth-child(9) {
   text-align: center;
   padding-left: 6px;
-  padding-right: 16px;
+  padding-right: 8px;
+}
+table td:nth-child(9) .fav-star {
+  width: 26px;
+  height: 26px;
 }
 
 th {
