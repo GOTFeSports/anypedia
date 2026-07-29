@@ -1,4 +1,161 @@
 const tournaments = [  
+   {
+    "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
+    "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
+    "limit": "До 30.000 MMR на команду",
+    "start": "2026-07-27",
+    "end": "2026-08-04",
+    "startTime": "18:00",
+    "prize": "67.000₽",
+    "location": "СНГ",
+    "teams": 16,
+    "winner": "",
+    "format": "Swiss Stage + Double Elimination",
+    "organizer": "HATER ZDES`",
+    "links": {
+        "dotabuff": "https://discord.gg/KgsxB8J2N",
+        "discord": "https://discord.gg/haterzdes",
+        "rules": "https://disk.yandex.ru/d/DJaYjkl7IQUO2A",
+        "bracket": ""
+    },
+    "teamsList": [
+  {
+    "name": "FRIENDZONE",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "ilyacvbf", "pos": 1},
+      {"nick": "comebackisreaI", "pos": 2},
+      {"nick": "Papichfun", "pos": 3},
+      {"nick": "xrchdmlvlnc12", "pos": 4},
+      {"nick": "Denystwentyone", "pos": 5}
+    ]
+  },
+  {
+    "name": "TEAM HIGHDRATED",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Herofromurdream", "pos": 1},
+      {"nick": "WK217", "pos": 2},
+      {"nick": "MyrziLbl4", "pos": 3},
+      {"nick": "taxelorejke", "pos": 4},
+      {"nick": "Runninglow17", "pos": 5}
+    ]
+  },
+  {
+    "name": "HZ RISEN",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Sk1ble", "pos": 1},
+      {"nick": "Notearz", "pos": 2},
+      {"nick": "Rikusenok", "pos": 3},
+      {"nick": "Brthless", "pos": 4},
+      {"nick": "gogaa_00", "pos": 5}
+    ]
+  },
+  {
+    "name": "MCLOVINS",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "ManuuLq", "pos": 1},
+      {"nick": "ffashionkilla", "pos": 2},
+      {"nick": "argeutnm", "pos": 3},
+      {"nick": "permanentlowtab", "pos": 4},
+      {"nick": "sssghouk", "pos": 5}
+    ]
+  },
+  {
+    "name": "PRODAM GARAZH",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "LFY_666", "pos": 1},
+      {"nick": "Alexemovi4", "pos": 2},
+      {"nick": "Wiisp", "pos": 3},
+      {"nick": "worstornot", "pos": 4},
+      {"nick": "piroburek", "pos": 5}
+    ]
+  },
+  {
+    "name": "YUNGBOYS_HATERS",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "thealexandrovichGq", "pos": 1},
+      {"nick": "divineascent", "pos": 2},
+      {"nick": "cvvshooters", "pos": 3},
+      {"nick": "yungninjayjgang", "pos": 4},
+      {"nick": "Dazzzzle15", "pos": 5}
+    ]
+  },
+  {
+    "name": "MYASO",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "blackmorgen", "pos": 1},
+      {"nick": "Freshm1x", "pos": 2},
+      {"nick": "ALOMI666", "pos": 3},
+      {"nick": "aquidee", "pos": 4},
+      {"nick": "MrZirky", "pos": 5}
+    ]
+  },
+  {
+    "name": "BALBESCLOWN TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "wi3oid", "pos": 1},
+      {"nick": "Daxao", "pos": 2},
+      {"nick": "sontrolgg", "pos": 3},
+      {"nick": "juustbenya", "pos": 4},
+      {"nick": "Spiritboshki", "pos": 5}
+    ]
+  },
+  {
+    "name": "СЛАДЕНЬКИЕ БУЛОЧКИ",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "en0tikkk", "pos": 1},
+      {"nick": "w1spulya", "pos": 2},
+      {"nick": "anna_stepanian", "pos": 3},
+      {"nick": "Ffffrls", "pos": 4},
+      {"nick": "minodgin", "pos": 5}
+    ]
+  },
+  {
+    "name": "Never Back Down",
+    "logo": "nbd.png",
+    "roster": [
+      {"nick": "epk1d", "pos": 1},
+      {"nick": "Vkidavyumef", "pos": 2},
+      {"nick": "SBK_1337", "pos": 3},
+      {"nick": "SCorPion_LSPD", "pos": 4},
+      {"nick": "Wazo4", "pos": 5}
+    ]
+  },
+  {
+    "name": "menshevikiCHERT.",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "tarflare", "pos": 1},
+      {"nick": "Spring_of_young", "pos": 2},
+      {"nick": "dexscen", "pos": 3},
+      {"nick": "dsafgdsafgas", "pos": 4},
+      {"nick": "amasalovv", "pos": 5}
+    ]
+  },
+  {
+    "name": "Gavrora Gaming",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "mzkael", "pos": 1},
+      {"nick": "pzdxgh", "pos": 2},
+      {"nick": "iwepgg", "pos": 3},
+      {"nick": "Jydja", "pos": 4},
+      {"nick": "ISFTGOD", "pos": 5}
+    ]
+  },
+  {
+    "name": "Anvorgeza",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "whattheffuckkk", "pos": 1},
    {"nick": "alleyesonme166", "pos": 2},
       {"nick": "-", "pos": 3},
       {"nick": "Yookich1337", "pos": 4},
