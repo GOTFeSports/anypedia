@@ -29,7 +29,7 @@ const tournaments = [
   },
   "casters": [],
   "teamsList": []
-}
+},
    {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
     "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
