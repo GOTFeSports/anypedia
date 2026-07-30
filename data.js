@@ -1,4 +1,35 @@
 const tournaments = [  
+  {
+  "id": "Barracuda-Squirrel-Cup",
+  "title": "BARRACUDA × SQUIRREL CUP",
+  "limit": "Без ограничений по MMR",
+  "start": "2026-08-09",
+  "end": "2026-08-16",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-28",
+  "registrationEnd": "2026-07-04",
+  "prize": "30.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "",
+  "gameFormat": "Captains Mode",
+  "organizer": "Barracuda Battles & Squirrel Games",
+  "bracketEmbed": "https://t.me/BarracudaBattles",
+  "registrationLink": "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfoGW_a43QMPccN7HONmY-60uYjBu_4uDcqOVjJ-r-xnBDBzQ/alreadyresponded?usp=publish-editor",
+  "telegramLink": "",
+  "description": "BARRACUDA × SQUIRREL CUP — объединённый турнир по Dota 2 от Barracuda Battles, Squirrel Games и других организаторов. Призовой фонд 30.000₽. Формат 5×5, без лимита по MMR. Открытые квалификации 5 августа. Участие бесплатное.",
+  "prizePool": [
+    { "place": 1, "amount": "30.000₽", "team": "" },
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/GzVaBRxN8",
+    "rules": "http://barracudabattles.netlify.app/",
+    "bracket": "http://barracudabattles.netlify.app/"
+  },
+  "casters": [],
+  "teamsList": []
+}
    {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
     "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
