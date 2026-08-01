@@ -369,7 +369,7 @@ const tournaments = [
   "format": "Group Stage + Double Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "Bedlam Tournaments",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/B1AC/module",
   "registrationLink": "https://t.me/bedlamtournaments_bot",
   "telegramLink": "https://t.me/bedlamtournaments",
   "description": "В честь того что Bedlam Battles Tournaments исполняется один год проводится данный турнир. Комментаторами грандфинала будут BlackArhangel × y0nd. Взнос 1000 рублей.",
@@ -382,9 +382,10 @@ const tournaments = [
     "dotabuff": "",
     "discord": "https://discord.gg/B3DACKcHpz",
     "rules": "",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/B1AC"
   },
   "casters": [
+    { "name": "Bedlam Cast", "link": "https://www.twitch.tv/bedlambattlestournaments" },
     { "name": "yond", "link": "https://www.twitch.tv/y0nd" },
     { "name": "BLACKARHANGEL", "link": "https://www.twitch.tv/blackarhangel" }
   ],
