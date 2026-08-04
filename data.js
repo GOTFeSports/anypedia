@@ -1,5 +1,38 @@
 const tournaments = [  
   {
+  "id": "Rampage-Kurik-5",
+  "title": "RAMPAGE KURIK #5",
+  "limit": "До 5.000 MMR на игрока",
+  "start": "2026-08-08",
+  "end": "2026-08-09",
+  "startTime": "16:00",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "1.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "RAMPAGE TOURNAMENTS",
+  "bracketEmbed": "",
+  "registrationLink": "",
+  "telegramLink": "https://t.me/rampagetournaments",
+  "description": "RAMPAGE KURIK #5 — турнир по Dota 2 для игроков до 5000 MMR. Формат 5×5, Double Elimination. Все матчи bo1, гранд-финал bo3. Призовой фонд 1.000₽ (может увеличиться). Участие бесплатное.",
+  "prizePool": [
+    { "place": 1, "amount": "1.000₽", "team": "" },
+    { "place": 2, "amount": "", "team": "" },
+    { "place": 3, "amount": "", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://onedrive.live.com/:w:/g/personal/11a368be48672d9a/IQDgwgJOB6IyRYGJWD2sNpoLAeTWtZA20VjssCA6yAajx9A?rtime=wGs1I0Dy3kg&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xMWEzNjhiZTQ4NjcyZDlhL0lRRGd3Z0pPQjZJeVJZR0pXRDJzTnBvTEFlVFd0WkEyMFZqc3NDQTZ5QWFqeDlBP2U9MXplYW5w",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Barracuda-Squirrel-Cup",
   "title": "BARRACUDA × SQUIRREL CUP",
   "limit": "Без ограничений по MMR",
