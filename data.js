@@ -1,7 +1,7 @@
 const tournaments = [  
   {
-  "id": "Rampage-Kurik-5",
-  "title": "RAMPAGE KURIK #5",
+  "id": "Rampage-Kurik-6",
+  "title": "RAMPAGE KURIK #6",
   "limit": "До 5.000 MMR на игрока",
   "start": "2026-08-08",
   "end": "2026-08-09",
@@ -17,11 +17,9 @@ const tournaments = [
   "bracketEmbed": "",
   "registrationLink": "",
   "telegramLink": "https://t.me/rampagetournaments",
-  "description": "RAMPAGE KURIK #5 — турнир по Dota 2 для игроков до 5000 MMR. Формат 5×5, Double Elimination. Все матчи bo1, гранд-финал bo3. Призовой фонд 1.000₽ (может увеличиться). Участие бесплатное.",
+  "description": "RAMPAGE KURIK #6 — турнир по Dota 2 для игроков до 5000 MMR. Формат 5×5, Double Elimination. Все матчи bo1, гранд-финал bo3. Призовой фонд 1.000₽ (может увеличиться). Участие бесплатное.",
   "prizePool": [
-    { "place": 1, "amount": "1.000₽", "team": "" },
-    { "place": 2, "amount": "", "team": "" },
-    { "place": 3, "amount": "", "team": "" }
+    { "place": 1, "amount": "1.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
