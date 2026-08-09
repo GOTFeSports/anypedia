@@ -438,7 +438,7 @@ const teams = [
     aliases: ["Never Back Down"],
     logo: "nbdteam.png",
     region: "СНГ",
-    prize: "11.500₽",
+    prize: "17.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
