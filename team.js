@@ -69,13 +69,6 @@ function всеИменаКоманды(команда) {
   return [команда.name, ...список].filter(Boolean).map(нормализовать);
 }
 
-function найтиКомандуПоИмени(имя) {
-  if (!имя) return null;
-  const ключ = нормализовать(имя);
-  return (typeof teams !== 'undefined' ? teams : [])
-    .find(к => всеИменаКоманды(к).includes(ключ)) || null;
-}
-
 function всеТурниры() {
   return typeof tournaments !== 'undefined' && Array.isArray(tournaments) ? tournaments : [];
 }
@@ -190,33 +183,17 @@ function рендерСостав(игроки, бывшие = false) {
           <th>Никнейм</th>
           <th>Позиция</th>
           <th>Присоединился</th>
-          ${бывшие ? '<th>Покинул</th><th>Новая команда</th>' : ''}
+          ${бывшие ? '<th>Покинул</th>' : ''}
         </tr>
       </thead>
       <tbody>
         ${игроки.map(игрок => {
-          /* Новая команда — кликабельная если есть страница */
-          let новаяКомандаHTML = '—';
-          if (бывшие && игрок.newTeam && игрок.newTeam !== '—') {
-            const найденная = найтиКомандуПоИмени(игрок.newTeam);
-            if (найденная) {
-              const id = получитьIdКоманды(найденная);
-              новаяКомандаHTML = `<a href="${корньСайта()}team.html?id=${encodeURIComponent(id)}"
-                style="color:var(--accent);font-weight:600">${экранировать(игрок.newTeam)}</a>`;
-            } else {
-              новаяКомандаHTML = экранировать(игрок.newTeam);
-            }
-          }
-
           return `
             <tr class="searchable-row">
               <td data-label="Никнейм">${экранировать(игрок.nick || '—')}</td>
               <td data-label="Позиция"><span class="pos-pill">${экранировать(игрок.pos ?? '—')}</span></td>
               <td data-label="Присоединился">${форматДата(игрок.joined)}</td>
-              ${бывшие ? `
-                <td data-label="Покинул">${форматДата(игрок.left)}</td>
-                <td data-label="Новая команда">${новаяКомандаHTML}</td>
-              ` : ''}
+              ${бывшие ? `<td data-label="Покинул">${форматДата(игрок.left)}</td>` : ''}
             </tr>`;
         }).join('')}
       </tbody>
@@ -259,7 +236,7 @@ function рендерТурниры(строки) {
               <td data-label="Дата">${экранировать(строка.датаТекст)}</td>
               <td data-label="Место" class="place-cell">${экранировать(String(строка.место || '—'))}</td>
               <td data-label="Турнир">${ссылкаТурнир}</td>
-              <td data-label="Призовые" style="font-family:var(--font-mono);color:var(--gold)">${экранировать(строка.призовые)}</td>
+              <td data-label="Призовые">${экранировать(строка.призовые)}</td>
               <td data-label="Ограничения">${экранировать(строка.лимит || '—')}</td>
             </tr>`;
         }).join('')}
@@ -267,8 +244,165 @@ function рендерТурниры(строки) {
     </table>`;
 }
 
-/* Поиск (дропдаун турниров, команд и организаторов) вынесен в общий
-   /search.js, подключаемый в team.html — единая реализация для всех страниц. */
+/* ============================================================
+   ПОИСК — дропдаун турниров и команд
+   ============================================================ */
+function инициализироватьПоиск() {
+  const поле     = document.getElementById('search');
+  const дропдаун = document.getElementById('searchDropdown');
+  const обёртка  = document.getElementById('searchWrap');
+  if (!поле || !дропдаун || !обёртка) return;
+
+  const всеТурнирыСписок = typeof tournaments !== 'undefined' ? tournaments : [];
+  const всеКоманды  = typeof teams       !== 'undefined' ? teams       : [];
+  const всеОрганизаторы = typeof organizers !== 'undefined' ? organizers : [];
+
+  const статусТекст = { upcoming: 'Будущий', live: 'Текущий', finished: 'Завершён' };
+  let активныйИндекс = -1;
+
+  function статусТурнира(t) {
+    const сегодня = new Date(); сегодня.setHours(0,0,0,0);
+    const [гн,мн,дн] = t.start.split('-').map(Number);
+    const [гк,мк,дк] = t.end.split('-').map(Number);
+    const начало = new Date(гн, мн-1, дн);
+    const конец  = new Date(гк, мк-1, дк);
+    if (сегодня < начало) return 'upcoming';
+    if (сегодня > конец)  return 'finished';
+    return 'live';
+  }
+
+  function командаПодходит(команда, запрос) {
+    return всеИменаКоманды(команда).some(н => н.includes(запрос));
+  }
+
+  function организаторПодходит(организатор, запрос) {
+    const псевдонимы = организатор.aliases || [];
+    const список = Array.isArray(псевдонимы)
+      ? псевдонимы
+      : String(псевдонимы).split(',').map(s => s.trim()).filter(Boolean);
+    return [организатор.name, ...список].filter(Boolean)
+      .map(нормализовать).some(н => н.includes(запрос));
+  }
+
+  function закрыть() {
+    дропдаун.classList.remove('visible');
+    активныйИндекс = -1;
+  }
+
+  function показатьДропдаун(запрос) {
+    if (!запрос) { закрыть(); return; }
+
+    const база = корньСайта();
+
+    const турниры = всеТурнирыСписок
+      .filter(t => t.title.toLowerCase().includes(запрос))
+      .slice(0, 6);
+
+    const команды = всеКоманды
+      .filter(к => командаПодходит(к, запрос))
+      .slice(0, 5);
+
+    const организаторы = всеОрганизаторы
+      .filter(о => организаторПодходит(о, запрос))
+      .slice(0, 5);
+
+    if (!турниры.length && !команды.length && !организаторы.length) {
+      дропдаун.innerHTML = `<div class="sd-empty">Ничего не найдено</div>`;
+      дропдаун.classList.add('visible');
+      return;
+    }
+
+    let html = '';
+
+    if (турниры.length) {
+      html += `<div class="sd-group-label">🏆 Турниры</div>`;
+      турниры.forEach(t => {
+        const значок = статусТекст[статусТурнира(t)] || '';
+        const ссылка = `${база}tournament.html?id=${encodeURIComponent(t.id)}`;
+        html += `
+          <a class="sd-item" href="${ссылка}">
+            <div class="sd-icon">🏆</div>
+            <div class="sd-info">
+              <div class="sd-title">${t.title}</div>
+              <div class="sd-meta">${t.prize || '—'} · ${t.location || '—'}</div>
+            </div>
+            <span class="sd-badge">${значок}</span>
+          </a>`;
+      });
+    }
+
+    if (команды.length) {
+      html += `<div class="sd-group-label">👥 Команды</div>`;
+      команды.forEach(к => {
+        const id = получитьIdКоманды(к);
+        const ссылка = `${база}team.html?id=${encodeURIComponent(id)}`;
+        html += `
+          <a class="sd-item" href="${ссылка}">
+            <img class="sd-logo" src="${база}${к.logo || 'dota2.png'}"
+                 alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="sd-icon" style="display:none">👥</div>
+            <div class="sd-info">
+              <div class="sd-title">${к.name}</div>
+              <div class="sd-meta">${к.region || '—'}${к.prize ? ' · ' + к.prize : ''}</div>
+            </div>
+            <span class="sd-badge">Команда</span>
+          </a>`;
+      });
+    }
+
+    if (организаторы.length) {
+      html += `<div class="sd-group-label">🛡️ Организаторы</div>`;
+      организаторы.forEach(о => {
+        const id = о.id || транслитерироватьСлаг(о.name);
+        const ссылка = `${база}organizer.html?id=${encodeURIComponent(id)}`;
+        html += `
+          <a class="sd-item" href="${ссылка}">
+            <img class="sd-logo" src="${база}${о.logo || 'dota2.png'}"
+                 alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="sd-icon" style="display:none">🛡️</div>
+            <div class="sd-info">
+              <div class="sd-title">${о.name}</div>
+              <div class="sd-meta">${о.region || '—'}</div>
+            </div>
+            <span class="sd-badge">Организатор</span>
+          </a>`;
+      });
+    }
+
+    дропдаун.innerHTML = html;
+    дропдаун.classList.add('visible');
+    активныйИндекс = -1;
+  }
+
+  поле.addEventListener('input', e => показатьДропдаун(e.target.value.toLowerCase().trim()));
+
+  поле.addEventListener('keydown', e => {
+    const элементы = дропдаун.querySelectorAll('.sd-item');
+    if (!элементы.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      активныйИндекс = Math.min(активныйИндекс + 1, элементы.length - 1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      активныйИндекс = Math.max(активныйИндекс - 1, 0);
+    } else if (e.key === 'Enter' && активныйИндекс >= 0) {
+      e.preventDefault(); элементы[активныйИндекс].click(); return;
+    } else if (e.key === 'Escape') {
+      закрыть(); поле.blur(); return;
+    }
+    элементы.forEach((эл, и) => эл.classList.toggle('active', и === активныйИндекс));
+    if (активныйИндекс >= 0) элементы[активныйИндекс].scrollIntoView({ block: 'nearest' });
+  });
+
+  поле.addEventListener('focus', () => {
+    const запрос = поле.value.toLowerCase().trim();
+    if (запрос) показатьДропдаун(запрос);
+  });
+
+  document.addEventListener('click', e => {
+    if (!обёртка.contains(e.target)) закрыть();
+  });
+}
 
 /* ============================================================
    ГЛАВНАЯ ЛОГИКА — найти команду и отрисовать
@@ -290,6 +424,8 @@ if (!команда) {
            border-radius:10px;display:inline-block;color:var(--accent)">← Назад</a>
       </div>
     </div>`;
+  /* Поиск всё равно инициализируем */
+  инициализироватьПоиск();
   throw new Error('Команда не найдена');
 }
 
@@ -316,19 +452,14 @@ document.getElementById('teamInfobox').innerHTML = `
        src="${базаПути}${экранировать(команда.logo || 'dota2.png')}"
        alt="${экранировать(команда.name)}"
        onerror="this.style.display='none'">
-  <div class="infobox-title-row">
-    <h1>${экранировать(команда.name)}</h1>
-    <button class="fav-star" data-fav-type="team" data-fav-id="${текущийId}" title="В избранное" aria-pressed="false">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-    </button>
-  </div>
+  <h1>${экранировать(команда.name)}</h1>
   <div class="info-row">
     <span class="info-label">Регион</span>
     <span class="info-val">${экранировать(команда.region || '—')}</span>
   </div>
   <div class="info-row">
     <span class="info-label">Призовые</span>
-    <span class="info-val" style="color:var(--gold);font-weight:700;font-family:var(--font-mono)">
+    <span class="info-val" style="color:var(--accent);font-weight:700">
       ${экранировать(команда.prize || '—')}
     </span>
   </div>
@@ -346,8 +477,6 @@ document.getElementById('teamInfobox').innerHTML = `
   </a>
 `;
 
-if (window.Favorites) Favorites.initStars();
-
 /* Описание */
 document.getElementById('summaryBlock').innerHTML = `
   <h1 class="page-title">${экранировать(команда.name)}</h1>
@@ -360,3 +489,6 @@ document.getElementById('formerPlayers').innerHTML = рендерСостав(к
 
 /* Турниры */
 document.getElementById('teamTournaments').innerHTML = рендерТурниры(построитьСтрокиТурниров(команда));
+
+/* Поиск */
+инициализироватьПоиск();
