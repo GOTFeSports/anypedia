@@ -80,7 +80,7 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup №4 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
   "prizePool": [
-    { "place": 1, "amount": "1500₽", "team": "" }
+    { "place": 1, "amount": "1500₽", "team": "МЫ" }
   ],
   "links": {
     "dotabuff": "",
@@ -173,9 +173,9 @@ const tournaments = [
   "telegramLink": "https://t.me/bedlamtournaments",
   "description": "В честь того что Bedlam Battles Tournaments исполняется один год проводится данный турнир. Комментаторами грандфинала будут BlackArhangel × y0nd. Взнос 1000 рублей.",
   "prizePool": [
-    { "place": 1, "amount": "15000₽", "team": "" },
-    { "place": 2, "amount": "10000₽", "team": "" },
-    { "place": 3, "amount": "5000₽", "team": "" },
+    { "place": 1, "amount": "15000₽", "team": "Never Back Down" },
+    { "place": 2, "amount": "10000₽", "team": "Bedlam Red" },
+    { "place": 3, "amount": "5000₽", "team": "Team Leto" },
   ],
   "links": {
     "dotabuff": "",
