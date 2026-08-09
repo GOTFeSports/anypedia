@@ -1,5 +1,37 @@
 const tournaments = [  
   {
+  "id": "AnyLvL-x-GOTF-eSports-Tournament-2",
+  "title": "AnyLvL x GOTF eSports Tournament #2",
+  "limit": "32.500 MMR на команду",
+  "start": "2026-08-22",
+  "end": "2026-08-22",
+  "startTime": "12:00",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "16.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "AnyLvL & GOTF eSports",
+  "bracketEmbed": "",
+  "registrationLink": "https://forms.gle/BXeg1sihrqwW7TT7A",
+  "telegramLink": "https://t.me/anylvlcommunity",
+  "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.250 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды. Призовой фонд 16.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "11000₽", "team": "" },
+    { "place": 2, "amount": "5000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/Yxu2yXfzef",
+    "rules": "https://docs.google.com/document/d/1SYlwqegP2cWBr3qav226ACutBW3eyGqxOlW8f2mqBDA/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Lor-Tournament-1",
   "title": "Лорный Турнир от Кисы и ТПвКД",
   "limit": "Без лимита MMR",
