@@ -165,6 +165,13 @@ const teams = [
     ],
     tournaments: [
         {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "3",
+        prize: "5.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
+        {
         title: "SkewerEsports Season 6",
         date:  "2026-08-07",
         place: "3",
@@ -388,6 +395,13 @@ const teams = [
     ],
 
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "2",
+        prize: "10.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
@@ -444,17 +458,21 @@ const teams = [
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
-      { nick: "KarineGod",  pos: 1, joined: "2025-11-01" },
       { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" },
       { nick: "m1nd1",   pos: 3, joined: "2026-05-31" },
-      { nick: "Darklight",   pos: 4, joined: "2026-05-31" },
-      { nick: "Rose",   pos: 5, joined: "2025-11-01" },
     ],
 
     formerPlayers: [
       
     ],
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "1",
+        prize: "15.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
         {
         title: "SkewerEsports Season 6",
         date:  "2026-08-07",
