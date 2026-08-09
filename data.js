@@ -410,8 +410,8 @@ const tournaments = [
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "Skewer eSports Season 6 — турнир по Dota 2 с ограничением 38.500 MMR на команду. Double Elimination. Призовой фонд 8.000₽. Взнос 800₽ с команды.",
   "prizePool": [
-    { "place": 1, "amount": "6000₽", "team": "" },
-    { "place": 2, "amount": "2000₽", "team": "" }
+    { "place": 1, "amount": "6000₽", "team": "Never Back Down" },
+    { "place": 2, "amount": "2000₽", "team": "Immortal Dragons" }
   ],
   "links": {
     "dotabuff": "",
