@@ -1,5 +1,65 @@
 const tournaments = [  
   {
+  "id": "Lor-Tournament-1",
+  "title": "Лорный Турнир от Кисы и ТПвКД",
+  "limit": "Без лимита MMR",
+  "start": "2026-08-29",
+  "end": "2026-08-30",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-29",
+  "registrationEnd": "2026-08-21",
+  "prize": "TBD",
+  "location": "Мир",
+  "teams": 1024,
+  "format": "Group Stage",
+  "gameFormat": "Predraft Turbo",
+  "organizer": "ТПвКД",
+  "bracketEmbed": "",
+  "registrationLink": "https://tpscd.ru",
+  "telegramLink": "https://t.me/tpscd_dota",
+  "description": "Лорный Турнир от Кисы и ТПвКД — онлайн-турнир по Dota 2 в режиме Predraft Turbo. Формат проведения — Group Round Robin. Призы не являются денежными и остаются секретными.",
+  "prizePool": [],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/cz5PDkJSc",
+    "rules": "https://tpscd.ru",
+    "bracket": "https://tpscd.ru"
+  },
+  "casters": [],
+  "teamsList": []
+},
+   {
+  "id": "Yarf-Cup-4",
+  "title": "Yarf Cup №4",
+  "limit": "Без лимита MMR",
+  "start": "2026-08-09",
+  "end": "2026-08-09",
+  "startTime": "12:00",
+  "registrationStart": "2026-07-24",
+  "registrationEnd": "2026-08-08",
+  "prize": "1.500₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "YARF CUP",
+  "bracketEmbed": "https://challonge.com/ru/YarfCup_4/module",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSd3tmTGN_HbSixziwS9Qwo0ZuKucFDVyCcziSsEeIPlnjDvQA/viewform?usp=header",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Yarf Cup №4 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
+  "prizePool": [
+    { "place": 1, "amount": "1500₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "bracket": "https://challonge.com/ru/YarfCup_4"
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Rampage-Kurik-6",
   "title": "RAMPAGE KURIK #6",
   "limit": "До 5.000 MMR на игрока",
@@ -61,7 +121,44 @@ const tournaments = [
   "casters": [],
   "teamsList": []
 },
-   {
+  {
+  "id": "Bedlam-First-Anniversary-Cup",
+  "title": "Bedlam: First Anniversary Cup",
+  "limit": "До 9.000 MMR на игрока",
+  "start": "2026-07-31",
+  "end": "2026-08-09",
+  "startTime": "18:00",
+  "registrationStart": "2026-07-23",
+  "registrationEnd": "2026-07-31",
+  "prize": "30.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Group Stage + Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Bedlam Tournaments",
+  "bracketEmbed": "https://challonge.com/ru/B1AC/module",
+  "registrationLink": "https://t.me/bedlamtournaments_bot",
+  "telegramLink": "https://t.me/bedlamtournaments",
+  "description": "В честь того что Bedlam Battles Tournaments исполняется один год проводится данный турнир. Комментаторами грандфинала будут BlackArhangel × y0nd. Взнос 1000 рублей.",
+  "prizePool": [
+    { "place": 1, "amount": "15000₽", "team": "" },
+    { "place": 2, "amount": "10000₽", "team": "" },
+    { "place": 3, "amount": "5000₽", "team": "" },
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/B3DACKcHpz",
+    "rules": "",
+    "bracket": "https://challonge.com/ru/B1AC"
+  },
+  "casters": [
+    { "name": "Bedlam Cast", "link": "https://www.twitch.tv/bedlambattlestournaments" },
+    { "name": "yond", "link": "https://www.twitch.tv/y0nd" },
+    { "name": "BLACKARHANGEL", "link": "https://www.twitch.tv/blackarhangel" }
+  ],
+  "teamsList": []
+},
+  {
     "id": "Hater-Zdes-Dota-Cup-Season-3-Division-1",
     "title": "HATER ZDES` Dota Cup: Season 3 Division 1",
     "limit": "До 30.000 MMR на команду",
@@ -287,71 +384,11 @@ const tournaments = [
     "telegramLink": "https://t.me/haterzdes",
     "description": "Организатор турнира – медиа HATER ZDES’. Участие бесплатное, цензуры нет, количество команд не ограничено. Призовой фонд — 67.000 рублей. Игры в режиме Captains Draft, группа — Swiss System, ПО — Double Elimination",
     "prizePool": [
-        { "place": 1, "amount": "67.000₽", "team": "" }
+        { "place": 1, "amount": "67.000₽", "team": "YUNGBOYS_HATERS" }
     ],
     "registrationStart": "2026-06-28",
     "registrationEnd": "2026-07-20",
     "gameFormat": "Captains Draft"
-},
-   {
-  "id": "Lor-Tournament-1",
-  "title": "Лорный Турнир от Кисы и ТПвКД",
-  "limit": "Без лимита MMR",
-  "start": "2026-08-29",
-  "end": "2026-08-30",
-  "startTime": "12:00",
-  "registrationStart": "2026-07-29",
-  "registrationEnd": "2026-08-21",
-  "prize": "TBD",
-  "location": "Мир",
-  "teams": 1024,
-  "format": "Group Stage",
-  "gameFormat": "Predraft Turbo",
-  "organizer": "ТПвКД",
-  "bracketEmbed": "",
-  "registrationLink": "https://tpscd.ru",
-  "telegramLink": "https://t.me/tpscd_dota",
-  "description": "Лорный Турнир от Кисы и ТПвКД — онлайн-турнир по Dota 2 в режиме Predraft Turbo. Формат проведения — Group Round Robin. Призы не являются денежными и остаются секретными.",
-  "prizePool": [],
-  "links": {
-    "dotabuff": "",
-    "discord": "https://discord.gg/cz5PDkJSc",
-    "rules": "https://tpscd.ru",
-    "bracket": "https://tpscd.ru"
-  },
-  "casters": [],
-  "teamsList": []
-},
-   {
-  "id": "Yarf-Cup-4",
-  "title": "Yarf Cup №4",
-  "limit": "Без лимита MMR",
-  "start": "2026-08-09",
-  "end": "2026-08-09",
-  "startTime": "12:00",
-  "registrationStart": "2026-07-24",
-  "registrationEnd": "2026-08-08",
-  "prize": "1.500₽",
-  "location": "СНГ",
-  "teams": 0,
-  "format": "Single Elimination",
-  "gameFormat": "Captains Mode",
-  "organizer": "YARF CUP",
-  "bracketEmbed": "",
-  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSd3tmTGN_HbSixziwS9Qwo0ZuKucFDVyCcziSsEeIPlnjDvQA/viewform?usp=header",
-  "telegramLink": "https://t.me/yarfcup",
-  "description": "Yarf Cup №4 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
-  "prizePool": [
-    { "place": 1, "amount": "1500₽", "team": "" }
-  ],
-  "links": {
-    "dotabuff": "",
-    "discord": "",
-    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-    "bracket": ""
-  },
-  "casters": [],
-  "teamsList": []
 },
    {
   "id": "SkewerEsports-Season-6",
@@ -383,43 +420,6 @@ const tournaments = [
     "bracket": ""
   },
   "casters": [],
-  "teamsList": []
-},
-  {
-  "id": "Bedlam-First-Anniversary-Cup",
-  "title": "Bedlam: First Anniversary Cup",
-  "limit": "До 9.000 MMR на игрока",
-  "start": "2026-07-31",
-  "end": "2026-08-09",
-  "startTime": "18:00",
-  "registrationStart": "2026-07-23",
-  "registrationEnd": "2026-07-31",
-  "prize": "30.000₽",
-  "location": "СНГ",
-  "teams": 16,
-  "format": "Group Stage + Double Elimination",
-  "gameFormat": "Captains Mode",
-  "organizer": "Bedlam Tournaments",
-  "bracketEmbed": "https://challonge.com/ru/B1AC/module",
-  "registrationLink": "https://t.me/bedlamtournaments_bot",
-  "telegramLink": "https://t.me/bedlamtournaments",
-  "description": "В честь того что Bedlam Battles Tournaments исполняется один год проводится данный турнир. Комментаторами грандфинала будут BlackArhangel × y0nd. Взнос 1000 рублей.",
-  "prizePool": [
-    { "place": 1, "amount": "15000₽", "team": "" },
-    { "place": 2, "amount": "10000₽", "team": "" },
-    { "place": 3, "amount": "5000₽", "team": "" },
-  ],
-  "links": {
-    "dotabuff": "",
-    "discord": "https://discord.gg/B3DACKcHpz",
-    "rules": "",
-    "bracket": "https://challonge.com/ru/B1AC"
-  },
-  "casters": [
-    { "name": "Bedlam Cast", "link": "https://www.twitch.tv/bedlambattlestournaments" },
-    { "name": "yond", "link": "https://www.twitch.tv/y0nd" },
-    { "name": "BLACKARHANGEL", "link": "https://www.twitch.tv/blackarhangel" }
-  ],
   "teamsList": []
 },
   {
