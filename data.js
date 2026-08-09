@@ -8,7 +8,7 @@ const tournaments = [
   "startTime": "12:00",
   "registrationStart": "",
   "registrationEnd": "",
-  "prize": "16.000₽",
+  "prize": "15.000₽",
   "location": "СНГ",
   "teams": 16,
   "format": "Single Elimination",
@@ -19,7 +19,7 @@ const tournaments = [
   "telegramLink": "https://t.me/anylvlcommunity",
   "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.250 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды. Призовой фонд 16.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "11000₽", "team": "" },
+    { "place": 1, "amount": "10000₽", "team": "" },
     { "place": 2, "amount": "5000₽", "team": "" }
   ],
   "links": {
