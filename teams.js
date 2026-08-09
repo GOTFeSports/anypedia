@@ -165,6 +165,13 @@ const teams = [
     ],
     tournaments: [
         {
+        title: "SkewerEsports Season 6",
+        date:  "2026-08-07",
+        place: "3",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      },
+        {
         title: "The Trial of Immortality 7",
         date:  "2026-07-26",
         place: "2",
@@ -448,6 +455,13 @@ const teams = [
       
     ],
     tournaments: [
+        {
+        title: "SkewerEsports Season 6",
+        date:  "2026-08-07",
+        place: "1",
+        prize: "6.000₽",
+        limit: "До 32.500 MMR на команду"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
