@@ -395,7 +395,7 @@ const tournaments = [
   "title": "SkewerEsports Season 6",
   "limit": "До 38.500 MMR на команду",
   "start": "2026-08-06",
-  "end": "2026-06-07",
+  "end": "2026-08-07",
   "startTime": "18:30",
   "registrationStart": "2026-07-26",
   "registrationEnd": "2026-08-05",
@@ -405,7 +405,7 @@ const tournaments = [
   "format": "Double Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "SkewerEsports",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/8g3dghj0/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "Skewer eSports Season 6 — турнир по Dota 2 с ограничением 38.500 MMR на команду. Double Elimination. Призовой фонд 8.000₽. Взнос 800₽ с команды.",
@@ -417,7 +417,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "https://discord.gg/s7RCg2gmpS",
     "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/8g3dghj0"
   },
   "casters": [],
   "teamsList": []
