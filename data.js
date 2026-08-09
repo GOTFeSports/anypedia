@@ -156,7 +156,7 @@ const tournaments = [
   {
   "id": "Bedlam-First-Anniversary-Cup",
   "title": "Bedlam: First Anniversary Cup",
-  "limit": "До 9.000 MMR на игрока",
+  "limit": "До 6.700 MMR на игрока",
   "start": "2026-07-31",
   "end": "2026-08-09",
   "startTime": "18:00",
@@ -175,7 +175,7 @@ const tournaments = [
   "prizePool": [
     { "place": 1, "amount": "15000₽", "team": "Never Back Down" },
     { "place": 2, "amount": "10000₽", "team": "Bedlam Red" },
-    { "place": 3, "amount": "5000₽", "team": "Team Leto" },
+    { "place": 3, "amount": "5000₽", "team": "LETO Junior" },
   ],
   "links": {
     "dotabuff": "",
