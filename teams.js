@@ -78,17 +78,17 @@ const teams = [
     prize: "15.000₽",
     telegramLink: "",
     captainLink: "https://t.me/puziblinchik96",
-    description: "Молодая команда СНГ-региона, созданная в начале 2026 года. Коллектив был собран из игроков, объединённых желанием развиваться и добиваться высоких результатов на любительской сцене. Несмотря на небольшой срок существования, Gitlz уже успела завоевать титул Bedlam Swamp Wars и несколько раз попасть в число призёров различных турниров, зарекомендовав себя как перспективный состав.",
+    description: "Состав был распущен ориентировочно 9 августа.",
     activeRoster:  [
-      { nick: "breaoutlik",   pos: 1, joined: "2026-02-10" },
-      { nick: "Akama",        pos: 2, joined: "2026-02-21" },
-      { nick: "Moody",        pos: 3, joined: "2026-01-14" },
-      { nick: "AstarOtzio",   pos: 4, joined: "2026-01-14" },
-      { nick: "Nico",         pos: 5, joined: "2026-04-24" },
     ],
     formerPlayers: [
-      { nick: "Shiroyami", pos: 4, joined: "2026-02-21", left: "2026-04-24", newTeam: ""    },
-    ],
+  { nick: "Shiroyami",  pos: 4, joined: "2026-02-21", left: "2024-04-24", newTeam: "" },
+  { nick: "breaoutlik", pos: 1, joined: "2026-02-10", left: "2026-08-09", newTeam: "" },
+  { nick: "Akama",      pos: 2, joined: "2026-02-21", left: "2026-08-09", newTeam: "" },
+  { nick: "Moody",      pos: 3, joined: "2026-01-14", left: "2026-08-09", newTeam: "" },
+  { nick: "AstarOtzio", pos: 4, joined: "2026-01-14", left: "2026-08-09", newTeam: "" },
+  { nick: "Nico",       pos: 5, joined: "2026-04-24", left: "2026-08-09", newTeam: "" }
+],
     tournaments: [
       {
         title: "AnyLvL x GOTF eSports: Special 3",
@@ -147,7 +147,7 @@ const teams = [
     aliases: ["LETO Junior", "LETO jr", "LETO junior", "Teiko", "TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "32.500₽",
+    prize: "37.500₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
@@ -375,7 +375,7 @@ const teams = [
     aliases: ["Bedlam Battle Team", "Bedlam Red", "Bedlam Battle Team Red"],
     logo: "bedlamred.png",
     region: "СНГ",
-    prize: "12.500₽",
+    prize: "22.500₽",
     telegramLink: "https://t.me/bedlambattlesteam",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/ehevbrfypfrb",   // личный TG капитана для связи
     description: "Bedlam Battle Team Red (сокращённо — Bedlam Red) — коллектив из СНГ-региона. Состав дебютировал 18 апреля 2026 года на турнире Bedlam Spring Cup, где завоевал первое место, не проиграв ни одного матча. Команда регулярно принимает участие в любительских и полупрофессиональных соревнованиях, постепенно набирая опыт и укрепляя игровой почерк. Bedlam Red объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
@@ -452,7 +452,7 @@ const teams = [
     aliases: ["Never Back Down"],
     logo: "nbdteam.png",
     region: "СНГ",
-    prize: "17.500₽",
+    prize: "32.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
