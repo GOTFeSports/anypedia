@@ -1,5 +1,37 @@
 const tournaments = [  
   {
+  "id": "SkewerEsports-Season-7",
+  "title": "SkewerEsports Season 7",
+  "limit": "До 5.620 MMR на игрока",
+  "start": "2026-08-16",
+  "end": "2026-08-16",
+  "startTime": "11:00",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "10.000₽",
+  "location": "СНГ",
+  "teams": 12,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "SkewerEsports",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
+  "telegramLink": "https://t.me/SkewerEsports",
+  "description": "SkewerEsports Season 7 — турнир по Dota 2 для игроков до 5620 MMR. Формат Double Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 10.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "7.000₽", "team": "" },
+    { "place": 2, "amount": "3.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/M6QaGMkdDr",
+    "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "AnyLvL-x-GOTF-eSports-Tournament-2",
   "title": "AnyLvL x GOTF eSports Tournament #2",
   "limit": "32.500 MMR на команду",
