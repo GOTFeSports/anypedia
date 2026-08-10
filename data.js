@@ -17,7 +17,7 @@ const tournaments = [
   "bracketEmbed": "",
   "registrationLink": "https://forms.gle/BXeg1sihrqwW7TT7A",
   "telegramLink": "https://t.me/anylvlcommunity",
-  "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.250 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды.",
+  "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.500 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды.",
   "prizePool": [
     { "place": 1, "amount": "10000₽", "team": "" },
     { "place": 2, "amount": "5000₽", "team": "" }
