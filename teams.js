@@ -16,6 +16,19 @@
 //
 //  ПРИМЕР:
 //  { title: "Bedlam Battles Season 1", date: "2025-08-23", place: "1", prize: "3000₽", limit: "До Божество 5" }
+//
+//  АКТИВНЫЙ СОСТАВ (activeRoster) — карточки с фото.
+//  У каждого игрока, помимо nick/pos/joined, можно добавить:
+//    photo   — имя файла фото в корне сайта, например "aik.jpg".
+//              По умолчанию стоит "image.png" — серый плейсхолдер.
+//              Просто замените "image.png" на своё имя файла,
+//              когда появится реальное фото игрока.
+//    country — двухбуквенный код страны (ISO 3166-1 alpha-2),
+//              например "ua", "ru", "kz" — соберёт эмодзи-флаг
+//              сам, картинку заливать не надо. Поле необязательное,
+//              если не указано — флаг просто не показывается.
+//  Роль (Carry/Mid/Offlaner/Soft Support/Hard Support) и иконка
+//  берутся автоматически из pos (1-5) — отдельно указывать не надо.
 // =============================================
 
 const teams = [
@@ -31,11 +44,11 @@ const teams = [
     description: "Одна из наиболее известных любительских команд СНГ-сцены своего уровня. Основана в апреле 2025 года и за время существования стала победителем и призёром множества турниров, включая соревнования серий AnyLvL, Twin и Enrage. В январе 2026 года коллектив временно выступал под тегом GOTF Next, однако позже вернулся к своему основному названию. Team Sexy сохраняет статус опытной команды с богатой турнирной историей и стабильными результатами.",
 
     activeRoster: [
-      { nick: "hosh1no愛", pos: 1, joined: "2025-04-21" },
-      { nick: "Gigo",   pos: 2, joined: "2026-05-18" },
-      { nick: "icememory<3", pos: 3, joined: "2025-04-21" },
-      { nick: "danilK",    pos: 4, joined: "2026-05-18" },
-      { nick: "escapist",   pos: 5, joined: "2025-04-21" },
+      { nick: "hosh1no愛", pos: 1, joined: "2025-04-21" , photo: "image.png" },
+      { nick: "Gigo",   pos: 2, joined: "2026-05-18" , photo: "image.png" },
+      { nick: "icememory<3", pos: 3, joined: "2025-04-21" , photo: "image.png" },
+      { nick: "danilK",    pos: 4, joined: "2026-05-18" , photo: "image.png" },
+      { nick: "escapist",   pos: 5, joined: "2025-04-21" , photo: "image.png" },
     ],
 
     formerPlayers: [
@@ -152,11 +165,11 @@ const teams = [
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
     activeRoster: [
-      { nick: "cotsu", pos: 1, joined: "2026-05-31" },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14" },
-      { nick: "popi", pos: 3, joined: "2025-05-14" },
-      { nick: "Dark Light", pos: 4, joined: "2026-05-31" },
-      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" },
+      { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png" },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png" },
+      { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png" },
+      { nick: "Dark Light", pos: 4, joined: "2026-05-31" , photo: "image.png" },
+      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png" },
     ],
     formerPlayers: [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
@@ -303,11 +316,11 @@ const teams = [
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
     activeRoster: [
-      { nick: "Woods",                      pos: 1, joined: "2026-06-09" },
-      { nick: "N9lwkA",       pos: 2, joined: "2026-01-03" },
-      { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" },
-      { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" },
-      { nick: "аурная зараза",            pos: 5, joined: "2026-01-03" },
+      { nick: "Woods",                      pos: 1, joined: "2026-06-09" , photo: "image.png" },
+      { nick: "N9lwkA",       pos: 2, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "аурная зараза",            pos: 5, joined: "2026-01-03" , photo: "image.png" },
     ],
     formerPlayers: [],
     tournaments: [
@@ -381,11 +394,11 @@ const teams = [
     description: "Bedlam Battle Team Red (сокращённо — Bedlam Red) — коллектив из СНГ-региона. Состав дебютировал 18 апреля 2026 года на турнире Bedlam Spring Cup, где завоевал первое место, не проиграв ни одного матча. Команда регулярно принимает участие в любительских и полупрофессиональных соревнованиях, постепенно набирая опыт и укрепляя игровой почерк. Bedlam Red объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
 
     activeRoster: [
-      { nick: "lonixx",  pos: 1, joined: "2026-05-30" },
-      { nick: "imortall_boy",  pos: 2, joined: "2026-04-18" },
-      { nick: "relax",  pos: 3, joined: "2026-04-18" },
-      { nick: "drim.XVI",  pos: 4, joined: "2026-05-30" },
-      { nick: "Ariurn",  pos: 5, joined: "2026-04-18" },
+      { nick: "lonixx",  pos: 1, joined: "2026-05-30" , photo: "image.png" },
+      { nick: "imortall_boy",  pos: 2, joined: "2026-04-18" , photo: "image.png" },
+      { nick: "relax",  pos: 3, joined: "2026-04-18" , photo: "image.png" },
+      { nick: "drim.XVI",  pos: 4, joined: "2026-05-30" , photo: "image.png" },
+      { nick: "Ariurn",  pos: 5, joined: "2026-04-18" , photo: "image.png" },
     ],
 
     formerPlayers: [
@@ -458,8 +471,8 @@ const teams = [
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
-      { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" },
-      { nick: "m1nd1",   pos: 3, joined: "2026-05-31" },
+      { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" , photo: "image.png" },
+      { nick: "m1nd1",   pos: 3, joined: "2026-05-31" , photo: "image.png" },
     ],
 
     formerPlayers: [
