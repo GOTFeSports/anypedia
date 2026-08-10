@@ -171,7 +171,87 @@ function построитьСтрокиТурниров(команда) {
 }
 
 /* ============================================================
-   РЕНДЕР: СОСТАВ
+   РОЛИ И ФЛАГИ
+   ============================================================ */
+/* Роль выводится из позиции (pos), которая уже есть у каждого игрока —
+   отдельное поле "role" не нужно. Иконки — свои файлы в корне сайта. */
+const РОЛЬ_ПО_ПОЗИЦИИ = {
+  1: { icon: 'carry.png',        label: 'Carry' },
+  2: { icon: 'mid.png',          label: 'Mid' },
+  3: { icon: 'offlane.png',      label: 'Offlaner' },
+  4: { icon: 'support.png',      label: 'Soft Support' },
+  5: { icon: 'fullsupport.png',  label: 'Hard Support' },
+};
+
+/* Флаг из двухбуквенного кода страны (ISO 3166-1 alpha-2): "ua" -> 🇺🇦.
+   Ничего не хранить кроме кода — эмодзи-флаг собирается на лету. */
+function флагСтраны(код) {
+  if (!код || String(код).length !== 2) return '';
+  const буквы = String(код).toUpperCase();
+  if (!/^[A-Z]{2}$/.test(буквы)) return '';
+  return String.fromCodePoint(...[...буквы].map(ch => 127397 + ch.charCodeAt(0)));
+}
+
+/* ============================================================
+   РЕНДЕР: АКТИВНЫЙ СОСТАВ (карточки с фото)
+   ============================================================ */
+function рендерАктивныйСостав(игроки) {
+  if (!игроки.length) return `<div class="empty-state">Нет данных</div>`;
+
+  return `
+    <div class="roster-grid">
+      ${игроки.map(игрок => {
+        const роль = РОЛЬ_ПО_ПОЗИЦИИ[игрок.pos] || null;
+        const флаг = флагСтраны(игрок.country);
+        const фото = экранировать(игрок.photo || 'image.png');
+        return `
+          <div class="roster-card">
+            <div class="roster-photo-wrap">
+              <img class="roster-photo" src="/${фото}" alt="${экранировать(игрок.nick || '')}"
+                   onerror="this.onerror=null;this.src='/image.png'">
+              <div class="roster-badges">
+                ${роль ? `<span class="roster-role-badge"><img src="/${роль.icon}" alt="">${роль.label}</span>` : ''}
+                ${флаг ? `<span class="roster-flag">${флаг}</span>` : ''}
+              </div>
+            </div>
+            <div class="roster-info">
+              <div class="roster-name">${экранировать(игрок.nick || '—')}</div>
+              <div class="roster-joined">${форматДатаКраткая(игрок.joined)}</div>
+            </div>
+          </div>`;
+      }).join('')}
+    </div>`;
+}
+
+/* ============================================================
+   РЕНДЕР: ПЕРСОНАЛ (старый табличный формат)
+   ============================================================ */
+function рендерПерсонал(список) {
+  if (!список.length) return `<div class="empty-state">Персонал не указан</div>`;
+
+  return `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Никнейм</th>
+          <th>Должность</th>
+          <th>Присоединился</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${список.map(человек => `
+          <tr class="searchable-row">
+            <td data-label="Никнейм">${экранировать(человек.nick || '—')}</td>
+            <td data-label="Должность">${экранировать(человек.role || '—')}</td>
+            <td data-label="Присоединился">${форматДата(человек.joined)}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+/* ============================================================
+   РЕНДЕР: СОСТАВ (старый табличный формат — используется только
+   для «Бывшие игроки», активный состав теперь карточками выше)
    ============================================================ */
 function рендерСостав(игроки, бывшие = false) {
   if (!игроки.length) return `<div class="empty-state">Нет данных</div>`;
@@ -332,8 +412,9 @@ document.getElementById('summaryBlock').innerHTML = `
 `;
 
 /* Составы */
-document.getElementById('activeRoster').innerHTML  = рендерСостав(команда.activeRoster || команда.roster || []);
+document.getElementById('activeRoster').innerHTML  = рендерАктивныйСостав(команда.activeRoster || команда.roster || []);
 document.getElementById('formerPlayers').innerHTML = рендерСостав(команда.formerPlayers || [], true);
+document.getElementById('staffList').innerHTML = рендерПерсонал(команда.staff || []);
 
 /* Турниры */
 document.getElementById('teamTournaments').innerHTML = рендерТурниры(построитьСтрокиТурниров(команда));
