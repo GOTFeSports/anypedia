@@ -299,6 +299,91 @@ tr.place-bronze td:first-child {
 }
 
 /* ============================================================
+   ROSTER GRID — карточки активного состава с фото
+   ============================================================ */
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+.roster-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.roster-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--bg);
+  overflow: hidden;
+}
+.roster-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.roster-badges {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  z-index: 2;
+}
+.roster-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0,0,0,.72);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 7px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.roster-role-badge img { width: 11px; height: 11px; flex-shrink: 0; }
+.roster-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.72);
+  border-radius: 6px;
+  width: 24px;
+  height: 20px;
+  font-size: 13px;
+  line-height: 1;
+}
+.roster-info {
+  padding: 9px 10px 11px;
+}
+.roster-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.roster-joined {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+@media (max-width: 640px) {
+  .roster-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+  .roster-name { font-size: 13px; }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .site-footer {
@@ -581,6 +666,10 @@ tr.place-bronze td:first-child {
     <div class="block">
       <h2>Активный состав</h2>
       <div id="activeRoster"></div>
+    </div>
+    <div class="block">
+      <h2>Персонал</h2>
+      <div id="staffList"></div>
     </div>
     <div class="block">
       <h2>Бывшие игроки</h2>

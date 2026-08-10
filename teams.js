@@ -16,75 +16,9 @@
 //
 //  ПРИМЕР:
 //  { title: "Bedlam Battles Season 1", date: "2025-08-23", place: "1", prize: "3000₽", limit: "До Божество 5" }
-//
-//  АКТИВНЫЙ СОСТАВ (activeRoster) — теперь карточки с фото.
-//  У каждого игрока, помимо nick/pos/joined, можно добавить:
-//    photo   — имя файла фото в корне сайта, например "aik.jpg".
-//              Не указано или файл не найден — подставится
-//              серый плейсхолдер image.png автоматически.
-//    country — двухбуквенный код страны (ISO 3166-1 alpha-2),
-//              например "ua", "ru", "kz", "by", "pl" — по нему
-//              сама соберётся эмодзи-флаг, картинку заливать не надо.
-//  Роль (Carry/Mid/Offlaner/Soft Support/Hard Support) и иконка
-//  берутся автоматически из pos (1-5) — отдельно указывать не надо.
-//
-//  ПРИМЕР:
-//  { nick: "aik", pos: 1, joined: "2026-01-15", photo: "aik.jpg", country: "kz" }
-//
-//  ПЕРСОНАЛ (staff) — отдельный массив, старый табличный формат.
-//  role — любая строка на ваше усмотрение: CEO, Manager, Coach,
-//  Analyst, Assistant Coach, SMM и так далее.
-//
-//  ПРИМЕР:
-//  staff: [
-//    { nick: "ivanov", role: "Manager", joined: "2026-01-10" },
-//    { nick: "petrov", role: "Coach",   joined: "2026-02-01" },
-//  ]
 // =============================================
 
 const teams = [
-  {
-    id: "azutive-fans",
-    name: "Azutive Fans",
-    aliases: ["HATE RELATE", "Fast & Furious 4"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "https://t.me/...",   // ссылка на группу/канал команды
-    captainLink:  "https://t.me/...",   // личный TG капитана для связи
-    description: "Команда СНГ-региона, выступавшая ранее под названиями HATE RELATE и Fast & Furious 4. Коллектив регулярно принимает участие в любительских и полупрофессиональных турнирах, постепенно набирая опыт и развивая состав. Azutive Fans объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
-
-    activeRoster: [
-      { nick: "haginsson",  pos: 1, joined: "2025-07-18" },
-      { nick: "azutive",   pos: 2, joined: "2025-07-18" },
-      { nick: "///",       pos: 3, joined: "2025-07-18" },
-      { nick: "matbym",    pos: 4, joined: "2026-04-01" },
-      { nick: "Parasiu",   pos: 5, joined: "2025-07-18" },
-    ],
-
-    formerPlayers: [
-      { nick: "Collapse Mini", pos: 3, joined: "2025-07-18", left: "2026-04-10", newTeam: "DRAGFIRE Ascent"   },
-    ],
-
-    // Добавляйте турниры вручную.
-    // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
-    tournaments: [
-      {
-        title: "AnyLvL x GOTF eSports: Special 2",
-        date:  "2025-07-18",
-        place: "3",
-        prize: "—",
-        limit: "Без лимита MMR"
-      },
-      {
-        title: "Special 3: Closed Qualification",
-        date:  "2026-07--5",
-        place: "5-8",
-        prize: "—",
-        limit: "До 37.500 MMR на команду"
-      },
-    ]
-  },
     {
     id: "team-sexy",
     name: "Team Sexy",
@@ -144,17 +78,17 @@ const teams = [
     prize: "15.000₽",
     telegramLink: "",
     captainLink: "https://t.me/puziblinchik96",
-    description: "Молодая команда СНГ-региона, созданная в начале 2026 года. Коллектив был собран из игроков, объединённых желанием развиваться и добиваться высоких результатов на любительской сцене. Несмотря на небольшой срок существования, Gitlz уже успела завоевать титул Bedlam Swamp Wars и несколько раз попасть в число призёров различных турниров, зарекомендовав себя как перспективный состав.",
+    description: "Состав был распущен ориентировочно 9 августа.",
     activeRoster:  [
-      { nick: "breaoutlik",   pos: 1, joined: "2026-02-10" },
-      { nick: "Akama",        pos: 2, joined: "2026-02-21" },
-      { nick: "Moody",        pos: 3, joined: "2026-01-14" },
-      { nick: "AstarOtzio",   pos: 4, joined: "2026-01-14" },
-      { nick: "Nico",         pos: 5, joined: "2026-04-24" },
     ],
     formerPlayers: [
-      { nick: "Shiroyami", pos: 4, joined: "2026-02-21", left: "2026-04-24", newTeam: ""    },
-    ],
+  { nick: "Shiroyami",  pos: 4, joined: "2026-02-21", left: "2024-04-24", newTeam: "" },
+  { nick: "breaoutlik", pos: 1, joined: "2026-02-10", left: "2026-08-09", newTeam: "" },
+  { nick: "Akama",      pos: 2, joined: "2026-02-21", left: "2026-08-09", newTeam: "" },
+  { nick: "Moody",      pos: 3, joined: "2026-01-14", left: "2026-08-09", newTeam: "" },
+  { nick: "AstarOtzio", pos: 4, joined: "2026-01-14", left: "2026-08-09", newTeam: "" },
+  { nick: "Nico",       pos: 5, joined: "2026-04-24", left: "2026-08-09", newTeam: "" }
+],
     tournaments: [
       {
         title: "AnyLvL x GOTF eSports: Special 3",
@@ -213,7 +147,7 @@ const teams = [
     aliases: ["LETO Junior", "LETO jr", "LETO junior", "Teiko", "TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "26.500₽",
+    prize: "37.500₽",
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
@@ -222,14 +156,42 @@ const teams = [
       { nick: "Alisa", pos: 2, joined: "2025-05-14" },
       { nick: "popi", pos: 3, joined: "2025-05-14" },
       { nick: "Dark Light", pos: 4, joined: "2026-05-31" },
-      { nick: "Freak", pos: 5, joined: "2026-05-31" },
+      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" },
     ],
     formerPlayers: [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
       { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
-      { nick: "Freakuxa", pos: 5, joined: "2025-05-14", left: "2026-05-31", newTeam: ""    },
+      { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: ""    },
     ],
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "3",
+        prize: "5.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
+        {
+        title: "SkewerEsports Season 6",
+        date:  "2026-08-07",
+        place: "3",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      },
+        {
+        title: "The Trial of Immortality 7",
+        date:  "2026-07-26",
+        place: "2",
+        prize: "6.000₽",
+        limit: "До 35.000 MMR на команду"
+      },
+        {
+        title: "SkewerEsports Season 5",
+        date:  "2026-07-24",
+        place: "3",
+        prize: "",
+        limit: "До 38.000 MMR на команду"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
@@ -413,7 +375,7 @@ const teams = [
     aliases: ["Bedlam Battle Team", "Bedlam Red", "Bedlam Battle Team Red"],
     logo: "bedlamred.png",
     region: "СНГ",
-    prize: "12.500₽",
+    prize: "22.500₽",
     telegramLink: "https://t.me/bedlambattlesteam",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/ehevbrfypfrb",   // личный TG капитана для связи
     description: "Bedlam Battle Team Red (сокращённо — Bedlam Red) — коллектив из СНГ-региона. Состав дебютировал 18 апреля 2026 года на турнире Bedlam Spring Cup, где завоевал первое место, не проиграв ни одного матча. Команда регулярно принимает участие в любительских и полупрофессиональных соревнованиях, постепенно набирая опыт и укрепляя игровой почерк. Bedlam Red объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
@@ -433,6 +395,13 @@ const teams = [
     ],
 
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "2",
+        prize: "10.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
@@ -483,23 +452,34 @@ const teams = [
     aliases: ["Never Back Down"],
     logo: "nbdteam.png",
     region: "СНГ",
-    prize: "11.500₽",
+    prize: "32.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
-      { nick: "KarineGod",  pos: 1, joined: "2025-11-01" },
       { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" },
       { nick: "m1nd1",   pos: 3, joined: "2026-05-31" },
-      { nick: "Darklight",   pos: 4, joined: "2026-05-31" },
-      { nick: "Rose",   pos: 5, joined: "2025-11-01" },
     ],
 
     formerPlayers: [
       
     ],
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-07",
+        place: "1",
+        prize: "15.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
+        {
+        title: "SkewerEsports Season 6",
+        date:  "2026-08-07",
+        place: "1",
+        prize: "6.000₽",
+        limit: "До 32.500 MMR на команду"
+      },
       {
         title: "CL: Rivals",
         date:  "2026-07-19",
