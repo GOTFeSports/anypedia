@@ -44,16 +44,18 @@ const teams = [
     description: "Одна из наиболее известных любительских команд СНГ-сцены своего уровня. Основана в апреле 2025 года и за время существования стала победителем и призёром множества турниров, включая соревнования серий AnyLvL, Twin и Enrage. В январе 2026 года коллектив временно выступал под тегом GOTF Next, однако позже вернулся к своему основному названию. Team Sexy сохраняет статус опытной команды с богатой турнирной историей и стабильными результатами.",
 
     activeRoster: [
-      { nick: "hosh1no愛", pos: 1, joined: "2025-04-21" , photo: "image.png"},
       { nick: "danyok", pos: 2, joined: "2025-04-21", photo: "image.png", country: "ru"  }, 
       { nick: "icememory<3", pos: 3, joined: "2025-04-21" , photo: "image.png", country: "ru" },
-      { nick: "danilK",    pos: 4, joined: "2026-05-18" , photo: "image.png" },
-      { nick: "escapist",   pos: 5, joined: "2025-04-21" , photo: "image.png" },
+      { nick: "never", pos: 4, joined: "2026-08-10", photo: "image.png", country: "ru" },
+      { nick: "Soer", pos: 5, joined: "2026-08-10", photo: "image.png", country: "ru" }
     ],
 
     formerPlayers: [
+      { nick: "hosh1no愛", pos: 1, joined: "2026-04-21" , left: "2026-06-15" },
       { nick: "Gigo",   pos: 2, joined: "2026-05-18", left: "2026-06-15" },
-      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18", newTeam: "Bedlam Red"    },
+      { nick: "danilK",    pos: 4, joined: "2026-05-18" , left: "2026-06-15" },
+      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18" },
+     { nick: "escapist",   pos: 5, joined: "2026-04-21" , left: "2026-06-15" },
     ],
 
     // Добавляйте турниры вручную.
