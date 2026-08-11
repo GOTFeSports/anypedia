@@ -184,7 +184,7 @@ const teams = [
     tournaments: [
         {
         title: "Bedlam: First Anniversary Cup",
-        date:  "2026-08-07",
+        date:  "2026-08-09",
         place: "3",
         prize: "5.000₽",
         limit: "До 6.700 MMR на игрока"
@@ -331,6 +331,13 @@ const teams = [
         { nick: "Woods", pos: 1, joined: "2026-06-09", left: "2026-07-13" },
     ],
     tournaments: [
+        {
+        title: "Bedlam: First Anniversary Cup",
+        date:  "2026-08-09",
+        place: "9-12",
+        prize: "",
+        limit: "До 6.700 MMR на игрока"
+      },
        {
         title: "CL: Rivals",
         date:  "2026-07-19",
