@@ -487,6 +487,13 @@ const teams = [
     ],
     tournaments: [
         {
+        title: "HATER ZDES` Dota Cup: Season 3 Division 1",
+        date:  "2026-08-04",
+        place: "7-8",
+        prize: "",
+        limit: "До 30.000 MMR на команду"
+      },
+        {
         title: "Bedlam: First Anniversary Cup",
         date:  "2026-08-07",
         place: "1",
