@@ -170,7 +170,7 @@ const teams = [
       { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png" },
       { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png" },
       { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png" },
-      { nick: "Dark Light", pos: 4, joined: "2026-05-31" , photo: "image.png" },
+      { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png" },
       { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png" },
     ],
       staff: [
@@ -321,13 +321,15 @@ const teams = [
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
     activeRoster: [
-      { nick: "Woods",                      pos: 1, joined: "2026-06-09" , photo: "image.png" },
-      { nick: "N9lwkA",       pos: 2, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "аурная зараза",            pos: 5, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "Teenwave",                      pos: 1, joined: "2026-07-17" , photo: "image.png" },
+      { nick: "Stimsly",                       pos: 2, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "МИШКА МОРГЕН",                  pos: 3, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "El Oreshniko del Perú",         pos: 4, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "N9lwkA",                        pos: 5, joined: "2026-01-03" , photo: "image.png" },
     ],
-    formerPlayers: [],
+    formerPlayers: [
+        { nick: "Woods", pos: 1, joined: "2026-06-09", left: "2026-07-13" },
+    ],
     tournaments: [
        {
         title: "CL: Rivals",
