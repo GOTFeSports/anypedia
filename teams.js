@@ -586,4 +586,30 @@ const teams = [
       },
     ]
   },
+    {
+  "id": "dragon-blood",
+  "name": "Dragon Blood",
+  "aliases": ["Dragon Blood", "dragon blood", "DragonBlood"],
+  "logo": "dragonblood.png",
+  "region": "СНГ",
+  "prize": "0₽",
+  "telegramLink": "https://t.me/CatsWinner1",
+  "captainLink": "https://t.me/Lexa_Krutoii",
+  "description": "Основана 23 мая 2026 года. Dragon Blood является переформированием и взятием нового направления другой команды, не связанной с датой, но в краткие сроки коллектив показал свои возможности, и весь фокус сместился на Dota 2, а команда получила нынешнее название.",
+  "activeRoster": [
+    { "nick": "WHAT IS LOVE", "pos": 1, "joined": "2026-06-16", "photo": "whatislove.png", "country": "ru" },
+    { "nick": "Sopelk_i", "pos": 2, "joined": "2026-06-01", "photo": "sopelki.png", "country": "by" },
+    { "nick": "hvloh", "pos": 3, "joined": "2026-07-23", "photo": "hvloh.png", "country": "ru" },
+    { "nick": "Last Pick Tears", "pos": 4, "joined": "2026-08-02", "photo": "lastpicktears.png", "country": "ru" },
+    { "nick": "matbym2", "pos": 5, "joined": "2026-08-01", "photo": "matbym2.png", "country": "ru" }
+  ],
+  "staff": [
+    { "nick": "FraNhesko", "role": "Гендиректор", "joined": "2026-05-23" },
+    { "nick": "rwkyy", "role": "SMM", "joined": "2026-07-15" },
+    { "nick": "blazzerez", "role": "Дизайнер", "joined": "2026-07-17" },
+    { "nick": "Luwak", "role": "Монтажер", "joined": "2026-05-23" }
+  ],
+  "formerPlayers": [],
+  "tournaments": []
+},
 ];
