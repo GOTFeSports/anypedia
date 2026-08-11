@@ -211,8 +211,8 @@ function рендерАктивныйСостав(игроки) {
                    onerror="this.onerror=null;this.src='/image.png'">
               <div class="roster-badges">
                 ${роль ? `<span class="roster-role-badge"><img src="/${роль.icon}" alt="">${роль.label}</span>` : ''}
-                ${флаг ? `<span class="roster-flag">${флаг}</span>` : ''}
               </div>
+              ${флаг ? `<span class="roster-flag">${флаг}</span>` : ''}
             </div>
             <div class="roster-info">
               <div class="roster-name">${экранировать(игрок.nick || '—')}</div>
