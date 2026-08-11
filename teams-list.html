@@ -368,6 +368,18 @@ function getTournamentCount(team) {
   return (team.tournaments || []).length;
 }
 
+/* Кол-во турниров за последние 2 месяца — по полю date в team.tournaments */
+function getRecentTournamentCount(team) {
+  const cutoff = new Date();
+  cutoff.setMonth(cutoff.getMonth() - 2);
+  return (team.tournaments || []).filter(t => {
+    if (!t.date) return false;
+    const [y, m, d] = String(t.date).split('-').map(Number);
+    if (!y || !m || !d) return false;
+    return new Date(y, m - 1, d) >= cutoff;
+  }).length;
+}
+
 /* Активный состав */
 function getActiveRoster(team) {
   return team.activeRoster || team.roster || [];
@@ -429,8 +441,12 @@ function renderTeams(list) {
 /* ---------- INIT ---------- */
 const allTeams = typeof teams !== 'undefined' ? [...teams] : [];
 
-// Сортировка: сначала активные (с составом), потом по призовым
+// Сортировка: сначала по числу турниров за последние 2 месяца,
+// при равенстве — активный состав, потом всего турниров за всё время
 allTeams.sort((a, b) => {
+  const aRecent = getRecentTournamentCount(a);
+  const bRecent = getRecentTournamentCount(b);
+  if (bRecent !== aRecent) return bRecent - aRecent;
   const aActive = (a.activeRoster || a.roster || []).length;
   const bActive = (b.activeRoster || b.roster || []).length;
   if (bActive !== aActive) return bActive - aActive;
