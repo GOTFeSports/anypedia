@@ -397,82 +397,83 @@ const teams = [
     ]
   },
   {
-    id: "bedlam-red",
-    name: "Bedlam Battle Team Red",
-    aliases: ["Bedlam Battle Team", "Bedlam Red", "Bedlam Battle Team Red"],
-    logo: "bedlamred.png",
-    region: "СНГ",
-    prize: "22.500₽",
-    telegramLink: "https://t.me/bedlambattlesteam",   // ссылка на группу/канал команды
-    captainLink:  "https://t.me/ehevbrfypfrb",   // личный TG капитана для связи
-    description: "Bedlam Battle Team Red (сокращённо — Bedlam Red) — коллектив из СНГ-региона. Состав дебютировал 18 апреля 2026 года на турнире Bedlam Spring Cup, где завоевал первое место, не проиграв ни одного матча. Команда регулярно принимает участие в любительских и полупрофессиональных соревнованиях, постепенно набирая опыт и укрепляя игровой почерк. Bedlam Red объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
-
-    activeRoster: [
-      { nick: "lonixx",  pos: 1, joined: "2026-05-30" , photo: "image.png" },
-      { nick: "imortall_boy",  pos: 2, joined: "2026-04-18" , photo: "image.png" },
-      { nick: "relax",  pos: 3, joined: "2026-04-18" , photo: "image.png" },
-      { nick: "drim.XVI",  pos: 4, joined: "2026-05-30" , photo: "image.png" },
-      { nick: "Ariurn",  pos: 5, joined: "2026-04-18" , photo: "image.png" },
-    ],
-
-    formerPlayers: [
-      { nick: "cotsu", pos: 1, joined: "2026-04-18", left: "2026-05-29", newTeam: "LASTDANCE"     },
-      { nick: "marty", pos: 4, joined: "2026-04-19", left: "2026-05-29", newTeam: ""     },
-      { nick: "yomyKo", pos: 4, joined: "2026-04-18", left: "2026-04-19", newTeam: ""     },
-    ],
-
-    tournaments: [
-        {
-        title: "Bedlam: First Anniversary Cup",
-        date:  "2026-08-07",
-        place: "2",
-        prize: "10.000₽",
-        limit: "До 6.700 MMR на игрока"
-      },
-      {
-        title: "CL: Rivals",
-        date:  "2026-07-19",
-        place: "9-12",
-        prize: "",
-        limit: "До 40.000 MMR на команду"
-      },
-      {
-        title: "AnyLvL x GOTF eSports: Special 3",
-        date:  "2026-07-12",
-        place: "7-8",
-        prize: "",
-        limit: "До 37.500 MMR на команду"
-      },
-      {
-        title: "Bedlam Spring Cup",
-        date:  "2026-04-18",
-        place: "1",
-        prize: "12.500₽",
-        limit: "До 8.500 MMR на игрока"
-      },
-      {
-        title: "AnyLvL x GOTF eSports Tournament #1",
-        date:  "2026-04-19",
-        place: "9-16",
-        prize: "—",
-        limit: "До 35.000 MMR на команду"
-      },
-      {
-        title: "Bedlam Waiting For Summer Cup",
-        date:  "2026-05-31",
-        place: "9-16",
-        prize: "—",
-        limit: "До 35.000 MMR на команду"
-      },
-      {
-        title: "Bedlam Season 4 Division 1",
-        date:  "2026-06-28",
-        place: "13-16",
-        prize: "—",
-        limit: "До 9.000 MMR на игрока"
-      },
-    ]
-  },
+  "id": "bedlam-red",
+  "name": "Bedlam Battle Team Red",
+  "aliases": ["Bedlam Battle Team", "Bedlam Red", "Bedlam Battle Team Red"],
+  "logo": "bedlamred.png",
+  "region": "СНГ",
+  "prize": "22.500₽",
+  "telegramLink": "https://t.me/bedlambattlesteam",
+  "captainLink": "https://t.me/ehevbrfypfrb",
+  "description": "Bedlam Battle Team Red (сокращённо — Bedlam Red) — коллектив из СНГ-региона. Состав дебютировал 18 апреля 2026 года на турнире Bedlam Spring Cup, где завоевал первое место, не проиграв ни одного матча. Команда регулярно принимает участие в любительских и полупрофессиональных соревнованиях, постепенно набирая опыт и укрепляя игровой почерк. Bedlam Red объединяет игроков, стремящихся к стабильному прогрессу и новым результатам на региональной сцене.",
+  "activeRoster": [
+    { "nick": "lonixx", "pos": 1, "joined": "2026-05-30", "photo": "image.png", "country": "ua" },
+    { "nick": "imortall_boy", "pos": 2, "joined": "2026-04-18", "photo": "image.png", "country": "ru" },
+    { "nick": "relax", "pos": 3, "joined": "2026-04-18", "photo": "image.png", "country": "ru" },
+    { "nick": "drim.XVI", "pos": 4, "joined": "2026-05-30", "photo": "image.png", "country": "ru" },
+    { "nick": "Ariurn", "pos": 5, "joined": "2026-04-18", "photo": "image.png", "country": "ru" }
+  ],
+  "staff": [
+    { "nick": "edsa1?", "role": "Manager", "joined": "2026-07-15" },
+    { "nick": "borutsu", "role": "Manager", "joined": "2026-03-01" }
+  ],
+  "formerPlayers": [
+    { "nick": "cotsu", "pos": 1, "joined": "2026-04-18", "left": "2026-05-29", "newTeam": "" },
+    { "nick": "marty", "pos": 4, "joined": "2026-04-19", "left": "2026-05-29", "newTeam": "" },
+    { "nick": "yomyKo", "pos": 4, "joined": "2026-04-18", "left": "2026-04-19", "newTeam": "" }
+  ],
+  "tournaments": [
+    {
+      "title": "Bedlam: First Anniversary Cup",
+      "date": "2026-08-07",
+      "place": "2",
+      "prize": "10.000₽",
+      "limit": "До 6.700 MMR на игрока"
+    },
+    {
+      "title": "CL: Rivals",
+      "date": "2026-07-19",
+      "place": "9-12",
+      "prize": "",
+      "limit": "До 40.000 MMR на команду"
+    },
+    {
+      "title": "AnyLvL x GOTF eSports: Special 3",
+      "date": "2026-07-12",
+      "place": "7-8",
+      "prize": "",
+      "limit": "До 37.500 MMR на команду"
+    },
+    {
+      "title": "Bedlam Spring Cup",
+      "date": "2026-04-18",
+      "place": "1",
+      "prize": "12.500₽",
+      "limit": "До 8.500 MMR на игрока"
+    },
+    {
+      "title": "AnyLvL x GOTF eSports Tournament #1",
+      "date": "2026-04-19",
+      "place": "9-16",
+      "prize": "—",
+      "limit": "До 35.000 MMR на команду"
+    },
+    {
+      "title": "Bedlam Waiting For Summer Cup",
+      "date": "2026-05-31",
+      "place": "9-16",
+      "prize": "—",
+      "limit": "До 35.000 MMR на команду"
+    },
+    {
+      "title": "Bedlam Season 4 Division 1",
+      "date": "2026-06-28",
+      "place": "13-16",
+      "prize": "—",
+      "limit": "До 9.000 MMR на игрока"
+    }
+  ]
+}
   {
     id: "never-back-down",
     name: "Never Back Down",
