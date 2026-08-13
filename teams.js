@@ -473,7 +473,7 @@ const teams = [
       "limit": "До 9.000 MMR на игрока"
     }
   ]
-}
+},
   {
     id: "never-back-down",
     name: "Never Back Down",
