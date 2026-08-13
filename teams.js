@@ -409,13 +409,13 @@ const teams = [
   "activeRoster": [
     { "nick": "lonixx", "pos": 1, "joined": "2026-05-30", "photo": "image.png", "country": "ua" },
     { "nick": "imortall_boy", "pos": 2, "joined": "2026-04-18", "photo": "image.png", "country": "ru" },
-    { "nick": "relax", "pos": 3, "joined": "2026-04-18", "photo": "image.png", "country": "ru" },
-    { "nick": "drim.XVI", "pos": 4, "joined": "2026-05-30", "photo": "image.png", "country": "ru" },
+    { "nick": "edsa1?", "pos": 3, "joined": "2026-04-18", "photo": "image.png", "country": "ru" },
+    { "nick": "drim", "pos": 4, "joined": "2026-05-30", "photo": "image.png", "country": "ru" },
     { "nick": "Ariurn", "pos": 5, "joined": "2026-04-18", "photo": "image.png", "country": "ru" }
   ],
   "staff": [
-    { "nick": "edsa1?", "role": "Manager", "joined": "2026-07-15" },
-    { "nick": "borutsu", "role": "Manager", "joined": "2026-03-01" }
+    { "nick": "magikeye", "role": "CEO", "joined": "2026-03-01" },
+    { "nick": "edsa1?", "role": "Manager", "joined": "2026-07-15" }
   ],
   "formerPlayers": [
     { "nick": "cotsu", "pos": 1, "joined": "2026-04-18", "left": "2026-05-29", "newTeam": "" },
