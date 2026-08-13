@@ -10,6 +10,7 @@
 const parts = location.pathname.replace(/\/+$/, '').split('/').filter(Boolean);
 const orgIndex = parts.indexOf('organizer');
 const teamIndex = parts.indexOf('team');
+const playerIndex = parts.indexOf('player');
 let baseParts;
 let target;
 
@@ -19,6 +20,9 @@ if (orgIndex >= 0 && parts[orgIndex + 1]) {
 } else if (teamIndex >= 0 && parts[teamIndex + 1]) {
   baseParts = parts.slice(0, teamIndex);
   target = `${baseParts.length ? '/' + baseParts.join('/') : ''}/team.html?id=${encodeURIComponent(decodeURIComponent(parts[teamIndex + 1]))}`;
+} else if (playerIndex >= 0 && parts[playerIndex + 1]) {
+  baseParts = parts.slice(0, playerIndex);
+  target = `${baseParts.length ? '/' + baseParts.join('/') : ''}/player.html?id=${encodeURIComponent(decodeURIComponent(parts[playerIndex + 1]))}`;
 } else if (parts.length) {
   baseParts = parts.slice(0, -1);
   target = `${baseParts.length ? '/' + baseParts.join('/') : ''}/tournament.html?id=${encodeURIComponent(decodeURIComponent(parts[parts.length - 1]))}`;

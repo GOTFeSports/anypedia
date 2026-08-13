@@ -10,6 +10,10 @@
       "destination": "/team.html?id=:id"
     },
     {
+      "source": "/player/:id",
+      "destination": "/player.html?id=:id"
+    },
+    {
       "source": "/:id",
       "destination": "/tournament.html?id=:id"
     }

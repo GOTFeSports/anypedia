@@ -41,21 +41,19 @@ const teams = [
     prize: "0₽",
     telegramLink: "https://t.me/teamsexy1",
     captainLink: "https://t.me/aokee1",
-    description: "Основана в апреле 2025 года. В январе 2026 года коллектив временно выступал под тегом GOTF Next, однако позже вернулся к своему основному названию.",
+    description: "Одна из наиболее известных любительских команд СНГ-сцены своего уровня. Основана в апреле 2025 года и за время существования стала победителем и призёром множества турниров, включая соревнования серий AnyLvL, Twin и Enrage. В январе 2026 года коллектив временно выступал под тегом GOTF Next, однако позже вернулся к своему основному названию. Team Sexy сохраняет статус опытной команды с богатой турнирной историей и стабильными результатами.",
 
     activeRoster: [
-      { nick: "danyok", pos: 2, joined: "2025-04-21", photo: "image.png", country: "ru"  }, 
-      { nick: "icememory<3", pos: 3, joined: "2025-04-21" , photo: "image.png", country: "ru" },
-      { nick: "never", pos: 4, joined: "2026-08-10", photo: "image.png", country: "ru" },
-      { nick: "Soer", pos: 5, joined: "2026-08-10", photo: "image.png", country: "ru" }
+      { nick: "hosh1no愛", pos: 1, joined: "2025-04-21" , photo: "image.png" },
+      { nick: "Gigo",   pos: 2, joined: "2026-05-18" , photo: "image.png" },
+      { nick: "icememory<3", pos: 3, joined: "2025-04-21" , photo: "image.png" },
+      { nick: "danilK",    pos: 4, joined: "2026-05-18" , photo: "image.png" },
+      { nick: "escapist",   pos: 5, joined: "2025-04-21" , photo: "image.png" },
     ],
 
     formerPlayers: [
-      { nick: "hosh1no愛", pos: 1, joined: "2026-04-21" , left: "2026-06-15" },
-      { nick: "Gigo",   pos: 2, joined: "2026-05-18", left: "2026-06-15" },
-      { nick: "danilK",    pos: 4, joined: "2026-05-18" , left: "2026-06-15" },
-      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18" },
-     { nick: "escapist",   pos: 5, joined: "2026-04-21" , left: "2026-06-15" },
+      { nick: "danyok", pos: 2, joined: "2025-04-21", left: "2026-05-17", newTeam: ""   },
+      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18", newTeam: "Bedlam Red"    },
     ],
 
     // Добавляйте турниры вручную.
@@ -170,12 +168,9 @@ const teams = [
       { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png" },
       { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png" },
       { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png" },
-      { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png" },
+      { nick: "Dark Light", pos: 4, joined: "2026-05-31" , photo: "image.png" },
       { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png" },
     ],
-      staff: [
-          { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
-],
     formerPlayers: [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
       { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
@@ -184,7 +179,7 @@ const teams = [
     tournaments: [
         {
         title: "Bedlam: First Anniversary Cup",
-        date:  "2026-08-09",
+        date:  "2026-08-07",
         place: "3",
         prize: "5.000₽",
         limit: "До 6.700 MMR на игрока"
@@ -321,23 +316,14 @@ const teams = [
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
     activeRoster: [
-      { nick: "Teenwave",                      pos: 1, joined: "2026-07-17" , photo: "image.png" },
-      { nick: "Stimsly",                       pos: 2, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "МИШКА МОРГЕН",                  pos: 3, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "El Oreshniko del Perú",         pos: 4, joined: "2026-01-03" , photo: "image.png" },
-      { nick: "N9lwkA",                        pos: 5, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "Woods",                      pos: 1, joined: "2026-06-09" , photo: "image.png" },
+      { nick: "N9lwkA",       pos: 2, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "МИШКА МОРГЕН",             pos: 3, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "El Oreshniko del Perú",    pos: 4, joined: "2026-01-03" , photo: "image.png" },
+      { nick: "аурная зараза",            pos: 5, joined: "2026-01-03" , photo: "image.png" },
     ],
-    formerPlayers: [
-        { nick: "Woods", pos: 1, joined: "2026-06-09", left: "2026-07-13" },
-    ],
+    formerPlayers: [],
     tournaments: [
-        {
-        title: "Bedlam: First Anniversary Cup",
-        date:  "2026-08-09",
-        place: "9-12",
-        prize: "",
-        limit: "До 6.700 MMR на игрока"
-      },
        {
         title: "CL: Rivals",
         date:  "2026-07-19",
@@ -494,13 +480,6 @@ const teams = [
     ],
     tournaments: [
         {
-        title: "HATER ZDES` Dota Cup: Season 3 Division 1",
-        date:  "2026-08-04",
-        place: "7-8",
-        prize: "",
-        limit: "До 30.000 MMR на команду"
-      },
-        {
         title: "Bedlam: First Anniversary Cup",
         date:  "2026-08-07",
         place: "1",
@@ -586,30 +565,137 @@ const teams = [
       },
     ]
   },
-    {
-  "id": "dragon-blood",
-  "name": "Dragon Blood",
-  "aliases": ["Dragon Blood", "dragon blood", "DragonBlood"],
-  "logo": "dragonblood.png",
-  "region": "СНГ",
-  "prize": "0₽",
-  "telegramLink": "https://t.me/CatsWinner1",
-  "captainLink": "https://t.me/Lexa_Krutoii",
-  "description": "Основана 23 мая 2026 года. Dragon Blood является переформированием и взятием нового направления другой команды, не связанной с датой, но в краткие сроки коллектив показал свои возможности, и весь фокус сместился на Dota 2, а команда получила нынешнее название.",
-  "activeRoster": [
-    { "nick": "WHAT IS LOVE", "pos": 1, "joined": "2026-06-16", "photo": "whatislove.png", "country": "ru" },
-    { "nick": "Sopelk_i", "pos": 2, "joined": "2026-06-01", "photo": "sopelki.png", "country": "by" },
-    { "nick": "hvloh", "pos": 3, "joined": "2026-07-23", "photo": "hvloh.png", "country": "ru" },
-    { "nick": "Last Pick Tears", "pos": 4, "joined": "2026-08-02", "photo": "lastpicktears.png", "country": "ru" },
-    { "nick": "matbym2", "pos": 5, "joined": "2026-08-01", "photo": "matbym2.png", "country": "ru" }
-  ],
-  "staff": [
-    { "nick": "FraNhesko", "role": "Гендиректор", "joined": "2026-05-23" },
-    { "nick": "rwkyy", "role": "SMM", "joined": "2026-07-15" },
-    { "nick": "blazzerez", "role": "Дизайнер", "joined": "2026-07-17" },
-    { "nick": "Luwak", "role": "Монтажер", "joined": "2026-05-23" }
-  ],
-  "formerPlayers": [],
-  "tournaments": []
-},
 ];
+
+/* ============================================================
+   ИГРОКИ — автосборка профилей из activeRoster/formerPlayers
+   всех команд выше. Отдельного списка игроков заполнять не нужно —
+   страница /player/<id> собирается из тех же данных, что уже есть
+   в составах команд.
+
+   Опционально у любого игрока в составе можно добавить aliases,
+   если он играл под другими никами — тогда его страница найдётся
+   и по старому нику тоже:
+     { nick: "aik", pos: 1, joined: "...", aliases: ["Alim", "aikbsp"] }
+
+   Важно: если два РАЗНЫХ реальных человека в разных командах имеют
+   ОДИНАКОВЫЙ ник — система схлопнет их в один профиль (совпадение
+   по нику = один и тот же игрок). Для дота-ников это редкость, но
+   если знаете о таком случае — дайте одному из них уникальный ник
+   или используйте aliases, чтобы развести их.
+   ============================================================ */
+
+function normPlayerStr(v) {
+  return String(v || '').normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function slugifyPlayer(nick) {
+  return String(nick || '').normalize('NFKC').trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\p{L}\p{N}_-]+/gu, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '') || 'player';
+}
+
+/* Собирает единый список игроков по всем командам: одна и та же
+   персона (по нику/алиасу) со всех команд схлопывается в один
+   профиль с несколькими записями истории (history). */
+function getAllPlayers() {
+  const byKey = new Map();
+
+  (typeof teams !== 'undefined' ? teams : []).forEach(team => {
+    const seasons = [
+      { list: team.activeRoster || team.roster || [], active: true },
+      { list: team.formerPlayers || [], active: false },
+    ];
+
+    seasons.forEach(({ list, active }) => {
+      list.forEach(entry => {
+        if (!entry.nick) return;
+        const key = normPlayerStr(entry.nick);
+
+        if (!byKey.has(key)) {
+          byKey.set(key, {
+            nick: entry.nick,
+            aliases: entry.aliases || [],
+            photo: entry.photo || null,
+            country: entry.country || null,
+            pos: entry.pos,
+            history: [],
+          });
+        }
+
+        const player = byKey.get(key);
+        // Приоритет данным из активных записей — считаем их самыми свежими
+        if (active || !player.photo) player.photo = entry.photo || player.photo;
+        if (active || !player.country) player.country = entry.country || player.country;
+        if (active) player.pos = entry.pos;
+        if (entry.aliases && entry.aliases.length) player.aliases = entry.aliases;
+
+        player.history.push({
+          team,
+          pos: entry.pos,
+          joined: entry.joined || null,
+          left: entry.left || null,
+          active,
+        });
+      });
+    });
+  });
+
+  byKey.forEach(p => p.history.sort((a, b) => String(a.joined || '').localeCompare(String(b.joined || ''))));
+
+  return [...byKey.values()];
+}
+
+function getPlayerId(player) {
+  return slugifyPlayer(player.nick);
+}
+
+function findPlayerById(id) {
+  if (!id) return null;
+  return getAllPlayers().find(p => {
+    if (slugifyPlayer(p.nick) === id) return true;
+    return (p.aliases || []).some(a => slugifyPlayer(a) === id);
+  }) || null;
+}
+
+/* Турниры игрока — берутся из tournaments КАЖДОЙ команды, за которую
+   он играл, отфильтрованные по датам его пребывания в этой команде
+   (joined/left). Отдельно вести список турниров на игрока не нужно. */
+function getPlayerTournaments(player) {
+  const rows = [];
+  (player.history || []).forEach(h => {
+    (h.team.tournaments || []).forEach(t => {
+      const date = t.date || '';
+      if (h.joined && date < h.joined) return;
+      if (h.left && date > h.left) return;
+      rows.push({ ...t, team: h.team, playerPos: h.pos });
+    });
+  });
+  rows.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  return rows;
+}
+
+/* ============================================================
+   РОЛИ И ФЛАГИ — общие для team.js и player.js
+   ============================================================ */
+/* Роль выводится из позиции (pos), которая уже есть у каждого игрока —
+   отдельное поле "role" не нужно. Иконки — свои файлы в корне сайта. */
+const РОЛЬ_ПО_ПОЗИЦИИ = {
+  1: { icon: 'carry.png',        label: 'Carry' },
+  2: { icon: 'mid.png',          label: 'Mid' },
+  3: { icon: 'offlane.png',      label: 'Offlaner' },
+  4: { icon: 'support.png',      label: 'Soft Support' },
+  5: { icon: 'fullsupport.png',  label: 'Hard Support' },
+};
+
+/* Флаг из двухбуквенного кода страны (ISO 3166-1 alpha-2): "ua" -> 🇺🇦.
+   Ничего не хранить кроме кода — эмодзи-флаг собирается на лету. */
+function флагСтраны(код) {
+  if (!код || String(код).length !== 2) return '';
+  const буквы = String(код).toUpperCase();
+  if (!/^[A-Z]{2}$/.test(буквы)) return '';
+  return String.fromCodePoint(...[...буквы].map(ch => 127397 + ch.charCodeAt(0)));
+}
+

@@ -173,24 +173,8 @@ function построитьСтрокиТурниров(команда) {
 /* ============================================================
    РОЛИ И ФЛАГИ
    ============================================================ */
-/* Роль выводится из позиции (pos), которая уже есть у каждого игрока —
-   отдельное поле "role" не нужно. Иконки — свои файлы в корне сайта. */
-const РОЛЬ_ПО_ПОЗИЦИИ = {
-  1: { icon: 'carry.png',        label: 'Carry' },
-  2: { icon: 'mid.png',          label: 'Mid' },
-  3: { icon: 'offlane.png',      label: 'Offlaner' },
-  4: { icon: 'support.png',      label: 'Soft Support' },
-  5: { icon: 'fullsupport.png',  label: 'Hard Support' },
-};
-
-/* Флаг из двухбуквенного кода страны (ISO 3166-1 alpha-2): "ua" -> 🇺🇦.
-   Ничего не хранить кроме кода — эмодзи-флаг собирается на лету. */
-function флагСтраны(код) {
-  if (!код || String(код).length !== 2) return '';
-  const буквы = String(код).toUpperCase();
-  if (!/^[A-Z]{2}$/.test(буквы)) return '';
-  return String.fromCodePoint(...[...буквы].map(ch => 127397 + ch.charCodeAt(0)));
-}
+/* РОЛЬ_ПО_ПОЗИЦИИ и флагСтраны() теперь в teams.js — общие
+   для team.js и player.js, чтобы не дублировать. */
 
 /* ============================================================
    РЕНДЕР: АКТИВНЫЙ СОСТАВ (карточки с фото)
@@ -215,7 +199,7 @@ function рендерАктивныйСостав(игроки) {
               ${флаг ? `<span class="roster-flag">${флаг}</span>` : ''}
             </div>
             <div class="roster-info">
-              <div class="roster-name">${экранировать(игрок.nick || '—')}</div>
+              <div class="roster-name"><a href="${корньСайта()}player/${encodeURIComponent(slugifyPlayer(игрок.nick))}" style="color:inherit">${экранировать(игрок.nick || '—')}</a></div>
               <div class="roster-joined">${форматДатаКраткая(игрок.joined)}</div>
             </div>
           </div>`;
@@ -270,7 +254,7 @@ function рендерСостав(игроки, бывшие = false) {
         ${игроки.map(игрок => {
           return `
             <tr class="searchable-row">
-              <td data-label="Никнейм">${экранировать(игрок.nick || '—')}</td>
+              <td data-label="Никнейм"><a href="${корньСайта()}player/${encodeURIComponent(slugifyPlayer(игрок.nick))}">${экранировать(игрок.nick || '—')}</a></td>
               <td data-label="Позиция"><span class="pos-pill">${экранировать(игрок.pos ?? '—')}</span></td>
               <td data-label="Присоединился">${форматДата(игрок.joined)}</td>
               ${бывшие ? `<td data-label="Покинул">${форматДата(игрок.left)}</td>` : ''}
