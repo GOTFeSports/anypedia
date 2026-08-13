@@ -60,6 +60,19 @@ function форматДатаКраткая(значение) {
   });
 }
 
+function нормализовать(значение) {
+  return String(значение || '').normalize('NFKC').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+/* Ищем реальный турнир в data.js по названию — чтобы название в
+   таблице турниров игрока стало кликабельной ссылкой. */
+function найтиТурнирПоНазванию(название) {
+  const ключ = нормализовать(название);
+  if (!ключ) return null;
+  const список = typeof tournaments !== 'undefined' ? tournaments : [];
+  return список.find(t => нормализовать(t.title) === ключ) || null;
+}
+
 /* ============================================================
    URL-ХЕЛПЕРЫ
    ============================================================ */
@@ -150,10 +163,14 @@ function рендерТурнирыИгрока(игрок) {
       <tbody>
         ${список.map(t => {
           const teamId = t.team.id;
+          const найденныйТурнир = найтиТурнирПоНазванию(t.title);
+          const турнирСсылка = найденныйТурнир
+            ? `<a href="${корньСайта()}${encodeURIComponent(найденныйТурнир.id)}">${экранировать(t.title || '—')}</a>`
+            : экранировать(t.title || '—');
           return `
             <tr class="searchable-row">
               <td data-label="Дата">${форматДатаКраткая(t.date)}</td>
-              <td data-label="Турнир">${экранировать(t.title || '—')}</td>
+              <td data-label="Турнир">${турнирСсылка}</td>
               <td data-label="Команда"><a href="${корньСайта()}team/${encodeURIComponent(teamId)}">${экранировать(t.team.name)}</a></td>
               <td data-label="Место">${экранировать(String(t.place ?? '—'))}</td>
               <td data-label="Призовые">${экранировать(t.prize || '—')}</td>

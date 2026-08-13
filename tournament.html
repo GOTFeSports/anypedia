@@ -649,6 +649,7 @@
     <nav class="site-nav">
       <a class="nav-link active" href="/index.html">Турниры</a>
       <a class="nav-link" href="/teams-list">Команды</a>
+      <a class="nav-link" href="/players-list">Игроки</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
       <a class="nav-link" href="/favorites">Избранное</a>
     </nav>
@@ -1015,6 +1016,19 @@ document.getElementById('descBlock').innerHTML = `
 // Позиции: 1=Carry, 2=Mid, 3=Offlane, 4=Soft Support, 5=Hard Support
 const posLabel = { 1:'Carry', 2:'Mid', 3:'Off', 4:'Sup', 5:'HS' };
 
+/* Ники игроков, у которых есть страница /player/<id> — кликабельны и
+   зелёные (обычный цвет ссылок), остальные остаются простым текстом. */
+const _игрокиИндекс = typeof getAllPlayers === 'function' ? getAllPlayers() : [];
+const _игрокиПоНику = new Map();
+_игрокиИндекс.forEach(p => {
+  [p.nick, ...(p.aliases || [])].forEach(n => _игрокиПоНику.set(normPlayerStr(n), p));
+});
+function renderPlayerNick(nick) {
+  const найден = _игрокиПоНику.get(normPlayerStr(nick));
+  if (!найден) return nick;
+  return `<a href="${getSiteBase()}player/${encodeURIComponent(getPlayerId(найден))}">${nick}</a>`;
+}
+
 document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
   <div class="team-card">
     <div class="team-header">
@@ -1023,7 +1037,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
     </div>
     ${(team.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
       <div class="roster-row">
-        <span class="nick">${p.nick}</span>
+        <span class="nick">${renderPlayerNick(p.nick)}</span>
         <span class="pos" title="Позиция ${p.pos}">${p.pos}</span>
       </div>`).join('')}
     ${team.seed ? `<div class="team-seed">${team.seed}</div>` : ''}
