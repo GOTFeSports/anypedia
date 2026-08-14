@@ -171,7 +171,7 @@ const teams = [
       { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
       { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
       { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
-      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png, "country": "ru" },
+      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png", "country": "ru" },
     ],
       staff: [
           { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
