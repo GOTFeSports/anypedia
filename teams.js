@@ -167,11 +167,11 @@ const teams = [
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
     activeRoster: [
-      { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png" },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png" },
-      { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png" },
-      { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png" },
-      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png" },
+      { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
+      { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
+      { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
+      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png, "country": "ru" },
     ],
       staff: [
           { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
