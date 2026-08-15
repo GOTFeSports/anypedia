@@ -51,10 +51,10 @@ const teams = [
     ],
 
     formerPlayers: [
-      { nick: "hosh1no愛", pos: 1, joined: "2026-04-21" , left: "2026-06-15" },
+      { nick: "hosh1no愛", pos: 1, joined: "2026-04-21" , left: "2026-06-15", country: "ua" },
       { nick: "Gigo",   pos: 2, joined: "2026-05-18", left: "2026-06-15" },
       { nick: "danilK",    pos: 4, joined: "2026-05-18" , left: "2026-06-15" },
-      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18" },
+      { nick: "drim", pos: 4, joined: "2025-04-21", left: "2026-01-18", country: "ru"  },
      { nick: "escapist",   pos: 5, joined: "2026-04-21" , left: "2026-06-15" },
     ],
 
@@ -171,7 +171,7 @@ const teams = [
       { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
       { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
       { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
-      { nick: "ManjaLord", pos: 5, joined: "2026-07-28" , photo: "image.png", "country": "ru" },
+      { nick: "detox", pos: 5, joined: "2026-08-10" , photo: "image.png", "country": "ru" },
     ],
       staff: [
           { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
@@ -180,6 +180,7 @@ const teams = [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
       { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
       { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: ""    },
+      { nick: "ManjaLord", pos: 1, joined: "2025-07-28", left: "2026-09-10", "country": "by"      },
     ],
     tournaments: [
         {
