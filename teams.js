@@ -180,7 +180,7 @@ const teams = [
       { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
       { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)"    },
       { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: ""    },
-      { nick: "ManjaLord", pos: 1, joined: "2025-07-28", left: "2026-09-10", "country": "by"      },
+      { nick: "ManjaLord", pos: 5, joined: "2025-07-28", left: "2026-09-10", "country": "by"      },
     ],
     tournaments: [
         {
