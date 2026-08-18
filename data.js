@@ -9,7 +9,7 @@ const tournaments = [
   "registrationStart": "",
   "registrationEnd": "",
   "prize": "10.000₽",
-  "location": "Online",
+  "location": "СНГ",
   "teams": 12,
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
@@ -20,8 +20,7 @@ const tournaments = [
   "description": "Skewer Esports Season 7 — турнир по Dota 2 для игроков до 6700 MMR. Формат Single Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 10.000₽.",
   "prizePool": [
     { "place": 1, "amount": "8.000₽", "team": "" },
-    { "place": 2, "amount": "2.000₽", "team": "" },
-    { "place": 3, "amount": "", "team": "" }
+    { "place": 2, "amount": "2.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
