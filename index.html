@@ -273,6 +273,26 @@
   max-width: 48ch;
   margin-bottom: 26px;
 }
+.hero-match {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2px 0 8px;
+}
+.hero-match .vs {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 10px;
+}
+.hero-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-btn {
   display: inline-flex;
@@ -316,6 +336,7 @@
   .hero { padding: 26px 20px; border-radius: 10px; }
   .hero-title { font-size: 24px; }
   .hero-text { font-size: 13px; }
+  .hero-match { font-size: 16px; }
   .hero-btn { flex: 1; justify-content: center; padding: 11px 14px; font-size: 13px; }
 }
 
@@ -1034,15 +1055,16 @@ tbody tr:hover {
 <div class="hero-wrap">
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-eyebrow">Dota 2 · СНГ-турниры</div>
-      <h1 class="hero-title">Anypedia — Dota 2 Wiki для турниров с&nbsp;ограничением по рейтингу</h1>
-      <p class="hero-text">Следите за расписанием, призовыми и составами команд на любительских турнирах СНГ — от Herald-лоурангов до высоких дивизионов. Актуальные брекеты, организаторы и статистика в одном месте.</p>
+      <div class="hero-eyebrow">Шоу-матч перед финалом</div>
+      <h1 class="hero-title">Squirrel Games 2</h1>
+      <div class="hero-match">Nemiga Gaming <span class="vs">VS</span> Команда Стримеров</div>
+      <p class="hero-date">23–26 августа</p>
       <div class="hero-actions">
-        <a class="hero-btn hero-btn-secondary" href="https://t.me/anylvlcommunity" target="_blank" rel="noopener">
+        <a class="hero-btn hero-btn-primary" href="https://t.me/Lexa_Krutoii" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
-          Посетить наш Telegram
+          Перейти в Telegram
         </a>
-        <a class="hero-btn hero-btn-primary" href="#mainContainer">
+        <a class="hero-btn hero-btn-secondary" href="#mainContainer">
           Смотреть турниры
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
