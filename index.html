@@ -249,12 +249,14 @@
 .hero-banner img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 320px;
+  object-fit: cover;
 }
 
 @media (max-width: 640px) {
   .hero-wrap { padding: 0 16px; margin-top: 14px; }
   .hero-banner { border-radius: 10px; }
+  .hero-banner img { max-height: 200px; }
 }
 
 /* ============================================================
