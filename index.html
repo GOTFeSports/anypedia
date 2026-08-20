@@ -239,105 +239,22 @@
   margin: 20px auto 0;
   padding: 0 20px;
 }
-.hero {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  align-items: center;
-  gap: 28px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
+.hero-banner {
+  display: block;
   border-radius: var(--radius);
-  padding: 40px 44px;
+  overflow: hidden;
+  border: 1px solid var(--border);
   transition: var(--transition);
 }
-.hero-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.hero-title {
-  font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: .2px;
-  margin-bottom: 14px;
-}
-.hero-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 48ch;
-  margin-bottom: 26px;
-}
-.hero-match {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text);
-  margin: 2px 0 8px;
-}
-.hero-match .vs {
-  display: inline-block;
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin: 0 10px;
-}
-.hero-date {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 24px;
-}
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  border-radius: 9px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  border: 1px solid transparent;
-  transition: opacity .2s, transform .15s, var(--transition);
-}
-.hero-btn:hover { transform: translateY(-1px); }
-.hero-btn-primary { background: var(--accent); color: var(--on-accent); }
-.hero-btn-primary:hover { opacity: .9; color: var(--on-accent); }
-.hero-btn-secondary {
-  background: var(--bg3);
-  color: var(--text);
-  border-color: var(--border);
-}
-.hero-btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-/* Сигнатурная иллюстрация — сходящиеся линии турнирной сетки,
-   выстроенные лесенкой рангов (Herald → Immortal) */
-.hero-art { display: flex; align-items: center; justify-content: center; }
-.hero-art svg { width: 100%; max-width: 260px; height: auto; }
-.bracket-node { fill: var(--bg3); stroke: var(--border); }
-.bracket-line { stroke: var(--accent); }
-.bracket-final { fill: var(--gold); }
-
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; padding: 32px 28px; text-align: center; }
-  .hero-text { max-width: none; margin-left: auto; margin-right: auto; }
-  .hero-actions { justify-content: center; }
-  .hero-art { order: -1; margin-bottom: 8px; }
-  .hero-art svg { max-width: 180px; }
-}
 @media (max-width: 640px) {
   .hero-wrap { padding: 0 16px; margin-top: 14px; }
-  .hero { padding: 26px 20px; border-radius: 10px; }
-  .hero-title { font-size: 24px; }
-  .hero-text { font-size: 13px; }
-  .hero-match { font-size: 16px; }
-  .hero-btn { flex: 1; justify-content: center; padding: 11px 14px; font-size: 13px; }
+  .hero-banner { border-radius: 10px; }
 }
 
 /* ============================================================
@@ -1053,47 +970,9 @@ tbody tr:hover {
 
 <!-- HERO -->
 <div class="hero-wrap">
-  <div class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Шоу-матч перед финалом</div>
-      <h1 class="hero-title">Squirrel Games 2</h1>
-      <div class="hero-match">Nemiga Gaming <span class="vs">VS</span> Команда Стримеров</div>
-      <p class="hero-date">Матч пройдет 23-26 августа в рамках шоу-программы турнира Squirrel Games 2.</p>
-      <div class="hero-actions">
-        <a class="hero-btn hero-btn-primary" href="https://t.me/Lexa_Krutoii" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
-          Перейти в Telegram
-        </a>
-        <a class="hero-btn hero-btn-secondary" href="#mainContainer">
-          Смотреть турниры
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 250 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Столкновение команд">
-  <path class="bracket-line" opacity="0.85" d="M125 88 L125 15" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M133 90 L146 59" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M141 94 L192 43" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M145 102 L176 89" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M147 110 L220 110" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M145 118 L176 131" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M141 126 L192 177" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M133 130 L146 161" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M125 132 L125 205" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M117 130 L104 161" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M109 126 L58 177" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M105 118 L74 131" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M103 110 L30 110" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M105 102 L74 89" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.85" d="M109 94 L58 43" stroke-width="2.5" stroke-linecap="round"/>
-  <path class="bracket-line" opacity="0.4" d="M117 90 L104 59" stroke-width="2.5" stroke-linecap="round"/>
-  <circle class="bracket-final" cx="125" cy="110" r="16"/>
-  <circle cx="125" cy="110" r="22" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity=".45"/>
-  <text x="125" y="115" text-anchor="middle" font-family="var(--font-display)" font-size="12" font-weight="700" fill="var(--on-accent)">VS</text>
-</svg>
-    </div>
-  </div>
+  <a class="hero-banner" href="https://t.me/Lexa_Krutoii" target="_blank" rel="noopener">
+    <img src="sg2.png" alt="Squirrel Games 2 — Nemiga Gaming VS Команда Стримеров" />
+  </a>
 </div>
 
 <!-- PAGE LAYOUT: сайдбар LIVE слева + основной контент справа -->
