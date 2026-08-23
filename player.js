@@ -245,6 +245,15 @@ document.getElementById('playerInfobox').innerHTML = `
 `;
 
 /* ---------- ОПИСАНИЕ ---------- */
+const банВарнинг = (игрок.banned && игрок.banned.length) ? `
+  <div style="margin-top:14px;padding:12px 14px;border-radius:9px;background:var(--live-bg);border:1px solid var(--live);display:flex;gap:10px;align-items:flex-start">
+    <span style="font-size:16px;line-height:1">⚠️</span>
+    <div>
+      <div style="font-weight:700;color:var(--live);font-size:13px;margin-bottom:2px">Бан от турнирного оператора</div>
+      <div style="font-size:13px;color:var(--text)">${игрок.banned.map(лига => экранировать(лига)).join(', ')}</div>
+    </div>
+  </div>` : '';
+
 document.getElementById('summaryBlock').innerHTML = `
   <h1 class="page-title">${экранировать(игрок.nick)}</h1>
   <p class="desc-text">${текущаяКоманда
@@ -252,6 +261,7 @@ document.getElementById('summaryBlock').innerHTML = `
         ? `Играет за <a href="${корньСайта()}team/${encodeURIComponent(текущаяКоманда.id)}">${экранировать(текущаяКоманда.name)}</a>${роль ? ' на позиции ' + экранировать(роль.label) : ''}.`
         : `Ранее играл за <a href="${корньСайта()}team/${encodeURIComponent(текущаяКоманда.id)}">${экранировать(текущаяКоманда.name)}</a>.`)
     : 'Данные о текущей команде отсутствуют.'}</p>
+  ${банВарнинг}
 `;
 
 /* ---------- ИСТОРИЯ + ТУРНИРЫ ---------- */
