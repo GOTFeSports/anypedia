@@ -1,5 +1,36 @@
 const tournaments = [  
   {
+  "id": "Yarf-Cup-7",
+  "title": "Yarf Cup 7 (1x1)",
+  "limit": "1×1 Random Cup",
+  "start": "2026-08-30",
+  "end": "2026-08-30",
+  "startTime": "12:00",
+  "registrationStart": "",
+  "registrationEnd": "2026-08-29",
+  "prize": "1.000₽",
+  "location": "СНГ",
+  "teams": 8,
+  "format": "Single Elimination",
+  "gameFormat": "Random Cup",
+  "organizer": "YARF CUP",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdDveIJFKDV3t15Ze1W6M3YbOY4YtMUJQYXiBC03e5MSVPCHw/viewform?usp=publish-editor",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Yarf Cup 7 — онлайн турнир 1×1 по Dota 2 в формате Random Cup. Single Elimination. Все матчи bo1, финал bo3. Взнос 100₽. Призовой фонд 1.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "1.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP--DOTA-2-TOURNAMENT--1x1-RaANDOM-CUP-08-13",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Yarf-Cup-x-Rampage-Championship-1",
   "title": "Yarf Cup x Rampage Championship 1",
   "limit": "Без ограничений",
