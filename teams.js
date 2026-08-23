@@ -210,6 +210,20 @@ const teams = [
     ],
     tournaments: [
         {
+        title: "AnyLvL x GOTF eSports Tournament #2",
+        date:  "2026-08-22",
+        place: "3",
+        prize: "5-8",
+        limit: "До 32.500 MMR на команду"
+      },
+        {
+        title: "SkewerEsports Season 7",
+        date:  "2026-08-21",
+        place: "3",
+        prize: "",
+        limit: "До 6.700 MMR на игрока"
+      },
+        {
         title: "Bedlam: First Anniversary Cup",
         date:  "2026-08-09",
         place: "3",
@@ -343,7 +357,7 @@ const teams = [
     aliases: ["Podosinovik team", "Podosinovik", "Подосиновик", "Podosinoviki", "Bedlam Orange"],
     logo: "bbtorange.png",
     region: "СНГ",
-    prize: "8.500₽",
+    prize: "10.500₽",
     telegramLink: "https://t.me/podosinovik_dota",
     captainLink: "https://t.me/prokazz_a",
     description: "Команда СНГ-региона, основанная 3 января 2026 года. С момента создания коллектив практически не менял основной состав, что позволило игрокам выстроить хорошее взаимопонимание и командную игру. Наиболее значимым достижением команды стала победа на SkewerEsports Season 1. Podosinovik известна своей стабильностью, сыгранностью и активным участием в региональных турнирах.",
@@ -358,6 +372,13 @@ const teams = [
         { nick: "Woods", pos: 1, joined: "2026-06-09", left: "2026-07-13" },
     ],
     tournaments: [
+        {
+        title: "SkewerEsports Season 7",
+        date:  "2026-08-21",
+        place: "2",
+        prize: "2.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
         {
         title: "Bedlam: First Anniversary Cup",
         date:  "2026-08-09",
@@ -382,7 +403,7 @@ const teams = [
       {
         title: "Bedlam Season 4 Division 1",
         date:  "2026-06-28",
-        place: "3-4",
+        place: "3",
         prize: "",
         limit: "До 8.000 MMR на игрока"
       },
@@ -507,7 +528,7 @@ const teams = [
     aliases: ["Never Back Down"],
     logo: "nbdteam.png",
     region: "СНГ",
-    prize: "32.500₽",
+    prize: "50.500₽",
     telegramLink: "",   // ссылка на группу/канал команды
     captainLink:  "https://t.me/roseofficial_26",   // личный TG капитана для связи
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
@@ -521,6 +542,20 @@ const teams = [
       
     ],
     tournaments: [
+        {
+        title: "AnyLvL x GOTF eSports Tournament #2",
+        date:  "2026-08-22",
+        place: "1",
+        prize: "10.000₽",
+        limit: "До 32.500 MMR на команду"
+      },
+        {
+        title: "SkewerEsports Season 7",
+        date:  "2026-08-21",
+        place: "1",
+        prize: "8.000₽",
+        limit: "До 6.700 MMR на игрока"
+      },
         {
         title: "HATER ZDES` Dota Cup: Season 3 Division 1",
         date:  "2026-08-04",
@@ -559,7 +594,7 @@ const teams = [
       {
         title: "Bedlam Season 4 Division 1",
         date:  "2026-06-28",
-        place: "3-4",
+        place: "3",
         prize: "",
         limit: "До 8.000 MMR на игрока"
       },
