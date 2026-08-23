@@ -540,12 +540,15 @@ const teams = [
     description: "Киберспортивный коллектив из Восточной Европы. Был основан в 2025 году.",
 
     activeRoster: [
-      { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" , photo: "image.png" },
-      { nick: "m1nd1",   pos: 3, joined: "2026-05-31" , photo: "image.png" },
+      { nick: "Kengama",   pos: 1, joined: "2026-08-22" , photo: "image.png", country: "ru" },
+      { nick: "Baby, Nice Try",   pos: 2, joined: "2025-11-01" , photo: "image.png", country: "ru" },
+      { nick: "m1nd1",   pos: 3, joined: "2026-08-06" , photo: "image.png", country: "ru"  },
+      { nick: "Scorp",   pos: 4, joined: "2026-08-03" , photo: "image.png", country: "ru" },
+      { nick: "MakeSense",   pos: 4, joined: "2026-08-22" , photo: "image.png", country: "ru" }
     ],
 
     formerPlayers: [
-      
+      { nick: "Rose",   pos: 2, joined: "2025-11-01" , photo: "image.png", country: "ru", left: "2026-08-06"  },
     ],
     tournaments: [
         {
