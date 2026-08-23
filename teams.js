@@ -93,6 +93,13 @@ const teams = [
     // Добавляйте турниры вручную.
     // Поле title должно совпадать с названием в data.js — ссылка появится автоматически.
     tournaments: [
+        {
+        title: "AnyLvL x GOTF eSports Tournament #2",
+        date:  "2026-08-22",
+        place: "9-11",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      },
       {
         title: "Special 3: Closed Qualification",
         date:  "2026-07-05",
@@ -218,8 +225,8 @@ const teams = [
         {
         title: "AnyLvL x GOTF eSports Tournament #2",
         date:  "2026-08-22",
-        place: "3",
-        prize: "5-8",
+        place: "5-8",
+        prize: "",
         limit: "До 32.500 MMR на команду"
       },
         {
