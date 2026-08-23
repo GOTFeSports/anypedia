@@ -194,7 +194,7 @@ const teams = [
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
     activeRoster: [
       { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru", banned: "AnyLvL Community" },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru", "banned": "AnyLvL Community" },
       { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
       { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
       { nick: "detox", pos: 5, joined: "2026-08-10" , photo: "image.png", "country": "ru" },
