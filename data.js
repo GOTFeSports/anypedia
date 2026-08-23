@@ -167,7 +167,18 @@ const tournaments = [
     ]
   },
   {
-    "name": "Team Leto",
+    "name": "TeamSexy",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Yamb", "pos": 1},
+      {"nick": "danyok", "pos": 2},
+      {"nick": "icememory<3", "pos": 3},
+      {"nick": "МурМурМур<3", "pos": 4},
+      {"nick": "Великая", "pos": 5}
+    ]
+  },
+  {
+    "name": "LETO Junior",
     "logo": "dota2.png",
     "roster": [
       {"nick": "cotsu", "pos": 1},
@@ -252,17 +263,6 @@ const tournaments = [
       {"nick": "мисной псих!", "pos": 3},
       {"nick": "выгляжу как pops", "pos": 4},
       {"nick": "九尾K'yubi", "pos": 5}
-    ]
-  },
-  {
-    "name": "TeamSexy",
-    "logo": "dota2.png",
-    "roster": [
-      {"nick": "Yamb", "pos": 1},
-      {"nick": "Danyok666", "pos": 2},
-      {"nick": "icememory<3", "pos": 3},
-      {"nick": "МурМурМур<3", "pos": 4},
-      {"nick": "Великая", "pos": 5}
     ]
   },
   {
