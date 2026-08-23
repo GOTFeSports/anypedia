@@ -1,5 +1,36 @@
 const tournaments = [  
   {
+  "id": "Yarf-Cup-x-Rampage-Championship-1",
+  "title": "Yarf Cup x Rampage Championship 1",
+  "limit": "Без ограничений",
+  "start": "2026-09-05",
+  "end": "2026-09-13",
+  "startTime": "15:00",
+  "registrationStart": "",
+  "registrationEnd": "2026-09-04",
+  "prize": "3.000₽",
+  "location": "СНГ",
+  "teams": 32,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "YARF CUP & RAMPAGE TOURNAMENTS",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfmO8se17JS87o8cP-GrFWU5bXjytL3I4eDrfVEIxtx2xI2Gw/viewform?usp=publish-editor",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Yarf Cup x Rampage Championship 1 — онлайн турнир 5×5 по Dota 2. Формат Double Elimination, Captains Mode. Групповой этап bo1, финальный этап bo3, финал bo5. Участие бесплатное. Призовой фонд 3.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "3.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Yarf-Cup-6",
   "title": "Yarf Cup 6",
   "limit": "Без ограничений",
