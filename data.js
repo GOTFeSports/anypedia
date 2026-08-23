@@ -45,19 +45,19 @@ const tournaments = [
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "SkewerEsports",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/x99jdcgy/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "Skewer Esports Season 7 — турнир по Dota 2 для игроков до 6700 MMR. Формат Single Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 10.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "8.000₽", "team": "" },
-    { "place": 2, "amount": "2.000₽", "team": "" }
+    { "place": 1, "amount": "8.000₽", "team": "Never Back Down" },
+    { "place": 2, "amount": "2.000₽", "team": "Bedlam Orange" }
   ],
   "links": {
     "dotabuff": "",
     "discord": "https://discord.gg/M6QaGMkdDr",
     "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/x99jdcgy"
   },
   "casters": [],
   "teamsList": []
@@ -71,25 +71,24 @@ const tournaments = [
   "startTime": "12:00",
   "registrationStart": "",
   "registrationEnd": "",
-  "prize": "15.000₽",
+  "prize": "10.000₽",
   "location": "СНГ",
   "teams": 16,
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & GOTF eSports",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5",
   "registrationLink": "https://forms.gle/BXeg1sihrqwW7TT7A",
   "telegramLink": "https://t.me/anylvlcommunity",
   "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.500 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды.",
   "prizePool": [
-    { "place": 1, "amount": "10000₽", "team": "" },
-    { "place": 2, "amount": "5000₽", "team": "" }
+    { "place": 1, "amount": "10000₽", "team": "Never Back Down" }
   ],
   "links": {
     "dotabuff": "",
     "discord": "https://discord.gg/Yxu2yXfzef",
     "rules": "https://docs.google.com/document/d/1SYlwqegP2cWBr3qav226ACutBW3eyGqxOlW8f2mqBDA/edit?usp=sharing",
-    "bracket": ""
+    "bracket": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5"
   },
   "casters": [],
   "teamsList": []
@@ -174,7 +173,7 @@ const tournaments = [
   "telegramLink": "https://t.me/rampagetournaments",
   "description": "RAMPAGE KURIK #6 — турнир по Dota 2 для игроков до 5000 MMR. Формат 5×5, Double Elimination. Все матчи bo1, гранд-финал bo3. Призовой фонд 1.000₽ (может увеличиться). Участие бесплатное.",
   "prizePool": [
-    { "place": 1, "amount": "1.000₽", "team": "" }
+    { "place": 1, "amount": "1.000₽", "team": "Moonlight Academy" }
   ],
   "links": {
     "dotabuff": "",
