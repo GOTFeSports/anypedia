@@ -167,8 +167,8 @@ const tournaments = [
     ]
   },
   {
-    "name": "TeamSexy",
-    "logo": "dota2.png",
+    "name": "Team Sexy",
+    "logo": "teamsexy.png",
     "roster": [
       {"nick": "Yamb", "pos": 1},
       {"nick": "danyok", "pos": 2},
