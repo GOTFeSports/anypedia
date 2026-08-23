@@ -93,8 +93,8 @@ const tournaments = [
   "teamsList": []
 },
   {
-  "id": "Skewer-Esports-Season-7",
-  "title": "Skewer Esports Season 7",
+  "id": "SkewerEsports-Season-7",
+  "title": "SkewerEsports Season 7",
   "limit": "До 6.700 MMR на игрока",
   "start": "2026-08-21",
   "end": "2026-08-21",
