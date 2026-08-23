@@ -27,6 +27,12 @@
 //              например "ua", "ru", "kz" — соберёт эмодзи-флаг
 //              сам, картинку заливать не надо. Поле необязательное,
 //              если не указано — флаг просто не показывается.
+//    banned  — необязательное поле: если у игрока есть бан от
+//              турнирного оператора, укажите название лиги/оператора.
+//              Одна лига — просто строка: banned: "AnyLvL Community".
+//              Несколько — массивом: banned: ["AnyLvL Community", "Enrage"].
+//              На странице игрока появится предупреждение об этом.
+//              Если банов нет — поле просто не добавлять.
 //  Роль (Carry/Mid/Offlaner/Soft Support/Hard Support) и иконка
 //  берутся автоматически из pos (1-5) — отдельно указывать не надо.
 // =============================================
@@ -705,6 +711,7 @@ function getAllPlayers() {
             photo: entry.photo || null,
             country: entry.country || null,
             pos: entry.pos,
+            banned: [],
             history: [],
           });
         }
@@ -715,6 +722,13 @@ function getAllPlayers() {
         if (active || !player.country) player.country = entry.country || player.country;
         if (active) player.pos = entry.pos;
         if (entry.aliases && entry.aliases.length) player.aliases = entry.aliases;
+
+        if (entry.banned) {
+          const списокБанов = Array.isArray(entry.banned) ? entry.banned : [entry.banned];
+          списокБанов.forEach(лига => {
+            if (лига && !player.banned.includes(лига)) player.banned.push(лига);
+          });
+        }
 
         player.history.push({
           team,
