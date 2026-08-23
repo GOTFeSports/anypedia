@@ -123,6 +123,38 @@ const tournaments = [
   },
   "casters": [],
   "teamsList": [
+]
+},
+  {
+  "id": "AnyLvL-x-GOTF-eSports-Tournament-2",
+  "title": "AnyLvL x GOTF eSports Tournament #2",
+  "limit": "32.500 MMR на команду",
+  "start": "2026-08-22",
+  "end": "2026-08-22",
+  "startTime": "12:00",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "10.000₽",
+  "location": "СНГ",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "AnyLvL & GOTF eSports",
+  "bracketEmbed": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5",
+  "registrationLink": "https://forms.gle/BXeg1sihrqwW7TT7A",
+  "telegramLink": "https://t.me/anylvlcommunity",
+  "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.500 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды.",
+  "prizePool": [
+    { "place": 1, "amount": "10000₽", "team": "Never Back Down" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/Yxu2yXfzef",
+    "rules": "https://docs.google.com/document/d/1SYlwqegP2cWBr3qav226ACutBW3eyGqxOlW8f2mqBDA/edit?usp=sharing",
+    "bracket": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5"
+  },
+  "casters": [],
+  "teamsList": [
   {
     "name": "Never Back Down",
     "logo": "nbdteam.png",
@@ -245,37 +277,6 @@ const tournaments = [
     ]
   }
 ]
-},
-  {
-  "id": "AnyLvL-x-GOTF-eSports-Tournament-2",
-  "title": "AnyLvL x GOTF eSports Tournament #2",
-  "limit": "32.500 MMR на команду",
-  "start": "2026-08-22",
-  "end": "2026-08-22",
-  "startTime": "12:00",
-  "registrationStart": "",
-  "registrationEnd": "",
-  "prize": "10.000₽",
-  "location": "СНГ",
-  "teams": 16,
-  "format": "Single Elimination",
-  "gameFormat": "Captains Mode",
-  "organizer": "AnyLvL & GOTF eSports",
-  "bracketEmbed": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5",
-  "registrationLink": "https://forms.gle/BXeg1sihrqwW7TT7A",
-  "telegramLink": "https://t.me/anylvlcommunity",
-  "description": "AnyLvL x GOTF eSports Tournament #2 — турнир по Dota 2 с ограничением 32.500 MMR на команду (до 7.500 на игрока). Формат Single Elimination, bo1, финал bo3. Взнос 1000₽ с команды.",
-  "prizePool": [
-    { "place": 1, "amount": "10000₽", "team": "Never Back Down" }
-  ],
-  "links": {
-    "dotabuff": "",
-    "discord": "https://discord.gg/Yxu2yXfzef",
-    "rules": "https://docs.google.com/document/d/1SYlwqegP2cWBr3qav226ACutBW3eyGqxOlW8f2mqBDA/edit?usp=sharing",
-    "bracket": "https://goodgame.ru/cup/bracket/anylvl-x-gotf-esports-tournament-2-6a89ca84c7b1da0071f455c5"
-  },
-  "casters": [],
-  "teamsList": []
 },
   {
   "id": "Lor-Tournament-1",
