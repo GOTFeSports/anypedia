@@ -122,7 +122,129 @@ const tournaments = [
     "bracket": "https://challonge.com/ru/x99jdcgy"
   },
   "casters": [],
-  "teamsList": []
+  "teamsList": [
+  {
+    "name": "Never Back Down",
+    "logo": "nbdteam.png",
+    "roster": [
+      {"nick": "Kengama", "pos": 1},
+      {"nick": "Baby, Nice Try", "pos": 2},
+      {"nick": "m1nd1", "pos": 3},
+      {"nick": "Scorp", "pos": 4},
+      {"nick": "MakeSense", "pos": 5}
+    ]
+  },
+  {
+    "name": "Team Leto",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "cotsu", "pos": 1},
+      {"nick": "Hetshoker", "pos": 2},
+      {"nick": "KuS", "pos": 3},
+      {"nick": "darklight", "pos": 4},
+      {"nick": "detox", "pos": 5}
+    ]
+  },
+  {
+    "name": "DF JUNIOR",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Ulquiorra", "pos": 1},
+      {"nick": "Nemesis", "pos": 2},
+      {"nick": "GRouseB", "pos": 3},
+      {"nick": "Dankovi4Bro", "pos": 4},
+      {"nick": "Dafuqqq?", "pos": 5}
+    ]
+  },
+  {
+    "name": "NewMasterminds",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Dragonay", "pos": 1},
+      {"nick": "Labubster", "pos": 2},
+      {"nick": "escanor", "pos": 3},
+      {"nick": "BlazeR", "pos": 4},
+      {"nick": "Rubistan", "pos": 5}
+    ]
+  },
+  {
+    "name": "Bad Bees",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Riot", "pos": 1},
+      {"nick": "arwix", "pos": 2},
+      {"nick": "Dcd", "pos": 3},
+      {"nick": "SunSlize", "pos": 4},
+      {"nick": "tatsumi", "pos": 5}
+    ]
+  },
+  {
+    "name": "Op9ta",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "heatolonq", "pos": 1},
+      {"nick": "Wizard", "pos": 2},
+      {"nick": "cherepashka", "pos": 3},
+      {"nick": "pase4nik", "pos": 4},
+      {"nick": "Glamdring", "pos": 5}
+    ]
+  },
+  {
+    "name": "Rakuzan",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "UshirOo", "pos": 1},
+      {"nick": "4or2na-", "pos": 2},
+      {"nick": "Саша Белый Prime", "pos": 3},
+      {"nick": "Shiroyami", "pos": 4},
+      {"nick": "five more hours", "pos": 5}
+    ]
+  },
+  {
+    "name": "MicroB GaminG/меньшевекиЧЁРТ.",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Banan617", "pos": 1},
+      {"nick": "FreackMAN-", "pos": 2},
+      {"nick": "одичал, зол, 5030 вежливости", "pos": 3},
+      {"nick": "Wazo4", "pos": 4},
+      {"nick": "scrcpy", "pos": 5}
+    ]
+  },
+  {
+    "name": "VMYASO TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Amore", "pos": 1},
+      {"nick": "СЕБЕРЯК22РУС", "pos": 2},
+      {"nick": "мисной псих!", "pos": 3},
+      {"nick": "выгляжу как pops", "pos": 4},
+      {"nick": "九尾K'yubi", "pos": 5}
+    ]
+  },
+  {
+    "name": "TeamSexy",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Yamb", "pos": 1},
+      {"nick": "Danyok666", "pos": 2},
+      {"nick": "icememory<3", "pos": 3},
+      {"nick": "МурМурМур<3", "pos": 4},
+      {"nick": "Великая", "pos": 5}
+    ]
+  },
+  {
+    "name": "sigma aura",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "all eyes on me", "pos": 1},
+      {"nick": "XieZ", "pos": 2},
+      {"nick": "mdk", "pos": 3},
+      {"nick": "Yooku", "pos": 4},
+      {"nick": "дробовиктор", "pos": 5}
+    ]
+  }
+]
 },
   {
   "id": "AnyLvL-x-GOTF-eSports-Tournament-2",
