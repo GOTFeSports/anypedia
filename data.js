@@ -1,7 +1,7 @@
 const tournaments = [  
   {
   "id": "Bedlam-Cup-1x1-Midlane-Master",
-  "title": "BEDLAM CUP 1X1: MIDLANE MASTER",
+  "title": "Bedlam Cup 1x1: Midlane Master",
   "limit": "Без ограничений по MMR",
   "start": "2026-08-30",
   "end": "2026-08-30",
