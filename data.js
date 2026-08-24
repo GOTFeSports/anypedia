@@ -66,7 +66,7 @@ const tournaments = [
   {
   "id": "Yarf-Cup-x-Rampage-Championship-1",
   "title": "Yarf Cup x Rampage Championship 1",
-  "limit": "Без ограничений",
+  "limit": "До 5.000 MMR на игрока.",
   "start": "2026-09-05",
   "end": "2026-09-13",
   "startTime": "15:00",
