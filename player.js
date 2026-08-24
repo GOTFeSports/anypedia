@@ -249,8 +249,11 @@ const банВарнинг = (игрок.banned && игрок.banned.length) ? `
   <div style="margin-top:14px;padding:12px 14px;border-radius:9px;background:var(--live-bg);border:1px solid var(--live);display:flex;gap:10px;align-items:flex-start">
     <span style="font-size:16px;line-height:1">⚠️</span>
     <div>
-      <div style="font-weight:700;color:var(--live);font-size:13px;margin-bottom:2px">Бан от турнирного оператора</div>
-      <div style="font-size:13px;color:var(--text)">${игрок.banned.map(лига => экранировать(лига)).join(', ')}</div>
+      <div style="font-weight:700;color:var(--live);font-size:13px;margin-bottom:4px">Бан от турнирного оператора</div>
+      ${игрок.banned.map(бан => `
+      <div style="font-size:13px;color:var(--text);line-height:1.5">
+        ${экранировать(бан.league)}${бан.reason ? ` <span style="color:var(--text-muted)">— ${экранировать(бан.reason)}</span>` : ''}
+      </div>`).join('')}
     </div>
   </div>` : '';
 

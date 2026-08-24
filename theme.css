@@ -26,6 +26,14 @@
   --finished-bg:  rgba(111,133,119,.14);
   --dire:       #c1543f;
   --dire-bg:      rgba(193,84,63,.14);
+  --tier-s:     #8f2a2a;
+  --tier-s-bg:  rgba(143,42,42,.22);
+  --tier-a:     #d5473a;
+  --tier-a-bg:  rgba(213,71,58,.16);
+  --tier-b:     #d9822b;
+  --tier-b-bg:  rgba(217,130,43,.16);
+  --tier-c:     var(--upcoming);
+  --tier-c-bg:  var(--upcoming-bg);
   --radius:     12px;
   --shadow:     0 4px 24px rgba(0,0,0,.45);
   --transition: color .25s, background-color .25s, border-color .25s;
@@ -54,6 +62,14 @@
   --finished-bg:  rgba(63,107,82,.13);
   --dire:       #a8402c;
   --dire-bg:      rgba(168,64,44,.1);
+  --tier-s:     #7a1f1f;
+  --tier-s-bg:  rgba(122,31,31,.13);
+  --tier-a:     #b73326;
+  --tier-a-bg:  rgba(183,51,38,.12);
+  --tier-b:     #b56a1e;
+  --tier-b-bg:  rgba(181,106,30,.13);
+  --tier-c:     var(--upcoming);
+  --tier-c-bg:  var(--upcoming-bg);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -92,6 +108,25 @@ a:hover { color: var(--accent2); }
 .fav-star:hover { color: var(--accent); border-color: var(--accent); }
 .fav-star.is-fav { color: var(--accent); border-color: var(--accent); background: var(--upcoming-bg); }
 .fav-star.is-fav svg { fill: currentColor; }
+
+/* ============================================================
+   TIER — оценка турнира по силе состава (S/A/B/C)
+   ============================================================ */
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.tier-s    { background: var(--tier-s-bg); color: var(--tier-s); }
+.tier-a    { background: var(--tier-a-bg); color: var(--tier-a); }
+.tier-b    { background: var(--tier-b-bg); color: var(--tier-b); }
+.tier-c    { background: var(--tier-c-bg); color: var(--tier-c); }
+.tier-none { background: var(--bg3); color: var(--text-muted); }
+
 
 /* ============================================================
    ROSTER GRID — карточки игроков с фото (состав команды,

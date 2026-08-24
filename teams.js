@@ -28,9 +28,17 @@
 //              сам, картинку заливать не надо. Поле необязательное,
 //              если не указано — флаг просто не показывается.
 //    banned  — необязательное поле: если у игрока есть бан от
-//              турнирного оператора, укажите название лиги/оператора.
-//              Одна лига — просто строка: banned: "AnyLvL Community".
-//              Несколько — массивом: banned: ["AnyLvL Community", "Enrage"].
+//              турнирного оператора, укажите лигу и (по желанию) причину:
+//                banned: { league: "AnyLvL Community", reason: "Читерство" }
+//              Причину можно не указывать — просто league без reason:
+//                banned: { league: "AnyLvL Community" }
+//              Или совсем коротко, без причины (старый формат тоже работает):
+//                banned: "AnyLvL Community"
+//              Несколько банов — массивом (можно мешать форматы):
+//                banned: [
+//                  { league: "AnyLvL Community", reason: "Читерство" },
+//                  { league: "Enrage", reason: "Токсичное поведение" },
+//                ]
 //              На странице игрока появится предупреждение об этом.
 //              Если банов нет — поле просто не добавлять.
 //  Роль (Carry/Mid/Offlaner/Soft Support/Hard Support) и иконка
@@ -735,8 +743,15 @@ function getAllPlayers() {
 
         if (entry.banned) {
           const списокБанов = Array.isArray(entry.banned) ? entry.banned : [entry.banned];
-          списокБанов.forEach(лига => {
-            if (лига && !player.banned.includes(лига)) player.banned.push(лига);
+          списокБанов.forEach(запись => {
+            const бан = typeof запись === 'string'
+              ? { league: запись, reason: null }
+              : (запись && typeof запись === 'object'
+                  ? { league: запись.league || запись.name || '', reason: запись.reason || null }
+                  : null);
+            if (бан && бан.league && !player.banned.some(b => b.league === бан.league)) {
+              player.banned.push(бан);
+            }
           });
         }
 

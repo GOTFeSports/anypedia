@@ -931,6 +931,18 @@ const autoWinner =
   ) ||
   'TBD';
 
+const TIER_INFO = {
+  S: { label: 'Tier-S', cls: 'tier-s' },
+  A: { label: 'Tier-A', cls: 'tier-a' },
+  B: { label: 'Tier-B', cls: 'tier-b' },
+  C: { label: 'Tier-C', cls: 'tier-c' },
+};
+const tierKey = String(t.tier || '').trim().toUpperCase();
+const tierInfo = TIER_INFO[tierKey];
+const tierBadge = tierInfo
+  ? `<span class="tier-badge ${tierInfo.cls}">${tierInfo.label}</span>`
+  : `<span class="tier-badge tier-none">None</span>`;
+
 document.getElementById('infobox').innerHTML = `
   <div class="infobox-title-row">
     <h2>${t.title}</h2>
@@ -944,6 +956,7 @@ document.getElementById('infobox').innerHTML = `
   <div class="info-row"><span class="info-label">Приз</span><span class="info-val" style="font-weight:700;color:var(--gold);font-family:var(--font-mono)">${t.prize || '—'}</span></div>
   <div class="info-row"><span class="info-label">Регион</span><span class="info-val">${t.location || '—'}</span></div>
   <div class="info-row"><span class="info-label">Команд</span><span class="info-val">${t.teams ?? '—'}</span></div>
+  <div class="info-row"><span class="info-label">Tier</span><span class="info-val">${tierBadge}</span></div>
   <div class="info-row"><span class="info-label">Формат Сетки</span><span class="info-val">${t.format || '—'}</span></div>
   <div class="info-row"><span class="info-label">Формат Игры</span><span class="info-val">${t.gameFormat || '—'}</span></div>
   <div class="info-row"><span class="info-label">Лимит</span><span class="info-val">${t.limit || '—'}</span></div>
