@@ -1,5 +1,37 @@
 const tournaments = [  
   {
+  "id": "SkewerEsports-Season-8",
+  "title": "SkewerEsports Season 8",
+  "limit": "32.500 MMR на команду",
+  "start": "2026-08-30",
+  "end": "2026-08-31",
+  "startTime": "17:00",
+  "registrationStart": "",
+  "registrationEnd": "2026-08-30",
+  "prize": "15.000₽",
+  "location": "Online",
+  "teams": 16,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "SkewerEsports",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
+  "telegramLink": "https://t.me/SkewerEsports",
+  "description": "SkewerEsports Season 8 — турнир по Dota 2 с ограничением 32.500 MMR на команду. Формат Double Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 15.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "10.000₽", "team": "" },
+    { "place": 2, "amount": "5.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/M6QaGMkdDr",
+    "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Bedlam-Cup-1x1-Midlane-Master",
   "title": "Bedlam Cup 1x1: Midlane Master",
   "limit": "Без ограничений по MMR",
