@@ -35,7 +35,7 @@ const tournaments = [
   {
   "id": "Yarf-Cup-7",
   "title": "Yarf Cup 7 (1x1)",
-  "limit": "1×1 Random Cup",
+  "limit": "Без ограничений по MMR",
   "start": "2026-08-30",
   "end": "2026-08-30",
   "startTime": "12:00",
