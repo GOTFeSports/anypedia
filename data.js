@@ -1,5 +1,38 @@
 const tournaments = [  
   {
+  "id": "Bedlam-Cup-1x1-Midlane-Master",
+  "title": "BEDLAM CUP 1X1: MIDLANE MASTER",
+  "limit": "Без ограничений по MMR",
+  "start": "2026-08-30",
+  "end": "2026-08-30",
+  "startTime": "",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "10.000₽",
+  "location": "СНГ",
+  "teams": 32,
+  "format": "Single Elimination",
+  "gameFormat": "Solo Mid 1v1",
+  "organizer": "Bedlam Battles Tournaments",
+  "bracketEmbed": "",
+  "registrationLink": "",
+  "telegramLink": "https://t.me/bedlamtournaments",
+  "description": "BEDLAM CUP 1X1: MIDLANE MASTER — турнир по Dota 2 в формате Solo Mid 1v1. Призовой фонд 10.000₽. Участие бесплатное. Регистрация через @bedlamtournaments_bot.",
+  "prizePool": [
+    { "place": 1, "amount": "6.000₽", "team": "" },
+    { "place": 2, "amount": "2.500₽", "team": "" },
+    { "place": 3, "amount": "1.500₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Yarf-Cup-7",
   "title": "Yarf Cup 7 (1x1)",
   "limit": "1×1 Random Cup",
