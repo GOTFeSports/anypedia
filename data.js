@@ -13,9 +13,9 @@ const tournaments = [
   "teams": 32,
   "format": "Single Elimination",
   "gameFormat": "Solo Mid 1v1",
-  "organizer": "Bedlam Battles Tournaments",
+  "organizer": "Bedlam Tournaments",
   "bracketEmbed": "",
-  "registrationLink": "",
+  "registrationLink": "https://t.me/bedlamtournaments_bot",
   "telegramLink": "https://t.me/bedlamtournaments",
   "description": "BEDLAM CUP 1X1: MIDLANE MASTER — турнир по Dota 2 в формате Solo Mid 1v1. Призовой фонд 10.000₽. Участие бесплатное. Регистрация через @bedlamtournaments_bot.",
   "prizePool": [
