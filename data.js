@@ -1,5 +1,37 @@
 const tournaments = [  
   {
+  "id": "AnyLvL-GOTF-Tournament-3",
+  "title": "AnyLvL x GOTF eSports Tournament #3",
+  "limit": "",
+  "start": "2026-09-12",
+  "end": "2026-09-12",
+  "startTime": "",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "",
+  "location": "Online",
+  "teams": 16,
+  "format": "",
+  "gameFormat": "Captains Mode",
+  "organizer": "AnyLvL & GOTF eSports",
+  "Tier": "B",
+  "bracketEmbed": "",
+  "registrationLink": "",
+  "telegramLink": "https://t.me/anylvlcommunity",
+  "description": "AnyLvL x GOTF eSports Tournament #3 — турнир по Dota 2. Подробности уточняются.",
+  "prizePool": [
+    { "place": 1, "amount": "", "team": "" },
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "SkewerEsports-Season-8",
   "title": "SkewerEsports Season 8",
   "limit": "32.500 MMR на команду",
