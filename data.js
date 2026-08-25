@@ -14,7 +14,7 @@ const tournaments = [
   "format": "",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & GOTF eSports",
-  "Tier": "B",
+  "tier": "B",
   "bracketEmbed": "",
   "registrationLink": "",
   "telegramLink": "https://t.me/anylvlcommunity",
