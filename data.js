@@ -175,7 +175,7 @@ const tournaments = [
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "YARF CUP",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/YarfCup_6/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLScSNKx7eD1l2eSOQ4EBEOZP7CefCbQArTUpB1_0k8E5kDOjaA/viewform?usp=dialog",
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup 6 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
@@ -186,7 +186,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "",
     "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/YarfCup_6"
   },
   "casters": [],
   "teamsList": []
