@@ -142,7 +142,7 @@ const tournaments = [
   },
   {
     "name": "Never Back Down",
-    "logo": "nbd.png",
+    "logo": "nbdteam.png",
     "roster": [
       {"nick": "kengamajke", "pos": 1},
       {"nick": "Baby, Nice Try", "pos": 2},
