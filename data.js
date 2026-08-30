@@ -149,7 +149,7 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup x Rampage Championship 1 — онлайн турнир 5×5 по Dota 2. Формат Double Elimination, Captains Mode. Групповой этап bo1, финальный этап bo3, финал bo5. Участие бесплатное. Призовой фонд 3.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "3.000₽", "team": "Eternal Zenith" }
+    { "place": 1, "amount": "3.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
@@ -180,7 +180,7 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup 6 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
   "prizePool": [
-    { "place": 1, "amount": "1.500₽", "team": "" }
+    { "place": 1, "amount": "1.500₽", "team": "Eternal Zenith" }
   ],
   "links": {
     "dotabuff": "",
