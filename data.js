@@ -47,7 +47,7 @@ const tournaments = [
   "gameFormat": "Captains Mode",
   "organizer": "SkewerEsports",
   "tier": "B",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/1o4chp0e/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "SkewerEsports Season 8 — турнир по Dota 2 с ограничением 32.500 MMR на команду. Формат Double Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 15.000₽.",
@@ -59,7 +59,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "https://discord.gg/M6QaGMkdDr",
     "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/1o4chp0e"
   },
   "casters": [],
   "teamsList": [
