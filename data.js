@@ -62,7 +62,140 @@ const tournaments = [
     "bracket": ""
   },
   "casters": [],
-  "teamsList": []
+  "teamsList": [
+  {
+    "name": "эмокиды",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "arsenkaban", "pos": 1},
+      {"nick": "all eyes on me", "pos": 2},
+      {"nick": "mdk", "pos": 3},
+      {"nick": "Yooku", "pos": 4},
+      {"nick": "дробовиктор", "pos": 5}
+    ]
+  },
+  {
+    "name": "DarkHorse",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Саша белый prime", "pos": 1},
+      {"nick": "smith & wesson", "pos": 2},
+      {"nick": "RAXMED", "pos": 3},
+      {"nick": "squalor", "pos": 4},
+      {"nick": "traher", "pos": 5}
+    ]
+  },
+  {
+    "name": "Team Horizon Event",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Дмитрий SWAGBless", "pos": 1},
+      {"nick": "013DOSTUM", "pos": 2},
+      {"nick": "german333masochismlnrjbgtfddnrrd", "pos": 3},
+      {"nick": "Women's kill dota", "pos": 4},
+      {"nick": "zxcVa", "pos": 5}
+    ]
+  },
+  {
+    "name": "Inquisitor's",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Veroi", "pos": 1},
+      {"nick": "JaDiX", "pos": 2},
+      {"nick": "iwepgg", "pos": 3},
+      {"nick": "thorzues", "pos": 4},
+      {"nick": "Chesign", "pos": 5}
+    ]
+  },
+  {
+    "name": "TEIKO",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Teenwave", "pos": 1},
+      {"nick": "14.1", "pos": 2},
+      {"nick": "dissolved", "pos": 3},
+      {"nick": "darklight", "pos": 4},
+      {"nick": "zobaa", "pos": 5}
+    ]
+  },
+  {
+    "name": "Сыроежкi",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "never try", "pos": 1},
+      {"nick": "l4rp", "pos": 2},
+      {"nick": "холыч", "pos": 3},
+      {"nick": "gwynbl1dd", "pos": 4},
+      {"nick": "vsplesk", "pos": 5}
+    ]
+  },
+  {
+    "name": "Team Bedlam Battles",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "heatolonq", "pos": 1},
+      {"nick": "Wizard", "pos": 2},
+      {"nick": "cherepashka", "pos": 3},
+      {"nick": "p4sechn1k", "pos": 4},
+      {"nick": "Glamdring〩", "pos": 5}
+    ]
+  },
+  {
+    "name": "Never Back Down",
+    "logo": "nbd.png",
+    "roster": [
+      {"nick": "kengamajke", "pos": 1},
+      {"nick": "Baby, Nice Try", "pos": 2},
+      {"nick": "mindiq", "pos": 3},
+      {"nick": "ritashi", "pos": 4},
+      {"nick": "дорадура", "pos": 5}
+    ]
+  },
+  {
+    "name": "Rakuzan",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "UshirOo", "pos": 1},
+      {"nick": "4or2na-", "pos": 2},
+      {"nick": "EgorKing", "pos": 3},
+      {"nick": "Shiroyami", "pos": 4},
+      {"nick": "five more hours", "pos": 5}
+    ]
+  },
+  {
+    "name": "XXXSonic",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "bla", "pos": 1},
+      {"nick": "noletmedaem", "pos": 2},
+      {"nick": "skitzofrenia simulation", "pos": 3},
+      {"nick": "XXXSonic", "pos": 4},
+      {"nick": "jlcee", "pos": 5}
+    ]
+  },
+  {
+    "name": "Veni vidi vici",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "1tsuyoi1", "pos": 1},
+      {"nick": "My name is..", "pos": 2},
+      {"nick": "Pont1k", "pos": 3},
+      {"nick": "Refwq", "pos": 4},
+      {"nick": "Soer", "pos": 5}
+    ]
+  },
+  {
+    "name": "Immortal Dragons",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Dragonay", "pos": 1},
+      {"nick": "Ruben The Cruel", "pos": 2},
+      {"nick": "MjejRin", "pos": 3},
+      {"nick": "Rubistan", "pos": 4},
+      {"nick": "victory lap", "pos": 5}
+    ]
+  }
+]
 },
   {
   "id": "Bedlam-Cup-1x1-Midlane-Master",
