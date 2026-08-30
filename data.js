@@ -10,7 +10,7 @@ const tournaments = [
   "registrationEnd": "",
   "prize": "",
   "location": "Online",
-  "teams": 16,
+  "teams": 10,
   "format": "",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & GOTF eSports",
@@ -112,7 +112,7 @@ const tournaments = [
   "format": "Single Elimination",
   "gameFormat": "Random Cup",
   "organizer": "YARF CUP",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/YarfCup_7/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdDveIJFKDV3t15Ze1W6M3YbOY4YtMUJQYXiBC03e5MSVPCHw/viewform?usp=publish-editor",
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup 7 — онлайн турнир 1×1 по Dota 2 в формате Random Cup. Single Elimination. Все матчи bo1, финал bo3. Взнос 100₽. Призовой фонд 1.000₽.",
@@ -123,7 +123,7 @@ const tournaments = [
     "dotabuff": "",
     "discord": "",
     "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP--DOTA-2-TOURNAMENT--1x1-RaANDOM-CUP-08-13",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/YarfCup_7"
   },
   "casters": [],
   "teamsList": []
@@ -149,7 +149,7 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup x Rampage Championship 1 — онлайн турнир 5×5 по Dota 2. Формат Double Elimination, Captains Mode. Групповой этап bo1, финальный этап bo3, финал bo5. Участие бесплатное. Призовой фонд 3.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "3.000₽", "team": "" }
+    { "place": 1, "amount": "3.000₽", "team": "Eternal Zenith" }
   ],
   "links": {
     "dotabuff": "",
