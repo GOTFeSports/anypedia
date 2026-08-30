@@ -117,7 +117,7 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup 7 — онлайн турнир 1×1 по Dota 2 в формате Random Cup. Single Elimination. Все матчи bo1, финал bo3. Взнос 100₽. Призовой фонд 1.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "1.000₽", "team": "" }
+    { "place": 1, "amount": "1.000₽", "team": "6000000000myself" }
   ],
   "links": {
     "dotabuff": "",
