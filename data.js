@@ -217,9 +217,9 @@ const tournaments = [
   "telegramLink": "https://t.me/bedlamtournaments",
   "description": "BEDLAM CUP 1X1: MIDLANE MASTER — турнир по Dota 2 в формате Solo Mid 1v1. Призовой фонд 10.000₽. Участие бесплатное. Регистрация через @bedlamtournaments_bot.",
   "prizePool": [
-    { "place": 1, "amount": "6.000₽", "team": "" },
-    { "place": 2, "amount": "2.500₽", "team": "" },
-    { "place": 3, "amount": "1.500₽", "team": "" }
+    { "place": 1, "amount": "6.000₽", "team": "Itoshixxx" },
+    { "place": 2, "amount": "2.500₽", "team": "white" },
+    { "place": 3, "amount": "1.500₽", "team": "imortall_boy" }
   ],
   "links": {
     "dotabuff": "",
