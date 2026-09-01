@@ -97,7 +97,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -109,7 +109,7 @@ const teams = [
     aliases: ["DarkHorse"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "5000₽₽",
     telegramLink: "",
     captainLink: "",
     description: "",
@@ -128,8 +128,8 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
-        prize: "",
+        place: "2",
+        prize: "5.000₽",
         limit: "До 32.500 MMR на команду"
       }
     ]
@@ -159,7 +159,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -190,7 +190,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "7",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -202,7 +202,7 @@ const teams = [
     aliases: ["TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "10000₽₽",
     telegramLink: "",
     captainLink: "",
     description: "",
@@ -221,8 +221,8 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
-        prize: "",
+        place: "1",
+        prize: "10.000₽",
         limit: "До 32.500 MMR на команду"
       }
     ]
@@ -252,7 +252,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -283,7 +283,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "5",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -314,7 +314,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "5",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -345,7 +345,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "4",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -376,7 +376,7 @@ const teams = [
       {
         title: "SkewerEsports Season 8",
         date: "2026-08-31",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
