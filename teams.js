@@ -109,7 +109,7 @@ const teams = [
     aliases: ["DarkHorse"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "5000₽₽",
+    prize: "5000₽",
     telegramLink: "",
     captainLink: "",
     description: "",
