@@ -73,6 +73,316 @@ const teams = [
   "tournaments": []
 },
     {
+    id: "emokidy",
+    name: "эмокиды",
+    aliases: ["эмокиды"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "arsenkaban", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "all eyes on me", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "mdk", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Yooku", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "дробовиктор", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "darkhorse",
+    name: "DarkHorse",
+    aliases: ["DarkHorse"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "Саша белый prime", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "smith & wesson", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "RAXMED", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "squalor", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "traher", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "team-horizon-event",
+    name: "Team Horizon Event",
+    aliases: ["Team Horizon Event"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "Дмитрий SWAGBless", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "013DOSTUM", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "german333masochismlnrjbgtfddnrrd", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Women's kill dota", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "zxcVa", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "inquisitors",
+    name: "Inquisitor's",
+    aliases: ["Inquisitor's"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "Veroi", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "JaDiX", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "iwepgg", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "thorzues", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Chesign", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "team-teiko",
+    name: "TEIKO",
+    aliases: ["TEIKO"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "Teenwave", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "14.1", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "dissolved", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "darklight", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "zobaa", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "team-bedlam-battles",
+    name: "Team Bedlam Battles",
+    aliases: ["Team Bedlam Battles"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "heatolonq", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Wizard", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "cherepashka", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "p4sechn1k", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Glamdring〩", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "rakuzan",
+    name: "Rakuzan",
+    aliases: ["Rakuzan"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "UshirOo", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "4or2na-", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "EgorKing", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Shiroyami", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "five more hours", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "xxsonic",
+    name: "XXXSonic",
+    aliases: ["XXXSonic"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "bla", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "noletmedaem", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "skitzofrenia simulation", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "XXXSonic", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "jlcee", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "veni-vidi-vici",
+    name: "Veni vidi vici",
+    aliases: ["Veni vidi vici"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "1tsuyoi1", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "My name is..", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Pont1k", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Refwq", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Soer", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+  {
+    id: "immortal-dragons",
+    name: "Immortal Dragons",
+    aliases: ["Immortal Dragons"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "",
+    captainLink: "",
+    description: "",
+
+    activeRoster: [
+      { nick: "Dragonay", pos: 1, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Ruben The Cruel", pos: 2, joined: "2026-08-30", photo: "image.png" },
+      { nick: "MjejRin", pos: 3, joined: "2026-08-30", photo: "image.png" },
+      { nick: "Rubistan", pos: 4, joined: "2026-08-30", photo: "image.png" },
+      { nick: "victory lap", pos: 5, joined: "2026-08-30", photo: "image.png" }
+    ],
+
+    formerPlayers: [],
+
+    tournaments: [
+      {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+    {
     id: "team-sexy",
     name: "Team Sexy",
     aliases: ["Team Sexy", "team sexy", "Team sexy"],
