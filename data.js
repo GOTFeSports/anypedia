@@ -52,8 +52,8 @@ const tournaments = [
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "SkewerEsports Season 8 — турнир по Dota 2 с ограничением 32.500 MMR на команду. Формат Double Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 15.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "10.000₽", "team": "" },
-    { "place": 2, "amount": "5.000₽", "team": "" }
+    { "place": 1, "amount": "10.000₽", "team": "TEIKO" },
+    { "place": 2, "amount": "5.000₽", "team": "sigma aura" }
   ],
   "links": {
     "dotabuff": "",
