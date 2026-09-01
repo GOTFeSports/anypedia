@@ -73,8 +73,8 @@ const teams = [
   "tournaments": []
 },
     {
-    id: "sigma-aura",
-    name: "sigma aura",
+    id: "emokidy",
+    name: "эмокиды",
     aliases: ["эмокиды"],
     logo: "dota2.png",
     region: "СНГ",
@@ -104,8 +104,8 @@ const teams = [
     ]
   },
   {
-    id: "darkhorse",
-    name: "DarkHorse",
+    id: "sigma-aura",
+    name: "sigma aura",
     aliases: ["DarkHorse"],
     logo: "dota2.png",
     region: "СНГ",
