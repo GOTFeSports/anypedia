@@ -202,7 +202,7 @@ const teams = [
     aliases: ["TEIKO"],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "10000₽₽",
+    prize: "10000₽",
     telegramLink: "",
     captainLink: "",
     description: "",
