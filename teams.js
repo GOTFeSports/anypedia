@@ -713,6 +713,15 @@ const teams = [
     ],
     tournaments: [
         {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "7",
+        prize: "",
+        limit: "До 32.500 MMR на команду"
+      }
+    ]
+  },
+        {
         title: "AnyLvL x GOTF eSports Tournament #2",
         date:  "2026-08-22",
         place: "1",
