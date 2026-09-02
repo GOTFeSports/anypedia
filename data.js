@@ -10,7 +10,7 @@ const tournaments = [
   "registrationEnd": "2026-08-12",
   "prize": "10.000₽",
   "location": "Online",
-  "teams": 10,
+  "teams": 12,
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & GOTF eSports",
