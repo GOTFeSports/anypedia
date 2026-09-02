@@ -1,5 +1,38 @@
 const tournaments = [  
   {
+  "id": "Anypedia-Championship-1",
+  "title": "Anypedia Championship 1",
+  "limit": "",
+  "start": "2026-09-26",
+  "end": "2026-09-27",
+  "startTime": "",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "",
+  "location": "Online",
+  "teams": 0,
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "AnyLvL",
+  "bracketEmbed": "",
+  "registrationLink": "",
+  "telegramLink": "https://t.me/anylvlcommunity",
+  "description": "Мы пока ничего не знаем об этом турнире.",
+  "prizePool": [
+    { "place": 1, "amount": "", "team": "" },
+    { "place": 2, "amount": "", "team": "" },
+    { "place": 3, "amount": "", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "AnyLvL-GOTF-Tournament-3",
   "title": "AnyLvL x GOTF eSports Tournament #3",
   "limit": "32.500 MMR на команду",
