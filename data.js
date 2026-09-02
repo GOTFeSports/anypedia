@@ -33,6 +33,40 @@ const tournaments = [
   "teamsList": []
 },
   {
+  "id": "IMMORTALITY-The-First-Dynasty",
+  "title": "IMMORTALITY: The First Dynasty",
+  "limit": "30.000 MMR на команду (до 1 игрока с 1-2000 рангом)",
+  "start": "2026-09-19",
+  "end": "2026-09-20",
+  "startTime": "13:00",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "30.000₽ + призы",
+  "location": "Online",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "IMMORTALITY",
+  "bracketEmbed": "",
+  "registrationLink": "https://t.me/questionnaireimm",
+  "telegramLink": "",
+  "description": "IMMORTALITY: The First Dynasty — турнир по Dota 2 с ограничением 30.000 MMR на команду. Формат Single Elimination, Captains Mode, все матчи bo1. Участие бесплатное. 8 команд получат прямой инвайт, остальные проходят через квалификации. Призовой фонд 30.000₽ + призы.",
+  "prizePool": [
+    { "place": 1, "amount": "15.000₽", "team": "" },
+    { "place": 2, "amount": "9.000₽", "team": "" },
+    { "place": 3, "amount": "6.000₽", "team": "" },
+    { "place": 4, "amount": "Дота+ (1 мес.)", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "https://t.me/reglamentbyimmortality",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "AnyLvL-GOTF-Tournament-3",
   "title": "AnyLvL x GOTF eSports Tournament #3",
   "limit": "32.500 MMR на команду",
