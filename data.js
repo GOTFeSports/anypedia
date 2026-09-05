@@ -75,9 +75,9 @@ const tournaments = [
   "startTime": "17:00",
   "registrationStart": "",
   "registrationEnd": "2026-09-12",
-  "prize": "10.000₽",
+  "prize": "20.000₽",
   "location": "Online",
-  "teams": 12,
+  "teams": 0,
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & Bedlam",
@@ -87,8 +87,9 @@ const tournaments = [
   "telegramLink": "https://t.me/anylvlcommunity",
   "description": "",
   "prizePool": [
-    { "place": 1, "amount": "8.000₽", "team": "" },
-    { "place": 2, "amount": "2.000₽", "team": "" }
+    { "place": 1, "amount": "10.000₽", "team": "" },
+    { "place": 2, "amount": "7.000₽", "team": "" },
+    { "place": 3, "amount": "3.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
