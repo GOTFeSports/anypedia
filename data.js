@@ -1,5 +1,36 @@
 const tournaments = [  
   {
+  "id": "HATER-ZDES-CUP-S4-D2",
+  "title": "HATER ZDES' CUP Season 4 Division 2",
+  "limit": "До 15.000 MMR на команду",
+  "start": "2026-09-27",
+  "end": "2026-10-04",
+  "startTime": "",
+  "registrationStart": "2026-09-04",
+  "registrationEnd": "2026-09-24",
+  "prize": "100.000₽",
+  "location": "СНГ",
+  "teams": 8,
+  "format": "Swiss + Playoffs",
+  "gameFormat": "Captains Draft",
+  "organizer": "HATER ZDES'",
+  "bracketEmbed": "",
+  "registrationLink": "https://forms.gle/fgtCTXGewDsgSo286",
+  "telegramLink": "https://t.me/haterzdes",
+  "description": "HATER ZDES' CUP SEASON 4 DIVISION 2 — турнир по Dota 2 с ограничением 15.000 MMR на команду. Формат швейцарка + плей-офф, Captains Draft. Участие бесплатное. Призовой фонд 100.000₽ за 1 место.",
+  "prizePool": [
+    { "place": 1, "amount": "100.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Anypedia-Championship-1",
   "title": "Anypedia Championship 1",
   "limit": "",
