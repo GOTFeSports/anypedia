@@ -127,7 +127,10 @@ const tournaments = [
     "rules": "https://docs.google.com/document/d/12xvN_LgLRhU4Du7GNN4Qw8q7VnTopWwU/edit?usp=sharing&ouid=111035949132865620643&rtpof=true&sd=true",
     "bracket": "https://challonge.com/ru/BxAC"
   },
-  "casters": [],
+  "casters": [
+    { "name": "Bedlam Cast", "link": "https://www.twitch.tv/bedlambattlestournaments" },
+    { "name": "BLACKARHANGEL", "link": "https://www.twitch.tv/blackarhangel" }
+  ],
   "teamsList": [
   {
     "name": "海 常 Kaijo",
