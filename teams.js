@@ -1390,7 +1390,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
