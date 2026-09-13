@@ -37,21 +37,21 @@ const tournaments = [
   "start": "2026-09-26",
   "end": "2026-09-26",
   "startTime": "17:00",
-  "registrationStart": "",
-  "registrationEnd": "2026-08-12",
-  "prize": "10.000₽",
+  "registrationStart": "2026-09-26",
+  "registrationEnd": "2026-09-15",
+  "prize": "12.000₽",
   "location": "Online",
-  "teams": 10,
+  "teams": 16,
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "AnyLvL & GOTF eSports",
   "bracketEmbed": "",
   "registrationLink": "",
   "telegramLink": "https://t.me/anylvlcommunity",
-  "description": "AnyLvL x GOTF eSports Tournament #3 — турнир по Dota 2. Формат Single Elimination, Captains Mode, все матчи bo1. Взнос 1000₽ с команды. Призовой фонд 10.000₽.",
+  "description": "AnyLvL x GOTF eSports Tournament #3 — турнир по Dota 2. Формат Single Elimination, Captains Mode, все матчи bo1. Взнос 1000₽ с команды. Призовой фонд 12.000₽.",
   "prizePool": [
     { "place": 1, "amount": "8.000₽", "team": "" },
-    { "place": 2, "amount": "2.000₽", "team": "" }
+    { "place": 2, "amount": "4.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
