@@ -908,7 +908,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -936,7 +936,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -966,7 +966,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "21",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -994,7 +994,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1022,7 +1022,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1050,7 +1050,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "37",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1081,7 +1081,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "37",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1137,7 +1137,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1165,7 +1165,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "21",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1193,7 +1193,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1250,7 +1250,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1278,7 +1278,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "37",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1306,7 +1306,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1334,7 +1334,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "29",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1418,7 +1418,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "29",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1446,7 +1446,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1530,7 +1530,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1558,7 +1558,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1614,7 +1614,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "21",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1642,7 +1642,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1670,7 +1670,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "21",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1698,7 +1698,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1726,7 +1726,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1754,7 +1754,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "29",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1782,7 +1782,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1838,7 +1838,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1866,7 +1866,7 @@ const teams = [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "29",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
