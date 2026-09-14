@@ -825,375 +825,29 @@ const teams = [
     ]
   },
 
-  /* ============================================================
-     НОВЫЕ КОМАНДЫ — Yarf Cup x RAMPAGE 5x5 (регистрация из Excel)
-     Дата турнира: 2026-08-13
-     ============================================================ */
-
-  {
-    id: "elpatron-team",
-    name: "ElPatron Team",
-    aliases: ["ElPatron Team", "ElPatron"],
+    {
+    id: "team-helix",
+    name: "Team Helix",
+    aliases: ["Team Helix", "team helix", "helix"],
     logo: "dota2.png",
     region: "СНГ",
     prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/asxab777ko",
+    telegramLink: "https://t.me/notjoke00",
+    captainLink: "https://t.me/notjoke00",
     description: "",
     activeRoster: [
-      { nick: "den4ik6070", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "dxilz322", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "kritomaev812", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1hatefoids333", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "cvxsd", pos: 5, joined: "2026-08-13", photo: "image.png" }
+      { nick: "remisshka♫♫", pos: 1, joined: "2026-09-04", photo: "image.png" },
+      { nick: "Veyro", pos: 2, joined: "2026-09-04", photo: "image.png" },
+      { nick: "svamm", pos: 3, joined: "2026-09-04", photo: "image.png" },
+      { nick: "?", pos: 4, joined: "2026-09-04", photo: "image.png" },
+      { nick: "Look who lost their soul", pos: 5, joined: "2026-09-04", photo: "image.png" }
     ],
     formerPlayers: [],
     tournaments: [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "btv-kstati",
-    name: "бтв кстати",
-    aliases: ["бтв кстати"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/mozaratell",
-    description: "",
-    activeRoster: [
-      { nick: "skimo", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "kLen", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "mozaratell", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Yui", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "R0z3tk4", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "lowskillsteam",
-    name: "LowSkillsTeam",
-    aliases: ["LowSkillsTeam", "LowSkills"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/DolbilaPL",
-    description: "",
-    activeRoster: [
-      { nick: "Iseedeadp3ople雨1337<3", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "shapaclyack", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "akvariz", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Karma", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "из вращенец", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "17",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "halalteam",
-    name: "HalalTeam",
-    aliases: ["HalalTeam", "Halal Team"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/kitem_s",
-    description: "",
-    activeRoster: [
-      { nick: "мыколайчик", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Сургутский зверь", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "КР0В0ЖАДНАЯ ПNЯВКА", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "брабус", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "﷽﷽﷽", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "9",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "m5-team",
-    name: "M5 Team",
-    aliases: ["M5 Team", "M5"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/SypermegaJestkiy",
-    description: "",
-    activeRoster: [
-      { nick: "Hik1kamori", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Fustizee", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Foxik Toxic:3", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Insone", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Vinchaizeee", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [
-      { nick: "VSG", pos: 5, joined: "2026-08-13", left: "2026-08-13" }
-    ],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "21",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "bugoyatnik",
-    name: "BUGOYATNIK",
-    aliases: ["BUGOYATNIK"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/SaidRU1378",
-    description: "",
-    activeRoster: [
-      { nick: "zverrrina", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "karmnxy", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "said_aliev", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "skatovan", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "momiko2", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "33",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-netix",
-    name: "TEAM NETIX",
-    aliases: ["TEAM NETIX", "Team Netix", "NETIX"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/watashi92",
-    description: "",
-    activeRoster: [
-      { nick: "WatashiGOAT", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Usomiya", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Crazy_Meat", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "WEIZZ", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "NTX-H5R854", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "13",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "expo",
-    name: "Expo",
-    aliases: ["Expo"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/TOPOHTOTOKYO",
-    description: "",
-    activeRoster: [
-      { nick: "Yatorodog812", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "rouusahh", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "motik", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "morf", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "hamatowi", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "37",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-barni",
-    name: "Team Барни",
-    aliases: ["Team Барни", "Team Barni", "Барни"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/cvvqwrw",
-    description: "",
-    activeRoster: [
-      { nick: "worthless", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Seneck", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Koner_66", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Hadouken", pos: 5, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Veyro", pos: 6, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [
-      { nick: "ars1k", pos: 2, joined: "2026-08-13", left: "2026-08-13", newTeam: "Моggilev" },
-      { nick: "D1rector", pos: 3, joined: "2026-08-13", left: "2026-08-13" }
-    ],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "37",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "123team",
-    name: "123TEAM",
-    aliases: ["123TEAM", "123 Team"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Zxcviperr342",
-    description: "",
-    activeRoster: [
-      { nick: "Sunlight", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Asma", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "zxcviperr123", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Sarushibai", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Mira333", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-feeders",
-    name: "Team Feeders",
-    aliases: ["Team Feeders", "Feeders"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/bombaclatnaruto",
-    description: "",
-    activeRoster: [
-      { nick: "алим", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Jopa", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "halal gangsta", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "hawai", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "перега пират", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "9",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "popka",
-    name: "popka",
-    aliases: ["popka"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/emilkleaplse",
-    description: "",
-    activeRoster: [
-      { nick: "ilussion666", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "arturka", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Py", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "fek", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Вселенный Ебатель", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "21",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-pomar",
-    name: "Team Pomar",
-    aliases: ["Team Pomar", "Pomar"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/wehety",
-    description: "",
-    activeRoster: [
-      { nick: "wehety", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "ICE7ifz", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Messmer", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "мішаня лізун", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Прохор", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "33",
+        place: "1",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1202,251 +856,26 @@ const teams = [
   {
     id: "moondie",
     name: "MoonDie",
-    aliases: ["MoonDie", "Moonlight Temporarily", "Moonlight"],
+    aliases: ["MoonDie", "moondie", "Moonlight Temporarily"],
     logo: "dota2.png",
     region: "СНГ",
     prize: "0₽",
-    telegramLink: "",
+    telegramLink: "https://t.me/jester_2233",
     captainLink: "https://t.me/jester_2233",
     description: "",
     activeRoster: [
-      { nick: "Jester", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Nepogreshim", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Mode:Кунилингус", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Matie", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Always be learning", pos: 5, joined: "2026-08-13", photo: "image.png" }
+      { nick: "Jester", pos: 1, joined: "2026-09-02", photo: "image.png" },
+      { nick: "Nepogreshim", pos: 2, joined: "2026-09-02", photo: "image.png" },
+      { nick: "Mode:Кунилингус", pos: 3, joined: "2026-09-02", photo: "image.png" },
+      { nick: "Matie", pos: 4, joined: "2026-09-02", photo: "image.png" },
+      { nick: "Always be learning", pos: 5, joined: "2026-09-02", photo: "image.png" }
     ],
     formerPlayers: [],
     tournaments: [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "true-form",
-    name: "True Form",
-    aliases: ["True Form"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/etanarutsukuyomi",
-    description: "",
-    activeRoster: [
-      { nick: "yatoro mode all mute 1x9", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1x9 all muted ghoul mode//", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Hakuro", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "13kaiser mode37", pos: 4, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [
-      { nick: "Miposhika", pos: 5, joined: "2026-08-13", left: "2026-08-13", newTeam: "Mosquito Gang" }
-    ],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "13",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-spirt",
-    name: "team spirt",
-    aliases: ["team spirt", "Team Spirt"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/unquaru",
-    description: "",
-    activeRoster: [
-      { nick: "unquaru", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "gothviolence", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "МясноеБезумие35см", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "wwwdnsf", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "shailiges", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "37",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-spilis",
-    name: "Team Spilis",
-    aliases: ["Team Spilis", "Spilis"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/extandworldwidewanted",
-    description: "",
-    activeRoster: [
-      { nick: "Heilrake", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "idontwannawakeupinkai", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "sex n words ex", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Кормящий папа", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Cruestaxx^^", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "17",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "l2-hunters",
-    name: "l2 hunters",
-    aliases: ["l2 hunters", "L2 Hunters"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/fujinoyamaa",
-    description: "",
-    activeRoster: [
-      { nick: "forkids", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "effondre", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "zodiak", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "fujinoyama", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "nov", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "29",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "wb-team",
-    name: "WB Team",
-    aliases: ["WB Team", "WB"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/DurckA79",
-    description: "",
-    activeRoster: [
-      { nick: "0 mistakes", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "h.hoshii", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Kyretexx", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "DurckA79", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Api", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "uncrowned-kings",
-    name: "Uncrowned Kings",
-    aliases: ["Uncrowned Kings", "Uncrowned"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/inscpector",
-    description: "",
-    activeRoster: [
-      { nick: "parker", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "animegirl666", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Acne", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "zxc дальнобойщик♥", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Вовчик", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "25",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-hbi",
-    name: "Team HBI",
-    aliases: ["Team HBI", "HBI"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/N1ghtSoul89",
-    description: "",
-    activeRoster: [
-      { nick: "Yurnex", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "N1ghtSoul", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Borik", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "no_name", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Really?", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "29",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-ykb",
-    name: "Team YKB",
-    aliases: ["Team YKB", "YKB"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/in333dw333d",
-    description: "",
-    activeRoster: [
-      { nick: "badabam0", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Young~", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "кучерявый", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "achiles blake", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "KuniMaster", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "17",
+        place: "2",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1455,418 +884,26 @@ const teams = [
   {
     id: "shabashka",
     name: "shabashka",
-    aliases: ["shabashka"],
+    aliases: ["shabashka", "Shabashka"],
     logo: "dota2.png",
     region: "СНГ",
     prize: "0₽",
-    telegramLink: "",
+    telegramLink: "https://t.me/mindsetduraka",
     captainLink: "https://t.me/mindsetduraka",
     description: "",
     activeRoster: [
-      { nick: "k3zo_0", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "asd", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "ПК-Боярин", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Agression Mode", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "asmartl", pos: 5, joined: "2026-08-13", photo: "image.png" }
+      { nick: "k3zo_0", pos: 1, joined: "2026-09-04", photo: "image.png" },
+      { nick: "asd", pos: 2, joined: "2026-09-04", photo: "image.png" },
+      { nick: "ПК-Боярин", pos: 3, joined: "2026-09-04", photo: "image.png" },
+      { nick: "Agression Mode", pos: 4, joined: "2026-09-04", photo: "image.png" },
+      { nick: "asmartl", pos: 5, joined: "2026-09-04", photo: "image.png" }
     ],
     formerPlayers: [],
     tournaments: [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "mosquito-gang",
-    name: "Mosquito Gang",
-    aliases: ["Mosquito Gang", "Mosquito"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/TrblgodXD",
-    description: "",
-    activeRoster: [
-      { nick: "opiat", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Terriblexd", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1gorëkgolodny'", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "isliks", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Miposhika", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "openai-team",
-    name: "OpenAI Team",
-    aliases: ["OpenAI Team", "OpenAI"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/idealichh",
-    description: "",
-    activeRoster: [
-      { nick: "Will Smith", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "vc", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "пуллапнул+профитнул", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "OpenAI (Bot 3)", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "semka71", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "25",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "moggilev",
-    name: "Моggilev",
-    aliases: ["Моggilev", "Moggilev", "Могилев"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Iszoox1",
-    description: "",
-    activeRoster: [
-      { nick: "loser", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1szoox1", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "monster", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "cheesecake", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "мен падышамын", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "33",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "team-helix",
-    name: "Team Helix",
-    aliases: ["Team Helix", "Helix"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/notjoke00",
-    description: "",
-    activeRoster: [
-      { nick: "remisshka♫♫", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Veyro", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "svamm", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "?", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Look who lost their soul", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "cp-esportz-j",
-    name: "CP_EsportZ.J",
-    aliases: ["CP_EsportZ.J", "CP EsportZ"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Pokorutel",
-    description: "",
-    activeRoster: [
-      { nick: "poopeater", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Шu6аPu_Nз_ВеН", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Necromaster", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "отсоси мне дура", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Pokorutel", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "21",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "poluostrov-taymyr",
-    name: "Полуостров Таймыр",
-    aliases: ["Полуостров Таймыр", "Таймыр"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/trykn_tanic",
-    description: "",
-    activeRoster: [
-      { nick: "Бабушкина ерунда", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "afraid", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "(PT)Ради Сахарка", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Будильник", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "SDeLaL_Sam66", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "25",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "pantera-team",
-    name: "pantera team",
-    aliases: ["pantera team", "Pantera Team"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/internetgodf0",
-    description: "",
-    activeRoster: [
-      { nick: "Case7r", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "internetgodf", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "2016", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "pivo", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "нюша", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "21",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "ochen-bolshaya-igra",
-    name: "очень большая игра",
-    aliases: ["очень большая игра", "Большая игра"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/F4SCINAT0R",
-    description: "",
-    activeRoster: [
-      { nick: "СЕРЁГА ПИСКАРЬ", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "mybloodyvalentine", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "большая игра", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Lorenof mindset", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "ЖOПOЛИЗ CEMИKЛACCHИKOB", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "13",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "meowwknight",
-    name: "meowwknight",
-    aliases: ["meowwknight"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/hdhdjeksj223",
-    description: "",
-    activeRoster: [
-      { nick: "noawakemonkey", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "vertigaa", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "JETIX", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "b3br1na", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "xxxumera", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "33",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "1kmonsters",
-    name: "1KMONSTERS",
-    aliases: ["1KMONSTERS", "1K Monsters"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Costolet",
-    description: "",
-    activeRoster: [
-      { nick: "kaoru", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Kirya", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "wWalter", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "лабуба", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "охота крепкая", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "29",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "silent-gaming",
-    name: "Silent gaming",
-    aliases: ["Silent gaming", "Silent Gaming"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/fric1489",
-    description: "",
-    activeRoster: [
-      { nick: "totalfoiddestraction", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "nikushimi", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "сучара2010", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "ананасы ем", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Archkazar", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "17",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "denis-dobryy",
-    name: "Денис Добрый",
-    aliases: ["Денис Добрый", "Denis Dobry"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/newermore01",
-    description: "",
-    activeRoster: [
-      { nick: "1788014697", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1465768727", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "729179835", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "772894849", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "1914837124", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "moonlight",
-    name: "Moonlight",
-    aliases: ["Moonlight"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Ya_Vas_Pon372",
-    description: "",
-    activeRoster: [
-      { nick: "pamedor", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Nikrón", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "3000 миль дo рaя.", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "yes, i deimos", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "</tatsumi>", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "13",
-        prize: "",
-        limit: "До 5.000 MMR на игрока."
-      }
-    ]
-  },
-  {
-    id: "kilka-squad",
-    name: "Kilka_squad",
-    aliases: ["Kilka_squad", "Kilka Squad"],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "0₽",
-    telegramLink: "",
-    captainLink: "https://t.me/Nzxcay",
-    description: "",
-    activeRoster: [
-      { nick: "hoshi basisya", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "kilka", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "kaneki ken", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "Целуй ножки", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "имбирь", pos: 5, joined: "2026-08-13", photo: "image.png" }
-    ],
-    formerPlayers: [],
-    tournaments: [
-      {
-        title: "Yarf Cup x Rampage Championship 1",
-        date: "2026-08-13",
-        place: "29",
+        place: "3",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
@@ -1875,32 +912,87 @@ const teams = [
   {
     id: "low-cortisol",
     name: "low cortisol",
-    aliases: ["low cortisol"],
+    aliases: ["low cortisol", "Low Cortisol"],
     logo: "dota2.png",
     region: "СНГ",
     prize: "0₽",
-    telegramLink: "",
+    telegramLink: "https://t.me/manshinee",
     captainLink: "https://t.me/manshinee",
     description: "",
     activeRoster: [
-      { nick: "enight", pos: 1, joined: "2026-08-13", photo: "image.png" },
-      { nick: "курю колосок", pos: 2, joined: "2026-08-13", photo: "image.png" },
-      { nick: "@рбу3", pos: 3, joined: "2026-08-13", photo: "image.png" },
-      { nick: "demuyo imiru", pos: 4, joined: "2026-08-13", photo: "image.png" },
-      { nick: "стас", pos: 5, joined: "2026-08-13", photo: "image.png" }
+      { nick: "enight", pos: 1, joined: "2026-09-04", photo: "image.png" },
+      { nick: "курю колосок", pos: 2, joined: "2026-09-04", photo: "image.png" },
+      { nick: "@рбу3", pos: 3, joined: "2026-09-04", photo: "image.png" },
+      { nick: "demuyo imiru", pos: 4, joined: "2026-09-04", photo: "image.png" },
+      { nick: "стас", pos: 5, joined: "2026-09-04", photo: "image.png" }
     ],
     formerPlayers: [],
     tournaments: [
       {
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
-        place: "",
+        place: "4",
         prize: "",
         limit: "До 5.000 MMR на игрока."
       }
     ]
   },
-];
+  {
+    id: "mosquito-gang",
+    name: "Mosquito Gang",
+    aliases: ["Mosquito Gang", "mosquito gang", "MosquitoGang"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "https://t.me/TrblgodXD",
+    captainLink: "https://t.me/TrblgodXD",
+    description: "",
+    activeRoster: [
+      { nick: "opiat", pos: 1, joined: "2026-09-04", photo: "image.png" },
+      { nick: "Terriblexd", pos: 2, joined: "2026-09-04", photo: "image.png" },
+      { nick: "1gorëkgolodny'", pos: 3, joined: "2026-09-04", photo: "image.png" },
+      { nick: "isliks", pos: 4, joined: "2026-09-04", photo: "image.png" },
+      { nick: "Miposhika", pos: 5, joined: "2026-09-04", photo: "image.png" }
+    ],
+    formerPlayers: [],
+    tournaments: [
+      {
+        title: "Yarf Cup x Rampage Championship 1",
+        date: "2026-08-13",
+        place: "5",
+        prize: "",
+        limit: "До 5.000 MMR на игрока."
+      }
+    ]
+  },
+  {
+    id: "123team",
+    name: "123TEAM",
+    aliases: ["123TEAM", "123team", "123 Team"],
+    logo: "dota2.png",
+    region: "СНГ",
+    prize: "0₽",
+    telegramLink: "https://t.me/Zxcviperr342",
+    captainLink: "https://t.me/Zxcviperr342",
+    description: "",
+    activeRoster: [
+      { nick: "Sunlight", pos: 1, joined: "2026-09-01", photo: "image.png" },
+      { nick: "Asma", pos: 2, joined: "2026-09-01", photo: "image.png" },
+      { nick: "zxcviperr123", pos: 3, joined: "2026-09-01", photo: "image.png" },
+      { nick: "Sarushibai", pos: 4, joined: "2026-09-01", photo: "image.png" },
+      { nick: "Mira333", pos: 5, joined: "2026-09-01", photo: "image.png" }
+    ],
+    formerPlayers: [],
+    tournaments: [
+      {
+        title: "Yarf Cup x Rampage Championship 1",
+        date: "2026-08-13",
+        place: "6",
+        prize: "",
+        limit: "До 5.000 MMR на игрока."
+      }
+    ]
+  },
 
 /* ============================================================
    ИГРОКИ — автосборка профилей из activeRoster/formerPlayers
