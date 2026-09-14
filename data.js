@@ -855,7 +855,75 @@ const tournaments = [
     "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
     "bracket": ""
   },
-  "casters": []
+  "casters": [],
+  "teamsList": [
+  {
+    "name": "Team Helix",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "remisshka♫♫", "pos": 1},
+      {"nick": "Veyro", "pos": 2},
+      {"nick": "svamm", "pos": 3},
+      {"nick": "?", "pos": 4},
+      {"nick": "Look who lost their soul", "pos": 5}
+    ]
+  },
+  {
+    "name": "MoonDie",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Jester", "pos": 1},
+      {"nick": "Nepogreshim", "pos": 2},
+      {"nick": "Mode:Кунилингус", "pos": 3},
+      {"nick": "Matie", "pos": 4},
+      {"nick": "Always be learning", "pos": 5}
+    ]
+  },
+  {
+    "name": "shabashka",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "k3zo_0", "pos": 1},
+      {"nick": "asd", "pos": 2},
+      {"nick": "ПК-Боярин", "pos": 3},
+      {"nick": "Agression Mode", "pos": 4},
+      {"nick": "asmartl", "pos": 5}
+    ]
+  },
+  {
+    "name": "low cortisol",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "enight", "pos": 1},
+      {"nick": "курю колосок", "pos": 2},
+      {"nick": "@рбу3", "pos": 3},
+      {"nick": "demuyo imiru", "pos": 4},
+      {"nick": "стас", "pos": 5}
+    ]
+  },
+  {
+    "name": "Mosquito Gang",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "opiat", "pos": 1},
+      {"nick": "Terriblexd", "pos": 2},
+      {"nick": "1gorëkgolodny'", "pos": 3},
+      {"nick": "isliks", "pos": 4},
+      {"nick": "Miposhika", "pos": 5}
+    ]
+  },
+  {
+    "name": "123TEAM",
+    "logo": "dota2.png",
+    "roster": [
+      {"nick": "Sunlight", "pos": 1},
+      {"nick": "Asma", "pos": 2},
+      {"nick": "zxcviperr123", "pos": 3},
+      {"nick": "Sarushibai", "pos": 4},
+      {"nick": "Mira333", "pos": 5}
+    ]
+  }
+]
 },
   {
   "id": "Yarf-Cup-6",
