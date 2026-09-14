@@ -449,21 +449,21 @@ const teams = [
     telegramLink: "https://t.me/hakiavota",
     captainLink: "https://t.me/Mikhael16",
     description: "СНГ-команда, ведущая свою историю с 2025 года. Коллектив неоднократно показывает достойные результаты на региональных турнирах и имеет в активе чемпионский титул на AnyLvL x GOTF eSports: Special 2. LETO Junior является одной из заметных молодых команд своей сцены.",
-    activeRoster: [
-      { nick: "cotsu", pos: 1, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
-      { nick: "Alisa", pos: 2, joined: "2025-05-14" , photo: "image.png", "country": "ru", banned: { league: "AnyLvL Community", reason: "Систематические оскорбления и уничижительные высказывания в адрес организаторов турнира." } },
-      { nick: "popi", pos: 3, joined: "2025-05-14" , photo: "image.png", "country": "ru" },
-      { nick: "DarkLight", pos: 4, joined: "2026-05-31" , photo: "image.png", "country": "ru" },
-      { nick: "detox", pos: 5, joined: "2026-08-10" , photo: "image.png", "country": "ru" },
+        activeRoster: [
+      { nick: "cotsu", pos: 1, joined: "2026-05-31", photo: "image.png", country: "ru" },
+      { nick: "Alisa", pos: 2, joined: "2025-05-14", photo: "image.png", country: "ru", banned: { league: "AnyLvL Community", reason: "Систематические оскорбления и уничижительные высказывания в адрес организаторов турнира." } },
+      { nick: "popi", pos: 3, joined: "2025-05-14", photo: "image.png", country: "ru" },
+      { nick: "DarkLight", pos: 4, joined: "2026-05-31", photo: "image.png", country: "ru" },
+      { nick: "detox", pos: 5, joined: "2026-08-10", photo: "image.png", country: "ru" }
     ],
-      staff: [
-          { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
-],
+    staff: [
+      { nick: "el tivke", role: "Manager", joined: "2026-05-31" }
+    ],
     formerPlayers: [
-      { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team"    },
-      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)", "country": "uz"    },
-      { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: ""    },
-      { nick: "ManjaLord", pos: 5, joined: "2025-07-28", left: "2026-09-10", "country": "by"      },
+      { nick: "Teenwave", pos: 1, joined: "2025-05-14", left: "2026-05-31", newTeam: "Barracuda Team" },
+      { nick: "el tivke", pos: 4, joined: "2025-05-14", left: "2026-05-31", newTeam: "LETO Junior (Manager)", country: "uz" },
+      { nick: "Freak", pos: 5, joined: "2025-05-14", left: "2026-07-28", newTeam: "" },
+      { nick: "ManjaLord", pos: 5, joined: "2025-07-28", left: "2026-09-10", country: "by" }
     ],
     tournaments: [
         {
