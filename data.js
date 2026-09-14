@@ -117,9 +117,9 @@ const tournaments = [
   "telegramLink": "https://t.me/anylvlcommunity",
   "description": "AnyLvL × Bedlam: COLLISION — онлайн-турнир по Dota 2, организованный AnyLvL и Bedlam, прошедший 12—13 сентября 2026 года с участием 43 команд. Турнир проводился в формате Double Elimination и Captains Mode, с ограничением в 32 500 MMR на команду и призовым фондом 35 000 ₽.",
   "prizePool": [
-    { "place": 1, "amount": "20.000₽", "team": "" },
-    { "place": 2, "amount": "10.000₽", "team": "" },
-    { "place": 3, "amount": "5.000₽", "team": "" }
+    { "place": 1, "amount": "20.000₽", "team": "Gitlz" },
+    { "place": 2, "amount": "10.000₽", "team": "Outsiders" },
+    { "place": 3, "amount": "5.000₽", "team": "IGROKI" }
   ],
   "links": {
     "dotabuff": "",
