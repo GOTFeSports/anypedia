@@ -1,5 +1,38 @@
 const tournaments = [  
   {
+  "id": "Yarf-Cup-8",
+  "title": "Yarf Cup 8",
+  "limit": "Без ограничений",
+  "start": "2026-09-20",
+  "end": "2026-09-20",
+  "startTime": "12:00",
+  "registrationStart": "",
+  "registrationEnd": "2026-09-19",
+  "prize": "1.500₽",
+  "location": "Online",
+  "teams": 0,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "YARF CUP",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfs4HrEaNUBUr1VRAu08iAAUZzMUtAcacTuxlWQy5alGDykOg/viewform?usp=publish-editor",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Yarf Cup 8 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
+  "prizePool": [
+    { "place": 1, "amount": "1.500₽", "team": "" },
+    { "place": 2, "amount": "", "team": "" },
+    { "place": 3, "amount": "", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/xY7fzhhwh",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "HATER-ZDES-CUP-S4-D2",
   "title": "HATER ZDES' CUP Season 4 Division 2",
   "limit": "До 15.000 MMR на команду",
@@ -835,7 +868,7 @@ const tournaments = [
   "startTime": "15:00",
   "registrationStart": "",
   "registrationEnd": "2026-09-04",
-  "prize": "3.000₽",
+  "prize": "2.000₽",
   "location": "СНГ",
   "teams": 32,
   "format": "Double Elimination",
@@ -847,7 +880,8 @@ const tournaments = [
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup x Rampage Championship 1 — онлайн турнир 5×5 по Dota 2. Формат Double Elimination, Captains Mode. Групповой этап bo1, финальный этап bo3, финал bo5. Участие бесплатное. Призовой фонд 3.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "3.000₽", "team": "" }
+    { "place": 1, "amount": "1.500₽", "team": "Team Helix" },
+    { "place": 1, "amount": "500₽", "team": "MoonDie" }
   ],
   "links": {
     "dotabuff": "",
