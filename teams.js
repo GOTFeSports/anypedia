@@ -222,7 +222,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       },
@@ -700,7 +700,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       },
@@ -927,7 +927,7 @@ const teams = [
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
         place: "1",
-        prize: "",
+        prize: "1.500₽",
         limit: "До 5.000 MMR на игрока."
       }
     ]
@@ -943,7 +943,7 @@ const teams = [
     ],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "500₽",
     telegramLink: "https://t.me/jester_2233",
     captainLink: "https://t.me/jester_2233",
     description: "",
@@ -963,7 +963,7 @@ const teams = [
         title: "Yarf Cup x Rampage Championship 1",
         date: "2026-08-13",
         place: "2",
-        prize: "",
+        prize: "500₽",
         limit: "До 5.000 MMR на игрока."
       }
     ]
@@ -1119,7 +1119,7 @@ const teams = [
     ],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "10.000₽",
     telegramLink: "https://t.me/dark_light666",
     captainLink: "https://t.me/dark_light666",
     description: "",
@@ -1247,7 +1247,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1281,7 +1281,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1315,7 +1315,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1349,7 +1349,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1383,7 +1383,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1417,7 +1417,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1451,7 +1451,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1587,7 +1587,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1621,7 +1621,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1689,7 +1689,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1723,7 +1723,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1757,7 +1757,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1825,7 +1825,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1893,7 +1893,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1927,7 +1927,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1961,7 +1961,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2029,7 +2029,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2063,7 +2063,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2097,7 +2097,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2131,7 +2131,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "25",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2165,7 +2165,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2335,7 +2335,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "33",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2369,7 +2369,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2403,7 +2403,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "17",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
