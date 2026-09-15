@@ -145,7 +145,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 32.500 MMR на команду"
       },
@@ -237,41 +237,6 @@ const teams = [
   },
 
   {
-    id: "team-teiko",
-    name: "TEIKO",
-    aliases: [
-      "TEIKO"
-    ],
-    logo: "dota2.png",
-    region: "СНГ",
-    prize: "10000₽",
-    telegramLink: "",
-    captainLink: "",
-    description: "",
-
-    activeRoster: [
-      { nick: "Teenwave", pos: 1, joined: "2026-08-30", photo: "image.png" },
-      { nick: "14.1", pos: 2, joined: "2026-08-30", photo: "image.png" }
-    ],
-
-    formerPlayers: [
-      { nick: "dissolved", pos: 3, joined: "2026-08-30", left: "2026-09-12", newTeam: "" },
-      { nick: "darklight", pos: 4, joined: "2026-08-30", left: "2026-09-12", newTeam: "" },
-      { nick: "zobaa", pos: 5, joined: "2026-08-30", left: "2026-09-12", newTeam: "" }
-    ],
-
-    tournaments: [
-      {
-        title: "SkewerEsports Season 8",
-        date: "2026-08-31",
-        place: "1",
-        prize: "10.000₽",
-        limit: "До 32.500 MMR на команду"
-      }
-    ]
-  },
-
-  {
     id: "team-bedlam-battles",
     name: "Team Bedlam Battles",
     aliases: [
@@ -298,7 +263,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       },
@@ -1171,9 +1136,16 @@ const teams = [
 
     tournaments: [
       {
+        title: "SkewerEsports Season 8",
+        date: "2026-08-31",
+        place: "1",
+        prize: "10.000₽",
+        limit: "До 32.500 MMR на команду"
+      },
+      {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1207,7 +1179,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "5",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1222,7 +1194,7 @@ const teams = [
     ],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "5.000₽",
     telegramLink: "https://t.me/kftudrkb",
     captainLink: "https://t.me/kftudrkb",
     description: "",
@@ -1241,8 +1213,8 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
-        prize: "",
+        place: "3",
+        prize: "5.000₽",
         limit: "До 32.500 MMR на команду"
       }
     ]
@@ -1547,7 +1519,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1581,7 +1553,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "9",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1683,7 +1655,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "5",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1819,7 +1791,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "7",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -1887,7 +1859,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2023,7 +1995,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "4",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2227,7 +2199,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "13",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2240,9 +2212,9 @@ const teams = [
     aliases: [
       "Gitlz"
     ],
-    logo: "dota2.png",
+    logo: "gitlz.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "20.000₽",
     telegramLink: "https://t.me/puziblinchik96",
     captainLink: "https://t.me/puziblinchik96",
     description: "",
@@ -2261,8 +2233,8 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
-        prize: "",
+        place: "1",
+        prize: "20.000₽",
         limit: "До 32.500 MMR на команду"
       }
     ]
@@ -2295,7 +2267,7 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
+        place: "7",
         prize: "",
         limit: "До 32.500 MMR на команду"
       }
@@ -2310,7 +2282,7 @@ const teams = [
     ],
     logo: "dota2.png",
     region: "СНГ",
-    prize: "0₽",
+    prize: "10.000₽",
     telegramLink: "https://t.me/comebackisreaI",
     captainLink: "https://t.me/comebackisreaI",
     description: "",
@@ -2329,8 +2301,8 @@ const teams = [
       {
         title: "AnyLvL × Bedlam: COLLISION",
         date: "2026-09-13",
-        place: "",
-        prize: "",
+        place: "2",
+        prize: "10.000₽",
         limit: "До 32.500 MMR на команду"
       }
     ]
