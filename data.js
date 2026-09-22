@@ -1,5 +1,38 @@
 const tournaments = [  
   {
+  "id": "Big-Yarf-Cup-1",
+  "title": "Big Yarf Cup 1",
+  "limit": "До 6.000 MMR на игрока",
+  "start": "2026-09-27",
+  "end": "2026-09-27",
+  "startTime": "12:00",
+  "registrationStart": "",
+  "registrationEnd": "2026-09-26",
+  "prize": "14.000₽",
+  "location": "Online",
+  "teams": 16,
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "YARF CUP",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdbqyXS4QCBr6n0Y4O7BnKOTifNIdzrzxIldWFlnn_j8bXXGA/viewform?usp=dialog",
+  "telegramLink": "https://t.me/yarfcup",
+  "description": "Big Yarf Cup 1 — онлайн турнир 5×5 по Dota 2 для игроков до 6000 MMR. Формат Single Elimination, Captains Mode. Все матчи bo1, финал и матч за 3 место bo3. Взнос 1000₽ с команды. Призовой фонд 14.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "8.000₽", "team": "" },
+    { "place": 2, "amount": "4.000₽", "team": "" },
+    { "place": 3, "amount": "2.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/xY7fzhhwh",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Bedlam-October-Fest",
   "title": "BEDLAM: OCTOBER FEST",
   "limit": "32.500 MMR на команду",
@@ -81,20 +114,18 @@ const tournaments = [
   "format": "Single Elimination",
   "gameFormat": "Captains Mode",
   "organizer": "YARF CUP",
-  "bracketEmbed": "",
+  "bracketEmbed": "https://challonge.com/ru/YarfCup_8/module",
   "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfs4HrEaNUBUr1VRAu08iAAUZzMUtAcacTuxlWQy5alGDykOg/viewform?usp=publish-editor",
   "telegramLink": "https://t.me/yarfcup",
   "description": "Yarf Cup 8 — онлайн турнир 5×5 по Dota 2. Формат Single Elimination, Captains Mode. Все матчи bo1, финал bo3. Участие бесплатное. Призовой фонд 1.500₽.",
   "prizePool": [
-    { "place": 1, "amount": "1.500₽", "team": "" },
-    { "place": 2, "amount": "", "team": "" },
-    { "place": 3, "amount": "", "team": "" }
+    { "place": 1, "amount": "1.500₽", "team": "НГАСУ (Основа)" }
   ],
   "links": {
     "dotabuff": "",
     "discord": "https://discord.gg/xY7fzhhwh",
     "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
-    "bracket": ""
+    "bracket": "https://challonge.com/ru/YarfCup_8"
   },
   "casters": [],
   "teamsList": []
@@ -182,10 +213,10 @@ const tournaments = [
   "telegramLink": "",
   "description": "IMMORTALITY: The First Dynasty — турнир по Dota 2 с ограничением 30.000 MMR на команду. Формат Single Elimination, Captains Mode, все матчи bo1. Участие бесплатное. 8 команд получат прямой инвайт, остальные проходят через квалификации. Призовой фонд 30.000₽ + призы.",
   "prizePool": [
-    { "place": 1, "amount": "15.000₽", "team": "" },
-    { "place": 2, "amount": "9.000₽", "team": "" },
-    { "place": 3, "amount": "6.000₽", "team": "" },
-    { "place": 4, "amount": "Дота+ (1 мес.)", "team": "" }
+    { "place": 1, "amount": "15.000₽", "team": "Buriza Team" },
+    { "place": 2, "amount": "9.000₽", "team": "AMBRELLA TEAM" },
+    { "place": 3, "amount": "6.000₽", "team": "Egoisto Team" },
+    { "place": 4, "amount": "Дота+ (1 мес.)", "team": "bogiold" }
   ],
   "links": {
     "dotabuff": "",
