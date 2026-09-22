@@ -1,5 +1,72 @@
 const tournaments = [  
   {
+  "id": "Bedlam-October-Fest",
+  "title": "BEDLAM: OCTOBER FEST",
+  "limit": "32.500 MMR на команду",
+  "start": "2026-10-03",
+  "end": "2026-10-04",
+  "startTime": "",
+  "registrationStart": "",
+  "registrationEnd": "2026-10-02",
+  "prize": "30.000₽",
+  "location": "Online",
+  "teams": 64,
+  "tier": "A",
+  "format": "Double Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "Bedlam Tournaments",
+  "bracketEmbed": "",
+  "registrationLink": "https://t.me/bedlamtournaments_bot",
+  "telegramLink": "https://t.me/bedlamtournaments",
+  "description": "BEDLAM: OCTOBER FEST — турнир по Dota 2 в формате верхней и нижней сетки. До 64 команд, все матчи bo1, гранд-финал bo3. Взнос 1.000₽ с команды. Призовой фонд 30.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "15.000₽", "team": "" },
+    { "place": 2, "amount": "10.000₽", "team": "" },
+    { "place": 3, "amount": "5.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "",
+    "rules": "",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
+  "id": "SkewerEsports-Season-9",
+  "title": "SkewerEsports Season 9",
+  "limit": "33.000 MMR на команду",
+  "start": "2026-09-25",
+  "end": "2026-09-25",
+  "startTime": "18:30",
+  "registrationStart": "",
+  "registrationEnd": "",
+  "prize": "15.000₽",
+  "location": "Online",
+  "teams": 12,
+  "tier": "B",
+  "format": "Single Elimination",
+  "gameFormat": "Captains Mode",
+  "organizer": "SkewerEsports",
+  "bracketEmbed": "",
+  "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSdQrZ2E2SdwQPkmH3k_eN8WpbktrGptItYrXHgth5JWRv-rIw/viewform?usp=header",
+  "telegramLink": "https://t.me/SkewerEsports",
+  "description": "SkewerEsports Season 9 — турнир по Dota 2 с ограничением 33.000 MMR на команду. Формат Single Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 15.000₽.",
+  "prizePool": [
+    { "place": 1, "amount": "10.000₽", "team": "" },
+    { "place": 2, "amount": "5.000₽", "team": "" }
+  ],
+  "links": {
+    "dotabuff": "",
+    "discord": "https://discord.gg/M6QaGMkdDr",
+    "rules": "https://docs.google.com/document/d/121TcyEwi8DnCRgYAXLaGYemmGL4GfXEMbsWLMCYW5KI/edit?usp=sharing",
+    "bracket": ""
+  },
+  "casters": [],
+  "teamsList": []
+},
+  {
   "id": "Yarf-Cup-8",
   "title": "Yarf Cup 8",
   "limit": "Без ограничений",
