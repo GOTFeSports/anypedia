@@ -139,7 +139,7 @@ const tournaments = [
   "startTime": "",
   "registrationStart": "2026-09-04",
   "registrationEnd": "2026-09-24",
-  "prize": "100.000₽",
+  "prize": "150.000₽",
   "location": "СНГ",
   "teams": 8,
   "format": "Swiss + Playoffs",
@@ -150,7 +150,7 @@ const tournaments = [
   "telegramLink": "https://t.me/haterzdes",
   "description": "HATER ZDES' CUP SEASON 4 DIVISION 2 — турнир по Dota 2 с ограничением 15.000 MMR на команду. Формат швейцарка + плей-офф, Captains Draft. Участие бесплатное. Призовой фонд 100.000₽ за 1 место.",
   "prizePool": [
-    { "place": 1, "amount": "100.000₽", "team": "" }
+    { "place": 1, "amount": "150.000₽", "team": "" }
   ],
   "links": {
     "dotabuff": "",
