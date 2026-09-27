@@ -75,7 +75,7 @@ const tournaments = [
   "startTime": "18:30",
   "registrationStart": "",
   "registrationEnd": "",
-  "prize": "15.000₽",
+  "prize": "12.000₽",
   "location": "Online",
   "teams": 12,
   "tier": "B",
@@ -87,8 +87,8 @@ const tournaments = [
   "telegramLink": "https://t.me/SkewerEsports",
   "description": "SkewerEsports Season 9 — турнир по Dota 2 с ограничением 33.000 MMR на команду. Формат Single Elimination, Captains Mode. Все матчи bo1, гранд-финал bo3. Взнос 1000₽ с команды. Призовой фонд 15.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "10.000₽", "team": "" },
-    { "place": 2, "amount": "5.000₽", "team": "" }
+    { "place": 1, "amount": "8.000₽", "team": "Все, пишите" },
+    { "place": 2, "amount": "4.000₽", "team": "China players" }
   ],
   "links": {
     "dotabuff": "",
@@ -170,7 +170,7 @@ const tournaments = [
   "startTime": "17:00",
   "registrationStart": "2026-09-26",
   "registrationEnd": "2026-09-15",
-  "prize": "12.000₽",
+  "prize": "3.000₽",
   "location": "Online",
   "tier": "B",
   "teams": 6,
@@ -182,7 +182,7 @@ const tournaments = [
   "telegramLink": "https://t.me/anylvlcommunity",
   "description": "AnyLvL x GOTF eSports Tournament #3 — турнир по Dota 2. Формат Single Elimination, Captains Mode, все матчи bo1. Взнос 1000₽ с команды. Призовой фонд 12.000₽.",
   "prizePool": [
-    { "place": 1, "amount": "3.000₽", "team": "" }
+    { "place": 1, "amount": "3.000₽", "team": "Bociarnia" }
   ],
   "links": {
     "dotabuff": "",
