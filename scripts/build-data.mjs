@@ -198,8 +198,14 @@ export function writeBuild(root, { files, sitemap }) {
   fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap);
 }
 
+/* Адрес сайта для sitemap.xml: переменная SITE_URL → site.json {"url": "..."} → файл CNAME. */
 export function siteUrlFor(root, env = process.env) {
   if (env.SITE_URL) return env.SITE_URL;
+  const cfg = path.join(root, 'site.json');
+  if (fs.existsSync(cfg)) {
+    const url = JSON.parse(fs.readFileSync(cfg, 'utf8')).url;
+    if (url) return url;
+  }
   const cname = path.join(root, 'CNAME');
   if (fs.existsSync(cname)) {
     const host = fs.readFileSync(cname, 'utf8').trim();

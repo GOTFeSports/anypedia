@@ -10,7 +10,7 @@ import { buildImport } from './lib/importer.mjs';
 import { createTournament } from './new-tournament.mjs';
 import { runImport } from './import.mjs';
 import { validateRoot } from './validate.mjs';
-import { buildAll } from './build-data.mjs';
+import { buildAll, siteUrlFor } from './build-data.mjs';
 import { normKey, slugify } from './lib/util.mjs';
 
 const silent = () => {};
@@ -391,4 +391,12 @@ test('new-tournament: нет организатора без --organizer-name; �
   createTournament({ title: 'X', organizer: 'o', 'organizer-name': 'O', start: '2026-10-03' }, { root });
   assert.throws(() => createTournament({ title: 'X', organizer: 'o', start: '2026-10-03' }, { root }), /уже существует/);
   assert.throws(() => createTournament({ title: 'X2', organizer: 'o', start: '2026-10-03', end: '2026-10-01' }, { root }));
+});
+
+test('адрес сайта: SITE_URL важнее site.json, site.json важнее CNAME', () => {
+  const root = tmpRoot();                                        // в tmpRoot есть CNAME www.example.test
+  assert.equal(siteUrlFor(root, {}), 'https://www.example.test');
+  fs.writeFileSync(path.join(root, 'site.json'), '{"url":"https://anypedia.vercel.app"}');
+  assert.equal(siteUrlFor(root, {}), 'https://anypedia.vercel.app');
+  assert.equal(siteUrlFor(root, { SITE_URL: 'https://x.test' }), 'https://x.test');
 });
