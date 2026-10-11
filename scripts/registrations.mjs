@@ -1,9 +1,14 @@
 // scripts/registrations.mjs
-// Парсер выгрузок регистрации команд. Две формы:
-//   'bot'    — форма из Telegram-бота: time, user_id, team, p1..p5, s1, s2, tg, logo
-//   'google' — Google Forms: «Отметка времени», «Название команды…», «Регистрация Игрока N», …
-// Нулевые зависимости. Сырой результат содержит ПЕРСОНАЛЬНЫЕ ДАННЫЕ — в git его
-// класть нельзя. В репозиторий идёт только toPublicEntry() (ник + позиция).
+// Парсер выгрузок регистрации команд, управляемый ПРОФИЛЯМИ форм (scripts/form-profiles/*.json).
+// Новая форма оператора = новый JSON-файл профиля, код трогать не нужно.
+// Сырой результат содержит ПЕРСОНАЛЬНЫЕ ДАННЫЕ — в git его класть нельзя.
+// В репозиторий идёт только toPublicEntry() (ник + позиция).
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const PROFILES_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), 'form-profiles');
 
 /* ───────────── CSV / TSV с многострочными ячейками ───────────── */
 
@@ -41,7 +46,7 @@ export function parseDelimited(text, delimiter = detectDelimiter(text)) {
 
 /* ───────────── Разбор ячейки игрока ───────────── */
 
-const norm = s => String(s ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+const hnorm = s => String(s ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
 const EMPTY = new Set(['', '-', '—', '–', 'нет']);
 const clean = v => (v == null || EMPTY.has(String(v).trim().toLowerCase())) ? '' : String(v).trim();
 
@@ -87,21 +92,19 @@ const toMmr = v => {
   return Number.isNaN(n) ? null : n;
 };
 
+/* «23.09.2026 11:33» и «2026-09-23…» → «2026-09-23». Формат со слэшами (M/D/Y или D/M/Y) не поддержан намеренно. */
 const toIsoDate = v => {
-  const m = String(v || '').match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+  const s = String(v || '');
+  let m = s.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+  m = s.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
   return m ? `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}` : null;
 };
 
-const FIELD_MAP = {
-  // порядок полей внутри ячейки игрока отличается между формами
-  bot:    { 1: 'nick', 2: 'mmr', 3: 'steam', 4: 'dotabuff', 5: 'telegram', 6: 'discord' },
-  google: { 1: 'nick', 2: 'realName', 3: 'profile', 4: 'contacts', 5: 'mmr', 6: 'position' },
-};
-
-function parsePlayer(cell, form) {
+function parsePlayer(cell, profile) {
   const raw = splitFields(cell);
   const f = {};
-  for (const [i, key] of Object.entries(FIELD_MAP[form])) f[key] = clean(raw[i]);
+  profile.cell.fields.forEach((key, i) => { f[key] = clean(raw[i + 1]); });
   if (!f.nick) return null;
 
   let telegram = f.telegram || '';
@@ -128,51 +131,71 @@ function parsePlayer(cell, form) {
   };
 }
 
-/* ───────────── Определение формы и сборка команд ───────────── */
+/* ───────────── Профили форм ───────────── */
 
-export function detectForm(header) {
-  const h = header.map(norm);
-  if (h.includes('user_id') && h.includes('team') && h.includes('p1')) return 'bot';
-  if (h.some(x => x.startsWith('название команды')) && h.some(x => /регистрация игрока 1/.test(x))) return 'google';
+export function loadProfiles(dir = PROFILES_DIR) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort().map(f => {
+    const profile = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for (const key of ['id', 'detect', 'columns', 'cell']) {
+      if (!profile[key]) throw new Error(`form-profiles/${f}: нет поля «${key}»`);
+    }
+    if (!profile.columns.team || !profile.columns.players) throw new Error(`form-profiles/${f}: в columns нужны team и players`);
+    if (!profile.cell.fields?.includes('nick')) throw new Error(`form-profiles/${f}: в cell.fields нужен «nick»`);
+    return profile;
+  });
+}
+
+/* spec: { equals: "tg" } | { pattern: "регэксп (\\d)" } — сравнение идёт с заголовком, приведённым к нижнему регистру. */
+function matchSpec(spec, headerCell) {
+  const h = hnorm(headerCell);
+  if (spec.equals !== undefined) return h === String(spec.equals).toLowerCase() ? [h] : null;
+  if (spec.pattern !== undefined) return new RegExp(spec.pattern, 'i').exec(h);
   return null;
 }
 
-function columnsFor(form, header) {
-  const h = header.map(norm);
-  const find = re => h.findIndex(x => re.test(x));
-  if (form === 'bot') {
-    const col = name => h.indexOf(name);
-    return {
-      time: col('time'), team: col('team'), logo: col('logo'), captain: col('tg'),
-      mains: [1, 2, 3, 4, 5].map(n => col(`p${n}`)),
-      subs: [1, 2].map(n => col(`s${n}`)),
-    };
-  }
-  const mains = [], subs = [];
-  h.forEach((x, i) => {
-    let m = x.match(/регистрация игрока (\d)/);
-    if (m) mains[Number(m[1]) - 1] = i;
-    m = x.match(/регистрация замена (\d)/);
-    if (m) subs[Number(m[1]) - 1] = i;
-  });
+export function detectProfile(header, profiles = loadProfiles()) {
+  return profiles.find(p => p.detect.every(spec => header.some(h => matchSpec(spec, h)))) || null;
+}
+
+function resolveColumns(profile, header) {
+  const findOne = spec => (spec ? header.findIndex(h => matchSpec(spec, h)) : -1);
+  const findSlots = spec => {
+    const out = [];
+    if (!spec) return out;
+    header.forEach((h, i) => {
+      const m = matchSpec(spec, h);
+      if (m && m[1]) out[Number(m[1]) - 1] = i;
+    });
+    return out;
+  };
+  const c = profile.columns;
   return {
-    time: find(/^отметка времени/), team: find(/^название команды/), logo: find(/^логотип/),
-    captain: find(/контактные данные капитана/), mains, subs,
+    time: findOne(c.time), team: findOne(c.team), logo: findOne(c.logo), captain: findOne(c.captain),
+    mains: findSlots(c.players), subs: findSlots(c.subs),
   };
 }
 
-export function parseRegistrations(text, { delimiter } = {}) {
+/* ───────────── Разбор файла ───────────── */
+
+export function parseRegistrations(text, { delimiter, profiles, profile: forcedId } = {}) {
   const rows = parseDelimited(text, delimiter);
-  const warnings = [];
   if (!rows.length) return { form: null, teams: [], warnings: ['пустой файл'] };
 
+  const all = profiles ?? loadProfiles();
   const header = rows[0];
-  const form = detectForm(header);
-  if (!form) return { form: null, teams: [], warnings: ['не удалось определить форму по заголовку'] };
+  const profile = forcedId ? all.find(p => p.id === forcedId) : detectProfile(header, all);
+  if (!profile) {
+    return {
+      form: null, teams: [], header,
+      warnings: [forcedId ? `профиль «${forcedId}» не найден` : 'не удалось определить форму по заголовку — см. npm run suggest-profile'],
+    };
+  }
 
-  const col = columnsFor(form, header);
+  const col = resolveColumns(profile, header);
   const get = (row, i) => (i >= 0 && i < row.length ? row[i] : '');
   const teams = [];
+  const warnings = [];
 
   for (const row of rows.slice(1)) {
     const name = get(row, col.team).replace(/\s+/g, ' ').trim();
@@ -181,14 +204,14 @@ export function parseRegistrations(text, { delimiter } = {}) {
 
     const players = [];
     col.mains.forEach((ci, idx) => {
-      const p = ci === undefined ? null : parsePlayer(get(row, ci), form);
+      const p = ci === undefined ? null : parsePlayer(get(row, ci), profile);
       if (!p) { w.push(`пустой слот игрока ${idx + 1}`); return; }
-      if (p.pos === null) p.pos = idx + 1;               // форма бота: позиция = номер колонки (предположение)
+      if (p.pos === null) p.pos = idx + 1;               // нет поля позиции: позиция = номер слота (предположение)
       players.push(p);
     });
 
     const subs = col.subs
-      .map(ci => (ci === undefined ? null : parsePlayer(get(row, ci), form)))
+      .map(ci => (ci === undefined ? null : parsePlayer(get(row, ci), profile)))
       .filter(Boolean);
 
     if (players.length !== 5) w.push(`в основе ${players.length} игроков вместо 5`);
@@ -212,7 +235,7 @@ export function parseRegistrations(text, { delimiter } = {}) {
     });
     w.forEach(x => warnings.push(`${name}: ${x}`));
   }
-  return { form, teams, warnings };
+  return { form: profile.id, teams, warnings };
 }
 
 /* Единственное, что попадает в публичный репозиторий. */
@@ -222,4 +245,91 @@ export function toPublicEntry(team) {
     roster: [...team.players].sort((a, b) => a.pos - b.pos).map(p => ({ nick: p.nick, pos: p.pos })),
     subs: team.subs.map(p => ({ nick: p.nick })),
   };
+}
+
+/* ───────────── Черновик профиля для незнакомой формы ───────────── */
+
+const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+function specFor(h) {
+  const n = hnorm(h);
+  return n.length <= 40 ? { equals: n } : { pattern: '^' + escapeRe(n.slice(0, 30).trim()) };
+}
+
+function slotSpec(header, wordRe, simpleRe) {
+  const hs = header.map(hnorm);
+  if (hs.filter(h => simpleRe.test(h)).length >= 2) return { pattern: simpleRe.source };
+  const hits = hs.map(h => wordRe.exec(h)).filter(Boolean);
+  if (hits.length >= 2) {
+    const m = hits[0];
+    const prefix = m.input.slice(0, m.index + m[0].length - 1);   // всё до цифры слота
+    return { pattern: escapeRe(prefix) + '(\\d)' };
+  }
+  return null;
+}
+
+function sniffFields(cell) {
+  const raw = splitFields(cell);
+  const keys = [];
+  const n = Math.max(0, ...Object.keys(raw).map(Number));
+  for (let i = 1; i <= n; i++) {
+    const v = String(raw[i] ?? '');
+    if (i === 1) keys.push('nick');
+    else if (/dotabuff|opendota/i.test(v)) keys.push('dotabuff');
+    else if (/steamcommunity/i.test(v)) keys.push('steam');
+    else if (/https?:\/\//i.test(v)) keys.push('profile');
+    else if (/\/\//.test(v) && /@/.test(v)) keys.push('contacts');
+    else if (/^@/.test(v)) keys.push('telegram');
+    else if (/^\d{3,5}$/.test(v)) keys.push('mmr');
+    else if (/^([1-5]\s*pos|pos\s*[1-5])/i.test(v)) keys.push('position');
+    else if (i === 2) keys.push('realName');
+    else keys.push('discord');
+  }
+  return keys;
+}
+
+/* Эвристический черновик: человек подтверждает и кладёт файл в scripts/form-profiles/. */
+export function suggestProfile(text, { delimiter } = {}) {
+  const rows = parseDelimited(text, delimiter);
+  const notes = [];
+  if (rows.length < 2) return { profile: null, notes: ['нужен заголовок и хотя бы одна строка данных'] };
+  const header = rows[0];
+  const hs = header.map(hnorm);
+  const first = re => header.findIndex((h, i) => re.test(hs[i]));
+
+  const teamIdx = header.findIndex((h, i) => /команд|team/.test(hs[i]) && !/лого|logo|капитан|captain/.test(hs[i]));
+  if (teamIdx < 0) notes.push('не нашёл колонку с названием команды');
+  const timeIdx = first(/отметка времени|врем|timestamp|^time$/);
+  const logoIdx = first(/лого|logo/);
+  const capIdx = first(/капитан|captain|^tg$/);
+
+  const players = slotSpec(header, /(игрок|player)\D*?(\d)/, /^p(\d)$/);
+  const subs = slotSpec(header, /(замен|sub|reserve|запас)\D*?(\d)/, /^s(\d)$/);
+  if (!players) notes.push('не нашёл колонки игроков (ожидаю несколько колонок вида «Игрок 1…5» или p1…p5)');
+
+  let fields = [];
+  if (players) {
+    const idx = header.findIndex(h => matchSpec(players, h));
+    for (const row of rows.slice(1)) {
+      if (idx >= 0 && clean(row[idx])) { fields = sniffFields(row[idx]); break; }
+    }
+    if (!fields.length) notes.push('не смог определить порядок полей в ячейке игрока');
+  }
+
+  const columns = { players };
+  if (teamIdx >= 0) columns.team = specFor(header[teamIdx]);
+  if (timeIdx >= 0) columns.time = specFor(header[timeIdx]);
+  if (logoIdx >= 0) columns.logo = specFor(header[logoIdx]);
+  if (capIdx >= 0) columns.captain = specFor(header[capIdx]);
+  if (subs) columns.subs = subs;
+  if (!fields.includes('position')) notes.push('в ячейке нет поля позиции: позиция будет равна номеру слота игрока');
+
+  const profile = {
+    id: 'draft',
+    description: 'Черновик, сгенерированный автоматически. Проверь и переименуй id.',
+    detect: [columns.team, players].filter(Boolean),
+    columns,
+    cell: { fields },
+  };
+  return { profile, notes };
 }

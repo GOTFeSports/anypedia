@@ -2,7 +2,7 @@
 // Фикстуры повторяют СТРУКТУРУ реальных форм, но все данные выдуманы.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseDelimited, parseRegistrations, accountIdFromUrl, toPublicEntry, splitFields } from './registrations.mjs';
+import { parseDelimited, parseRegistrations, accountIdFromUrl, toPublicEntry, splitFields, suggestProfile, loadProfiles, detectProfile } from './registrations.mjs';
 
 const q = s => `"${String(s).replace(/"/g, '""')}"`;
 const steam64 = id => String(BigInt(id) + 76561197960265728n);
@@ -144,4 +144,33 @@ test('неизвестный заголовок не угадывается', ()
   const r = parseRegistrations('a\tb\n1\t2\n');
   assert.equal(r.form, null);
   assert.ok(r.warnings.length);
+});
+
+test('профили: встроенные профили загружаются и различают формы по заголовку', () => {
+  const profiles = loadProfiles();
+  assert.deepEqual(profiles.map(p => p.id), ['bot', 'google']);
+  assert.equal(detectProfile(parseDelimited(BOT_TSV)[0], profiles).id, 'bot');
+  assert.equal(detectProfile(parseDelimited(GOOGLE_TSV)[0], profiles).id, 'google');
+});
+
+test('профили: форму можно задать принудительно', () => {
+  const r = parseRegistrations(BOT_TSV, { profile: 'google' });
+  assert.equal(r.form, 'google');          // профиль выбран явно, даже если не подходит
+  assert.equal(parseRegistrations(BOT_TSV, { profile: 'нет-такого' }).form, null);
+});
+
+test('suggestProfile: черновик по незнакомой форме разбирает данные так же, как встроенный профиль', () => {
+  for (const tsv of [BOT_TSV, GOOGLE_TSV]) {
+    const { profile, notes } = suggestProfile(tsv);
+    assert.ok(profile, notes.join('; '));
+    const viaDraft = parseRegistrations(tsv, { profiles: [profile] });
+    const builtin = parseRegistrations(tsv);
+    assert.deepEqual(viaDraft.teams, builtin.teams);
+  }
+});
+
+test('suggestProfile: бессмысленный файл не даёт профиль-призрак', () => {
+  const { profile, notes } = suggestProfile('a\tb\n1\t2\n');
+  assert.ok(notes.length);
+  assert.ok(profile === null || !profile.columns.players);
 });

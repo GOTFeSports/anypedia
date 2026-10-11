@@ -1,0 +1,5 @@
+# Персональные данные игроков (e-mail, имена, Telegram, Discord, Steam) — НИКОГДА не коммитить.
+private/
+
+node_modules/
+*.log

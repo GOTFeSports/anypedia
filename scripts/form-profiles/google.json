@@ -1,0 +1,16 @@
+{
+  "id": "google",
+  "description": "Google Forms: «Название команды…», «Регистрация Игрока N», «Регистрация Замена N»",
+  "detect": [{ "pattern": "^название команды" }, { "pattern": "регистрация игрока 1" }],
+  "columns": {
+    "time":    { "pattern": "^отметка времени" },
+    "team":    { "pattern": "^название команды" },
+    "logo":    { "pattern": "^логотип" },
+    "captain": { "pattern": "контактные данные капитана" },
+    "players": { "pattern": "регистрация игрока (\\d)" },
+    "subs":    { "pattern": "регистрация замена (\\d)" }
+  },
+  "cell": {
+    "fields": ["nick", "realName", "profile", "contacts", "mmr", "position"]
+  }
+}
