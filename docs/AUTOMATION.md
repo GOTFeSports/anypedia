@@ -94,4 +94,4 @@ npm run suggest-profile -- private/registrations/<выгрузка>.csv > script
 | `npm run import -- <id> […]` | импорт регистрации и результатов |
 | `npm run suggest-profile -- файл.csv` | черновик профиля новой формы |
 
-Адрес сайта для `sitemap.xml` берётся из `SITE_URL`, иначе из файла `CNAME` (сейчас `www.anypedia.gamer.gd`). Проверь, что это нужный домен.
+Адрес сайта для `sitemap.xml` берётся из `site.json` (сейчас `https://anypedia.vercel.app`), если файла нет, то из `CNAME`. Переменная `SITE_URL` важнее обоих.
