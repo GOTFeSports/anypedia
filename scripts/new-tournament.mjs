@@ -7,6 +7,7 @@
 //   --challonge <ссылка>   сетка на Challonge → результаты подтянутся импортом; без неё источник «manual»
 //   --prize 15000,10000,5000   призовые по местам, ₽ (1-е, 2-е, 3-е …)
 //   --tier A|B|C|S  --limit "…"  --format "…"  --game-format "…"  --registration <url>  --telegram <url>
+//   --reg-start ГГГГ-ММ-ДД  --reg-end ГГГГ-ММ-ДД   окно регистрации
 //   --id <slug>            свой id вместо сгенерированного из названия
 //
 // Создаёт content/tournaments/<id>.json (и пустой content/inputs/<id>.txt для ручных результатов).
@@ -40,6 +41,8 @@ export function createTournament(args, { root = ROOT } = {}) {
 
   const raw = {
     id, title, organizer, start, end: args.end || start,
+    ...(args['reg-start'] && { registrationStart: args['reg-start'] }),
+    ...(args['reg-end'] && { registrationEnd: args['reg-end'] }),
     ...(args.tier && { tier: args.tier.toUpperCase() }),
     ...(args.limit && { limit: args.limit }),
     ...(args.format && { format: args.format }),

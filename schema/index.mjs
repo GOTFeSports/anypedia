@@ -40,6 +40,9 @@ export const Team = z.object({
   description: z.string().optional(),
   telegram: Url.optional(),
   captain: z.string().optional(),            // публичная ссылка капитана, только если он сам согласен
+  staff: z.array(z.object({                  // персонал команды (менеджер, тренер…) — не игроки
+    nick: z.string().min(1), role: z.string().min(1), joined: IsoDate.optional(),
+  }).strict()).default([]),
 }).strict();
 
 export const Ban = z.object({ league: z.string().min(1), reason: z.string().optional() }).strict();
@@ -69,6 +72,8 @@ export const Tournament = z.object({
   start: IsoDate,
   end: IsoDate,
   startTime: z.string().regex(/^\d{2}:\d{2}$/).optional(),
+  registrationStart: IsoDate.optional(),
+  registrationEnd: IsoDate.optional(),
   location: z.string().default('Online'),
   format: z.string().optional(),             // Single Elimination, Double Elimination, …
   gameFormat: z.string().optional(),         // Captains Mode, …
@@ -84,6 +89,7 @@ export const Tournament = z.object({
     registration: Url.optional(), telegram: Url.optional(), discord: z.string().optional(),
     rules: Url.optional(), bracket: Url.optional(), dotabuff: Url.optional(),
   }).strict().default({}),
+  bracketEmbed: Url.optional(),              // адрес для iframe сетки; для Challonge выводится из source
   casters: z.array(z.object({ name: z.string().min(1), link: Url.optional() }).strict()).default([]),
   source: Source.default({ type: 'manual' }),
   form: z.string().optional(),               // id профиля формы регистрации (scripts/form-profiles)

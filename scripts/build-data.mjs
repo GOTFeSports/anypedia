@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { writeJson } from './lib/util.mjs';
+import { buildSiteBundle } from './site-bundle.mjs';
 import { loadContent, validateContent, DEFAULT_ROOT } from './validate.mjs';
 
 const byDateDesc = (a, b) => String(b.start).localeCompare(String(a.start)) || String(b.end).localeCompare(String(a.end));
@@ -179,12 +180,12 @@ export function buildData(content, { siteUrl = '' } = {}) {
     '',
   ].join('\n');
 
-  return { files, sitemap };
+  return { files, sitemap, siteJs: buildSiteBundle(files) };
 }
 
 const MARKER = '.generated';
 
-export function writeBuild(root, { files, sitemap }) {
+export function writeBuild(root, { files, sitemap, siteJs }) {
   const dataDir = path.join(root, 'data');
   if (fs.existsSync(dataDir)) {
     if (!fs.existsSync(path.join(dataDir, MARKER)) && fs.readdirSync(dataDir).length) {
@@ -195,6 +196,7 @@ export function writeBuild(root, { files, sitemap }) {
   fs.mkdirSync(dataDir, { recursive: true });
   fs.writeFileSync(path.join(dataDir, MARKER), 'Сгенерировано npm run build. Не править вручную.\n');
   for (const [rel, doc] of files) writeJson(path.join(dataDir, rel), doc);
+  fs.writeFileSync(path.join(dataDir, 'site.js'), siteJs);
   fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap);
 }
 

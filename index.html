@@ -1090,9 +1090,8 @@ tbody tr:hover {
 }
 </style>
 
-<script src="data.js"></script>
-<script src="teams.js"></script>
-<script src="organizers.js"></script>
+<script src="/data/site.js"></script>
+<script src="/site-lib.js"></script>
 <script src="favorites.js"></script>
 </head>
 <body>
@@ -1109,7 +1108,6 @@ tbody tr:hover {
       <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/players-list">Игроки</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
-      <a class="nav-link" href="/rating">Рейтинг</a>
       <a class="nav-link" href="/favorites">Избранное</a>
     </nav>
     <div class="header-search-wrap" id="searchWrap">
@@ -1142,9 +1140,8 @@ tbody tr:hover {
     </div>
     <div class="hero-art">
       <div class="hero-rating">
-        <div class="hero-rating-title">🏆 Топ-5 рейтинга</div>
+        <div class="hero-rating-title">🏆 Последние победители</div>
         <div id="heroRatingList"></div>
-        <a href="/rating" class="hero-rating-link">Весь рейтинг →</a>
       </div>
     </div>
   </div>
@@ -1769,22 +1766,28 @@ async function проверитьЖивыеСтримы() {
 setInterval(проверитьЖивыеСтримы, 2 * 60 * 1000);
 
 /* ============================================================
-   HERO RATING WIDGET — топ-5 из общего рейтинга команд
+   HERO: последние победители — берутся из завершённых турниров
    ============================================================ */
 (function () {
   const список = document.getElementById('heroRatingList');
-  if (!список || typeof getTeamsRating !== 'function') return;
+  if (!список) return;
 
-  const топ5 = getTeamsRating().slice(0, 5);
-  if (!топ5.length) { список.innerHTML = `<div style="font-size:12px;color:var(--text-muted)">Пока нет данных</div>`; return; }
+  const победители = tournaments
+    .filter(t => t.winner && getStatus(t) === 'finished')
+    .sort((a, b) => toLocalDate(b.end) - toLocalDate(a.end))
+    .slice(0, 5);
 
-  список.innerHTML = топ5.map((строка, i) => `
+  if (!победители.length) { список.innerHTML = `<div style="font-size:12px;color:var(--text-muted)">Пока нет данных</div>`; return; }
+
+  список.innerHTML = победители.map(t => {
+    const команда = findTeamByName(t.winner);
+    return `
     <div class="hero-rating-row">
-      <span class="hero-rating-place${i === 0 ? ' is-first' : ''}">${i + 1}</span>
-      <img class="hero-rating-logo" src="/${строка.team.logo || 'dota2.png'}" alt="" onerror="this.style.display='none'">
-      <span class="hero-rating-name">${строка.team.name}</span>
-      <span class="hero-rating-points">${строка.points}</span>
-    </div>`).join('');
+      <span class="hero-rating-place is-first">🏆</span>
+      <img class="hero-rating-logo" src="/${команда && команда.logo ? команда.logo : 'dota2.png'}" alt="" onerror="this.style.display='none'">
+      <span class="hero-rating-name">${renderWinner(t.winner)}</span>
+    </div>`;
+  }).join('');
 })();
 </script>
 <script src="/search.js"></script>

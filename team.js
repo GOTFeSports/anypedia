@@ -152,7 +152,8 @@ function форматДатаКраткая(значение) {
    ============================================================ */
 function построитьСтрокиТурниров(команда) {
   const строки = (команда.tournaments || []).map(запись => {
-    const найденный = найтиТурнирПоНазванию(запись.title);
+    const найденный = (запись.tournamentId && всеТурниры().find(t => t.id === запись.tournamentId))
+      || найтиТурнирПоНазванию(запись.title);
     return {
       дата:       запись.date || (найденный ? найденный.start : ''),
       датаТекст:  запись.date
@@ -199,7 +200,7 @@ function рендерАктивныйСостав(игроки) {
               ${флаг ? `<span class="roster-flag">${флаг}</span>` : ''}
             </div>
             <div class="roster-info">
-              <div class="roster-name"><a href="${корньСайта()}player/${encodeURIComponent(slugifyPlayer(игрок.nick))}" style="color:inherit">${экранировать(игрок.nick || '—')}</a></div>
+              <div class="roster-name"><a href="${корньСайта()}player/${encodeURIComponent(игрок.id || slugifyPlayer(игрок.nick))}" style="color:inherit">${экранировать(игрок.nick || '—')}</a></div>
               <div class="roster-joined">${форматДатаКраткая(игрок.joined)}</div>
             </div>
           </div>`;
@@ -254,7 +255,7 @@ function рендерСостав(игроки, бывшие = false) {
         ${игроки.map(игрок => {
           return `
             <tr class="searchable-row">
-              <td data-label="Никнейм"><a href="${корньСайта()}player/${encodeURIComponent(slugifyPlayer(игрок.nick))}">${экранировать(игрок.nick || '—')}</a></td>
+              <td data-label="Никнейм"><a href="${корньСайта()}player/${encodeURIComponent(игрок.id || slugifyPlayer(игрок.nick))}">${экранировать(игрок.nick || '—')}</a></td>
               <td data-label="Позиция"><span class="pos-pill">${экранировать(игрок.pos ?? '—')}</span></td>
               <td data-label="Присоединился">${форматДата(игрок.joined)}</td>
               ${бывшие ? `<td data-label="Покинул">${форматДата(игрок.left)}</td>` : ''}
@@ -326,11 +327,12 @@ if (!команда) {
                 background:var(--bg);font-family:'Inter',sans-serif;text-align:center;color:var(--text)">
       <div>
         <h1 style="font-size:22px;margin-bottom:10px">Команда не найдена</h1>
-        <p style="color:var(--text-muted);margin-bottom:20px">Проверьте ссылку или вернитесь на главную</p>
+        <p style="color:var(--text-muted);margin-bottom:20px">Такой страницы нет (возможно, данные сайта обновились). Через пару секунд откроется главная.</p>
         <a href="${базаОшибки}" style="padding:10px 18px;background:var(--bg3);border:1px solid var(--border);
            border-radius:10px;display:inline-block;color:var(--accent)">← Назад</a>
       </div>
     </div>`;
+  setTimeout(() => location.replace('/'), 3000);
   throw new Error('Команда не найдена');
 }
 

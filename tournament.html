@@ -26,9 +26,8 @@
 <script src="/page-transition.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<script src="/data.js"></script>
-<script src="/teams.js"></script>
-<script src="/organizers.js"></script>
+<script src="/data/site.js"></script>
+<script src="/site-lib.js"></script>
 <script src="/favorites.js"></script>
 
 <link rel="stylesheet" href="/theme.css">
@@ -651,7 +650,6 @@
       <a class="nav-link" href="/teams-list">Команды</a>
       <a class="nav-link" href="/players-list">Игроки</a>
       <a class="nav-link" href="/organizers-list">Организаторы</a>
-      <a class="nav-link" href="/rating">Рейтинг</a>
       <a class="nav-link" href="/favorites">Избранное</a>
     </nav>
     <div class="header-search-wrap" id="searchWrap">
@@ -778,11 +776,12 @@ if (!t) {
                 background:var(--bg);font-family:'Inter',sans-serif;text-align:center">
       <div>
         <h1 style="font-size:22px;margin-bottom:10px">❌ Турнир не найден</h1>
-        <p style="color:#888;margin-bottom:20px">Проверьте ссылку или вернитесь на главную</p>
+        <p style="color:#888;margin-bottom:20px">Такой страницы нет (возможно, данные сайта обновились). Через пару секунд откроется главная.</p>
         <a href="/index.html" style="padding:10px 18px;background:#1c1c1e;border:1px solid #2a2a2a;
            border-radius:10px;color:#6bb6ff;display:inline-block">← Назад</a>
       </div>
     </div>`;
+  setTimeout(() => location.replace('/'), 3000);
   throw new Error('Tournament not found');
 }
 
@@ -1037,8 +1036,8 @@ const _игрокиПоНику = new Map();
 _игрокиИндекс.forEach(p => {
   [p.nick, ...(p.aliases || [])].forEach(n => _игрокиПоНику.set(normPlayerStr(n), p));
 });
-function renderPlayerNick(nick) {
-  const найден = _игрокиПоНику.get(normPlayerStr(nick));
+function renderPlayerNick(nick, id) {
+  const найден = (id && _игрокиИндекс.find(p => p.id === id)) || _игрокиПоНику.get(normPlayerStr(nick));
   if (!найден) return nick;
   return `<a href="${getSiteBase()}player/${encodeURIComponent(getPlayerId(найден))}">${nick}</a>`;
 }
@@ -1051,7 +1050,7 @@ document.getElementById('teams').innerHTML = (t.teamsList || []).map(team => `
     </div>
     ${(team.roster || []).sort((a,b) => a.pos - b.pos).map(p => `
       <div class="roster-row">
-        <span class="nick">${renderPlayerNick(p.nick)}</span>
+        <span class="nick">${renderPlayerNick(p.nick, p.id)}</span>
         <span class="pos" title="Позиция ${p.pos}">${p.pos}</span>
       </div>`).join('')}
     ${team.seed ? `<div class="team-seed">${team.seed}</div>` : ''}

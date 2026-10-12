@@ -1,212 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  sitemap.xml — Anypedia
-  Помогает Google и Яндекс быстрее находить страницы.
-
-  КАК ОБНОВЛЯТЬ:
-  При добавлении нового турнира в data.js — добавьте запись:
-  <url>
-    <loc>https://anypedia.vercel.app/ID_ТУРНИРА</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  При добавлении команды в teams.js — добавьте:
-  <url>
-    <loc>https://anypedia.vercel.app/team/ID_КОМАНДЫ</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
--->
+<!-- Сгенерировано npm run build. Не править вручную. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Главная страница -->
   <url>
     <loc>https://anypedia.vercel.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- ==================== ТУРНИРЫ ==================== -->
-  <!-- Будущие и текущие: changefreq=daily, priority=0.9 -->
-  <!-- Прошедшие:         changefreq=monthly, priority=0.7 -->
-
   <url>
-    <loc>https://anypedia.vercel.app/The-Trial-of-Immortality-5</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/SkewerEsports-Season-3</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/Bedlam-Summer-Cup-1x1</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/Hater-Zdes-Dota-Cup-Season-3-Division-1</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/reflection-league-6</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/SkewerEsports-Season-2</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://anypedia.vercel.app/teams-list</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://anypedia.vercel.app/Bedlam-Waiting-For-Summer-Cup</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://anypedia.vercel.app/players-list</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://anypedia.vercel.app/Bedlam-Spring-Cup</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://anypedia.vercel.app/organizers-list</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/Armagedon-Championship-S8</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/AnyLvL-x-GOTF-eSports-Tournament-1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/SkewerEsports-Season-1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/Bedlam-Swamp-Wars</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-winter-cup-division-2</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-winter-cup-division-1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-christmas-cup</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-battles-season-3</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-battles-season-2</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/bedlam-battles-season-1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- ==================== ОРГАНИЗАТОРЫ ==================== -->
-
-  <url>
-    <loc>https://anypedia.vercel.app/organizer/bedlam-tournaments</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/organizer/skeweresports</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/organizer/reflection-league</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/organizer/rampage-tournaments</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- ==================== КОМАНДЫ ==================== -->
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/gitlz</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/never-back-down</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/bedlam-red</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/podosinovik</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/leto-junior</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/team-sexy</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://anypedia.vercel.app/team/azutive-fans</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>

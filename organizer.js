@@ -96,11 +96,12 @@ if (!org) {
                 background:var(--bg);font-family:'Inter',sans-serif;text-align:center;color:var(--text)">
       <div>
         <h1 style="font-size:22px;margin-bottom:10px">Организатор не найден</h1>
-        <p style="color:var(--text-muted);margin-bottom:20px">Проверьте ссылку или вернитесь на главную</p>
+        <p style="color:var(--text-muted);margin-bottom:20px">Такой страницы нет (возможно, данные сайта обновились). Через пару секунд откроется главная.</p>
         <a href="/" style="padding:10px 18px;background:var(--bg3);border:1px solid var(--border);
            border-radius:10px;display:inline-block;color:var(--accent)">← Назад</a>
       </div>
     </div>`;
+  setTimeout(() => location.replace('/'), 3000);
   throw new Error('Организатор не найден');
 }
 

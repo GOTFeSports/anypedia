@@ -400,3 +400,32 @@ test('адрес сайта: SITE_URL важнее site.json, site.json важн
   assert.equal(siteUrlFor(root, {}), 'https://anypedia.vercel.app');
   assert.equal(siteUrlFor(root, { SITE_URL: 'https://x.test' }), 'https://x.test');
 });
+
+test('data/site.js: исполняется и отдаёт то, что читают страницы (команды, игроки, организаторы)', async () => {
+  const root = tmpRoot();
+  const { id } = createTournament({ title: 'Test Cup 1', organizer: 'testorg', 'organizer-name': 'Test Org', start: '2026-10-03', prize: '15000,10000', 'reg-end': '2026-10-02' }, { root });
+  fs.mkdirSync(path.join(root, 'private', 'registrations'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'private', 'registrations', `${id}.csv`), botCsv([
+    { name: 'Test Alpha', players: squad('alpha', 1000) }, { name: 'Test Beta', players: squad('beta', 2000) }]));
+  fs.writeFileSync(path.join(root, 'content', 'inputs', `${id}.txt`), '1. Test Alpha\n2. Test Beta\n');
+  const r = await runImport({ _: [id], alias: [], new: [] }, { root, log: silent, env: {} });
+  assert.equal(r.ok, true);
+
+  const vm = await import('node:vm');
+  const code = fs.readFileSync(path.join(root, 'data', 'site.js'), 'utf8');
+  const g = vm.runInNewContext(`${code}; ({ tournaments, teams, organizers, playersData })`);
+  assert.equal(g.tournaments[0].winner, 'Test Alpha');
+  assert.equal(g.tournaments[0].prize, '25.000₽');
+  assert.equal(g.tournaments[0].registrationEnd, '2026-10-02');
+  assert.equal(JSON.stringify(g.tournaments[0].organizerIds), '["testorg"]');
+  assert.equal(g.tournaments[0].teamsList[0].roster.length, 5);
+  const alpha = g.teams.find(t => t.id === 'test-alpha');
+  assert.equal(alpha.activeRoster.length, 5);
+  assert.equal(alpha.tournaments[0].place, '1');
+  assert.equal(alpha.tournaments[0].tournamentId, id);
+  assert.equal(alpha.prize, '15.000₽');
+  const p = g.playersData.find(x => x.id === 'alpha1');
+  assert.equal(p.history[0].active, true);
+  assert.equal(p.tournaments[0].teamId, 'test-alpha');
+  assert.equal(g.organizers[0].id, 'testorg');
+});
