@@ -1,21 +1,13 @@
 {
+  "framework": null,
+  "installCommand": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/organizer/:id",
-      "destination": "/organizer.html?id=:id"
-    },
-    {
-      "source": "/team/:id",
-      "destination": "/team.html?id=:id"
-    },
-    {
-      "source": "/player/:id",
-      "destination": "/player.html?id=:id"
-    },
-    {
-      "source": "/:id",
-      "destination": "/tournament.html?id=:id"
-    }
+    { "source": "/organizer/:id", "destination": "/organizer.html?id=:id" },
+    { "source": "/team/:id", "destination": "/team.html?id=:id" },
+    { "source": "/player/:id", "destination": "/player.html?id=:id" },
+    { "source": "/:id", "destination": "/tournament.html?id=:id" }
   ]
 }
