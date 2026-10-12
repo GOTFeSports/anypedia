@@ -1,0 +1,39 @@
+{
+  "id": "outsiders",
+  "name": "Outsiders",
+  "aliases": [],
+  "region": "СНГ",
+  "staff": [],
+  "stats": {
+    "tournaments": 1,
+    "wins": 1,
+    "podiums": 1,
+    "prizeTotalRub": 15000
+  },
+  "lastRoster": {
+    "tournament": {
+      "id": "bedlam-october-fest",
+      "title": "BEDLAM: OCTOBER FEST",
+      "start": "2026-10-02",
+      "end": "2026-10-04",
+      "tier": "A"
+    },
+    "players": [],
+    "subs": []
+  },
+  "history": [
+    {
+      "tournament": {
+        "id": "bedlam-october-fest",
+        "title": "BEDLAM: OCTOBER FEST",
+        "start": "2026-10-02",
+        "end": "2026-10-04",
+        "tier": "A"
+      },
+      "place": 1,
+      "prizeRub": 15000,
+      "roster": [],
+      "subs": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "team-leto",
+  "name": "Team Leto",
+  "aliases": [],
+  "region": "СНГ",
+  "staff": [],
+  "stats": {
+    "tournaments": 1,
+    "wins": 0,
+    "podiums": 0,
+    "prizeTotalRub": 0
+  },
+  "lastRoster": {
+    "tournament": {
+      "id": "bedlam-october-fest",
+      "title": "BEDLAM: OCTOBER FEST",
+      "start": "2026-10-02",
+      "end": "2026-10-04",
+      "tier": "A"
+    },
+    "players": [],
+    "subs": []
+  },
+  "history": [
+    {
+      "tournament": {
+        "id": "bedlam-october-fest",
+        "title": "BEDLAM: OCTOBER FEST",
+        "start": "2026-10-02",
+        "end": "2026-10-04",
+        "tier": "A"
+      },
+      "place": 5,
+      "placeTo": 6,
+      "roster": [],
+      "subs": []
+    }
+  ]
+}

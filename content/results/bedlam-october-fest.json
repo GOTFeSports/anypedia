@@ -1,0 +1,127 @@
+{
+  "entries": [
+    {
+      "team": "outsiders",
+      "roster": [],
+      "subs": [],
+      "place": 1
+    },
+    {
+      "team": "buriza",
+      "roster": [],
+      "subs": [],
+      "place": 2
+    },
+    {
+      "team": "winchun",
+      "roster": [],
+      "subs": [],
+      "place": 3
+    },
+    {
+      "team": "egoisto",
+      "roster": [],
+      "subs": [],
+      "place": 4
+    },
+    {
+      "team": "primal-dance",
+      "roster": [],
+      "subs": [],
+      "place": 5,
+      "placeTo": 6
+    },
+    {
+      "team": "team-leto",
+      "roster": [],
+      "subs": [],
+      "place": 5,
+      "placeTo": 6
+    },
+    {
+      "team": "2800team",
+      "roster": [],
+      "subs": [],
+      "place": 7,
+      "placeTo": 8
+    },
+    {
+      "team": "bedlam-blue",
+      "roster": [],
+      "subs": [],
+      "place": 7,
+      "placeTo": 8
+    },
+    {
+      "team": "шарашкина-контора",
+      "roster": [],
+      "subs": [],
+      "place": 9,
+      "placeTo": 12
+    },
+    {
+      "team": "bstu-too",
+      "roster": [],
+      "subs": [],
+      "place": 9,
+      "placeTo": 12
+    },
+    {
+      "team": "dark-nova",
+      "roster": [],
+      "subs": [],
+      "place": 9,
+      "placeTo": 12
+    },
+    {
+      "team": "vetmo",
+      "roster": [],
+      "subs": [],
+      "place": 9,
+      "placeTo": 12
+    },
+    {
+      "team": "команда-друзья",
+      "roster": [],
+      "subs": [],
+      "place": 13,
+      "placeTo": 16
+    },
+    {
+      "team": "короли-севера",
+      "roster": [],
+      "subs": [],
+      "place": 13,
+      "placeTo": 16
+    },
+    {
+      "team": "immortal-dragons",
+      "roster": [],
+      "subs": [],
+      "place": 13,
+      "placeTo": 16
+    },
+    {
+      "team": "team-сиёга",
+      "roster": [],
+      "subs": [],
+      "place": 13,
+      "placeTo": 16
+    },
+    {
+      "team": "crying-practice",
+      "roster": [],
+      "subs": [],
+      "place": 17,
+      "placeTo": 18
+    },
+    {
+      "team": "haunted-team",
+      "roster": [],
+      "subs": [],
+      "place": 17,
+      "placeTo": 18
+    }
+  ],
+  "matches": []
+}
