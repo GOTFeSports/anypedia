@@ -48,7 +48,7 @@
               "id": "m2",
               "team1": "Immortal Dragons",
               "team2": "",
-              "bye": true,
+              
               "next": "m5"
             },
             {
@@ -63,7 +63,7 @@
               "id": "m4",
               "team1": "Bedlam Blue",
               "team2": "",
-              "bye": true,
+              
               "next": "m6"
             }
           ]
@@ -111,14 +111,14 @@
               "id": "m9",
               "team1": "Leto",
               "team2": "",
-              "bye": true,
+              
               "next": "m11"
             },
             {
               "id": "m10",
               "team1": "KoPoJ丨入CεBePa",
               "team2": "",
-              "bye": true,
+              
               "next": "m12"
             }
           ]
