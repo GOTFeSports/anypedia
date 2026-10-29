@@ -19,7 +19,7 @@
     {
       "place": 5,
       "label": "5–6",
-      "team": "Bedlam Bl"
+      "team": "Bedlam Blue"
     },
     {
       "place": 6,
@@ -61,7 +61,7 @@
             },
             {
               "id": "m4",
-              "team1": "Bedlam Bl",
+              "team1": "Bedlam Blue",
               "team2": "",
               "bye": true,
               "next": "m6"
@@ -83,7 +83,7 @@
             {
               "id": "m6",
               "team1": "DF Youth",
-              "team2": "Bedlam Bl",
+              "team2": "Bedlam Blue",
               "winner": 1,
               "next": "m7"
             }
@@ -129,7 +129,7 @@
           "matches": [
             {
               "id": "m11",
-              "team1": "Bedlam Bl",
+              "team1": "Bedlam Blue",
               "team2": "Leto",
               "winner": 2,
               "next": "m13"
