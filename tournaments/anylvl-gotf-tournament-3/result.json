@@ -1,0 +1,190 @@
+{
+  "placements": [
+    {
+      "place": 1,
+      "team": "Bociarnia"
+    },
+    {
+      "place": 2,
+      "team": "DF Youth"
+    },
+    {
+      "place": 3,
+      "team": "Immortal"
+    },
+    {
+      "place": 4,
+      "team": "Leto"
+    },
+    {
+      "place": 5,
+      "label": "5–6",
+      "team": "Bedlam Bl"
+    },
+    {
+      "place": 6,
+      "label": "5–6",
+      "team": "Coroli Sev"
+    }
+  ],
+  "stages": [
+    {
+      "type": "double_elim",
+      "name": "Плей-офф",
+      "rounds": [
+        {
+          "name": "1/4 финала",
+          "bracket": "upper",
+          "matches": [
+            {
+              "id": "m1",
+              "team1": "Leto",
+              "team2": "Bociarnia",
+              "score1": 0,
+              "score2": 1,
+              "next": "m5"
+            },
+            {
+              "id": "m2",
+              "team1": "Immortal",
+              "team2": "",
+              "bye": true,
+              "next": "m5"
+            },
+            {
+              "id": "m3",
+              "team1": "DF Youth",
+              "team2": "Coroli Sev",
+              "score1": 1,
+              "score2": 0,
+              "next": "m6"
+            },
+            {
+              "id": "m4",
+              "team1": "Bedlam Bl",
+              "team2": "",
+              "bye": true,
+              "next": "m6"
+            }
+          ]
+        },
+        {
+          "name": "Полуфинал",
+          "bracket": "upper",
+          "matches": [
+            {
+              "id": "m5",
+              "team1": "Bociarnia",
+              "team2": "Immortal",
+              "score1": 1,
+              "score2": 0,
+              "next": "m7"
+            },
+            {
+              "id": "m6",
+              "team1": "DF Youth",
+              "team2": "Bedlam Bl",
+              "winner": 1,
+              "next": "m7"
+            }
+          ]
+        },
+        {
+          "name": "Финал верхней сетки",
+          "bracket": "upper",
+          "matches": [
+            {
+              "id": "m7",
+              "team1": "Bociarnia",
+              "team2": "DF Youth",
+              "score1": 1,
+              "score2": 0,
+              "next": "m8"
+            }
+          ]
+        },
+        {
+          "name": "Раунд нижней 1",
+          "bracket": "lower",
+          "matches": [
+            {
+              "id": "m9",
+              "team1": "Leto",
+              "team2": "",
+              "bye": true,
+              "next": "m11"
+            },
+            {
+              "id": "m10",
+              "team1": "Coroli Sev",
+              "team2": "",
+              "bye": true,
+              "next": "m12"
+            }
+          ]
+        },
+        {
+          "name": "Раунд нижней 2",
+          "bracket": "lower",
+          "matches": [
+            {
+              "id": "m11",
+              "team1": "Bedlam Bl",
+              "team2": "Leto",
+              "winner": 2,
+              "next": "m13"
+            },
+            {
+              "id": "m12",
+              "team1": "Immortal",
+              "team2": "Coroli Sev",
+              "winner": 1,
+              "next": "m13"
+            }
+          ]
+        },
+        {
+          "name": "Полуфинал нижней сетки",
+          "bracket": "lower",
+          "matches": [
+            {
+              "id": "m13",
+              "team1": "Leto",
+              "team2": "Immortal",
+              "score1": 0,
+              "score2": 1,
+              "next": "m14"
+            }
+          ]
+        },
+        {
+          "name": "Финал нижней сетки",
+          "bracket": "lower",
+          "matches": [
+            {
+              "id": "m14",
+              "team1": "DF Youth",
+              "team2": "Immortal",
+              "score1": 1,
+              "score2": 0,
+              "next": "m8"
+            }
+          ]
+        },
+        {
+          "name": "Суперфинал",
+          "bracket": "final",
+          "matches": [
+            {
+              "id": "m8",
+              "team1": "Bociarnia",
+              "team2": "DF Youth",
+              "score1": 2,
+              "score2": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

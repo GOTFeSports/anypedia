@@ -1,0 +1,35 @@
+{
+  "name": "AnyLvL x GOTF eSports: Tournament 3",
+  "series": "AnyLvL x GOTF eSports Tournament",
+  "organizer": "AnyLvL x GOTF eSports",
+  "status": "finished",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-09-26",
+  "date_end": "2026-09-26",
+  "format": [
+    "Плей-офф: Single Elimination, 6 команд, Bo1 (гранд-финал Bo3)"
+  ],
+  "pts_cap": 12000,
+  "prize_pool": "12 000 ₽",
+  "description": "Турнир от AnyLvL и GOTF eSports, третий в серии Tournaments. Турнир был завершен.",
+  "links": {},
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "8 000 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "4 000 ₽"
+    }
+  ],
+  "streams": [
+    {
+      "lang": "ru",
+      "platform": "twitch",
+      "url": "https://www.twitch.tv/parasiudota"
+    }
+  ]
+}

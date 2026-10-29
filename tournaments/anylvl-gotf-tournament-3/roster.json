@@ -1,0 +1,444 @@
+{
+  "teams": [
+    {
+      "name": "海 常 Kaijo",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1uEr7Zr-SSCqA6LEYz30JxTCHjMuHnCT_",
+      "captain_telegram": "@dark_light666",
+      "players": [
+        {
+          "nick": "dissolved",
+          "real_name": "Герман",
+          "account": "https://www.dotabuff.com/players/999455199",
+          "telegram": "@endlessvx",
+          "discord": "disso.ve",
+          "mmr": 5914,
+          "position": "1POS"
+        },
+        {
+          "nick": "0% Win rate",
+          "real_name": "Ярослав",
+          "account": "https://www.dotabuff.com/players/1099343730",
+          "telegram": "@las1g",
+          "discord": "mr_unisex",
+          "mmr": 7390,
+          "position": "2POS"
+        },
+        {
+          "nick": "effume",
+          "real_name": "Роман",
+          "account": "https://www.dotabuff.com/players/1508400788",
+          "telegram": "@emoterracted",
+          "discord": "emotionalabyss",
+          "mmr": 6745,
+          "position": "3POS"
+        },
+        {
+          "nick": "darklight",
+          "real_name": "Дмитрий",
+          "account": "https://ru.dotabuff.com/players/1569239709",
+          "telegram": "@dark_light666",
+          "discord": "foreverallone",
+          "mmr": 5822,
+          "position": "4POS"
+        },
+        {
+          "nick": "zobaa",
+          "real_name": "Захар",
+          "account": "https://www.dotabuff.com/players/102258689",
+          "telegram": "@Mirco9677",
+          "discord": "zakharius77",
+          "mmr": 5894,
+          "position": "5POS"
+        }
+      ]
+    },
+    {
+      "name": "IGROKI",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1XKpMWCROsmLw0d_AOQ_YpGpbrpqHbXQq",
+      "captain_telegram": "@kftudrkb",
+      "players": [
+        {
+          "nick": "fancul",
+          "real_name": "Ростислав",
+          "account": "https://steamcommunity.com/profiles/76561199240654887",
+          "telegram": "@kftudrkb",
+          "discord": "fncl",
+          "mmr": 6700,
+          "position": "Carry"
+        },
+        {
+          "nick": "Gibson",
+          "real_name": "Мар'ян",
+          "account": "https://steamcommunity.com/profiles/76561198885851783",
+          "telegram": "@Marian_Hnativ",
+          "discord": "ggibson13143234",
+          "mmr": 5750,
+          "position": "Mid"
+        },
+        {
+          "nick": "ataraxia",
+          "real_name": "Владислав",
+          "account": "https://steamcommunity.com/id/qwertyukgh",
+          "telegram": "@ihmsq",
+          "discord": "dcb19bddfce9c43251785db0ba8280aa",
+          "mmr": 6250,
+          "position": "Offlane"
+        },
+        {
+          "nick": "mevar",
+          "real_name": "Владислав",
+          "account": "https://steamcommunity.com/profiles/76561198113574546",
+          "telegram": "@Vladick_322",
+          "discord": "mevar_322",
+          "mmr": 6100,
+          "position": "Pos 4"
+        },
+        {
+          "nick": "Abrikos",
+          "real_name": "Андрій",
+          "account": "https://steamcommunity.com/profiles/76561198887784360",
+          "telegram": "@abrik00ss",
+          "discord": "abrikkooss",
+          "mmr": 5600,
+          "position": "Pos 5"
+        }
+      ]
+    },
+    {
+      "name": "DRAGFIRE YOUTH",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1RtxmdX1d2ubpH4hWKNNkVva4sOkcmIKe",
+      "captain_telegram": "@bobsaura",
+      "players": [
+        {
+          "nick": "bobs",
+          "real_name": "Ильяс",
+          "account": "https://steamcommunity.com/profiles/76561199490829123/",
+          "telegram": "@bobsaura",
+          "discord": "bobsdota7",
+          "mmr": 7041,
+          "position": "Первая позиция"
+        },
+        {
+          "nick": "no hope",
+          "real_name": "Никита",
+          "account": "https://steamcommunity.com/profiles/76561199490829123/",
+          "telegram": "@monstr2k",
+          "discord": "megamasturbator228",
+          "mmr": 7199,
+          "position": "Вторая позиция"
+        },
+        {
+          "nick": "JKL",
+          "real_name": "Данил",
+          "account": "https://steamcommunity.com/id/JKLgod/",
+          "telegram": "@tot_eche_talant",
+          "discord": "jkl_zv_08586",
+          "mmr": 7432,
+          "position": "Третья позиция"
+        },
+        {
+          "nick": "slark",
+          "real_name": "Григорий",
+          "account": "https://steamcommunity.com/profiles/76561198121977332/",
+          "telegram": "@deadpoolceo",
+          "discord": "bombinibobson",
+          "mmr": 6421,
+          "position": "Четвёртая позиция"
+        },
+        {
+          "nick": "Dafuqqq?",
+          "real_name": "Назар",
+          "account": "https://steamcommunity.com/profiles/76561199144949839/",
+          "telegram": "@Nazarten",
+          "discord": "dafuqqq.",
+          "mmr": 6900,
+          "mmr_note": "примерно, при заявке Интернет отлетел и нет скрина, и нет точной информации, но там +/- 100 MMR от 6900, скрин могу отдельно прикрепить администратору",
+          "position": "Пятая позиция"
+        }
+      ],
+      "subs": [
+        {
+          "nick": "Zakich",
+          "real_name": "Александр",
+          "account": "https://steamcommunity.com/profiles/76561198196804722/",
+          "telegram": "@Zakich_1608",
+          "discord": "zakich",
+          "mmr": 6454,
+          "position": "Четвёртая или пятая позиция"
+        },
+        {
+          "nick": "caroline",
+          "real_name": "Илья",
+          "account": "https://steamcommunity.com/id/TeoPink/",
+          "telegram": "@thzxn",
+          "discord": "nightvisionn",
+          "mmr": 6200,
+          "mmr_note": "сейчас калибровка",
+          "position": "Четвёртая или пятая позиция"
+        }
+      ]
+    },
+    {
+      "name": "Bociarnia",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=18YixUCBogWjC7Jl2YHc8-lSWOJnkbO8C",
+      "captain_telegram": "plkflash",
+      "players": [
+        {
+          "nick": "Ciptok",
+          "real_name": "Piotr Fudali",
+          "account": "https://steamcommunity.com/profiles/76561197989700656/",
+          "telegram": "ciptok3",
+          "discord": "ciptok",
+          "mmr": 7053,
+          "position": "5 - Hard Support"
+        },
+        {
+          "nick": "Songoas",
+          "real_name": "Mateusz Kwiatkowski",
+          "account": "https://steamcommunity.com/id/songoas",
+          "telegram": "songoas",
+          "discord": "songoas",
+          "mmr": 7486,
+          "position": "4 - Soft Support"
+        },
+        {
+          "nick": "Jacob^",
+          "real_name": "Jakub Staniszewski",
+          "account": "https://steamcommunity.com/profiles/76561198090266865/",
+          "telegram": "505709925",
+          "discord": "jacob5565",
+          "mmr": 7764,
+          "position": "2 - Mid"
+        },
+        {
+          "nick": "Fey",
+          "real_name": "Filip Musialski",
+          "account": "https://steamcommunity.com/id/runawayfromthepain/",
+          "telegram": "602808747",
+          "discord": "malevolenceinmyveins",
+          "mmr": 7400,
+          "position": "1 - Carry"
+        },
+        {
+          "nick": "Kubox",
+          "real_name": "Jakub Chrabąszcz",
+          "account": "https://steamcommunity.com/profiles/76561198092135370/",
+          "telegram": "790 300 646",
+          "discord": "kubox5581",
+          "mmr": 6810,
+          "position": "3 - Offlane"
+        }
+      ]
+    },
+    {
+      "name": "Built Different",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1Tnwd5oxuUoZfPj-E0aTr2-OZ0VLYTBdA",
+      "captain_telegram": "@LookAtTeenwave",
+      "players": [
+        {
+          "nick": "Teenwave",
+          "real_name": "Тимофей",
+          "account": "https://www.dotabuff.com/players/969711334",
+          "telegram": "@LookAtTeenwave",
+          "mmr": 5865,
+          "position": "Carry"
+        },
+        {
+          "nick": "0% Win rate",
+          "real_name": "Ярослав",
+          "account": "https://www.dotabuff.com/players/1099343730",
+          "telegram": "@las1g",
+          "mmr": 7400,
+          "position": "Mid"
+        },
+        {
+          "nick": "effume",
+          "real_name": "Роман",
+          "account": "https://www.dotabuff.com/players/1508400788",
+          "telegram": "@emoterracted",
+          "mmr": 6930,
+          "position": "Offlane"
+        },
+        {
+          "nick": "drim",
+          "real_name": "Дамир",
+          "account": "https://ru.dotabuff.com/players/1254288973",
+          "telegram": "@kanek1prime67",
+          "mmr": 5965,
+          "position": "Support"
+        },
+        {
+          "nick": "zobaa",
+          "real_name": "Захар",
+          "account": "https://www.dotabuff.com/players/102258689",
+          "telegram": "@Mirco9677",
+          "mmr": 5880,
+          "position": "Hard-Support"
+        }
+      ]
+    },
+    {
+      "name": "Bedlam Blue",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1E36Gr3aCGmgUXM4qkTuedB3bzU5ehqWt",
+      "captain_telegram": "@tiltexsad",
+      "players": [
+        {
+          "nick": "tiltexs",
+          "real_name": "Михаель",
+          "account": "https://steamcommunity.com/id/tilteezy/",
+          "telegram": "@tiltexsad",
+          "discord": "lyblyshalav",
+          "mmr": 6000,
+          "position": "1"
+        },
+        {
+          "nick": "Semen_Ebakin",
+          "real_name": "Даниил",
+          "account": "https://steamcommunity.com/profiles/76561198998268113/",
+          "telegram": "@AdsaasQWE",
+          "discord": "semen_ebakin",
+          "mmr": 5500,
+          "position": "2"
+        },
+        {
+          "nick": "reverse",
+          "real_name": "Никита",
+          "account": "https://steamcommunity.com/profiles/76561198250849998/",
+          "telegram": "@to4k4a",
+          "discord": "3a6ygy",
+          "mmr": 6300,
+          "position": "3"
+        },
+        {
+          "nick": "crew",
+          "real_name": "Григорий",
+          "account": "https://steamcommunity.com/profiles/76561197975686493/",
+          "telegram": "@mtdqq",
+          "discord": "anenchephaly",
+          "mmr": 6300,
+          "position": "5"
+        },
+        {
+          "nick": "yomyKo",
+          "real_name": "Руслан",
+          "account": "https://steamcommunity.com/profiles/76561199554847574/",
+          "telegram": "@fgjou7",
+          "discord": "yomyko.",
+          "mmr": 6500,
+          "position": "4"
+        }
+      ]
+    },
+    {
+      "name": "Immortal Dragons",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=19sfDhD949pheFtj4xywRm_kelwrYMDMR",
+      "captain_telegram": "@Drag0nay",
+      "players": [
+        {
+          "nick": "Dragonay",
+          "real_name": "Самир",
+          "account": "https://steamcommunity.com/profiles/76561199067921467/",
+          "telegram": "@Drag0nay",
+          "discord": "drag0nay",
+          "mmr": 6124,
+          "position": "керри"
+        },
+        {
+          "nick": "Berose",
+          "real_name": "Ростик",
+          "account": "https://steamcommunity.com/profiles/76561198083753389/",
+          "telegram": "@kraytyy",
+          "discord": "beros6666",
+          "mmr": 5730,
+          "position": "2"
+        },
+        {
+          "nick": "wonderfultime",
+          "real_name": "артем",
+          "account": "https://steamcommunity.com/profiles/76561198135853504/",
+          "telegram": "@Xruxodzila",
+          "discord": "wonderfulltime_",
+          "mmr": 6848,
+          "position": "pos3"
+        },
+        {
+          "nick": "ryouta",
+          "real_name": "Александр!",
+          "account": "https://www.dotabuff.com/players/213156554",
+          "telegram": "@bsiteplayer",
+          "mmr": 6100,
+          "position": "4pos"
+        },
+        {
+          "nick": "emotions ?",
+          "real_name": "Олег",
+          "account": "https://steamcommunity.com/profiles/76561199036807776/",
+          "telegram": "ntnbbaa",
+          "discord": "1see1deadpeople",
+          "mmr": 5300,
+          "position": "5 pos"
+        }
+      ]
+    },
+    {
+      "name": "KoPoJ丨入CεBePa",
+      "status": "registered",
+      "logo_url": "https://drive.google.com/open?id=1oacAxw2emQZSIxuymyIkacDlJiXZQclq",
+      "captain_telegram": "@blz1k",
+      "players": [
+        {
+          "nick": "NightKing",
+          "real_name": "Сергей",
+          "account": "https://steamcommunity.com/profiles/76561199273549421/",
+          "telegram": "@ConglomerateIdol",
+          "discord": "ne_doedau_na_kerri",
+          "mmr": 6700,
+          "position": "1"
+        },
+        {
+          "nick": "ZhakentiGod",
+          "real_name": "Ержан",
+          "account": "https://steamcommunity.com/id/ZSF20010807/",
+          "telegram": "@ZhakentiGod",
+          "discord": "jakobaby",
+          "mmr": 6600,
+          "position": "2"
+        },
+        {
+          "nick": "BlazeR",
+          "real_name": "Родион",
+          "account": "https://steamcommunity.com/id/mrinferno3/",
+          "telegram": "@blz1k",
+          "discord": "bla3er",
+          "mmr": 5400,
+          "position": "3"
+        },
+        {
+          "nick": "Tai Lung",
+          "real_name": "Рафаэль",
+          "account": "https://www.dotabuff.com/players/359581509",
+          "telegram": "@ka1jo",
+          "discord": "kaijo9885",
+          "mmr": 6070,
+          "position": "4"
+        },
+        {
+          "nick": "Marilyn Monroe",
+          "real_name": "Дмитрий",
+          "account": "https://www.dotabuff.com/players/1849246039",
+          "telegram": "@chen22867",
+          "discord": "k.nv.7",
+          "mmr": 5948,
+          "position": "5"
+        }
+      ]
+    }
+  ]
+}
