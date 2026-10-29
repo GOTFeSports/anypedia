@@ -1,0 +1,32 @@
+{
+  "name": "BARRACUDA CUP",
+  "series": "Barracuda Cup",
+  "organizer": "Barracuda Battles",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-10-31",
+  "date_end": "2026-10-31",
+  "format": [
+    "Плей-офф: Single Elimination (сетка на вылет)",
+    "5x5, Captains Mode"
+  ],
+  "pts_cap": 30000,
+  "prize_pool": "20 000 ₽",
+  "description": "Турнир от Barracuda Battles. Участие бесплатное. Лимит 7000 MMR на игрока и 30 000 на команду. Старт 31 октября в 14:00 МСК. Регистрация до 12:00 МСК 31 октября. Условие участия: подписка на Telegram и Discord.",
+  "links": {
+    "registration": "https://egalive.net/cup#/"
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "15 000 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "5 000 ₽"
+    }
+  ],
+  "streams": []
+}
