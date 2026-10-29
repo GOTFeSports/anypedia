@@ -173,7 +173,7 @@ async function homeView() {
   const hero = `
     <section class="hero">
       <h1>Турниры Dota 2 с ограничением по ПТС</h1>
-      <p>Призовые места, составы команд, групповые этапы, швейцарка и сетки полупрофессиональных турниров СНГ.</p>
+      <p>Anypedia — энциклопедия турниров по Dota 2 с ограничением по ПТС. Составы команд, сетки, результаты и призовые места любительской и полупрофессиональной сцены СНГ собраны на одной странице для каждого турнира.</p>
       <div class="stats">
         <div class="stat"><b>${num(stats.tournaments ?? list.length)}</b><span>Турниров</span></div>
         <div class="stat"><b>${num(stats.teams ?? 0)}</b><span>Команд</span></div>
@@ -183,7 +183,7 @@ async function homeView() {
     </section>`;
 
   if (!list.length) {
-    return `${hero}<div class="empty" style="margin-top:28px">Турниров пока нет. Добавьте папку в <code>tournaments/</code> и запустите <code>npm run build</code>.</div>`;
+    return `${hero}<div class="empty" style="margin-top:28px">Турниры скоро появятся. Загляните позже.</div>`;
   }
 
   const [feat, ...rest] = list;
