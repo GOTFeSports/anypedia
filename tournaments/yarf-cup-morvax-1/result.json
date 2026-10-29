@@ -1,0 +1,73 @@
+{
+  "placements": [],
+  "stages": [
+    {
+      "type": "group_stage",
+      "name": "Групповой этап (Bo1)",
+      "groups": [
+        {
+          "name": "Группа A",
+          "matches": []
+        },
+        {
+          "name": "Группа B",
+          "matches": []
+        },
+        {
+          "name": "Группа C",
+          "matches": []
+        },
+        {
+          "name": "Группа D",
+          "matches": []
+        }
+      ]
+    },
+    {
+      "type": "single_elim",
+      "name": "Плей-офф (LAN)",
+      "rounds": [
+        {
+          "name": "Полуфинал (Bo3)",
+          "bracket": "upper",
+          "matches": [
+            {
+              "id": "m1",
+              "team1": "",
+              "team2": "",
+              "next": "m3"
+            },
+            {
+              "id": "m2",
+              "team1": "",
+              "team2": "",
+              "next": "m3"
+            }
+          ]
+        },
+        {
+          "name": "Матч за 3-е место (Bo3)",
+          "bracket": "lower",
+          "matches": [
+            {
+              "id": "m4",
+              "team1": "",
+              "team2": ""
+            }
+          ]
+        },
+        {
+          "name": "Финал (Bo3)",
+          "bracket": "final",
+          "matches": [
+            {
+              "id": "m3",
+              "team1": "",
+              "team2": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
