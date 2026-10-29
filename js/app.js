@@ -146,8 +146,9 @@ function featureCard(t) {
 }
 
 function matchRow(m, withStage = true) {
-  const known = hasScore(m);
-  const s1 = +m.score1, s2 = +m.score2;
+  const wo = !hasScore(m) && (m.winner === 1 || m.winner === 2);
+  const known = hasScore(m) || wo;
+  const s1 = wo ? (m.winner === 1 ? 1 : 0) : +m.score1, s2 = wo ? (m.winner === 2 ? 1 : 0) : +m.score2;
   const c1 = known ? (s1 > s2 ? 'win' : s1 < s2 ? 'lose' : '') : '';
   const c2 = known ? (s2 > s1 ? 'win' : s2 < s1 ? 'lose' : '') : '';
   return `
@@ -155,7 +156,7 @@ function matchRow(m, withStage = true) {
       <div class="mtop"><span class="mt-name">${esc(m.tournament)}${withStage && m.stage ? ` · ${esc(m.stage)}` : ''}</span>${m.date ? `<span>${esc(shortDate(m.date))}</span>` : ''}</div>
       <div class="mbody">
         <span class="side l ${c1}"><span class="txt">${esc(m.team1)}</span>${matchLogo(m.logo1)}</span>
-        <span class="mscore">${known ? `${s1}:${s2}` : 'vs'}</span>
+        <span class="mscore">${wo ? (m.winner === 1 ? 'W:L' : 'L:W') : known ? `${s1}:${s2}` : 'vs'}</span>
         <span class="side r ${c2}">${matchLogo(m.logo2)}<span class="txt">${esc(m.team2)}</span></span>
       </div>
     </a>`;
@@ -570,13 +571,15 @@ function swissBlock(ctx, s) {
 
 function bmatch(ctx, m) {
   const known = hasScore(m);
+  const wo = !known && (m.winner === 1 || m.winner === 2); // победа без счёта (W / L)
   const s1 = +m.score1, s2 = +m.score2;
-  const cls = (a, b) => (!known ? '' : a > b ? 'win' : a < b ? 'lose' : '');
-  const team = (name, score, c) =>
+  const cls = (a, b, side) => (wo ? (m.winner === side ? 'win' : 'lose') : !known ? '' : a > b ? 'win' : a < b ? 'lose' : '');
+  const val = (score, side) => (wo ? (m.winner === side ? 'W' : 'L') : known ? esc(score) : '');
+  const team = (name, score, c, side) =>
     `<div class="bteam ${name ? c : 'tbd'}"><span class="bname">${
-      name ? `${tlogo(ctx, name, 'sm')}<span class="txt">${esc(name)}</span>` : '<span class="txt">TBD</span>'
-    }</span><span class="bscore">${known ? esc(score) : ''}</span></div>`;
-  return `<div class="bmatch"${m.id ? ` data-id="${esc(m.id)}"` : ''}${m.next ? ` data-next="${esc(m.next)}"` : ''}${m.date ? ` title="${fmtDate(m.date)}"` : ''}>${team(m.team1, m.score1, cls(s1, s2))}${team(m.team2, m.score2, cls(s2, s1))}</div>`;
+      name ? `${tlogo(ctx, name, 'sm')}<span class="txt">${esc(name)}</span>` : m.bye ? '' : '<span class="txt">TBD</span>'
+    }</span><span class="bscore">${val(score, side)}</span></div>`;
+  return `<div class="bmatch"${m.id ? ` data-id="${esc(m.id)}"` : ''}${m.next ? ` data-next="${esc(m.next)}"` : ''}${m.date ? ` title="${fmtDate(m.date)}"` : ''}>${team(m.team1, m.score1, cls(s1, s2, 1), 1)}${team(m.team2, m.score2, cls(s2, s1, 2), 2)}</div>`;
 }
 
 // rounds[].bracket: upper (по умолчанию) | lower | final | third (матч за 3 место)

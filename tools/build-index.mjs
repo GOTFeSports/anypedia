@@ -37,7 +37,7 @@ function stagesOf(result) {
 function collectMatches(result) {
   const out = [];
   const add = (m, stage) => {
-    if (m.team1 && m.team2) out.push({ stage, team1: m.team1, team2: m.team2, score1: m.score1 ?? null, score2: m.score2 ?? null, date: m.date ?? null });
+    if (m.team1 && m.team2) out.push({ stage, team1: m.team1, team2: m.team2, score1: m.score1 ?? null, score2: m.score2 ?? null, winner: m.winner ?? null, date: m.date ?? null });
   };
   const rounds = (list, label) => (list ?? []).forEach((r) => (r.matches ?? []).forEach((m) => add(m, label ?? r.name)));
   for (const st of stagesOf(result)) {
@@ -159,8 +159,9 @@ for (const d of dirs) {
 list.sort((a, b) => String(b.date_start ?? '').localeCompare(String(a.date_start ?? '')));
 
 const byDate = (dir) => (a, b) => dir * String(a.date ?? '').localeCompare(String(b.date ?? ''));
-const played = allMatches.filter(hasScore);
-const planned = allMatches.filter((m) => !hasScore(m));
+const isPlayed = (m) => hasScore(m) || m.winner === 1 || m.winner === 2; // счёт или победа без счёта (W/L)
+const played = allMatches.filter(isPlayed);
+const planned = allMatches.filter((m) => !isPlayed(m));
 const index = {
   generated: new Date().toISOString(),
   stats: {
