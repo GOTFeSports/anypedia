@@ -9,12 +9,12 @@
   "date_start": "2026-10-31",
   "date_end": "2026-10-31",
   "format": [
-    "Плей-офф: Single Elimination (сетка на вылет)",
+    "Плей-офф: Single Elimination (Best of 1, Грандфинал Best of 3)",
     "5x5, Captains Mode"
   ],
   "pts_cap": 30000,
   "prize_pool": "20 000 ₽",
-  "description": "Турнир от Barracuda Battles. Участие бесплатное. Лимит 7000 MMR на игрока и 30 000 на команду. Старт 31 октября в 14:00 МСК. Регистрация до 12:00 МСК 31 октября. Условие участия: подписка на Telegram и Discord.",
+  "description": "Турнир от Barracuda Battles. Участие бесплатное. Регистрация до 12:00 МСК 31 октября. Условие участия: подписка на Telegram и Discord.",
   "prizes": [
     {
       "place": 1,

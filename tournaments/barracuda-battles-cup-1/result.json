@@ -1,0 +1,231 @@
+{
+  "placements": [
+    {
+      "place": 1,
+      "team": "TBD"
+    },
+    {
+      "place": 2,
+      "team": "TBD"
+    },
+    {
+      "place": 3,
+      "label": "3–4",
+      "team": "TBD"
+    },
+    {
+      "place": 4,
+      "label": "3–4",
+      "team": "TBD"
+    },
+    {
+      "place": 5,
+      "label": "5–8",
+      "team": "TBD"
+    },
+    {
+      "place": 6,
+      "label": "5–8",
+      "team": "TBD"
+    },
+    {
+      "place": 7,
+      "label": "5–8",
+      "team": "TBD"
+    },
+    {
+      "place": 8,
+      "label": "5–8",
+      "team": "TBD"
+    },
+    {
+      "place": 9,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 10,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 11,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 12,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 13,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 14,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 15,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 16,
+      "label": "9–16",
+      "team": "TBD"
+    },
+    {
+      "place": 17,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 18,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 19,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 20,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 21,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 22,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 23,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 24,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 25,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 26,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 27,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 28,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 29,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 30,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 31,
+      "label": "17–32",
+      "team": "TBD"
+    },
+    {
+      "place": 32,
+      "label": "17–32",
+      "team": "TBD"
+    }
+  ],
+  "stages": [
+    {
+      "type": "single_elim",
+      "name": "Плей-офф",
+      "rounds": [
+        {
+          "name": "1/16 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m1", "team1": "TBD", "team2": "TBD", "next": "m17" },
+            { "id": "m2", "team1": "TBD", "team2": "TBD", "next": "m17" },
+            { "id": "m3", "team1": "TBD", "team2": "TBD", "next": "m18" },
+            { "id": "m4", "team1": "TBD", "team2": "TBD", "next": "m18" },
+            { "id": "m5", "team1": "TBD", "team2": "TBD", "next": "m19" },
+            { "id": "m6", "team1": "TBD", "team2": "TBD", "next": "m19" },
+            { "id": "m7", "team1": "TBD", "team2": "TBD", "next": "m20" },
+            { "id": "m8", "team1": "TBD", "team2": "TBD", "next": "m20" },
+            { "id": "m9", "team1": "TBD", "team2": "TBD", "next": "m21" },
+            { "id": "m10", "team1": "TBD", "team2": "TBD", "next": "m21" },
+            { "id": "m11", "team1": "TBD", "team2": "TBD", "next": "m22" },
+            { "id": "m12", "team1": "TBD", "team2": "TBD", "next": "m22" },
+            { "id": "m13", "team1": "TBD", "team2": "TBD", "next": "m23" },
+            { "id": "m14", "team1": "TBD", "team2": "TBD", "next": "m23" },
+            { "id": "m15", "team1": "TBD", "team2": "TBD", "next": "m24" },
+            { "id": "m16", "team1": "TBD", "team2": "TBD", "next": "m24" }
+          ]
+        },
+        {
+          "name": "1/8 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m17", "team1": "TBD", "team2": "TBD", "next": "m25" },
+            { "id": "m18", "team1": "TBD", "team2": "TBD", "next": "m25" },
+            { "id": "m19", "team1": "TBD", "team2": "TBD", "next": "m26" },
+            { "id": "m20", "team1": "TBD", "team2": "TBD", "next": "m26" },
+            { "id": "m21", "team1": "TBD", "team2": "TBD", "next": "m27" },
+            { "id": "m22", "team1": "TBD", "team2": "TBD", "next": "m27" },
+            { "id": "m23", "team1": "TBD", "team2": "TBD", "next": "m28" },
+            { "id": "m24", "team1": "TBD", "team2": "TBD", "next": "m28" }
+          ]
+        },
+        {
+          "name": "1/4 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m25", "team1": "TBD", "team2": "TBD", "next": "m29" },
+            { "id": "m26", "team1": "TBD", "team2": "TBD", "next": "m29" },
+            { "id": "m27", "team1": "TBD", "team2": "TBD", "next": "m30" },
+            { "id": "m28", "team1": "TBD", "team2": "TBD", "next": "m30" }
+          ]
+        },
+        {
+          "name": "Полуфинал (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m29", "team1": "TBD", "team2": "TBD", "next": "m31" },
+            { "id": "m30", "team1": "TBD", "team2": "TBD", "next": "m31" }
+          ]
+        },
+        {
+          "name": "Финал (Bo3)",
+          "bracket": "final",
+          "matches": [
+            { "id": "m31", "team1": "TBD", "team2": "TBD" }
+          ]
+        }
+      ]
+    }
+  ]
+}
