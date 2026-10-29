@@ -1,7 +1,7 @@
 {
   "teams": [
     {
-      "name": "海 常 Kaijo",
+      "name": "Leto",
       "status": "registered",
       "logo_url": "https://drive.google.com/open?id=1uEr7Zr-SSCqA6LEYz30JxTCHjMuHnCT_",
       "captain_telegram": "@dark_light666",
@@ -50,59 +50,6 @@
           "discord": "zakharius77",
           "mmr": 5894,
           "position": "5POS"
-        }
-      ]
-    },
-    {
-      "name": "IGROKI",
-      "status": "registered",
-      "logo_url": "https://drive.google.com/open?id=1XKpMWCROsmLw0d_AOQ_YpGpbrpqHbXQq",
-      "captain_telegram": "@kftudrkb",
-      "players": [
-        {
-          "nick": "fancul",
-          "real_name": "Ростислав",
-          "account": "https://steamcommunity.com/profiles/76561199240654887",
-          "telegram": "@kftudrkb",
-          "discord": "fncl",
-          "mmr": 6700,
-          "position": "Carry"
-        },
-        {
-          "nick": "Gibson",
-          "real_name": "Мар'ян",
-          "account": "https://steamcommunity.com/profiles/76561198885851783",
-          "telegram": "@Marian_Hnativ",
-          "discord": "ggibson13143234",
-          "mmr": 5750,
-          "position": "Mid"
-        },
-        {
-          "nick": "ataraxia",
-          "real_name": "Владислав",
-          "account": "https://steamcommunity.com/id/qwertyukgh",
-          "telegram": "@ihmsq",
-          "discord": "dcb19bddfce9c43251785db0ba8280aa",
-          "mmr": 6250,
-          "position": "Offlane"
-        },
-        {
-          "nick": "mevar",
-          "real_name": "Владислав",
-          "account": "https://steamcommunity.com/profiles/76561198113574546",
-          "telegram": "@Vladick_322",
-          "discord": "mevar_322",
-          "mmr": 6100,
-          "position": "Pos 4"
-        },
-        {
-          "nick": "Abrikos",
-          "real_name": "Андрій",
-          "account": "https://steamcommunity.com/profiles/76561198887784360",
-          "telegram": "@abrik00ss",
-          "discord": "abrikkooss",
-          "mmr": 5600,
-          "position": "Pos 5"
         }
       ]
     },
@@ -231,54 +178,6 @@
           "discord": "kubox5581",
           "mmr": 6810,
           "position": "3 - Offlane"
-        }
-      ]
-    },
-    {
-      "name": "Built Different",
-      "status": "registered",
-      "logo_url": "https://drive.google.com/open?id=1Tnwd5oxuUoZfPj-E0aTr2-OZ0VLYTBdA",
-      "captain_telegram": "@LookAtTeenwave",
-      "players": [
-        {
-          "nick": "Teenwave",
-          "real_name": "Тимофей",
-          "account": "https://www.dotabuff.com/players/969711334",
-          "telegram": "@LookAtTeenwave",
-          "mmr": 5865,
-          "position": "Carry"
-        },
-        {
-          "nick": "0% Win rate",
-          "real_name": "Ярослав",
-          "account": "https://www.dotabuff.com/players/1099343730",
-          "telegram": "@las1g",
-          "mmr": 7400,
-          "position": "Mid"
-        },
-        {
-          "nick": "effume",
-          "real_name": "Роман",
-          "account": "https://www.dotabuff.com/players/1508400788",
-          "telegram": "@emoterracted",
-          "mmr": 6930,
-          "position": "Offlane"
-        },
-        {
-          "nick": "drim",
-          "real_name": "Дамир",
-          "account": "https://ru.dotabuff.com/players/1254288973",
-          "telegram": "@kanek1prime67",
-          "mmr": 5965,
-          "position": "Support"
-        },
-        {
-          "nick": "zobaa",
-          "real_name": "Захар",
-          "account": "https://www.dotabuff.com/players/102258689",
-          "telegram": "@Mirco9677",
-          "mmr": 5880,
-          "position": "Hard-Support"
         }
       ]
     },

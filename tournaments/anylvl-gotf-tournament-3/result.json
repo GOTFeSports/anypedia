@@ -10,7 +10,7 @@
     },
     {
       "place": 3,
-      "team": "Immortal"
+      "team": "Immortal Dragons"
     },
     {
       "place": 4,
@@ -24,7 +24,7 @@
     {
       "place": 6,
       "label": "5–6",
-      "team": "Coroli Sev"
+      "team": "KoPoJ丨入CεBePa"
     }
   ],
   "stages": [
@@ -46,7 +46,7 @@
             },
             {
               "id": "m2",
-              "team1": "Immortal",
+              "team1": "Immortal Dragons",
               "team2": "",
               "bye": true,
               "next": "m5"
@@ -54,7 +54,7 @@
             {
               "id": "m3",
               "team1": "DF Youth",
-              "team2": "Coroli Sev",
+              "team2": "KoPoJ丨入CεBePa",
               "score1": 1,
               "score2": 0,
               "next": "m6"
@@ -75,7 +75,7 @@
             {
               "id": "m5",
               "team1": "Bociarnia",
-              "team2": "Immortal",
+              "team2": "Immortal Dragons",
               "score1": 1,
               "score2": 0,
               "next": "m7"
@@ -116,7 +116,7 @@
             },
             {
               "id": "m10",
-              "team1": "Coroli Sev",
+              "team1": "KoPoJ丨入CεBePa",
               "team2": "",
               "bye": true,
               "next": "m12"
@@ -136,8 +136,8 @@
             },
             {
               "id": "m12",
-              "team1": "Immortal",
-              "team2": "Coroli Sev",
+              "team1": "Immortal Dragons",
+              "team2": "KoPoJ丨入CεBePa",
               "winner": 1,
               "next": "m13"
             }
@@ -150,7 +150,7 @@
             {
               "id": "m13",
               "team1": "Leto",
-              "team2": "Immortal",
+              "team2": "Immortal Dragons",
               "score1": 0,
               "score2": 1,
               "next": "m14"
@@ -164,7 +164,7 @@
             {
               "id": "m14",
               "team1": "DF Youth",
-              "team2": "Immortal",
+              "team2": "Immortal Dragons",
               "score1": 1,
               "score2": 0,
               "next": "m8"
