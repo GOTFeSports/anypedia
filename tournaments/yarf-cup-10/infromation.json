@@ -1,0 +1,29 @@
+{
+  "name": "YARF CUP № 10",
+  "series": "YARF CUP",
+  "organizer": "YARF CUP",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-08",
+  "date_end": "2026-11-08",
+  "format": [
+    "Single Elimination",
+    "Все матчи — Bo1",
+    "Финал — Bo3",
+    "Captains Mode",
+    "Турнир проводится при наборе ЛЮБОГО количества команд"
+  ],
+  "pts_cap": null,
+  "prize_pool": "15 000 ₽",
+  "description": "Онлайн турнир 5х5 по Dota 2 от YARF CUP. Начало турнира в 12:00 МСК. Лобби создаёт верхняя команда по турнирной сетке. Опоздание более 10 минут приравнивается к техническому поражению. Участие бесплатное.",
+  "links": {},
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "15 000 ₽"
+    }
+  ],
+  "streams": []
+}
