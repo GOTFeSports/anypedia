@@ -1,6 +1,14 @@
 {
   "placements": [
     {
+      "place": 1,
+      "team": ""
+    },
+    {
+      "place": 2,
+      "team": ""
+    },
+    {
       "place": 3,
       "label": "3–4",
       "team": "Veni vidi vici"
@@ -38,7 +46,7 @@
     {
       "place": 10,
       "label": "9–16",
-      "team": "BadBees Ac..."
+      "team": "BadBees Aca..."
     },
     {
       "place": 11,
@@ -48,7 +56,7 @@
     {
       "place": 12,
       "label": "9–16",
-      "team": "Литивн Ти..."
+      "team": "Листвин Тим ..."
     },
     {
       "place": 13,
@@ -58,7 +66,7 @@
     {
       "place": 14,
       "label": "9–16",
-      "team": "to The Mo..."
+      "team": "To The Moon ..."
     },
     {
       "place": 15,
@@ -88,12 +96,12 @@
     {
       "place": 20,
       "label": "17–32",
-      "team": "Qotaq Gam..."
+      "team": "Qotaq Gaming"
     },
     {
       "place": 21,
       "label": "17–32",
-      "team": "Never Back..."
+      "team": "Never Back Down"
     },
     {
       "place": 22,
@@ -113,7 +121,7 @@
     {
       "place": 25,
       "label": "17–32",
-      "team": "HFACY(Ос..."
+      "team": "HFACY(Основа)"
     },
     {
       "place": 26,
@@ -138,7 +146,7 @@
     {
       "place": 30,
       "label": "17–32",
-      "team": "Eaters of G..."
+      "team": "Eaters of Gods"
     },
     {
       "place": 31,
@@ -158,7 +166,7 @@
     {
       "place": 34,
       "label": "33–64",
-      "team": "SpasskKom..."
+      "team": "SpasskKomteam"
     },
     {
       "place": 35,
@@ -168,17 +176,17 @@
     {
       "place": 36,
       "label": "33–64",
-      "team": "Zmin Spirit"
+      "team": "Zimin Spirit"
     },
     {
       "place": 37,
       "label": "33–64",
-      "team": "csvr"
+      "team": "ksvr"
     },
     {
       "place": 38,
       "label": "33–64",
-      "team": "Omrycx"
+      "team": "Отпуск"
     },
     {
       "place": 39,
@@ -188,22 +196,22 @@
     {
       "place": 40,
       "label": "33–64",
-      "team": "Chidori Stor..."
+      "team": "Chidori Storm"
     },
     {
       "place": 41,
       "label": "33–64",
-      "team": "Xulgans pri..."
+      "team": "Xulgans prime"
     },
     {
       "place": 42,
       "label": "33–64",
-      "team": "Team Desp..."
+      "team": "Team Despotism"
     },
     {
       "place": 43,
       "label": "33–64",
-      "team": "broken toose"
+      "team": "Broken toose"
     },
     {
       "place": 44,
@@ -228,7 +236,7 @@
     {
       "place": 48,
       "label": "33–64",
-      "team": "the deity of..."
+      "team": "The deity of ..."
     },
     {
       "place": 49,
@@ -243,7 +251,7 @@
     {
       "place": 51,
       "label": "33–64",
-      "team": "the butche..."
+      "team": "The butcher briga..."
     }
   ],
   "stages": [
@@ -257,36 +265,36 @@
           "matches": [
             { "id": "m1", "team1": "Q-colds", "team2": "", "next": "m33" },
             { "id": "m2", "team1": "Black Horse", "team2": "EchoBlade", "score1": 0, "score2": 1, "next": "m33" },
-            { "id": "m3", "team1": "Mambastiks", "team2": "SpasskKom...", "score1": 1, "score2": 0, "next": "m34" },
+            { "id": "m3", "team1": "Mambastiks", "team2": "SpasskKomteam", "score1": 1, "score2": 0, "next": "m34" },
             { "id": "m4", "team1": "Crimson Cult", "team2": "+ширэв+", "score1": 0, "score2": 1, "next": "m34" },
             { "id": "m5", "team1": "47FPS", "team2": "", "next": "m35" },
-            { "id": "m6", "team1": "Zmin Spirit", "team2": "Lits", "score1": 0, "score2": 1, "next": "m35" },
-            { "id": "m7", "team1": "BadBees Acad...", "team2": "", "next": "m36" },
-            { "id": "m8", "team1": "Qotaq Ga...", "team2": "csvr", "score1": 1, "score2": 0, "next": "m36" },
+            { "id": "m6", "team1": "Zimin Spirit", "team2": "Lits", "score1": 0, "score2": 1, "next": "m35" },
+            { "id": "m7", "team1": "BadBees Aca...", "team2": "", "next": "m36" },
+            { "id": "m8", "team1": "Qotaq Gaming", "team2": "ksvr", "score1": 1, "score2": 0, "next": "m36" },
             { "id": "m9", "team1": "Veni vidi vici", "team2": "", "next": "m37" },
-            { "id": "m10", "team1": "Omrycx", "team2": "Never Back...", "score1": 0, "score2": 1, "next": "m37" },
+            { "id": "m10", "team1": "Отпуск", "team2": "Never Back Down", "score1": 0, "score2": 1, "next": "m37" },
             { "id": "m11", "team1": "Дьяхон", "team2": "Manta", "score1": 1, "score2": 0, "next": "m38" },
-            { "id": "m12", "team1": "Outsiders", "team2": "Chidori Stor...", "score1": 1, "score2": 0, "next": "m38" },
+            { "id": "m12", "team1": "Outsiders", "team2": "Chidori Storm", "score1": 1, "score2": 0, "next": "m38" },
             { "id": "m13", "team1": "Vnebo", "team2": "", "next": "m39" },
-            { "id": "m14", "team1": "Xulgans pri...", "team2": "Xz team", "score1": 0, "score2": 1, "next": "m39" },
+            { "id": "m14", "team1": "Xulgans prime", "team2": "Xz team", "score1": 0, "score2": 1, "next": "m39" },
             { "id": "m15", "team1": "PRIM3 HUB", "team2": "", "next": "m40" },
-            { "id": "m16", "team1": "Литивн Ти...", "team2": "Team Desp...", "score1": 1, "score2": 0, "next": "m40" },
+            { "id": "m16", "team1": "Листвин Тим ...", "team2": "Team Despotism", "score1": 1, "score2": 0, "next": "m40" },
             { "id": "m17", "team1": "VeTmo", "team2": "", "next": "m41" },
-            { "id": "m18", "team1": "HFACY(Ос...", "team2": "broken toose", "score1": 1, "score2": 0, "next": "m41" },
+            { "id": "m18", "team1": "HFACY(Основа)", "team2": "Broken toose", "score1": 1, "score2": 0, "next": "m41" },
             { "id": "m19", "team1": "Rofioeblan", "team2": "", "next": "m42" },
             { "id": "m20", "team1": "VRN", "team2": "M1xT3s", "score1": 1, "score2": 0, "next": "m42" },
             { "id": "m21", "team1": "Nxghtmare", "team2": "", "next": "m43" },
-            { "id": "m22", "team1": "Kaban Team", "team2": "to The Mo...", "score1": 0, "score2": 1, "next": "m43" },
+            { "id": "m22", "team1": "Kaban Team", "team2": "To The Moon ...", "score1": 0, "score2": 1, "next": "m43" },
             { "id": "m23", "team1": "EGOISTO", "team2": "", "next": "m44" },
             { "id": "m24", "team1": "Gruz200", "team2": "Primal dance", "score1": 1, "score2": 0, "next": "m44" },
             { "id": "m25", "team1": "aig", "team2": "", "next": "m45" },
             { "id": "m26", "team1": "Team P2hi", "team2": "Crous Team", "score1": 0, "score2": 1, "next": "m45" },
-            { "id": "m27", "team1": "Eaters of G...", "team2": "the deity of...", "score1": 1, "score2": 0, "next": "m46" },
+            { "id": "m27", "team1": "Eaters of Gods", "team2": "The deity of ...", "score1": 1, "score2": 0, "next": "m46" },
             { "id": "m28", "team1": "Eternal Z", "team2": "TRUE ADAM", "score1": 1, "score2": 0, "next": "m46" },
             { "id": "m29", "team1": "Skritopylie", "team2": "", "next": "m47" },
             { "id": "m30", "team1": "jeyzed", "team2": "GLINA", "score1": 1, "score2": 0, "next": "m47" },
             { "id": "m31", "team1": "ritashidog + 4...", "team2": "", "next": "m48" },
-            { "id": "m32", "team1": "the butche...", "team2": "zybi team", "score1": 0, "score2": 1, "next": "m48" }
+            { "id": "m32", "team1": "The butcher briga...", "team2": "zybi team", "score1": 0, "score2": 1, "next": "m48" }
           ]
         },
         {
@@ -296,17 +304,17 @@
             { "id": "m33", "team1": "Q-colds", "team2": "EchoBlade", "score1": 1, "score2": 0, "next": "m49" },
             { "id": "m34", "team1": "Mambastiks", "team2": "+ширэв+", "score1": 1, "score2": 0, "next": "m49" },
             { "id": "m35", "team1": "47FPS", "team2": "Lits", "score1": 1, "score2": 0, "next": "m50" },
-            { "id": "m36", "team1": "BadBees Acad...", "team2": "Qotaq Gam...", "score1": 1, "score2": 0, "next": "m50" },
-            { "id": "m37", "team1": "Veni vidi vici", "team2": "Never Back...", "score1": 1, "score2": 0, "next": "m51" },
+            { "id": "m36", "team1": "BadBees Aca...", "team2": "Qotaq Gaming", "score1": 1, "score2": 0, "next": "m50" },
+            { "id": "m37", "team1": "Veni vidi vici", "team2": "Never Back Down", "score1": 1, "score2": 0, "next": "m51" },
             { "id": "m38", "team1": "Дьяхон", "team2": "Outsiders", "score1": 0, "score2": 1, "next": "m51" },
             { "id": "m39", "team1": "Vnebo", "team2": "Xz team", "score1": 1, "score2": 0, "next": "m52" },
-            { "id": "m40", "team1": "PRIM3 HUB", "team2": "Литивн Ти...", "score1": 0, "score2": 1, "next": "m52" },
-            { "id": "m41", "team1": "VeTmo", "team2": "HFACY(Ос...", "score1": 1, "score2": 0, "next": "m53" },
+            { "id": "m40", "team1": "PRIM3 HUB", "team2": "Листвин Тим ...", "score1": 0, "score2": 1, "next": "m52" },
+            { "id": "m41", "team1": "VeTmo", "team2": "HFACY(Основа)", "score1": 1, "score2": 0, "next": "m53" },
             { "id": "m42", "team1": "Rofioeblan", "team2": "VRN", "score1": 0, "score2": 1, "next": "m53" },
-            { "id": "m43", "team1": "Nxghtmare", "team2": "to The Mo...", "score1": 0, "score2": 1, "next": "m54" },
+            { "id": "m43", "team1": "Nxghtmare", "team2": "To The Moon ...", "score1": 0, "score2": 1, "next": "m54" },
             { "id": "m44", "team1": "EGOISTO", "team2": "Gruz200", "score1": 0, "score2": 1, "next": "m54" },
             { "id": "m45", "team1": "aig", "team2": "Crous Team", "score1": 1, "score2": 0, "next": "m55" },
-            { "id": "m46", "team1": "Eaters of G...", "team2": "Eternal Z", "score1": 0, "score2": 1, "next": "m55" },
+            { "id": "m46", "team1": "Eaters of Gods", "team2": "Eternal Z", "score1": 0, "score2": 1, "next": "m55" },
             { "id": "m47", "team1": "Skritopylie", "team2": "jeyzed", "score1": 1, "score2": 0, "next": "m56" },
             { "id": "m48", "team1": "ritashidog + 4...", "team2": "zybi team", "score1": 1, "score2": 0, "next": "m56" }
           ]
@@ -316,11 +324,11 @@
           "bracket": "upper",
           "matches": [
             { "id": "m49", "team1": "Q-colds", "team2": "Mambastiks", "score1": 1, "score2": 0, "next": "m57" },
-            { "id": "m50", "team1": "47FPS", "team2": "BadBees Ac...", "score1": 1, "score2": 0, "next": "m57" },
+            { "id": "m50", "team1": "47FPS", "team2": "BadBees Aca...", "score1": 1, "score2": 0, "next": "m57" },
             { "id": "m51", "team1": "Veni vidi vici", "team2": "Outsiders", "score1": 1, "score2": 0, "next": "m58" },
-            { "id": "m52", "team1": "Vnebo", "team2": "Литивн Ти...", "score1": 1, "score2": 0, "next": "m58" },
+            { "id": "m52", "team1": "Vnebo", "team2": "Листвин Тим ...", "score1": 1, "score2": 0, "next": "m58" },
             { "id": "m53", "team1": "VeTmo", "team2": "VRN", "score1": 1, "score2": 0, "next": "m59" },
-            { "id": "m54", "team1": "to The Mo...", "team2": "Gruz200", "score1": 0, "score2": 1, "next": "m59" },
+            { "id": "m54", "team1": "To The Moon ...", "team2": "Gruz200", "score1": 0, "score2": 1, "next": "m59" },
             { "id": "m55", "team1": "aig", "team2": "Eternal Z", "score1": 1, "score2": 0, "next": "m60" },
             { "id": "m56", "team1": "Skritopylie", "team2": "ritashidog + 4...", "score1": 1, "score2": 0, "next": "m60" }
           ]

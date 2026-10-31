@@ -1,0 +1,642 @@
+{
+  "teams": [
+    {
+      "name": "Team Despotism",
+      "status": "registered",
+      "players": [
+        { "nick": "quintessence", "position": "C" },
+        { "nick": "Yoru14" },
+        { "nick": "Casior" },
+        { "nick": "midwestemo" },
+        { "nick": "Geretyns" }
+      ]
+    },
+    {
+      "name": "Листвин Тим ...",
+      "status": "registered",
+      "players": [
+        { "nick": "Dialbo", "position": "C" },
+        { "nick": "Rovneipacan" },
+        { "nick": "Banekahker" },
+        { "nick": "THE_Vadim001" },
+        { "nick": "Insomia" }
+      ]
+    },
+    {
+      "name": "jeyzed",
+      "status": "registered",
+      "players": [
+        { "nick": "Longeq", "position": "C" },
+        { "nick": "flozzy" },
+        { "nick": "gennoy" },
+        { "nick": "qwertyyy123" },
+        { "nick": "Hira27" }
+      ]
+    },
+    {
+      "name": "Spirit_Oleg",
+      "status": "registered",
+      "players": [
+        { "nick": "Lhate_tinker", "position": "C" },
+        { "nick": "Morning_star" },
+        { "nick": "333a1" },
+        { "nick": "Levandupala" },
+        { "nick": "Wakai" }
+      ]
+    },
+    {
+      "name": "The butcher briga...",
+      "status": "registered",
+      "players": [
+        { "nick": "zzzdrast", "position": "C" },
+        { "nick": "Podsnezn1k" },
+        { "nick": "MOTIK0697" },
+        { "nick": "Oniking" },
+        { "nick": "S28z" }
+      ]
+    },
+    {
+      "name": "Doza™",
+      "status": "registered",
+      "players": [
+        { "nick": "OREep", "position": "C" },
+        { "nick": "Player" },
+        { "nick": "Player" },
+        { "nick": "Player" },
+        { "nick": "Player" }
+      ]
+    },
+    {
+      "name": "ksvr",
+      "status": "registered",
+      "players": [
+        { "nick": "danach", "position": "C" },
+        { "nick": "placidusax" },
+        { "nick": "Zoo3353532" },
+        { "nick": "Tuskio" },
+        { "nick": "Pisun41k" }
+      ]
+    },
+    {
+      "name": "Eternal Z",
+      "status": "registered",
+      "players": [
+        { "nick": "leonoxy", "position": "C" },
+        { "nick": "Lord_Misantrhrop" },
+        { "nick": "Toyn" },
+        { "nick": "322t1" },
+        { "nick": "600000000my..." }
+      ]
+    },
+    {
+      "name": "Black Horse",
+      "status": "registered",
+      "players": [
+        { "nick": "TalanTT", "position": "C" },
+        { "nick": "Scr1pter" },
+        { "nick": "Chebupelc" },
+        { "nick": "Just_Call_Me_Ben" },
+        { "nick": "Chekush3g" }
+      ]
+    },
+    {
+      "name": "EchoBlade",
+      "status": "registered",
+      "players": [
+        { "nick": "Marcsist2", "position": "C" },
+        { "nick": "Oleg_transmision" },
+        { "nick": "puzirik" },
+        { "nick": "Baklan1" },
+        { "nick": "bricscube" }
+      ]
+    },
+    {
+      "name": "Broken toose",
+      "status": "registered",
+      "players": [
+        { "nick": "Yuryk", "position": "C" },
+        { "nick": "Mr.Prince" },
+        { "nick": "BRDISH" },
+        { "nick": "rogativbog" },
+        { "nick": "AdqWhat" }
+      ]
+    },
+    {
+      "name": "47FPS",
+      "status": "registered",
+      "players": [
+        { "nick": "yakotou", "position": "C" },
+        { "nick": "Nottoday1903" },
+        { "nick": "keksik1337" },
+        { "nick": "OKINAWAI" },
+        { "nick": "Doomashn1" }
+      ]
+    },
+    {
+      "name": "Xulgans prime",
+      "status": "registered",
+      "players": [
+        { "nick": "asword", "position": "C" },
+        { "nick": "sakudzey" },
+        { "nick": "zeepozar" },
+        { "nick": "Jehazxchgoul2009" },
+        { "nick": "Undertaker_86" }
+      ]
+    },
+    {
+      "name": "Team P2hi",
+      "status": "registered",
+      "players": [
+        { "nick": "Rurti", "position": "C" },
+        { "nick": "S3nt1x" },
+        { "nick": "fresh1955" },
+        { "nick": "ipsen" },
+        { "nick": "Pedagoq" }
+      ]
+    },
+    {
+      "name": "Qotaq Gaming",
+      "status": "registered",
+      "players": [
+        { "nick": "kuti", "position": "C" },
+        { "nick": "Ghost228" },
+        { "nick": "Arjent_999" },
+        { "nick": "Yatorehan" },
+        { "nick": "captainKesha1" }
+      ]
+    },
+    {
+      "name": "Xz team",
+      "status": "registered",
+      "players": [
+        { "nick": "pavuhk", "position": "C" },
+        { "nick": "Vortimo" },
+        { "nick": "sexyswag" },
+        { "nick": "dimashxd" },
+        { "nick": "howfail" }
+      ]
+    },
+    {
+      "name": "Never Back Down",
+      "status": "registered",
+      "players": [
+        { "nick": "Roseoficial", "position": "C" },
+        { "nick": "SBK_1337" },
+        { "nick": "drimDG" },
+        { "nick": "BabyNiceTry" },
+        { "nick": "Ionix" }
+      ]
+    },
+    {
+      "name": "Nxghtmare",
+      "status": "registered",
+      "players": [
+        { "nick": "szdox", "position": "C" },
+        { "nick": "KraSaWch1k" },
+        { "nick": "Vladik_1488" },
+        { "nick": "lamborghini31" },
+        { "nick": "nexyc" }
+      ]
+    },
+    {
+      "name": "VeTmo",
+      "status": "registered",
+      "players": [
+        { "nick": "Chuk12", "position": "C" },
+        { "nick": "PastelGhost" },
+        { "nick": "ilakhe_fake228" },
+        { "nick": "62k_cherhi" },
+        { "nick": "GaTaNoA" }
+      ]
+    },
+    {
+      "name": "Generation of Miracl...",
+      "status": "registered",
+      "players": [
+        { "nick": "waittureality", "position": "C" },
+        { "nick": "dogvayc" },
+        { "nick": "Fedenikofilioni" },
+        { "nick": "krisvuk" },
+        { "nick": "Player" }
+      ]
+    },
+    {
+      "name": "Team Spivom",
+      "status": "registered",
+      "players": [
+        { "nick": "Ferzuk", "position": "C" },
+        { "nick": "Anzya" },
+        { "nick": "WALAWA" },
+        { "nick": "Quila" },
+        { "nick": "Kinii_Arbuzxc" }
+      ]
+    },
+    {
+      "name": "Mambastiks",
+      "status": "registered",
+      "players": [
+        { "nick": "JercOre", "position": "C" },
+        { "nick": "okeannooynadezhdy" },
+        { "nick": "RAXMED" },
+        { "nick": "Gay228" },
+        { "nick": "flopson404" }
+      ]
+    },
+    {
+      "name": "Crimson Cult",
+      "status": "registered",
+      "players": [
+        { "nick": "jloveblood", "position": "C" },
+        { "nick": "Pain" },
+        { "nick": "Takamura" },
+        { "nick": "nilux" },
+        { "nick": "vacokohae" }
+      ]
+    },
+    {
+      "name": "GLINA",
+      "status": "registered",
+      "players": [
+        { "nick": "ZombiHTV", "position": "C" },
+        { "nick": "Ballbes8" },
+        { "nick": "newve" },
+        { "nick": "Chigur" },
+        { "nick": "YOLYx" }
+      ]
+    },
+    {
+      "name": "Outsiders",
+      "status": "registered",
+      "players": [
+        { "nick": "Yagood", "position": "C" },
+        { "nick": "u1over" },
+        { "nick": "anixin" },
+        { "nick": "Dest1n_y7" },
+        { "nick": "Runninglow17" }
+      ]
+    },
+    {
+      "name": "ritashidog + 4...",
+      "status": "registered",
+      "players": [
+        { "nick": "kengamajke", "position": "C" },
+        { "nick": "ritashi" },
+        { "nick": "WoIKiller" },
+        { "nick": "b60buchan67" },
+        { "nick": "Flexaxd" }
+      ]
+    },
+    {
+      "name": "zybi team",
+      "status": "registered",
+      "players": [
+        { "nick": "freeblade", "position": "C" },
+        { "nick": "BlurryPicture" },
+        { "nick": "TaiLung" },
+        { "nick": "Topemaxing" },
+        { "nick": "Kartav1y" }
+      ]
+    },
+    {
+      "name": "M1xT3s",
+      "status": "registered",
+      "players": [
+        { "nick": "Cat.gtrl1255", "position": "C" },
+        { "nick": "racisho" },
+        { "nick": "Backwood" },
+        { "nick": "TheHiveMind" },
+        { "nick": "adam1" }
+      ]
+    },
+    {
+      "name": "Отпуск",
+      "status": "registered",
+      "players": [
+        { "nick": "tarr", "position": "C" },
+        { "nick": "1443" },
+        { "nick": "vinovatyrateleki" },
+        { "nick": "baranina_18" },
+        { "nick": "EGOR_THE_FRIENDLY" }
+      ]
+    },
+    {
+      "name": "Rofioeblan",
+      "status": "registered",
+      "players": [
+        { "nick": "helauser", "position": "C" },
+        { "nick": "dsff" },
+        { "nick": "Jeck_Podrochitel" },
+        { "nick": "por122z009" },
+        { "nick": "Path_of_Necrolic" }
+      ]
+    },
+    {
+      "name": "PRIM3 HUB",
+      "status": "registered",
+      "players": [
+        { "nick": "exelaia", "position": "C" },
+        { "nick": "didger" },
+        { "nick": "exelaia4" },
+        { "nick": "pooiljunior" },
+        { "nick": "Anskill" }
+      ]
+    },
+    {
+      "name": "EGOISTO",
+      "status": "registered",
+      "players": [
+        { "nick": "never_try", "position": "C" },
+        { "nick": "Stimslv" },
+        { "nick": "slychainost" },
+        { "nick": "Oneshk1n" },
+        { "nick": "Splash2809" }
+      ]
+    },
+    {
+      "name": "Manta",
+      "status": "registered",
+      "players": [
+        { "nick": "Sott", "position": "C" },
+        { "nick": "SAE10" },
+        { "nick": "snfgr" },
+        { "nick": "2legedfreak" },
+        { "nick": "birgioty" }
+      ]
+    },
+    {
+      "name": "BadBees Aca...",
+      "status": "registered",
+      "players": [
+        { "nick": "marcisist", "position": "C" },
+        { "nick": "sda75jl" },
+        { "nick": "140000" },
+        { "nick": "NIKDef" },
+        { "nick": "sagitta" }
+      ]
+    },
+    {
+      "name": "OgUzki",
+      "status": "registered",
+      "players": [
+        { "nick": "griqo", "position": "C" },
+        { "nick": "romashkayt" },
+        { "nick": "Ressles" },
+        { "nick": "TTPu3paK" },
+        { "nick": "churkorez" }
+      ]
+    },
+    {
+      "name": "Crous Team",
+      "status": "registered",
+      "players": [
+        { "nick": "Sam1zz", "position": "C" },
+        { "nick": "Jujutsu" },
+        { "nick": "beszkez" },
+        { "nick": "pooproshaika" },
+        { "nick": "J6suz" }
+      ]
+    },
+    {
+      "name": "HFACY(Основа)",
+      "status": "registered",
+      "players": [
+        { "nick": "youzermeum", "position": "C" },
+        { "nick": "Aciudad" },
+        { "nick": "rqwrqw" },
+        { "nick": "shikich" },
+        { "nick": "letmelle" }
+      ]
+    },
+    {
+      "name": "Молодые Талант...",
+      "status": "registered",
+      "players": [
+        { "nick": "DengaLev", "position": "C" },
+        { "nick": "Azureosongg" },
+        { "nick": "shihanaa" },
+        { "nick": "Player" },
+        { "nick": "Player" }
+      ]
+    },
+    {
+      "name": "Дьяхон",
+      "status": "registered",
+      "players": [
+        { "nick": "rari", "position": "C" },
+        { "nick": "hauntluv" },
+        { "nick": "shikii" },
+        { "nick": "faud" },
+        { "nick": "vins123" }
+      ]
+    },
+    {
+      "name": "Gruz200",
+      "status": "registered",
+      "players": [
+        { "nick": "Slessik", "position": "C" },
+        { "nick": "Tresh750" },
+        { "nick": "01arly" },
+        { "nick": "Sheeshs" },
+        { "nick": "amo8" }
+      ]
+    },
+    {
+      "name": "To The Moon ...",
+      "status": "registered",
+      "players": [
+        { "nick": "Vdvventure", "position": "C" },
+        { "nick": "PerryThePlatypus" },
+        { "nick": "KoraDuba" },
+        { "nick": "Salaam" },
+        { "nick": "Wizard76" }
+      ]
+    },
+    {
+      "name": "VRN",
+      "status": "registered",
+      "players": [
+        { "nick": "Manek", "position": "C" },
+        { "nick": "vova_pupsik" },
+        { "nick": "SOKOL27RUS" },
+        { "nick": "KIDDTheangel" },
+        { "nick": "zonedota" }
+      ]
+    },
+    {
+      "name": "Eaters of Gods",
+      "status": "registered",
+      "players": [
+        { "nick": "Lyamur4eg", "position": "C" },
+        { "nick": "protocol" },
+        { "nick": "protivniwreqx" },
+        { "nick": "Soulmate6w" },
+        { "nick": "BACAONIMA" }
+      ]
+    },
+    {
+      "name": "Veni vidi vici",
+      "status": "registered",
+      "players": [
+        { "nick": "Soerrt", "position": "C" },
+        { "nick": "1tsuyo1" },
+        { "nick": "ra1kiri" },
+        { "nick": "Overated" },
+        { "nick": "sakayyaa" }
+      ]
+    },
+    {
+      "name": "Kaban Team",
+      "status": "registered",
+      "players": [
+        { "nick": "gpm1", "position": "C" },
+        { "nick": "Kain_one" },
+        { "nick": "GrinmIoD" },
+        { "nick": "PRIVAT" },
+        { "nick": "HEYTIMO" }
+      ]
+    },
+    {
+      "name": "Primal dance",
+      "status": "registered",
+      "players": [
+        { "nick": "inmortall_boyx", "position": "C" },
+        { "nick": "nanadota" },
+        { "nick": "tilan" },
+        { "nick": "subhuman" },
+        { "nick": "cherepashka_" }
+      ]
+    },
+    {
+      "name": "aig",
+      "status": "registered",
+      "players": [
+        { "nick": "krokodil_killer", "position": "C" },
+        { "nick": "Pastushok" },
+        { "nick": "erlmnSae" },
+        { "nick": "LibeInv" },
+        { "nick": "KoSKing" }
+      ]
+    },
+    {
+      "name": "Fucking Backp...",
+      "status": "registered",
+      "players": [
+        { "nick": "Iarp_skiter", "position": "C" },
+        { "nick": "Deccenium" },
+        { "nick": "dontbedumb" },
+        { "nick": "slognak" },
+        { "nick": "Bratishka777" }
+      ]
+    },
+    {
+      "name": "Chidori Storm",
+      "status": "registered",
+      "players": [
+        { "nick": "RAZgRoOm", "position": "C" },
+        { "nick": "Sadist812" },
+        { "nick": "chodoom" },
+        { "nick": "qwertyy772" },
+        { "nick": "Podlecc" }
+      ]
+    },
+    {
+      "name": "Lits",
+      "status": "registered",
+      "players": [
+        { "nick": "Citrus_", "position": "C" },
+        { "nick": "fando" },
+        { "nick": "Yokain" },
+        { "nick": "FRILL" },
+        { "nick": "DIW666" }
+      ]
+    },
+    {
+      "name": "Skritopylie",
+      "status": "registered",
+      "players": [
+        { "nick": "GOD AURA", "position": "C" },
+        { "nick": "killy123" },
+        { "nick": "synonymofpain" },
+        { "nick": "Z_Vayner_V" },
+        { "nick": "Cheremshax21s" }
+      ]
+    },
+    {
+      "name": "Vnebo",
+      "status": "registered",
+      "players": [
+        { "nick": "moveroburns", "position": "C" },
+        { "nick": "SATANA999" },
+        { "nick": "Kadjit" },
+        { "nick": "Mrkiller947" },
+        { "nick": "grenka_10" }
+      ]
+    },
+    {
+      "name": "TRUE ADAM",
+      "status": "registered",
+      "players": [
+        { "nick": "Yasho66", "position": "C" },
+        { "nick": "Bender11" },
+        { "nick": "Borshara" },
+        { "nick": "kery_ff" },
+        { "nick": "bogdasik228" }
+      ]
+    },
+    {
+      "name": "The deity of ...",
+      "status": "registered",
+      "players": [
+        { "nick": "KamranDota2", "position": "C" },
+        { "nick": "cheburussia" },
+        { "nick": "kilmados" },
+        { "nick": "Palem" },
+        { "nick": "orchicl" }
+      ]
+    },
+    {
+      "name": "+ширэв+",
+      "status": "registered",
+      "players": [
+        { "nick": "f31.3", "position": "C" },
+        { "nick": "Whymi322" },
+        { "nick": "clonic" },
+        { "nick": "alexqod9" },
+        { "nick": "sunder333" }
+      ]
+    },
+    {
+      "name": "Zimin Spirit",
+      "status": "registered",
+      "players": [
+        { "nick": "Super_Vae...", "position": "C" },
+        { "nick": "neswik" },
+        { "nick": "Zimin_Splrit" },
+        { "nick": "vsn981" },
+        { "nick": "_Iysha_nob" }
+      ]
+    },
+    {
+      "name": "SpasskKomteam",
+      "status": "registered",
+      "players": [
+        { "nick": "vainain", "position": "C" },
+        { "nick": "stacy" },
+        { "nick": "Cactusic" },
+        { "nick": "Guru_fida" },
+        { "nick": "AsTFaKT" }
+      ]
+    },
+    {
+      "name": "Q-colds",
+      "status": "registered",
+      "players": [
+        { "nick": "sp4k1", "position": "C" },
+        { "nick": "komari" },
+        { "nick": "Aft4rl1fe" },
+        { "nick": "sininimis" },
+        { "nick": "MISHA_TIRANNOZAVR" }
+      ]
+    }
+  ]
+}
