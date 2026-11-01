@@ -24,7 +24,22 @@ const flag = (cc) =>
     ? `<img class="flag" src="https://flagcdn.com/w20/${cc.toLowerCase()}.png" alt="${esc(cc.toUpperCase())}" width="18" height="13" loading="lazy" onerror="this.remove()">`
     : '';
 
-const STATUS = { upcoming: 'Скоро', live: 'Идёт', finished: 'Завершён' };
+const STATUS = { upcoming: 'Скоро', live: 'Идёт сейчас', finished: 'Завершён' };
+
+// Статус считается сам по датам и результатам, поэтому его не нужно менять вручную:
+// есть победитель → завершён; сегодня раньше начала → скоро; между началом и концом → идёт сейчас; после конца → завершён.
+// Явно заданные в information.json "live" и "finished" учитываются, "upcoming" — нет (это значение по умолчанию).
+function effectiveStatus(t) {
+  if (t.winner) return 'finished';
+  if (t.status === 'live' || t.status === 'finished') return t.status;
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  const start = t.date_start, end = t.date_end || t.date_start;
+  if (!start) return 'upcoming';
+  if (today > end) return 'finished';
+  if (today >= start) return 'live';
+  return 'upcoming';
+}
 const badge = (s) => `<span class="badge st-${esc(s)}">${esc(STATUS[s] || s || '')}</span>`;
 
 const toDate = (d) => (d ? new Date(`${d}T00:00:00`) : null);
@@ -167,7 +182,7 @@ const TROPHY = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stro
 async function homeView() {
   const idx = await getJson('tournaments/index.json');
   if (!idx) throw new Error('tournaments/index.json не найден — запустите npm run build');
-  const list = sortTournaments(idx.tournaments || []);
+  const list = sortTournaments((idx.tournaments || []).map((t) => ({ ...t, status: effectiveStatus(t) })));
   const stats = idx.stats || {};
   const mt = idx.matches || { upcoming: [], completed: [] };
 
@@ -706,7 +721,7 @@ async function tournamentView(slug) {
   const info = await getJson(`${base}information.json`);
   if (!info) return notFound();
   const [roster, result] = await Promise.all([getJson(`${base}roster.json`), getJson(`${base}result.json`)]);
-  const ctx = { slug, base, info, roster, result, teams: new Map((roster?.teams || []).map((t) => [t.name, t])) };
+  const ctx = { slug, base, info, roster, result, status: effectiveStatus({ ...info, winner: (result?.placements || []).find((p) => +p.place === 1)?.team }), teams: new Map((roster?.teams || []).map((t) => [t.name, t])) };
 
   document.title = `${info.name} — Anypedia`;
 
@@ -725,7 +740,7 @@ async function tournamentView(slug) {
   return `
     <a class="back" href="/">← Все турниры</a>
     <header class="thead">
-      ${badge(info.status)}
+      ${badge(ctx.status)}
       <h1>${esc(info.name)}</h1>
       ${info.description ? `<p>${esc(info.description)}</p>` : ''}
       ${nav ? `<nav class="snav">${nav}</nav>` : ''}
