@@ -2,11 +2,11 @@
   "placements": [
     {
       "place": 1,
-      "team": ""
+      "team": "Skritopylnie"
     },
     {
       "place": 2,
-      "team": ""
+      "team": "Q-colds"
     },
     {
       "place": 3,
@@ -355,7 +355,7 @@
           "name": "ФИНАЛ",
           "bracket": "final",
           "matches": [
-            { "id": "m63", "team1": "Q-colds", "team2": "Skritopylie" }
+            { "id": "m63", "team1": "Q-colds", "team2": "Skritopylie", "score1": 0, "score2": 2 }
           ]
         }
       ]
