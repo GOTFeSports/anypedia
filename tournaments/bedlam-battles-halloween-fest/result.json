@@ -1,0 +1,107 @@
+{
+  "placements": [],
+  "stages": [
+    {
+      "type": "double_elim",
+      "name": "Плей-офф",
+      "rounds": [
+        {
+          "name": "Верхняя сетка: Раунд 1 (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "ub_m1", "team1": "", "team2": "", "next": "ub_m9" },
+            { "id": "ub_m2", "team1": "", "team2": "", "next": "ub_m9" },
+            { "id": "ub_m3", "team1": "", "team2": "", "next": "ub_m10" },
+            { "id": "ub_m4", "team1": "", "team2": "", "next": "ub_m10" },
+            { "id": "ub_m5", "team1": "", "team2": "", "next": "ub_m11" },
+            { "id": "ub_m6", "team1": "", "team2": "", "next": "ub_m11" },
+            { "id": "ub_m7", "team1": "", "team2": "", "next": "ub_m12" },
+            { "id": "ub_m8", "team1": "", "team2": "", "next": "ub_m12" }
+          ]
+        },
+        {
+          "name": "Верхняя сетка: Раунд 2 (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "ub_m9", "team1": "", "team2": "", "next": "ub_m13" },
+            { "id": "ub_m10", "team1": "", "team2": "", "next": "ub_m13" },
+            { "id": "ub_m11", "team1": "", "team2": "", "next": "ub_m14" },
+            { "id": "ub_m12", "team1": "", "team2": "", "next": "ub_m14" }
+          ]
+        },
+        {
+          "name": "Верхняя сетка: Полуфинал (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "ub_m13", "team1": "", "team2": "", "next": "ub_m15" },
+            { "id": "ub_m14", "team1": "", "team2": "", "next": "ub_m15" }
+          ]
+        },
+        {
+          "name": "Верхняя сетка: Финал (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "ub_m15", "team1": "", "team2": "", "next": "gf_m1" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Раунд 1 (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m1", "team1": "", "team2": "", "next": "lb_m5" },
+            { "id": "lb_m2", "team1": "", "team2": "", "next": "lb_m6" },
+            { "id": "lb_m3", "team1": "", "team2": "", "next": "lb_m7" },
+            { "id": "lb_m4", "team1": "", "team2": "", "next": "lb_m8" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Раунд 2 (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m5", "team1": "", "team2": "", "next": "lb_m9" },
+            { "id": "lb_m6", "team1": "", "team2": "", "next": "lb_m9" },
+            { "id": "lb_m7", "team1": "", "team2": "", "next": "lb_m10" },
+            { "id": "lb_m8", "team1": "", "team2": "", "next": "lb_m10" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Раунд 3 (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m9", "team1": "", "team2": "", "next": "lb_m11" },
+            { "id": "lb_m10", "team1": "", "team2": "", "next": "lb_m12" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Раунд 4 (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m11", "team1": "", "team2": "", "next": "lb_m13" },
+            { "id": "lb_m12", "team1": "", "team2": "", "next": "lb_m13" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Раунд 5 (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m13", "team1": "", "team2": "", "next": "lb_m14" }
+          ]
+        },
+        {
+          "name": "Нижняя сетка: Финал (Bo1)",
+          "bracket": "lower",
+          "matches": [
+            { "id": "lb_m14", "team1": "", "team2": "", "next": "gf_m1" }
+          ]
+        },
+        {
+          "name": "Гранд-финал (Bo3)",
+          "bracket": "final",
+          "matches": [
+            { "id": "gf_m1", "team1": "", "team2": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}

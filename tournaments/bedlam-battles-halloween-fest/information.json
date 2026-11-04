@@ -1,0 +1,43 @@
+{
+  "name": "BEDLAM BATTLES: HALLOWEEN FEST!",
+  "series": "BEDLAM BATTLES",
+  "organizer": "Bedlam Battles",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-08",
+  "date_end": "2026-11-08",
+  "format": [
+    "Double Elimination (Верхняя + нижняя сетка)",
+    "Все матчи — BO1",
+    "Гранд-финал — BO3",
+    "До 64 команд"
+  ],
+  "pts_cap": 30000,
+  "prize_pool": "от 20 000 ₽",
+  "description": "Турнир по Dota 2 от Bedlam Battles. Начало игр — 14:00 МСК, завершение — ~23:00 МСК. Взнос — 500₽ с команды. Лимит команды — 30 000 MMR, лимит игрока — 7 500 MMR. Закрытие регистрации — 8 ноября в 12:00 МСК.",
+  "links": {
+    "registration": "https://t.me/bedlamtournaments_bot",
+    "rules": "https://t.me/bedlamtournaments_bot",
+    "telegram": "https://t.me/bedlamtournaments",
+    "twitch": "https://www.twitch.tv/bedlambattlestournaments"
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "15 000 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "5 000 ₽"
+    }
+  ],
+  "streams": [
+    {
+      "lang": "ru",
+      "platform": "twitch",
+      "url": "https://www.twitch.tv/bedlambattlestournaments"
+    }
+  ]
+}
