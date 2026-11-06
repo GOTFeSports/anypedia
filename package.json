@@ -6,7 +6,12 @@
   "description": "Anypedia — энциклопедия турниров Dota 2 с ограничением по ПТС",
   "scripts": {
     "build": "node tools/build-index.mjs",
-    "serve": "node tools/serve.mjs"
+    "serve": "node tools/serve.mjs",
+    "import": "node tools/import.mjs",
+    "test": "node tools/test.mjs"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://anypedia.vercel.app"
 }

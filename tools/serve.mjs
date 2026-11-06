@@ -11,6 +11,8 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; ch
 http.createServer((req, res) => {
   const url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
   let file = path.join(ROOT, url);
+  // Как cleanUrls на Vercel: /slug отдаёт slug.html (страница для превью), иначе — index.html (SPA)
+  if (file.startsWith(ROOT) && !path.extname(file) && fs.existsSync(`${file}.html`)) file = `${file}.html`;
   if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) file = path.join(ROOT, 'index.html');
   res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
   fs.createReadStream(file).pipe(res);

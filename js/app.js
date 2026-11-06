@@ -194,7 +194,7 @@ async function homeView() {
         <div class="stat"><b>${num(stats.tournaments ?? list.length)}</b><span>Турниров</span></div>
         <div class="stat"><b>${num(stats.teams ?? 0)}</b><span>Команд</span></div>
         <div class="stat"><b>${num(stats.matches ?? 0)}</b><span>Матчей сыграно</span></div>
-        <div class="stat"><b>${num(stats.finished ?? 0)}</b><span>Завершено</span></div>
+        <div class="stat"><b>${num(list.filter((t) => t.status === 'finished').length)}</b><span>Завершено</span></div>
       </div>
     </section>`;
 
