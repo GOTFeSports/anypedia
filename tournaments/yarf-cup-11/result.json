@@ -1,0 +1,50 @@
+{
+  "placements": [],
+  "stages": [
+    {
+      "type": "single_elim",
+      "name": "Плей-офф",
+      "rounds": [
+        {
+          "name": "1/8 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m1", "team1": "", "team2": "", "next": "m9" },
+            { "id": "m2", "team1": "", "team2": "", "next": "m9" },
+            { "id": "m3", "team1": "", "team2": "", "next": "m10" },
+            { "id": "m4", "team1": "", "team2": "", "next": "m10" },
+            { "id": "m5", "team1": "", "team2": "", "next": "m11" },
+            { "id": "m6", "team1": "", "team2": "", "next": "m11" },
+            { "id": "m7", "team1": "", "team2": "", "next": "m12" },
+            { "id": "m8", "team1": "", "team2": "", "next": "m12" }
+          ]
+        },
+        {
+          "name": "1/4 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m9", "team1": "", "team2": "", "next": "m13" },
+            { "id": "m10", "team1": "", "team2": "", "next": "m13" },
+            { "id": "m11", "team1": "", "team2": "", "next": "m14" },
+            { "id": "m12", "team1": "", "team2": "", "next": "m14" }
+          ]
+        },
+        {
+          "name": "Полуфинал (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m13", "team1": "", "team2": "", "next": "m15" },
+            { "id": "m14", "team1": "", "team2": "", "next": "m15" }
+          ]
+        },
+        {
+          "name": "Финал (Bo3)",
+          "bracket": "final",
+          "matches": [
+            { "id": "m15", "team1": "", "team2": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}

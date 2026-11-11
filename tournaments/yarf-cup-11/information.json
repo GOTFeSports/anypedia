@@ -1,0 +1,35 @@
+{
+  "name": "YARF CUP № 11",
+  "series": "YARF CUP",
+  "organizer": "YARF CUP",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-15",
+  "date_end": "2026-11-15",
+  "format": [
+    "Single Elimination",
+    "Все матчи — Bo1",
+    "Финал — Bo3",
+    "Captains Mode",
+    "Количество команд ограничено (16 команд)"
+  ],
+  "pts_cap": null,
+  "prize_pool": "5 000 ₽",
+  "description": "Онлайн турнир 5х5 по Dota 2 от YARF CUP. Начало турнира в 12:00 МСК. Публикация турнирной сетки 15.11 в 10:30 МСК. Лобби создаётся ботом, приглашения приходят всем участникам команды. Опоздание более 10 минут приравнивается к техническому поражению. Участие бесплатное.",
+  "links": {
+    "registration": "https://gridsport.ru/tournaments/61",
+    "rules": "https://disk.yandex.ru/i/zEg8ec1g_ry8Fw",
+    "telegram": "https://t.me/yarfcup",
+    "telegram_chat": "https://t.me/yarfcupchat",
+    "gridsport_org": "https://gridsport.ru/organizations/42"
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "5 000 ₽"
+    }
+  ],
+  "streams": []
+}
