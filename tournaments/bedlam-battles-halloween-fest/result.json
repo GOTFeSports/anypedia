@@ -1,104 +1,191 @@
 {
-  "placements": [],
+  "placements": [
+    {
+      "place": 1,
+      "team": "Team Dieband"
+    },
+    {
+      "place": 2,
+      "team": "HOPE"
+    },
+    {
+      "place": 3,
+      "team": "Qotaq gaming"
+    },
+    {
+      "place": 4,
+      "team": "BlueWave"
+    },
+    {
+      "place": 5,
+      "label": "5–8",
+      "team": "Top65"
+    },
+    {
+      "place": 6,
+      "label": "5–8",
+      "team": "Primal Dance"
+    },
+    {
+      "place": 7,
+      "label": "5–8",
+      "team": "Sharashkina Kontora"
+    },
+    {
+      "place": 8,
+      "label": "5–8",
+      "team": "DRAGFIRE"
+    },
+    {
+      "place": 9,
+      "label": "9–16",
+      "team": "Wolfine"
+    },
+    {
+      "place": 10,
+      "label": "9–16",
+      "team": "bebebe"
+    },
+    {
+      "place": 11,
+      "label": "9–16",
+      "team": "Lits"
+    },
+    {
+      "place": 12,
+      "label": "9–16",
+      "team": "Brosdillgalls"
+    },
+    {
+      "place": 13,
+      "label": "9–16",
+      "team": "Fortnite"
+    },
+    {
+      "place": 14,
+      "label": "9–16",
+      "team": "German funclub"
+    },
+    {
+      "place": 15,
+      "label": "9–16",
+      "team": "Buriza"
+    },
+    {
+      "place": 16,
+      "label": "9–16",
+      "team": "67_жюрий"
+    },
+    {
+      "place": 17,
+      "label": "17–25",
+      "team": "betweakingots2"
+    },
+    {
+      "place": 18,
+      "label": "17–25",
+      "team": "Never Back Down"
+    },
+    {
+      "place": 19,
+      "label": "17–25",
+      "team": "Bimbo"
+    },
+    {
+      "place": 20,
+      "label": "17–25",
+      "team": "A r t y k u l y a r - K o r k a l T o p..."
+    },
+    {
+      "place": 21,
+      "label": "17–25",
+      "team": "DoorDom"
+    },
+    {
+      "place": 22,
+      "label": "17–25",
+      "team": "MASTERMNDS"
+    },
+    {
+      "place": 23,
+      "label": "17–25",
+      "team": "Pem6oy besttryed"
+    },
+    {
+      "place": 24,
+      "label": "17–25",
+      "team": "ZICPOOHAB"
+    },
+    {
+      "place": 25,
+      "label": "17–25",
+      "team": "DRAGFIRE JUNIOR"
+    }
+  ],
   "stages": [
     {
-      "type": "double_elim",
+      "type": "single_elim",
       "name": "Плей-офф",
       "rounds": [
         {
-          "name": "Верхняя сетка: Раунд 1 (Bo1)",
+          "name": "РАУНД 1",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m1", "team1": "", "team2": "", "next": "ub_m9" },
-            { "id": "ub_m2", "team1": "", "team2": "", "next": "ub_m9" },
-            { "id": "ub_m3", "team1": "", "team2": "", "next": "ub_m10" },
-            { "id": "ub_m4", "team1": "", "team2": "", "next": "ub_m10" },
-            { "id": "ub_m5", "team1": "", "team2": "", "next": "ub_m11" },
-            { "id": "ub_m6", "team1": "", "team2": "", "next": "ub_m11" },
-            { "id": "ub_m7", "team1": "", "team2": "", "next": "ub_m12" },
-            { "id": "ub_m8", "team1": "", "team2": "", "next": "ub_m12" }
+            { "id": "m1", "team1": "Wolfine", "team2": "", "score1": 1, "score2": 0, "next": "m17" },
+            { "id": "m2", "team1": "betweakingots2", "team2": "Qotaq gaming", "score1": 0, "score2": 1, "next": "m17" },
+            { "id": "m3", "team1": "bebebe", "team2": "Never Back Down", "score1": 1, "score2": 0, "next": "m18" },
+            { "id": "m4", "team1": "Primal Dance", "team2": "Bimbo", "score1": 1, "score2": 0, "next": "m18" },
+            { "id": "m5", "team1": "Lits", "team2": "", "score1": 1, "score2": 0, "next": "m19" },
+            { "id": "m6", "team1": "HOPE", "team2": "A r t y k u l y a r - K o r k a l T o p...", "score1": 1, "score2": 0, "next": "m19" },
+            { "id": "m7", "team1": "Top65", "team2": "", "score1": 1, "score2": 0, "next": "m20" },
+            { "id": "m8", "team1": "DoorDom", "team2": "Brosdillgalls", "score1": 0, "score2": 1, "next": "m20" },
+            { "id": "m9", "team1": "Fortnite", "team2": "", "score1": 1, "score2": 0, "next": "m21" },
+            { "id": "m10", "team1": "BlueWave", "team2": "MASTERMNDS", "score1": 1, "score2": 0, "next": "m21" },
+            { "id": "m11", "team1": "German funclub", "team2": "", "score1": 1, "score2": 0, "next": "m22" },
+            { "id": "m12", "team1": "Pem6oy besttryed", "team2": "Sharashkina Kontora", "score1": 0, "score2": 1, "next": "m22" },
+            { "id": "m13", "team1": "DRAGFIRE", "team2": "", "score1": 1, "score2": 0, "next": "m23" },
+            { "id": "m14", "team1": "Buriza", "team2": "ZICPOOHAB", "score1": 1, "score2": 0, "next": "m23" },
+            { "id": "m15", "team1": "67_жюрий", "team2": "", "score1": 1, "score2": 0, "next": "m24" },
+            { "id": "m16", "team1": "Team Dieband", "team2": "DRAGFIRE JUNIOR", "score1": 1, "score2": 0, "next": "m24" }
           ]
         },
         {
-          "name": "Верхняя сетка: Раунд 2 (Bo1)",
+          "name": "1/8 ФИНАЛА",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m9", "team1": "", "team2": "", "next": "ub_m13" },
-            { "id": "ub_m10", "team1": "", "team2": "", "next": "ub_m13" },
-            { "id": "ub_m11", "team1": "", "team2": "", "next": "ub_m14" },
-            { "id": "ub_m12", "team1": "", "team2": "", "next": "ub_m14" }
+            { "id": "m17", "team1": "Wolfine", "team2": "Qotaq gaming", "score1": 0, "score2": 1, "next": "m25" },
+            { "id": "m18", "team1": "bebebe", "team2": "Primal Dance", "score1": 0, "score2": 1, "next": "m25" },
+            { "id": "m19", "team1": "Lits", "team2": "HOPE", "score1": 0, "score2": 1, "next": "m26" },
+            { "id": "m20", "team1": "Top65", "team2": "Brosdillgalls", "score1": 1, "score2": 0, "next": "m26" },
+            { "id": "m21", "team1": "Fortnite", "team2": "BlueWave", "score1": 0, "score2": 1, "next": "m27" },
+            { "id": "m22", "team1": "German funclub", "team2": "Sharashkina Kontora", "score1": 0, "score2": 1, "next": "m27" },
+            { "id": "m23", "team1": "DRAGFIRE", "team2": "Buriza", "score1": 1, "score2": 0, "next": "m28" },
+            { "id": "m24", "team1": "67_жюрий", "team2": "Team Dieband", "score1": 0, "score2": 1, "next": "m28" }
           ]
         },
         {
-          "name": "Верхняя сетка: Полуфинал (Bo1)",
+          "name": "1/4 ФИНАЛА",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m13", "team1": "", "team2": "", "next": "ub_m15" },
-            { "id": "ub_m14", "team1": "", "team2": "", "next": "ub_m15" }
+            { "id": "m25", "team1": "Qotaq gaming", "team2": "Primal Dance", "score1": 1, "score2": 0, "next": "m29" },
+            { "id": "m26", "team1": "HOPE", "team2": "Top65", "score1": 1, "score2": 0, "next": "m29" },
+            { "id": "m27", "team1": "BlueWave", "team2": "Sharashkina Kontora", "score1": 1, "score2": 0, "next": "m30" },
+            { "id": "m28", "team1": "DRAGFIRE", "team2": "Team Dieband", "score1": 0, "score2": 1, "next": "m30" }
           ]
         },
         {
-          "name": "Верхняя сетка: Финал (Bo1)",
+          "name": "ПОЛУФИНАЛ",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m15", "team1": "", "team2": "", "next": "gf_m1" }
+            { "id": "m29", "team1": "Qotaq gaming", "team2": "HOPE", "score1": 0, "score2": 1, "next": "m31" },
+            { "id": "m30", "team1": "BlueWave", "team2": "Team Dieband", "score1": 0, "score2": 1, "next": "m31" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 1 (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m1", "team1": "", "team2": "", "next": "lb_m5" },
-            { "id": "lb_m2", "team1": "", "team2": "", "next": "lb_m6" },
-            { "id": "lb_m3", "team1": "", "team2": "", "next": "lb_m7" },
-            { "id": "lb_m4", "team1": "", "team2": "", "next": "lb_m8" }
-          ]
-        },
-        {
-          "name": "Нижняя сетка: Раунд 2 (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m5", "team1": "", "team2": "", "next": "lb_m9" },
-            { "id": "lb_m6", "team1": "", "team2": "", "next": "lb_m9" },
-            { "id": "lb_m7", "team1": "", "team2": "", "next": "lb_m10" },
-            { "id": "lb_m8", "team1": "", "team2": "", "next": "lb_m10" }
-          ]
-        },
-        {
-          "name": "Нижняя сетка: Раунд 3 (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m9", "team1": "", "team2": "", "next": "lb_m11" },
-            { "id": "lb_m10", "team1": "", "team2": "", "next": "lb_m12" }
-          ]
-        },
-        {
-          "name": "Нижняя сетка: Раунд 4 (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m11", "team1": "", "team2": "", "next": "lb_m13" },
-            { "id": "lb_m12", "team1": "", "team2": "", "next": "lb_m13" }
-          ]
-        },
-        {
-          "name": "Нижняя сетка: Раунд 5 (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m13", "team1": "", "team2": "", "next": "lb_m14" }
-          ]
-        },
-        {
-          "name": "Нижняя сетка: Финал (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m14", "team1": "", "team2": "", "next": "gf_m1" }
-          ]
-        },
-        {
-          "name": "Гранд-финал (Bo3)",
+          "name": "ФИНАЛ",
           "bracket": "final",
           "matches": [
-            { "id": "gf_m1", "team1": "", "team2": "" }
+            { "id": "m31", "team1": "HOPE", "team2": "Team Dieband", "score1": 0, "score2": 1 }
           ]
         }
       ]
