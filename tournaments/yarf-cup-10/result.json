@@ -78,34 +78,34 @@
           "name": "1/8 финала (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m1", "team1": "Lits", "team2": "Nullify", "score1": 0, "score2": 25, "next": "m7" },
-            { "id": "m2", "team1": "team MOGG", "team2": "team silence", "score1": 36, "score2": 23, "next": "m8" },
-            { "id": "m3", "team1": "Team Spirt", "team2": "Slbstrin.Gaming", "score1": 0, "score2": 0, "winner": 1, "next": "m8" },
-            { "id": "m4", "team1": "Team squrit", "team2": "Фк потужно", "score1": 6, "score2": 55, "next": "m9" },
-            { "id": "m5", "team1": "DRAGFIRE RISING", "team2": "Gala Mala VORKUTA", "score1": 10, "score2": 37, "next": "m10" },
-            { "id": "m6", "team1": "DRAGFIRE ASCENT", "team2": "Heavens", "score1": 34, "score2": 15, "next": "m10" }
+            { "id": "m1", "team1": "Lits", "team2": "Nullify", "score1": 0, "score2": 1, "next": "m7" },
+            { "id": "m2", "team1": "team MOGG", "team2": "team silence", "score1": 1, "score2": 0, "next": "m8" },
+            { "id": "m3", "team1": "Team Spirt", "team2": "Slbstrin.Gaming", "score1": 1, "score2": 0, "next": "m8" },
+            { "id": "m4", "team1": "Team squrit", "team2": "Фк потужно", "score1": 0, "score2": 1, "next": "m9" },
+            { "id": "m5", "team1": "DRAGFIRE RISING", "team2": "Gala Mala VORKUTA", "score1": 0, "score2": 1, "next": "m10" },
+            { "id": "m6", "team1": "DRAGFIRE ASCENT", "team2": "Heavens", "score1": 1, "score2": 0, "next": "m10" }
           ]
         },
         {
           "name": "1/4 финала (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m7", "team1": "Team Spivom", "team2": "Nullify", "score1": 5, "score2": 25, "next": "m11" },
-            { "id": "m8", "team1": "team MOGG", "team2": "Team Spirt", "score1": 5, "score2": 46, "next": "m11" },
-            { "id": "m9", "team1": "Ebern Tron", "team2": "Фк потужно", "score1": 32, "score2": 46, "next": "m12" },
-            { "id": "m10", "team1": "Gala Mala VORKUTA", "team2": "DRAGFIRE ASCENT", "score1": 46, "score2": 12, "next": "m12" }
+            { "id": "m7", "team1": "Team Spivom", "team2": "Nullify", "score1": 0, "score2": 1, "next": "m11" },
+            { "id": "m8", "team1": "team MOGG", "team2": "Team Spirt", "score1": 0, "score2": 1, "next": "m11" },
+            { "id": "m9", "team1": "Ebern Tron", "team2": "Фк потужно", "score1": 0, "score2": 1, "next": "m12" },
+            { "id": "m10", "team1": "Gala Mala VORKUTA", "team2": "DRAGFIRE ASCENT", "score1": 1, "score2": 0, "next": "m12" }
           ]
         },
         {
           "name": "Полуфинал (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m11", "team1": "Nullify", "team2": "Team Spirt", "score1": 48, "score2": 18, "next": "m13" },
-            { "id": "m12", "team1": "Фк потужно", "team2": "Gala Mala VORKUTA", "score1": 29, "score2": 45, "next": "m13" }
+            { "id": "m11", "team1": "Nullify", "team2": "Team Spirt", "score1": 1, "score2": 0, "next": "m13" },
+            { "id": "m12", "team1": "Фк потужно", "team2": "Gala Mala VORKUTA", "score1": 0, "score2": 1, "next": "m13" }
           ]
         },
         {
-          "name": "Финал (Bo3)",
+          "name": "Гранд-финал (Bo3)",
           "bracket": "final",
           "matches": [
             { "id": "m13", "team1": "Nullify", "team2": "Gala Mala VORKUTA", "score1": 2, "score2": 0 }
