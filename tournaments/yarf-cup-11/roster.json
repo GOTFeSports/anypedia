@@ -1,0 +1,116 @@
+{
+  "teams": [
+    {
+      "name": "Evil Masters",
+      "status": "registered",
+      "players": [
+        { "nick": "miro" },
+        { "nick": "B3SHA" },
+        { "nick": "imatsU" },
+        { "nick": "Sajh" },
+        { "nick": "Whyumadkiddo" }
+      ]
+    },
+    {
+      "name": "Gala Mala VORKUTA",
+      "status": "registered",
+      "players": [
+        { "nick": "kupnu4" },
+        { "nick": "baldevitch" },
+        { "nick": "bezbhoffmann" },
+        { "nick": "kto_pizdei228" },
+        { "nick": "vasyan322" },
+        { "nick": "XAPER" },
+        { "nick": "zekichan" }
+      ]
+    },
+    {
+      "name": "NoPudge",
+      "status": "registered",
+      "players": [
+        { "nick": "Чакарон_макарон" },
+        { "nick": "4ikirayyy" },
+        { "nick": "Amaterasu" },
+        { "nick": "Roland" },
+        { "nick": "Waliser" }
+      ]
+    },
+    {
+      "name": "CYBER.TSU",
+      "status": "registered",
+      "players": [
+        { "nick": "lueur" },
+        { "nick": "ALWAYSWANNAWIN" },
+        { "nick": "Carmilla" },
+        { "nick": "Encrucio" },
+        { "nick": "t1mka_killer" }
+      ]
+    },
+    {
+      "name": "team silence",
+      "status": "registered",
+      "players": [
+        { "nick": "ciexxzd" },
+        { "nick": "as0rrrti" },
+        { "nick": "Bombazavr" },
+        { "nick": "Butterfly" },
+        { "nick": "плюш" }
+      ]
+    },
+    {
+      "name": "Argon Team",
+      "status": "registered",
+      "players": [
+        { "nick": "Br1nza" },
+        { "nick": "Azargot" },
+        { "nick": "Piupi" },
+        { "nick": "Quarside" },
+        { "nick": "wannacry" }
+      ]
+    },
+    {
+      "name": "Team Vitebsk",
+      "status": "registered",
+      "players": [
+        { "nick": "slaimik" },
+        { "nick": "GdeDengi" },
+        { "nick": "INBossik" },
+        { "nick": "stasik" },
+        { "nick": "zxc_lord" }
+      ]
+    },
+    {
+      "name": "yakogdaberyvolosinazad",
+      "status": "registered",
+      "players": [
+        { "nick": "греночкеа" },
+        { "nick": "KkdeniskK" },
+        { "nick": "zalupka_1337" },
+        { "nick": "крокодило_бомборд..." },
+        { "nick": "тунг_тунг_тунг_сатур" }
+      ]
+    },
+    {
+      "name": "Sibstrin.osnova",
+      "status": "registered",
+      "players": [
+        { "nick": "letmelle" },
+        { "nick": "444" },
+        { "nick": "Aciudad" },
+        { "nick": "Shikich" },
+        { "nick": "youzerneum" }
+      ]
+    },
+    {
+      "name": "Eaters of Soul",
+      "status": "registered",
+      "players": [
+        { "nick": "Grabowski" },
+        { "nick": "Baton" },
+        { "nick": "kloqq" },
+        { "nick": "kriptt" },
+        { "nick": "Top1Sochl" }
+      ]
+    }
+  ]
+}

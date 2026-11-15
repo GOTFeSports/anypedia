@@ -1,5 +1,54 @@
 {
-  "placements": [],
+  "placements": [
+    {
+      "place": 1,
+      "team": "Evil Masters"
+    },
+    {
+      "place": 2,
+      "team": "Gala Mala VORKUTA"
+    },
+    {
+      "place": 3,
+      "label": "3–4",
+      "team": "NoPudge"
+    },
+    {
+      "place": 4,
+      "label": "3–4",
+      "team": "CYBER.TSU"
+    },
+    {
+      "place": 5,
+      "label": "5–8",
+      "team": "team silence"
+    },
+    {
+      "place": 6,
+      "label": "5–8",
+      "team": "Argon Team"
+    },
+    {
+      "place": 7,
+      "label": "5–8",
+      "team": "Team Vitebsk"
+    },
+    {
+      "place": 8,
+      "label": "5–8",
+      "team": "yakogdaberyvolosinazad"
+    },
+    {
+      "place": 9,
+      "label": "9–10",
+      "team": "Sibstrin.osnova"
+    },
+    {
+      "place": 10,
+      "label": "9–10",
+      "team": "Eaters of Soul"
+    }
+  ],
   "stages": [
     {
       "type": "single_elim",
@@ -9,39 +58,33 @@
           "name": "1/8 финала (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m1", "team1": "", "team2": "", "next": "m9" },
-            { "id": "m2", "team1": "", "team2": "", "next": "m9" },
-            { "id": "m3", "team1": "", "team2": "", "next": "m10" },
-            { "id": "m4", "team1": "", "team2": "", "next": "m10" },
-            { "id": "m5", "team1": "", "team2": "", "next": "m11" },
-            { "id": "m6", "team1": "", "team2": "", "next": "m11" },
-            { "id": "m7", "team1": "", "team2": "", "next": "m12" },
-            { "id": "m8", "team1": "", "team2": "", "next": "m12" }
+            { "id": "m1", "team1": "Sibstrin.osnova", "team2": "Gala Mala VORKUTA", "score1": 0, "score2": 1, "next": "m5" },
+            { "id": "m2", "team1": "CYBER.TSU", "team2": "Eaters of Soul", "score1": 1, "score2": 0, "next": "m6" }
           ]
         },
         {
           "name": "1/4 финала (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m9", "team1": "", "team2": "", "next": "m13" },
-            { "id": "m10", "team1": "", "team2": "", "next": "m13" },
-            { "id": "m11", "team1": "", "team2": "", "next": "m14" },
-            { "id": "m12", "team1": "", "team2": "", "next": "m14" }
+            { "id": "m3", "team1": "team silence", "team2": "NoPudge", "score1": 0, "score2": 1, "next": "m7" },
+            { "id": "m4", "team1": "Argon Team", "team2": "Evil Masters", "score1": 0, "score2": 1, "next": "m7" },
+            { "id": "m5", "team1": "Team Vitebsk", "team2": "Gala Mala VORKUTA", "score1": 0, "score2": 1, "next": "m8" },
+            { "id": "m6", "team1": "yakogdaberyvolosinazad", "team2": "CYBER.TSU", "score1": 0, "score2": 1, "next": "m8" }
           ]
         },
         {
-          "name": "Полуфинал (Bo1)",
+          "name": "1/2 финала (Bo1)",
           "bracket": "upper",
           "matches": [
-            { "id": "m13", "team1": "", "team2": "", "next": "m15" },
-            { "id": "m14", "team1": "", "team2": "", "next": "m15" }
+            { "id": "m7", "team1": "NoPudge", "team2": "Evil Masters", "score1": 0, "score2": 1, "next": "m9" },
+            { "id": "m8", "team1": "Gala Mala VORKUTA", "team2": "CYBER.TSU", "score1": 1, "score2": 0, "next": "m9" }
           ]
         },
         {
           "name": "Финал (Bo3)",
           "bracket": "final",
           "matches": [
-            { "id": "m15", "team1": "", "team2": "" }
+            { "id": "m9", "team1": "Evil Masters", "team2": "Gala Mala VORKUTA", "score1": 2, "score2": 0 }
           ]
         }
       ]
