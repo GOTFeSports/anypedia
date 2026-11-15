@@ -60,7 +60,7 @@ function collectMatches(result) {
 }
 
 // Эти имена нельзя использовать как slug турнира: это папки сайта, адреса /<slug> с ними конфликтуют
-const RESERVED = new Set(['assets', 'css', 'js', 'tools', 'tournaments', 'index', 'index.html', 'vercel.json', 'package.json', 'readme.md']);
+const RESERVED = new Set(['assets', 'css', 'js', 'tools', 'tournaments', 'index', '404', 'index.html', 'vercel.json', 'package.json', 'readme.md']);
 const list = [];
 const pagesMeta = []; // данные для страниц-превью
 const allMatches = [];
@@ -269,11 +269,17 @@ if (fs.existsSync(tplPath)) {
     fs.writeFileSync(path.join(OUT, file), html);
     keep.add(file);
   }
+  // 404.html — та же SPA для любых адресов, которых нет как файлов (/slug/prizes и т.п.).
+  // Нужна на хостингах без правил rewrites (GitHub Pages, Cloudflare Pages и др.): они отдают её вместо ошибки.
+  // На Vercel адреса обрабатывает rewrites из vercel.json, этот файл там просто лежит.
+  fs.mkdirSync(OUT, { recursive: true });
+  fs.writeFileSync(path.join(OUT, '404.html'), template.replace('<head>', `<head>\n  ${PAGE_MARK}`));
+  keep.add('404.html');
   // Удаляем страницы удалённых турниров (только те, что создал сам скрипт)
   for (const f of fs.existsSync(OUT) ? fs.readdirSync(OUT) : []) {
     if (!f.endsWith('.html') || f === 'index.html' || keep.has(f)) continue;
     const head = fs.readFileSync(path.join(OUT, f), 'utf8').slice(0, 400);
     if (head.includes(PAGE_MARK)) fs.unlinkSync(path.join(OUT, f));
   }
-  console.log(`✔ страницы для превью ссылок: ${keep.size}`);
+  console.log(`✔ страницы для превью ссылок: ${keep.size - 1} (+ 404.html для хостингов без rewrites)`);
 }

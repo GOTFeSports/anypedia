@@ -137,7 +137,7 @@ section[id] { scroll-margin-top: 76px; margin-bottom: 44px; }
 .tlogo.md { width: 32px; height: 32px; }
 .tlogo.lg { width: 44px; height: 44px; border-radius: 10px; }
 .tlogo.xl { width: 84px; height: 84px; border-radius: 16px; padding: 8px; background: var(--panel-2); border: 1px solid var(--border); }
-.flag { width: 18px; height: 13px; border-radius: 2px; flex: none; object-fit: cover; }
+.flag { flex: none; font-size: 10px; font-weight: 800; letter-spacing: .04em; line-height: 1; padding: 3px 5px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
 .chip { display: inline-flex; align-items: center; gap: 8px; min-width: 0; font-weight: 500; }
 .chip .txt { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .tbl .chip .txt { white-space: nowrap; }

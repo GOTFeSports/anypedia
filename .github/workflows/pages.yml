@@ -1,0 +1,48 @@
+# Запасной хостинг: тот же сайт на GitHub Pages (на случай, если Vercel не открывается у части пользователей).
+# Включить один раз: репозиторий → Settings → Pages → Build and deployment → Source: GitHub Actions.
+# Адрес сайта покажет раздел Pages после первого запуска (обычно https://<организация>.github.io/anypedia/).
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: Собрать сайт
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          # Сайт стоит в подпапке (/anypedia/): прописываем её в <base> и заменяем адрес в превью главной
+          sed -i "s#<base href=\"/\">#<base href=\"${BASE_PATH%/}/\">#" index.html
+          sed -i "s#https://anypedia.vercel.app#${SITE_URL%/}#g" index.html
+          npm run build
+          mkdir _site
+          cp -r ./*.html assets css js tournaments .nojekyll _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

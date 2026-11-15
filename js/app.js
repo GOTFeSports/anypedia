@@ -15,14 +15,16 @@ const arr = (v) => (Array.isArray(v) ? v : v ? [v] : []);
 const num = (n) => (n == null || n === '' || isNaN(Number(n)) ? '—' : Number(n).toLocaleString('ru-RU'));
 const hasScore = (m) => m.score1 != null && m.score2 != null && m.score1 !== '' && m.score2 !== '' && !isNaN(m.score1) && !isNaN(m.score2);
 
+// Сайт может стоять не в корне домена (GitHub Pages: /anypedia/) — адрес берётся из <base href> в index.html
+const BASE = new URL(document.baseURI).pathname.replace(/[^/]*$/, '');
+
 // Путь к файлу: полный URL как есть, иначе относительно base
 const asset = (base, p) =>
   !p ? '' : /^https?:\/\//i.test(p) ? esc(p) : esc(base + String(p).split('/').map(encodeURIComponent).join('/'));
 
+// Язык трансляции: подпись из двух букв. Без внешних картинок — флаги с чужого CDN могли не грузиться у части провайдеров.
 const flag = (cc) =>
-  /^[a-z]{2}$/i.test(cc || '')
-    ? `<img class="flag" src="https://flagcdn.com/w20/${cc.toLowerCase()}.png" alt="${esc(cc.toUpperCase())}" width="18" height="13" loading="lazy" onerror="this.remove()">`
-    : '';
+  /^[a-z]{2}$/i.test(cc || '') ? `<span class="flag" title="${esc(cc.toUpperCase())}">${esc(cc.toUpperCase())}</span>` : '';
 
 const STATUS = { upcoming: 'Скоро', live: 'Идёт сейчас', finished: 'Завершён' };
 
@@ -123,7 +125,7 @@ const tourLogo = (t, size) =>
 const matchLogo = (p) => `<img class="tlogo sm" src="${p ? asset('', p) : DEFAULT_LOGO}" alt="" loading="lazy">`;
 
 const tournamentCard = (t) => `
-  <a class="card tcard" href="/${enc(t.slug)}">
+  <a class="card tcard" href="${BASE}${enc(t.slug)}">
     <div class="tcard-top">${badge(t.status)}<span class="muted">${dateRange(t.date_start, t.date_end)}</span></div>
     <div class="tcard-title">${tourLogo(t, 'lg')}<h3>${esc(t.name)}</h3></div>
     <dl class="mini">
@@ -138,11 +140,11 @@ function featureCard(t) {
   const fact = (label, value) => (value ? `<div><dt>${label}</dt><dd>${value}</dd></div>` : '');
   const chips = (t.sections || [])
     .slice(0, 5)
-    .map((s) => `<a class="pill-link" href="/${enc(t.slug)}/${enc(s.id)}">${esc(s.label)}</a>`)
+    .map((s) => `<a class="pill-link" href="${BASE}${enc(t.slug)}/${enc(s.id)}">${esc(s.label)}</a>`)
     .join('');
   return `
     <article class="feature">
-      <a class="f-head" href="/${enc(t.slug)}">
+      <a class="f-head" href="${BASE}${enc(t.slug)}">
         <span class="f-kicker">${esc(STATUS[t.status] || '')}${t.organizer ? ` · ${esc(t.organizer)}` : ''}</span>
         <span class="f-title">${esc(t.name)}</span>
       </a>
@@ -167,7 +169,7 @@ function matchRow(m, withStage = true) {
   const c1 = known ? (s1 > s2 ? 'win' : s1 < s2 ? 'lose' : '') : '';
   const c2 = known ? (s2 > s1 ? 'win' : s2 < s1 ? 'lose' : '') : '';
   return `
-    <a class="mrow" href="/${enc(m.slug)}">
+    <a class="mrow" href="${BASE}${enc(m.slug)}">
       <div class="mtop"><span class="mt-name">${esc(m.tournament)}${withStage && m.stage ? ` · ${esc(m.stage)}` : ''}</span>${m.date ? `<span>${esc(shortDate(m.date))}</span>` : ''}</div>
       <div class="mbody">
         <span class="side l ${c1}"><span class="txt">${esc(m.team1)}</span>${matchLogo(m.logo1)}</span>
@@ -227,7 +229,7 @@ async function homeView() {
           .slice(0, 8)
           .map(
             (t) =>
-              `<li><a href="/${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}<span class="chip">${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span></span></a></li>`,
+              `<li><a href="${BASE}${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}<span class="chip">${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span></span></a></li>`,
           )
           .join('')}</ul>
       </section>`
@@ -735,10 +737,10 @@ async function tournamentView(slug) {
     ['streams', 'Трансляции', streamsSection(ctx)],
   ].filter((s) => s[2]);
 
-  const nav = [...top, ...rest].map(([id, label]) => `<a href="/${enc(slug)}/${id}" data-scroll="${id}">${esc(label)}</a>`).join('');
+  const nav = [...top, ...rest].map(([id, label]) => `<a href="${BASE}${enc(slug)}/${id}" data-scroll="${id}">${esc(label)}</a>`).join('');
 
   return `
-    <a class="back" href="/">← Все турниры</a>
+    <a class="back" href="${BASE}">← Все турниры</a>
     <header class="thead">
       ${badge(ctx.status)}
       <h1>${esc(info.name)}</h1>
@@ -755,7 +757,7 @@ async function tournamentView(slug) {
 /* ---------- Служебное ---------- */
 
 const notFound = () => `
-  <div class="empty"><h2 style="margin-top:0;border:0">Страница не найдена</h2><p><a href="/" class="btn">К списку турниров</a></p></div>`;
+  <div class="empty"><h2 style="margin-top:0;border:0">Страница не найдена</h2><p><a href="${BASE}" class="btn">К списку турниров</a></p></div>`;
 
 const errorView = (e) => `
   <div class="empty">
@@ -767,8 +769,9 @@ const errorView = (e) => `
 async function route() {
   // Старые ссылки вида #/t/<slug>/<раздел> → /<slug>/<раздел>
   const legacy = location.hash.match(/^#\/t\/([^/?]+)(?:\/([A-Za-z0-9_-]+))?/);
-  if (legacy) history.replaceState(null, '', `/${legacy[1]}${legacy[2] ? `/${legacy[2]}` : ''}`);
-  const path = location.pathname.replace(/\/+$/, '') || '/';
+  if (legacy) history.replaceState(null, '', `${BASE}${legacy[1]}${legacy[2] ? `/${legacy[2]}` : ''}`);
+  const rel = location.pathname.startsWith(BASE) ? location.pathname.slice(BASE.length - 1) : location.pathname;
+  const path = rel.replace(/\/+$/, '') || '/';
   const m = path.match(/^\/([^/]+)(?:\/([A-Za-z0-9_-]+))?$/);
   document.title = 'Anypedia — турниры Dota 2 с ограничением по ПТС';
   try {
@@ -838,8 +841,9 @@ onScroll();
 // Чистые ссылки без перезагрузки страницы (History API)
 document.addEventListener('click', (e) => {
   if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-  const a = e.target.closest('a[href^="/"]');
+  const a = e.target.closest('a[href]');
   if (!a || a.target || a.hasAttribute('download') || a.origin !== location.origin) return;
+  if (!a.pathname.startsWith(BASE) || /\.[a-z0-9]+$/i.test(a.pathname)) return; // чужой путь или файл (картинка, json)
   e.preventDefault();
   if (a.pathname + a.search !== location.pathname + location.search) history.pushState(null, '', a.pathname + a.search);
   route();
