@@ -35,8 +35,7 @@ jobs:
           SITE_URL: ${{ steps.pages.outputs.base_url }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
-          # Сайт стоит в подпапке (/anypedia/): прописываем её в <base> и заменяем адрес в превью главной
-          sed -i "s#<base href=\"/\">#<base href=\"${BASE_PATH%/}/\">#" index.html
+          # <base> index.html определяет сам по адресу; здесь только подставляем адрес сайта в превью главной
           sed -i "s#https://anypedia.vercel.app#${SITE_URL%/}#g" index.html
           npm run build
           mkdir _site

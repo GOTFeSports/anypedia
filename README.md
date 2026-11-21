@@ -72,11 +72,11 @@ npm run import -- csv placements places.csv  <slug>
 Сайт целиком статический и не зависит от Vercel, поэтому его можно выложить на любой хостинг, например GitHub Pages, Cloudflare Pages или российский хостинг. Для этого после `npm run build` выкладывается содержимое корня: `index.html`, `404.html`, `<slug>.html`, `assets`, `css`, `js`, `tournaments`.
 
 Что нужно от хостинга:
-- сайт стоит в корне домена (в `index.html` указано `<base href="/">`), поэтому адрес вида `user.github.io/anypedia/` не подойдёт: нужен свой домен или репозиторий `<организация>.github.io`;
+- `<base>` в `index.html` определяется автоматически: в корне домена это `/`, на GitHub Pages (`user.github.io/anypedia/`) — `/anypedia/`;
 - `/<slug>` отдаётся из `<slug>.html` (так делают GitHub Pages, Cloudflare Pages и Vercel с `cleanUrls`);
 - для остальных адресов (`/<slug>/prizes`) отдаётся `404.html`, это та же страница сайта. Сборка создаёт её сама.
 
-Сайт работает и в подпапке (`/anypedia/`): путь берётся из `<base href>` в `index.html`.
+Сайт работает и в подпапке (`/anypedia/`): путь определяет скрипт `<base>` в `index.html`.
 
 Внешних запросов у сайта нет: все файлы, шрифты и картинки свои.
 

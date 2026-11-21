@@ -3,7 +3,8 @@
 <head>
   <!-- anypedia:generated -->
   <meta charset="utf-8">
-  <base href="/">
+  <!-- base: в корне домена "/", на GitHub Pages (user.github.io/repo/) — "/repo/" -->
+  <script>document.write('<base href="' + (/\.github\.io$/.test(location.hostname) && location.pathname.split('/')[1] ? '/' + location.pathname.split('/')[1] + '/' : '/') + '">');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anypedia — турниры Dota 2 с ограничением по ПТС</title>
   <meta name="description" content="Энциклопедия полупрофессиональных турниров Dota 2: призовые места, составы, результаты.">
