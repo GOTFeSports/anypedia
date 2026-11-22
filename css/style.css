@@ -407,6 +407,9 @@ tr.out td:first-child { box-shadow: inset 3px 0 var(--warn); }
 .slang { display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 10px; }
 .slinks { display: flex; flex-wrap: wrap; gap: 8px; }
 
+.empty.soft { padding: 28px 24px; }
+.empty.soft p { margin: 0 0 14px; }
+.empty.soft p:last-child { margin: 0; }
 .empty { padding: 40px; text-align: center; color: var(--muted); border: 1px dashed var(--border); border-radius: var(--radius); }
 
 @media (max-width: 980px) {
