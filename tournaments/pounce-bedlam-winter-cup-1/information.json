@@ -1,0 +1,32 @@
+{
+  "name": "POUNCE × BEDLAM: WINTER CUP",
+  "series": "Pounce Cup × Bedlam",
+  "organizer": "Pounce Cup × Bedlam",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-28",
+  "date_end": "2026-11-28",
+  "format": [
+    "Single Elimination",
+    "Все матчи — BO1",
+    "Финал — BO3",
+    "Чек-ин: 13:00 МСК",
+    "Игры: 14:00-23:00 МСК",
+    "Взнос: 1 000 ₽ с команды // 200 ₽ с игрока"
+  ],
+  "pts_cap": 30000,
+  "prize_pool": "до 50 000 ₽",
+  "description": "POUNCE × BEDLAM: WINTER CUP — онлайн-турнир по Dota 2 для команд СНГ с ограничением по ПТС: 7 500 (+~1%) на игрока, 30 000 (+~1%) на команду. Пройдёт 28.11.2026. Формат: Single Elimination (BO1, финал BO3). Призовой фонд — до 50 000 ₽. Организатор — Pounce Cup × Bedlam.",
+  "links": {
+
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "Главный приз (призовой фонд до 50 000 ₽)"
+    }
+  ],
+  "streams": []
+}

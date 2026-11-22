@@ -1,0 +1,44 @@
+{
+  "name": "Immortality: The Third Dynasty",
+  "series": "Immortality",
+  "organizer": "Immortality",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-12-12",
+  "date_end": "2026-12-20",
+  "format": [
+    "Квалификация: Single Elimination (12-13 декабря)",
+    "Основной этап: 16 команд (14-20 декабря)",
+    "5x5, Captains Mode",
+    "Игры BO1",
+    "Неограниченное кол-во мест (квалификация)"
+  ],
+  "pts_cap": 35000,
+  "prize_pool": "66 666 ₽",
+  "description": "Immortality: The Third Dynasty — онлайн-турнир по Dota 2 для команд СНГ с ограничением по ПТС: без ограничений на игрока, 35 000 на команду (+100 ПТС простительно). Пройдёт с 12 по 20 декабря. Формат: квалификация (Single Elimination, Bo1), основной этап на 16 команд (12 из квалификации, 4 инвайта). Призовой фонд — 66 666 ₽. Организатор — Immortality.",
+  "links": {
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "33 333 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "22 222 ₽"
+    },
+    {
+      "place": 3,
+      "prize": "11 111 ₽"
+    }
+  ],
+  "streams": [
+    {
+      "lang": "ru",
+      "platform": "twitch",
+      "url": "https://www.twitch.tv/immortality_dt2"
+    }
+  ]
+}
