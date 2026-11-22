@@ -130,7 +130,7 @@ for (const d of dirs) {
     return t?.logo ? (isUrl(t.logo) ? t.logo : `tournaments/${d.name}/${t.logo}`) : null;
   };
   for (const m of collectMatches(result)) {
-    allMatches.push({ slug: d.name, tournament: info.name ?? d.name, ...m, logo1: logoOf(m.team1), logo2: logoOf(m.team2) });
+    allMatches.push({ slug: d.name, tournament: info.name ?? d.name, ...m, logo1: logoOf(m.team1), logo2: logoOf(m.team2), _n: allMatches.length, _d: m.date ?? info.date_end ?? info.date_start ?? '' });
   }
 
   const stages = stagesOf(result);
@@ -161,7 +161,10 @@ for (const d of dirs) {
 
 list.sort((a, b) => String(b.date_start ?? '').localeCompare(String(a.date_start ?? '')));
 
-const byDate = (dir) => (a, b) => dir * String(a.date ?? '').localeCompare(String(b.date ?? ''));
+// Сортировка: по дате матча (если даты нет — по дате турнира), при равенстве — по порядку в result.json.
+// Завершённые идут от свежих к старым (финал выше, чем 1/4), предстоящие — от ближайших к дальним.
+const byDate = (dir) => (a, b) => dir * (String(a._d).localeCompare(String(b._d)) || a._n - b._n);
+const clean = ({ _n, _d, ...m }) => m;
 const isPlayed = (m) => hasScore(m) || m.winner === 1 || m.winner === 2; // счёт или победа без счёта (W/L)
 const played = allMatches.filter(isPlayed);
 const planned = allMatches.filter((m) => !isPlayed(m));
@@ -175,8 +178,8 @@ const index = {
     finished: list.filter((t) => t.status === 'finished').length,
   },
   matches: {
-    upcoming: planned.sort(byDate(1)).slice(0, 12),
-    completed: played.sort(byDate(-1)).slice(0, 12),
+    upcoming: planned.sort(byDate(1)).slice(0, 12).map(clean),
+    completed: played.sort(byDate(-1)).slice(0, 12).map(clean),
   },
   tournaments: list,
 };

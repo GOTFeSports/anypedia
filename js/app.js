@@ -229,7 +229,7 @@ async function homeView() {
           .slice(0, 8)
           .map(
             (t) =>
-              `<li><a href="${BASE}${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}<span class="chip">${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span></span></a></li>`,
+              `<li><a href="${BASE}${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span></a></li>`,
           )
           .join('')}</ul>
       </section>`

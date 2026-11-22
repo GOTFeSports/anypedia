@@ -194,12 +194,13 @@ section[id] { scroll-margin-top: 76px; margin-bottom: 44px; }
 .mscore { padding: 2px 10px; border-radius: 8px; background: var(--panel-2); font-weight: 800; font-size: .85rem; font-variant-numeric: tabular-nums; }
 .mempty { padding: 22px 16px; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
 .wlist { list-style: none; margin: 0; padding: 0; }
-.wlist a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; border-top: 1px solid var(--border); }
+.wlist a { display: grid; gap: 4px; padding: 11px 16px; border-top: 1px solid var(--border); }
 .wlist li:first-child a { border-top: 0; }
 .wlist a:hover { background: var(--panel-2); }
-.wt { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
-.wn { display: inline-flex; align-items: center; gap: 8px; min-width: 0; color: var(--gold); }
-.wn .chip { color: var(--text); font-size: .88rem; }
+.wt { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: .92rem; }
+.wn { display: grid; grid-template-columns: 16px 20px minmax(0, 1fr); align-items: center; gap: 8px; color: var(--gold); }
+.wn svg { display: block; }
+.wn .txt { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); font-size: .88rem; }
 
 .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .card {
