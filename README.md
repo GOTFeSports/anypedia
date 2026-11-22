@@ -133,7 +133,7 @@ npm run import -- csv placements places.csv  <slug>
 { "teams": [ {
   "name": "Команда",
   "logo": "teams/team.png",
-  "status": "invited | qualified | registered",
+  "status": "invited | qualified | registered | disqualified",
   "qualifier": "Открытая квалификация · 1 место",
   "players": [ { "nick": "player" } ],
   "coach": { "nick": "coach" },

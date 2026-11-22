@@ -298,7 +298,7 @@ function infobox(ctx) {
 
 /* ---------- Участники ---------- */
 
-const TEAM_STATUS = { invited: 'Приглашена', qualified: 'Квалификация', registered: 'Заявка подана' };
+const TEAM_STATUS = { invited: 'Приглашена', qualified: 'Квалификация', registered: 'Зарегистрирована', disqualified: 'Дисквалифицирована' };
 
 function participantsSection(ctx) {
   const teams = ctx.roster?.teams || [];
