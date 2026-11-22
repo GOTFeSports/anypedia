@@ -56,7 +56,7 @@ const shortDate = (d) => {
 };
 function dateRange(a, b) {
   if (!a && !b) return 'Дата уточняется';
-  if (!b || a === b) return fmtDate(a || b);
+  if (!a || !b || a === b) return fmtDate(a || b);
   const x = toDate(a), y = toDate(b);
   if (!isNaN(x) && !isNaN(y) && x.getMonth() === y.getMonth() && x.getFullYear() === y.getFullYear()) {
     return `${x.getDate()}–${fmtDate(b)}`;
@@ -627,6 +627,7 @@ function bracketHtml(ctx, rounds) {
 // Сетка всегда помещается по ширине: линии рисуем в «естественном» размере, затем
 // масштабируем под контейнер. Если пришлось бы слишком мелко — раунды идут списком (класс .stack).
 const MIN_SCALE = 0.68;
+const padY = (el) => { const c = getComputedStyle(el); return parseFloat(c.paddingTop) + parseFloat(c.paddingBottom); };
 const SCROLL_SCALE = 0.8; // на узких экранах: сетка в читаемом масштабе, листается вбок
 function fitBrackets() {
   // Швейцарка: если колонки раундов не помещаются рядом с названиями — прячем их (матчи остаются в списке под таблицей)
@@ -665,12 +666,12 @@ function fitBrackets() {
     if (scale >= 1) return;
     if (scale >= MIN_SCALE) {
       inner.style.transform = `scale(${scale})`;
-      box.style.height = `${inner.offsetHeight * scale}px`;
+      box.style.height = `${inner.offsetHeight * scale + padY(box)}px`;
     } else {
       // слишком широко — не превращаем сетку в список, а даём листать вбок
       box.classList.add('hscroll');
       inner.style.transform = `scale(${SCROLL_SCALE})`;
-      box.style.height = `${inner.offsetHeight * SCROLL_SCALE}px`;
+      box.style.height = `${inner.offsetHeight * SCROLL_SCALE + padY(box)}px`;
       box.insertAdjacentHTML('beforebegin', '<div class="bhint">Листайте сетку вбок →</div>');
     }
   });

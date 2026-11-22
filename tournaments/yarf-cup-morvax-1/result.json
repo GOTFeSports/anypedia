@@ -2,24 +2,62 @@
   "placements": [],
   "stages": [
     {
-      "type": "group_stage",
-      "name": "Групповой этап (Bo1)",
+      "type": "groups",
+      "name": "Групповой этап",
       "groups": [
         {
           "name": "Группа A",
-          "matches": []
+          "format": "round_robin",
+          "advance": 2,
+          "teams": [
+            "SakiiMasaki",
+            "Sibstrin.Gaming",
+            "MORVAX",
+            "DNR",
+            "Opium"
+          ],
+          "matches": [
+            { "team1": "MORVAX", "team2": "SakiiMasaki", "score1": 0, "score2": 1 },
+            { "team1": "Sibstrin.Gaming", "team2": "Opium", "score1": 1, "score2": 0 },
+            { "team1": "SakiiMasaki", "team2": "Sibstrin.Gaming", "score1": 1, "score2": 0 },
+            { "team1": "DNR", "team2": "MORVAX", "score1": 0, "score2": 1 },
+            { "team1": "Sibstrin.Gaming", "team2": "DNR", "score1": 1, "score2": 0 },
+            { "team1": "Opium", "team2": "SakiiMasaki", "score1": 0, "score2": 1 },
+            { "team1": "DNR", "team2": "Opium", "score1": 1, "score2": 0 },
+            { "team1": "MORVAX", "team2": "Sibstrin.Gaming", "score1": 0, "score2": 1 },
+            { "team1": "Opium", "team2": "MORVAX", "score1": 0, "score2": 1 },
+            { "team1": "SakiiMasaki", "team2": "DNR", "score1": 1, "score2": 0 }
+          ]
         },
         {
           "name": "Группа B",
-          "matches": []
-        },
-        {
-          "name": "Группа C",
-          "matches": []
-        },
-        {
-          "name": "Группа D",
-          "matches": []
+          "format": "round_robin",
+          "advance": 2,
+          "teams": [
+            "feed and win",
+            "1WMORVAX",
+            "Team Spilis",
+            "Шары Иновера",
+            "тим победилдо",
+            "GANG OTRYAO"
+          ],
+          "matches": [
+            { "team1": "Team Spilis", "team2": "feed and win", "score1": 0, "score2": 1 },
+            { "team1": "GANG OTRYAO", "team2": "тим победилдо", "score1": 0, "score2": 1 },
+            { "team1": "Шары Иновера", "team2": "1WMORVAX", "score1": 0, "score2": 1 },
+            { "team1": "тим победилдо", "team2": "Шары Иновера", "score1": 0, "score2": 1 },
+            { "team1": "1WMORVAX", "team2": "Team Spilis", "score1": 1, "score2": 0 },
+            { "team1": "feed and win", "team2": "GANG OTRYAO", "score1": 1, "score2": 0 },
+            { "team1": "1WMORVAX", "team2": "тим победилдо", "score1": 1, "score2": 0 },
+            { "team1": "Шары Иновера", "team2": "Team Spilis", "score1": 1, "score2": 0 },
+            { "team1": "feed and win", "team2": "1WMORVAX", "score1": 1, "score2": 0 },
+            { "team1": "GANG OTRYAO", "team2": "Шары Иновера", "score1": 0, "score2": 1 },
+            { "team1": "feed and win", "team2": "Team Spilis", "score1": 1, "score2": 0 },
+            { "team1": "GANG OTRYAO", "team2": "Team Spilis", "score1": 0, "score2": 1 },
+            { "team1": "тим победилдо", "team2": "Team Spilis", "score1": 0, "score2": 1 },
+            { "team1": "Шары Иновера", "team2": "feed and win", "score1": 0, "score2": 1 },
+            { "team1": "тим победилдо", "team2": "GANG OTRYAO", "score1": 1, "score2": 0 }
+          ]
         }
       ]
     },
@@ -28,43 +66,25 @@
       "name": "Плей-офф (LAN)",
       "rounds": [
         {
-          "name": "Полуфинал (Bo3)",
+          "name": "Полуфиналы",
           "bracket": "upper",
           "matches": [
-            {
-              "id": "m1",
-              "team1": "",
-              "team2": "",
-              "next": "m3"
-            },
-            {
-              "id": "m2",
-              "team1": "",
-              "team2": "",
-              "next": "m3"
-            }
+            { "id": "sf1", "team1": "SakiiMasaki", "team2": "1WMORVAX", "next": "final" },
+            { "id": "sf2", "team1": "feed and win", "team2": "Sibstrin.Gaming", "next": "final" }
           ]
         },
         {
-          "name": "Матч за 3-е место (Bo3)",
-          "bracket": "lower",
+          "name": "Матч за 3-е место",
+          "bracket": "third",
           "matches": [
-            {
-              "id": "m4",
-              "team1": "",
-              "team2": ""
-            }
+            { "id": "third_place", "team1": "", "team2": "" }
           ]
         },
         {
-          "name": "Финал (Bo3)",
+          "name": "Финал",
           "bracket": "final",
           "matches": [
-            {
-              "id": "m3",
-              "team1": "",
-              "team2": ""
-            }
+            { "id": "final", "team1": "", "team2": "" }
           ]
         }
       ]
