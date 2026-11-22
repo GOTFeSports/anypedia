@@ -1,0 +1,116 @@
+{
+  "teams": [
+    {
+      "name": "Primal Dance",
+      "status": "registered",
+      "players": [
+        { "nick": "cotsu" },
+        { "nick": "akkamy" },
+        { "nick": "cherepashka" },
+        { "nick": "Freak" },
+        { "nick": "pase4n1k" },
+        { "nick": "trypak" }
+      ]
+    },
+    {
+      "name": "CYBER.TSU",
+      "status": "registered",
+      "players": [
+        { "nick": "lueur" },
+        { "nick": "ALWAYSWANNAWIN" },
+        { "nick": "Camilla" },
+        { "nick": "Encrucio" },
+        { "nick": "t1mka_killer" }
+      ]
+    },
+    {
+      "name": "Evil Masters",
+      "status": "registered",
+      "players": [
+        { "nick": "miro" },
+        { "nick": "imatsU" },
+        { "nick": "Sajh" },
+        { "nick": "Whyumadkiddo" },
+        { "nick": "yummytdance" }
+      ]
+    },
+    {
+      "name": "Team Leto",
+      "status": "registered",
+      "players": [
+        { "nick": "el_tivke" },
+        { "nick": "Alisa" },
+        { "nick": "darklight" },
+        { "nick": "popi" },
+        { "nick": "Teenwave" }
+      ]
+    },
+    {
+      "name": "Sibstrin.osnova",
+      "status": "registered",
+      "players": [
+        { "nick": "letmelle" },
+        { "nick": "444" },
+        { "nick": "Aciudad" },
+        { "nick": "Shikich" },
+        { "nick": "youzerneum" }
+      ]
+    },
+    {
+      "name": "Argon Team",
+      "status": "registered",
+      "players": [
+        { "nick": "Br1nza" },
+        { "nick": "Azarggot" },
+        { "nick": "Piupi" },
+        { "nick": "Quarside" },
+        { "nick": "wannacry" }
+      ]
+    },
+    {
+      "name": "Gala Mala VORKUTA",
+      "status": "registered",
+      "players": [
+        { "nick": "kupnu4" },
+        { "nick": "kto_pizdeI228" },
+        { "nick": "Paradox444" },
+        { "nick": "vasyan322" },
+        { "nick": "XAPER" },
+        { "nick": "zekichan" }
+      ]
+    },
+    {
+      "name": "snowfall",
+      "status": "registered",
+      "players": [
+        { "nick": "herry" },
+        { "nick": "CocSmeN" },
+        { "nick": "drim" },
+        { "nick": "m1nd1" },
+        { "nick": "v4nyan" }
+      ]
+    },
+    {
+      "name": "The Scream team",
+      "status": "registered",
+      "players": [
+        { "nick": "wttt" },
+        { "nick": "Kintaro" },
+        { "nick": "mauvlx" },
+        { "nick": "Strike" },
+        { "nick": "xttress" }
+      ]
+    },
+    {
+      "name": "team silence",
+      "status": "registered",
+      "players": [
+        { "nick": "ciexxzd" },
+        { "nick": "7awwz" },
+        { "nick": "Butterfly" },
+        { "nick": "Harzixx" },
+        { "nick": "YoSqintStar" }
+      ]
+    }
+  ]
+}
