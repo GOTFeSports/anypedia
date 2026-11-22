@@ -627,6 +627,7 @@ function bracketHtml(ctx, rounds) {
 // Сетка всегда помещается по ширине: линии рисуем в «естественном» размере, затем
 // масштабируем под контейнер. Если пришлось бы слишком мелко — раунды идут списком (класс .stack).
 const MIN_SCALE = 0.68;
+const SCROLL_SCALE = 0.8; // на узких экранах: сетка в читаемом масштабе, листается вбок
 function fitBrackets() {
   // Швейцарка: если колонки раундов не помещаются рядом с названиями — прячем их (матчи остаются в списке под таблицей)
   document.querySelectorAll('.swiss').forEach((box) => {
@@ -639,7 +640,8 @@ function fitBrackets() {
     const svg = inner?.querySelector('.blines');
     if (!inner || !svg) return;
 
-    box.classList.remove('stack');
+    box.classList.remove('stack', 'hscroll');
+    box.previousElementSibling?.classList.contains('bhint') && box.previousElementSibling.remove();
     inner.style.transform = '';
     box.style.height = '';
 
@@ -665,7 +667,11 @@ function fitBrackets() {
       inner.style.transform = `scale(${scale})`;
       box.style.height = `${inner.offsetHeight * scale}px`;
     } else {
-      box.classList.add('stack');
+      // слишком широко — не превращаем сетку в список, а даём листать вбок
+      box.classList.add('hscroll');
+      inner.style.transform = `scale(${SCROLL_SCALE})`;
+      box.style.height = `${inner.offsetHeight * SCROLL_SCALE}px`;
+      box.insertAdjacentHTML('beforebegin', '<div class="bhint">Листайте сетку вбок →</div>');
     }
   });
 }
@@ -745,14 +751,16 @@ async function tournamentView(slug) {
 
   return `
     <a class="back" href="${BASE}">← Все турниры</a>
-    <header class="thead">
-      ${badge(ctx.status)}
-      <h1>${esc(info.name)}</h1>
-      ${info.description ? `<p>${esc(info.description)}</p>` : ''}
-      ${nav ? `<nav class="snav">${nav}</nav>` : ''}
-    </header>
     <div class="layout">
-      <div class="main">${top.map((s) => s[2]).join('') || '<div class="empty">Данные турнира пока не добавлены.</div>'}</div>
+      <div class="main">
+        <header class="thead">
+          ${badge(ctx.status)}
+          <h1>${esc(info.name)}</h1>
+          ${info.description ? `<p>${esc(info.description)}</p>` : ''}
+          ${nav ? `<nav class="snav">${nav}</nav>` : ''}
+        </header>
+        ${top.map((s) => s[2]).join('') || '<div class="empty">Данные турнира пока не добавлены.</div>'}
+      </div>
       ${infobox(ctx)}
     </div>
     <div class="stages">${rest.map((s) => s[2]).join('')}</div>`;
