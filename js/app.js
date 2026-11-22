@@ -305,7 +305,7 @@ function participantsSection(ctx) {
   if (!teams.length) {
     const reg = ctx.info.links?.registration;
     const hint = ctx.status === 'finished' ? 'Состав участников для этого турнира не добавлен.' : 'Список участников появится после окончания регистрации.';
-    return `<section id="participants"><h2>Участники</h2><div class="empty soft"><p>${hint}</p>${reg ? `<a class="btn" href="${safeUrl(reg)}" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a>` : ''}</div></section>`;
+    return `<section id="participants"><h2>Участники</h2><div class="empty soft"><p>${hint}</p>${reg && ctx.status !== 'finished' ? `<a class="btn" href="${safeUrl(reg)}" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a>` : ''}</div></section>`;
   }
   // Строка «статус / квалификация» есть у всех карточек, если она есть хотя бы у одной — так карточки выровнены
   const anyMeta = teams.some((t) => t.status || t.qualifier);
