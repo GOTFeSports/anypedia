@@ -1,0 +1,93 @@
+{
+  "placements": [
+    {
+      "place": 1,
+      "team": "Primal Dance"
+    },
+    {
+      "place": 2,
+      "team": "CYBER.TSU"
+    },
+    {
+      "place": 3,
+      "label": "3–4",
+      "team": "Evil Masters"
+    },
+    {
+      "place": 4,
+      "label": "3–4",
+      "team": "Team Leto"
+    },
+    {
+      "place": 5,
+      "label": "5–8",
+      "team": "Sibstrin.osnova"
+    },
+    {
+      "place": 6,
+      "label": "5–8",
+      "team": "Argon Team"
+    },
+    {
+      "place": 7,
+      "label": "5–8",
+      "team": "Gala Mala VORKUTA"
+    },
+    {
+      "place": 8,
+      "label": "5–8",
+      "team": "snowfall"
+    },
+    {
+      "place": 9,
+      "label": "9–10",
+      "team": "The Scream team"
+    },
+    {
+      "place": 10,
+      "label": "9–10",
+      "team": "team silence"
+    }
+  ],
+  "stages": [
+    {
+      "type": "single_elim",
+      "name": "Плей-офф",
+      "rounds": [
+        {
+          "name": "1/8 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m1", "team1": "The Scream team", "team2": "Gala Mala VORKUTA", "score1": 0, "score2": 1, "next": "m5" },
+            { "id": "m2", "team1": "team silence", "team2": "Team Leto", "score1": 0, "score2": 1, "next": "m6" }
+          ]
+        },
+        {
+          "name": "1/4 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m3", "team1": "Sibstrin.osnova", "team2": "CYBER.TSU", "score1": 0, "score2": 1, "next": "m7" },
+            { "id": "m4", "team1": "Argon Team", "team2": "Evil Masters", "score1": 0, "score2": 1, "next": "m7" },
+            { "id": "m5", "team1": "Primal Dance", "team2": "Gala Mala VORKUTA", "score1": 1, "score2": 0, "next": "m8" },
+            { "id": "m6", "team1": "snowfall", "team2": "Team Leto", "score1": 0, "score2": 1, "next": "m8" }
+          ]
+        },
+        {
+          "name": "1/2 финала (Bo1)",
+          "bracket": "upper",
+          "matches": [
+            { "id": "m7", "team1": "CYBER.TSU", "team2": "Evil Masters", "score1": 1, "score2": 0, "next": "m9" },
+            { "id": "m8", "team1": "Primal Dance", "team2": "Team Leto", "score1": 1, "score2": 0, "next": "m9" }
+          ]
+        },
+        {
+          "name": "Финал (Bo3)",
+          "bracket": "final",
+          "matches": [
+            { "id": "m9", "team1": "CYBER.TSU", "team2": "Primal Dance", "score1": 0, "score2": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}

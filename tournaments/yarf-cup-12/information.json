@@ -1,0 +1,33 @@
+{
+  "name": "YARF CUP № 12",
+  "series": "YARF CUP",
+  "organizer": "YARF CUP",
+  "status": "finished",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-22",
+  "date_end": "2026-11-22",
+  "format": [
+    "Single Elimination",
+    "Все матчи — Bo1",
+    "Финал — Bo3",
+    "Captains Mode",
+    "Количество команд ограничено (16 команд)"
+  ],
+  "pts_cap": null,
+  "prize_pool": "5 000 ₽",
+  "description": "YARF CUP № 12 — онлайн-турнир по Dota 2 для команд СНГ с ограничением по ПТС: без ограничений на игрока, без ограничений на команду. Прошёл 22.11.2026, в нём сыграли 10 команд. Формат: Single Elimination (Bo1, финал Bo3). Призовой фонд — 5 000 ₽. Победителем стала Primal Dance, второе место заняла CYBER.TSU. Организатор — YARF CUP.",
+  "links": {},
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "3 500 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "1 000 ₽"
+    }
+  ],
+  "streams": []
+}
