@@ -1,5 +1,5 @@
 {
-  "name": "YARF CUP 1x1 - 1",
+  "name": "YARF CUP (1x1) #1",
   "series": "YARF CUP",
   "organizer": "YARF CUP",
   "status": "upcoming",
@@ -20,9 +20,6 @@
   "prize_pool": "1 000 ₽",
   "description": "YARF CUP 1x1 — онлайн-турнир по Dota 2 для игроков СНГ с ограничением по ПТС: без ограничений на игрока, без ограничений на команду. Пройдёт 24.11.2026. Формат: Double Elimination, 1x1 Random Mid (Bo1, финал Bo3). Призовой фонд — 1 000 ₽. Организатор — YARF CUP.",
   "links": {
-    "registration": "https://gridsport.ru/tournaments/68",
-    "telegram": "https://t.me/yarfcup",
-    "rules": "https://disk.yandex.ru/i/ofe-gCXsl6L5RA"
   },
   "prizes": [
     {
