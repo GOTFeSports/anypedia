@@ -1,0 +1,17 @@
+{
+  "teams": [
+    { "name": "wttt", "status": "registered", "players": [{ "nick": "wttt" }] },
+    { "name": "flex", "status": "registered", "players": [{ "nick": "flex" }] },
+    { "name": "kyomu", "status": "registered", "players": [{ "nick": "kyomu" }] },
+    { "name": "Nikita_pvp", "status": "registered", "players": [{ "nick": "Nikita_pvp" }] },
+    { "name": "sadden", "status": "registered", "players": [{ "nick": "sadden" }] },
+    { "name": "darkzzz", "status": "registered", "players": [{ "nick": "darkzzz" }] },
+    { "name": "rom4ik44", "status": "registered", "players": [{ "nick": "rom4ik44" }] },
+    { "name": "signature", "status": "registered", "players": [{ "nick": "signature" }] },
+    { "name": "kupnu4", "status": "registered", "players": [{ "nick": "kupnu4" }] },
+    { "name": "XAPER", "status": "registered", "players": [{ "nick": "XAPER" }] },
+    { "name": "Bliccii", "status": "registered", "players": [{ "nick": "Bliccii" }] },
+    { "name": "xttress", "status": "registered", "players": [{ "nick": "xttress" }] },
+    { "name": "larey", "status": "registered", "players": [{ "nick": "larey" }] }
+  ]
+}
