@@ -152,6 +152,8 @@ for (const d of dirs) {
     prize_pool: info.prize_pool ?? '',
     pts_cap: info.pts_cap ?? null,
     teams_count: teams.length,
+    team_names: teams.map((t) => t.name).filter(Boolean),
+    series: info.series ?? '',
     winner,
     winner_logo: winner ? logoOf(winner) : null,
     sections,

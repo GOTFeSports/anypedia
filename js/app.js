@@ -3,7 +3,6 @@
 
 const app = document.getElementById('app');
 const cache = new Map();
-const DEFAULT_LOGO = 'assets/dota2.png';
 
 /* ---------- Утилиты ---------- */
 
@@ -25,6 +24,21 @@ const asset = (base, p) =>
 // Язык трансляции: подпись из двух букв. Без внешних картинок — флаги с чужого CDN могли не грузиться у части провайдеров.
 const flag = (cc) =>
   /^[a-z]{2}$/i.test(cc || '') ? `<span class="flag" title="${esc(cc.toUpperCase())}">${esc(cc.toUpperCase())}</span>` : '';
+
+
+// Логотип по умолчанию: цветной кружок с инициалами (цвет зависит от названия)
+function initials(name) {
+  const words = String(name || '').trim().split(/\s+/).filter((w) => /^[\p{L}\d]/u.test(w) && !(w.length === 1 && /\p{Ll}/u.test(w)));
+  const text = words.length >= 2 ? words[0][0] + words[1][0] : (words[0] || String(name || '?')).slice(0, 2);
+  return text.toUpperCase();
+}
+function hue(name) {
+  let h = 0;
+  for (const ch of String(name || '')) h = (h * 31 + ch.codePointAt(0)) % 360;
+  return h;
+}
+const mono = (name, size = '') =>
+  `<span class="tlogo mono ${size}" style="--h:${hue(name)}" aria-hidden="true">${esc(initials(name))}</span>`;
 
 const STATUS = { upcoming: 'Скоро', live: 'Идёт сейчас', finished: 'Завершён' };
 
@@ -88,11 +102,11 @@ function getJson(url) {
 
 const hasLogo = (ctx, name) => !!ctx.teams.get(name)?.logo;
 
-// Логотип команды; если не задан — картинка по умолчанию assets/dota2.png
+// Логотип команды; если не задан — кружок с инициалами
 function tlogo(ctx, name, size = '') {
   const t = ctx.teams.get(name);
-  const src = t?.logo ? asset(ctx.base, t.logo) : DEFAULT_LOGO;
-  return `<img class="tlogo ${size}" src="${src}" alt="" loading="lazy">`;
+  if (!t?.logo) return mono(name, size);
+  return `<img class="tlogo ${size}" src="${asset(ctx.base, t.logo)}" alt="" loading="lazy">`;
 }
 const teamChip = (ctx, name) =>
   name
@@ -121,8 +135,10 @@ function sortTournaments(list) {
 }
 
 const tourLogo = (t, size) =>
-  `<img class="tlogo ${size}" src="${t.logo ? asset(`tournaments/${encodeURIComponent(t.slug)}/`, t.logo) : DEFAULT_LOGO}" alt="" loading="lazy">`;
-const matchLogo = (p) => `<img class="tlogo sm" src="${p ? asset('', p) : DEFAULT_LOGO}" alt="" loading="lazy">`;
+  t.logo
+    ? `<img class="tlogo ${size}" src="${asset(`tournaments/${encodeURIComponent(t.slug)}/`, t.logo)}" alt="" loading="lazy">`
+    : mono(t.name, size);
+const matchLogo = (p, name) => (p ? `<img class="tlogo sm" src="${asset('', p)}" alt="" loading="lazy">` : mono(name, 'sm'));
 
 const tournamentCard = (t) => `
   <a class="card tcard" href="${BASE}${enc(t.slug)}">
@@ -155,7 +171,7 @@ function featureCard(t) {
           ${fact('Призовой фонд', esc(t.prize_pool))}
           ${fact('Лимит', t.pts_cap ? num(t.pts_cap) : '')}
           ${fact('Команд', t.teams_count || '')}
-          ${t.winner ? fact('Победитель', `<span class="chip">${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span>`) : ''}
+          ${t.winner ? fact('Победитель', `<span class="chip">${matchLogo(t.winner_logo, t.winner)}<span class="txt">${esc(t.winner)}</span></span>`) : ''}
         </dl>
       </div>
       ${chips ? `<nav class="f-links">${chips}</nav>` : ''}
@@ -172,9 +188,9 @@ function matchRow(m, withStage = true) {
     <a class="mrow" href="${BASE}${enc(m.slug)}">
       <div class="mtop"><span class="mt-name">${esc(m.tournament)}${withStage && m.stage ? ` · ${esc(m.stage)}` : ''}</span>${m.date ? `<span>${esc(shortDate(m.date))}</span>` : ''}</div>
       <div class="mbody">
-        <span class="side l ${c1}"><span class="txt">${esc(m.team1)}</span>${matchLogo(m.logo1)}</span>
+        <span class="side l ${c1}"><span class="txt">${esc(m.team1)}</span>${matchLogo(m.logo1, m.team1)}</span>
         <span class="mscore">${wo ? (m.winner === 1 ? 'W:L' : 'L:W') : known ? `${s1}:${s2}` : 'vs'}</span>
-        <span class="side r ${c2}">${matchLogo(m.logo2)}<span class="txt">${esc(m.team2)}</span></span>
+        <span class="side r ${c2}">${matchLogo(m.logo2, m.team2)}<span class="txt">${esc(m.team2)}</span></span>
       </div>
     </a>`;
 }
@@ -229,7 +245,7 @@ async function homeView() {
           .slice(0, 8)
           .map(
             (t) =>
-              `<li><a href="${BASE}${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}${matchLogo(t.winner_logo)}<span class="txt">${esc(t.winner)}</span></span></a></li>`,
+              `<li><a href="${BASE}${enc(t.slug)}"><span class="wt">${esc(t.name)}</span><span class="wn">${TROPHY}${matchLogo(t.winner_logo, t.winner)}<span class="txt">${esc(t.winner)}</span></span></a></li>`,
           )
           .join('')}</ul>
       </section>`
@@ -322,7 +338,7 @@ function participantsSection(ctx) {
       const metaText = t.qualifier || TEAM_STATUS[t.status] || '';
       return `
         <article class="pcard">
-          <header>${tlogo(ctx, t.name, 'md')}<h3 title="${esc(t.name)}">${esc(t.name)}</h3></header>
+          <header data-open tabindex="0" role="button" aria-expanded="false">${tlogo(ctx, t.name, 'md')}<h3 title="${esc(t.name)}">${esc(t.name)}</h3><span class="chev"></span></header>
           ${anyMeta ? `<div class="pmeta st-${esc(t.status || '')}" title="${esc(metaText)}">${metaText ? `<i></i><span>${esc(metaText)}</span>` : ''}</div>` : ''}
           <div class="tabs">
             <button type="button" class="on" data-tab="main">Основа</button>
@@ -339,9 +355,10 @@ function participantsSection(ctx) {
   return `
     <section id="participants">
       <h2>Участники <span class="count">· ${teams.length}</span></h2>
-      <div class="participants rosters-on">
+      <div class="participants">
         <div class="controls">
-          <label class="sw"><input type="checkbox" data-toggle="rosters-on" checked><span>Показывать составы</span></label>
+          <label class="sw"><input type="checkbox" data-toggle="rosters-on"><span>Раскрыть все составы</span></label>
+          <span class="hint">Нажмите на команду, чтобы увидеть состав</span>
         </div>
         <div class="pgrid">${cards}</div>
       </div>
@@ -802,13 +819,81 @@ async function route() {
   if (m?.[2]) requestAnimationFrame(() => document.getElementById(m[2])?.scrollIntoView({ block: 'start' }));
 }
 
+
+/* ---------- Поиск в шапке ---------- */
+
+const norm = (x) => String(x || '').toLowerCase().replace(/ё/g, 'е').trim();
+let searchIdx = null;
+async function loadSearch() {
+  if (searchIdx) return searchIdx;
+  const idx = await getJson('tournaments/index.json');
+  searchIdx = (idx?.tournaments || []).map((t) => ({ ...t, status: effectiveStatus(t) }));
+  return searchIdx;
+}
+function searchHtml(list, q) {
+  const n = norm(q);
+  if (!n) return '';
+  const tours = list.filter((t) => norm(`${t.name} ${t.series || ''} ${t.organizer || ''}`).includes(n)).slice(0, 5);
+  const teams = [];
+  for (const t of list) for (const name of t.team_names || []) if (norm(name).includes(n)) teams.push({ name, t });
+  const tHtml = tours.map((t) => `<a href="${BASE}${enc(t.slug)}">${tourLogo(t, 'md')}<span class="qt"><b>${esc(t.name)}</b><small>${STATUS[t.status] || ''} · ${dateRange(t.date_start, t.date_end)}</small></span></a>`).join('');
+  const mHtml = teams.slice(0, 8).map(({ name, t }) => `<a href="${BASE}${enc(t.slug)}/participants">${mono(name, 'md')}<span class="qt"><b>${esc(name)}</b><small>${esc(t.name)}</small></span></a>`).join('');
+  if (!tHtml && !mHtml) return '<div class="none">Ничего не найдено</div>';
+  return (tHtml ? `<h4>Турниры</h4>${tHtml}` : '') + (mHtml ? `<h4>Команды</h4>${mHtml}` : '');
+}
+const sq = document.getElementById('q');
+const sres = document.getElementById('qres');
+if (sq && sres) {
+  const close = () => { sres.hidden = true; sres.innerHTML = ''; };
+  let seq = 0;
+  sq.addEventListener('input', async () => {
+    const my = ++seq;
+    if (!sq.value.trim()) return close();
+    const html = searchHtml(await loadSearch(), sq.value);
+    if (my !== seq) return;
+    sres.innerHTML = html; sres.hidden = !html;
+  });
+  sq.addEventListener('keydown', (e) => {
+    const items = [...sres.querySelectorAll('a')];
+    const cur = items.findIndex((a) => a.classList.contains('sel'));
+    if (e.key === 'Escape') { close(); sq.blur(); }
+    else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!items.length) return;
+      items[cur]?.classList.remove('sel');
+      const next = e.key === 'ArrowDown' ? (cur + 1) % items.length : (cur - 1 + items.length) % items.length;
+      items[next].classList.add('sel'); items[next].scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Enter') { (items[cur] || items[0])?.click(); }
+  });
+  sres.addEventListener('click', (e) => { if (e.target.closest('a')) { sq.value = ''; close(); } });
+  document.addEventListener('click', (e) => { if (!e.target.closest('.search')) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !/^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName)) { e.preventDefault(); sq.focus(); }
+  });
+}
+
 /* ---------- Взаимодействие ---------- */
 
 app.addEventListener('change', (e) => {
   const t = e.target;
-  if (t.matches?.('[data-toggle]')) t.closest('.participants')?.classList.toggle(t.dataset.toggle, t.checked);
+  if (t.matches?.('[data-toggle]')) {
+    const box = t.closest('.participants');
+    box?.classList.toggle(t.dataset.toggle, t.checked);
+    box?.querySelectorAll('.pcard').forEach((c) => c.classList.remove('open'));
+    box?.querySelectorAll('[data-open]').forEach((h) => h.setAttribute('aria-expanded', String(t.checked)));
+  }
+});
+const toggleCard = (h) => {
+  const card = h.closest('.pcard');
+  h.setAttribute('aria-expanded', String(card.classList.toggle('open')));
+};
+app.addEventListener('keydown', (e) => {
+  const h = e.target.closest?.('[data-open]');
+  if (h && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggleCard(h); }
 });
 app.addEventListener('click', (e) => {
+  const op = e.target.closest('[data-open]');
+  if (op) { toggleCard(op); return; }
   const tab = e.target.closest('[data-tab]');
   if (tab) {
     const card = tab.closest('.pcard');
