@@ -1,0 +1,32 @@
+{
+  "name": "Barracuda Cup 8",
+  "series": "Barracuda Cup",
+  "organizer": "Barracuda Battles",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-11-29",
+  "date_end": "2026-11-29",
+  "format": [
+    "5x5",
+    "Captains Mode",
+    "Single Elimination (сетка на вылет)"
+  ],
+  "pts_cap": 30000,
+  "prize_pool": "20 000 ₽",
+  "description": "Barracuda Cup 8 — онлайн-турнир по Dota 2 для команд СНГ с ограничением по ПТС: 7 000 на игрока, 30 000 на команду. Пройдёт 29.11.2026. Формат: Single Elimination, 5x5 (Captains Mode). Призовой фонд — 20 000 ₽. Организатор — Barracuda Battles.",
+  "links": {
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "15 000 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "5 000 ₽"
+    }
+  ],
+  "streams": []
+}
