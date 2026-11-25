@@ -1,0 +1,40 @@
+{
+  "name": "BIG YARF CUP № 2",
+  "series": "YARF CUP",
+  "organizer": "YARF CUP",
+  "status": "upcoming",
+  "type": "online",
+  "location": "СНГ",
+  "game": "Dota 2",
+  "date_start": "2026-12-06",
+  "date_end": "2026-12-06",
+  "format": [
+    "Single Elimination",
+    "Все матчи — Bo1",
+    "Финал — Bo3",
+    "Captains Mode",
+    "5x5",
+    "Минимум 8 команд, максимум 16"
+  ],
+  "pts_cap": 6000,
+  "prize_pool": "12 000 ₽",
+  "description": "BIG YARF CUP № 2 — онлайн-турнир по Dota 2 для команд СНГ с ограничением по ПТС: 6 000 на игрока, без ограничений на команду. Пройдёт 06.12.2026. Формат: Single Elimination, 5x5 (Bo1, финал Bo3). Взнос — 1 000 ₽ с команды. Призовой фонд — 12 000 ₽. Организатор — YARF CUP.",
+  "links": {
+    "registration": "https://docs.google.com/forms/d/e/1FAIpQLSfVmnFu5I0zgmVs3TxJ2fvBf7C_YpqqGXI19mH49ZNMxqn50g/viewform?usp=dialog",
+    "telegram": "https://t.me/yarfcup",
+    "discord": "https://discord.gg/B3ZJBfHrG",
+    "rules": "https://telegra.ph/Pravila-turnira-YARF-CUP-5x5-Captains-Draft-06-14",
+    "anypedia": "https://anypedia.runs-at.dev/yarf-cup-big-2"
+  },
+  "prizes": [
+    {
+      "place": 1,
+      "prize": "8 000 ₽"
+    },
+    {
+      "place": 2,
+      "prize": "4 000 ₽"
+    }
+  ],
+  "streams": []
+}
