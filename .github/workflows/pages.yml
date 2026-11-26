@@ -36,6 +36,8 @@ jobs:
           # <base> index.html определяет сам по адресу; здесь только подставляем адрес сайта в превью главной
           sed -i "s#https://anypedia.vercel.app#${SITE_URL%/}#g" index.html
           npm run build
+          # Картинки для превью ссылок (Chrome уже есть на runner'е). Если не получилось — остаётся общая картинка.
+          if node tools/og.mjs; then OG_IMAGES=1 npm run build; else echo "::warning::Картинки для превью не созданы, используется общая"; fi
           mkdir _site
           cp -r ./*.html assets css js tournaments .nojekyll _site/
       - uses: actions/upload-pages-artifact@v3

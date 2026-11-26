@@ -199,6 +199,8 @@ const escAttr = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&qu
 const pkg = readJson(path.join(ROOT, 'package.json')) || {};
 const SITE = String(process.env.SITE_URL || pkg.homepage || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '')).replace(/\/+$/, '');
 const OG_IMAGE = 'assets/og.png';
+// OG_IMAGES=1 — у страниц турниров своя картинка assets/og/<slug>.png (создаётся командой `npm run og`)
+const OWN_OG = process.env.OG_IMAGES === '1' || process.env.OG_IMAGES === 'true';
 const nfmt = (n) => Number(n).toLocaleString('ru-RU').replace(/[\u00a0\u202f]/g, ' ');
 const dfmt = (iso) => {
   const x = new Date(`${iso}T00:00:00`);
@@ -212,8 +214,8 @@ function dRange(a, b) {
   return `${dfmt(a)} — ${dfmt(b)}`;
 }
 
-function ogBlock({ title, desc, url }) {
-  const img = SITE ? `${SITE}/${OG_IMAGE}` : '';
+function ogBlock({ title, desc, url, image = OG_IMAGE }) {
+  const img = SITE ? `${SITE}/${image}` : '';
   return [
     '<!-- og -->',
     `<link rel="canonical" href="${escAttr(url)}">`,
@@ -232,11 +234,11 @@ function ogBlock({ title, desc, url }) {
   ].join('\n  ');
 }
 
-function pageFor(template, { title, desc, url }) {
+function pageFor(template, { title, desc, url, image }) {
   let html = template
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escAttr(title)}</title>`)
     .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escAttr(desc)}">`)
-    .replace(/<!-- og -->[\s\S]*?<!-- \/og -->/, ogBlock({ title, desc, url }));
+    .replace(/<!-- og -->[\s\S]*?<!-- \/og -->/, ogBlock({ title, desc, url, image }));
   return html.replace('<head>', `<head>\n  ${PAGE_MARK}`);
 }
 
@@ -269,7 +271,7 @@ if (fs.existsSync(tplPath)) {
     }
     const file = `${m.slug}.html`;
     const title = `${m.info.name ?? m.slug} — Anypedia`;
-    const html = pageFor(template, { title, desc: tournamentDesc(m), url: SITE ? `${SITE}/${m.slug}` : `/${m.slug}` });
+    const html = pageFor(template, { title, desc: tournamentDesc(m), url: SITE ? `${SITE}/${m.slug}` : `/${m.slug}`, image: OWN_OG ? `assets/og/${encodeURIComponent(m.slug)}.png` : OG_IMAGE });
     fs.mkdirSync(OUT, { recursive: true });
     fs.writeFileSync(path.join(OUT, file), html);
     keep.add(file);
