@@ -3,12 +3,12 @@
 // существующие файлы без --force не перезаписываются. После импорта запустите: npm run build
 //
 //   npm run import -- challonge <ссылка|id> [--slug s] [--key КЛЮЧ] [--from-file api.json]
-//                       [--series ..] [--organizer ..] [--pts 30000] [--prize "20 000 ₽"]
+//                       [--series ..] [--organizer ..] [--pts 30000] [--pts-team 60000] [--pts-player 15000] [--prize "20 000 ₽"]
 //                       [--prizes "1=15 000 ₽;2=5 000 ₽"] [--only info,roster,result] [--force] [--dry] [--build]
 //   npm run import -- csv roster      <файл.csv> <slug> [--force]
 //   npm run import -- csv matches     <файл.csv> <slug> --format list|round_robin|swiss|single_elim|double_elim [--name "Плей-офф"] [--force]
 //   npm run import -- csv placements  <файл.csv> <slug>
-//   npm run import -- info <slug> --name "Название" [--date 2026-10-31] [--date-end ..] [--prize ..] [--pts ..] [--series ..] [--organizer ..] [--format "Single Elimination"] [--prizes ..]
+//   npm run import -- info <slug> --name "Название" [--date 2026-10-31] [--date-end ..] [--prize ..] [--pts ..] [--pts-team ..] [--pts-player ..] [--series ..] [--organizer ..] [--format "Single Elimination"] [--prizes ..]
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -82,6 +82,8 @@ function infoFromFlags(f) {
     ...(f.date ? { date_start: f.date, date_end: f['date-end'] || f.date } : {}),
     ...(f.format ? { format: String(f.format).split('|').map((x) => x.trim()) } : {}),
     ...(f.pts ? { pts_cap: +f.pts } : {}),
+    ...(f['pts-team'] ? { pts_cap_team: +f['pts-team'] } : {}),
+    ...(f['pts-player'] ? { pts_cap_player: +f['pts-player'] } : {}),
     ...(f.prize ? { prize_pool: f.prize } : {}),
     links: {},
     prizes: parsePrizes(f.prizes),
@@ -109,7 +111,7 @@ async function main() {
     const api = f['from-file']
       ? JSON.parse(fs.readFileSync(f['from-file'], 'utf8'))
       : await fetchChallonge(ref, f.key || process.env.CHALLONGE_API_KEY).catch((e) => die(e.message));
-    const out = mapChallonge(api, { series: f.series, organizer: f.organizer, pts: f.pts, prize: f.prize, prizes: parsePrizes(f.prizes) });
+    const out = mapChallonge(api, { series: f.series, organizer: f.organizer, pts: f.pts, ptsTeam: f['pts-team'], ptsPlayer: f['pts-player'], prize: f.prize, prizes: parsePrizes(f.prizes) });
     const { slug, dir } = dirFor(f.slug || parseChallongeRef(ref).id);
     const only = new Set(String(f.only || 'info,roster,result').split(',').map((x) => x.trim()));
     console.log(`Турнир: ${out.info.name} → tournaments/${slug}/`);

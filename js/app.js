@@ -1,3 +1,4 @@
+import { limits } from './limits.js';
 // Anypedia — страницы турниров.
 // Данные: tournaments/<slug>/{information,roster,result}.json (список, статистика и матчи — tournaments/index.json)
 
@@ -57,6 +58,65 @@ function effectiveStatus(t) {
   if (today >= start) return 'live';
   return 'upcoming';
 }
+/* ---------- Обратный отсчёт до старта ---------- */
+
+// Время старта: date_start + необязательные start_time ("18:00") и timezone ("МСК", "+03:00", "UTC+5"); по умолчанию МСК.
+function tzMinutes(tz) {
+  const v = String(tz ?? '').trim().toUpperCase().replace(/^UTC|^GMT/, '');
+  if (!v || v === 'MSK' || v === 'МСК') return 180;
+  const m = v.match(/^([+-])?(\d{1,2})(?::?(\d{2}))?$/);
+  return m ? (m[1] === '-' ? -1 : 1) * (+m[2] * 60 + +(m[3] || 0)) : 180;
+}
+const tzLabel = (tz) => {
+  const m = tzMinutes(tz);
+  if (m === 180) return 'МСК';
+  const a = Math.abs(m);
+  return `UTC${m < 0 ? '−' : '+'}${Math.floor(a / 60)}${a % 60 ? `:${String(a % 60).padStart(2, '0')}` : ''}`;
+};
+const hasTime = (t) => /^\d{1,2}:\d{2}$/.test(String(t.start_time ?? '').trim());
+function startMs(t) {
+  if (!t.date_start) return null;
+  const [hh, mm] = hasTime(t) ? String(t.start_time).trim().split(':').map(Number) : [0, 0];
+  const [Y, M, D] = String(t.date_start).split('-').map(Number);
+  if (!Y || !M || !D) return null;
+  return Date.UTC(Y, M - 1, D, hh, mm) - tzMinutes(t.timezone) * 60000;
+}
+const plural = (n, a, b, c) => (n % 10 === 1 && n % 100 !== 11 ? a : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? b : c);
+function cdText(ms, precise, date) {
+  const left = ms - Date.now();
+  if (left <= 0) return 'Турнир начинается';
+  if (!precise && date) {
+    // без времени считаем календарные дни до даты старта
+    const [Y, M, D] = date.split('-').map(Number), n = new Date();
+    const days = Math.round((Date.UTC(Y, M - 1, D) - Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())) / 86400000);
+    return days >= 2 ? `через ${days} ${plural(days, 'день', 'дня', 'дней')}` : days === 1 ? 'завтра' : 'сегодня';
+  }
+  const sec = Math.floor(left / 1000);
+  const d = Math.floor(sec / 86400), h = Math.floor((sec % 86400) / 3600), m = Math.floor((sec % 3600) / 60), x = sec % 60;
+  const p2 = (n) => String(n).padStart(2, '0');
+  if (precise) return `${d ? `${d} ${plural(d, 'день', 'дня', 'дней')} ` : ''}${p2(h)}:${p2(m)}:${p2(x)}`;
+  // время старта не указано — считаем по дням
+  return d >= 2 ? `Через ${d} ${plural(d, 'день', 'дня', 'дней')}` : d === 1 ? 'Завтра' : 'Сегодня';
+}
+function countdown(t, status, cls = '') {
+  if (status !== 'upcoming') return '';
+  const ms = startMs(t);
+  if (ms == null || ms <= Date.now()) return '';
+  const precise = hasTime(t);
+  return `<span class="cd ${cls}" data-cd="${ms}" data-precise="${precise ? 1 : 0}" data-date="${esc(t.date_start)}"><span class="cd-l">${precise ? 'До старта' : 'Старт'}</span> <b>${cdText(ms, precise, t.date_start)}</b></span>`;
+}
+let cdTimer = null;
+function tickCountdowns() {
+  const els = document.querySelectorAll('[data-cd]');
+  if (!els.length) { clearInterval(cdTimer); cdTimer = null; return; }
+  els.forEach((el) => {
+    const b = el.querySelector('b');
+    const txt = cdText(+el.dataset.cd, el.dataset.precise === '1', el.dataset.date);
+    if (b && b.textContent !== txt) b.textContent = txt;
+  });
+}
+const startCountdowns = () => { if (!cdTimer && document.querySelector('[data-cd]')) cdTimer = setInterval(tickCountdowns, 1000); };
+
 const badge = (s) => `<span class="badge st-${esc(s)}">${esc(STATUS[s] || s || '')}</span>`;
 
 const toDate = (d) => (d ? new Date(`${d}T00:00:00`) : null);
@@ -147,7 +207,7 @@ const tournamentCard = (t) => `
     <div class="tcard-title">${tourLogo(t, 'lg')}<h3>${esc(t.name)}</h3></div>
     <dl class="mini">
       ${t.prize_pool ? `<div><dt>Призовой фонд</dt><dd>${esc(t.prize_pool)}</dd></div>` : ''}
-      ${t.pts_cap ? `<div><dt>Лимит</dt><dd>${num(t.pts_cap)}</dd></div>` : ''}
+      ${limits(t).map((l) => `<div><dt>${l.label}</dt><dd>${num(l.value)}</dd></div>`).join('')}
       <div><dt>Команд</dt><dd>${t.teams_count || '—'}</dd></div>
       ${t.winner ? `<div><dt>Победитель</dt><dd>${esc(t.winner)}</dd></div>` : ''}
     </dl>
@@ -164,13 +224,14 @@ function featureCard(t) {
       <a class="f-head" href="${BASE}${enc(t.slug)}">
         <span class="f-kicker">${esc(STATUS[t.status] || '')}${t.organizer ? ` · ${esc(t.organizer)}` : ''}</span>
         <span class="f-title">${esc(t.name)}</span>
+        ${countdown(t, t.status, 'on-grad')}
       </a>
       <div class="f-body">
         ${tourLogo(t, 'xl')}
         <dl class="f-facts">
-          ${fact('Даты', dateRange(t.date_start, t.date_end))}
+          ${fact('Даты', dateRange(t.date_start, t.date_end) + (hasTime(t) ? esc(`, ${String(t.start_time).trim()} ${tzLabel(t.timezone)}`) : ''))}
           ${fact('Призовой фонд', esc(t.prize_pool))}
-          ${fact('Лимит', t.pts_cap ? num(t.pts_cap) : '')}
+          ${limits(t).map((l) => fact(l.label, num(l.value))).join('')}
           ${fact('Команд', t.teams_count || '')}
           ${t.winner ? fact('Победитель', `<span class="chip">${matchLogo(t.winner_logo, t.winner)}<span class="txt">${esc(t.winner)}</span></span>`) : ''}
         </dl>
@@ -302,8 +363,8 @@ function infobox(ctx) {
         ${row('Локация', esc(i.location))}
         ${row('Формат', lines(i.format))}
         ${row('Призовой фонд', esc(i.prize_pool))}
-        ${row('Лимит', i.pts_cap ? num(i.pts_cap) : '')}
-        ${row('Начало', fmtDate(i.date_start))}
+        ${limits(i).map((l) => row(l.label, num(l.value))).join('')}
+        ${row('Начало', i.date_start ? fmtDate(i.date_start) + (hasTime(i) ? esc(`, ${String(i.start_time).trim()} ${tzLabel(i.timezone)}`) : '') : '')}
         ${row('Окончание', fmtDate(i.date_end))}
         ${row('Игра', esc(i.game || 'Dota 2'))}
         ${row('Версия', esc(i.version))}
@@ -780,7 +841,7 @@ async function tournamentView(slug) {
     <div class="layout">
       <div class="main">
         <header class="thead">
-          ${badge(ctx.status)}
+          ${badge(ctx.status)}${countdown(info, ctx.status, 'inline')}
           <h1>${esc(info.name)}</h1>
           ${info.description ? `<p>${esc(info.description)}</p>` : ''}
           ${nav ? `<nav class="snav">${nav}</nav>` : ''}
@@ -821,6 +882,7 @@ async function route() {
     app.innerHTML = errorView(e);
   }
   window.scrollTo(0, 0);
+  startCountdowns();
   fitBrackets();
   scheduleFit();
   // Ссылка вида /<slug>/<раздел> прокручивает к разделу

@@ -32,7 +32,7 @@ tournaments/
 
 ### Из Challonge
 ```
-npm run import -- challonge https://challonge.com/<id> --key <API-ключ> --series "Barracuda Cup" --prize "20 000 ₽" --pts 30000 --prizes "1=15 000 ₽;2=5 000 ₽"
+npm run import -- challonge https://challonge.com/<id> --key <API-ключ> --series "Barracuda Cup" --prize "20 000 ₽" --pts 30000 --pts-team 60000 --pts-player 15000 --prizes "1=15 000 ₽;2=5 000 ₽"
 ```
 - Ключ: Challonge → Settings → Developer API. Можно задать переменную `CHALLONGE_API_KEY` вместо `--key`.
 - Папка турнира берётся из адреса (`--slug`, чтобы задать свою). `--only info,roster,result` — писать только часть файлов, `--dry` — только показать, `--build` — сразу собрать индекс.
@@ -43,7 +43,7 @@ npm run import -- challonge https://challonge.com/<id> --key <API-ключ> --se
 ### Из CSV
 Разделитель (запятая, `;`, таб) и кодировка Excel определяются сами, названия колонок можно писать по-русски.
 ```
-npm run import -- info <slug> --name "Название" --date 2026-10-31 --prize "20 000 ₽" --pts 30000   # information.json
+npm run import -- info <slug> --name "Название" --date 2026-10-31 --prize "20 000 ₽" --pts-team 60000 --pts-player 15000   # information.json
 npm run import -- csv roster     teams.csv   <slug>      # команды и составы
 npm run import -- csv matches    groups.csv  <slug> --format round_robin --name "Групповой этап"
 npm run import -- csv matches    playoff.csv <slug> --format single_elim
@@ -124,8 +124,11 @@ npm run import -- csv placements places.csv  <slug>
   "version": "7.41",
   "date_start": "2026-11-14",
   "date_end": "2026-11-15",
+  "start_time": "18:00",
+  "timezone": "МСК",
   "format": ["Групповой этап ...", "Плей-офф ..."],
-  "pts_cap": 20000,
+  "pts_cap_team": 60000,
+  "pts_cap_player": 15000,
   "prize_pool": "10 000 ₽",
   "description": "Текст о турнире",
   "links": { "challonge": "", "rules": "", "discord": "", "telegram": "", "vk": "" },
@@ -136,7 +139,8 @@ npm run import -- csv placements places.csv  <slug>
   "streams": [ { "lang": "ru", "platform": "twitch", "url": "https://…" } ]
 }
 ```
-Все поля необязательны, пустые не показываются. Статус турнира (Скоро / Идёт сейчас / Завершён) считается сам по датам и итогам, поле `status` не нужно: есть победитель — завершён, сегодня между `date_start` и `date_end` — идёт сейчас. `pts_cap` показывается как «Лимит» (только в инфобоксе и на карточке турнира).
+Все поля необязательны, пустые не показываются. Статус турнира (Скоро / Идёт сейчас / Завершён) считается сам по датам и итогам, поле `status` не нужно: есть победитель — завершён, сегодня между `date_start` и `date_end` — идёт сейчас. Лимиты ПТС задаются отдельно: `pts_cap_team` — на команду (показывается как «Лимит команды»), `pts_cap_player` — на игрока («Лимит игрока»). Можно указать любой из них или оба. Старое поле `pts_cap` продолжает работать и показывается как «Лимит», поэтому уже заведённые турниры менять не нужно; если заполнены и новые, и старое, показываются все. Лимиты видны в инфобоксе, на карточке турнира, в картинках для поста и в превью ссылок.
+`start_time` (ЧЧ:ММ) и `timezone` («МСК» по умолчанию, или `+03:00`, `UTC+5`) — необязательны. Для скорых турниров на главной и на странице турнира показывается обратный отсчёт: с временем — тикающий «До старта 2 дня 03:15:42», без времени — «через N дней / завтра / сегодня». После `npm run build` поля попадают в `index.json` (в GitHub Actions это происходит само).
 `prizes` — какие места призовые: по умолчанию в таблице видны только они, остальные места раскрываются кнопкой.
 
 ## roster.json

@@ -479,3 +479,15 @@ tr.out td:first-child { box-shadow: inset 3px 0 var(--warn); }
   .search { order: 3; width: 100%; margin-left: 0; }
   .qres { left: 0; right: 0; width: auto; }
 }
+
+/* Обратный отсчёт до старта */
+.cd { display: inline-flex; align-items: baseline; gap: 8px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cd b { font-weight: 800; }
+.cd.inline { margin-left: 10px; padding: 3px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: .85rem; vertical-align: middle; }
+.cd.inline .cd-l { font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; opacity: .85; }
+.cd.on-grad { position: absolute; top: 14px; right: 18px; padding: 5px 14px; border-radius: 999px; background: rgba(0,0,0,.28); color: #fff; font-size: .95rem; }
+.cd.on-grad .cd-l { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; opacity: .85; }
+@media (max-width: 560px) {
+  .cd.on-grad { position: static; align-self: flex-start; margin-top: 8px; }
+  .cd.inline { display: flex; margin: 10px 0 0; width: fit-content; }
+}

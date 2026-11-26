@@ -8,6 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import { limits } from '../js/limits.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TOURNAMENTS = process.env.ANYPEDIA_TOURNAMENTS ? path.resolve(process.env.ANYPEDIA_TOURNAMENTS) : path.join(ROOT, 'tournaments');
@@ -96,13 +97,13 @@ function cardHtml(t) {
   const size = len <= 18 ? 84 : len <= 28 ? 70 : len <= 40 ? 58 : 48;
   const stats = [
     t.prize_pool ? ['Призовой фонд', t.prize_pool] : null,
-    t.pts_cap ? ['Лимит ПТС', nfmt(t.pts_cap)] : null,
+    ...limits(t).map((l) => [l.short, nfmt(l.value)]),
     t.teams_count ? ['Команд', String(t.teams_count)] : null,
   ].filter(Boolean);
   const bottom = t.winner
     ? `<div class="winner"><span class="cup">🏆</span><div><small>Победитель</small><b>${esc(t.winner)}</b></div></div>`
     : stats.length
-      ? `<div class="stats">${stats.map(([k, v]) => `<div><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div>`
+      ? `<div class="stats n${stats.length}">${stats.map(([k, v]) => `<div><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div>`
       : '';
   const meta = [t.series && t.series !== t.name ? t.series : t.organizer, dRange(t.date_start, t.date_end)].filter(Boolean).join('  ·  ');
   return `<!doctype html><meta charset="utf-8"><style>
@@ -124,7 +125,8 @@ h1{font-size:${size}px;line-height:1.05;font-weight:800;letter-spacing:-.02em;di
 .meta{margin-top:16px;color:var(--muted);font-size:27px;white-space:pre}
 .stats{display:flex;gap:18px;align-self:flex-start}
 .stats>div,.winner{background:var(--panel);border:2px solid var(--border);border-radius:20px;padding:16px 26px}
-.stats>div{min-width:230px}
+.stats>div{min-width:200px}
+.stats.n4,.stats.n5{gap:14px}.stats.n4>div,.stats.n5>div{min-width:0;padding:16px 20px}.stats.n4 b{font-size:32px;white-space:nowrap}.stats.n5>div{padding:14px 16px}.stats.n5 b{font-size:28px;white-space:nowrap}.stats.n5 small{font-size:17px}
 small{display:block;color:var(--muted);font-size:19px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
 .stats b,.winner b{font-size:38px;font-weight:800}
 .stats>div:first-child b{color:var(--accent)}

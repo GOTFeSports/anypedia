@@ -234,6 +234,8 @@ export function mapChallonge(api, opts = {}) {
     date_end: day(t.completed_at || t.start_at || t.started_at || t.created_at),
     format: [typeName],
     ...(opts.pts ? { pts_cap: +opts.pts } : {}),
+    ...(opts.ptsTeam ? { pts_cap_team: +opts.ptsTeam } : {}),
+    ...(opts.ptsPlayer ? { pts_cap_player: +opts.ptsPlayer } : {}),
     ...(opts.prize ? { prize_pool: opts.prize } : {}),
     description: stripHtml(t.description),
     links: { ...(t.full_challonge_url ? { challonge: t.full_challonge_url } : {}) },

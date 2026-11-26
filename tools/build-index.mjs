@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { limits } from '../js/limits.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TDIR = process.env.ANYPEDIA_TOURNAMENTS || path.join(ROOT, 'tournaments');
@@ -148,9 +149,13 @@ for (const d of dirs) {
     status: info.status ?? 'upcoming',
     date_start: info.date_start ?? null,
     date_end: info.date_end ?? null,
+    start_time: info.start_time ?? null,
+    timezone: info.timezone ?? null,
     organizer: info.organizer ?? '',
     prize_pool: info.prize_pool ?? '',
     pts_cap: info.pts_cap ?? null,
+    pts_cap_team: info.pts_cap_team ?? null,
+    pts_cap_player: info.pts_cap_player ?? null,
     teams_count: teams.length,
     team_names: teams.map((t) => t.name).filter(Boolean),
     series: info.series ?? '',
@@ -247,7 +252,9 @@ function tournamentDesc({ info, winner, teams }) {
   const dates = dRange(info.date_start, info.date_end);
   if (dates) parts.push(dates);
   if (info.prize_pool) parts.push(`Призовой фонд ${info.prize_pool}`);
-  if (info.pts_cap) parts.push(`Лимит ${nfmt(info.pts_cap)}`);
+  const lim = limits(info);
+  if (lim.length === 1 && lim[0].key === 'cap') parts.push(`Лимит ${nfmt(lim[0].value)}`);
+  else if (lim.length) parts.push(lim.map((l) => `${l.label.toLowerCase()} ${nfmt(l.value)}`).join(', ').replace(/^./, (c) => c.toUpperCase()));
   if (teams) parts.push(`Команд: ${teams}`);
   if (winner) parts.push(`Победитель: ${winner}`);
   let d = parts.join(' · ');

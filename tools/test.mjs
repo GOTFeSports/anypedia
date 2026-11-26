@@ -7,6 +7,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { parseChallongeRef, mapChallonge } from './lib/challonge.mjs';
+import { limits } from '../js/limits.js';
 import { rosterFromCsv, stageFromCsv, placementsFromCsv, parseCsv } from './lib/csv.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -211,6 +212,16 @@ test('csv roster / matches / placements складываются в один т�
   assert.equal(run('import.mjs', ['csv', 'placements', pl, 'csvcup']).status, 0);
   const res = readT('csvcup', 'result.json');
   assert.equal(res.stages.length, 2); assert.equal(res.placements.length, 4);
+});
+
+test('лимиты ПТС: команда / игрок / старый общий pts_cap', () => {
+  assert.deepEqual(limits({}), []);
+  assert.deepEqual(limits({ pts_cap: 20000 }).map((l) => [l.label, l.value]), [['Лимит', 20000]]);
+  assert.deepEqual(limits({ pts_cap_team: 60000, pts_cap_player: 15000 }).map((l) => [l.label, l.value]), [['Лимит команды', 60000], ['Лимит игрока', 15000]]);
+  assert.equal(limits({ pts_cap_team: 60000, pts_cap: 20000 }).length, 2);
+  assert.deepEqual(limits({ pts_cap: null, pts_cap_team: '', pts_cap_player: 'abc' }), []);
+  const m = mapChallonge(single, { pts: '30000', ptsTeam: '60000', ptsPlayer: '15000' });
+  assert.equal(m.info.pts_cap, 30000); assert.equal(m.info.pts_cap_team, 60000); assert.equal(m.info.pts_cap_player, 15000);
 });
 
 test('вредные slug отклоняются', () => {

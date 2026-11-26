@@ -1,6 +1,8 @@
 // Anypedia — картинка-афиша турнира для Telegram и соцсетей. Рисуется в браузере на canvas, без внешних сервисов.
 // Использование: downloadCard(ctx, 'landscape' | 'square' | 'story'), где ctx — данные страницы турнира.
 
+import { limits } from './limits.js';
+
 const SIZES = { landscape: [1280, 720], square: [1080, 1080], story: [1080, 1920] };
 const C = { bg: '#0d0f14', panel: '#151922', border: '#262d3d', text: '#eef0f5', muted: '#8d95a8', accent: '#34d27b', gold: '#f5c542', silver: '#c5ccda', bronze: '#d89a6a' };
 const STATUS = { upcoming: 'Скоро', live: 'Идёт сейчас', finished: 'Итоги турнира' };
@@ -122,7 +124,7 @@ function collect(ctx) {
   }
   const stats = [
     i.prize_pool ? ['Призовой фонд', String(i.prize_pool), true] : null,
-    i.pts_cap ? ['Лимит ПТС', nfmt(i.pts_cap)] : null,
+    ...limits(i).map((l) => [l.short, nfmt(l.value)]),
     ctx.roster?.teams?.length ? ['Команд', String(ctx.roster.teams.length)] : null,
   ].filter(Boolean);
   const meta = [i.series && i.series !== i.name ? i.series : i.organizer, dRange(i.date_start, i.date_end)].filter(Boolean);
