@@ -3,6 +3,7 @@
 
 const app = document.getElementById('app');
 const cache = new Map();
+let currentCtx = null; // данные открытой страницы турнира (нужны для картинки-афиши)
 
 /* ---------- Утилиты ---------- */
 
@@ -309,6 +310,12 @@ function infobox(ctx) {
         ${row('Команд', teamsCount)}
       </dl>
       ${links ? `<div class="ib-head">Ссылки</div><div class="ib-links">${links}</div>` : ''}
+      <div class="ib-head">Картинка для поста</div>
+      <div class="ib-links">
+        <button type="button" class="pill-link" data-card="landscape" title="1280×720 — для поста в Telegram">Афиша 16:9</button>
+        <button type="button" class="pill-link" data-card="square" title="1080×1080">Квадрат</button>
+        <button type="button" class="pill-link" data-card="story" title="1080×1920 — для сторис">Сторис</button>
+      </div>
     </aside>`;
 }
 
@@ -753,6 +760,7 @@ async function tournamentView(slug) {
   const [roster, result] = await Promise.all([getJson(`${base}roster.json`), getJson(`${base}result.json`)]);
   const ctx = { slug, base, info, roster, result, status: effectiveStatus({ ...info, winner: (result?.placements || []).find((p) => +p.place === 1)?.team }), teams: new Map((roster?.teams || []).map((t) => [t.name, t])) };
 
+  currentCtx = ctx;
   document.title = `${info.name} — Anypedia`;
 
   const top = [
@@ -891,7 +899,15 @@ app.addEventListener('keydown', (e) => {
   const h = e.target.closest?.('[data-open]');
   if (h && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggleCard(h); }
 });
-app.addEventListener('click', (e) => {
+app.addEventListener('click', async (e) => {
+  const cb = e.target.closest('[data-card]');
+  if (cb && currentCtx) {
+    const label = cb.textContent;
+    cb.disabled = true; cb.textContent = 'Рисую…';
+    try { (await import('./card.js')).downloadCard(currentCtx, cb.dataset.card).catch(() => alert('Не удалось создать картинку')).finally(() => { cb.disabled = false; cb.textContent = label; }); }
+    catch { cb.disabled = false; cb.textContent = label; alert('Не удалось создать картинку'); }
+    return;
+  }
   const op = e.target.closest('[data-open]');
   if (op) { toggleCard(op); return; }
   const tab = e.target.closest('[data-tab]');

@@ -125,6 +125,8 @@ section[id] { scroll-margin-top: 76px; margin-bottom: 44px; }
   background: var(--panel-2); border: 1px solid var(--border);
 }
 .pill-link:hover { border-color: var(--accent); color: var(--accent); }
+button.pill-link { font: inherit; font-size: .85rem; font-weight: 600; color: var(--text); cursor: pointer; }
+button.pill-link:disabled { opacity: .6; cursor: wait; }
 .btn {
   display: inline-block; padding: 8px 16px; border-radius: 10px; font-weight: 600; font-size: .9rem;
   background: var(--accent); color: var(--on-accent);
