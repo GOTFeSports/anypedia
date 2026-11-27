@@ -1,104 +1,143 @@
 {
-  "placements": [],
+  "placements": [
+    {
+      "place": 1,
+      "team": "rom4ik44"
+    },
+    {
+      "place": 2,
+      "team": "XAPER"
+    },
+    {
+      "place": 3,
+      "team": "kyomu"
+    },
+    {
+      "place": 4,
+      "team": "belan"
+    },
+    {
+      "place": 5,
+      "label": "5–6",
+      "team": "wttt"
+    },
+    {
+      "place": 6,
+      "label": "5–6",
+      "team": "flex"
+    },
+    {
+      "place": 7,
+      "label": "7–8",
+      "team": "kupnu4"
+    },
+    {
+      "place": 8,
+      "label": "7–8",
+      "team": "ciexxzd"
+    },
+    {
+      "place": 9,
+      "label": "9–11",
+      "team": "xttress"
+    },
+    {
+      "place": 10,
+      "label": "9–11",
+      "team": "m1nd1"
+    },
+    {
+      "place": 11,
+      "label": "9–11",
+      "team": "skrymevetmo"
+    }
+  ],
   "stages": [
     {
       "type": "double_elim",
       "name": "Плей-офф",
       "rounds": [
         {
-          "name": "Верхняя сетка: Раунд 1 (Bo1)",
+          "name": "Верхняя сетка · 1/8 финала",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m1", "team1": "", "team2": "", "next": "ub_m9" },
-            { "id": "ub_m2", "team1": "", "team2": "", "next": "ub_m9" },
-            { "id": "ub_m3", "team1": "", "team2": "", "next": "ub_m10" },
-            { "id": "ub_m4", "team1": "", "team2": "", "next": "ub_m10" },
-            { "id": "ub_m5", "team1": "", "team2": "", "next": "ub_m11" },
-            { "id": "ub_m6", "team1": "", "team2": "", "next": "ub_m11" },
-            { "id": "ub_m7", "team1": "", "team2": "", "next": "ub_m12" },
-            { "id": "ub_m8", "team1": "", "team2": "", "next": "ub_m12" }
+            { "id": "ub_1", "team1": "belan", "team2": "flex", "score1": 0, "score2": 1, "next": "ub_5" },
+            { "id": "ub_2", "team1": "kupnu4", "team2": "XAPER", "score1": 0, "score2": 1, "next": "ub_6" },
+            { "id": "ub_3", "team1": "xttress", "team2": "ciexxzd", "score1": 0, "score2": 1, "next": "ub_7" }
           ]
         },
         {
-          "name": "Верхняя сетка: Раунд 2 (Bo1)",
+          "name": "Верхняя сетка · 1/4 финала",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m9", "team1": "", "team2": "", "next": "ub_m13" },
-            { "id": "ub_m10", "team1": "", "team2": "", "next": "ub_m13" },
-            { "id": "ub_m11", "team1": "", "team2": "", "next": "ub_m14" },
-            { "id": "ub_m12", "team1": "", "team2": "", "next": "ub_m14" }
+            { "id": "ub_4", "team1": "m1nd1", "team2": "skrymevetmo", "next": "ub_8" },
+            { "id": "ub_5", "team1": "kyomu", "team2": "flex", "score1": 1, "score2": 0, "next": "ub_8" },
+            { "id": "ub_6", "team1": "rom4ik44", "team2": "XAPER", "score1": 1, "score2": 0, "next": "ub_9" },
+            { "id": "ub_7", "team1": "wttt", "team2": "ciexxzd", "score1": 1, "score2": 0, "next": "ub_9" }
           ]
         },
         {
-          "name": "Верхняя сетка: Полуфинал (Bo1)",
+          "name": "Верхняя сетка · Полуфинал",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m13", "team1": "", "team2": "", "next": "ub_m15" },
-            { "id": "ub_m14", "team1": "", "team2": "", "next": "ub_m15" }
+            { "id": "ub_8", "team1": "kyomu", "team2": "", "winner": 1, "next": "ub_10" },
+            { "id": "ub_9", "team1": "rom4ik44", "team2": "wttt", "score1": 1, "score2": 0, "next": "ub_10" }
           ]
         },
         {
-          "name": "Верхняя сетка: Финал (Bo1)",
+          "name": "Верхняя сетка · Финал",
           "bracket": "upper",
           "matches": [
-            { "id": "ub_m15", "team1": "", "team2": "", "next": "gf_m1" }
+            { "id": "ub_10", "team1": "kyomu", "team2": "rom4ik44", "score1": 0, "score2": 1, "next": "gf_1" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 1 (Bo1)",
+          "name": "Нижняя сетка · Раунд 1",
           "bracket": "lower",
           "matches": [
-            { "id": "lb_m1", "team1": "", "team2": "", "next": "lb_m5" },
-            { "id": "lb_m2", "team1": "", "team2": "", "next": "lb_m6" },
-            { "id": "lb_m3", "team1": "", "team2": "", "next": "lb_m7" },
-            { "id": "lb_m4", "team1": "", "team2": "", "next": "lb_m8" }
+            { "id": "lb_1", "team1": "belan", "team2": "", "bye": true, "next": "lb_5" },
+            { "id": "lb_2", "team1": "kupnu4", "team2": "", "bye": true, "next": "lb_6" },
+            { "id": "lb_3", "team1": "xttress", "team2": "", "bye": true, "next": "lb_6" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 2 (Bo1)",
+          "name": "Нижняя сетка · Раунд 2",
           "bracket": "lower",
           "matches": [
-            { "id": "lb_m5", "team1": "", "team2": "", "next": "lb_m9" },
-            { "id": "lb_m6", "team1": "", "team2": "", "next": "lb_m9" },
-            { "id": "lb_m7", "team1": "", "team2": "", "next": "lb_m10" },
-            { "id": "lb_m8", "team1": "", "team2": "", "next": "lb_m10" }
+            { "id": "lb_4", "team1": "flex", "team2": "", "bye": true, "next": "lb_5" },
+            { "id": "lb_5", "team1": "flex", "team2": "belan", "score1": 0, "score2": 1, "next": "lb_9" },
+            { "id": "lb_6", "team1": "kupnu4", "team2": "ciexxzd", "score1": 1, "score2": 0, "next": "lb_10" },
+            { "id": "lb_7", "team1": "XAPER", "team2": "xttress", "score1": 1, "score2": 0, "next": "lb_10" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 3 (Bo1)",
+          "name": "Нижняя сетка · Раунд 3",
           "bracket": "lower",
           "matches": [
-            { "id": "lb_m9", "team1": "", "team2": "", "next": "lb_m11" },
-            { "id": "lb_m10", "team1": "", "team2": "", "next": "lb_m12" }
+            { "id": "lb_8", "team1": "wttt", "team2": "", "bye": true, "next": "lb_9" },
+            { "id": "lb_9", "team1": "wttt", "team2": "belan", "score1": 0, "score2": 1, "next": "lb_11" },
+            { "id": "lb_10", "team1": "kupnu4", "team2": "XAPER", "score1": 0, "score2": 1, "next": "lb_11" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 4 (Bo1)",
+          "name": "Нижняя сетка · Раунд 4",
           "bracket": "lower",
           "matches": [
-            { "id": "lb_m11", "team1": "", "team2": "", "next": "lb_m13" },
-            { "id": "lb_m12", "team1": "", "team2": "", "next": "lb_m13" }
+            { "id": "lb_11", "team1": "belan", "team2": "XAPER", "score1": 0, "score2": 1, "next": "lb_12" }
           ]
         },
         {
-          "name": "Нижняя сетка: Раунд 5 (Bo1)",
+          "name": "Нижняя сетка · Финал",
           "bracket": "lower",
           "matches": [
-            { "id": "lb_m13", "team1": "", "team2": "", "next": "lb_m14" }
+            { "id": "lb_12", "team1": "kyomu", "team2": "XAPER", "score1": 0, "score2": 1, "next": "gf_1" }
           ]
         },
         {
-          "name": "Нижняя сетка: Финал (Bo1)",
-          "bracket": "lower",
-          "matches": [
-            { "id": "lb_m14", "team1": "", "team2": "", "next": "gf_m1" }
-          ]
-        },
-        {
-          "name": "Гранд-финал (Bo3)",
+          "name": "Гранд-финал",
           "bracket": "final",
           "matches": [
-            { "id": "gf_m1", "team1": "", "team2": "" }
+            { "id": "gf_1", "team1": "rom4ik44", "team2": "XAPER", "score1": 1, "score2": 0 }
           ]
         }
       ]
