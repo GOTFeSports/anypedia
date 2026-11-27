@@ -1,4 +1,5 @@
 import { limits } from './limits.js';
+import { autoDescription } from './autodesc.js';
 // Anypedia — страницы турниров.
 // Данные: tournaments/<slug>/{information,roster,result}.json (список, статистика и матчи — tournaments/index.json)
 
@@ -814,6 +815,22 @@ function streamsSection(ctx) {
 
 /* ---------- Страница турнира ---------- */
 
+// Своё описание из information.json; если пустое — собираем из остальных полей (js/autodesc.js)
+function describe(ctx) {
+  const own = String(ctx.info.description ?? '').trim();
+  if (own) return own;
+  const pl = ctx.result?.placements || [];
+  const at = (n) => pl.find((p) => +p.place === n)?.team || '';
+  return autoDescription({
+    info: ctx.info,
+    status: ctx.status,
+    dates: dateRange(ctx.info.date_start, ctx.info.date_end),
+    teams: (ctx.roster?.teams || []).length,
+    winner: at(1),
+    second: at(2),
+  });
+}
+
 async function tournamentView(slug) {
   const base = `tournaments/${encodeURIComponent(slug)}/`;
   const info = await getJson(`${base}information.json`);
@@ -843,7 +860,7 @@ async function tournamentView(slug) {
         <header class="thead">
           ${badge(ctx.status)}${countdown(info, ctx.status, 'inline')}
           <h1>${esc(info.name)}</h1>
-          ${info.description ? `<p>${esc(info.description)}</p>` : ''}
+          <p>${esc(describe(ctx))}</p>
           ${nav ? `<nav class="snav">${nav}</nav>` : ''}
         </header>
         ${top.map((s) => s[2]).join('') || '<div class="empty">Данные турнира пока не добавлены.</div>'}

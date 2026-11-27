@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { parseChallongeRef, mapChallonge } from './lib/challonge.mjs';
 import { limits } from '../js/limits.js';
+import { autoDescription } from '../js/autodesc.js';
 import { rosterFromCsv, stageFromCsv, placementsFromCsv, parseCsv } from './lib/csv.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -222,6 +223,19 @@ test('лимиты ПТС: команда / игрок / старый общий
   assert.deepEqual(limits({ pts_cap: null, pts_cap_team: '', pts_cap_player: 'abc' }), []);
   const m = mapChallonge(single, { pts: '30000', ptsTeam: '60000', ptsPlayer: '15000' });
   assert.equal(m.info.pts_cap, 30000); assert.equal(m.info.pts_cap_team, 60000); assert.equal(m.info.pts_cap_player, 15000);
+});
+
+test('автоописание: собирается из полей, не падает на пустых данных', () => {
+  assert.equal(autoDescription({ info: {} }), 'Турнир — турнир по Dota 2 с ограничением по ПТС.');
+  const d = autoDescription({
+    info: { name: 'Yarf Cup #3', series: 'Yarf Cup', type: 'online', organizer: 'GOTF eSports', pts_cap_team: 60000, pts_cap_player: 15000, prize_pool: '10 000 ₽', format: ['Single Elimination, Bo3'] },
+    status: 'finished', dates: '14–15 ноября 2026', teams: 8, winner: 'Night Owls', second: 'Iron Wolves',
+  });
+  for (const part of ['онлайн-турнир по Dota 2 из серии Yarf Cup', 'до 60', 'на команду', 'на игрока', 'Организатор — GOTF eSports', 'Прошёл 14–15 ноября 2026', 'участвовали 8 команд', 'Призовой фонд — 10 000 ₽.', 'Формат: Single Elimination, Bo3.', 'Победитель — Night Owls, второе место — Iron Wolves.'])
+    assert.ok(d.includes(part), `нет «${part}» в: ${d}`);
+  assert.ok(!autoDescription({ info: { name: 'A' }, status: 'upcoming', winner: 'X' }).includes('Победитель'));
+  assert.ok(autoDescription({ info: { name: 'A' }, status: 'upcoming', dates: '1 января 2027', teams: 2 }).includes('Пройдёт 1 января 2027, участвуют 2 команды'));
+  assert.ok(autoDescription({ info: { name: 'A', pts_cap: 20000 } }).includes('лимит 20'));
 });
 
 test('вредные slug отклоняются', () => {
