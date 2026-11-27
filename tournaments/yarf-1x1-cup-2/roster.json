@@ -1,0 +1,15 @@
+{
+  "teams": [
+    { "name": "m1nd1", "status": "registered", "players": [{ "nick": "m1nd1" }] },
+    { "name": "skrymevetmo", "status": "registered", "players": [{ "nick": "skrymevetmo" }] },
+    { "name": "kyomu", "status": "registered", "players": [{ "nick": "kyomu" }] },
+    { "name": "belan", "status": "registered", "players": [{ "nick": "belan" }] },
+    { "name": "flex", "status": "registered", "players": [{ "nick": "flex" }] },
+    { "name": "rom4ik44", "status": "registered", "players": [{ "nick": "rom4ik44" }] },
+    { "name": "kupnu4", "status": "registered", "players": [{ "nick": "kupnu4" }] },
+    { "name": "XAPER", "status": "registered", "players": [{ "nick": "XAPER" }] },
+    { "name": "wttt", "status": "registered", "players": [{ "nick": "wttt" }] },
+    { "name": "xttress", "status": "registered", "players": [{ "nick": "xttress" }] },
+    { "name": "ciexxzd", "status": "registered", "players": [{ "nick": "ciexxzd" }] }
+  ]
+}
