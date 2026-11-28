@@ -2,21 +2,16 @@
   "placements": [
     {
       "place": 1,
-      "team": ""
+      "team": "SakiMasaki"
     },
     {
       "place": 2,
-      "team": ""
+      "team": "MORVAX"
     },
     {
       "place": 3,
-      "label": "3–4",
-      "team": ""
-    },
-    {
-      "place": 4,
-      "label": "3–4",
-      "team": ""
+      "label": "3",
+      "team": "1WMORVAX"
     }
   ],
   "stages": [
@@ -96,14 +91,14 @@
           "name": "Матч за 3-е место",
           "bracket": "third",
           "matches": [
-            { "id": "third_place", "team1": "1WMORVAX", "team2": "feed and win" }
+            { "id": "third_place", "team1": "1WMORVAX", "team2": "feed and win", "score1": 1, "score2": 0 }
           ]
         },
         {
           "name": "Финал",
           "bracket": "final",
           "matches": [
-            { "id": "final", "team1": "SakiiMasaki", "team2": "MORVAX", "score1": 1, "score2": 0 }
+            { "id": "final", "team1": "SakiiMasaki", "team2": "MORVAX", "score1": 2, "score2": 0 }
           ]
         }
       ]
