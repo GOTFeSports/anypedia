@@ -1,5 +1,24 @@
 {
-  "placements": [],
+  "placements": [
+    {
+      "place": 1,
+      "team": "SakiiMasaki"
+    },
+    {
+      "place": 2,
+      "team": "MORVAX"
+    },
+    {
+      "place": 3,
+      "label": "3–4",
+      "team": "1WMORVAX"
+    },
+    {
+      "place": 4,
+      "label": "3–4",
+      "team": "feed and win"
+    }
+  ],
   "stages": [
     {
       "type": "groups",
@@ -69,22 +88,22 @@
           "name": "Полуфиналы",
           "bracket": "upper",
           "matches": [
-            { "id": "sf1", "team1": "SakiiMasaki", "team2": "1WMORVAX", "next": "final" },
-            { "id": "sf2", "team1": "feed and win", "team2": "Sibstrin.Gaming", "next": "final" }
+            { "id": "sf1", "team1": "SakiiMasaki", "team2": "1WMORVAX", "score1": 2, "score2": 0, "next": "final" },
+            { "id": "sf2", "team1": "feed and win", "team2": "MORVAX", "score1": 0, "score2": 2, "next": "final" }
           ]
         },
         {
           "name": "Матч за 3-е место",
           "bracket": "third",
           "matches": [
-            { "id": "third_place", "team1": "", "team2": "" }
+            { "id": "third_place", "team1": "1WMORVAX", "team2": "feed and win" }
           ]
         },
         {
           "name": "Финал",
           "bracket": "final",
           "matches": [
-            { "id": "final", "team1": "", "team2": "" }
+            { "id": "final", "team1": "SakiiMasaki", "team2": "MORVAX", "score1": 1, "score2": 0 }
           ]
         }
       ]
