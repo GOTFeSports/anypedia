@@ -882,6 +882,15 @@ const errorView = (e) => `
     <p class="note">Если открыли <code>index.html</code> двойным кликом — так не работает. Запустите <code>npm run serve</code> и откройте <code>http://localhost:8080</code>.</p>
   </div>`;
 
+// Яндекс.Метрика: первый заход считает сам счётчик, дальше считаем переходы внутри SPA
+let lastTracked = location.href;
+function trackPageview() {
+  if (location.href === lastTracked) return;
+  const ref = lastTracked;
+  lastTracked = location.href;
+  try { if (typeof window.ym === 'function') window.ym(114745451, 'hit', location.href, { title: document.title, referer: ref }); } catch {}
+}
+
 async function route() {
   // Старые ссылки вида #/t/<slug>/<раздел> → /<slug>/<раздел>
   const legacy = location.hash.match(/^#\/t\/([^/?]+)(?:\/([A-Za-z0-9_-]+))?/);
@@ -900,6 +909,7 @@ async function route() {
   }
   window.scrollTo(0, 0);
   startCountdowns();
+  trackPageview();
   fitBrackets();
   scheduleFit();
   // Ссылка вида /<slug>/<раздел> прокручивает к разделу
