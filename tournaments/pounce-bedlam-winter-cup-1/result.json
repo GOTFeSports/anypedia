@@ -6,42 +6,78 @@
       "name": "Плей-офф",
       "rounds": [
         {
-          "name": "1/8 финала (Bo1)",
+          "name": "Раунд 1",
           "bracket": "upper",
           "matches": [
-            { "id": "m1", "team1": "", "team2": "", "next": "m9" },
-            { "id": "m2", "team1": "", "team2": "", "next": "m9" },
-            { "id": "m3", "team1": "", "team2": "", "next": "m10" },
-            { "id": "m4", "team1": "", "team2": "", "next": "m10" },
-            { "id": "m5", "team1": "", "team2": "", "next": "m11" },
-            { "id": "m6", "team1": "", "team2": "", "next": "m11" },
-            { "id": "m7", "team1": "", "team2": "", "next": "m12" },
-            { "id": "m8", "team1": "", "team2": "", "next": "m12" }
+            { "id": "r1_m1", "team1": "RZD", "team2": "Siuuuu cr7 tamaeev zapah Bug..", "next": "r2_m1" },
+            { "id": "r1_m2", "team1": "SEX", "team2": "Podosinovik", "next": "r2_m3" },
+            { "id": "r1_m3", "team1": "BKB+TP", "team2": "Eaters of gods", "next": "r2_m3" },
+            { "id": "r1_m4", "team1": "Умственно Unstoppable", "team2": "Primal Dance", "next": "r2_m5" },
+            { "id": "r1_m5", "team1": "Kuroko no basuke", "team2": "AMBRELLA TEAM", "next": "r2_m7" },
+            { "id": "r1_m6", "team1": "Mbl sTARaems9", "team2": "Все,пишите", "next": "r2_m9" },
+            { "id": "r1_m7", "team1": "ABCTourism", "team2": "Vnebo", "next": "r2_m13" },
+            { "id": "r1_m8", "team1": "kaneki prime", "team2": "dddddd", "next": "r2_m15" }
           ]
         },
         {
-          "name": "1/4 финала (Bo1)",
+          "name": "Раунд 2",
           "bracket": "upper",
           "matches": [
-            { "id": "m9", "team1": "", "team2": "", "next": "m13" },
-            { "id": "m10", "team1": "", "team2": "", "next": "m13" },
-            { "id": "m11", "team1": "", "team2": "", "next": "m14" },
-            { "id": "m12", "team1": "", "team2": "", "next": "m14" }
+            { "id": "r2_m1", "team1": "HA3 PAЛ", "team2": "", "next": "r16_m1" },
+            { "id": "r2_m2", "team1": "Team Shrek", "team2": "Домашка по тайлеру", "next": "r16_m1" },
+            { "id": "r2_m3", "team1": "", "team2": "", "next": "r16_m2" },
+            { "id": "r2_m4", "team1": "excellent era", "team2": "Gitz", "next": "r16_m2" },
+            { "id": "r2_m5", "team1": "team proebali", "team2": "", "next": "r16_m3" },
+            { "id": "r2_m6", "team1": "Griaznyiki", "team2": "Buriza", "next": "r16_m3" },
+            { "id": "r2_m7", "team1": "Biberts", "team2": "", "next": "r16_m4" },
+            { "id": "r2_m8", "team1": "Подземелья и Микандоны", "team2": "Pizdec", "next": "r16_m4" },
+            { "id": "r2_m9", "team1": "Starly_Moh", "team2": "", "next": "r16_m5" },
+            { "id": "r2_m10", "team1": "Team WW", "team2": "HØPE", "next": "r16_m5" },
+            { "id": "r2_m11", "team1": "chainSaw", "team2": "strashno", "next": "r16_m6" },
+            { "id": "r2_m12", "team1": "FPAURA", "team2": "SkibiDop", "next": "r16_m6" },
+            { "id": "r2_m13", "team1": "qwerty", "team2": "", "next": "r16_m7" },
+            { "id": "r2_m14", "team1": "LOST", "team2": "FinSkiY EsK0rT", "next": "r16_m7" },
+            { "id": "r2_m15", "team1": "Team Leto", "team2": "", "next": "r16_m8" },
+            { "id": "r2_m16", "team1": "NotFound", "team2": "Argon team", "next": "r16_m8" }
           ]
         },
         {
-          "name": "Полуфинал (Bo1)",
+          "name": "1/8 финала",
           "bracket": "upper",
           "matches": [
-            { "id": "m13", "team1": "", "team2": "", "next": "m15" },
-            { "id": "m14", "team1": "", "team2": "", "next": "m15" }
+            { "id": "r16_m1", "team1": "", "team2": "", "next": "qf_m1" },
+            { "id": "r16_m2", "team1": "", "team2": "", "next": "qf_m1" },
+            { "id": "r16_m3", "team1": "", "team2": "", "next": "qf_m2" },
+            { "id": "r16_m4", "team1": "", "team2": "", "next": "qf_m2" },
+            { "id": "r16_m5", "team1": "", "team2": "", "next": "qf_m3" },
+            { "id": "r16_m6", "team1": "", "team2": "", "next": "qf_m3" },
+            { "id": "r16_m7", "team1": "", "team2": "", "next": "qf_m4" },
+            { "id": "r16_m8", "team1": "", "team2": "", "next": "qf_m4" }
           ]
         },
         {
-          "name": "Финал (Bo3)",
+          "name": "1/4 финала",
+          "bracket": "upper",
+          "matches": [
+            { "id": "qf_m1", "team1": "", "team2": "", "next": "sf_m1" },
+            { "id": "qf_m2", "team1": "", "team2": "", "next": "sf_m1" },
+            { "id": "qf_m3", "team1": "", "team2": "", "next": "sf_m2" },
+            { "id": "qf_m4", "team1": "", "team2": "", "next": "sf_m2" }
+          ]
+        },
+        {
+          "name": "Полуфинал",
+          "bracket": "upper",
+          "matches": [
+            { "id": "sf_m1", "team1": "", "team2": "", "next": "f_m1" },
+            { "id": "sf_m2", "team1": "", "team2": "", "next": "f_m1" }
+          ]
+        },
+        {
+          "name": "Финал",
           "bracket": "final",
           "matches": [
-            { "id": "m15", "team1": "", "team2": "" }
+            { "id": "f_m1", "team1": "", "team2": "" }
           ]
         }
       ]
